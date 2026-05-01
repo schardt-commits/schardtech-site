@@ -284,7 +284,7 @@ function renderProjectors(data) {
         <div class="card-body">
           <h3 class="card-name">${p.name}</h3>
           <div class="card-specs">
-            ${specs.map(s => `<span class="spec-tag ${s.cls}"${s.tip ? ` data-tooltip="${s.tip}"` : ''}>${s.label}</span>`).join('')}
+            ${specs.map(s => `<span class="spec-tag ${s.cls}"${s.tip ? ` data-tooltip="${s.tip.replace(/"/g, '&quot;')}"` : ''}>${s.label}</span>`).join('')}
           </div>
           ${priceHTML}
           <div class="card-actions">${mlBtn}${reviewBtn}</div>
@@ -428,7 +428,7 @@ function calcAnsiLumens() {
   const vals = [];
   for (let i = 1; i <= 9; i++) {
     const v = parseFloat(document.getElementById(`p${i}`)?.value);
-    if (isNaN(v) || v < 0) { showAnsiError(`Ponto ${i}: valor inválido.`); return; }
+    if (isNaN(v) || v < 0 || v > 10000 || !isFinite(v)) { showAnsiError(`Ponto ${i}: valor deve estar entre 0 e 10000.`); return; }
     vals.push(v);
   }
   const w = parseFloat(document.getElementById('ansiW')?.value);
