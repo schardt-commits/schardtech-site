@@ -185,12 +185,12 @@ const projectors = [
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
 // ============================================================
 const featuredVideos = [
-  { id: 'OHfd8EzoRX8', title: 'O Projetor Mais Completo da Wanbo? X5 Pro — Review Completo' },
-  { id: 'ENe4DsfeFlE', title: 'Comparativo Completo: Byintek U90 Max, T5 Max, V60, Jenovox M5000 Mini' },
-  { id: '5XqrcPf5dA8', title: 'Vevshao V60 — Análise Completíssima!' },
-  { id: 'yejdrLFmjYY', title: 'Qual o Melhor Projetor da Bettdow? Comparativo Completo' },
-  { id: 'SqYwJImh-hU', title: 'Thundeal TD98PRO ATV: Agora Certificado!! Análise Completa' },
-  { id: 'Ytph-SPWI8Q', title: 'Projetor LED LCD Mais Potente: Q13W Touyinger — Análise Completa' }
+  { id: 'S8yGCgKlGyY', title: 'Projetor Full HD por menos de R$450 — Vale a Pena? L9W Ultra Touyinger' },
+  { id: 'fxBBrJ3B0Bw', title: 'Testei os Melhores Controles Universais para Projetor, Android, TV e PC!' },
+  { id: 'OHfd8EzoRX8', title: 'O PROJETOR MAIS COMPLETO DA WANBO? X5 Pro - Review Completo' },
+  { id: 'ENe4DsfeFlE', title: 'Qual é o melhor projetor? Byintek U90 Max, T5 Max, V60, Jenovox M5000 MINI Comparativo Completo!' },
+  { id: '5XqrcPf5dA8', title: '[Novo] Vevshao V60! Análise Completissima!' },
+  { id: 'rrlQhQFhGgs', title: 'Live especial: perguntas + sorteio do Bettdow AC1073 🎁' },
 ];
 
 // ============================================================
