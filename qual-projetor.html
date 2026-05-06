@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net;">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7738V0HHSF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7738V0HHSF');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qual Projetor é pra Você? — SchardTech</title>
+  <meta name="description" content="Responda algumas perguntas e receba recomendações de projetores baseadas em dados reais testados no canal SchardTech.">
+  <meta property="og:title" content="Qual Projetor é pra Você? — SchardTech">
+  <meta property="og:description" content="Ferramenta gratuita: responda algumas perguntas e descubra o melhor projetor para o seu perfil. Baseado em testes reais do canal SchardTech.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://schardtech.com.br/qual-projetor.html">
+  <meta property="og:site_name" content="SchardTech">
+  <meta property="og:image" content="https://schardtech.com.br/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Qual Projetor é pra Você? — SchardTech">
+  <meta name="twitter:description" content="Ferramenta gratuita: responda algumas perguntas e descubra o melhor projetor para o seu perfil.">
+  <meta name="twitter:image" content="https://schardtech.com.br/og-image.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Qual Projetor é pra Você?",
+    "url": "https://schardtech.com.br/qual-projetor.html",
+    "description": "Ferramenta gratuita que recomenda projetores baseados no seu perfil de uso. Dados reais testados no canal SchardTech.",
+    "isPartOf": { "@type": "WebSite", "name": "SchardTech", "url": "https://schardtech.com.br" }
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* HERO */
+    .qp-hero {
+      padding: 140px 0 64px;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(79,163,199,0.12) 0%, transparent 65%),
+        linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+      text-align: center;
+    }
+    .qp-hero .section-tag { display: inline-flex; margin: 0 auto 20px; }
+    .qp-hero h1 {
+      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    .qp-hero p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .qp-hero-note {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 10px auto 0;
+    }
+
+    /* QUESTIONS */
+    .qp-questions { padding: 64px 0 0; }
+    .qp-question { margin-bottom: 44px; }
+    .qp-question h3 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .qp-question h3 .q-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: rgba(79,163,199,0.15);
+      color: var(--primary);
+      font-size: 0.72rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .q-hint {
+      font-size: 0.79rem;
+      color: var(--text-dim);
+      margin-bottom: 14px;
+      line-height: 1.5;
+      padding-left: 32px;
+    }
+
+    .qp-options { display: flex; flex-wrap: wrap; gap: 10px; }
+    .qp-option {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      min-height: 44px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .qp-option:hover {
+      border-color: rgba(79,163,199,0.45);
+      color: var(--text);
+      background: rgba(79,163,199,0.06);
+    }
+    .qp-option.active {
+      border-color: var(--primary);
+      background: rgba(79,163,199,0.14);
+      color: var(--accent);
+      box-shadow: 0 0 14px rgba(79,163,199,0.2);
+    }
+
+    .qp-sub-options {
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-left: 2px solid rgba(79,163,199,0.3);
+      background: rgba(79,163,199,0.03);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .qp-sub-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-weight: 600;
+    }
+
+    .qp-dist-input-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .qp-dist-label { font-size: 0.82rem; color: var(--text-muted); white-space: nowrap; }
+
+    /* ADVANCED PANEL */
+    .qp-advanced {
+      margin: 12px 0 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .qp-advanced-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 22px;
+      background: var(--card-bg);
+      cursor: pointer;
+      user-select: none;
+      transition: background var(--transition);
+    }
+    .qp-advanced-toggle:hover { background: rgba(79,163,199,0.05); }
+    .qp-advanced-toggle-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .qp-advanced-chevron {
+      color: var(--primary);
+      font-size: 0.7rem;
+      transition: transform 0.3s ease;
+    }
+    .qp-advanced.open .qp-advanced-chevron { transform: rotate(180deg); }
+    .qp-advanced-body {
+      display: none;
+      padding: 26px 22px;
+      background: rgba(20,24,43,0.6);
+      border-top: 1px solid var(--border);
+    }
+    .qp-advanced.open .qp-advanced-body { display: block; }
+
+    .qp-adv-section { margin-bottom: 26px; }
+    .qp-adv-section:last-child { margin-bottom: 0; }
+    .qp-adv-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 7px;
+    }
+    .qp-adv-hint {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .qp-adv-sep {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin: 22px 0;
+    }
+
+    .qp-lux-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .qp-lux-input {
+      width: 110px;
+      padding: 10px 14px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .qp-lux-input:focus { border-color: var(--primary); }
+    .qp-lux-unit { color: var(--text-muted); font-size: 0.9rem; }
+
+    .qp-tag-importado {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: 100px;
+      background: rgba(255,170,50,0.15);
+      color: #FFAA32;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      vertical-align: middle;
+      margin-left: 7px;
+      text-transform: uppercase;
+    }
+
+    .qp-lux-ref {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .qp-lux-ref-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.03);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .qp-lux-ref-badge { font-weight: 700; color: var(--accent); white-space: nowrap; }
+
+    /* CTA */
+    .qp-cta { text-align: center; padding: 40px 0 90px; }
+    .qp-cta .btn { font-size: 1rem; padding: 15px 40px; }
+    .qp-live-count {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      min-height: 1.2em;
+      color: var(--text-dim);
+      transition: color 0.25s;
+    }
+    .qp-live-count.ok   { color: var(--primary); }
+    .qp-live-count.warn { color: #ffb347; }
+
+    /* RESULTS */
+    .qp-results { padding: 0 0 100px; display: none; }
+    .qp-results.visible { display: block; }
+
+    .qp-results-header { text-align: center; margin-bottom: 52px; }
+    .qp-results-header h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+    .qp-results-header p { color: var(--text-muted); font-size: 0.9rem; }
+
+    .qp-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 36px;
+      padding: 9px 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: inherit;
+    }
+    .qp-back-btn:hover {
+      border-color: var(--primary);
+      color: var(--accent);
+      background: rgba(79,163,199,0.05);
+    }
+
+    /* CARDS */
+    .qp-cards { display: flex; flex-direction: column; gap: 20px; }
+    .qp-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 28px 30px;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .qp-card:hover { border-color: var(--border-hover); box-shadow: var(--glow-sm); }
+    .qp-card.featured {
+      border-color: rgba(79,163,199,0.38);
+      background: linear-gradient(135deg, rgba(79,163,199,0.07) 0%, var(--card-bg) 55%);
+    }
+    .qp-card.featured::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent), var(--gradient-secondary));
+    }
+
+    .qp-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .qp-card-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .qp-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .qp-card-badge.featured {
+      background: rgba(79,163,199,0.16);
+      color: var(--accent);
+      border: 1px solid rgba(79,163,199,0.32);
+    }
+    .qp-card-badge.alt {
+      background: rgba(123,140,255,0.1);
+      color: #a5b0ff;
+      border: 1px solid rgba(123,140,255,0.22);
+    }
+    .qp-match-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 9px;
+      border-radius: 100px;
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      background: rgba(255,255,255,0.04);
+      color: var(--text-dim);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .qp-match-pill.hi  { color: #6be58a; border-color: rgba(107,229,138,0.22); background: rgba(107,229,138,0.06); }
+    .qp-match-pill.mid { color: #ffdb6b; border-color: rgba(255,219,107,0.22); background: rgba(255,219,107,0.06); }
+
+    .qp-card-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .qp-card-name .marca { color: var(--text-muted); font-weight: 500; }
+
+    .qp-card-price { text-align: right; flex-shrink: 0; }
+    .qp-card-price-range {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .qp-card-price-note { font-size: 0.7rem; color: var(--text-dim); margin-top: 3px; }
+    .qp-card-price-na { font-size: 0.8rem; color: var(--text-dim); font-style: italic; }
+
+    .qp-card-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .qp-spec {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 7px;
+      font-size: 0.8rem;
+    }
+    .qp-spec-label { color: var(--text-muted); }
+    .qp-spec-value { font-weight: 600; color: var(--text); }
+    .qp-spec-value.hi   { color: var(--accent); }
+    .qp-spec-value.warn { color: #ffb347; }
+
+    .qp-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+    .qp-card-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+    .qp-store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+    .store-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+    .qp-store-btn.ali {
+      background: rgba(255,106,0,0.1);
+      border-color: rgba(255,106,0,0.35);
+      color: #FF8C3A;
+    }
+    .qp-store-btn.ali:hover { background: rgba(255,106,0,0.2); border-color: rgba(255,106,0,0.6); }
+    .ali .store-dot { background: #FF6A00; }
+
+    .qp-store-btn.shopee {
+      background: rgba(238,77,45,0.1);
+      border-color: rgba(238,77,45,0.35);
+      color: #FF6B4A;
+    }
+    .qp-store-btn.shopee:hover { background: rgba(238,77,45,0.2); border-color: rgba(238,77,45,0.6); }
+    .shopee .store-dot { background: #EE4D2D; }
+
+    .qp-store-btn.ml {
+      background: rgba(255,230,0,0.08);
+      border-color: rgba(255,230,0,0.3);
+      color: #FFE040;
+    }
+    .qp-store-btn.ml:hover { background: rgba(255,230,0,0.16); border-color: rgba(255,230,0,0.55); }
+    .ml .store-dot { background: #FFE600; }
+
+    .qp-store-btn.amazon {
+      background: rgba(255,153,0,0.1);
+      border-color: rgba(255,153,0,0.35);
+      color: #FFB347;
+    }
+    .qp-store-btn.amazon:hover { background: rgba(255,153,0,0.2); border-color: rgba(255,153,0,0.6); }
+    .amazon .store-dot { background: #FF9900; }
+
+    .qp-video-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: var(--radius);
+      background: rgba(255,0,0,0.09);
+      border: 1px solid rgba(255,0,0,0.18);
+      color: #ff7070;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+    .qp-video-link:hover { background: rgba(255,0,0,0.16); border-color: rgba(255,0,0,0.32); }
+
+    .qp-coupons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .qp-coupon {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px dashed rgba(79,163,199,0.3);
+      background: rgba(79,163,199,0.05);
+      font-size: 0.8rem;
+    }
+    .qp-coupon-label { color: var(--text-muted); }
+    .qp-coupon-code { font-family: 'Courier New', monospace; font-weight: 700; color: var(--accent); letter-spacing: 0.05em; }
+    .qp-coupon-copy {
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(79,163,199,0.25);
+      background: transparent;
+      color: var(--primary);
+      font-size: 0.7rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .qp-coupon-copy:hover { background: rgba(79,163,199,0.1); }
+    .qp-coupon-copy.copied { color: #4caf50; border-color: #4caf50; }
+    .qp-coupon-note { font-size: 0.73rem; color: var(--text-muted); margin-top: 7px; }
+
+    .qp-buy-section {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      background: rgba(255,210,0,0.05);
+      border: 1px solid rgba(255,210,0,0.22);
+    }
+    .qp-buy-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: rgba(255,210,0,0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .qp-review-banner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 14px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      text-decoration: none;
+      border: 1px solid rgba(255,0,0,0.15);
+      background: rgba(255,0,0,0.05);
+      transition: all var(--transition);
+    }
+    .qp-review-banner:hover {
+      border-color: rgba(255,0,0,0.3);
+      background: rgba(255,0,0,0.1);
+    }
+    .qp-review-thumb {
+      width: 130px;
+      height: 73px;
+      object-fit: cover;
+      flex-shrink: 0;
+      display: block;
+    }
+    .qp-review-cta {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #ff7070;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    @media (max-width: 640px) {
+      .qp-card { padding: 20px 18px; }
+      .qp-card-top { flex-direction: column; }
+      .qp-card-price { text-align: left; }
+      .qp-lux-ref { grid-template-columns: 1fr; }
+      .qp-review-thumb { width: 100px; height: 56px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.png" alt="SchardTech" class="logo-img">
+      </a>
+      <nav id="mainNav">
+        <a href="index.html#projetores" class="nav-link">Projetores</a>
+        <a href="index.html#calculadora" class="nav-link">Calculadora</a>
+        <a href="index.html#rankings" class="nav-link">Rankings</a>
+        <a href="index.html#sobre" class="nav-link">Sobre</a>
+        <a href="qual-projetor.html" class="nav-link" style="color:var(--primary);font-weight:600;">Quiz</a>
+        <a href="comparar.html" class="nav-link">Comparar</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="qp-hero">
+    <div class="container">
+      <div class="section-tag">Ferramenta Gratuita</div>
+      <h1>Qual projetor<br><span class="gradient-text">é pra você?</span></h1>
+      <p>Responda algumas perguntas e receba recomendações baseadas em dados reais testados no canal.</p>
+      <p class="qp-hero-note">Nenhuma pergunta é obrigatória.</p>
+    </div>
+  </section>
+
+  <section class="qp-questions">
+    <div class="container" style="max-width:760px;">
+
+      <!-- 1. Iluminação -->
+      <div class="qp-question">
+        <h3><span class="q-num">1</span> Como é a iluminação do ambiente?</h3>
+        <p class="q-hint">Onde você vai usar o projetor com mais frequência.</p>
+        <div class="qp-options">
+          <button class="qp-option" onclick="pick('iluminacao','escuro',this)">🌑 Escuro</button>
+          <button class="qp-option" onclick="pick('iluminacao','pouca_luz',this)">🌙 Pouca luz</button>
+          <button class="qp-option" onclick="pick('iluminacao','muita_luz',this)">☀️ Muita luz</button>
+          <button class="qp-option" onclick="pick('iluminacao','luz_intensa',this)">🔆 Luz intensa</button>
+        </div>
+      </div>
+
+      <!-- 2. Orçamento -->
+      <div class="qp-question">
+        <h3><span class="q-num">2</span> Qual o seu orçamento?</h3>
+        <p class="q-hint">Baseado no valor mínimo por loja. Promoções e variações de estoque podem mudar bastante — use como referência.</p>
+        <div class="qp-options" id="orcPills">
+          <button class="qp-option" onclick="pickOrc(null,null,this)">Sem limite</button>
+          <button class="qp-option" onclick="pickOrc(null,400,this)">Até R$400</button>
+          <button class="qp-option" onclick="pickOrc(400,700,this)">R$400–700</button>
+          <button class="qp-option" onclick="pickOrc(700,1200,this)">R$700–1.200</button>
+          <button class="qp-option" onclick="pickOrc(1200,2500,this)">R$1.200–2.500</button>
+          <button class="qp-option" onclick="pickOrc(2500,null,this)">Acima de R$2.500</button>
+        </div>
+        <div class="qp-dist-input-row" style="margin-top:14px;">
+          <label for="orcMinInput" class="qp-dist-label">De R$</label>
+          <input type="number" id="orcMinInput" class="qp-lux-input" placeholder="mín" min="0" step="50" style="width:120px;" aria-label="Orçamento mínimo em reais">
+          <label for="orcMaxInput" class="qp-dist-label">Até R$</label>
+          <input type="number" id="orcMaxInput" class="qp-lux-input" placeholder="máx" min="0" step="50" style="width:120px;" aria-label="Orçamento máximo em reais">
+        </div>
+      </div>
+
+      <!-- 3. Uso principal -->
+      <div class="qp-question">
+        <h3><span class="q-num">3</span> Qual o uso principal?</h3>
+        <p class="q-hint">Para jogos, a velocidade de resposta é prioridade. Para filmes, qualidade de imagem e HDR.</p>
+        <div class="qp-options">
+          <button class="qp-option" onclick="pick('uso',null,this)">Tanto faz</button>
+          <button class="qp-option" onclick="pick('uso','filmes',this)">🎬 Filmes e séries</button>
+          <button class="qp-option" onclick="pick('uso','jogos',this)">🎮 Jogos</button>
+          <button class="qp-option" onclick="pick('uso','geral',this)">💻 Uso geral</button>
+        </div>
+      </div>
+
+      <!-- 4. Apps nativos (SO simplificado) -->
+      <div class="qp-question">
+        <h3><span class="q-num">4</span> Como vai usar streaming no projetor?</h3>
+        <p class="q-hint">Netflix, Prime Video e HBO só rodam em qualidade máxima em sistemas licenciados. No Android não homologado o YouTube funciona bem, mas serviços de streaming ficam em SD.</p>
+        <div class="qp-options" id="appsMain">
+          <button class="qp-option" onclick="pickApps(null,this)">Tanto faz</button>
+          <button class="qp-option" onclick="pickApps('quero',this)">✅ Quero Netflix e afins em qualidade máxima</button>
+          <button class="qp-option" onclick="pickApps('nao_quero',this)">📺 YouTube resolve / Já tenho stick ou box</button>
+        </div>
+      </div>
+
+      <!-- 5. Mobilidade -->
+      <div class="qp-question">
+        <h3><span class="q-num">5</span> Como vai usar?</h3>
+        <div class="qp-options">
+          <button class="qp-option" onclick="pick('mobilidade','fixo',this)">🏠 Fixo</button>
+          <button class="qp-option" onclick="pick('mobilidade','base',this)">🔄 Preciso de base giratória</button>
+          <button class="qp-option" onclick="pick('mobilidade','bateria',this)">🔋 Quero com bateria</button>
+          <button class="qp-option" onclick="pick('mobilidade','ambos',this)">🎒 Bateria + giratória</button>
+        </div>
+      </div>
+
+      <!-- 6. Som -->
+      <div class="qp-question">
+        <h3><span class="q-num">6</span> Som nativo do projetor</h3>
+        <p class="q-hint">Som estéreo, mesmo com menos watts, faz diferença real em relação a um único alto-falante.</p>
+        <div class="qp-options">
+          <button class="qp-option" onclick="pick('som',null,this)">🔇 Tenho caixa / Não me importo</button>
+          <button class="qp-option" onclick="pick('som','bom',this)">🔊 Quero um bom som nativo</button>
+          <button class="qp-option" onclick="pick('som','excelente',this)">🎵 Quero o melhor som nativo</button>
+        </div>
+      </div>
+
+      <!-- 7. Distância -->
+      <div class="qp-question">
+        <h3><span class="q-num">7</span> Distância até onde vai projetar</h3>
+        <p class="q-hint">O tamanho estimado da imagem para a sua distância aparece em cada resultado.</p>
+        <div class="qp-dist-input-row">
+          <input type="number" id="distInput" class="qp-lux-input" placeholder="ex: 2.5" min="0.1" max="15" step="0.1">
+          <span class="qp-lux-unit">metros</span>
+        </div>
+      </div>
+
+      <!-- Painel avançado -->
+      <div class="qp-advanced" id="advancedPanel">
+        <div class="qp-advanced-toggle" onclick="document.getElementById('advancedPanel').classList.toggle('open')">
+          <div class="qp-advanced-toggle-label">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            Configurações técnicas — para quem quer mais controle
+          </div>
+          <span class="qp-advanced-chevron">▼</span>
+        </div>
+        <div class="qp-advanced-body">
+
+          <!-- Tecnologia -->
+          <div class="qp-adv-section">
+            <div class="qp-adv-title">Tecnologia do projetor</div>
+            <div class="qp-adv-hint">LCD tende a ter cores mais vivas. DLP tem contraste mais profundo. DLP Laser é o topo de linha.</div>
+            <div class="qp-options" id="tecMain">
+              <button class="qp-option" onclick="pickTec('lcd',this)">LCD</button>
+              <button class="qp-option" onclick="pickTec('dlp',this)">DLP</button>
+            </div>
+            <div id="tecSub" style="display:none;" class="qp-sub-options">
+              <div class="qp-sub-label">Qual tipo DLP?</div>
+              <div class="qp-options">
+                <button class="qp-option active" onclick="pickTecSub(null,this)">Tanto faz</button>
+                <button class="qp-option" onclick="pickTecSub('dlp_led',this)">DLP LED</button>
+                <button class="qp-option" onclick="pickTecSub('dlp_laser',this)">DLP Laser</button>
+              </div>
+            </div>
+          </div>
+
+          <hr class="qp-adv-sep">
+
+          <!-- Resolução nativa -->
+          <div class="qp-adv-section">
+            <div class="qp-adv-title">Resolução nativa</div>
+            <div class="qp-adv-hint">É o que o projetor projeta de fato — independente do sinal que você envia. 1080p já entrega ótima qualidade para a maioria dos usos.</div>
+            <div class="qp-options">
+              <button class="qp-option" onclick="pick('resolucao','720p',this)">720p</button>
+              <button class="qp-option" onclick="pick('resolucao','1080p',this)">Full HD (1080p)</button>
+              <button class="qp-option" onclick="pick('resolucao','4k_nativa',this)">✨ 4K nativa</button>
+            </div>
+          </div>
+
+          <hr class="qp-adv-sep">
+
+          <!-- Entrada HDMI -->
+          <div class="qp-adv-section">
+            <div class="qp-adv-title">Suporte pela entrada HDMI</div>
+            <div class="qp-adv-hint">O sinal que sua fonte (console, PC, streaming box) precisa enviar. Para PS5/Xbox Series X a 4K 60Hz é o mínimo. Para jogos competitivos, 120Hz faz diferença.</div>
+            <div class="qp-options">
+              <button class="qp-option" onclick="pick('entrada','4k_30hz',this)">4K 30Hz</button>
+              <button class="qp-option" onclick="pick('entrada','4k_60hz',this)">4K 60Hz</button>
+              <button class="qp-option" onclick="pick('entrada','4k_60hz_120hz',this)">⚡ 4K 60Hz + 120Hz</button>
+              <button class="qp-option" onclick="pick('entrada','1080p_120hz',this)">🎮 1080p 120Hz+</button>
+            </div>
+          </div>
+
+          <hr class="qp-adv-sep">
+
+          <!-- Ótica selada -->
+          <div class="qp-adv-section">
+            <div class="qp-adv-title">Ótica selada</div>
+            <div class="qp-adv-hint">Ótica selada protege as lentes de poeira interna — preserva a qualidade da imagem a longo prazo. Quanto mais uso contínuo, mais importa. Os níveis são classificados pelo canal com base nos testes.</div>
+            <div class="qp-options">
+              <button class="qp-option" onclick="pickOtica(null,this)">Tanto faz</button>
+              <button class="qp-option" onclick="pickOtica('boa',this)">Boa</button>
+              <button class="qp-option" onclick="pickOtica('otima',this)">Ótima</button>
+              <button class="qp-option" onclick="pickOtica('maxima',this)">Máxima</button>
+            </div>
+          </div>
+
+          <hr class="qp-adv-sep">
+
+          <!-- SO detalhado — só aparece quando "quero apps" foi selecionado -->
+          <div class="qp-adv-section" id="advSoSection" style="display:none;">
+            <div class="qp-adv-title">Qual sistema prefere?</div>
+            <div class="qp-adv-hint">Google TV tem a melhor compatibilidade e suporta 4K quando o projetor tem suporte. Android TV é excelente para HD. WhaleOS é um sistema próprio com boa compatibilidade — muito melhor que Android não homologado.</div>
+            <div class="qp-options" id="advSoOptions">
+              <button class="qp-option active" onclick="pickSOAdv('homologado_tantofaz',this)">🤷 Tanto faz</button>
+              <button class="qp-option" onclick="pickSOAdv('google_tv',this)">🎬 Google TV</button>
+              <button class="qp-option" onclick="pickSOAdv('android_tv',this)">▶ Android TV</button>
+              <button class="qp-option" onclick="pickSOAdv('whaleos',this)">🐋 WhaleOS</button>
+            </div>
+          </div>
+
+          <hr class="qp-adv-sep">
+
+          <!-- Horas de uso -->
+          <div class="qp-adv-section">
+            <div class="qp-adv-title">Tempo de uso contínuo</div>
+            <div class="qp-adv-hint">Classificação do canal com câmera térmica. Relevante se você usa por muitas horas seguidas ou em ambientes quentes.</div>
+            <div class="qp-options">
+              <button class="qp-option" onclick="pick('uso_horas',null,this)">Tanto faz</button>
+              <button class="qp-option" onclick="pick('uso_horas','6h',this)">🌡️ 6h ou mais</button>
+              <button class="qp-option" onclick="pick('uso_horas','8h',this)">🌡️ 8h ou mais</button>
+            </div>
+          </div>
+
+          <hr class="qp-adv-sep">
+
+          <!-- Custo-benefício -->
+          <div class="qp-adv-section">
+            <div class="qp-adv-title">Custo-benefício</div>
+            <div class="qp-adv-hint">Projetos mais baratos dentro do orçamento ganham pontos extras. Funciona melhor com orçamento máximo definido. Preços são estimativas — podem variar bastante com promoções e estoque.</div>
+            <div class="qp-options">
+              <button class="qp-option active" onclick="pick('custo_beneficio',null,this)">Não priorizar</button>
+              <button class="qp-option" onclick="pick('custo_beneficio','moderado',this)">Moderado</button>
+              <button class="qp-option" onclick="pick('custo_beneficio','bastante',this)">Priorizar bastante</button>
+            </div>
+          </div>
+
+          <hr class="qp-adv-sep">
+
+          <!-- Lux -->
+          <div class="qp-adv-section">
+            <div class="qp-adv-title">Luminosidade medida do ambiente (lux)</div>
+            <div class="qp-adv-hint">Se você mediu com celular ou luxímetro, insira abaixo. <strong>Celular costuma marcar 10–20% a menos</strong> que um luxímetro profissional — leve isso em conta.</div>
+            <div class="qp-lux-row">
+              <input type="number" class="qp-lux-input" id="luxInput" placeholder="Ex: 150" min="0" max="9999">
+              <span class="qp-lux-unit">lux</span>
+            </div>
+            <div class="qp-lux-ref">
+              <div class="qp-lux-ref-item"><span class="qp-lux-ref-badge">0–50 lx</span> Quarto escuro</div>
+              <div class="qp-lux-ref-item"><span class="qp-lux-ref-badge">50–200 lx</span> Sala com luz baixa</div>
+              <div class="qp-lux-ref-item"><span class="qp-lux-ref-badge">200–500 lx</span> Sala clara com janelas</div>
+              <div class="qp-lux-ref-item"><span class="qp-lux-ref-badge">500+ lx</span> Muito iluminado</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="qp-cta">
+        <button class="btn btn-primary" onclick="showResults()">
+          Ver Recomendações
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p class="qp-live-count" id="liveCount"></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="qp-results" id="resultsSection">
+    <div class="container" style="max-width:760px;">
+      <button class="qp-back-btn" onclick="scrollToQuestions()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Ajustar filtros
+      </button>
+      <div class="qp-results-header">
+        <div class="section-tag" style="display:inline-flex;margin:0 auto 18px;">Resultado</div>
+        <h2>Recomendados<br><span class="gradient-text">para você</span></h2>
+        <p id="resultsSubtitle">Baseado nas suas respostas, estes são os projetores que mais combinam com o seu perfil.</p>
+      </div>
+      <div class="qp-cards" id="cardsContainer"></div>
+    </div>
+  </section>
+
+  <!-- EMAIL CAPTURE -->
+  <section class="qp-email-capture" id="emailCapture" style="display:none;padding:56px 0;background:var(--bg-secondary);border-top:1px solid var(--border);">
+    <div class="container" style="max-width:560px;text-align:center;">
+      <div class="section-tag" style="display:inline-flex;margin:0 auto 16px;">Novidades</div>
+      <h2 style="font-size:1.6rem;margin-bottom:10px;">Receba reviews novos <span class="gradient-text">por email</span></h2>
+      <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:24px;">Novos projetores testados, comparativos e cupons exclusivos. Sem spam.</p>
+      <form action="https://formspree.io/f/xdkoapwn" method="POST" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+        <input type="email" name="email" placeholder="seu@email.com" required
+          style="flex:1;min-width:220px;padding:12px 16px;border-radius:var(--radius);border:1px solid var(--border);background:var(--card-bg);color:var(--text);font-family:inherit;font-size:0.95rem;outline:none;">
+        <button type="submit" class="btn btn-primary" style="white-space:nowrap;">Quero receber</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-link">
+          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.png" alt="SchardTech" class="logo-img">
+        </a>
+        <div class="footer-social">
+          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h4>Ferramentas</h4>
+          <a href="qual-projetor.html">Quiz — Qual projetor?</a>
+          <a href="comparar.html">Comparar projetores</a>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <a href="index.html">Projetores</a>
+          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 SchardTech — Todos os direitos reservados</p>
+        <p style="margin-top:8px;font-size:0.78rem;color:var(--text-dim);">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="projetores-data.js"></script>
+  <script>
+    const answers = {
+      iluminacao: null,
+      uso: null,
+      tec_main: null,
+      tec_sub: null,
+      resolucao: null,
+      entrada: null,
+      otica: null,
+      sistema: null,
+      mobilidade: null,
+      som: null,
+      uso_horas: null,
+      distancia: null,
+      distancia_metros: null,
+      orcamento_min: null,
+      orcamento_max: null,
+      custo_beneficio: null,
+    };
+
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('distInput').addEventListener('input', function() {
+        const v = parseFloat(this.value);
+        answers.distancia_metros = v > 0 ? v : null;
+        updateCount();
+      });
+      document.getElementById('orcMinInput').addEventListener('input', function() {
+        const v = parseFloat(this.value);
+        answers.orcamento_min = v >= 0 ? v : null;
+        document.querySelectorAll('#orcPills .qp-option').forEach(o => o.classList.remove('active'));
+        updateCount();
+      });
+      document.getElementById('orcMaxInput').addEventListener('input', function() {
+        const v = parseFloat(this.value);
+        answers.orcamento_max = v > 0 ? v : null;
+        document.querySelectorAll('#orcPills .qp-option').forEach(o => o.classList.remove('active'));
+        updateCount();
+      });
+      updateCount();
+    });
+
+    function pickOrc(min, max, el) {
+      document.querySelectorAll('#orcPills .qp-option').forEach(o => o.classList.remove('active'));
+      el.classList.add('active');
+      answers.orcamento_min = min;
+      answers.orcamento_max = max;
+      document.getElementById('orcMinInput').value = min != null ? min : '';
+      document.getElementById('orcMaxInput').value = max != null ? max : '';
+      updateCount();
+    }
+
+    /* ── Contagem em tempo real ── */
+    function updateCount() {
+      const data = window.PROJETORES_DATA || [];
+      const n = data.filter(p => passesFilter(p, answers)).length;
+      const el = document.getElementById('liveCount');
+      if (!el) return;
+      if (n === 0) {
+        el.textContent = 'Nenhum projetor com esses filtros — tente remover algum critério';
+        el.className = 'qp-live-count warn';
+      } else {
+        el.textContent = `${n} projetor${n !== 1 ? 'es' : ''} encontrado${n !== 1 ? 's' : ''} com esses filtros`;
+        el.className = 'qp-live-count ok';
+      }
+    }
+
+    /* ── Pick functions ── */
+    function pick(q, val, el) {
+      answers[q] = val;
+      el.closest('.qp-options').querySelectorAll('.qp-option').forEach(o => o.classList.remove('active'));
+      el.classList.add('active');
+      updateCount();
+    }
+
+    function pickTec(val, el) {
+      document.querySelectorAll('#tecMain .qp-option').forEach(o => o.classList.remove('active'));
+      el.classList.add('active');
+      answers.tec_main = val;
+      answers.tec_sub = null;
+      if (val === 'dlp') {
+        document.getElementById('tecSub').style.display = 'block';
+        document.querySelectorAll('#tecSub .qp-option').forEach((o, i) => o.classList.toggle('active', i === 0));
+      } else {
+        document.getElementById('tecSub').style.display = 'none';
+      }
+      updateCount();
+    }
+
+    function pickTecSub(val, el) {
+      document.querySelectorAll('#tecSub .qp-option').forEach(o => o.classList.remove('active'));
+      el.classList.add('active');
+      answers.tec_sub = val;
+      updateCount();
+    }
+
+    function pickApps(val, el) {
+      document.querySelectorAll('#appsMain .qp-option').forEach(o => o.classList.remove('active'));
+      el.classList.add('active');
+      const soSection = document.getElementById('advSoSection');
+      if (val === 'quero') {
+        answers.sistema = 'homologado_tantofaz';
+        soSection.style.display = 'block';
+        document.querySelectorAll('#advSoOptions .qp-option').forEach((o, i) => o.classList.toggle('active', i === 0));
+      } else if (val === 'nao_quero') {
+        answers.sistema = 'nao_homologado';
+        soSection.style.display = 'none';
+      } else {
+        answers.sistema = null;
+        soSection.style.display = 'none';
+      }
+      updateCount();
+    }
+
+    function pickSOAdv(val, el) {
+      document.querySelectorAll('#advSoOptions .qp-option').forEach(o => o.classList.remove('active'));
+      el.classList.add('active');
+      answers.sistema = val;
+      updateCount();
+    }
+
+    function pickOtica(val, el) {
+      answers.otica = val;
+      el.closest('.qp-options').querySelectorAll('.qp-option').forEach(o => o.classList.remove('active'));
+      el.classList.add('active');
+      updateCount();
+    }
+
+/* ── Filtro e scoring ── */
+    function parseAudio(audioW) {
+      if (!audioW) return { total: 0, stereo: false, channels: 1 };
+      const s = String(audioW).trim().toLowerCase();
+      if (s.includes('x')) {
+        const parts = s.split('x').map(v => parseFloat(v));
+        const ch = parts[0], w = parts[1];
+        return { total: ch * w, stereo: ch >= 2, channels: ch };
+      }
+      const total = parseFloat(s) || 0;
+      return { total, stereo: false, channels: 1 };
+    }
+
+    const OTICA_TIER = {
+      'Não Selada': 0, 'Não Selada+': 1, 'Não Selada++': 2,
+      'Selada-': 3, 'Selada': 4, 'Selada+': 5, 'Selada++': 6
+    };
+
+    // Pontuação direta — Não Selada++ > Selada- intencionalmente
+    const OTICA_POINTS = {
+      'Não Selada': 0, 'Não Selada+': 3, 'Selada-': 10,
+      'Não Selada++': 13, 'Selada': 17, 'Selada+': 22, 'Selada++': 30
+    };
+
+    function audioCategory(au) {
+      if (au.channels >= 3) return 'excelente';
+      if (au.stereo && au.total >= 30) return 'excelente';   // 2×15W+
+      if (!au.stereo && au.total >= 15) return 'excelente';  // mono 15W+
+      if (au.stereo && au.total >= 16) return 'bom';         // 2×8W+
+      if (au.stereo) return 'razoavel';                      // qualquer estéreo abaixo
+      if (au.total >= 7) return 'razoavel';                  // mono 7W+
+      return 'basico';
+    }
+
+    function resolucaoMaxTier(resMax) {
+      const r = (resMax || '').toLowerCase();
+      if (r.includes('240hz') || (r.includes('4k') && r.includes('120hz'))) return 4;
+      if (r.includes('4k') && (r.includes('60hz') || r.includes('60 hz'))) return 3;
+      if (r.includes('4k') && (r.includes('30hz') || r.includes('30 hz'))) return 2;
+      if (r.includes('4k')) return 1;
+      return 0;
+    }
+
+    function passesFilter(p, a) {
+      // Orçamento — usa preco_min do projetor
+      if (a.orcamento_min !== null || a.orcamento_max !== null) {
+        if (!p.preco_min) return false;
+        if (a.orcamento_min !== null && p.preco_min < a.orcamento_min) return false;
+        if (a.orcamento_max !== null && p.preco_min > a.orcamento_max) return false;
+      }
+      if (a.iluminacao && p.brilho_ansi) {
+        const ansi = p.brilho_ansi;
+        if (a.iluminacao === 'pouca_luz'   && ansi < 700)  return false;
+        if (a.iluminacao === 'muita_luz'   && ansi < 1000) return false;
+        if (a.iluminacao === 'luz_intensa' && ansi < 1500) return false;
+      }
+      const tec = p.tecnologia || '';
+      if (a.tec_main === 'lcd') {
+        if (!tec.toLowerCase().includes('lcd')) return false;
+      } else if (a.tec_main === 'dlp') {
+        if (!tec.toLowerCase().includes('dlp')) return false;
+        if (a.tec_sub === 'dlp_led'   && tec !== 'DLP LED')   return false;
+        if (a.tec_sub === 'dlp_laser' && tec !== 'DLP Laser') return false;
+      }
+      const resN = (p.resolucao_nativa || '').toLowerCase();
+      const is720  = resN.includes('1280') || resN.includes('720');
+      const is1080 = resN.includes('1920') || resN.includes('1080');
+      const is4KN  = resN.includes('3840') || resN.includes('4k');
+      if (a.resolucao === '720p'      && !is720)  return false;
+      if (a.resolucao === '1080p'     && !is1080) return false;
+      if (a.resolucao === '4k_nativa' && !is4KN)  return false;
+      if (a.entrada && p.resolucao_max) {
+        const rmTier = resolucaoMaxTier(p.resolucao_max);
+        const rm = p.resolucao_max.toLowerCase();
+        if (a.entrada === '4k_30hz'       && rmTier < 2) return false;
+        if (a.entrada === '4k_60hz'       && rmTier < 3) return false;
+        if (a.entrada === '4k_60hz_120hz' && rmTier < 4) return false;
+        if (a.entrada === '1080p_120hz'   && !rm.includes('120hz') && !rm.includes('240hz')) return false;
+      }
+      if (a.otica) {
+        const tier = OTICA_TIER[p.otica_selada] ?? 0;
+        if (a.otica === 'boa'    && tier < 1) return false;
+        if (a.otica === 'otima'  && tier < 4) return false;
+        if (a.otica === 'maxima' && tier < 6) return false;
+      }
+      if (a.sistema) {
+        const so = (p.sistema_operacional || '').toLowerCase();
+        const isGTV = so.includes('google tv');
+        const isATV = so.includes('android tv');
+        const isWOS = so.includes('whaleos');
+        const isHom = isGTV || isATV || isWOS;
+        if (a.sistema === 'nao_homologado'      &&  isHom) return false;
+        if (a.sistema === 'homologado_tantofaz' && !isHom) return false;
+        if (a.sistema === 'google_tv'           && !isGTV) return false;
+        if (a.sistema === 'android_tv'          && !isATV) return false;
+        if (a.sistema === 'whaleos'             && !isWOS) return false;
+      }
+      if (a.mobilidade === 'base'    && !p.suporte_giratorio)                return false;
+      if (a.mobilidade === 'bateria' && !p.bateria)                          return false;
+      if (a.mobilidade === 'ambos'   && !(p.bateria && p.suporte_giratorio)) return false;
+
+      // Som
+      if (a.som) {
+        const au = parseAudio(p.audio_w);
+        const aCat = audioCategory(au);
+        if (a.som === 'bom'      && aCat === 'basico') return false;
+        if (a.som === 'excelente' && (aCat === 'basico' || aCat === 'razoavel')) return false;
+      }
+
+      // Horas de uso
+      if (a.uso_horas && p.uso_continuo) {
+        const minH = a.uso_horas === '8h' ? 8 : 6;
+        if ((parseFloat(String(p.uso_continuo)) || 0) < minH) return false;
+      }
+
+      if (a.distancia_metros != null && p.distancia_100pol_m) {
+        const pol = Math.round((a.distancia_metros / p.distancia_100pol_m) * 100);
+        if (pol < 40 || pol > 250) return false;
+      }
+      return true;
+    }
+
+    function scoreProjector(p, a, lux) {
+      let s = 50;
+      const ansi = p.brilho_ansi || 0;
+      if (a.iluminacao === 'escuro') {
+        s += Math.min(25, Math.round(ansi / 32));
+      } else if (a.iluminacao === 'pouca_luz') {
+        s += Math.min(32, Math.round(ansi / 63));
+      } else if (a.iluminacao === 'muita_luz') {
+        s += Math.min(38, Math.round(ansi / 68));
+      } else if (a.iluminacao === 'luz_intensa') {
+        s += Math.min(44, Math.round(ansi / 68));
+      }
+      const lag = p.input_lag_ms;
+      const tecnologias = (p.tecnologias || '').toLowerCase();
+      if (a.uso === 'filmes') {
+        s += 5;
+        if (tecnologias.includes('hdr'))  s += 12;
+        if (tecnologias.includes('memc')) s += 8;
+      } else if (a.uso === 'jogos') {
+        s += lag == null ? 3 : lag <= 11 ? 35 : lag <= 26 ? 25 : lag <= 50 ? 15 : lag <= 90 ? 5 : -10;
+      } else if (a.uso === 'geral') {
+        s += lag == null ? 3 : lag <= 25 ? 8 : lag <= 50 ? 5 : -8;
+      }
+      const rmTier = resolucaoMaxTier(p.resolucao_max);
+      if (a.entrada === '4k_30hz') {
+        s += rmTier >= 4 ? 20 : rmTier >= 3 ? 14 : rmTier >= 2 ? 8 : 0;
+      } else if (a.entrada === '4k_60hz') {
+        s += rmTier >= 4 ? 18 : rmTier >= 3 ? 10 : 0;
+      } else if (a.entrada === '4k_60hz_120hz') {
+        s += rmTier >= 4 ? 20 : 0;
+      } else if (a.entrada === '1080p_120hz') {
+        const rm = (p.resolucao_max || '').toLowerCase();
+        s += rm.includes('240hz') ? 18 : rm.includes('120hz') ? 12 : 0;
+      }
+      const so = (p.sistema_operacional || '').toLowerCase();
+      const isGTV = so.includes('google tv');
+      const isATV = so.includes('android tv');
+      const isWOS = so.includes('whaleos');
+      const isHom = isGTV || isATV || isWOS;
+      const ramGb = p.ram_gb || 0;
+      const ramBonus = ramGb >= 3 ? 9 : ramGb >= 2 ? 5 : 0;
+      if (a.sistema === 'nao_homologado') {
+        s += (!isHom) ? (4 + ramBonus) : 0;
+      } else if (a.sistema === 'homologado_tantofaz') {
+        s += isGTV ? 40 : isATV ? 35 : isWOS ? 22 : 0;
+      } else if (a.sistema === 'google_tv') {
+        s += isGTV ? 40 : 0;
+      } else if (a.sistema === 'android_tv') {
+        s += isATV ? 35 : 0;
+      } else if (a.sistema === 'whaleos') {
+        s += isWOS ? 22 : 0;
+      }
+      if (a.mobilidade === 'base') {
+        s += p.suporte_giratorio ? 10 : 0;
+      } else if (a.mobilidade === 'bateria') {
+        s += p.bateria ? 12 : 0;
+      } else if (a.mobilidade === 'ambos') {
+        s += (p.suporte_giratorio ? 10 : 0) + (p.bateria ? 12 : 0);
+      }
+      if (a.distancia_metros != null && p.distancia_100pol_m) {
+        const pol = Math.round((a.distancia_metros / p.distancia_100pol_m) * 100);
+        s += (pol >= 80 && pol <= 130) ? 20 : (pol >= 65 && pol <= 160) ? 12 : (pol >= 50 && pol <= 200) ? 5 : 0;
+      }
+      if (a.otica) {
+        s += OTICA_POINTS[p.otica_selada] ?? 0;
+      }
+      // Som
+      if (a.som) {
+        const au = parseAudio(p.audio_w);
+        const sCat = audioCategory(au);
+        if (a.som === 'bom') {
+          s += sCat === 'excelente' ? 12 : sCat === 'bom' ? 8 : sCat === 'razoavel' ? 4 : 0;
+        } else if (a.som === 'excelente') {
+          s += sCat === 'excelente' ? 20 : sCat === 'bom' ? 10 : sCat === 'razoavel' ? 4 : 0;
+        }
+      }
+
+      // Horas de uso
+      if (a.uso_horas && p.uso_continuo) {
+        const h = parseFloat(String(p.uso_continuo)) || 0;
+        const minH = a.uso_horas === '8h' ? 8 : 6;
+        s += h >= minH ? 20 : h >= minH - 2 ? 8 : 0;
+      }
+
+      if (lux > 0) {
+        const minAnsi = lux >= 500 ? 3000 : lux >= 200 ? 1500 : lux >= 50 ? 500 : 0;
+        if (minAnsi > 0) s += ansi >= minAnsi * 1.5 ? 20 : ansi >= minAnsi ? 10 : 0;
+      }
+      // Custo-benefício — ANSI efetivo por real investido + bônus de features
+      if (a.custo_beneficio && p.preco_min && p.brilho_ansi) {
+        const isDLP = (p.tecnologia || '').includes('DLP');
+        const ansiEf = isDLP ? p.brilho_ansi * 1.5 : p.brilho_ansi;
+        const ratioPts = (ansiEf / p.preco_min) * 50;
+
+        const os_ = p.sistema_operacional || '';
+        const osBonus = os_.includes('Google TV') ? 15 : os_.includes('Android TV') ? 8 : os_.includes('WhaleOS') ? 3 : 0;
+
+        const mahMatch = (p.cap_bateria || '').match(/\d+/);
+        const mah = mahMatch ? parseInt(mahMatch[0]) : 0;
+        const batBonus = mah >= 15000 ? 12 : mah >= 8000 ? 8 : p.bateria ? 5 : 0;
+
+        const lag = p.input_lag_ms;
+        const lagBonus = lag && lag <= 26 ? 8 : lag && lag <= 50 ? 4 : 0;
+
+        const k4Bonus = (p.resolucao_max || '').toLowerCase().includes('4k') ? 6 : 0;
+
+        const tec = p.tecnologias || '';
+        const techBonus = (tec.includes('MEMC') ? 4 : 0) + (tec.includes('HDR') ? 3 : 0);
+
+        const bolsaBonus = p.bolsa === 'premium' ? 10 : p.bolsa === 'basica' ? 6 : 0;
+
+        const cbScore = ratioPts + osBonus + batBonus + lagBonus + k4Bonus + techBonus + bolsaBonus;
+        const weight = a.custo_beneficio === 'bastante' ? 0.5 : 0.3;
+        s = Math.round(s * (1 - weight) + cbScore * weight);
+      }
+      return s;
+    }
+
+    function getBadge(p, idx, top) {
+      if (idx === 0) {
+        if (answers.uso === 'jogos') return { text: '⚡ Ideal para jogos', cls: 'featured' };
+        if (answers.mobilidade === 'bateria' || answers.mobilidade === 'ambos') return { text: '🔋 Melhor portátil', cls: 'featured' };
+        if (answers.iluminacao === 'luz_intensa') return { text: '☀️ Máximo brilho', cls: 'featured' };
+        if (answers.resolucao === '4k_nativa') return { text: '✨ Melhor em 4K', cls: 'featured' };
+        if (answers.tec_sub === 'dlp_laser') return { text: '⚡ Melhor DLP Laser', cls: 'featured' };
+        return { text: '★ Recomendado para você', cls: 'featured' };
+      }
+      const t = top[0];
+      if (p.preco_min && t.preco_min && p.preco_min < t.preco_min * 0.85) return { text: '💰 Mais econômico', cls: 'alt' };
+      if (p.brilho_ansi && t.brilho_ansi && p.brilho_ansi > t.brilho_ansi * 1.2) return { text: '💡 Mais brilhante', cls: 'alt' };
+      if (answers.uso === 'jogos' && p.input_lag_ms != null && t.input_lag_ms != null && p.input_lag_ms < t.input_lag_ms * 0.8) return { text: '⚡ Menor input lag', cls: 'alt' };
+      if (p.bateria && !t.bateria) return { text: '🔋 Opção com bateria', cls: 'alt' };
+      const selada = v => v && v.startsWith('Selada');
+      if (selada(p.otica_selada) && !selada(t.otica_selada)) return { text: '🔒 Ótica selada', cls: 'alt' };
+      if (p.tecnologia === 'DLP Laser' && t.tecnologia !== 'DLP Laser') return { text: '⚡ DLP Laser', cls: 'alt' };
+      return { text: '✓ Boa alternativa', cls: 'alt' };
+    }
+
+    function lagClass(lag) {
+      if (lag == null) return '';
+      if (lag <= 25) return 'hi';
+      if (lag <= 50) return '';
+      return 'warn';
+    }
+
+    function audioLabel(audioW) {
+      if (!audioW) return null;
+      const s = String(audioW).trim();
+      if (!s) return null;
+      const au = parseAudio(audioW);
+      if (!au.total) return null;
+      const cat = audioCategory(au);
+      if (cat === 'basico')    return 'Básico';
+      if (cat === 'razoavel')  return 'Razoável';
+      if (cat === 'bom')       return 'Bom';
+      return 'Excelente';
+    }
+
+    function getYouTubeId(url) {
+      if (!url) return null;
+      const m = url.match(/(?:youtu\.be\/|v=)([^&?/]+)/);
+      return m ? m[1] : null;
+    }
+
+    function renderCard(p, badge, featured, matchPct) {
+      const hasPrice = p.preco_min || p.preco_max;
+      const fmt = n => n ? n.toLocaleString('pt-BR') : '?';
+      const isImportado = p.status === 'importado';
+      const importadoTag = isImportado ? '<span class="qp-tag-importado">importado</span>' : '';
+      const priceNote = isImportado ? 'estimativa · valor pode variar bastante' : 'estimativa · varia por loja';
+      const priceHtml = hasPrice
+        ? `<div class="qp-card-price"><div class="qp-card-price-range">R$ ${fmt(p.preco_min)} – ${fmt(p.preco_max)}${importadoTag}</div><div class="qp-card-price-note">${priceNote}</div></div>`
+        : `<div class="qp-card-price"><div class="qp-card-price-na">sem estimativa</div></div>`;
+
+      const matchPill = (matchPct !== null)
+        ? `<span class="qp-match-pill${matchPct >= 90 ? ' hi' : matchPct >= 70 ? ' mid' : ''}">${matchPct}% de match</span>`
+        : '';
+
+      const specs = [];
+      if (answers.distancia_metros && p.distancia_100pol_m) {
+        const pol = Math.round((answers.distancia_metros / p.distancia_100pol_m) * 100);
+        specs.push(`<div class="qp-spec"><span class="qp-spec-label">Na sua distância</span><span class="qp-spec-value hi">~${pol} pol.</span></div>`);
+      }
+      if (p.brilho_ansi)          specs.push(`<div class="qp-spec"><span class="qp-spec-label">Brilho</span><span class="qp-spec-value hi">${p.brilho_ansi} ANSI</span></div>`);
+      if (p.input_lag_ms != null) specs.push(`<div class="qp-spec"><span class="qp-spec-label">Input lag</span><span class="qp-spec-value ${lagClass(p.input_lag_ms)}">${p.input_lag_ms}ms</span></div>`);
+      if (p.resolucao_nativa)     specs.push(`<div class="qp-spec"><span class="qp-spec-label">Resolução</span><span class="qp-spec-value">${p.resolucao_nativa}</span></div>`);
+      if (p.resolucao_max)        specs.push(`<div class="qp-spec"><span class="qp-spec-label">Entrada</span><span class="qp-spec-value">${p.resolucao_max}</span></div>`);
+      if (p.tecnologia)           specs.push(`<div class="qp-spec"><span class="qp-spec-label">Tecnologia</span><span class="qp-spec-value">${p.tecnologia}</span></div>`);
+      if (p.sistema_operacional)  specs.push(`<div class="qp-spec"><span class="qp-spec-label">Sistema</span><span class="qp-spec-value">${p.sistema_operacional}</span></div>`);
+      if (p.otica_selada)         specs.push(`<div class="qp-spec"><span class="qp-spec-label">Ótica</span><span class="qp-spec-value">${p.otica_selada}</span></div>`);
+      const audioLbl = audioLabel(p.audio_w);
+      if (audioLbl) {
+        const wRaw = String(p.audio_w || '').trim();
+        const wFmt = wRaw.includes('x')
+          ? wRaw.replace('x', '×') + 'W'
+          : parseFloat(wRaw) + 'W';
+        specs.push(`<div class="qp-spec"><span class="qp-spec-label">Som</span><span class="qp-spec-value">${audioLbl} (${wFmt})</span></div>`);
+      }
+      if (p.tecnologias)          specs.push(`<div class="qp-spec"><span class="qp-spec-value" style="color:var(--text-muted)">${p.tecnologias}</span></div>`);
+      if (p.autofoco === 'Sim')   specs.push(`<div class="qp-spec"><span class="qp-spec-value">✓ Autofoco</span></div>`);
+      if (p.bateria) {
+        const batTxt = p.cap_bateria ? `🔋 Bateria ${p.cap_bateria}` : '🔋 Com bateria';
+        specs.push(`<div class="qp-spec"><span class="qp-spec-value">${batTxt}</span></div>`);
+      }
+      if (p.uso_continuo)         specs.push(`<div class="qp-spec"><span class="qp-spec-label">Uso contínuo</span><span class="qp-spec-value">${p.uso_continuo}</span></div>`);
+
+      const stores = [];
+      if (p.ali_url)    stores.push(`<a href="${p.ali_url}" target="_blank" rel="noopener noreferrer" class="qp-store-btn ali"><span class="store-dot"></span>AliExpress</a>`);
+      if (p.ml_url)     stores.push(`<a href="${p.ml_url}" target="_blank" rel="noopener noreferrer" class="qp-store-btn ml"><span class="store-dot"></span>Mercado Livre</a>`);
+      if (p.shopee_url) stores.push(`<a href="${p.shopee_url}" target="_blank" rel="noopener noreferrer" class="qp-store-btn shopee"><span class="store-dot"></span>Shopee</a>`);
+      if (p.amazon_url) stores.push(`<a href="${p.amazon_url}" target="_blank" rel="noopener noreferrer" class="qp-store-btn amazon"><span class="store-dot"></span>Amazon</a>`);
+
+      const coupons = [];
+      if (p.ali_cupom_loja)  coupons.push({ label: 'Cupom loja', code: p.ali_cupom_loja });
+      if (p.ali_cupom_promo) coupons.push({ label: 'Cupom promo', code: p.ali_cupom_promo });
+      const couponsHtml = coupons.length
+        ? `<div class="qp-coupons">${coupons.map(c =>
+            `<div class="qp-coupon">
+              <span class="qp-coupon-label">${c.label}:</span>
+              <span class="qp-coupon-code">${c.code}</span>
+              <button class="qp-coupon-copy" onclick="copyCoupon(this,'${c.code}')">Copiar</button>
+            </div>`).join('')}</div>${coupons.length >= 2 ? `<p class="qp-coupon-note">Use os 2 cupons para o desconto máximo.</p>` : ''}`
+        : '';
+
+      const vidId = getYouTubeId(p.video_url);
+      const reviewHtml = vidId
+        ? `<a href="${p.video_url}" target="_blank" rel="noopener noreferrer" class="qp-review-banner">
+            <img src="https://img.youtube.com/vi/${vidId}/mqdefault.jpg" class="qp-review-thumb" alt="Review ${p.marca} ${p.modelo}" loading="lazy">
+            <div class="qp-review-cta">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Análise completa
+            </div>
+          </a>`
+        : '';
+
+      const bottomHtml = (stores.length || reviewHtml)
+        ? `<hr class="qp-divider">
+           ${reviewHtml}
+           ${stores.length ? `<div class="qp-buy-section"><div class="qp-buy-label">Compre pelo melhor preço</div><div class="qp-card-actions">${stores.join('')}</div>${couponsHtml}</div>` : couponsHtml}`
+        : '';
+
+      return `
+        <div class="qp-card${featured ? ' featured' : ''}">
+          <div class="qp-card-top">
+            <div>
+              <div class="qp-card-badge-row">
+                <span class="qp-card-badge ${badge.cls}">${badge.text}</span>
+                ${matchPill}
+              </div>
+              <div class="qp-card-name"><span class="marca">${p.marca}</span> ${p.modelo}</div>
+            </div>
+            ${priceHtml}
+          </div>
+          <div class="qp-card-specs">${specs.join('')}</div>
+          ${bottomHtml}
+        </div>`;
+    }
+
+    function copyCoupon(btn, code) {
+      navigator.clipboard.writeText(code).then(() => {
+        btn.textContent = 'Copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copiar'; btn.classList.remove('copied'); }, 2000);
+      });
+    }
+
+    function scrollToQuestions() {
+      document.querySelector('.qp-questions').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function showResults() {
+      const lux = parseFloat(document.getElementById('luxInput').value) || 0;
+      const data = window.PROJETORES_DATA || [];
+      const filtered = data.filter(p => passesFilter(p, answers));
+
+      if (filtered.length === 0) {
+        document.getElementById('cardsContainer').innerHTML =
+          '<p style="text-align:center;color:var(--text-muted);padding:60px 0;font-size:0.95rem;">Nenhum projetor encontrado com esses filtros.<br>Tente remover alguns critérios mais restritivos.</p>';
+        const sec = document.getElementById('resultsSection');
+        sec.classList.add('visible');
+        setTimeout(() => sec.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+        return;
+      }
+
+      const scored = filtered
+        .map(p => ({ ...p, _score: scoreProjector(p, answers, lux) }))
+        .sort((a, b) => b._score - a._score || (b.brilho_ansi || 0) - (a.brilho_ansi || 0))
+        .slice(0, 10);
+
+      const topScore = scored[0]._score;
+
+      document.getElementById('cardsContainer').innerHTML = scored
+        .map((p, i) => {
+          const pct = i === 0 ? null : Math.round(p._score / topScore * 100);
+          return renderCard(p, getBadge(p, i, scored), i === 0, pct);
+        })
+        .join('');
+
+      const labelMap = {
+        iluminacao: { escuro: 'escuro', pouca_luz: 'pouca luz', muita_luz: 'muita luz', luz_intensa: 'luz intensa' },
+        uso:        { filmes: 'filmes', jogos: 'jogos', geral: 'geral' },
+        mobilidade: { fixo: 'fixo', base: 'base giratória', bateria: 'portátil c/ bateria', ambos: 'bateria + giratória' },
+      };
+      const parts = Object.entries(labelMap)
+        .filter(([k]) => answers[k])
+        .map(([k, map]) => map[answers[k]])
+        .filter(Boolean);
+      if (answers.tec_main) {
+        const tecLabel = answers.tec_sub === 'dlp_laser' ? 'DLP Laser' : answers.tec_sub === 'dlp_led' ? 'DLP LED' : answers.tec_main.toUpperCase();
+        parts.push(tecLabel);
+      }
+      if (answers.resolucao) parts.push({ '720p': '720p', '1080p': '1080p', '4k_nativa': '4K nativa' }[answers.resolucao]);
+      if (answers.distancia_metros) parts.push(`${answers.distancia_metros}m`);
+      if (parts.length)
+        document.getElementById('resultsSubtitle').textContent = `Perfil: ${parts.join(' · ')}.`;
+
+      const sec = document.getElementById('resultsSection');
+      sec.classList.add('visible');
+      setTimeout(() => sec.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+      const emailCap = document.getElementById('emailCapture');
+      if (emailCap) emailCap.style.display = '';
+    }
+  </script>
+
+</body>
+</html>

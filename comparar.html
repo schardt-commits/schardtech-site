@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net;">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7738V0HHSF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7738V0HHSF');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparar Projetores — SchardTech</title>
+  <meta name="description" content="Compare até 3 projetores lado a lado com dados reais testados no canal SchardTech. Brilho ANSI, input lag, ótica, áudio e muito mais.">
+  <meta property="og:title" content="Comparar Projetores — SchardTech">
+  <meta property="og:description" content="Compare até 3 projetores lado a lado com dados reais do canal. Todas as specs, gráfico radar e links de compra.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://schardtech.com.br/comparar.html">
+  <meta property="og:site_name" content="SchardTech">
+  <meta property="og:image" content="https://schardtech.com.br/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Comparar Projetores — SchardTech">
+  <meta name="twitter:description" content="Compare até 3 projetores lado a lado com dados reais. Brilho ANSI, input lag, ótica, áudio e muito mais.">
+  <meta name="twitter:image" content="https://schardtech.com.br/og-image.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Comparar Projetores",
+    "url": "https://schardtech.com.br/comparar.html",
+    "description": "Compare até 3 projetores lado a lado com dados reais testados no canal SchardTech.",
+    "isPartOf": { "@type": "WebSite", "name": "SchardTech", "url": "https://schardtech.com.br" }
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ── HERO ─────────────────────────────────── */
+    .cp-hero {
+      padding: 140px 0 64px;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(79,163,199,0.12) 0%, transparent 65%),
+        linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+      text-align: center;
+    }
+    .cp-hero .section-tag { display: inline-flex; margin: 0 auto 20px; }
+    .cp-hero h1 {
+      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    .cp-hero p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── SELECTOR ─────────────────────────────── */
+    .cp-selector { padding: 56px 0 0; }
+    .cp-slots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .cp-slot {
+      background: var(--card-bg);
+      border: 1.5px dashed rgba(79,163,199,0.22);
+      border-radius: var(--radius-lg);
+      min-height: 148px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition);
+      padding: 24px;
+      text-align: center;
+      position: relative;
+    }
+    .cp-slot:hover {
+      border-color: rgba(79,163,199,0.55);
+      background: rgba(79,163,199,0.04);
+    }
+    .cp-slot.filled {
+      border-style: solid;
+      cursor: default;
+      align-items: stretch;
+      justify-content: flex-start;
+      text-align: left;
+    }
+    .cp-slot.filled:hover { border-color: var(--border); background: var(--card-bg); }
+    .cp-slot[data-slot="0"].filled { border-color: rgba(79,163,199,0.4); }
+    .cp-slot[data-slot="1"].filled { border-color: rgba(255,210,60,0.38); }
+    .cp-slot[data-slot="2"].filled { border-color: rgba(176,122,255,0.38); }
+
+    .cp-slot-add-icon {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: rgba(79,163,199,0.1);
+      border: 1px solid rgba(79,163,199,0.28);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 12px;
+      color: var(--primary);
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 1;
+    }
+    .cp-slot-add-text { font-size: 0.87rem; color: var(--text-muted); font-weight: 600; }
+    .cp-slot-add-hint { font-size: 0.72rem; color: var(--text-dim); margin-top: 5px; }
+
+    .cp-slot-color-bar {
+      height: 3px;
+      border-radius: 0 0 2px 2px;
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      border-radius: 14px 14px 0 0;
+    }
+    .cp-slot[data-slot="0"] .cp-slot-color-bar { background: var(--primary); }
+    .cp-slot[data-slot="1"] .cp-slot-color-bar { background: #ffd23c; }
+    .cp-slot[data-slot="2"] .cp-slot-color-bar { background: #b07aff; }
+
+    .cp-slot-inner { padding-top: 10px; flex: 1; display: flex; flex-direction: column; }
+    .cp-slot-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .cp-slot-brand {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+    .cp-slot-model { font-size: 1.05rem; font-weight: 700; color: var(--text); line-height: 1.2; }
+    .cp-slot-remove {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      width: 28px; height: 28px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      color: var(--text-dim);
+      font-size: 1rem;
+      flex-shrink: 0;
+      transition: all var(--transition);
+    }
+    .cp-slot-remove:hover {
+      background: rgba(255,80,80,0.12);
+      border-color: rgba(255,80,80,0.3);
+      color: #ff7070;
+    }
+    .cp-slot-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: auto; padding-top: 8px; }
+
+    /* ── MODAL ────────────────────────────────── */
+    .cp-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.72);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(5px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+    .cp-modal-overlay.open { opacity: 1; pointer-events: all; }
+    .cp-modal {
+      background: #141828;
+      border: 1px solid rgba(79,163,199,0.28);
+      border-radius: var(--radius-xl);
+      width: 100%;
+      max-width: 560px;
+      max-height: 82vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.65), 0 0 0 1px rgba(79,163,199,0.08);
+      transform: translateY(8px);
+      transition: transform 0.2s ease;
+    }
+    .cp-modal-overlay.open .cp-modal { transform: translateY(0); }
+    .cp-modal-top {
+      padding: 20px 20px 14px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .cp-modal-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+    .cp-search-input {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(79,163,199,0.22);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .cp-search-input:focus { border-color: var(--primary); background: rgba(79,163,199,0.05); }
+    .cp-search-input::placeholder { color: var(--text-dim); }
+    .cp-modal-brands {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 12px 20px 4px;
+      flex-shrink: 0;
+    }
+    .cp-brand-pill {
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      background: rgba(79,163,199,0.06);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .cp-brand-pill:hover, .cp-brand-pill.active {
+      background: rgba(79,163,199,0.14);
+      border-color: var(--primary);
+      color: var(--accent);
+    }
+    .cp-modal-list {
+      overflow-y: auto;
+      flex: 1;
+      padding: 6px 10px 14px;
+    }
+    .cp-modal-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 12px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background var(--transition);
+      border: 1px solid transparent;
+      gap: 12px;
+    }
+    .cp-modal-item:hover { background: rgba(79,163,199,0.07); border-color: var(--border); }
+    .cp-modal-item.already-selected { opacity: 0.35; cursor: not-allowed; pointer-events: none; }
+    .cp-modal-item-name { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+    .cp-modal-item-sub { font-size: 0.74rem; color: var(--text-muted); margin-top: 2px; }
+    .cp-modal-item-price { font-size: 0.82rem; font-weight: 700; color: var(--accent); white-space: nowrap; flex-shrink: 0; }
+    .cp-modal-empty { text-align: center; padding: 36px 24px; color: var(--text-dim); font-size: 0.85rem; }
+
+    /* ── COMPARISON SECTION ───────────────────── */
+    .cp-comparison { padding: 48px 0 80px; }
+
+    .cp-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .cp-controls-left { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .cp-ctrl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: inherit;
+    }
+    .cp-ctrl-btn:hover, .cp-ctrl-btn.active {
+      border-color: var(--primary);
+      color: var(--accent);
+      background: rgba(79,163,199,0.08);
+    }
+    .cp-share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      border-radius: 100px;
+      border: 1px solid rgba(79,163,199,0.32);
+      background: transparent;
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: inherit;
+    }
+    .cp-share-btn:hover { background: rgba(79,163,199,0.1); border-color: var(--primary); }
+
+    /* ── RADAR CHART ──────────────────────────── */
+    .cp-radar-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+    .cp-radar-svg-wrap { flex-shrink: 0; width: 260px; height: 260px; }
+    .cp-radar-svg-wrap svg { width: 100%; height: 100%; display: block; }
+    .cp-radar-info { flex: 1; min-width: 0; }
+    .cp-radar-info-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+      margin-bottom: 18px;
+    }
+    .cp-radar-legend { display: flex; flex-direction: column; gap: 11px; margin-bottom: 20px; }
+    .cp-radar-legend-item { display: flex; align-items: flex-start; gap: 10px; }
+    .cp-radar-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 3px; }
+    .cp-radar-model { font-size: 0.88rem; font-weight: 700; color: var(--text); }
+    .cp-radar-brand { font-size: 0.75rem; color: var(--text-muted); }
+    .cp-radar-axes-note {
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+
+    /* ── TABLE ────────────────────────────────── */
+    .cp-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--bg-primary);
+    }
+    .cp-table {
+      min-width: 480px;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    /* Sticky thead */
+    .cp-thead { position: sticky; top: 64px; z-index: 10; }
+    .cp-th-corner {
+      background: #0d1120;
+      border-bottom: 2px solid rgba(79,163,199,0.18);
+      padding: 0;
+      position: sticky;
+      left: 0;
+      z-index: 12;
+      width: 170px;
+      min-width: 170px;
+    }
+    .cp-th-col {
+      background: #0d1120;
+      border-bottom: 2px solid rgba(79,163,199,0.18);
+      border-left: 1px solid var(--border);
+      padding: 10px 18px 12px;
+      text-align: center;
+      min-width: 170px;
+      vertical-align: top;
+      overflow: hidden;
+    }
+    .cp-th-top-bar { height: 3px; border-radius: 0; margin: -10px -18px 6px; }
+    .cp-th-brand { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); }
+    .cp-th-model { font-size: 0.98rem; font-weight: 800; color: var(--text); margin-top: 3px; line-height: 1.2; }
+    .cp-th-wins-badge {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 0.62rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 100px;
+    }
+
+    /* Section header rows — sticky below the projector thead */
+    .cp-tr-section td {
+      padding: 8px 16px;
+      font-size: 0.62rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary);
+      background: #0d1120;
+      border-top: 1px solid rgba(79,163,199,0.1);
+      position: sticky;
+      top: calc(64px + var(--cp-thead-h, 70px));
+      z-index: 9;
+    }
+
+    /* Data rows */
+    .cp-tr { border-top: 1px solid rgba(79,163,199,0.07); transition: background 0.15s ease; }
+    .cp-tr:hover { background: rgba(79,163,199,0.025); }
+    .cp-tr.diff-hidden { display: none; }
+
+    .cp-td-label {
+      padding: 13px 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      position: sticky;
+      left: 0;
+      background: var(--bg-primary);
+      z-index: 2;
+      vertical-align: middle;
+      border-right: 1px solid var(--border);
+      transition: background 0.15s ease;
+    }
+    .cp-tr:hover .cp-td-label { background: #0e1421; }
+    .cp-td-label-hint {
+      display: block;
+      font-size: 0.64rem;
+      font-weight: 400;
+      color: var(--text-dim);
+      margin-top: 2px;
+      line-height: 1.4;
+      max-width: 145px;
+      white-space: normal;
+    }
+
+    .cp-td-val {
+      padding: 13px 18px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-align: center;
+      vertical-align: middle;
+      border-left: 1px solid var(--border);
+    }
+    .cp-td-val.winner {
+      background: rgba(77,220,120,0.05);
+      color: var(--text);
+      font-weight: 600;
+    }
+    .win-badge {
+      display: inline-block;
+      font-size: 0.58rem;
+      font-weight: 800;
+      background: rgba(77,220,120,0.15);
+      color: #4ddc78;
+      border: 1px solid rgba(77,220,120,0.3);
+      border-radius: 100px;
+      padding: 1px 7px;
+      margin-left: 6px;
+      vertical-align: middle;
+      letter-spacing: 0.02em;
+    }
+    .cp-bool-yes { color: #4ddc78; font-weight: 700; }
+    .cp-bool-no { color: var(--text-dim); }
+    .val-dash { color: var(--text-dim); }
+
+    /* Connectivity port pills */
+    .cp-port {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 100px;
+      background: rgba(79,163,199,0.09);
+      border: 1px solid rgba(79,163,199,0.2);
+      color: var(--primary);
+      white-space: nowrap;
+    }
+
+    /* Calc row */
+    .cp-tr-calc .cp-td-val {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .cp-calc-cell {
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    .cp-calc-label { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); }
+    .cp-calc-input {
+      width: 76px;
+      padding: 6px 10px;
+      background: var(--bg-primary);
+      border: 1px solid rgba(79,163,199,0.28);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color var(--transition);
+      -moz-appearance: textfield;
+    }
+    .cp-calc-input::-webkit-outer-spin-button,
+    .cp-calc-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+    .cp-calc-input:focus { border-color: var(--primary); }
+    .cp-calc-unit { font-size: 0.72rem; color: var(--text-dim); }
+
+    /* ── PURCHASE SECTION ─────────────────────── */
+    .cp-purchase-wrap { margin-top: 36px; }
+    .cp-purchase-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .cp-purchase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .cp-pcard {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 22px 22px 20px;
+      border-top-width: 3px;
+    }
+    .cp-pcard[data-slot="0"] { border-top-color: var(--primary); }
+    .cp-pcard[data-slot="1"] { border-top-color: #ffd23c; }
+    .cp-pcard[data-slot="2"] { border-top-color: #b07aff; }
+    .cp-pcard-brand {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      margin-bottom: 4px;
+    }
+    .cp-pcard-model {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .cp-pcard-price {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .cp-pcard-price strong { color: var(--accent); font-size: 1rem; }
+    .cp-store-btns { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
+    .cp-store-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all var(--transition);
+      gap: 8px;
+    }
+    .cp-store-shopee { background: rgba(238,77,45,0.09); border: 1px solid rgba(238,77,45,0.22); color: #ff6b45; }
+    .cp-store-shopee:hover { background: rgba(238,77,45,0.17); }
+    .cp-store-ml { background: rgba(26,63,191,0.1); border: 1px solid rgba(26,63,191,0.25); color: #6b8cff; }
+    .cp-store-ml:hover { background: rgba(26,63,191,0.18); }
+    .cp-store-ali { background: rgba(255,100,0,0.08); border: 1px solid rgba(255,100,0,0.22); color: #ff7a30; }
+    .cp-store-ali:hover { background: rgba(255,100,0,0.16); }
+    .cp-store-amazon { background: rgba(255,153,0,0.08); border: 1px solid rgba(255,153,0,0.22); color: #ffaa30; }
+    .cp-store-amazon:hover { background: rgba(255,153,0,0.16); }
+    .cp-ext-icon { flex-shrink: 0; opacity: 0.7; }
+    .cp-cupom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(79,163,199,0.06);
+      border: 1px dashed rgba(79,163,199,0.28);
+      border-radius: 8px;
+      padding: 7px 12px;
+      margin-top: 6px;
+    }
+    .cp-cupom-label { font-size: 0.62rem; color: var(--text-dim); margin-bottom: 2px; }
+    .cp-cupom-code { font-size: 0.8rem; font-weight: 700; color: var(--accent); font-family: monospace; letter-spacing: 0.04em; }
+    .cp-cupom-copy {
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-size: 0.7rem;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-family: inherit;
+      transition: background var(--transition);
+      flex-shrink: 0;
+    }
+    .cp-cupom-copy:hover { background: rgba(79,163,199,0.14); }
+    .cp-review-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(79,163,199,0.28);
+      background: transparent;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 14px;
+      transition: all var(--transition);
+    }
+    .cp-review-btn:hover { background: rgba(79,163,199,0.08); border-color: var(--primary); }
+    .cp-no-links { font-size: 0.78rem; color: var(--text-dim); }
+
+    /* ── TOAST ────────────────────────────────── */
+    .cp-toast {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(16px);
+      background: #1a1f3a;
+      border: 1px solid rgba(79,163,199,0.38);
+      border-radius: var(--radius);
+      padding: 12px 24px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--accent);
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0;
+      transition: all 0.28s cubic-bezier(0.34,1.56,0.64,1);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+      white-space: nowrap;
+    }
+    .cp-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ── RESPONSIVE ───────────────────────────── */
+    @media (max-width: 900px) {
+      .cp-slots { grid-template-columns: repeat(2, 1fr); }
+      .cp-radar-card { flex-direction: column; gap: 20px; }
+      .cp-radar-svg-wrap { width: 220px; height: 220px; margin: 0 auto; }
+    }
+    @media (max-width: 640px) {
+      .cp-slots { grid-template-columns: 1fr; }
+      .cp-controls { flex-direction: column; align-items: flex-start; }
+      .cp-radar-svg-wrap { width: 200px; height: 200px; }
+    }
+    @media (max-width: 480px) {
+      .cp-th-corner, .cp-td-label { min-width: 110px; width: 110px; }
+      .cp-td-label-hint { max-width: 105px; }
+      .cp-th-col { min-width: 130px; }
+    }
+
+    /* ── MODAL CLOSE BUTTON ───────────────────── */
+    .cp-modal-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .cp-modal-title { margin-bottom: 0; }
+    .cp-modal-close {
+      background: none;
+      border: 1px solid transparent;
+      color: var(--text-dim);
+      font-size: 1.25rem;
+      cursor: pointer;
+      padding: 2px 8px;
+      border-radius: 6px;
+      line-height: 1;
+      transition: all var(--transition);
+      font-family: inherit;
+      flex-shrink: 0;
+    }
+    .cp-modal-close:hover {
+      color: var(--text);
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.1);
+    }
+    .cp-modal-clear-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 7px 18px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: none;
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all var(--transition);
+    }
+    .cp-modal-clear-btn:hover { border-color: var(--primary); background: rgba(79,163,199,0.08); }
+  </style>
+</head>
+<body>
+
+  <header id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.png" alt="SchardTech" class="logo-img">
+      </a>
+      <nav id="mainNav">
+        <a href="index.html#projetores" class="nav-link">Projetores</a>
+        <a href="index.html#calculadora" class="nav-link">Calculadora</a>
+        <a href="index.html#rankings" class="nav-link">Rankings</a>
+        <a href="index.html#sobre" class="nav-link">Sobre</a>
+        <a href="qual-projetor.html" class="nav-link" style="color:var(--primary);font-weight:600;">Quiz</a>
+        <a href="comparar.html" class="nav-link">Comparar</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="cp-hero">
+    <div class="container">
+      <div class="section-tag">Dados Reais do Canal</div>
+      <h1>Compare até 3<br><span class="gradient-text">projetores</span></h1>
+      <p>Todas as specs testadas no canal, lado a lado. Escolha os modelos e decida você mesmo.</p>
+    </div>
+  </section>
+
+  <section class="cp-selector">
+    <div class="container">
+      <div class="cp-slots" id="slotsContainer"></div>
+    </div>
+  </section>
+
+  <section class="cp-comparison" id="compSection" style="display:none">
+    <div class="container">
+
+      <div class="cp-controls">
+        <div class="cp-controls-left">
+          <button class="cp-ctrl-btn" id="toggleDiffBtn" onclick="toggleDiff()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+            Mostrar só diferenças
+          </button>
+        </div>
+        <button class="cp-share-btn" onclick="shareUrl()">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Copiar link
+        </button>
+      </div>
+
+      <!-- Radar chart -->
+      <div class="cp-radar-card" id="radarCard">
+        <div class="cp-radar-svg-wrap">
+          <svg id="radarSvg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+        <div class="cp-radar-info">
+          <div class="cp-radar-info-title">Perfil de desempenho</div>
+          <div class="cp-radar-legend" id="radarLegend"></div>
+          <div class="cp-radar-axes-note">
+            Eixos: <strong>Brilho</strong> (ANSI) · <strong>Input Lag</strong> (invertido — menor lag = maior pontuação) · <strong>Áudio</strong> (potência total) · <strong>Ótica</strong> (tier de selagem) · <strong>Duração</strong> (uso contínuo)<br>
+            Normalizado em relação ao maior valor entre os 68 projetores do banco.
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison table -->
+      <div class="cp-table-wrap">
+        <table class="cp-table" id="compTable"></table>
+      </div>
+
+      <!-- Purchase section -->
+      <div class="cp-purchase-wrap">
+        <div class="cp-purchase-title">Onde comprar</div>
+        <div class="cp-purchase-grid" id="purchaseGrid"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="cp-modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+    <div class="cp-modal">
+      <div class="cp-modal-top">
+        <div class="cp-modal-top-row">
+          <div class="cp-modal-title">Selecionar projetor</div>
+          <button class="cp-modal-close" id="modalCloseBtn" aria-label="Fechar">&#x2715;</button>
+        </div>
+        <input type="text" class="cp-search-input" id="searchInput" placeholder="Buscar por modelo ou marca..." oninput="filterModal()" autocomplete="off">
+      </div>
+      <div class="cp-modal-brands" id="modalBrands"></div>
+      <div class="cp-modal-list" id="modalList"></div>
+    </div>
+  </div>
+
+  <div class="cp-toast" id="toast"></div>
+
+  <script src="projetores-data.js"></script>
+  <script>
+    /* ═══════════════════════════════════════════
+       STATE
+    ═══════════════════════════════════════════ */
+    const selected = [null, null, null];
+    const COLORS   = ['#4FA3C7', '#ffd23c', '#b07aff'];
+    let activeSlot   = -1;
+    let showOnlyDiff = false;
+    let activeBrand  = null;
+    let calcDist     = null;
+
+    const DATA = window.PROJETORES_DATA || [];
+
+    /* ═══════════════════════════════════════════
+       HELPERS
+    ═══════════════════════════════════════════ */
+    function oticaTier(s) {
+      return {'Não Selada':0,'Não Selada+':1,'Não Selada++':2,'Selada-':3,'Selada':4,'Selada+':5,'Selada++':6}[s] ?? -1;
+    }
+
+    function parseAudioTotal(s) {
+      if (!s) return 0;
+      const m2 = String(s).match(/^(\d+(?:\.\d+)?)x(\d+(?:\.\d+)?)/i);
+      if (m2) return parseFloat(m2[1]) * parseFloat(m2[2]);
+      const m1 = String(s).match(/^(\d+(?:\.\d+)?)/);
+      return m1 ? parseFloat(m1[1]) : 0;
+    }
+
+    function fmtAudio(s) {
+      if (!s || s === '0') return null;
+      const m2 = String(s).match(/^(\d+(?:\.\d+)?)x(\d+(?:\.\d+)?)/i);
+      if (m2) return `${m2[1]}×${m2[2]}W (estéreo)`;
+      return `${s}W (mono)`;
+    }
+
+    function parseHours(s) {
+      if (!s) return 0;
+      const m = String(s).match(/(\d+(?:\.\d+)?)/);
+      return m ? parseFloat(m[1]) : 0;
+    }
+
+    function parseConn(str) {
+      if (!str) return {};
+      const out = {};
+      str.split('/').forEach(part => {
+        const m = part.match(/^(\d+)x(.+)/i);
+        if (m) out[m[2].trim()] = parseInt(m[1]);
+        else out[part.trim()] = 1;
+      });
+      return out;
+    }
+
+    function connCount(str) {
+      return Object.values(parseConn(str)).reduce((a,b) => a+b, 0);
+    }
+
+    function resolucaoNativaTier(s) {
+      if (!s) return 0;
+      const parts = s.split('x').map(Number);
+      return (parts[0]||0) * (parts[1]||0);
+    }
+
+    function hdmiTier(s) {
+      if (!s) return 0;
+      let total = 0;
+      s.toLowerCase().split('/').forEach(part => {
+        part = part.trim();
+        const is4k   = /4k|2160/.test(part);
+        const is1080 = /1080/.test(part);
+        const hzM    = part.match(/(\d+)\s*hz/);
+        const hz     = hzM ? parseInt(hzM[1]) : 0;
+        let score = 0;
+        if (is4k) {
+          score = hz >= 60 ? 5000 : hz >= 30 ? 3000 : 2000;
+        } else if (is1080) {
+          score = hz >= 240 ? 700 : hz >= 120 ? 400 : 100;
+        } else {
+          score = 20;
+        }
+        total += score;
+      });
+      return total;
+    }
+
+    function soTier(s) {
+      if (!s) return 0;
+      if (/google\s*tv/i.test(s))        return 5;
+      if (/android\s*tv/i.test(s))       return 4;
+      if (/whaleos|whale\s*os/i.test(s)) return 3;
+      if (/android/i.test(s))            return 2;
+      if (/linux/i.test(s))              return 1;
+      return 0;
+    }
+
+    function fmtPrice(min, max) {
+      if (!min && !max) return null;
+      const r = n => 'R$ ' + Number(n).toLocaleString('pt-BR');
+      if (min && max && min !== max) return `${r(min)} – ${r(max)}`;
+      return r(min || max);
+    }
+
+    function hexRgb(h) {
+      return [parseInt(h.slice(1,3),16), parseInt(h.slice(3,5),16), parseInt(h.slice(5,7),16)].join(',');
+    }
+
+    function escAttr(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    function safeUrl(url) {
+      if (!url || typeof url !== 'string') return null;
+      return /^https?:\/\//i.test(url.trim()) ? url.trim() : null;
+    }
+
+    /* ═══════════════════════════════════════════
+       RADAR CHART — global max values
+    ═══════════════════════════════════════════ */
+    const RADAR_MAX = {
+      brilho:  Math.max(...DATA.map(p => p.brilho_ansi  || 0)),
+      lag:     Math.max(...DATA.map(p => p.input_lag_ms || 0)),
+      audio:   Math.max(...DATA.map(p => parseAudioTotal(p.audio_w))),
+      otica:   6,
+      duracao: Math.max(...DATA.map(p => parseHours(p.uso_continuo))),
+    };
+
+    function radarScores(p) {
+      return [
+        RADAR_MAX.brilho  ? Math.min(1, (p.brilho_ansi  || 0) / RADAR_MAX.brilho)  : 0,
+        RADAR_MAX.lag     ? Math.max(0, 1 - (p.input_lag_ms || RADAR_MAX.lag * 0.6) / RADAR_MAX.lag) : 0.5,
+        RADAR_MAX.audio   ? Math.min(1, parseAudioTotal(p.audio_w) / RADAR_MAX.audio)  : 0,
+        RADAR_MAX.otica   ? Math.min(1, Math.max(0, oticaTier(p.otica_selada)) / RADAR_MAX.otica) : 0,
+        RADAR_MAX.duracao ? Math.min(1, parseHours(p.uso_continuo) / RADAR_MAX.duracao) : 0,
+      ];
+    }
+
+    function renderRadar() {
+      const projs = selected.filter(Boolean);
+      const N = 5, SIZE = 300, CX = 150, CY = 150, R = 108;
+      const LABELS = ['Brilho','Input Lag','Áudio','Ótica','Duração'];
+
+      function pt(i, r) {
+        const a = (2 * Math.PI * i / N) - Math.PI / 2;
+        return [CX + r * Math.cos(a), CY + r * Math.sin(a)];
+      }
+
+      let svg = '';
+
+      /* grid rings */
+      for (let lvl = 1; lvl <= 5; lvl++) {
+        const r = R * lvl / 5;
+        const pts = Array.from({length:N}, (_,i) => pt(i,r).map(v=>v.toFixed(2)).join(',')).join(' ');
+        svg += `<polygon points="${pts}" fill="none" stroke="rgba(79,163,199,${lvl===5?'0.22':'0.09'})" stroke-width="${lvl===5?1.5:0.8}"/>`;
+      }
+
+      /* axis lines */
+      for (let i = 0; i < N; i++) {
+        const [x,y] = pt(i, R);
+        svg += `<line x1="${CX}" y1="${CY}" x2="${x.toFixed(2)}" y2="${y.toFixed(2)}" stroke="rgba(79,163,199,0.18)" stroke-width="1"/>`;
+      }
+
+      /* labels */
+      for (let i = 0; i < N; i++) {
+        const [x,y] = pt(i, R + 22);
+        svg += `<text x="${x.toFixed(2)}" y="${y.toFixed(2)}" text-anchor="middle" dominant-baseline="middle" fill="rgba(234,234,234,0.5)" font-size="11" font-family="Inter,sans-serif" font-weight="600">${LABELS[i]}</text>`;
+      }
+
+      /* projector polygons */
+      projs.forEach((p, pi) => {
+        const scores = radarScores(p);
+        const pts = scores.map((s,i) => {
+          const [x,y] = pt(i, Math.max(s,0.04)*R);
+          return `${x.toFixed(2)},${y.toFixed(2)}`;
+        }).join(' ');
+        const c = COLORS[pi];
+        svg += `<polygon points="${pts}" fill="${c}" fill-opacity="0.13" stroke="${c}" stroke-width="2" stroke-linejoin="round"/>`;
+        scores.forEach((s,i) => {
+          const [x,y] = pt(i, Math.max(s,0.04)*R);
+          svg += `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="3.5" fill="${c}"/>`;
+        });
+      });
+
+      document.getElementById('radarSvg').innerHTML = svg;
+
+      document.getElementById('radarLegend').innerHTML = projs.map((p,pi) => `
+        <div class="cp-radar-legend-item">
+          <div class="cp-radar-dot" style="background:${COLORS[pi]}"></div>
+          <div>
+            <div class="cp-radar-model">${p.modelo}</div>
+            <div class="cp-radar-brand">${p.marca}</div>
+          </div>
+        </div>`).join('');
+    }
+
+    /* ═══════════════════════════════════════════
+       WINNER LOGIC
+    ═══════════════════════════════════════════ */
+    function getWinners(vals, dir) {
+      if (dir === 'none') return vals.map(() => false);
+
+      if (dir === 'bool') {
+        const hasTrue  = vals.some(v => v === true);
+        const hasFalse = vals.some(v => v === false);
+        if (!hasTrue || !hasFalse) return vals.map(() => false);
+        return vals.map(v => v === true);
+      }
+
+      const nums = vals.map(v => (v === null || v === undefined || v === '' ? null : parseFloat(v)));
+      const valid = nums.filter(n => n !== null && !isNaN(n));
+      if (valid.length < 2) return vals.map(() => false);
+      if (valid.every(n => n === valid[0])) return vals.map(() => false);
+      const best = dir === 'low' ? Math.min(...valid) : Math.max(...valid);
+      return nums.map(n => n !== null && !isNaN(n) && n === best);
+    }
+
+    /* ═══════════════════════════════════════════
+       TABLE ROW DEFINITIONS
+    ═══════════════════════════════════════════ */
+    const PORT_ORDER = ['HDMI','USB','AV','VGA','P2','SPDIF','Óptica','RJ45','USB-C','WiFi','BT','NFC'];
+
+    function buildRows(projs) {
+      const rows = [];
+      const sec  = label => rows.push({type:'section', label});
+      const row  = def  => rows.push(def);
+
+      /* IMAGEM */
+      sec('Imagem');
+      row({ label:'Tecnologia',           dir:'none', vals:projs.map(p=>p.tecnologia||null) });
+      row({
+        label:'Resolução Nativa',
+        dir:'high',
+        vals:    projs.map(p=>resolucaoNativaTier(p.resolucao_nativa)),
+        display: projs.map(p=>p.resolucao_nativa||null),
+      });
+      row({
+        label:'Brilho ANSI', hint:'Medido pelo canal',
+        dir:'high',
+        vals:    projs.map(p=>p.brilho_ansi),
+        display: projs.map(p=>p.brilho_ansi ? `${p.brilho_ansi} ANSI` : null),
+      });
+      row({
+        label:'Entrada HDMI Máx.', hint:'4K > 1080p; mesmo res → Hz maior vence',
+        dir:'high',
+        vals:    projs.map(p=>hdmiTier(p.resolucao_max)||null),
+        display: projs.map(p=>p.resolucao_max||null),
+      });
+      row({
+        label:'Ótica Selada', hint:'Maior tier = menos poeira na lente ao longo do tempo',
+        dir:'high',
+        vals:    projs.map(p=>oticaTier(p.otica_selada)),
+        display: projs.map(p=>p.otica_selada||null),
+      });
+      row({ label:'Autofoco',       dir:'bool', vals:projs.map(p=>p.autofoco==='Sim'),       display:projs.map(p=>p.autofoco||null),       isBool:true });
+      row({ label:'Ajuste de Brilho', dir:'bool', vals:projs.map(p=>p.ajuste_brilho==='Sim'), display:projs.map(p=>p.ajuste_brilho||null), isBool:true });
+
+      /* SISTEMA */
+      sec('Sistema');
+      row({
+        label:'Sistema Operacional', hint:'Google TV > Android TV > WhaleOS > Android',
+        dir:'high',
+        vals:    projs.map(p=>soTier(p.sistema_operacional)||null),
+        display: projs.map(p=>p.sistema_operacional||null),
+      });
+      row({
+        label:'RAM',
+        dir:'high',
+        vals:    projs.map(p=>p.ram_gb||null),
+        display: projs.map(p=>p.ram_gb ? `${p.ram_gb} GB` : null),
+      });
+      row({
+        label:'Armazenamento',
+        dir:'high',
+        vals:    projs.map(p=>p.armazenamento_gb||null),
+        display: projs.map(p=>p.armazenamento_gb ? `${p.armazenamento_gb} GB` : null),
+      });
+      row({
+        label:'Tecnologias Extras',
+        dir:'high',
+        vals:    projs.map(p=>p.tecnologias ? p.tecnologias.split(',').filter(t=>t.trim()).length : null),
+        display: projs.map(p=>p.tecnologias||null),
+        isTechList:true,
+      });
+
+      /* PERFORMANCE */
+      sec('Performance');
+      row({
+        label:'Input Lag', hint:'Medido pelo canal — menor é melhor para jogos',
+        dir:'low',
+        vals:    projs.map(p=>p.input_lag_ms),
+        display: projs.map(p=>p.input_lag_ms ? `${p.input_lag_ms} ms` : null),
+      });
+      row({
+        label:'Uso Contínuo', hint:'Testado com câmera térmica no canal',
+        dir:'high',
+        vals:    projs.map(p=>parseHours(p.uso_continuo)||null),
+        display: projs.map(p=>p.uso_continuo||null),
+      });
+
+      /* ÁUDIO */
+      sec('Áudio');
+      row({
+        label:'Potência',
+        dir:'high',
+        vals:    projs.map(p=>parseAudioTotal(p.audio_w)||null),
+        display: projs.map(p=>fmtAudio(p.audio_w)),
+      });
+
+      /* PROJEÇÃO */
+      sec('Projeção');
+      row({
+        label:'Throw Ratio (100pol)',
+        hint:'Distância para projetar 100pol — sem vencedor, depende do ambiente',
+        dir:'none',
+        vals:projs.map(p=>p.distancia_100pol||null),
+      });
+      rows.push({ type:'calc', projs });
+
+      /* CONECTIVIDADE */
+      sec('Conectividade');
+      row({
+        label:'Total de entradas',
+        dir:'high',
+        vals:    projs.map(p=>connCount(p.conectividade)||null),
+        display: projs.map(p=>{ const n=connCount(p.conectividade); return n?`${n} portas/interfaces`:null; }),
+      });
+      const allPorts = new Set();
+      projs.forEach(p => Object.keys(parseConn(p.conectividade)).forEach(k => allPorts.add(k)));
+      const ports = PORT_ORDER.filter(p=>allPorts.has(p)).concat([...allPorts].filter(p=>!PORT_ORDER.includes(p)));
+      ports.forEach(port => {
+        row({
+          label: port,
+          dir:   'none',
+          vals:    projs.map(p => { const c=parseConn(p.conectividade); return c[port] ? (c[port]>1?`${c[port]}×`:'✓') : null; }),
+          isPort: true,
+        });
+      });
+
+      /* PORTABILIDADE */
+      sec('Portabilidade');
+      row({ label:'Bateria',          dir:'bool', vals:projs.map(p=>p.bateria===true),           display:projs.map(p=>p.bateria?'Sim':'Não'), isBool:true });
+      row({ label:'Capacidade',       dir:'none', vals:projs.map(p=>p.cap_bateria||null) });
+      row({ label:'Suporte Giratório',dir:'bool', vals:projs.map(p=>p.suporte_giratorio===true), display:projs.map(p=>p.suporte_giratorio?'Sim':'Não'), isBool:true });
+
+      /* ENERGIA */
+      sec('Energia');
+      row({
+        label:'Consumo', hint:'Menor = mais eficiente',
+        dir:'low',
+        vals:    projs.map(p=>p.consumo_w||null),
+        display: projs.map(p=>p.consumo_w ? `${p.consumo_w} W` : null),
+      });
+      row({
+        label:'Eficiência Energética', hint:'Watts por ANSI — menor = mais eficiente por brilho',
+        dir:'low',
+        vals:    projs.map(p=>(p.consumo_w&&p.brilho_ansi)?+(p.consumo_w/p.brilho_ansi).toFixed(2):null),
+        display: projs.map(p=>{
+          if(!p.consumo_w||!p.brilho_ansi) return null;
+          return `${(p.consumo_w/p.brilho_ansi).toFixed(2)} W/ANSI`;
+        }),
+      });
+
+      return rows;
+    }
+
+    /* ═══════════════════════════════════════════
+       TABLE RENDER
+    ═══════════════════════════════════════════ */
+    function renderTable() {
+      const projs = selected.filter(Boolean);
+      const n = projs.length;
+      const rows = buildRows(projs);
+
+      /* count wins */
+      const wins = new Array(n).fill(0);
+      rows.forEach(r => {
+        if (r.type || r.dir === 'none') return;
+        getWinners(r.vals, r.dir).forEach((w,i) => { if(w) wins[i]++; });
+      });
+
+      /* header */
+      let html = `<thead class="cp-thead"><tr>
+        <th class="cp-th-corner"></th>
+        ${projs.map((p,i) => {
+          const c = COLORS[i];
+          const rgb = hexRgb(c);
+          return `<th class="cp-th-col">
+            <div class="cp-th-top-bar" style="background:${c}"></div>
+            <div class="cp-th-brand">${escAttr(p.marca)}</div>
+            <div class="cp-th-model">${escAttr(p.modelo)}</div>
+            ${wins[i]>0 ? `<span class="cp-th-wins-badge" style="background:rgba(${rgb},0.12);color:${c};border:1px solid rgba(${rgb},0.3)">Melhor em ${wins[i]} spec${wins[i]>1?'s':''}</span>` : ''}
+          </th>`;
+        }).join('')}
+      </tr></thead>`;
+
+      /* body */
+      html += '<tbody>';
+
+      rows.forEach(row => {
+        if (row.type === 'section') {
+          html += `<tr class="cp-tr-section"><td colspan="${n+1}">${row.label}</td></tr>`;
+          return;
+        }
+
+        if (row.type === 'calc') {
+          html += `<tr class="cp-tr cp-tr-calc">
+            <td class="cp-td-label" style="padding:0;border-right:1px solid var(--border)">
+              <div class="cp-calc-cell">
+                <span class="cp-calc-label">Com</span>
+                <input type="number" class="cp-calc-input" id="calcDist" placeholder="2.5" min="0.3" max="20" step="0.1" oninput="updateCalc()">
+                <span class="cp-calc-unit">metros →</span>
+              </div>
+            </td>
+            ${row.projs.map((_,i) => `<td class="cp-td-val" id="calcV${i}" style="color:var(--text-dim);border-left:1px solid var(--border)">—</td>`).join('')}
+          </tr>`;
+          return;
+        }
+
+        const display  = row.display || row.vals;
+        const winners  = row.dir !== 'none' ? getWinners(row.vals, row.dir) : new Array(n).fill(false);
+
+        /* all-same check for diff mode */
+        const texts = display.map(v => String(v??''));
+        const nonNull = texts.filter(t => t && t !== 'null' && t !== '');
+        const allSame = nonNull.length>1 && nonNull.every(t=>t===nonNull[0]);
+
+        html += `<tr class="cp-tr${showOnlyDiff&&allSame?' diff-hidden':''}">
+          <td class="cp-td-label">
+            ${row.label}
+            ${row.hint ? `<span class="cp-td-label-hint">${row.hint}</span>` : ''}
+          </td>
+          ${display.map((val, i) => {
+            const empty = val===null||val===undefined||val==='';
+            const win   = winners[i];
+            let inner   = '';
+
+            if (row.isBool) {
+              inner = row.vals[i]===true
+                ? '<span class="cp-bool-yes">✓ Sim</span>'
+                : '<span class="cp-bool-no">—</span>';
+            } else if (row.isTechList) {
+              if (empty || val === '') {
+                inner = '<span class="val-dash">—</span>';
+              } else {
+                inner = String(val).split(',').map(t=>`<span class="spec-tag">${t.trim()}</span>`).join(' ');
+              }
+            } else if (row.isPort) {
+              inner = empty
+                ? '<span class="val-dash">—</span>'
+                : `<span class="cp-port">${val}</span>`;
+            } else if (empty) {
+              inner = '<span class="val-dash">—</span>';
+            } else {
+              inner = String(val) + (win ? '<span class="win-badge">Melhor</span>' : '');
+            }
+
+            return `<td class="cp-td-val${win&&!row.isBool?' winner':''}">${inner}</td>`;
+          }).join('')}
+        </tr>`;
+      });
+
+      html += '</tbody>';
+      document.getElementById('compTable').innerHTML = html;
+
+      /* atualiza o offset sticky das seções com a altura real do thead */
+      requestAnimationFrame(() => {
+        const theadEl = document.querySelector('.cp-thead');
+        if (theadEl) document.documentElement.style.setProperty('--cp-thead-h', theadEl.offsetHeight + 'px');
+      });
+
+      /* restore calc distance */
+      if (calcDist) {
+        const inp = document.getElementById('calcDist');
+        if (inp) { inp.value = calcDist; updateCalc(); }
+      }
+    }
+
+    function updateCalc() {
+      const inp = document.getElementById('calcDist');
+      if (!inp) return;
+      calcDist = parseFloat(inp.value) || null;
+      selected.filter(Boolean).forEach((p, i) => {
+        const cell = document.getElementById(`calcV${i}`);
+        if (!cell) return;
+        if (!calcDist || !p.distancia_100pol_m) { cell.textContent='—'; cell.style.color='var(--text-dim)'; return; }
+        const pol = Math.round((calcDist / p.distancia_100pol_m) * 100);
+        if (pol < 20) { cell.textContent='< 20pol'; cell.style.color='#e06060'; }
+        else if (pol > 300) { cell.textContent='> 300pol'; cell.style.color='#e06060'; }
+        else { cell.textContent=`~${pol} pol`; cell.style.color='var(--accent)'; }
+      });
+    }
+
+    /* ═══════════════════════════════════════════
+       DIFF MODE TOGGLE
+    ═══════════════════════════════════════════ */
+    function applyDiff() {
+      const btn = document.getElementById('toggleDiffBtn');
+      btn.classList.toggle('active', showOnlyDiff);
+      btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+        ${showOnlyDiff ? 'Mostrar tudo' : 'Mostrar só diferenças'}`;
+
+      document.querySelectorAll('.cp-tr:not(.cp-tr-calc)').forEach(tr => {
+        const cells = [...tr.querySelectorAll('.cp-td-val')];
+        const texts = cells.map(c => {
+          const cl = c.cloneNode(true);
+          cl.querySelectorAll('.win-badge').forEach(b=>b.remove());
+          return cl.textContent.trim();
+        });
+        const nonNull = texts.filter(t=>t&&t!=='—'&&t!=='');
+        const same = nonNull.length>1 && nonNull.every(t=>t===nonNull[0]);
+        tr.classList.toggle('diff-hidden', showOnlyDiff && same);
+      });
+    }
+
+    function toggleDiff() {
+      showOnlyDiff = !showOnlyDiff;
+      applyDiff();
+    }
+
+    /* ═══════════════════════════════════════════
+       PURCHASE SECTION
+    ═══════════════════════════════════════════ */
+    function renderPurchase() {
+      const projs = selected.filter(Boolean);
+      const EXT = `<svg class="cp-ext-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+
+      document.getElementById('purchaseGrid').innerHTML = projs.map((p,i) => {
+        const price = fmtPrice(p.preco_min, p.preco_max);
+        const stores = [];
+        if (safeUrl(p.amazon_url)) stores.push(`<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-amazon"><span>Amazon</span>${EXT}</a>`);
+        if (safeUrl(p.ml_url))     stores.push(`<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-ml"><span>Mercado Livre</span>${EXT}</a>`);
+        if (safeUrl(p.shopee_url)) stores.push(`<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-shopee"><span>Shopee</span>${EXT}</a>`);
+        if (safeUrl(p.ali_url))    stores.push(`<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-ali"><span>AliExpress</span>${EXT}</a>`);
+
+        const cupons = [];
+        if (p.ali_cupom_loja)  cupons.push({label:'Cupom loja AliExpress', code:p.ali_cupom_loja});
+        if (p.ali_cupom_promo) cupons.push({label:'Cupom promoção',        code:p.ali_cupom_promo});
+
+        return `<div class="cp-pcard" data-slot="${i}">
+          <div class="cp-pcard-brand">${escAttr(p.marca)}</div>
+          <div class="cp-pcard-model">${escAttr(p.modelo)}</div>
+          ${price ? `<div class="cp-pcard-price">Faixa: <strong>${price}</strong></div>` : ''}
+          <div class="cp-store-btns">
+            ${stores.length ? stores.join('') : '<span class="cp-no-links">Sem links disponíveis ainda</span>'}
+          </div>
+          ${cupons.map(c=>`
+            <div class="cp-cupom">
+              <div>
+                <div class="cp-cupom-label">${escAttr(c.label)}</div>
+                <div class="cp-cupom-code">${escAttr(c.code)}</div>
+              </div>
+              <button class="cp-cupom-copy" data-code="${escAttr(c.code)}">Copiar</button>
+            </div>`).join('')}
+          ${safeUrl(p.video_url) ? `<a href="${escAttr(safeUrl(p.video_url))}" target="_blank" rel="noopener noreferrer" class="cp-review-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Ver review completo
+          </a>` : ''}
+        </div>`;
+      }).join('');
+    }
+
+    /* ═══════════════════════════════════════════
+       SLOTS
+    ═══════════════════════════════════════════ */
+    function renderSlots() {
+      const hints = ['Comece aqui', 'Segundo modelo', 'Terceiro (opcional)'];
+      document.getElementById('slotsContainer').innerHTML = selected.map((p,i) => {
+        if (!p) return `
+          <div class="cp-slot" data-slot="${i}" onclick="openModal(${i})">
+            <div class="cp-slot-add-icon">+</div>
+            <div class="cp-slot-add-text">Adicionar projetor</div>
+            <div class="cp-slot-add-hint">${hints[i]}</div>
+          </div>`;
+        const price = fmtPrice(p.preco_min, p.preco_max);
+        return `
+          <div class="cp-slot filled" data-slot="${i}">
+            <div class="cp-slot-color-bar"></div>
+            <div class="cp-slot-inner">
+              <div class="cp-slot-top">
+                <div>
+                  <div class="cp-slot-brand">${p.marca}</div>
+                  <div class="cp-slot-model">${p.modelo}</div>
+                </div>
+                <button class="cp-slot-remove" onclick="event.stopPropagation();removeProj(${i})" title="Remover">×</button>
+              </div>
+              <div class="cp-slot-tags">
+                <span class="spec-tag tag-type">${p.tecnologia}</span>
+                <span class="spec-tag">${p.resolucao_nativa}</span>
+                ${p.brilho_ansi ? `<span class="spec-tag">${p.brilho_ansi} ANSI</span>` : ''}
+                ${price ? `<span class="spec-tag" style="color:var(--accent)">${price}</span>` : ''}
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    function removeProj(slot) {
+      selected[slot] = null;
+      renderAll();
+    }
+
+    /* ═══════════════════════════════════════════
+       MODAL
+    ═══════════════════════════════════════════ */
+    const brands = [...new Set(DATA.map(p=>p.marca))].sort();
+
+    function openModal(slot) {
+      activeSlot = slot;
+      activeBrand = null;
+      document.getElementById('searchInput').value = '';
+      renderBrands();
+      filterModal();
+      document.getElementById('modalOverlay').classList.add('open');
+      setTimeout(() => document.getElementById('searchInput').focus(), 120);
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('open');
+      activeSlot = -1;
+    }
+
+    function handleOverlayClick(e) {
+      if (e.target === document.getElementById('modalOverlay')) closeModal();
+    }
+
+    function renderBrands() {
+      document.getElementById('modalBrands').innerHTML = brands.map(b =>
+        `<button class="cp-brand-pill${activeBrand===b?' active':''}" data-brand="${escAttr(b)}">${escAttr(b)}</button>`
+      ).join('');
+    }
+
+    function setBrand(b) {
+      activeBrand = activeBrand === b ? null : b;
+      renderBrands();
+      filterModal();
+    }
+
+    function clearModalFilters() {
+      activeBrand = null;
+      document.getElementById('searchInput').value = '';
+      renderBrands();
+      filterModal();
+    }
+
+    function filterModal() {
+      const q   = document.getElementById('searchInput').value.toLowerCase().trim();
+      const taken = selected.map((p,i) => p && i!==activeSlot ? p.modelo : null).filter(Boolean);
+
+      const filtered = DATA.filter(p => {
+        if (activeBrand && p.marca !== activeBrand) return false;
+        if (!q) return true;
+        return (p.modelo + ' ' + p.marca).toLowerCase().includes(q);
+      });
+
+      const list = document.getElementById('modalList');
+      if (!filtered.length) {
+        const hasFilters = activeBrand || document.getElementById('searchInput').value.trim();
+        list.innerHTML = `<div class="cp-modal-empty">Nenhum projetor encontrado${hasFilters ? '<br><button class="cp-modal-clear-btn" id="clearFiltersBtn">Limpar filtros</button>' : ''}</div>`;
+        return;
+      }
+
+      list.innerHTML = filtered.map(p => {
+        const already = taken.includes(p.modelo);
+        const price   = fmtPrice(p.preco_min, p.preco_max);
+        return `<div class="cp-modal-item${already?' already-selected':''}" data-modelo="${escAttr(p.modelo)}"${already ? '' : ' role="button" tabindex="0"'}>
+          <div>
+            <div class="cp-modal-item-name">${escAttr(p.marca)} ${escAttr(p.modelo)}</div>
+            <div class="cp-modal-item-sub">${escAttr(p.tecnologia)} · ${escAttr(p.resolucao_nativa)}${p.brilho_ansi?' · '+p.brilho_ansi+' ANSI':''}</div>
+          </div>
+          ${price ? `<div class="cp-modal-item-price">${price}</div>` : ''}
+        </div>`;
+      }).join('');
+    }
+
+    function selectProj(modelo) {
+      const p = DATA.find(d => d.modelo === modelo);
+      if (!p || activeSlot < 0) return;
+      selected[activeSlot] = p;
+      closeModal();
+      renderAll();
+    }
+
+    /* ═══════════════════════════════════════════
+       SHARE URL
+    ═══════════════════════════════════════════ */
+    function shareUrl() {
+      const models = selected.filter(Boolean).map(p=>encodeURIComponent(p.modelo));
+      const url = `${location.origin}${location.pathname}?c=${models.join(',')}`;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(() => toast('Link copiado!'));
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = url; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta);
+        toast('Link copiado!');
+      }
+    }
+
+    function copyText(text, msg) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(() => toast(msg));
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta);
+        toast(msg);
+      }
+    }
+
+    function loadFromUrl() {
+      const c = new URLSearchParams(location.search).get('c');
+      if (!c) return;
+      c.split(',').slice(0,3).forEach((m,i) => {
+        const p = DATA.find(d => d.modelo === decodeURIComponent(m));
+        if (p) selected[i] = p;
+      });
+    }
+
+    /* ═══════════════════════════════════════════
+       TOAST
+    ═══════════════════════════════════════════ */
+    function toast(msg) {
+      const el = document.getElementById('toast');
+      el.textContent = msg;
+      el.classList.add('show');
+      clearTimeout(el._t);
+      el._t = setTimeout(() => el.classList.remove('show'), 2200);
+    }
+
+    /* ═══════════════════════════════════════════
+       MAIN RENDER
+    ═══════════════════════════════════════════ */
+    function renderAll() {
+      renderSlots();
+      const active = selected.filter(Boolean);
+      const section = document.getElementById('compSection');
+
+      if (active.length >= 2) {
+        const wasHidden = section.style.display !== 'block';
+        section.style.display = 'block';
+        renderRadar();
+        renderTable();
+        renderPurchase();
+        applyDiff();
+        history.replaceState(null,'',`?c=${active.map(p=>encodeURIComponent(p.modelo)).join(',')}`);
+        if (wasHidden) {
+          setTimeout(() => section.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 80);
+        }
+      } else {
+        section.style.display = 'none';
+        history.replaceState(null,'',location.pathname);
+      }
+    }
+
+    /* ═══════════════════════════════════════════
+       INIT
+    ═══════════════════════════════════════════ */
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('mainNav').classList.toggle('open');
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+
+    document.getElementById('modalList').addEventListener('click', e => {
+      if (e.target.id === 'clearFiltersBtn') { clearModalFilters(); return; }
+      const item = e.target.closest('.cp-modal-item');
+      if (item && !item.classList.contains('already-selected')) selectProj(item.dataset.modelo);
+    });
+
+    document.getElementById('modalBrands').addEventListener('click', e => {
+      const pill = e.target.closest('.cp-brand-pill');
+      if (pill) setBrand(pill.dataset.brand);
+    });
+
+    document.getElementById('purchaseGrid').addEventListener('click', e => {
+      const btn = e.target.closest('.cp-cupom-copy');
+      if (btn) copyText(btn.dataset.code, 'Cupom copiado!');
+    });
+
+    loadFromUrl();
+    renderAll();
+  </script>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo-link">
+          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.png" alt="SchardTech" class="logo-img">
+        </a>
+        <div class="footer-social">
+          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h4>Ferramentas</h4>
+          <a href="qual-projetor.html">Quiz — Qual projetor?</a>
+          <a href="comparar.html">Comparar projetores</a>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <a href="index.html">Projetores</a>
+          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 SchardTech — Todos os direitos reservados</p>
+        <p style="margin-top:8px;font-size:0.78rem;color:var(--text-dim);">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

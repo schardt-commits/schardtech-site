@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1F3A"/>
+      <stop offset="100%" style="stop-color:#0B0B0B"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#4FA3C7;stop-opacity:0.18"/>
+      <stop offset="100%" style="stop-color:#0B0B0B;stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4FA3C7"/>
+      <stop offset="100%" style="stop-color:#8FD3FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <!-- Border accent -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#textGrad)"/>
+  <!-- Tag -->
+  <rect x="80" y="220" width="180" height="32" rx="16" fill="rgba(79,163,199,0.15)" stroke="#4FA3C7" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="170" y="241" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#4FA3C7" text-anchor="middle" letter-spacing="1">SCHARDTECH</text>
+  <!-- Main title -->
+  <text x="80" y="320" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="900" fill="#EAEAEA" letter-spacing="-2">Projetores</text>
+  <text x="80" y="410" font-family="Inter, Arial, sans-serif" font-size="72" font-weight="900" fill="url(#textGrad)" letter-spacing="-2">Testados no Canal</text>
+  <!-- Subtitle -->
+  <text x="80" y="468" font-family="Inter, Arial, sans-serif" font-size="22" fill="rgba(234,234,234,0.6)" letter-spacing="0">Reviews reais · Specs medidas · Sem enrolação</text>
+  <!-- URL -->
+  <text x="80" y="560" font-family="Inter, Arial, sans-serif" font-size="18" fill="rgba(234,234,234,0.4)" letter-spacing="0">schardtech.com.br</text>
+  <!-- Decorative element -->
+  <circle cx="1050" cy="315" r="180" fill="rgba(79,163,199,0.06)" stroke="#4FA3C7" stroke-width="1" stroke-opacity="0.15"/>
+  <circle cx="1050" cy="315" r="120" fill="rgba(79,163,199,0.04)" stroke="#4FA3C7" stroke-width="1" stroke-opacity="0.1"/>
+  <!-- Projector icon simplified -->
+  <rect x="990" y="280" width="120" height="70" rx="10" fill="none" stroke="#4FA3C7" stroke-width="2" stroke-opacity="0.5"/>
+  <circle cx="1050" cy="315" r="20" fill="none" stroke="#8FD3FF" stroke-width="2" stroke-opacity="0.6"/>
+  <circle cx="1050" cy="315" r="8" fill="#4FA3C7" fill-opacity="0.5"/>
+  <line x1="1070" y1="315" x2="1130" y2="315" stroke="#4FA3C7" stroke-width="2" stroke-opacity="0.4"/>
+  <line x1="1070" y1="305" x2="1130" y2="285" stroke="#4FA3C7" stroke-width="1.5" stroke-opacity="0.25"/>
+  <line x1="1070" y1="325" x2="1130" y2="345" stroke="#4FA3C7" stroke-width="1.5" stroke-opacity="0.25"/>
+</svg>

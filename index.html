@@ -13,7 +13,33 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SchardTech — Projetores Testados no Canal</title>
-  <meta name="description" content="Projetores testados e aprovados pelo canal SchardTech. Reviews reais, análises completas, sem enrolação.">
+  <meta name="description" content="Projetores testados pessoalmente no canal SchardTech. Reviews reais com ANSI Lumens medido, input lag testado e specs verificadas. Encontre o projetor ideal para você.">
+  <meta property="og:title" content="SchardTech — Projetores Testados no Canal">
+  <meta property="og:description" content="Projetores testados pessoalmente no canal SchardTech. Reviews reais com ANSI Lumens medido, input lag testado e specs verificadas.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://schardtech.com.br/">
+  <meta property="og:site_name" content="SchardTech">
+  <meta property="og:image" content="https://schardtech.com.br/og-image.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SchardTech — Projetores Testados no Canal">
+  <meta name="twitter:description" content="Reviews reais com ANSI Lumens medido, input lag testado e specs verificadas. Encontre seu projetor ideal.">
+  <meta name="twitter:image" content="https://schardtech.com.br/og-image.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SchardTech",
+    "url": "https://schardtech.com.br",
+    "description": "Reviews de projetores com dados reais testados no canal SchardTech",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://schardtech.com.br/qual-projetor.html",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,14 +56,44 @@
       <nav id="mainNav">
         <a href="#projetores" class="nav-link">Projetores</a>
         <a href="#calculadora" class="nav-link">Calculadora</a>
-        <a href="#rankings" class="nav-link">Rankings</a>
         <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="qual-projetor.html" class="nav-link" style="color:var(--primary);font-weight:600;">Quiz</a>
+        <a href="comparar.html" class="nav-link">Comparar</a>
       </nav>
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
+
+  <!-- HERO -->
+  <section class="section" style="padding:100px 0 0;">
+    <div class="container">
+      <div class="section-header fade-in" style="text-align:center;max-width:700px;margin:0 auto;">
+        <div class="section-tag">Canal SchardTech</div>
+        <h1>Escolha o projetor certo. <span class="gradient-text">Com dados reais.</span></h1>
+        <p>Mais de 60 projetores testados com ANSI Lumens medido, input lag aferido e specs verificadas.</p>
+      </div>
+      <div class="fade-in" style="display:flex;gap:16px;margin-top:40px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:260px;background:rgba(79,163,199,0.07);border:1px solid rgba(79,163,199,0.2);border-radius:14px;padding:28px 28px 24px;">
+          <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--primary);margin:0 0 10px;">Não sabe qual comprar?</p>
+          <p style="margin:0 0 20px;line-height:1.6;">Responda algumas perguntas sobre seu uso — games, cinema, quarto ou sala grande — e receba uma recomendação baseada em dados reais do canal.</p>
+          <a href="qual-projetor.html" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:8px;">
+            Qual projetor comprar?
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div style="flex:1;min-width:260px;background:rgba(79,163,199,0.07);border:1px solid rgba(79,163,199,0.2);border-radius:14px;padding:28px 28px 24px;">
+          <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--primary);margin:0 0 10px;">Já tem dois modelos em mente?</p>
+          <p style="margin:0 0 20px;line-height:1.6;">Compare specs lado a lado: ANSI Lumens, contraste, resolução e preço — tudo na mesma tela, sem abrir mil abas.</p>
+          <a href="comparar.html" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:8px;">
+            Comparar projetores
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- PROJECTORS SECTION -->
   <section id="projetores" class="section">
@@ -186,23 +242,6 @@
     </div>
   </section>
 
-  <!-- RANKINGS (COMING SOON) -->
-  <section id="rankings" class="section">
-    <div class="container">
-      <div class="coming-soon-card fade-in">
-        <div class="coming-orb"></div>
-        <span class="coming-badge">Em Breve</span>
-        <h2>Rankings de <span class="gradient-text">Projetores</span></h2>
-        <p>As melhores listas para você decidir com base no que importa.</p>
-        <div class="ranking-previews">
-          <div class="rank-preview">🏆 Melhor Custo-Benefício</div>
-          <div class="rank-preview">🎮 Melhor para Games</div>
-          <div class="rank-preview">🎬 Melhor 4K</div>
-          <div class="rank-preview">💰 Melhor Barato</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- SOBRE -->
   <section id="sobre" class="section section-alt sobre-section">
@@ -210,7 +249,7 @@
       <div class="sobre-text fade-in">
         <div class="section-tag">O Canal</div>
         <h2>SchardTech —<br><span class="gradient-text">Tudo sobre</span> Projetores</h2>
-        <p>Análises técnicas reais para você acertar na escolha.</p>
+        <p>Análises técnicas reais para você acertar na escolha. Mais de 60 projetores testados com equipamento de medição.</p>
         <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver o Canal</a>
       </div>
       <div class="sobre-badges fade-in">
@@ -263,8 +302,12 @@
         <div class="footer-col">
           <h4>Navegação</h4>
           <a href="#projetores">Projetores</a>
-          <a href="#rankings">Rankings</a>
           <a href="#sobre">Sobre</a>
+        </div>
+        <div class="footer-col">
+          <h4>Ferramentas</h4>
+          <a href="qual-projetor.html">Quiz — Qual projetor?</a>
+          <a href="comparar.html">Comparar projetores</a>
         </div>
         <div class="footer-col">
           <h4>Conteúdo</h4>
@@ -277,6 +320,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p>© 2026 SchardTech — Todos os direitos reservados</p>
+        <p style="margin-top:8px;font-size:0.78rem;color:var(--text-dim);">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
       </div>
     </div>
   </footer>
