@@ -625,9 +625,9 @@
         <p class="q-hint">Onde você vai usar o projetor com mais frequência.</p>
         <div class="qp-options">
           <button class="qp-option" onclick="pick('iluminacao','escuro',this)">🌑 Escuro</button>
-          <button class="qp-option" onclick="pick('iluminacao','pouca_luz',this)">🌙 Pouca luz</button>
-          <button class="qp-option" onclick="pick('iluminacao','muita_luz',this)">☀️ Muita luz</button>
-          <button class="qp-option" onclick="pick('iluminacao','luz_intensa',this)">🔆 Luz intensa</button>
+          <button class="qp-option" onclick="pick('iluminacao','pouca_luz',this)">🌙 Luz baixa</button>
+          <button class="qp-option" onclick="pick('iluminacao','muita_luz',this)">💡 Iluminado</button>
+          <button class="qp-option" onclick="pick('iluminacao','luz_intensa',this)">💡 Muito iluminado</button>
         </div>
       </div>
 
@@ -656,7 +656,6 @@
         <h3><span class="q-num">3</span> Qual o uso principal?</h3>
         <p class="q-hint">Para jogos, a velocidade de resposta é prioridade. Para filmes, qualidade de imagem e HDR.</p>
         <div class="qp-options">
-          <button class="qp-option" onclick="pick('uso',null,this)">Tanto faz</button>
           <button class="qp-option" onclick="pick('uso','filmes',this)">🎬 Filmes e séries</button>
           <button class="qp-option" onclick="pick('uso','jogos',this)">🎮 Jogos</button>
           <button class="qp-option" onclick="pick('uso','geral',this)">💻 Uso geral</button>
@@ -668,7 +667,6 @@
         <h3><span class="q-num">4</span> Como vai usar streaming no projetor?</h3>
         <p class="q-hint">Netflix, Prime Video e HBO só rodam em qualidade máxima em sistemas licenciados. No Android não homologado o YouTube funciona bem, mas serviços de streaming ficam em SD.</p>
         <div class="qp-options" id="appsMain">
-          <button class="qp-option" onclick="pickApps(null,this)">Tanto faz</button>
           <button class="qp-option" onclick="pickApps('quero',this)">✅ Quero Netflix e afins em qualidade máxima</button>
           <button class="qp-option" onclick="pickApps('nao_quero',this)">📺 YouTube resolve / Já tenho stick ou box</button>
         </div>
@@ -728,7 +726,6 @@
             <div id="tecSub" style="display:none;" class="qp-sub-options">
               <div class="qp-sub-label">Qual tipo DLP?</div>
               <div class="qp-options">
-                <button class="qp-option active" onclick="pickTecSub(null,this)">Tanto faz</button>
                 <button class="qp-option" onclick="pickTecSub('dlp_led',this)">DLP LED</button>
                 <button class="qp-option" onclick="pickTecSub('dlp_laser',this)">DLP Laser</button>
               </div>
@@ -769,7 +766,6 @@
             <div class="qp-adv-title">Ótica selada</div>
             <div class="qp-adv-hint">Ótica selada protege as lentes de poeira interna — preserva a qualidade da imagem a longo prazo. Quanto mais uso contínuo, mais importa. Os níveis são classificados pelo canal com base nos testes.</div>
             <div class="qp-options">
-              <button class="qp-option" onclick="pickOtica(null,this)">Tanto faz</button>
               <button class="qp-option" onclick="pickOtica('boa',this)">Boa</button>
               <button class="qp-option" onclick="pickOtica('otima',this)">Ótima</button>
               <button class="qp-option" onclick="pickOtica('maxima',this)">Máxima</button>
@@ -783,7 +779,6 @@
             <div class="qp-adv-title">Qual sistema prefere?</div>
             <div class="qp-adv-hint">Google TV tem a melhor compatibilidade e suporta 4K quando o projetor tem suporte. Android TV é excelente para HD. WhaleOS é um sistema próprio com boa compatibilidade — muito melhor que Android não homologado.</div>
             <div class="qp-options" id="advSoOptions">
-              <button class="qp-option active" onclick="pickSOAdv('homologado_tantofaz',this)">🤷 Tanto faz</button>
               <button class="qp-option" onclick="pickSOAdv('google_tv',this)">🎬 Google TV</button>
               <button class="qp-option" onclick="pickSOAdv('android_tv',this)">▶ Android TV</button>
               <button class="qp-option" onclick="pickSOAdv('whaleos',this)">🐋 WhaleOS</button>
@@ -797,7 +792,6 @@
             <div class="qp-adv-title">Tempo de uso contínuo</div>
             <div class="qp-adv-hint">Classificação do canal com câmera térmica. Relevante se você usa por muitas horas seguidas ou em ambientes quentes.</div>
             <div class="qp-options">
-              <button class="qp-option" onclick="pick('uso_horas',null,this)">Tanto faz</button>
               <button class="qp-option" onclick="pick('uso_horas','6h',this)">🌡️ 6h ou mais</button>
               <button class="qp-option" onclick="pick('uso_horas','8h',this)">🌡️ 8h ou mais</button>
             </div>
@@ -819,18 +813,12 @@
           <hr class="qp-adv-sep">
 
           <!-- Lux -->
-          <div class="qp-adv-section">
-            <div class="qp-adv-title">Luminosidade medida do ambiente (lux)</div>
-            <div class="qp-adv-hint">Se você mediu com celular ou luxímetro, insira abaixo. <strong>Celular costuma marcar 10–20% a menos</strong> que um luxímetro profissional — leve isso em conta.</div>
+          <div class="qp-adv-section" style="opacity:0.45;pointer-events:none;user-select:none;">
+            <div class="qp-adv-title">Luminosidade medida do ambiente (lux) <span style="font-size:0.7rem;font-weight:500;color:var(--accent);background:rgba(79,163,199,0.12);border:1px solid rgba(79,163,199,0.25);border-radius:4px;padding:2px 7px;margin-left:6px;vertical-align:middle;">Em breve</span></div>
+            <div class="qp-adv-hint">Medição por lux para afinar a recomendação de brilho — disponível em breve.</div>
             <div class="qp-lux-row">
-              <input type="number" class="qp-lux-input" id="luxInput" placeholder="Ex: 150" min="0" max="9999">
+              <input type="number" class="qp-lux-input" id="luxInput" placeholder="Ex: 150" min="0" max="9999" disabled>
               <span class="qp-lux-unit">lux</span>
-            </div>
-            <div class="qp-lux-ref">
-              <div class="qp-lux-ref-item"><span class="qp-lux-ref-badge">0–50 lx</span> Quarto escuro</div>
-              <div class="qp-lux-ref-item"><span class="qp-lux-ref-badge">50–200 lx</span> Sala com luz baixa</div>
-              <div class="qp-lux-ref-item"><span class="qp-lux-ref-badge">200–500 lx</span> Sala clara com janelas</div>
-              <div class="qp-lux-ref-item"><span class="qp-lux-ref-badge">500+ lx</span> Muito iluminado</div>
             </div>
           </div>
 
@@ -995,20 +983,33 @@
 
     /* ── Pick functions ── */
     function pick(q, val, el) {
-      answers[q] = val;
-      el.closest('.qp-options').querySelectorAll('.qp-option').forEach(o => o.classList.remove('active'));
-      el.classList.add('active');
+      if (el.classList.contains('active')) {
+        answers[q] = null;
+        el.classList.remove('active');
+      } else {
+        answers[q] = val;
+        el.closest('.qp-options').querySelectorAll('.qp-option').forEach(o => o.classList.remove('active'));
+        el.classList.add('active');
+      }
       updateCount();
     }
 
     function pickTec(val, el) {
+      if (el.classList.contains('active')) {
+        answers.tec_main = null;
+        answers.tec_sub = null;
+        el.classList.remove('active');
+        document.getElementById('tecSub').style.display = 'none';
+        updateCount();
+        return;
+      }
       document.querySelectorAll('#tecMain .qp-option').forEach(o => o.classList.remove('active'));
       el.classList.add('active');
       answers.tec_main = val;
       answers.tec_sub = null;
       if (val === 'dlp') {
         document.getElementById('tecSub').style.display = 'block';
-        document.querySelectorAll('#tecSub .qp-option').forEach((o, i) => o.classList.toggle('active', i === 0));
+        document.querySelectorAll('#tecSub .qp-option').forEach(o => o.classList.remove('active'));
       } else {
         document.getElementById('tecSub').style.display = 'none';
       }
@@ -1016,6 +1017,12 @@
     }
 
     function pickTecSub(val, el) {
+      if (el.classList.contains('active')) {
+        answers.tec_sub = null;
+        el.classList.remove('active');
+        updateCount();
+        return;
+      }
       document.querySelectorAll('#tecSub .qp-option').forEach(o => o.classList.remove('active'));
       el.classList.add('active');
       answers.tec_sub = val;
@@ -1023,24 +1030,34 @@
     }
 
     function pickApps(val, el) {
+      if (el.classList.contains('active')) {
+        answers.sistema = null;
+        el.classList.remove('active');
+        document.getElementById('advSoSection').style.display = 'none';
+        updateCount();
+        return;
+      }
       document.querySelectorAll('#appsMain .qp-option').forEach(o => o.classList.remove('active'));
       el.classList.add('active');
       const soSection = document.getElementById('advSoSection');
       if (val === 'quero') {
         answers.sistema = 'homologado_tantofaz';
         soSection.style.display = 'block';
-        document.querySelectorAll('#advSoOptions .qp-option').forEach((o, i) => o.classList.toggle('active', i === 0));
-      } else if (val === 'nao_quero') {
-        answers.sistema = 'nao_homologado';
-        soSection.style.display = 'none';
+        document.querySelectorAll('#advSoOptions .qp-option').forEach(o => o.classList.remove('active'));
       } else {
-        answers.sistema = null;
+        answers.sistema = 'nao_homologado';
         soSection.style.display = 'none';
       }
       updateCount();
     }
 
     function pickSOAdv(val, el) {
+      if (el.classList.contains('active')) {
+        answers.sistema = 'homologado_tantofaz';
+        el.classList.remove('active');
+        updateCount();
+        return;
+      }
       document.querySelectorAll('#advSoOptions .qp-option').forEach(o => o.classList.remove('active'));
       el.classList.add('active');
       answers.sistema = val;
@@ -1048,6 +1065,12 @@
     }
 
     function pickOtica(val, el) {
+      if (el.classList.contains('active')) {
+        answers.otica = null;
+        el.classList.remove('active');
+        updateCount();
+        return;
+      }
       answers.otica = val;
       el.closest('.qp-options').querySelectorAll('.qp-option').forEach(o => o.classList.remove('active'));
       el.classList.add('active');
@@ -1098,6 +1121,8 @@
     }
 
     function passesFilter(p, a) {
+      // Custo-benefício requer preço
+      if (a.custo_beneficio && !p.preco_min) return false;
       // Orçamento — usa preco_min do projetor
       if (a.orcamento_min !== null || a.orcamento_max !== null) {
         if (!p.preco_min) return false;
@@ -1106,9 +1131,9 @@
       }
       if (a.iluminacao && p.brilho_ansi) {
         const ansi = p.brilho_ansi;
-        if (a.iluminacao === 'pouca_luz'   && ansi < 700)  return false;
+        if (a.iluminacao === 'pouca_luz'   && ansi < 500)  return false;
         if (a.iluminacao === 'muita_luz'   && ansi < 1000) return false;
-        if (a.iluminacao === 'luz_intensa' && ansi < 1500) return false;
+        if (a.iluminacao === 'luz_intensa' && ansi < 1400) return false;
       }
       const tec = p.tecnologia || '';
       if (a.tec_main === 'lcd') {
@@ -1179,15 +1204,6 @@
     function scoreProjector(p, a, lux) {
       let s = 50;
       const ansi = p.brilho_ansi || 0;
-      if (a.iluminacao === 'escuro') {
-        s += Math.min(25, Math.round(ansi / 32));
-      } else if (a.iluminacao === 'pouca_luz') {
-        s += Math.min(32, Math.round(ansi / 63));
-      } else if (a.iluminacao === 'muita_luz') {
-        s += Math.min(38, Math.round(ansi / 68));
-      } else if (a.iluminacao === 'luz_intensa') {
-        s += Math.min(44, Math.round(ansi / 68));
-      }
       const lag = p.input_lag_ms;
       const tecnologias = (p.tecnologias || '').toLowerCase();
       if (a.uso === 'filmes') {
@@ -1195,7 +1211,7 @@
         if (tecnologias.includes('hdr'))  s += 12;
         if (tecnologias.includes('memc')) s += 8;
       } else if (a.uso === 'jogos') {
-        s += lag == null ? 3 : lag <= 11 ? 35 : lag <= 26 ? 25 : lag <= 50 ? 15 : lag <= 90 ? 5 : -10;
+        s += lag == null ? 3 : Math.max(-10, Math.round(40 - (lag - 10) * 0.5));
       } else if (a.uso === 'geral') {
         s += lag == null ? 3 : lag <= 25 ? 8 : lag <= 50 ? 5 : -8;
       }
@@ -1298,7 +1314,7 @@
       if (idx === 0) {
         if (answers.uso === 'jogos') return { text: '⚡ Ideal para jogos', cls: 'featured' };
         if (answers.mobilidade === 'bateria' || answers.mobilidade === 'ambos') return { text: '🔋 Melhor portátil', cls: 'featured' };
-        if (answers.iluminacao === 'luz_intensa') return { text: '☀️ Máximo brilho', cls: 'featured' };
+        if (answers.iluminacao === 'luz_intensa') return { text: '💡 Máximo brilho', cls: 'featured' };
         if (answers.resolucao === '4k_nativa') return { text: '✨ Melhor em 4K', cls: 'featured' };
         if (answers.tec_sub === 'dlp_laser') return { text: '⚡ Melhor DLP Laser', cls: 'featured' };
         return { text: '★ Recomendado para você', cls: 'featured' };
@@ -1475,7 +1491,7 @@
         .join('');
 
       const labelMap = {
-        iluminacao: { escuro: 'escuro', pouca_luz: 'pouca luz', muita_luz: 'muita luz', luz_intensa: 'luz intensa' },
+        iluminacao: { escuro: 'escuro', pouca_luz: 'luz baixa', muita_luz: 'iluminado', luz_intensa: 'muito iluminado' },
         uso:        { filmes: 'filmes', jogos: 'jogos', geral: 'geral' },
         mobilidade: { fixo: 'fixo', base: 'base giratória', bateria: 'portátil c/ bateria', ambos: 'bateria + giratória' },
       };
