@@ -185,12 +185,12 @@ const projectors = [
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
 // ============================================================
 const featuredVideos = [
+  { id: 'y40NWkwjuYg', title: 'Qual Melhor Projetor Custo Beneficio!' },
+  { id: 'Fh47l1L81Po', title: 'Nunca Mais Erre na Escolha! O Jeito Mais Fácil de Achar seu Projetor!' },
   { id: 'S8yGCgKlGyY', title: 'Projetor Full HD por menos de R$450 — Vale a Pena? L9W Ultra Touyinger' },
   { id: 'fxBBrJ3B0Bw', title: 'Testei os Melhores Controles Universais para Projetor, Android, TV e PC!' },
   { id: 'OHfd8EzoRX8', title: 'O PROJETOR MAIS COMPLETO DA WANBO? X5 Pro - Review Completo' },
   { id: 'ENe4DsfeFlE', title: 'Qual é o melhor projetor? Byintek U90 Max, T5 Max, V60, Jenovox M5000 MINI Comparativo Completo!' },
-  { id: '5XqrcPf5dA8', title: '[Novo] Vevshao V60! Análise Completissima!' },
-  { id: 'rrlQhQFhGgs', title: 'Live especial: perguntas + sorteio do Bettdow AC1073 🎁' },
 ];
 
 // ============================================================
