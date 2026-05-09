@@ -682,17 +682,38 @@
       .cp-controls { flex-direction: column; align-items: stretch; }
       .cp-ctrl-btn, .cp-share-btn { justify-content: center; width: 100%; }
       .cp-radar-svg-wrap { max-width: 200px; }
-      /* Sticky offsets reduzidos no mobile (header é menor) */
-      .cp-thead { top: 0; }
-      .cp-tr-section td { top: var(--cp-thead-h, 70px); }
+      /* Sticky com offset igual à altura do header fixo (~60px) pra não ficar coberto */
+      .cp-thead { top: 60px; }
+      .cp-tr-section td { top: calc(60px + var(--cp-thead-h, 70px)); }
       .cp-modal-overlay { padding: 12px; }
     }
     @media (max-width: 480px) {
-      .cp-th-corner, .cp-td-label { min-width: 100px; width: 100px; }
-      .cp-td-label { padding: 11px 10px; font-size: 0.78rem; }
-      .cp-td-label-hint { max-width: 95px; word-break: break-word; }
-      .cp-th-col { min-width: 130px; padding: 10px 12px 12px; }
-      .cp-td-val { padding: 11px 12px; font-size: 0.84rem; }
+      /* Força colunas a respeitar a largura definida — sem isso o conteúdo expande as células */
+      .cp-table { table-layout: fixed; }
+      .cp-th-corner, .cp-td-label {
+        min-width: 90px; width: 90px; max-width: 90px;
+      }
+      .cp-td-label { padding: 11px 9px; font-size: 0.76rem; }
+      .cp-td-label-hint { max-width: 80px; word-break: break-word; line-height: 1.35; }
+      .cp-th-col {
+        min-width: 108px; width: 108px; max-width: 108px;
+        padding: 10px 8px 12px;
+      }
+      .cp-th-top-bar { margin: -10px -8px 6px; }
+      .cp-th-brand { font-size: 0.62rem; }
+      .cp-th-model { font-size: 0.86rem; }
+      .cp-th-wins-badge {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+        line-height: 1.35;
+        white-space: normal;
+      }
+      .cp-td-val {
+        padding: 11px 7px;
+        font-size: 0.78rem;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
       .cp-modal { max-width: 100%; }
     }
 
