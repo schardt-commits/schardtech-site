@@ -12,27 +12,33 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qual Projetor é pra Você? — SchardTech</title>
-  <meta name="description" content="Responda algumas perguntas e receba recomendações de projetores baseadas em dados reais testados no canal SchardTech.">
+  <meta name="description" content="Ferramenta gratuita: responda 7 perguntas sobre iluminação, orçamento e uso e receba recomendações de projetores baseadas em ANSI Lumens e input lag testados no canal SchardTech.">
+  <link rel="canonical" href="https://schardtech.com.br/qual-projetor.html">
   <meta property="og:title" content="Qual Projetor é pra Você? — SchardTech">
   <meta property="og:description" content="Ferramenta gratuita: responda algumas perguntas e descubra o melhor projetor para o seu perfil. Baseado em testes reais do canal SchardTech.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://schardtech.com.br/qual-projetor.html">
   <meta property="og:site_name" content="SchardTech">
-  <meta property="og:image" content="https://schardtech.com.br/og-image.svg">
+  <meta property="og:image" content="https://schardtech.com.br/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Qual Projetor é pra Você? — SchardTech">
   <meta name="twitter:description" content="Ferramenta gratuita: responda algumas perguntas e descubra o melhor projetor para o seu perfil.">
-  <meta name="twitter:image" content="https://schardtech.com.br/og-image.svg">
+  <meta name="twitter:image" content="https://schardtech.com.br/og-image.jpg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": "WebApplication",
     "name": "Qual Projetor é pra Você?",
     "url": "https://schardtech.com.br/qual-projetor.html",
     "description": "Ferramenta gratuita que recomenda projetores baseados no seu perfil de uso. Dados reais testados no canal SchardTech.",
-    "isPartOf": { "@type": "WebSite", "name": "SchardTech", "url": "https://schardtech.com.br" }
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "inLanguage": "pt-BR",
+    "isPartOf": { "@type": "WebSite", "name": "SchardTech", "url": "https://schardtech.com.br" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" }
   }
   </script>
   <link rel="stylesheet" href="style.css">
@@ -633,10 +639,12 @@
 </head>
 <body>
 
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
   <header id="header">
     <div class="container header-inner">
       <a href="index.html" class="logo-link">
-        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.png" alt="SchardTech" class="logo-img">
+        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img">
       </a>
       <nav id="mainNav">
         <a href="index.html#projetores" class="nav-link">Projetores</a>
@@ -652,6 +660,7 @@
     </div>
   </header>
 
+  <main id="main">
   <section class="qp-hero">
     <div class="container">
       <div class="section-tag">Ferramenta Gratuita</div>
@@ -756,7 +765,8 @@
         <h3><span class="q-num">7</span> Distância até onde vai projetar</h3>
         <p class="q-hint">O tamanho estimado da imagem para a sua distância aparece em cada resultado.</p>
         <div class="qp-dist-input-row">
-          <input type="number" id="distInput" class="qp-lux-input" placeholder="ex: 2.5" min="0.1" max="15" step="0.1">
+          <label for="distInput" class="visually-hidden">Distância em metros até a parede</label>
+          <input type="number" id="distInput" class="qp-lux-input" placeholder="ex: 2.5" min="0.1" max="15" step="0.1" aria-label="Distância em metros até a parede">
           <span class="qp-lux-unit">metros</span>
         </div>
       </div>
@@ -922,11 +932,13 @@
     </div>
   </section>
 
+  </main>
+
   <footer>
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="logo-link">
-          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.png" alt="SchardTech" class="footer-logo">
+          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo">
         </a>
         <div class="footer-social">
           <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
@@ -935,9 +947,9 @@
           <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
           </a>
-          <a href="#" class="social-link social-disabled" aria-label="Instagram (em breve)">
+          <span class="social-link social-disabled" aria-label="Instagram (em breve)">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          </a>
+          </span>
         </div>
       </div>
       <div class="footer-nav">
@@ -955,7 +967,7 @@
           <h4>Conteúdo</h4>
           <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
           <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="#" class="footer-disabled">Instagram (em breve)</a>
+          <span class="footer-disabled">Instagram (em breve)</span>
         </div>
       </div>
     </div>
@@ -1178,11 +1190,10 @@
     }
 
     function passesFilter(p, a) {
-      // Custo-benefício requer preço
-      if (a.custo_beneficio && !p.preco_min) return false;
+      // Projetor sem preço cadastrado nunca aparece
+      if (!p.preco_min) return false;
       // Orçamento — usa preco_min do projetor
       if (a.orcamento_min !== null || a.orcamento_max !== null) {
-        if (!p.preco_min) return false;
         if (a.orcamento_min !== null && p.preco_min < a.orcamento_min) return false;
         if (a.orcamento_max !== null && p.preco_min > a.orcamento_max) return false;
       }
@@ -1338,7 +1349,7 @@
         if (minAnsi > 0) s += ansi >= minAnsi * 1.5 ? 20 : ansi >= minAnsi ? 10 : 0;
       }
       // Custo-benefício — ANSI efetivo por real investido + bônus de features
-      if (a.custo_beneficio && p.preco_min && p.brilho_ansi) {
+      if (a.custo_beneficio && p.preco_min > 0 && p.brilho_ansi) {
         const isDLP = (p.tecnologia || '').includes('DLP');
         const ansiEf = isDLP ? p.brilho_ansi * 1.5 : p.brilho_ansi;
         const ratioPts = (ansiEf / p.preco_min) * 50;

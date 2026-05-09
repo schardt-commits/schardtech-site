@@ -12,27 +12,33 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comparar Projetores — SchardTech</title>
-  <meta name="description" content="Compare até 3 projetores lado a lado com dados reais testados no canal SchardTech. Brilho ANSI, input lag, ótica, áudio e muito mais.">
+  <meta name="description" content="Compare até 3 projetores lado a lado com dados reais testados no canal SchardTech: ANSI Lumens, input lag, ótica selada, áudio nativo, contraste e tabela detalhada com gráfico radar.">
+  <link rel="canonical" href="https://schardtech.com.br/comparar.html">
   <meta property="og:title" content="Comparar Projetores — SchardTech">
   <meta property="og:description" content="Compare até 3 projetores lado a lado com dados reais do canal. Todas as specs, gráfico radar e links de compra.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://schardtech.com.br/comparar.html">
   <meta property="og:site_name" content="SchardTech">
-  <meta property="og:image" content="https://schardtech.com.br/og-image.svg">
+  <meta property="og:image" content="https://schardtech.com.br/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Comparar Projetores — SchardTech">
   <meta name="twitter:description" content="Compare até 3 projetores lado a lado com dados reais. Brilho ANSI, input lag, ótica, áudio e muito mais.">
-  <meta name="twitter:image" content="https://schardtech.com.br/og-image.svg">
+  <meta name="twitter:image" content="https://schardtech.com.br/og-image.jpg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": "WebApplication",
     "name": "Comparar Projetores",
     "url": "https://schardtech.com.br/comparar.html",
-    "description": "Compare até 3 projetores lado a lado com dados reais testados no canal SchardTech.",
-    "isPartOf": { "@type": "WebSite", "name": "SchardTech", "url": "https://schardtech.com.br" }
+    "description": "Ferramenta gratuita para comparar até 3 projetores lado a lado com dados reais testados no canal SchardTech.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "inLanguage": "pt-BR",
+    "isPartOf": { "@type": "WebSite", "name": "SchardTech", "url": "https://schardtech.com.br" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" }
   }
   </script>
   <link rel="stylesheet" href="style.css">
@@ -148,7 +154,7 @@
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 8px;
-      width: 28px; height: 28px;
+      width: 36px; height: 36px;
       display: flex; align-items: center; justify-content: center;
       cursor: pointer;
       color: var(--text-dim);
@@ -282,7 +288,8 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      padding: 9px 18px;
+      padding: 12px 18px;
+      min-height: 44px;
       border-radius: 100px;
       border: 1px solid var(--border);
       background: transparent;
@@ -302,7 +309,8 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      padding: 9px 18px;
+      padding: 12px 18px;
+      min-height: 44px;
       border-radius: 100px;
       border: 1px solid rgba(79,163,199,0.32);
       background: transparent;
@@ -359,9 +367,15 @@
       background: var(--bg-primary);
     }
     .cp-table {
-      min-width: 480px;
       width: 100%;
       border-collapse: collapse;
+    }
+    .cp-table caption {
+      position: absolute;
+      width: 1px; height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
     }
 
     /* Sticky thead */
@@ -387,12 +401,12 @@
       overflow: hidden;
     }
     .cp-th-top-bar { height: 3px; border-radius: 0; margin: -10px -18px 6px; }
-    .cp-th-brand { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); }
+    .cp-th-brand { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); }
     .cp-th-model { font-size: 0.98rem; font-weight: 800; color: var(--text); margin-top: 3px; line-height: 1.2; }
     .cp-th-wins-badge {
       display: inline-block;
       margin-top: 5px;
-      font-size: 0.62rem;
+      font-size: 0.7rem;
       font-weight: 700;
       padding: 3px 9px;
       border-radius: 100px;
@@ -401,7 +415,7 @@
     /* Section header rows — sticky below the projector thead */
     .cp-tr-section td {
       padding: 8px 16px;
-      font-size: 0.62rem;
+      font-size: 0.72rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.14em;
@@ -434,7 +448,7 @@
     .cp-tr:hover .cp-td-label { background: #0e1421; }
     .cp-td-label-hint {
       display: block;
-      font-size: 0.64rem;
+      font-size: 0.72rem;
       font-weight: 400;
       color: var(--text-dim);
       margin-top: 2px;
@@ -660,18 +674,26 @@
     /* ── RESPONSIVE ───────────────────────────── */
     @media (max-width: 900px) {
       .cp-slots { grid-template-columns: repeat(2, 1fr); }
-      .cp-radar-card { flex-direction: column; gap: 20px; }
-      .cp-radar-svg-wrap { width: 220px; height: 220px; margin: 0 auto; }
+      .cp-radar-card { flex-direction: column; gap: 20px; padding: 24px 20px; }
+      .cp-radar-svg-wrap { width: 100%; max-width: 220px; height: auto; aspect-ratio: 1; margin: 0 auto; }
     }
     @media (max-width: 640px) {
       .cp-slots { grid-template-columns: 1fr; }
-      .cp-controls { flex-direction: column; align-items: flex-start; }
-      .cp-radar-svg-wrap { width: 200px; height: 200px; }
+      .cp-controls { flex-direction: column; align-items: stretch; }
+      .cp-ctrl-btn, .cp-share-btn { justify-content: center; width: 100%; }
+      .cp-radar-svg-wrap { max-width: 200px; }
+      /* Sticky offsets reduzidos no mobile (header é menor) */
+      .cp-thead { top: 0; }
+      .cp-tr-section td { top: var(--cp-thead-h, 70px); }
+      .cp-modal-overlay { padding: 12px; }
     }
     @media (max-width: 480px) {
-      .cp-th-corner, .cp-td-label { min-width: 110px; width: 110px; }
-      .cp-td-label-hint { max-width: 105px; }
-      .cp-th-col { min-width: 130px; }
+      .cp-th-corner, .cp-td-label { min-width: 100px; width: 100px; }
+      .cp-td-label { padding: 11px 10px; font-size: 0.78rem; }
+      .cp-td-label-hint { max-width: 95px; word-break: break-word; }
+      .cp-th-col { min-width: 130px; padding: 10px 12px 12px; }
+      .cp-td-val { padding: 11px 12px; font-size: 0.84rem; }
+      .cp-modal { max-width: 100%; }
     }
 
     /* ── MODAL CLOSE BUTTON ───────────────────── */
@@ -719,10 +741,12 @@
 </head>
 <body>
 
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
   <header id="header">
     <div class="container header-inner">
       <a href="index.html" class="logo-link">
-        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.png" alt="SchardTech" class="logo-img">
+        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img">
       </a>
       <nav id="mainNav">
         <a href="index.html#projetores" class="nav-link">Projetores</a>
@@ -738,6 +762,7 @@
     </div>
   </header>
 
+  <main id="main">
   <section class="cp-hero">
     <div class="container">
       <div class="section-tag">Dados Reais do Canal</div>
@@ -813,6 +838,7 @@
   </div>
 
   <div class="cp-toast" id="toast"></div>
+  </main>
 
   <script src="projetores-data.js"></script>
   <script>
@@ -1194,12 +1220,12 @@
       });
 
       /* header */
-      let html = `<thead class="cp-thead"><tr>
-        <th class="cp-th-corner"></th>
+      let html = `<caption>Comparação técnica entre ${n} ${n>1?'projetores':'projetor'} selecionado${n>1?'s':''}</caption><thead class="cp-thead"><tr>
+        <th class="cp-th-corner" scope="col"><span class="sr-only">Especificação</span></th>
         ${projs.map((p,i) => {
           const c = COLORS[i];
           const rgb = hexRgb(c);
-          return `<th class="cp-th-col">
+          return `<th class="cp-th-col" scope="col">
             <div class="cp-th-top-bar" style="background:${c}"></div>
             <div class="cp-th-brand">${escAttr(p.marca)}</div>
             <div class="cp-th-model">${escAttr(p.modelo)}</div>
@@ -1222,7 +1248,7 @@
             <td class="cp-td-label" style="padding:0;border-right:1px solid var(--border)">
               <div class="cp-calc-cell">
                 <span class="cp-calc-label">Com</span>
-                <input type="number" class="cp-calc-input" id="calcDist" placeholder="2.5" min="0.3" max="20" step="0.1" oninput="updateCalc()">
+                <input type="number" class="cp-calc-input" id="calcDist" placeholder="2.5" min="0.3" max="20" step="0.1" oninput="updateCalc()" aria-label="Distância em metros para cálculo do tamanho da imagem">
                 <span class="cp-calc-unit">metros →</span>
               </div>
             </td>
@@ -1590,6 +1616,15 @@
       if (item && !item.classList.contains('already-selected')) selectProj(item.dataset.modelo);
     });
 
+    document.getElementById('modalList').addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const item = e.target.closest('.cp-modal-item[role="button"]');
+      if (item && !item.classList.contains('already-selected')) {
+        e.preventDefault();
+        selectProj(item.dataset.modelo);
+      }
+    });
+
     document.getElementById('modalBrands').addEventListener('click', e => {
       const pill = e.target.closest('.cp-brand-pill');
       if (pill) setBrand(pill.dataset.brand);
@@ -1608,7 +1643,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="logo-link">
-          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.png" alt="SchardTech" class="footer-logo">
+          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo">
         </a>
         <div class="footer-social">
           <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
@@ -1617,9 +1652,9 @@
           <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
           </a>
-          <a href="#" class="social-link social-disabled" aria-label="Instagram (em breve)">
+          <span class="social-link social-disabled" aria-label="Instagram (em breve)">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          </a>
+          </span>
         </div>
       </div>
       <div class="footer-nav">
@@ -1637,7 +1672,7 @@
           <h4>Conteúdo</h4>
           <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
           <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="#" class="footer-disabled">Instagram (em breve)</a>
+          <span class="footer-disabled">Instagram (em breve)</span>
         </div>
       </div>
     </div>
