@@ -291,6 +291,40 @@
     .qp-lux-input:focus { border-color: var(--primary); }
     .qp-lux-unit { color: var(--text-muted); font-size: 0.9rem; }
 
+    .qp-price-current {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.2;
+      word-break: break-word;
+    }
+    .qp-price-marketplace {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-left: 4px;
+    }
+    .qp-price-history {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .qp-price-meta {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .qp-price-meta strong {
+      color: var(--accent);
+      font-weight: 600;
+      padding: 1px 5px;
+      background: rgba(143, 211, 255, 0.08);
+      border-radius: 3px;
+    }
+    @media (max-width: 480px) {
+      .qp-price-current { font-size: 1.15rem; }
+      .qp-price-marketplace { display: block; margin-left: 0; margin-top: 2px; }
+    }
     .qp-tag-importado {
       display: inline-flex;
       align-items: center;
@@ -821,8 +855,8 @@
             <div class="qp-options">
               <button class="qp-option" onclick="pick('entrada','4k_30hz',this)">4K 30Hz</button>
               <button class="qp-option" onclick="pick('entrada','4k_60hz',this)">4K 60Hz</button>
-              <button class="qp-option" onclick="pick('entrada','4k_60hz_120hz',this)">⚡ 4K 60Hz + 120Hz</button>
-              <button class="qp-option" onclick="pick('entrada','1080p_120hz',this)">🎮 1080p 120Hz+</button>
+              <button class="qp-option" onclick="pick('entrada','4k_60hz_120hz',this)">⚡ 4K 60Hz + 1080p 120Hz</button>
+              <button class="qp-option" onclick="pick('entrada','1080p_120hz',this)">🎮 4K 60Hz + 1080p 240Hz</button>
             </div>
           </div>
 
@@ -918,19 +952,12 @@
     </div>
   </section>
 
-  <!-- EMAIL CAPTURE -->
-  <section class="qp-email-capture" id="emailCapture" style="display:none;padding:56px 0;background:var(--bg-secondary);border-top:1px solid var(--border);">
-    <div class="container" style="max-width:560px;text-align:center;">
-      <div class="section-tag" style="display:inline-flex;margin:0 auto 16px;">Novidades</div>
-      <h2 style="font-size:1.6rem;margin-bottom:10px;">Receba reviews novos <span class="gradient-text">por email</span></h2>
-      <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:24px;">Novos projetores testados, comparativos e cupons exclusivos. Sem spam.</p>
-      <form action="https://formspree.io/f/xdkoapwn" method="POST" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
-        <input type="email" name="email" placeholder="seu@email.com" required
-          style="flex:1;min-width:220px;padding:12px 16px;border-radius:var(--radius);border:1px solid var(--border);background:var(--card-bg);color:var(--text);font-family:inherit;font-size:0.95rem;outline:none;">
-        <button type="submit" class="btn btn-primary" style="white-space:nowrap;">Quero receber</button>
-      </form>
-    </div>
-  </section>
+  <!--
+    EMAIL CAPTURE — removido do DOM em 10/05/2026 pra não capturar email sem estratégia
+    de envio definida. Endpoint Formspree usado antes: xdkoapwn. Pra reativar no futuro,
+    restaurar o <section id="emailCapture"> daqui + reativar o trecho comentado no JS
+    que faz emailCap.style.display = ''.
+  -->
 
   </main>
 
@@ -980,7 +1007,32 @@
   </footer>
 
   <script src="projetores-data.js"></script>
+  <script src="prices-overlay.js"></script>
   <script>
+    // Helpers de escape pra defender contra XSS quando dados vierem de fora.
+    // Hoje os dados são controlados pelo dono do site, mas se a planilha mãe passar
+    // a aceitar input de terceiros (Byintek, fornecedores), esses helpers blindam.
+    function escAttr(s) {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;')
+        .replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+    function safeUrl(u) {
+      if (!u) return '';
+      const t = String(u).trim();
+      return /^https?:\/\//i.test(t) ? t : '';
+    }
+
+    function fmtMarketplaceLabelQp(slug) {
+      return ({
+        'aliexpress':    { label: 'AliExpress',    prep: 'no' },
+        'shopee':        { label: 'Shopee',        prep: 'na' },
+        'mercado_livre': { label: 'Mercado Livre', prep: 'no' },
+        'ml':            { label: 'Mercado Livre', prep: 'no' },
+        'amazon':        { label: 'Amazon',        prep: 'na' }
+      })[slug] || null;
+    }
+
     const answers = {
       iluminacao: null,
       uso: null,
@@ -1023,6 +1075,9 @@
         updateCount();
       });
       updateCount();
+      // Reconta após o overlay carregar — pros 6 indisponíveis (X30, R16, Page One, T09,
+      // DaVinci 1, Mozart 1, T2 Max New) caírem do contador inicial assim que o fetch volta.
+      (window.PRICES_OVERLAY_READY || Promise.resolve()).then(() => updateCount());
     });
 
     function pickOrc(min, max, el) {
@@ -1191,11 +1246,16 @@
 
     function passesFilter(p, a) {
       // Projetor sem preço cadastrado nunca aparece
-      if (!p.preco_min) return false;
-      // Orçamento — usa preco_min do projetor
+      // Preço base = atual (overlay) com fallback pro min estático da planilha mãe.
+      const precoBase = p.preco_atual || p.preco_min;
+      if (!precoBase) return false;
+      // Preço efetivo pro consumidor BR: importado custa 2x (ICMS + frete real).
+      // Mesma regra do custo-benefício — usuário decidiu padronizar pra não confundir.
+      const precoRef = precoBase * (p.status === 'importado' ? 2 : 1);
+      // Orçamento — usa preço efetivo (com ajuste de importado)
       if (a.orcamento_min !== null || a.orcamento_max !== null) {
-        if (a.orcamento_min !== null && p.preco_min < a.orcamento_min) return false;
-        if (a.orcamento_max !== null && p.preco_min > a.orcamento_max) return false;
+        if (a.orcamento_min !== null && precoRef < a.orcamento_min) return false;
+        if (a.orcamento_max !== null && precoRef > a.orcamento_max) return false;
       }
       if (a.iluminacao && p.brilho_ansi) {
         const ansi = p.brilho_ansi;
@@ -1349,29 +1409,82 @@
         if (minAnsi > 0) s += ansi >= minAnsi * 1.5 ? 20 : ansi >= minAnsi ? 10 : 0;
       }
       // Custo-benefício — ANSI efetivo por real investido + bônus de features
-      if (a.custo_beneficio && p.preco_min > 0 && p.brilho_ansi) {
+      const precoRef = p.preco_atual || p.preco_min;
+      if (a.custo_beneficio && precoRef > 0 && p.brilho_ansi) {
         const isDLP = (p.tecnologia || '').includes('DLP');
         const ansiEf = isDLP ? p.brilho_ansi * 1.5 : p.brilho_ansi;
-        const ratioPts = (ansiEf / p.preco_min) * 50;
+        // Importados (estoque China) entram no cálculo com preço DOBRADO pra refletir
+        // ICMS + frete real pro consumidor BR. Display continua mostrando o preço de tabela.
+        const precoCalc = (p.status === 'importado') ? precoRef * 2 : precoRef;
+        const ratioPts = (ansiEf / precoCalc) * 50;
 
         const os_ = p.sistema_operacional || '';
-        const osBonus = os_.includes('Google TV') ? 15 : os_.includes('Android TV') ? 8 : os_.includes('WhaleOS') ? 3 : 0;
+        // Bonus de SO calibrado: Google TV ≈ preço de um Fire Stick (~R$ 300). Antes valia 15
+        // (em projetor de R$ 2k equivalia a R$ 1.000-1.500 de desconto fantasma).
+        const osBase = os_.includes('Google TV') ? 8 : os_.includes('Android TV') ? 5 : os_.includes('WhaleOS') ? 2 : 0;
+        // soOverride — marcas com sistema Android não-homologado mas notavelmente bom ganham +1
+        // (entre NH=0 e WhaleOS=2, sem passar do WhaleOS).
+        let soOverride = 0;
+        if (p.marca === 'Magcubic') soOverride = 1;
+        else if (p.marca === 'Progaga' && (p.modelo === 'PG310' || p.modelo === 'PG370')) soOverride = 1;
+        const osBonus = osBase + soOverride;
 
+        // Bonus de áudio — usa parseAudio + audioCategory já definidos antes neste arquivo
+        const au = parseAudio(p.audio_w);
+        const aCat = audioCategory(au);
+        const audioBase = aCat === 'excelente' ? 4 : aCat === 'bom' ? 2 : aCat === 'razoavel' ? 1 : 0;
+        // audioOverride — marcas com áudio reconhecidamente bom ganham extra
+        let audioOverride = 0;
+        if (p.marca === 'Wanbo') audioOverride = 2;
+        else if (p.marca === 'Wupro' && p.modelo === 'G2') audioOverride = 2;
+        else if (p.marca === 'Formovie' && (p.modelo === 'Xming Page One' || p.modelo === 'Xming Episode One')) audioOverride = 2;
+        else if (p.marca === 'Bettdow' && (p.modelo === 'AC1073' || p.modelo === 'AC1061')) audioOverride = 1;
+        else if (p.marca === 'Vevshao' && p.modelo === 'A22') audioOverride = 1;
+        const audioBonus = audioBase + audioOverride;
+
+        // Bateria — pesos pela metade do original (12/8/5 → 6/4/2.5)
         const mahMatch = (p.cap_bateria || '').match(/\d+/);
         const mah = mahMatch ? parseInt(mahMatch[0]) : 0;
-        const batBonus = mah >= 15000 ? 12 : mah >= 8000 ? 8 : p.bateria ? 5 : 0;
+        const batBonus = mah >= 15000 ? 6 : mah >= 8000 ? 4 : p.bateria ? 2.5 : 0;
 
         const lag = p.input_lag_ms;
         const lagBonus = lag && lag <= 26 ? 8 : lag && lag <= 50 ? 4 : 0;
 
-        const k4Bonus = (p.resolucao_max || '').toLowerCase().includes('4k') ? 6 : 0;
+        // 4K input em camadas: 60Hz+modos extras (120/240Hz)=3, 60Hz puro=2.5, 30Hz/15Hz=0, 1080p=0
+        const rmaxLow = (p.resolucao_max || '').toLowerCase();
+        let k4Bonus = 0;
+        if (/4k\s*60\s*hz/.test(rmaxLow)) {
+          k4Bonus = /120\s*hz|240\s*hz/.test(rmaxLow) ? 3 : 2.5;
+        }
 
         const tec = p.tecnologias || '';
-        const techBonus = (tec.includes('MEMC') ? 4 : 0) + (tec.includes('HDR') ? 3 : 0);
+        const techBonus = (tec.includes('MEMC') ? 2 : 0) + (tec.includes('HDR') ? 2 : 0);
 
-        const bolsaBonus = p.bolsa === 'premium' ? 10 : p.bolsa === 'basica' ? 6 : 0;
+        // Bolsa pela metade do original (10/6 → 5/3)
+        const bolsaBonus = p.bolsa === 'premium' ? 5 : p.bolsa === 'basica' ? 3 : 0;
 
-        const cbScore = ratioPts + osBonus + batBonus + lagBonus + k4Bonus + techBonus + bolsaBonus;
+        // Suporte giratório / base móvel: +1.5 pts (vale menos que sistema)
+        const baseBonus = p.suporte_giratorio ? 1.5 : 0;
+
+        // Autofoco: +1 pt (qualidade de vida)
+        const autofocoBonus = p.autofoco === 'Sim' ? 1 : 0;
+
+        // Ótica selada: escala progressiva 0 a 3 (7 níveis)
+        const OTICA_CB = { 'Não Selada': 0, 'Não Selada+': 0.5, 'Não Selada++': 1, 'Selada-': 1.5, 'Selada': 2, 'Selada+': 2.5, 'Selada++': 3 };
+        const oticaBonus = OTICA_CB[p.otica_selada] ?? 0;
+
+        // RAM ≥ 3GB: +1 (sistema mais fluido)
+        const ramBonus = (p.ram_gb || 0) >= 3 ? 1 : 0;
+
+        // Penalidade por R$/ANSI: ratioPts já desce com preço alto, mas a sensibilidade marginal
+        // cai com 1/preço². Pra punir projetores com pouca eficiência (ex: R$ 2.626 / 440 ANSI =
+        // R$ 3,98 por ANSI), descontamos 8 pts pra cada R$ acima de R$ 1 por ANSI efetivo.
+        const custoPorAnsi = precoCalc / ansiEf;
+        const ansiPenalty = Math.max(0, custoPorAnsi - 1.0) * 8;
+
+        const cbScore = ratioPts + osBonus + batBonus + lagBonus + k4Bonus + techBonus
+                       + audioBonus + bolsaBonus + baseBonus + autofocoBonus + oticaBonus + ramBonus
+                       - ansiPenalty;
         const weight = a.custo_beneficio === 'bastante' ? 0.5 : 0.3;
         s = Math.round(s * (1 - weight) + cbScore * weight);
       }
@@ -1388,7 +1501,10 @@
         return { text: '★ Recomendado para você', cls: 'featured' };
       }
       const t = top[0];
-      if (p.preco_min && t.preco_min && p.preco_min < t.preco_min * 0.85) return { text: '💰 Mais econômico', cls: 'alt' };
+      // Preço efetivo pro consumidor BR: importado custa 2x (ICMS + frete), mesma regra do score.
+      const pP = (p.preco_atual || p.preco_min) * (p.status === 'importado' ? 2 : 1);
+      const tP = (t.preco_atual || t.preco_min) * (t.status === 'importado' ? 2 : 1);
+      if (pP && tP && pP < tP * 0.85) return { text: '💰 Mais econômico', cls: 'alt' };
       if (p.brilho_ansi && t.brilho_ansi && p.brilho_ansi > t.brilho_ansi * 1.2) return { text: '💡 Mais brilhante', cls: 'alt' };
       if (answers.uso === 'jogos' && p.input_lag_ms != null && t.input_lag_ms != null && p.input_lag_ms < t.input_lag_ms * 0.8) return { text: '⚡ Menor input lag', cls: 'alt' };
       if (p.bateria && !t.bateria) return { text: '🔋 Opção com bateria', cls: 'alt' };
@@ -1424,15 +1540,52 @@
       return m ? m[1] : null;
     }
 
+    function verifLabel(dataStr) {
+      // Converte "YYYY-MM-DD HH:mm" em "verificado hoje" / "verificado ontem" / "verificado há N dias".
+      if (!dataStr) return '';
+      const parsed = new Date(String(dataStr).replace(' ', 'T'));
+      if (isNaN(parsed)) return '';
+      const hoje = new Date();
+      const dia = (d) => Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
+      const diff = Math.floor((dia(hoje) - dia(parsed)) / 86400000);
+      if (diff <= 0) return 'verificado hoje';
+      if (diff === 1) return 'verificado ontem';
+      return `verificado há ${diff} dias`;
+    }
+
     function renderCard(p, badge, featured, matchPct) {
-      const hasPrice = p.preco_min || p.preco_max;
-      const fmt = n => n ? n.toLocaleString('pt-BR') : '?';
+      const hasPrice = p.preco_atual || p.preco_min || p.preco_max;
+      const r = n => 'R$ ' + Math.round(Number(n)).toLocaleString('pt-BR');
       const isImportado = p.status === 'importado';
       const importadoTag = isImportado ? '<span class="qp-tag-importado">importado</span>' : '';
-      const priceNote = isImportado ? 'estimativa · valor pode variar bastante' : 'estimativa · varia por loja';
-      const priceHtml = hasPrice
-        ? `<div class="qp-card-price"><div class="qp-card-price-range">R$ ${fmt(p.preco_min)} – ${fmt(p.preco_max)}${importadoTag}</div><div class="qp-card-price-note">${priceNote}</div></div>`
-        : `<div class="qp-card-price"><div class="qp-card-price-na">sem estimativa</div></div>`;
+      const mk = (typeof fmtMarketplaceLabelQp === 'function') ? fmtMarketplaceLabelQp(p.marketplace_vencedor) : null;
+      let priceHtml;
+      if (p.preco_atual) {
+        const min = p.preco_min_historico, max = p.preco_max_historico;
+        const histLine = (min && max && Math.round(min) !== Math.round(max))
+          ? `<div class="qp-price-history">min ${r(min)} · max ${r(max)}</div>`
+          : '';
+        const mkSpan = mk ? ` <span class="qp-price-marketplace">${mk.prep} ${mk.label}</span>` : '';
+        // Linha extra: "verificado há X" + indicação se preço já tem cupom aplicado
+        const venc = (p.marketplaces && p.marketplaces[p.marketplace_vencedor]) || {};
+        const cupomNoVencedor = venc.cupom || null;
+        const verif = verifLabel(p.data_verificacao);
+        const extras = [];
+        if (verif) extras.push(verif);
+        if (cupomNoVencedor) extras.push(`com cupom <strong>${cupomNoVencedor}</strong>`);
+        const extraLine = extras.length ? `<div class="qp-price-meta">${extras.join(' · ')}</div>` : '';
+        priceHtml = `<div class="qp-card-price">
+          <div class="qp-price-current">${r(p.preco_atual)}${mkSpan}${importadoTag}</div>
+          ${extraLine}
+          ${histLine}
+        </div>`;
+      } else if (hasPrice) {
+        const fmt = n => n ? n.toLocaleString('pt-BR') : '?';
+        const priceNote = isImportado ? 'estimativa · valor pode variar bastante' : 'estimativa · varia por loja';
+        priceHtml = `<div class="qp-card-price"><div class="qp-card-price-range">R$ ${fmt(p.preco_min)} – ${fmt(p.preco_max)}${importadoTag}</div><div class="qp-card-price-note">${priceNote}</div></div>`;
+      } else {
+        priceHtml = `<div class="qp-card-price"><div class="qp-card-price-na">sem estimativa</div></div>`;
+      }
 
       const matchPill = (matchPct !== null)
         ? `<span class="qp-match-pill${matchPct >= 90 ? ' hi' : matchPct >= 70 ? ' mid' : ''}">${matchPct}% de match</span>`
@@ -1467,27 +1620,28 @@
       if (p.uso_continuo)         specs.push(`<div class="qp-spec"><span class="qp-spec-label">Uso contínuo</span><span class="qp-spec-value">${p.uso_continuo}</span></div>`);
 
       const stores = [];
-      if (p.ali_url)    stores.push(`<a href="${p.ali_url}" target="_blank" rel="noopener noreferrer" class="qp-store-btn ali"><span class="store-dot"></span>AliExpress</a>`);
-      if (p.ml_url)     stores.push(`<a href="${p.ml_url}" target="_blank" rel="noopener noreferrer" class="qp-store-btn ml"><span class="store-dot"></span>Mercado Livre</a>`);
-      if (p.shopee_url) stores.push(`<a href="${p.shopee_url}" target="_blank" rel="noopener noreferrer" class="qp-store-btn shopee"><span class="store-dot"></span>Shopee</a>`);
-      if (p.amazon_url) stores.push(`<a href="${p.amazon_url}" target="_blank" rel="noopener noreferrer" class="qp-store-btn amazon"><span class="store-dot"></span>Amazon</a>`);
+      if (safeUrl(p.ali_url))    stores.push(`<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="noopener noreferrer" class="qp-store-btn ali"><span class="store-dot"></span>AliExpress</a>`);
+      if (safeUrl(p.ml_url))     stores.push(`<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="noopener noreferrer" class="qp-store-btn ml"><span class="store-dot"></span>Mercado Livre</a>`);
+      if (safeUrl(p.shopee_url)) stores.push(`<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="noopener noreferrer" class="qp-store-btn shopee"><span class="store-dot"></span>Shopee</a>`);
+      if (safeUrl(p.amazon_url)) stores.push(`<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="noopener noreferrer" class="qp-store-btn amazon"><span class="store-dot"></span>Amazon</a>`);
 
       const coupons = [];
-      if (p.ali_cupom_loja)  coupons.push({ label: 'Cupom loja', code: p.ali_cupom_loja });
-      if (p.ali_cupom_promo) coupons.push({ label: 'Cupom promo', code: p.ali_cupom_promo });
+      if (p.ali_cupom_loja)  coupons.push({ label: 'Cupom loja AliExpress',      code: p.ali_cupom_loja });
+      if (p.ali_cupom_promo) coupons.push({ label: 'Cupom promoção AliExpress',  code: p.ali_cupom_promo });
       const couponsHtml = coupons.length
         ? `<div class="qp-coupons">${coupons.map(c =>
             `<div class="qp-coupon">
-              <span class="qp-coupon-label">${c.label}:</span>
-              <span class="qp-coupon-code">${c.code}</span>
-              <button class="qp-coupon-copy" onclick="copyCoupon(this,'${c.code}')">Copiar</button>
+              <span class="qp-coupon-label">${escAttr(c.label)}:</span>
+              <span class="qp-coupon-code">${escAttr(c.code)}</span>
+              <button class="qp-coupon-copy" data-code="${escAttr(c.code)}">Copiar</button>
             </div>`).join('')}</div>${coupons.length >= 2 ? `<p class="qp-coupon-note">Use os 2 cupons para o desconto máximo.</p>` : ''}`
         : '';
 
-      const vidId = getYouTubeId(p.video_url);
+      const vidUrl = safeUrl(p.video_url);
+      const vidId = getYouTubeId(vidUrl);
       const reviewHtml = vidId
-        ? `<a href="${p.video_url}" target="_blank" rel="noopener noreferrer" class="qp-review-banner">
-            <img src="https://img.youtube.com/vi/${vidId}/mqdefault.jpg" class="qp-review-thumb" alt="Review ${p.marca} ${p.modelo}" loading="lazy">
+        ? `<a href="${escAttr(vidUrl)}" target="_blank" rel="noopener noreferrer" class="qp-review-banner">
+            <img src="https://img.youtube.com/vi/${escAttr(vidId)}/mqdefault.jpg" class="qp-review-thumb" alt="Review ${escAttr(p.marca)} ${escAttr(p.modelo)}" loading="lazy">
             <div class="qp-review-cta">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               Análise completa
@@ -1509,7 +1663,7 @@
                 <span class="qp-card-badge ${badge.cls}">${badge.text}</span>
                 ${matchPill}
               </div>
-              <div class="qp-card-name"><span class="marca">${p.marca}</span> ${p.modelo}</div>
+              <div class="qp-card-name"><span class="marca">${escAttr(p.marca)}</span> ${escAttr(p.modelo)}</div>
             </div>
             ${priceHtml}
           </div>
@@ -1526,11 +1680,23 @@
       });
     }
 
+    // Event delegation pros botões de copiar cupom (substitui onclick inline = mais seguro contra XSS)
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.qp-coupon-copy');
+      if (btn && btn.dataset.code) copyCoupon(btn, btn.dataset.code);
+    });
+
     function scrollToQuestions() {
       document.querySelector('.qp-questions').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     function showResults() {
+      // Espera o overlay completar (fetch) antes de renderizar resultados.
+      // Quando overlay falha, a Promise resolve com null e usamos dados estáticos.
+      return (window.PRICES_OVERLAY_READY || Promise.resolve()).then(() => _showResultsInner());
+    }
+
+    function _showResultsInner() {
       const lux = parseFloat(document.getElementById('luxInput').value) || 0;
       const data = window.PROJETORES_DATA || [];
       const filtered = data.filter(p => passesFilter(p, answers));
@@ -1579,8 +1745,10 @@
       const sec = document.getElementById('resultsSection');
       sec.classList.add('visible');
       setTimeout(() => sec.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
-      const emailCap = document.getElementById('emailCapture');
-      if (emailCap) emailCap.style.display = '';
+      // Email capture desativado (10/05/2026) — sem estratégia de envio definida ainda.
+      // Pra reativar: descomentar as 2 linhas abaixo + voltar o style do <section id="emailCapture">.
+      // const emailCap = document.getElementById('emailCapture');
+      // if (emailCap) emailCap.style.display = '';
     }
   </script>
 

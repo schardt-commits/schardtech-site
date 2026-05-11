@@ -581,6 +581,57 @@
       line-height: 1.5;
     }
     .cp-pcard-price strong { color: var(--accent); font-size: 1rem; }
+    .cp-price-block {
+      margin-bottom: 16px;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+    .cp-price-current {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .cp-price-marketplace {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-left: 4px;
+    }
+    .cp-price-history {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .cp-price-meta {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .cp-price-meta strong {
+      color: var(--accent);
+      font-weight: 600;
+      padding: 1px 5px;
+      background: rgba(143, 211, 255, 0.08);
+      border-radius: 3px;
+    }
+    .cp-tag-importado {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 7px;
+      padding: 2px 8px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #FFAA32;
+      background: rgba(255, 170, 50, 0.15);
+      border-radius: 100px;
+      vertical-align: middle;
+    }
+    @media (max-width: 480px) {
+      .cp-price-current { font-size: 1.15rem; }
+      .cp-price-marketplace { display: block; margin-left: 0; margin-top: 2px; }
+    }
     .cp-store-btns { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
     .cp-store-btn {
       display: flex;
@@ -862,6 +913,7 @@
   </main>
 
   <script src="projetores-data.js"></script>
+  <script src="prices-overlay.js"></script>
   <script>
     /* ═══════════════════════════════════════════
        STATE
@@ -958,9 +1010,65 @@
 
     function fmtPrice(min, max) {
       if (!min && !max) return null;
-      const r = n => 'R$ ' + Number(n).toLocaleString('pt-BR');
-      if (min && max && min !== max) return `${r(min)} – ${r(max)}`;
+      const r = n => 'R$ ' + Math.round(Number(n)).toLocaleString('pt-BR');
+      if (min && max && Math.round(min) !== Math.round(max)) return `${r(min)} – ${r(max)}`;
       return r(min || max);
+    }
+
+    function fmtMarketplaceLabel(slug) {
+      // Retorna {label, prep} — preposição obedece o gênero do marketplace.
+      return ({
+        'aliexpress':    { label: 'AliExpress',    prep: 'no' },
+        'shopee':        { label: 'Shopee',        prep: 'na' },
+        'mercado_livre': { label: 'Mercado Livre', prep: 'no' },
+        'ml':            { label: 'Mercado Livre', prep: 'no' },
+        'amazon':        { label: 'Amazon',        prep: 'na' }
+      })[slug] || null;
+    }
+
+    function verifLabel(dataStr) {
+      if (!dataStr) return '';
+      const parsed = new Date(String(dataStr).replace(' ', 'T'));
+      if (isNaN(parsed)) return '';
+      const hoje = new Date();
+      const dia = (d) => Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
+      const diff = Math.floor((dia(hoje) - dia(parsed)) / 86400000);
+      if (diff <= 0) return 'verificado hoje';
+      if (diff === 1) return 'verificado ontem';
+      return `verificado há ${diff} dias`;
+    }
+
+    function priceHtmlRich(p) {
+      // Render expandido (preço atual + marketplace + min/max histórico) com
+      // dados do prices-overlay.js. Fallback pro display antigo quando overlay
+      // não trouxe dados (produto fora do prices.json mas com preço estático).
+      const r = n => 'R$ ' + Math.round(Number(n)).toLocaleString('pt-BR');
+      if (p.preco_atual) {
+        const mk   = fmtMarketplaceLabel(p.marketplace_vencedor);
+        const min  = p.preco_min_historico;
+        const max  = p.preco_max_historico;
+        const hist = (min && max && Math.round(min) !== Math.round(max))
+          ? `<div class="cp-price-history">min ${r(min)} · max ${r(max)}</div>`
+          : '';
+        const imp  = (p.status === 'importado')
+          ? `<span class="cp-tag-importado" title="Produto importado — pode ter ICMS e prazo de entrega maior">importado</span>`
+          : '';
+        const mkSpan = mk ? ` <span class="cp-price-marketplace">${mk.prep} ${mk.label}</span>` : '';
+        const venc = (p.marketplaces && p.marketplaces[p.marketplace_vencedor]) || {};
+        const cupomNoVencedor = venc.cupom || null;
+        const verif = verifLabel(p.data_verificacao);
+        const extras = [];
+        if (verif) extras.push(verif);
+        if (cupomNoVencedor) extras.push(`com cupom <strong>${cupomNoVencedor}</strong>`);
+        const extraLine = extras.length ? `<div class="cp-price-meta">${extras.join(' · ')}</div>` : '';
+        return `<div class="cp-price-block">
+          <div class="cp-price-current">${r(p.preco_atual)}${mkSpan}${imp}</div>
+          ${extraLine}
+          ${hist}
+        </div>`;
+      }
+      const faixa = fmtPrice(p.preco_min, p.preco_max);
+      return faixa ? `<div class="cp-pcard-price">Faixa: <strong>${faixa}</strong></div>` : '';
     }
 
     function hexRgb(h) {
@@ -1387,7 +1495,7 @@
       const EXT = `<svg class="cp-ext-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
 
       document.getElementById('purchaseGrid').innerHTML = projs.map((p,i) => {
-        const price = fmtPrice(p.preco_min, p.preco_max);
+        const priceBlock = priceHtmlRich(p);
         const stores = [];
         if (safeUrl(p.amazon_url)) stores.push(`<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-amazon"><span>Amazon</span>${EXT}</a>`);
         if (safeUrl(p.ml_url))     stores.push(`<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-ml"><span>Mercado Livre</span>${EXT}</a>`);
@@ -1401,7 +1509,7 @@
         return `<div class="cp-pcard" data-slot="${i}">
           <div class="cp-pcard-brand">${escAttr(p.marca)}</div>
           <div class="cp-pcard-model">${escAttr(p.modelo)}</div>
-          ${price ? `<div class="cp-pcard-price">Faixa: <strong>${price}</strong></div>` : ''}
+          ${priceBlock}
           <div class="cp-store-btns">
             ${stores.length ? stores.join('') : '<span class="cp-no-links">Sem links disponíveis ainda</span>'}
           </div>
@@ -1433,7 +1541,7 @@
             <div class="cp-slot-add-text">Adicionar projetor</div>
             <div class="cp-slot-add-hint">${hints[i]}</div>
           </div>`;
-        const price = fmtPrice(p.preco_min, p.preco_max);
+        const price = fmtPrice(p.preco_atual || p.preco_min, null);
         return `
           <div class="cp-slot filled" data-slot="${i}">
             <div class="cp-slot-color-bar"></div>
@@ -1523,7 +1631,7 @@
 
       list.innerHTML = filtered.map(p => {
         const already = taken.includes(p.modelo);
-        const price   = fmtPrice(p.preco_min, p.preco_max);
+        const price   = fmtPrice(p.preco_atual || p.preco_min, null);
         return `<div class="cp-modal-item${already?' already-selected':''}" data-modelo="${escAttr(p.modelo)}"${already ? '' : ' role="button" tabindex="0"'}>
           <div>
             <div class="cp-modal-item-name">${escAttr(p.marca)} ${escAttr(p.modelo)}</div>
@@ -1656,8 +1764,13 @@
       if (btn) copyText(btn.dataset.code, 'Cupom copiado!');
     });
 
-    loadFromUrl();
-    renderAll();
+    // Espera o overlay de preços (data/prices.json) antes do primeiro render.
+    // Se o overlay falhar, a Promise resolve com null e o site renderiza com dados
+    // estáticos antigos de projetores-data.js — backward-compat garantido.
+    (window.PRICES_OVERLAY_READY || Promise.resolve()).then(() => {
+      loadFromUrl();
+      renderAll();
+    });
   </script>
 
   <footer>
