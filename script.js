@@ -9,25 +9,6 @@
 // ============================================================
 const projectors = [
   {
-    id: 'wanbo-davinci-1',
-    name: 'Wanbo Davinci 1',
-    price: 1100,
-    resolution: '1080p',
-    lumens: 490,
-    inputLag: 55,
-    support4k: false,
-    sealedOptics: true,
-    battery: false,
-    batteryMah: null,
-    audio: '2x8W + Sub',
-    system: 'Android',
-    type: 'LED/LCD',
-    mlLink: 'https://www.mercadolivre.com.br/projetor-wanbo-davinci-1-prateado/up/MLBU3897184750',
-    videoId: 'Xcte5PhoouI',
-    available: true,
-    image: 'https://http2.mlstatic.com/D_NQ_NP_2X_646224-MLB104255117174_012026-F.webp'
-  },
-  {
     id: 'voxflix-vf71',
     name: 'Voxflix VF71',
     price: 850,
