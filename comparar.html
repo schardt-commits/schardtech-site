@@ -1496,11 +1496,14 @@
 
       document.getElementById('purchaseGrid').innerHTML = projs.map((p,i) => {
         const priceBlock = priceHtmlRich(p);
-        const stores = [];
-        if (safeUrl(p.amazon_url)) stores.push(`<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-amazon"><span>Amazon</span>${EXT}</a>`);
-        if (safeUrl(p.ml_url))     stores.push(`<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-ml"><span>Mercado Livre</span>${EXT}</a>`);
-        if (safeUrl(p.shopee_url)) stores.push(`<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-shopee"><span>Shopee</span>${EXT}</a>`);
-        if (safeUrl(p.ali_url))    stores.push(`<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-ali"><span>AliExpress</span>${EXT}</a>`);
+        const mk = p.marketplaces || {};
+        const storesData = [];
+        if (safeUrl(p.amazon_url)) storesData.push({ preco: mk.amazon?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-amazon"><span>Amazon</span>${EXT}</a>` });
+        if (safeUrl(p.ml_url))     storesData.push({ preco: mk.ml?.preco         ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-ml"><span>Mercado Livre</span>${EXT}</a>` });
+        if (safeUrl(p.shopee_url)) storesData.push({ preco: mk.shopee?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-shopee"><span>Shopee</span>${EXT}</a>` });
+        if (safeUrl(p.ali_url))    storesData.push({ preco: mk.aliexpress?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-ali"><span>AliExpress</span>${EXT}</a>` });
+        storesData.sort((a, b) => a.preco - b.preco);
+        const stores = storesData.map(s => s.html);
 
         const cupons = [];
         if (p.ali_cupom_loja)  cupons.push({label:'Cupom loja AliExpress', code:p.ali_cupom_loja});

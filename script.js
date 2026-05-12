@@ -28,25 +28,6 @@ const projectors = [
     image: 'https://http2.mlstatic.com/D_NQ_NP_2X_920630-MLB104799973149_012026-F.webp'
   },
   {
-    id: 'jenovox-m5000-mini',
-    name: 'Jenovox M5000 Mini',
-    price: 1600,
-    resolution: '1080p',
-    lumens: 460,
-    inputLag: 65,
-    support4k: false,
-    sealedOptics: true,
-    battery: true,
-    batteryMah: 9000,
-    audio: '2x3W',
-    system: 'Android',
-    type: 'DLP/4LED',
-    mlLink: 'https://www.mercadolivre.com.br/projetor-jenovox-m5000-mini-dlp-1080p-bateria/up/MLBU3897195378?pdp_filters=item_id:MLB4595015173',
-    videoId: 'as4btwnIWHw',
-    available: true,
-    image: 'https://http2.mlstatic.com/D_NQ_NP_2X_898206-MLB110224806917_042026-F.webp'
-  },
-  {
     id: 'wanbo-vali-1',
     name: 'Wanbo Vali 1',
     price: 1500,

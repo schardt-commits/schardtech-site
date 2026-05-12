@@ -1619,11 +1619,14 @@
       }
       if (p.uso_continuo)         specs.push(`<div class="qp-spec"><span class="qp-spec-label">Uso contínuo</span><span class="qp-spec-value">${p.uso_continuo}</span></div>`);
 
-      const stores = [];
-      if (safeUrl(p.ali_url))    stores.push(`<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="noopener noreferrer" class="qp-store-btn ali"><span class="store-dot"></span>AliExpress</a>`);
-      if (safeUrl(p.ml_url))     stores.push(`<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="noopener noreferrer" class="qp-store-btn ml"><span class="store-dot"></span>Mercado Livre</a>`);
-      if (safeUrl(p.shopee_url)) stores.push(`<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="noopener noreferrer" class="qp-store-btn shopee"><span class="store-dot"></span>Shopee</a>`);
-      if (safeUrl(p.amazon_url)) stores.push(`<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="noopener noreferrer" class="qp-store-btn amazon"><span class="store-dot"></span>Amazon</a>`);
+      const mkts = p.marketplaces || {};
+      const storesData = [];
+      if (safeUrl(p.ali_url))    storesData.push({ preco: mkts.aliexpress?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="noopener noreferrer" class="qp-store-btn ali"><span class="store-dot"></span>AliExpress</a>` });
+      if (safeUrl(p.ml_url))     storesData.push({ preco: mkts.ml?.preco         ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="noopener noreferrer" class="qp-store-btn ml"><span class="store-dot"></span>Mercado Livre</a>` });
+      if (safeUrl(p.shopee_url)) storesData.push({ preco: mkts.shopee?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="noopener noreferrer" class="qp-store-btn shopee"><span class="store-dot"></span>Shopee</a>` });
+      if (safeUrl(p.amazon_url)) storesData.push({ preco: mkts.amazon?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="noopener noreferrer" class="qp-store-btn amazon"><span class="store-dot"></span>Amazon</a>` });
+      storesData.sort((a, b) => a.preco - b.preco);
+      const stores = storesData.map(s => s.html);
 
       const coupons = [];
       if (p.ali_cupom_loja)  coupons.push({ label: 'Cupom loja AliExpress',      code: p.ali_cupom_loja });
