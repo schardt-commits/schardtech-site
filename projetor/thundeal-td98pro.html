@@ -115,13 +115,26 @@
     .proj-cta-card h4 { font-size: 1rem; margin-bottom: 6px; }
     .proj-cta-card p { font-size: 0.85rem; color: var(--text-muted); }
 
-    /* ---- Acessórios recomendados ---- */
+    /* ---- Acessórios indicados ---- */
+    .acc-cat { margin-top: 22px; }
+    .acc-cat:first-of-type { margin-top: 4px; }
+    .acc-cat-label {
+      font-size: 0.74rem;
+      color: var(--primary);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
     .acc-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
     }
     .acc-card {
+      position: relative;
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -139,27 +152,28 @@
     }
     .acc-card.destaque {
       border-color: rgba(143,211,255,0.42);
-      box-shadow: 0 0 16px rgba(143,211,255,0.15);
+      box-shadow: 0 0 14px rgba(143,211,255,0.18);
     }
     .acc-card.destaque::before {
-      content: '★ Destaque';
+      content: '★ Indicado';
       display: inline-block;
       position: absolute;
-      margin: 10px;
-      padding: 3px 9px;
-      background: rgba(143,211,255,0.18);
+      top: 8px;
+      left: 8px;
+      padding: 3px 8px;
+      background: rgba(143,211,255,0.22);
       color: var(--accent);
       border-radius: 999px;
-      font-size: 0.66rem;
+      font-size: 0.62rem;
       font-weight: 700;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       z-index: 2;
+      backdrop-filter: blur(8px);
     }
     .acc-card-img {
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 1 / 1;
       overflow: hidden;
       background: rgba(0,0,0,0.3);
-      position: relative;
     }
     .acc-card-img img {
       width: 100%;
@@ -167,28 +181,22 @@
       object-fit: cover;
       transition: transform 0.4s ease;
     }
-    .acc-card:hover .acc-card-img img { transform: scale(1.04); }
-    .acc-card-body { padding: 14px 16px; }
-    .acc-card-type {
-      font-size: 0.7rem;
-      color: var(--primary);
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
+    .acc-card:hover .acc-card-img img { transform: scale(1.05); }
+    .acc-card-body { padding: 10px 12px 12px; }
     .acc-card h4 {
-      font-size: 0.95rem;
+      font-size: 0.86rem;
       font-weight: 600;
-      margin-bottom: 4px;
+      margin: 0 0 4px;
       line-height: 1.3;
     }
     .acc-card p {
-      font-size: 0.82rem;
+      font-size: 0.74rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.45;
       margin: 0;
     }
+
+
 
   </style>
 </head>
@@ -321,6 +329,85 @@
 
     <section class="proj-section">
       <div class="container">
+        <h2 class="section-title">Acessórios indicados para ThundeaL TD98 PRO</h2>
+        <p class="section-sub">Itens que se encaixam bem com o uso desse modelo.</p>
+
+        <div class="acc-cat">
+          <div class="acc-cat-label">Telas</div>
+          <div class="acc-grid">
+            <a href="../acessorios/tela-eletrica-retratil-globalstock.html" class="acc-card">
+              <div class="acc-card-img"><img src="../img/acessorios/tela-eletrica-retratil-globalstock-1.webp" alt="Tela Elétrica Retrátil" loading="lazy"></div>
+              <div class="acc-card-body">
+                <h4>Tela Elétrica Retrátil</h4>
+                <p>Motorizada — pra projetores potentes (≥700 ANSI)</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="acc-cat">
+          <div class="acc-cat-label">Suportes & instalação</div>
+          <div class="acc-grid">
+            <a href="../acessorios/tripe-fotografico-2-8m-inox.html" class="acc-card">
+              <div class="acc-card-img"><img src="../img/acessorios/tripe-fotografico-2-8m-inox-1.jpg" alt="Tripé Fotográfico 2,8m" loading="lazy"></div>
+              <div class="acc-card-body">
+                <h4>Tripé Fotográfico 2,8m</h4>
+                <p>Até 2,8m, aço inox — estável pra qualquer projetor</p>
+              </div>
+            </a>
+            <a href="../acessorios/suporte-supratick-25kg.html" class="acc-card">
+              <div class="acc-card-img"><img src="../img/acessorios/suporte-supratick-25kg-1.jpg" alt="Suporte Premium Supratick" loading="lazy"></div>
+              <div class="acc-card-body">
+                <h4>Suporte Premium Supratick</h4>
+                <p>4 pontos, até 25kg — pra projetores pesados</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="acc-cat">
+          <div class="acc-cat-label">TV Box & sticks</div>
+          <div class="acc-grid">
+            <a href="../acessorios/fire-tv-stick-hd.html" class="acc-card">
+              <div class="acc-card-img"><img src="../img/acessorios/fire-tv-stick-hd-1.jpg" alt="Fire TV Stick HD" loading="lazy"></div>
+              <div class="acc-card-body">
+                <h4>Fire TV Stick HD</h4>
+                <p>HD da Amazon — econômico, ideal sem 4K HDMI</p>
+              </div>
+            </a>
+            <a href="../acessorios/fire-tv-stick-4k.html" class="acc-card">
+              <div class="acc-card-img"><img src="../img/acessorios/fire-tv-stick-4k-1.jpg" alt="Fire TV Stick 4K" loading="lazy"></div>
+              <div class="acc-card-body">
+                <h4>Fire TV Stick 4K</h4>
+                <p>4K com Wi-Fi 6 — pra extrair o máximo do 4K HDMI</p>
+              </div>
+            </a>
+            <a href="../acessorios/chromecast-hd-google-tv.html" class="acc-card">
+              <div class="acc-card-img"><img src="../img/acessorios/chromecast-hd-google-tv-1.jpg" alt="Chromecast HD" loading="lazy"></div>
+              <div class="acc-card-body">
+                <h4>Chromecast HD</h4>
+                <p>Google TV nativo em HD</p>
+              </div>
+            </a>
+            <a href="../acessorios/xiaomi-mi-box-s-4k.html" class="acc-card">
+              <div class="acc-card-img"><img src="../img/acessorios/xiaomi-mi-box-s-4k-1.jpg" alt="Xiaomi Mi Box S 4K" loading="lazy"></div>
+              <div class="acc-card-body">
+                <h4>Xiaomi Mi Box S 4K</h4>
+                <p>Box Android TV 4K — mais potente pra apps pesados</p>
+              </div>
+            </a>
+            <a href="../acessorios/xiaomi-mi-tv-stick-4k.html" class="acc-card">
+              <div class="acc-card-img"><img src="../img/acessorios/xiaomi-mi-tv-stick-4k-1.jpg" alt="Xiaomi Mi TV Stick 4K" loading="lazy"></div>
+              <div class="acc-card-body">
+                <h4>Xiaomi Mi TV Stick 4K</h4>
+                <p>Stick Android TV 4K — compacto e versátil</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proj-section">
+      <div class="container">
         <h2 class="section-title">Histórico de preço</h2>
         <p class="section-sub">Preços coletados automaticamente, comparando AliExpress e Shopee.</p>
 
@@ -436,79 +523,6 @@
       </div>
     </section>
 
-    <section class="proj-section">
-      <div class="container">
-        <h2 class="section-title">Acessórios que combinam com esse projetor</h2>
-        <p class="section-sub">Itens testados aqui no canal que se encaixam bem com o uso desse modelo.</p>
-
-        <div class="acc-grid">
-          <a href="../acessorios/tripe-fotografico-2-8m-inox.html" class="acc-card" style="position:relative;">
-            <div class="acc-card-img"><img src="../img/acessorios/tripe-fotografico-2-8m-inox-1.jpg" alt="Tripé Fotográfico 2,8m Aço Inox" loading="lazy"></div>
-            <div class="acc-card-body">
-              <div class="acc-card-type">Tripé</div>
-              <h4>Tripé Fotográfico 2,8m Aço Inox</h4>
-              <p>Até 2,8m de altura — robusto e estável pra qualquer projetor</p>
-            </div>
-          </a>
-          <a href="../acessorios/suporte-supratick-25kg.html" class="acc-card" style="position:relative;">
-            <div class="acc-card-img"><img src="../img/acessorios/suporte-supratick-25kg-1.jpg" alt="Suporte Premium Supratick" loading="lazy"></div>
-            <div class="acc-card-body">
-              <div class="acc-card-type">Suporte de teto</div>
-              <h4>Suporte Premium Supratick</h4>
-              <p>4 pontos premium, suporta até 25 kg — pra projetores pesados</p>
-            </div>
-          </a>
-          <a href="../acessorios/fire-tv-stick-hd.html" class="acc-card" style="position:relative;">
-            <div class="acc-card-img"><img src="../img/acessorios/fire-tv-stick-hd-1.jpg" alt="Fire TV Stick HD" loading="lazy"></div>
-            <div class="acc-card-body">
-              <div class="acc-card-type">Stick / TV Box</div>
-              <h4>Fire TV Stick HD</h4>
-              <p>Versão HD da Amazon — econômica, ideal pra projetor sem 4K</p>
-            </div>
-          </a>
-          <a href="../acessorios/fire-tv-stick-4k.html" class="acc-card" style="position:relative;">
-            <div class="acc-card-img"><img src="../img/acessorios/fire-tv-stick-4k-1.jpg" alt="Fire TV Stick 4K" loading="lazy"></div>
-            <div class="acc-card-body">
-              <div class="acc-card-type">Stick / TV Box</div>
-              <h4>Fire TV Stick 4K</h4>
-              <p>4K com Wi-Fi 6 — pra extrair o máximo de quem suporta 4K HDMI</p>
-            </div>
-          </a>
-          <a href="../acessorios/chromecast-hd-google-tv.html" class="acc-card" style="position:relative;">
-            <div class="acc-card-img"><img src="../img/acessorios/chromecast-hd-google-tv-1.jpg" alt="Chromecast HD com Google TV" loading="lazy"></div>
-            <div class="acc-card-body">
-              <div class="acc-card-type">Stick / TV Box</div>
-              <h4>Chromecast HD com Google TV</h4>
-              <p>Versão HD do Chromecast — Google TV nativo</p>
-            </div>
-          </a>
-          <a href="../acessorios/xiaomi-mi-box-s-4k.html" class="acc-card" style="position:relative;">
-            <div class="acc-card-img"><img src="../img/acessorios/xiaomi-mi-box-s-4k-1.jpg" alt="Xiaomi Mi Box S 4K" loading="lazy"></div>
-            <div class="acc-card-body">
-              <div class="acc-card-type">Stick / TV Box</div>
-              <h4>Xiaomi Mi Box S 4K</h4>
-              <p>Box Android TV 4K — mais potente pra apps pesados</p>
-            </div>
-          </a>
-          <a href="../acessorios/xiaomi-mi-tv-stick-4k.html" class="acc-card" style="position:relative;">
-            <div class="acc-card-img"><img src="../img/acessorios/xiaomi-mi-tv-stick-4k-1.jpg" alt="Xiaomi Mi TV Stick 4K" loading="lazy"></div>
-            <div class="acc-card-body">
-              <div class="acc-card-type">Stick / TV Box</div>
-              <h4>Xiaomi Mi TV Stick 4K</h4>
-              <p>Stick Android TV 4K — compacto e versátil</p>
-            </div>
-          </a>
-          <a href="../acessorios/tela-eletrica-retratil-globalstock.html" class="acc-card" style="position:relative;">
-            <div class="acc-card-img"><img src="../img/acessorios/tela-eletrica-retratil-globalstock-1.jpg" alt="Tela Elétrica Retrátil" loading="lazy"></div>
-            <div class="acc-card-body">
-              <div class="acc-card-type">Tela</div>
-              <h4>Tela Elétrica Retrátil</h4>
-              <p>Motorizada, retrátil — pra projetores potentes (≥700 ANSI)</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
 
     <section class="proj-section">
       <div class="container">
