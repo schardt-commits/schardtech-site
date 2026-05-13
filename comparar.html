@@ -150,6 +150,43 @@
       margin-bottom: 4px;
     }
     .cp-slot-model { font-size: 1.05rem; font-weight: 700; color: var(--text); line-height: 1.2; }
+    /* Quando tem página individual, brand+model viram link */
+    a.cp-slot-name-link {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 4px;
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+      position: relative;
+    }
+    a.cp-slot-name-link:hover .cp-slot-model { color: var(--accent); }
+    a.cp-slot-name-link .cp-slot-link-arrow {
+      position: absolute;
+      top: 0;
+      right: -20px;
+      opacity: 0;
+      transform: translate(-4px, 0);
+      transition: opacity 0.18s ease, transform 0.18s ease;
+      color: var(--primary);
+    }
+    a.cp-slot-name-link:hover .cp-slot-link-arrow {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    /* hint sutil de "tem página" pro user descobrir */
+    a.cp-slot-name-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 22px;
+      bottom: -2px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+    a.cp-slot-name-link:hover::after { opacity: 0.4; }
     .cp-slot-remove {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.1);
@@ -574,6 +611,31 @@
       margin-bottom: 14px;
       line-height: 1.2;
     }
+    /* Brand+model viram link no purchase card quando tem página individual */
+    a.cp-pcard-name-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      margin-bottom: 14px;
+      transition: color 0.15s ease;
+      position: relative;
+    }
+    a.cp-pcard-name-link .cp-pcard-brand,
+    a.cp-pcard-name-link .cp-pcard-model { margin-bottom: 4px; }
+    a.cp-pcard-name-link .cp-pcard-model { margin-bottom: 0; }
+    a.cp-pcard-name-link:hover .cp-pcard-model { color: var(--accent); }
+    a.cp-pcard-name-link .cp-pcard-link-arrow {
+      position: absolute;
+      top: 2px;
+      right: 0;
+      color: var(--primary);
+      opacity: 0.45;
+      transition: opacity 0.18s ease, transform 0.18s ease;
+    }
+    a.cp-pcard-name-link:hover .cp-pcard-link-arrow {
+      opacity: 1;
+      transform: translate(2px, -2px);
+    }
     .cp-pcard-price {
       font-size: 0.78rem;
       color: var(--text-muted);
@@ -915,6 +977,7 @@
 
   <script src="projetores-data.js"></script>
   <script src="prices-overlay.js"></script>
+  <script src="search-global.js" defer></script>
   <script>
     /* ═══════════════════════════════════════════
        STATE
@@ -1510,9 +1573,17 @@
         if (p.ali_cupom_loja)  cupons.push({label:'Cupom loja AliExpress', code:p.ali_cupom_loja});
         if (p.ali_cupom_promo) cupons.push({label:'Cupom promoção',        code:p.ali_cupom_promo});
 
+        const nameBlock = p.slug
+          ? `<a class="cp-pcard-name-link" href="${(window.SITE_BASE_PATH || '')}projetor/${escAttr(p.slug)}.html" aria-label="Ver página completa do ${escAttr(p.marca)} ${escAttr(p.modelo)}">
+              <div class="cp-pcard-brand">${escAttr(p.marca)}</div>
+              <div class="cp-pcard-model">${escAttr(p.modelo)}</div>
+              <svg class="cp-pcard-link-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>`
+          : `<div class="cp-pcard-brand">${escAttr(p.marca)}</div>
+             <div class="cp-pcard-model">${escAttr(p.modelo)}</div>`;
+
         return `<div class="cp-pcard" data-slot="${i}">
-          <div class="cp-pcard-brand">${escAttr(p.marca)}</div>
-          <div class="cp-pcard-model">${escAttr(p.modelo)}</div>
+          ${nameBlock}
           ${priceBlock}
           <div class="cp-store-btns">
             ${stores.length ? stores.join('') : '<span class="cp-no-links">Sem links disponíveis ainda</span>'}
@@ -1551,10 +1622,17 @@
             <div class="cp-slot-color-bar"></div>
             <div class="cp-slot-inner">
               <div class="cp-slot-top">
-                <div>
-                  <div class="cp-slot-brand">${p.marca}</div>
-                  <div class="cp-slot-model">${p.modelo}</div>
-                </div>
+                ${p.slug
+                  ? `<a class="cp-slot-name-link" href="${(window.SITE_BASE_PATH || '')}projetor/${escAttr(p.slug)}.html" aria-label="Ver página completa do ${escAttr(p.marca)} ${escAttr(p.modelo)}">
+                      <div class="cp-slot-brand">${p.marca}</div>
+                      <div class="cp-slot-model">${p.modelo}</div>
+                      <svg class="cp-slot-link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+                    </a>`
+                  : `<div>
+                      <div class="cp-slot-brand">${p.marca}</div>
+                      <div class="cp-slot-model">${p.modelo}</div>
+                    </div>`
+                }
                 <button class="cp-slot-remove" onclick="event.stopPropagation();removeProj(${i})" title="Remover">×</button>
               </div>
               <div class="cp-slot-tags">

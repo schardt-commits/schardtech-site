@@ -487,6 +487,28 @@
       line-height: 1.2;
     }
     .qp-card-name .marca { color: var(--text-muted); font-weight: 500; }
+    /* Quando tem página individual, o nome vira link */
+    a.qp-card-name {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    a.qp-card-name:hover { color: var(--accent); }
+    a.qp-card-name:hover .marca { color: var(--text); }
+    a.qp-card-name .qp-card-name-arrow {
+      opacity: 0;
+      transform: translate(-4px, 0);
+      transition: opacity 0.18s ease, transform 0.18s ease;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    a.qp-card-name:hover .qp-card-name-arrow {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
 
     .qp-card-price { text-align: right; flex-shrink: 0; }
     .qp-card-price-range {
@@ -1010,6 +1032,7 @@
 
   <script src="projetores-data.js"></script>
   <script src="prices-overlay.js"></script>
+  <script src="search-global.js" defer></script>
   <script>
     // Helpers de escape pra defender contra XSS quando dados vierem de fora.
     // Hoje os dados são controlados pelo dono do site, mas se a planilha mãe passar
@@ -1668,7 +1691,10 @@
                 <span class="qp-card-badge ${badge.cls}">${badge.text}</span>
                 ${matchPill}
               </div>
-              <div class="qp-card-name"><span class="marca">${escAttr(p.marca)}</span> ${escAttr(p.modelo)}</div>
+              ${p.slug
+                ? `<a class="qp-card-name" href="${(window.SITE_BASE_PATH || '')}projetor/${escAttr(p.slug)}.html" aria-label="Ver página completa do ${escAttr(p.marca)} ${escAttr(p.modelo)}"><span><span class="marca">${escAttr(p.marca)}</span> ${escAttr(p.modelo)}</span><svg class="qp-card-name-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>`
+                : `<div class="qp-card-name"><span class="marca">${escAttr(p.marca)}</span> ${escAttr(p.modelo)}</div>`
+              }
             </div>
             ${priceHtml}
           </div>
