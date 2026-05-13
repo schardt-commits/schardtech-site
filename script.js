@@ -250,15 +250,17 @@ function initMobileMenu() {
 
   btn.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
+    btn.classList.toggle('active', open);
+    btn.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('menu-open', open);
   });
 
   nav.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
+      btn.classList.remove('active');
       btn.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      document.body.classList.remove('menu-open');
     });
   });
 }

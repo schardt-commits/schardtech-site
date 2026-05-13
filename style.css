@@ -1210,15 +1210,28 @@ input:focus-visible,
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(11, 11, 11, 0.97);
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: #0B0B0B;
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     align-items: center;
     justify-content: center;
     gap: 36px;
-    z-index: 999;
+    z-index: 1500;
+    padding: 80px 24px;
+    overflow-y: auto;
   }
-  #mainNav.open .nav-link { font-size: 1.4rem; font-weight: 600; }
+  #mainNav.open .nav-link { font-size: 1.4rem; font-weight: 600; color: var(--text); }
+  #mainNav.open .nav-link::after { display: none; }
+  /* Botão do hambúrguer fica acima do menu pra poder fechar */
+  .mobile-menu-btn { position: relative; z-index: 1600; }
+  .mobile-menu-btn.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
+  .mobile-menu-btn.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  body.menu-open { overflow: hidden; }
   .projectors-grid { grid-template-columns: 1fr; }
   .videos-grid { grid-template-columns: 1fr; }
   .authority-grid { flex-direction: column; gap: 0; }

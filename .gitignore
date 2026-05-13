@@ -1,0 +1,12 @@
+# Dev local apenas
+serve_nocache.py
+
+# Backups de dados
+data/*.bak*
+*.bak*
+
+# Caches
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
