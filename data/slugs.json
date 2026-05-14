@@ -1,6 +1,11 @@
 {
   "_obs": "Mapeia 'marca|modelo' do prices.json para o slug da página individual em /projetor/{slug}.html. Editar manualmente quando criar nova página. Carregado por prices-overlay.js e injeta o campo proj.slug em window.PROJETORES_DATA.",
+  "Bettdow|AC1041": "bettdow-ac1041",
+  "Bettdow|AC1060": "bettdow-ac1060",
+  "Bettdow|AC1061": "bettdow-ac1061",
+  "Bettdow|AC1066": "bettdow-ac1066",
   "Bettdow|AC1071": "bettdow-ac1071",
+  "Bettdow|AC1073": "bettdow-ac1073",
   "Bettdow|AC1079": "bettdow-ac1079",
   "Bettdow|AC1080": "bettdow-ac1080",
   "Bettdow|AC1082": "bettdow-ac1082",
@@ -12,9 +17,14 @@
   "FlixTone|D9W Mini": "flixtone-d9w-mini",
   "FlixTone|D9W Ultra": "flixtone-d9w-ultra",
   "Magcubic|HY320 NTV": "magcubic-hy320-ntv",
+  "Magcubic|HY350 MAX": "magcubic-hy350-max",
   "Magcubic|HY450": "magcubic-hy450",
+  "Magcubic|HY450C": "magcubic-hy450c",
   "Magcubic|L018": "magcubic-l018",
+  "Thundeal|TD80PRO": "thundeal-td80pro",
+  "Thundeal|TD80W": "thundeal-td80w",
   "Thundeal|TD98PRO": "thundeal-td98pro",
   "Touyinger|Q13W": "touyinger-q13w",
-  "Vevshao|A22": "vevshao-a22"
+  "Vevshao|A22": "vevshao-a22",
+  "Vevshao|V60": "vevshao-v60"
 }
