@@ -1099,7 +1099,8 @@ window.PROJETORES_DATA = [
     "armazenamento_gb": 32,
     "status": "nacional",
     "link_importado": "",
-    "bolsa": ""
+    "bolsa": "",
+    "descontinuado": true
   },
   {
     "marca": "Horlat",

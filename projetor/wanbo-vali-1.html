@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wanbo Vali 1 — Análise completa, Android 11 homologado com base angular 200° | SchardTech</title>
   <meta name="description" content="Análise completa do Wanbo Vali 1: LCD 1080p, ~500 ANSI, Android 11 homologado, ótica selada com lentes de vidro, base com angulação 200°, ASA 3.0 com autofoco e desvio de obstáculo, controle Bluetooth e estoque nacional. Prós, contras e histórico de preço.">
+  <link rel="canonical" href="https://schardtech.com.br/projetor/wanbo-vali-1.html">
+  <!-- og:patched-2026-05-14 -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="SchardTech">
+  <meta property="og:title" content="Wanbo Vali 1 — Análise completa, Android 11 homologado com base angular 200° | SchardTech">
+  <meta property="og:description" content="Análise completa do Wanbo Vali 1: LCD 1080p, ~500 ANSI, Android 11 homologado, ótica selada com lentes de vidro, base com angulação 200°, ASA 3.0 com autofoco e desvio de obstáculo, controle Bluetooth e estoque nacional. Prós, contras e histórico de preço.">
+  <meta property="og:url" content="https://schardtech.com.br/projetor/wanbo-vali-1.html">
+  <meta property="og:image" content="https://img.youtube.com/vi/L_0ajiDrnUI/maxresdefault.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wanbo Vali 1 — Análise completa, Android 11 homologado com base angular 200° | SchardTech">
+  <meta name="twitter:description" content="Análise completa do Wanbo Vali 1: LCD 1080p, ~500 ANSI, Android 11 homologado, ótica selada com lentes de vidro, base com angulação 200°, ASA 3.0 com autofoco e desvio de obstáculo, controle Bluetooth e estoque nacional. Prós, contras e histórico de preço.">
+  <meta name="twitter:image" content="https://img.youtube.com/vi/L_0ajiDrnUI/maxresdefault.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -125,6 +138,31 @@
     .acc-card-body { padding: 10px 12px 12px; }
     .acc-card h4 { font-size: 0.86rem; font-weight: 600; margin: 0 0 4px; line-height: 1.3; }
     .acc-card p { font-size: 0.74rem; color: var(--text-muted); line-height: 1.45; margin: 0; }
+
+    /* mobile-patched-2026-05-14 */
+    /* mobile-v2-patched-2026-05-14 */
+    .proj-breadcrumb { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    @media (max-width: 480px) {
+      .proj-coupon { flex-direction: column; align-items: stretch; gap: 10px; }
+      .proj-coupon .copy-btn { width: 100%; }
+      .copy-btn { min-height: 44px; padding: 10px 14px; font-size: 0.86rem; }
+      .proj-store-btn { min-height: 48px; padding: 14px 16px; }
+      .proj-breadcrumb { word-break: break-word; white-space: normal; }
+      .specs-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 400px) {
+      .chart-canvas-wrap { height: 180px; }
+      .mobile-menu-btn { width: 32px; height: 32px; }
+    }
+    @media (max-width: 360px) {
+      .videos-grid { grid-template-columns: 1fr; }
+      .specs-grid { grid-template-columns: 1fr; }
+    }
+    @supports not (aspect-ratio: 16 / 9) {
+      .video-card iframe { height: 0; padding-bottom: 56.25%; }
+      .proj-video-wrap { padding-top: 56.25%; height: 0; }
+      .proj-video-wrap iframe { position: absolute; top: 0; left: 0; }
+    }
   </style>
 </head>
 <body>
@@ -175,22 +213,22 @@
               allowfullscreen></iframe>
           </div>
 
-          <div class="proj-price-card">
+          <div class="proj-price-card" data-marca="Wanbo" data-modelo="Vali 1">
             <div class="proj-price-label">Melhor preço hoje</div>
             <div>
-              <span class="proj-price-value">R$ 1.638<span class="proj-price-cents">,68</span></span>
+              <span class="proj-price-value" id="projPriceValue">R$ 1.638<span class="proj-price-cents">,68</span></span>
             </div>
-            <div class="proj-price-meta">
+            <div class="proj-price-meta" id="projPriceMeta">
               Verificado em 12/05/2026 · Mercado Livre, loja oficial Wanbo
             </div>
 
-            <div class="proj-store-btns">
+            <div class="proj-store-btns" id="projStoreBtns">
               <a href="https://meli.la/1MJxNGD" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn">
                 <span class="store-name">🛒 Mercado Livre</span>
                 <span class="store-price">Ver preço</span>
               </a>
             </div>
-
+            <div id="projCupomSlot"></div>
             <p style="font-size:0.74rem;color:var(--text-muted);margin-top:10px;line-height:1.5;">
               Estoque nacional pela loja oficial da Wanbo no Mercado Livre.
             </p>
@@ -563,9 +601,104 @@
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initPriceChart);
     else initPriceChart();
   </script>
-  <!-- Busca global de projetores -->
+  <!-- overlay-patched-2026-05-14 -->
+  <!-- Header mobile menu + busca global de projetores -->
+  <script src="../script.js" defer></script>
   <script src="../projetores-data.js" defer></script>
   <script src="../prices-overlay.js" defer></script>
   <script src="../search-global.js" defer></script>
+  <!-- Overlay de preço/links/cupom do prices.json (mantém card do hero sincronizado) -->
+  <script>
+    (function applyHeroOverlay() {
+      function fmtBRL(v) {
+        if (v == null) return null;
+        return Number(v).toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+      }
+      function mkLabel(mk) {
+        return ({aliexpress: 'AliExpress', shopee: 'Shopee', ml: 'Mercado Livre', amazon: 'Amazon'})[mk] || mk;
+      }
+      function fmtData(s) {
+        if (!s) return null;
+        var m = String(s).match(/^(\d{4})-(\d{2})-(\d{2})/);
+        return m ? `${m[3]}/${m[2]}/${m[1]}` : s;
+      }
+      function norm(s) { return String(s||'').trim().toLowerCase(); }
+
+      function run() {
+        var card = document.querySelector('.proj-price-card');
+        if (!card) return;
+        var marca = card.dataset.marca, modelo = card.dataset.modelo;
+        if (!marca || !modelo) return;
+        var data = window.PROJETORES_DATA;
+        if (!Array.isArray(data)) return;
+        var key = norm(marca) + '|' + norm(modelo);
+        var p = data.find(function(x) { return norm(x.marca)+'|'+norm(x.modelo) === key; });
+        if (!p || !p.preco_atual) return;
+
+        // Atualiza preço principal
+        var brl = fmtBRL(p.preco_atual);
+        if (brl) {
+          var parts = brl.split(',');
+          var valEl = document.getElementById('projPriceValue');
+          if (valEl) valEl.innerHTML = 'R$ ' + parts[0] + '<span class="proj-price-cents">,' + parts[1] + '</span>';
+        }
+
+        // Meta: data + marketplace vencedor
+        var metaEl = document.getElementById('projPriceMeta');
+        if (metaEl) {
+          var partsMeta = [];
+          var d = fmtData(p.data_verificacao);
+          if (d) partsMeta.push('Verificado em ' + d);
+          if (p.marketplace_vencedor) partsMeta.push(mkLabel(p.marketplace_vencedor));
+          if (partsMeta.length) metaEl.textContent = partsMeta.join(' · ');
+        }
+
+        // Botões de loja: ordena por preço
+        var mkts = p.marketplaces || {};
+        var btns = [];
+        function btn(href, name, preco) {
+          var precoStr = preco ? 'R$ ' + Math.round(preco).toLocaleString('pt-BR') : 'Ver preço';
+          return '<a href="' + href + '" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn">' +
+                 '<span class="store-name">' + name + '</span>' +
+                 '<span class="store-price">' + precoStr + '</span></a>';
+        }
+        if (p.ali_url)    btns.push({preco: (mkts.aliexpress && mkts.aliexpress.preco) || Infinity, html: btn(p.ali_url, '🛍️ AliExpress', mkts.aliexpress && mkts.aliexpress.preco)});
+        if (p.shopee_url) btns.push({preco: (mkts.shopee     && mkts.shopee.preco)     || Infinity, html: btn(p.shopee_url, '🛒 Shopee', mkts.shopee && mkts.shopee.preco)});
+        if (p.ml_url)     btns.push({preco: (mkts.ml         && mkts.ml.preco)         || Infinity, html: btn(p.ml_url, '🛒 Mercado Livre', mkts.ml && mkts.ml.preco)});
+        if (btns.length) {
+          btns.sort(function(a,b) { return a.preco - b.preco; });
+          var slot = document.getElementById('projStoreBtns');
+          if (slot) slot.innerHTML = btns.map(function(b){return b.html;}).join('');
+        }
+
+        // Cupom: usa o do marketplace vencedor (se existir)
+        var venc = mkts[p.marketplace_vencedor] || {};
+        var cupom = venc.cupom || p.ali_cupom_loja;
+        if (cupom) {
+          var slot = document.getElementById('projCupomSlot');
+          if (slot) {
+            slot.innerHTML = '<div class="proj-coupon">' +
+              '<span>Cupom: <code>' + cupom + '</code></span>' +
+              '<button class="copy-btn" type="button">Copiar</button>' +
+              '</div>';
+            var b = slot.querySelector('.copy-btn');
+            if (b) b.addEventListener('click', function() {
+              navigator.clipboard.writeText(cupom);
+              b.textContent = 'Copiado!';
+              setTimeout(function() { b.textContent = 'Copiar'; }, 1800);
+            });
+          }
+        }
+      }
+
+      if (window.PRICES_OVERLAY_READY && typeof window.PRICES_OVERLAY_READY.then === 'function') {
+        window.PRICES_OVERLAY_READY.then(run).catch(function(){});
+      } else {
+        // Fallback: se overlay não carregou, espera DOMContentLoaded e tenta uma vez
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
+        else run();
+      }
+    })();
+  </script>
 </body>
 </html>
