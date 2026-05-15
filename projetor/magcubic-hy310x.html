@@ -722,15 +722,19 @@
         }
       }
 
-      if (window.PRICES_OVERLAY_READY && typeof window.PRICES_OVERLAY_READY.then === 'function') {
-        window.PRICES_OVERLAY_READY.then(run).catch(function(){});
-      } else {
-        // Fallback: se overlay não carregou, espera DOMContentLoaded e tenta uma vez
-        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run);
-        else run();
+      function waitAndRun() {
+        if (window.PRICES_OVERLAY_READY && typeof window.PRICES_OVERLAY_READY.then === 'function') {
+          window.PRICES_OVERLAY_READY.then(run).catch(function(){ run(); });
+        } else {
+          // Promise ainda não criada (defers nao rodaram). Polling curto.
+          setTimeout(waitAndRun, 50);
+        }
       }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', waitAndRun);
+      else waitAndRun();
     })();
   </script>
+  <!-- overlay-timing-fix-2026-05-14 -->
   <!-- chart-history-patched-2026-05-14 -->
   <!-- Substitui o gráfico hardcoded por dados reais do prices-history.json -->
   <script>
