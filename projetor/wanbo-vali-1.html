@@ -2,6 +2,15 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7738V0HHSF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7738V0HHSF');
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wanbo Vali 1 — Análise completa, Android 11 homologado com base angular 200° | SchardTech</title>
   <meta name="description" content="Análise completa do Wanbo Vali 1: LCD 1080p, ~500 ANSI, Android 11 homologado, ótica selada com lentes de vidro, base com angulação 200°, ASA 3.0 com autofoco e desvio de obstáculo, controle Bluetooth e estoque nacional. Prós, contras e histórico de preço.">
@@ -926,32 +935,34 @@
             '<div class="price-stat max"><div class="label">Máximo histórico</div><div class="val">' + fmtBRL(maior) + '</div></div>';
         }
 
-        // Atualiza banner status — usa MENOR preço do dia mais recente como 'atual'
+        // Atualiza banner status — compara com PREÇO MÉDIO (estatisticamente neutro)
         var statusEl = document.getElementById('priceStatus');
         if (statusEl) {
           var dataMaisRecente = '';
           pontos.forEach(function(p) { if (p.data > dataMaisRecente) dataMaisRecente = p.data.slice(0, 10); });
           var precosHoje = pontos.filter(function(p) { return p.data.slice(0, 10) === dataMaisRecente; }).map(function(p) { return p.preco; });
           var atual = precosHoje.length ? Math.min.apply(null, precosHoje) : pontos[pontos.length - 1].preco;
-          var distMin = ((atual - menor) / menor) * 100;
+          var precosArr = pontos.map(function(p) { return p.preco; });
+          var media = precosArr.reduce(function(a,b) { return a+b; }, 0) / precosArr.length;
+          var distMedia = ((atual - media) / media) * 100;
           var icon, classe, titulo, sub;
-          if (distMin <= 5) {
+          if (distMedia <= -3) {
             icon = '🟢'; classe = 'good';
-            titulo = 'Próximo do menor histórico';
-            sub = 'Atualmente em ' + fmtBRL(atual) + ' (a apenas ' + distMin.toFixed(0) + '% do mínimo já visto).';
-          } else if (distMin >= 25) {
-            icon = '🔴'; classe = 'bad';
-            titulo = 'Bem acima do mínimo histórico';
-            sub = 'Atualmente em ' + fmtBRL(atual) + ', ' + distMin.toFixed(0) + '% acima do mínimo já visto.';
-          } else {
+            titulo = Math.abs(Math.round(distMedia)) + '% abaixo da média histórica';
+            sub = 'Atualmente em ' + fmtBRL(atual) + '. Média histórica: ' + fmtBRL(media) + '.';
+          } else if (distMedia < 3) {
             icon = '🔵'; classe = 'neutral';
-            titulo = 'Preço próximo do médio';
-            sub = 'Atualmente em ' + fmtBRL(atual) + ', ' + distMin.toFixed(0) + '% acima do mínimo. ' + pontos.length + ' pontos coletados.';
+            titulo = 'Preço no patamar médio';
+            sub = 'Atualmente em ' + fmtBRL(atual) + '. Média histórica: ' + fmtBRL(media) + '.';
+          } else {
+            icon = '🔴'; classe = 'bad';
+            titulo = '+' + Math.round(distMedia) + '% acima da média histórica';
+            sub = 'Atualmente em ' + fmtBRL(atual) + '. Média histórica: ' + fmtBRL(media) + '.';
           }
           statusEl.className = 'price-status ' + classe;
           statusEl.innerHTML = '<span class="ps-icon">' + icon + '</span><div><strong>' + titulo + '</strong><span class="ps-sub">' + sub + '</span></div>';
         }
-        // <!-- banner-atual-fix-2026-05-14 -->
+        // <!-- banner-vs-media-fix-2026-05-14 -->
       }
 
       // Espera o overlay de prices.json terminar (carrega na mesma rodada) ou roda direto

@@ -520,6 +520,24 @@
     .qp-card-price-note { font-size: 0.7rem; color: var(--text-dim); margin-top: 3px; }
     .qp-card-price-na { font-size: 0.8rem; color: var(--text-dim); font-style: italic; }
 
+    /* Mini sparkline + indicador "vs preço médio" */
+    .qp-spark {
+      display: flex; align-items: center; gap: 8px;
+      margin-top: 6px; justify-content: flex-end;
+    }
+    .qp-spark svg { display: block; flex-shrink: 0; }
+    .qp-spark-label {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.7rem; font-weight: 600; white-space: nowrap;
+    }
+    .qp-spark-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .qp-spark-label.good { color: #5BD9A0; } .qp-spark-label.good .qp-spark-dot { background: #5BD9A0; }
+    .qp-spark-label.mid  { color: var(--text-muted); } .qp-spark-label.mid .qp-spark-dot { background: var(--text-muted); }
+    .qp-spark-label.bad  { color: #FF9B7A; } .qp-spark-label.bad .qp-spark-dot { background: #FF9B7A; }
+    @media (max-width: 580px) {
+      .qp-spark { justify-content: flex-start; }
+    }
+
     .qp-card-specs {
       display: flex;
       flex-wrap: wrap;
@@ -1046,6 +1064,55 @@
       if (!u) return '';
       const t = String(u).trim();
       return /^https?:\/\//i.test(t) ? t : '';
+    }
+
+    // ============ Sparkline + indicador "vs preço médio" ============
+    // Carrega prices-history.json em window.PRICES_HISTORY (assíncrono — não bloqueia o render).
+    window.PRICES_HISTORY = null;
+    fetch((window.SITE_BASE_PATH || '') + 'data/prices-history.json', { cache: 'no-store' })
+      .then(r => r.ok ? r.json() : null)
+      .then(j => { window.PRICES_HISTORY = j; })
+      .catch(() => {});
+
+    function renderSparkBlock(marca, modelo, precoAtual) {
+      const j = window.PRICES_HISTORY;
+      if (!j || !j.modelos || !precoAtual) return '';
+      const norm = s => String(s||'').trim().toLowerCase();
+      const key = norm(marca) + '|' + norm(modelo);
+      let hist = null;
+      for (const k in j.modelos) {
+        if (norm(k) === key) { hist = j.modelos[k]; break; }
+      }
+      if (!hist || !hist.pontos || hist.pontos.length < 2) return '';
+
+      const precos = hist.pontos.map(p => p.preco);
+      const min = Math.min(...precos), max = Math.max(...precos);
+      const media = precos.reduce((a,b) => a+b, 0) / precos.length;
+
+      // SVG sparkline
+      const w = 90, h = 22, pad = 2;
+      const range = max - min || 1;
+      const coords = hist.pontos.map((p, i) => {
+        const x = (i / (hist.pontos.length - 1 || 1)) * (w - pad*2) + pad;
+        const y = h - pad - ((p.preco - min) / range) * (h - pad*2);
+        return x.toFixed(1) + ',' + y.toFixed(1);
+      });
+      const lastX = coords[coords.length-1].split(',')[0];
+      const lastY = coords[coords.length-1].split(',')[1];
+      const svg = '<svg width="'+w+'" height="'+h+'" viewBox="0 0 '+w+' '+h+'">' +
+        '<polyline points="'+coords.join(' ')+'" fill="none" stroke="rgba(143,211,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '<circle cx="'+lastX+'" cy="'+lastY+'" r="2.5" fill="#8FD3FF"/>' +
+        '</svg>';
+
+      // Status vs média
+      const dist = ((precoAtual - media) / media) * 100;
+      let classe, label;
+      if (dist <= -3)    { classe = 'good'; label = Math.abs(Math.round(dist)) + '% abaixo da média'; }
+      else if (dist < 3) { classe = 'mid';  label = 'no preço médio'; }
+      else               { classe = 'bad';  label = '+' + Math.round(dist) + '% acima da média'; }
+
+      const status = '<span class="qp-spark-label '+classe+'"><span class="qp-spark-dot"></span>'+label+'</span>';
+      return '<div class="qp-spark">'+svg+status+'</div>';
     }
 
     function fmtMarketplaceLabelQp(slug) {
@@ -1599,10 +1666,12 @@
         if (verif) extras.push(verif);
         if (cupomNoVencedor) extras.push(`com cupom <strong>${cupomNoVencedor}</strong>`);
         const extraLine = extras.length ? `<div class="qp-price-meta">${extras.join(' · ')}</div>` : '';
+        const sparkLine = (typeof renderSparkBlock === 'function') ? renderSparkBlock(p.marca, p.modelo, p.preco_atual) : '';
         priceHtml = `<div class="qp-card-price">
           <div class="qp-price-current">${r(p.preco_atual)}${mkSpan}${importadoTag}</div>
           ${extraLine}
           ${histLine}
+          ${sparkLine}
         </div>`;
       } else if (hasPrice) {
         const fmt = n => n ? n.toLocaleString('pt-BR') : '?';
