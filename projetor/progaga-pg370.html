@@ -771,5 +771,261 @@
       }
     })();
   </script>
+  <!-- chart-history-patched-2026-05-14 -->
+  <!-- Substitui o gráfico hardcoded por dados reais do prices-history.json -->
+  <script>
+    (function applyHistoryChart() {
+      function norm(s) { return String(s || '').trim().toLowerCase(); }
+      function fmtBRL(v) { return 'R$ ' + Number(v).toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+      function fmtDataChart(s) {
+        // "2026-05-14 09:00" → "14/05"
+        var m = String(s||'').match(/^\d{4}-(\d{2})-(\d{2})/);
+        return m ? (m[2] + '/' + m[1]) : s;
+      }
+
+      function run() {
+        var card = document.querySelector('.proj-price-card');
+        if (!card) return;
+        var marca = card.dataset.marca, modelo = card.dataset.modelo;
+        if (!marca || !modelo) return;
+
+        var bp = (window.SITE_BASE_PATH || '../');
+        fetch(bp + 'data/prices-history.json', {cache: 'no-store'})
+          .then(function(r) { return r.ok ? r.json() : null; })
+          .then(function(j) {
+            if (!j || !j.modelos) return;
+            // Match case-insensitive nas chaves Marca|Modelo
+            var key = norm(marca) + '|' + norm(modelo);
+            var found = null;
+            for (var k in j.modelos) {
+              if (norm(k) === key) { found = j.modelos[k]; break; }
+            }
+            if (!found || !found.pontos || !found.pontos.length) return;
+
+            renderChart(found);
+          })
+          .catch(function() {});
+      }
+
+      function renderChart(historico) {
+        if (typeof Chart === 'undefined') { setTimeout(function(){ renderChart(historico); }, 100); return; }
+
+        // Agrupa pontos por loja, mantendo ordem temporal
+        var pontos = historico.pontos.slice().sort(function(a, b) {
+          return (a.data || '').localeCompare(b.data || '');
+        });
+
+        var lojasDisponiveis = {};
+        pontos.forEach(function(p) { lojasDisponiveis[p.loja] = true; });
+        var labelsSet = {};
+        pontos.forEach(function(p) { labelsSet[fmtDataChart(p.data)] = true; });
+        var labels = Object.keys(labelsSet);
+
+        // Pra cada label, pega o ÚLTIMO preço de cada loja naquele dia
+        function serieDeLoja(loja) {
+          var serie = [];
+          labels.forEach(function(lbl) {
+            var ponto = null;
+            pontos.forEach(function(p) {
+              if (p.loja === loja && fmtDataChart(p.data) === lbl) ponto = p;
+            });
+            serie.push(ponto ? ponto.preco : null);
+          });
+          return serie;
+        }
+
+        var lojasMeta = {
+          aliexpress: { label: 'AliExpress', color: '#8FD3FF' },
+          shopee:     { label: 'Shopee',     color: '#FF7A45' },
+          ml:         { label: 'Mercado Livre', color: '#FFD93D' }
+        };
+
+        var datasets = [];
+        Object.keys(lojasMeta).forEach(function(loja) {
+          if (!lojasDisponiveis[loja]) return;
+          var meta = lojasMeta[loja];
+          datasets.push({
+            label: meta.label,
+            data: serieDeLoja(loja),
+            borderColor: meta.color,
+            backgroundColor: meta.color + '22',
+            pointBackgroundColor: meta.color,
+            pointBorderColor: 'rgba(11,11,11,0.6)',
+            pointBorderWidth: 2,
+            pointRadius: 6,
+            pointHoverRadius: 9,
+            borderWidth: 2.5,
+            tension: 0.25,
+            spanGaps: true
+          });
+        });
+
+        var menor = historico.min;
+        var maior = historico.max;
+
+        // Destrói chart antigo (Chart.js v4)
+        var canvas = document.getElementById('priceChart');
+        if (!canvas) return;
+        var existing = Chart.getChart(canvas);
+        if (existing) existing.destroy();
+
+        var minLinePlugin = {
+          id: 'minLine',
+          afterDatasetsDraw: function(chart) {
+            var ctx = chart.ctx, area = chart.chartArea, scales = chart.scales;
+            var y = scales.y.getPixelForValue(menor);
+            if (y < area.top || y > area.bottom) return;
+            ctx.save();
+            ctx.setLineDash([4, 4]);
+            ctx.strokeStyle = 'rgba(91,217,160,0.55)';
+            ctx.lineWidth = 1.2;
+            ctx.beginPath();
+            ctx.moveTo(area.left, y);
+            ctx.lineTo(area.right, y);
+            ctx.stroke();
+            ctx.setLineDash([]);
+            ctx.fillStyle = 'rgba(91,217,160,0.95)';
+            ctx.font = '600 10px Inter, sans-serif';
+            ctx.textAlign = 'right';
+            ctx.fillText('▼ menor já visto', area.right - 6, y - 6);
+            ctx.restore();
+          }
+        };
+
+        var chart = new Chart(canvas.getContext('2d'), {
+          type: 'line',
+          data: { labels: labels, datasets: datasets },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'nearest', intersect: false },
+            animation: { duration: 700, easing: 'easeOutCubic' },
+            layout: { padding: { top: 20, right: 10, left: 0, bottom: 0 } },
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                backgroundColor: 'rgba(20,24,43,0.95)',
+                titleColor: '#EAEAEA',
+                titleFont: { weight: '600', size: 12 },
+                bodyColor: '#EAEAEA',
+                bodyFont: { size: 12 },
+                padding: 12,
+                borderColor: 'rgba(79,163,199,0.42)',
+                borderWidth: 1,
+                displayColors: true,
+                boxPadding: 4,
+                callbacks: {
+                  label: function(item) {
+                    if (item.parsed.y == null) return null;
+                    var loja = item.dataset.label;
+                    var valor = fmtBRL(item.parsed.y);
+                    var diff = item.parsed.y - menor;
+                    if (diff <= 0.5) return loja + ': ' + valor + '  · 🟢 menor preço';
+                    return loja + ': ' + valor + '  · ' + fmtBRL(diff) + ' acima do menor';
+                  }
+                }
+              }
+            },
+            scales: {
+              x: { grid: { color: 'rgba(234,234,234,0.04)' }, ticks: { color: 'rgba(234,234,234,0.55)' } },
+              y: {
+                grid: { color: 'rgba(234,234,234,0.05)' },
+                ticks: { color: 'rgba(234,234,234,0.55)', callback: function(v) { return 'R$ ' + v.toLocaleString('pt-BR'); } },
+                suggestedMin: menor * 0.92,
+                suggestedMax: maior * 1.08
+              }
+            }
+          },
+          plugins: [minLinePlugin]
+        });
+
+        // Atualiza chips de filtro: cria um chip por loja disponível
+        var filtersWrap = document.querySelector('.price-filters');
+        if (filtersWrap) {
+          // Limpa todos exceto o "Todos"
+          var todos = filtersWrap.querySelector('[data-filter="todos"]');
+          filtersWrap.innerHTML = '';
+          if (todos) filtersWrap.appendChild(todos);
+          else {
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'filter-chip active';
+            btn.dataset.filter = 'todos';
+            btn.setAttribute('aria-pressed', 'true');
+            btn.textContent = 'Todos';
+            filtersWrap.appendChild(btn);
+          }
+          datasets.forEach(function(ds, idx) {
+            var chip = document.createElement('button');
+            chip.type = 'button';
+            chip.className = 'filter-chip active';
+            chip.dataset.filter = ds.label.toLowerCase().replace(/\s+/g, '-');
+            chip.setAttribute('aria-pressed', 'true');
+            chip.textContent = ds.label;
+            chip.style.color = ds.borderColor;
+            chip.addEventListener('click', function() {
+              chip.classList.toggle('active');
+              chart.setDatasetVisibility(idx, chip.classList.contains('active'));
+              chart.update();
+            });
+            filtersWrap.appendChild(chip);
+          });
+          var todosChip = filtersWrap.querySelector('[data-filter="todos"]');
+          if (todosChip) {
+            todosChip.onclick = function() {
+              var allActive = todosChip.classList.toggle('active');
+              filtersWrap.querySelectorAll('.filter-chip').forEach(function(c) {
+                c.classList.toggle('active', allActive);
+              });
+              datasets.forEach(function(_, i) { chart.setDatasetVisibility(i, allActive); });
+              chart.update();
+            };
+          }
+        }
+
+        // Atualiza stats grid
+        var media = pontos.reduce(function(s, p) { return s + p.preco; }, 0) / pontos.length;
+        var statsWrap = document.querySelector('.price-stats-grid');
+        if (statsWrap) {
+          statsWrap.innerHTML =
+            '<div class="price-stat min"><div class="label">Mínimo histórico</div><div class="val">' + fmtBRL(menor) + '</div></div>' +
+            '<div class="price-stat"><div class="label">Preço médio</div><div class="val">' + fmtBRL(media) + '</div></div>' +
+            '<div class="price-stat max"><div class="label">Máximo histórico</div><div class="val">' + fmtBRL(maior) + '</div></div>';
+        }
+
+        // Atualiza banner status
+        var statusEl = document.getElementById('priceStatus');
+        if (statusEl) {
+          var ultimo = pontos[pontos.length - 1].preco;
+          var distMin = ((ultimo - menor) / menor) * 100;
+          var icon, classe, titulo, sub;
+          if (distMin <= 3) {
+            icon = '🟢'; classe = 'good';
+            titulo = 'Próximo do menor histórico';
+            sub = 'Atualmente em ' + fmtBRL(ultimo) + ' (a apenas ' + distMin.toFixed(0) + '% do mínimo já visto).';
+          } else if (distMin >= 15) {
+            icon = '🔴'; classe = 'bad';
+            titulo = 'Acima do preço médio';
+            sub = 'Atualmente em ' + fmtBRL(ultimo) + ', ' + distMin.toFixed(0) + '% acima do mínimo histórico.';
+          } else {
+            icon = '🔵'; classe = 'neutral';
+            titulo = 'Preço dentro da média';
+            sub = 'Atualmente em ' + fmtBRL(ultimo) + ', ' + distMin.toFixed(0) + '% acima do mínimo. ' + pontos.length + ' pontos coletados.';
+          }
+          statusEl.className = 'price-status ' + classe;
+          statusEl.innerHTML = '<span class="ps-icon">' + icon + '</span><div><strong>' + titulo + '</strong><span class="ps-sub">' + sub + '</span></div>';
+        }
+      }
+
+      // Espera o overlay de prices.json terminar (carrega na mesma rodada) ou roda direto
+      if (window.PRICES_OVERLAY_READY && typeof window.PRICES_OVERLAY_READY.then === 'function') {
+        window.PRICES_OVERLAY_READY.then(run).catch(function() { run(); });
+      } else if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', run);
+      } else {
+        run();
+      }
+    })();
+  </script>
 </body>
 </html>
