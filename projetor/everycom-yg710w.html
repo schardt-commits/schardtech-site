@@ -941,28 +941,32 @@
             '<div class="price-stat max"><div class="label">Máximo histórico</div><div class="val">' + fmtBRL(maior) + '</div></div>';
         }
 
-        // Atualiza banner status
+        // Atualiza banner status — usa MENOR preço do dia mais recente como 'atual'
         var statusEl = document.getElementById('priceStatus');
         if (statusEl) {
-          var ultimo = pontos[pontos.length - 1].preco;
-          var distMin = ((ultimo - menor) / menor) * 100;
+          var dataMaisRecente = '';
+          pontos.forEach(function(p) { if (p.data > dataMaisRecente) dataMaisRecente = p.data.slice(0, 10); });
+          var precosHoje = pontos.filter(function(p) { return p.data.slice(0, 10) === dataMaisRecente; }).map(function(p) { return p.preco; });
+          var atual = precosHoje.length ? Math.min.apply(null, precosHoje) : pontos[pontos.length - 1].preco;
+          var distMin = ((atual - menor) / menor) * 100;
           var icon, classe, titulo, sub;
-          if (distMin <= 3) {
+          if (distMin <= 5) {
             icon = '🟢'; classe = 'good';
             titulo = 'Próximo do menor histórico';
-            sub = 'Atualmente em ' + fmtBRL(ultimo) + ' (a apenas ' + distMin.toFixed(0) + '% do mínimo já visto).';
-          } else if (distMin >= 15) {
+            sub = 'Atualmente em ' + fmtBRL(atual) + ' (a apenas ' + distMin.toFixed(0) + '% do mínimo já visto).';
+          } else if (distMin >= 25) {
             icon = '🔴'; classe = 'bad';
-            titulo = 'Acima do preço médio';
-            sub = 'Atualmente em ' + fmtBRL(ultimo) + ', ' + distMin.toFixed(0) + '% acima do mínimo histórico.';
+            titulo = 'Bem acima do mínimo histórico';
+            sub = 'Atualmente em ' + fmtBRL(atual) + ', ' + distMin.toFixed(0) + '% acima do mínimo já visto.';
           } else {
             icon = '🔵'; classe = 'neutral';
-            titulo = 'Preço dentro da média';
-            sub = 'Atualmente em ' + fmtBRL(ultimo) + ', ' + distMin.toFixed(0) + '% acima do mínimo. ' + pontos.length + ' pontos coletados.';
+            titulo = 'Preço próximo do médio';
+            sub = 'Atualmente em ' + fmtBRL(atual) + ', ' + distMin.toFixed(0) + '% acima do mínimo. ' + pontos.length + ' pontos coletados.';
           }
           statusEl.className = 'price-status ' + classe;
           statusEl.innerHTML = '<span class="ps-icon">' + icon + '</span><div><strong>' + titulo + '</strong><span class="ps-sub">' + sub + '</span></div>';
         }
+        // <!-- banner-atual-fix-2026-05-14 -->
       }
 
       // Espera o overlay de prices.json terminar (carrega na mesma rodada) ou roda direto
