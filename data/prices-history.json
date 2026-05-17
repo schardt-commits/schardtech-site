@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "gerado_em": "2026-05-17 09:17:01",
+    "gerado_em": "2026-05-17 09:34:49",
     "total_modelos": 60,
-    "total_pontos": 482,
+    "total_pontos": 483,
     "fonte": "precos.db (tabela precos, preco_final)"
   },
   "modelos": {
@@ -1647,12 +1647,17 @@
           "data": "2026-05-17 08:55",
           "loja": "aliexpress",
           "preco": 391.58
+        },
+        {
+          "data": "2026-05-17 09:31",
+          "loja": "shopee",
+          "preco": 341.05
         }
       ],
-      "n": 12,
+      "n": 13,
       "min": 306.85,
       "max": 391.58,
-      "atual": 391.58,
+      "atual": 341.05,
       "data_min": "2026-05-13",
       "data_max": "2026-05-16"
     },
