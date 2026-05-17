@@ -1320,7 +1320,18 @@
       'Não Selada++': 13, 'Selada': 17, 'Selada+': 22, 'Selada++': 30
     };
 
-    function audioCategory(au) {
+    function audioCategory(au, override) {
+      // Override manual via campo audio_qualidade da planilha
+      // ('basico' / 'razoavel' / 'bom' / 'excelente'). Valor "vencido" — quando
+      // o canal mediu na prática (Dolby ativo, qualidade real) e a heurística por
+      // watts não captura. Vazio = usa a classificação automática abaixo.
+      if (override) {
+        const v = String(override).trim().toLowerCase();
+        if (v === 'basico' || v === 'básico')   return 'basico';
+        if (v === 'razoavel' || v === 'razoável') return 'razoavel';
+        if (v === 'bom')                          return 'bom';
+        if (v === 'excelente')                    return 'excelente';
+      }
       if (au.channels >= 3) return 'excelente';
       if (au.stereo && au.total >= 30) return 'excelente';   // 2×15W+
       if (!au.stereo && au.total >= 15) return 'excelente';  // mono 15W+
@@ -1406,7 +1417,7 @@
       // Som
       if (a.som) {
         const au = parseAudio(p.audio_w);
-        const aCat = audioCategory(au);
+        const aCat = audioCategory(au, p.audio_qualidade);
         if (a.som === 'bom'      && aCat === 'basico') return false;
         if (a.som === 'excelente' && (aCat === 'basico' || aCat === 'razoavel')) return false;
       }
@@ -1484,7 +1495,7 @@
       // Som
       if (a.som) {
         const au = parseAudio(p.audio_w);
-        const sCat = audioCategory(au);
+        const sCat = audioCategory(au, p.audio_qualidade);
         if (a.som === 'bom') {
           s += sCat === 'excelente' ? 12 : sCat === 'bom' ? 8 : sCat === 'razoavel' ? 4 : 0;
         } else if (a.som === 'excelente') {
@@ -1526,7 +1537,7 @@
 
         // Bonus de áudio — usa parseAudio + audioCategory já definidos antes neste arquivo
         const au = parseAudio(p.audio_w);
-        const aCat = audioCategory(au);
+        const aCat = audioCategory(au, p.audio_qualidade);
         const audioBase = aCat === 'excelente' ? 4 : aCat === 'bom' ? 2 : aCat === 'razoavel' ? 1 : 0;
         // audioOverride — marcas com áudio reconhecidamente bom ganham extra
         let audioOverride = 0;
@@ -1616,13 +1627,13 @@
       return 'warn';
     }
 
-    function audioLabel(audioW) {
+    function audioLabel(audioW, audioQualidade) {
       if (!audioW) return null;
       const s = String(audioW).trim();
       if (!s) return null;
       const au = parseAudio(audioW);
       if (!au.total) return null;
-      const cat = audioCategory(au);
+      const cat = audioCategory(au, audioQualidade);
       if (cat === 'basico')    return 'Básico';
       if (cat === 'razoavel')  return 'Razoável';
       if (cat === 'bom')       return 'Bom';
@@ -1700,7 +1711,7 @@
       if (p.tecnologia)           specs.push(`<div class="qp-spec"><span class="qp-spec-label">Tecnologia</span><span class="qp-spec-value">${p.tecnologia}</span></div>`);
       if (p.sistema_operacional)  specs.push(`<div class="qp-spec"><span class="qp-spec-label">Sistema</span><span class="qp-spec-value">${p.sistema_operacional}</span></div>`);
       if (p.otica_selada)         specs.push(`<div class="qp-spec"><span class="qp-spec-label">Ótica</span><span class="qp-spec-value">${p.otica_selada}</span></div>`);
-      const audioLbl = audioLabel(p.audio_w);
+      const audioLbl = audioLabel(p.audio_w, p.audio_qualidade);
       if (audioLbl) {
         const wRaw = String(p.audio_w || '').trim();
         const wFmt = wRaw.includes('x')

@@ -2605,7 +2605,7 @@ window.PROJETORES_DATA = [
     "cap_bateria": "",
     "video_url": "https://www.youtube.com/watch?v=0wSWO1-y1XA",
     "suporte_giratorio": false,
-    "audio_qualidade": "",
+    "audio_qualidade": "excelente",
     "uso_continuo": "6h",
     "preco_min": 1518,
     "preco_max": 1518,
