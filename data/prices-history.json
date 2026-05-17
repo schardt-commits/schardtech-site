@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "gerado_em": "2026-05-17 09:34:49",
-    "total_modelos": 60,
-    "total_pontos": 483,
+    "gerado_em": "2026-05-17 13:17:36",
+    "total_modelos": 61,
+    "total_pontos": 484,
     "fonte": "precos.db (tabela precos, preco_final)"
   },
   "modelos": {
@@ -1035,6 +1035,21 @@
       "atual": 2093.0,
       "data_min": "2026-05-09",
       "data_max": "2026-05-09"
+    },
+    "Everycom|HQ9W ULTRA": {
+      "pontos": [
+        {
+          "data": "2026-05-17 13:17",
+          "loja": "shopee",
+          "preco": 1518.0
+        }
+      ],
+      "n": 1,
+      "min": 1518.0,
+      "max": 1518.0,
+      "atual": 1518.0,
+      "data_min": "2026-05-17",
+      "data_max": "2026-05-17"
     },
     "Everycom|R16": {
       "pontos": [
