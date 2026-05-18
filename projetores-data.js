@@ -382,7 +382,7 @@ window.PROJETORES_DATA = [
   {
     "marca": "Byintek",
     "modelo": "Love U4",
-    "tecnologia": "DLP LED",
+    "tecnologia": "LCD LED",
     "resolucao_nativa": "1280x720",
     "resolucao_max": "1080p 60hz",
     "brilho_ansi": 170,
@@ -407,7 +407,7 @@ window.PROJETORES_DATA = [
     "preco_max": 650,
     "ali_url": "https://s.click.aliexpress.com/e/_c4F4HKKB",
     "ali_cupom_loja": "U4BRDR",
-    "ali_cupom_promo": "",
+    "ali_cupom_promo": "GEEK03",
     "ml_url": "",
     "shopee_url": "https://s.shopee.com.br/30kZpksZvV",
     "amazon_url": "",
