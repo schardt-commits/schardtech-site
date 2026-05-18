@@ -52,12 +52,12 @@ const projectors = [
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
 // ============================================================
 const featuredVideos = [
+  { id: 'PGbi8fr7aS4', title: 'Esse projetor esconde algo: Everycom HQ9W Ultra | Análise completa' },
   { id: 's7gfCpdJCVw', title: 'Tela 100&quot; Portátil Byintek: DÁ PARA VER DOS DOIS LADOS?' },
   { id: 'y40NWkwjuYg', title: 'Qual Melhor Projetor Custo Beneficio!' },
   { id: 'Fh47l1L81Po', title: 'Nunca Mais Erre na Escolha! O Jeito Mais Fácil de Achar seu Projetor!' },
   { id: 'S8yGCgKlGyY', title: 'Projetor Full HD por menos de R$450 — Vale a Pena? L9W Ultra Touyinger' },
   { id: 'fxBBrJ3B0Bw', title: 'Testei os Melhores Controles Universais para Projetor, Android, TV e PC!' },
-  { id: 'OHfd8EzoRX8', title: 'O PROJETOR MAIS COMPLETO DA WANBO? X5 Pro - Review Completo' },
 ];
 
 // ============================================================
