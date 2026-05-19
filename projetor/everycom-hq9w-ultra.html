@@ -582,7 +582,37 @@
         if (!Array.isArray(data)) return;
         var key = norm(marca) + '|' + norm(modelo);
         var p = data.find(function(x) { return norm(x.marca)+'|'+norm(x.modelo) === key; });
-        if (!p || !p.preco_atual) return;
+        if (!p) return;
+
+        var _mkts = p.marketplaces || {};
+        var _venc = _mkts[p.marketplace_vencedor] || {};
+        var _cupons = [];
+        if (_venc.cupom && p.marketplace_vencedor && p.marketplace_vencedor !== 'aliexpress') {
+          var _mkName = p.marketplace_vencedor === 'shopee' ? 'Shopee' : p.marketplace_vencedor === 'ml' ? 'Mercado Livre' : '';
+          if (_mkName) _cupons.push({ code: _venc.cupom, label: 'Cupom ' + _mkName });
+        }
+        if (p.ali_cupom_promo) _cupons.push({ code: p.ali_cupom_promo, label: 'Cupom AliExpress (plataforma)' });
+        if (p.ali_cupom_loja)  _cupons.push({ code: p.ali_cupom_loja,  label: 'Cupom AliExpress (loja)' });
+        if (_cupons.length) {
+          var _cSlot = document.getElementById('projCupomSlot');
+          if (_cSlot) {
+            _cSlot.innerHTML = _cupons.map(function(c, i) {
+              return '<div class="proj-coupon"' + (i > 0 ? ' style="margin-top:8px"' : '') + '>' +
+                '<span>' + c.label + ': <code>' + c.code + '</code></span>' +
+                '<button class="copy-btn" type="button" data-code="' + c.code + '">Copiar</button>' +
+                '</div>';
+            }).join('');
+            Array.prototype.forEach.call(_cSlot.querySelectorAll('.copy-btn'), function(b) {
+              b.addEventListener('click', function() {
+                navigator.clipboard.writeText(b.dataset.code);
+                b.textContent = 'Copiado!';
+                setTimeout(function() { b.textContent = 'Copiar'; }, 1800);
+              });
+            });
+          }
+        }
+
+        if (!p.preco_atual) return;
 
         // Atualiza preço principal
         var brl = fmtBRL(p.preco_atual);
@@ -621,23 +651,6 @@
         }
 
         // Cupom: usa o do marketplace vencedor (se existir)
-        var venc = mkts[p.marketplace_vencedor] || {};
-        var cupom = venc.cupom || p.ali_cupom_loja;
-        if (cupom) {
-          var slot = document.getElementById('projCupomSlot');
-          if (slot) {
-            slot.innerHTML = '<div class="proj-coupon">' +
-              '<span>Cupom: <code>' + cupom + '</code></span>' +
-              '<button class="copy-btn" type="button">Copiar</button>' +
-              '</div>';
-            var b = slot.querySelector('.copy-btn');
-            if (b) b.addEventListener('click', function() {
-              navigator.clipboard.writeText(cupom);
-              b.textContent = 'Copiado!';
-              setTimeout(function() { b.textContent = 'Copiar'; }, 1800);
-            });
-          }
-        }
       }
 
       function waitAndRun() {
