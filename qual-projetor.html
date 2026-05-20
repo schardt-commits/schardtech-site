@@ -1041,6 +1041,7 @@
     </div>
   </footer>
 
+  <script src="script.js" defer></script>
   <script src="projetores-data.js"></script>
   <script src="prices-overlay.js"></script>
   <script src="search-global.js" defer></script>
@@ -1533,7 +1534,7 @@
         let audioOverride = 0;
         if (p.marca === 'Wanbo') audioOverride = 2;
         else if (p.marca === 'Wupro' && p.modelo === 'G2') audioOverride = 2;
-        else if (p.marca === 'Formovie' && (p.modelo === 'Xming Page One' || p.modelo === 'Xming Episode One')) audioOverride = 2;
+        else if (p.marca === 'Formovie' && p.modelo === 'Xming Episode One') audioOverride = 2;
         else if (p.marca === 'Bettdow' && (p.modelo === 'AC1073' || p.modelo === 'AC1061')) audioOverride = 1;
         else if (p.marca === 'Vevshao' && p.modelo === 'A22') audioOverride = 1;
         const audioBonus = audioBase + audioOverride;

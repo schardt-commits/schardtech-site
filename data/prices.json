@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "atualizado_em": "2026-05-20 10:37:23",
-    "total_produtos": 56,
+    "atualizado_em": "2026-05-20 11:24:14",
+    "total_produtos": 55,
     "fonte": "revisar.xlsx + precos.db (historico)",
     "obs": "Gerado por exportador.py a partir de revisar.xlsx + precos.db",
     "indisponiveis": [
@@ -29,11 +29,6 @@
         "marca": "Everycom",
         "modelo": "YG710W",
         "motivo": "sem_estoque_importado"
-      },
-      {
-        "marca": "Horlat",
-        "modelo": "T09",
-        "motivo": "sem preço final ou sem vencedor"
       },
       {
         "marca": "Magcubic",
@@ -93,7 +88,7 @@
           "obs": null,
           "data_checagem": "2026-05-20 09:30"
         },
-        "ml": {
+        "mercado_livre": {
           "preco": 821.0,
           "link": "https://meli.la/1vrDgrV"
         }
@@ -101,7 +96,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Bettdow",
@@ -122,7 +117,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Bettdow",
@@ -143,7 +138,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Bettdow",
@@ -164,7 +159,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Bettdow",
@@ -185,7 +180,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Bettdow",
@@ -206,7 +201,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Bettdow",
@@ -227,7 +222,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Bettdow",
@@ -248,7 +243,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Bettdow",
@@ -269,7 +264,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Byintek",
@@ -298,7 +293,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Byintek",
@@ -327,7 +322,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Byintek",
@@ -336,7 +331,7 @@
       "preco_min_historico": 875.55,
       "preco_max_historico": 1379.08,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 904.63,
@@ -344,7 +339,7 @@
           "valor_cupom": 380.94,
           "link": "https://s.click.aliexpress.com/e/_c3oHaIox",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         },
         "shopee": {
           "preco": 1379.08,
@@ -356,7 +351,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Byintek",
@@ -365,7 +360,7 @@
       "preco_min_historico": 1130.48,
       "preco_max_historico": 2425.0,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 1261.46,
@@ -373,7 +368,7 @@
           "valor_cupom": 353.73,
           "link": "https://s.click.aliexpress.com/e/_c30xw41d",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         },
         "shopee": {
           "preco": 2231.0,
@@ -385,7 +380,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Byintek",
@@ -414,7 +409,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Byintek",
@@ -423,7 +418,7 @@
       "preco_min_historico": 1776.19,
       "preco_max_historico": 2850.44,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 1824.05,
@@ -431,7 +426,7 @@
           "valor_cupom": 326.52,
           "link": "https://s.click.aliexpress.com/e/_c4VEt5yP",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         },
         "shopee": {
           "preco": 2625.68,
@@ -443,7 +438,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Dangbei",
@@ -458,7 +453,7 @@
           "preco": 7279.94,
           "cupom": null,
           "valor_cupom": null,
-          "link": "https://pt.aliexpress.com/item/1005011781296732.html",
+          "link": "https://s.click.aliexpress.com/e/_c3XiiQYv",
           "alerta": null,
           "data_checagem": "2026-05-20 09:05"
         }
@@ -466,7 +461,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Everycom",
@@ -475,9 +470,9 @@
       "preco_min_historico": 2037.0,
       "preco_max_historico": 2037.0,
       "marketplace_vencedor": "mercado_livre",
-      "data_verificacao": null,
+      "data_verificacao": "2026-05-20 11:24",
       "marketplaces": {
-        "ml": {
+        "mercado_livre": {
           "preco": 2037.0,
           "link": "https://meli.la/19nFftt"
         }
@@ -485,7 +480,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Everycom",
@@ -502,7 +497,7 @@
           "obs": null,
           "data_checagem": "2026-05-20 09:30"
         },
-        "ml": {
+        "mercado_livre": {
           "preco": 2279.0,
           "link": "https://meli.la/1faS5r2"
         }
@@ -510,7 +505,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "FlixTone",
@@ -519,7 +514,7 @@
       "preco_min_historico": 939.48,
       "preco_max_historico": 1349.18,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 10:37",
       "marketplaces": {
         "aliexpress": {
           "preco": 969.21,
@@ -527,13 +522,13 @@
           "valor_cupom": 335.45,
           "link": "https://s.click.aliexpress.com/e/_mrnkrDP",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 10:37"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "FlixTone",
@@ -542,7 +537,7 @@
       "preco_min_historico": 1185.84,
       "preco_max_historico": 1805.22,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 10:37",
       "marketplaces": {
         "aliexpress": {
           "preco": 1576.54,
@@ -550,13 +545,13 @@
           "valor_cupom": 335.45,
           "link": "https://s.click.aliexpress.com/e/_oBLMuz0",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 10:37"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Formovie",
@@ -565,7 +560,7 @@
       "preco_min_historico": 9056.88,
       "preco_max_historico": 17179.7,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 9064.99,
@@ -573,13 +568,13 @@
           "valor_cupom": null,
           "link": "https://s.click.aliexpress.com/e/_c4LGbkyj",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Formovie",
@@ -588,7 +583,7 @@
       "preco_min_historico": 1014.23,
       "preco_max_historico": 1370.83,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 1014.23,
@@ -596,36 +591,13 @@
           "valor_cupom": 27.95,
           "link": "https://s.click.aliexpress.com/e/_c3Wumt4X",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
-    },
-    {
-      "marca": "Formovie",
-      "modelo": "Xming Page One",
-      "preco_atual": 1014.23,
-      "preco_min_historico": 1014.23,
-      "preco_max_historico": 1370.83,
-      "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-05-20 09:07",
-      "marketplaces": {
-        "aliexpress": {
-          "preco": 1014.23,
-          "cupom": null,
-          "valor_cupom": null,
-          "link": "https://s.click.aliexpress.com/e/_c3PNf0BD",
-          "alerta": null,
-          "data_checagem": "2026-05-20 09:07"
-        }
-      },
-      "frete_br": "sim",
-      "icms": "não",
-      "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Horlat",
@@ -634,7 +606,7 @@
       "preco_min_historico": 741.04,
       "preco_max_historico": 980.62,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 836.17,
@@ -642,13 +614,13 @@
           "valor_cupom": 60.7,
           "link": "https://s.click.aliexpress.com/e/_c3Nq6bvZ",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Jenovox",
@@ -657,7 +629,7 @@
       "preco_min_historico": 1670.58,
       "preco_max_historico": 2115.53,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 1899.9,
@@ -665,13 +637,13 @@
           "valor_cupom": 27.93,
           "link": "https://pt.aliexpress.com/item/1005004398816132.html",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         }
       },
       "frete_br": "sim",
       "icms": "não",
-      "status": "Vendido",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "status": "nacional",
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Magcubic",
@@ -700,7 +672,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Magcubic",
@@ -729,7 +701,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Magcubic",
@@ -750,7 +722,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Magcubic",
@@ -779,7 +751,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Magcubic",
@@ -808,7 +780,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Magcubic",
@@ -837,7 +809,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Magcubic",
@@ -860,7 +832,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Progaga",
@@ -883,7 +855,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Progaga",
@@ -906,7 +878,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Progaga",
@@ -929,7 +901,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Thundeal",
@@ -952,7 +924,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Thundeal",
@@ -975,7 +947,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Thundeal",
@@ -984,7 +956,7 @@
       "preco_min_historico": 527.17,
       "preco_max_historico": 649.49,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 527.17,
@@ -992,13 +964,13 @@
           "valor_cupom": 38.09,
           "link": "https://s.click.aliexpress.com/e/_c3Y7pIsT",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Thundeal",
@@ -1021,7 +993,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Thundeal",
@@ -1030,7 +1002,7 @@
       "preco_min_historico": 1079.22,
       "preco_max_historico": 1500.28,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 1079.22,
@@ -1038,13 +1010,13 @@
           "valor_cupom": 489.78,
           "link": "https://s.click.aliexpress.com/e/_c3icIQqJ",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Thundeal",
@@ -1053,7 +1025,7 @@
       "preco_min_historico": 1053.44,
       "preco_max_historico": 1626.46,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 1142.83,
@@ -1061,13 +1033,13 @@
           "valor_cupom": 544.2,
           "link": "https://s.click.aliexpress.com/e/_c4qG7fcr",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Thundeal",
@@ -1090,7 +1062,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Touyinger",
@@ -1113,7 +1085,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Touyinger",
@@ -1122,7 +1094,7 @@
       "preco_min_historico": 507.04,
       "preco_max_historico": 546.43,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 546.43,
@@ -1130,13 +1102,13 @@
           "valor_cupom": 14.38,
           "link": "https://s.click.aliexpress.com/e/_c3gZsecB",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Touyinger",
@@ -1145,7 +1117,7 @@
       "preco_min_historico": 1334.1,
       "preco_max_historico": 1892.25,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 1348.37,
@@ -1153,13 +1125,13 @@
           "valor_cupom": 255.58,
           "link": "https://s.click.aliexpress.com/e/_c3ZyibTN",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Vevshao",
@@ -1188,7 +1160,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Vevshao",
@@ -1197,7 +1169,7 @@
       "preco_min_historico": 894.3,
       "preco_max_historico": 1715.0,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 894.3,
@@ -1205,7 +1177,7 @@
           "valor_cupom": 163.26,
           "link": "https://s.click.aliexpress.com/e/_c364MAFh",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         },
         "shopee": {
           "preco": 1577.8,
@@ -1217,7 +1189,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Vevshao",
@@ -1246,7 +1218,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Voxflix",
@@ -1255,7 +1227,7 @@
       "preco_min_historico": 598.99,
       "preco_max_historico": 1186.73,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 946.72,
@@ -1263,13 +1235,13 @@
           "valor_cupom": 54.31,
           "link": "https://s.click.aliexpress.com/e/_c4CekUNN",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Wanbo",
@@ -1278,7 +1250,7 @@
       "preco_min_historico": 800.0,
       "preco_max_historico": 996.14,
       "marketplace_vencedor": "mercado_livre",
-      "data_verificacao": null,
+      "data_verificacao": "2026-05-20 09:19",
       "marketplaces": {
         "aliexpress": {
           "preco": 996.14,
@@ -1288,7 +1260,7 @@
           "alerta": null,
           "data_checagem": "2026-05-20 09:19"
         },
-        "ml": {
+        "mercado_livre": {
           "preco": 800.0,
           "link": "https://meli.la/2zHB1c2"
         }
@@ -1296,7 +1268,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Wanbo",
@@ -1313,7 +1285,7 @@
           "obs": "oferta relampago",
           "data_checagem": "2026-05-20 09:30"
         },
-        "ml": {
+        "mercado_livre": {
           "preco": 1499.0,
           "link": "https://meli.la/1v3Rrbj"
         }
@@ -1321,7 +1293,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Wanbo",
@@ -1338,7 +1310,7 @@
           "obs": "oferta relampago",
           "data_checagem": "2026-05-20 09:30"
         },
-        "ml": {
+        "mercado_livre": {
           "preco": 1849.0,
           "link": "https://meli.la/1AAe5HZ"
         }
@@ -1346,7 +1318,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Wanbo",
@@ -1363,7 +1335,7 @@
           "obs": "oferta relampago",
           "data_checagem": "2026-05-20 09:30"
         },
-        "ml": {
+        "mercado_livre": {
           "preco": 2599.0,
           "link": "https://meli.la/1ywAF3b"
         }
@@ -1371,7 +1343,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Wupro",
@@ -1380,7 +1352,7 @@
       "preco_min_historico": 831.09,
       "preco_max_historico": 931.78,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "validado manual hoje",
+      "data_verificacao": "2026-05-20 09:30",
       "marketplaces": {
         "aliexpress": {
           "preco": 831.89,
@@ -1388,13 +1360,13 @@
           "valor_cupom": 63.9,
           "link": "https://s.click.aliexpress.com/e/_c3H8bFcB",
           "alerta": "VALIDADO",
-          "data_checagem": "validado manual hoje"
+          "data_checagem": "2026-05-20 09:30"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Everycom",
@@ -1415,7 +1387,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     },
     {
       "marca": "Vevshao",
@@ -1444,7 +1416,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-20 10:37"
+      "ultima_atualizacao": "2026-05-20 11:24"
     }
   ]
 }

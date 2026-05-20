@@ -989,6 +989,7 @@
   <div class="cp-toast" id="toast"></div>
   </main>
 
+  <script src="script.js" defer></script>
   <script src="projetores-data.js"></script>
   <script src="prices-overlay.js"></script>
   <script src="search-global.js" defer></script>
@@ -1820,15 +1821,8 @@
 
     /* ═══════════════════════════════════════════
        INIT
+       Header scroll + mobile menu controlados via script.js (initHeader + initMobileMenu).
     ═══════════════════════════════════════════ */
-    window.addEventListener('scroll', () => {
-      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
-    });
-
-    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-      document.getElementById('mainNav').classList.toggle('open');
-    });
-
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') closeModal();
     });
