@@ -5,6 +5,10 @@ serve_nocache.py
 data/*.bak*
 *.bak*
 
+# Snapshots de paginas (gerados por scripts antes de edicoes em massa) — nunca subir
+_backup_paginas_*/
+_backup_*/
+
 # Caches
 __pycache__/
 *.pyc
