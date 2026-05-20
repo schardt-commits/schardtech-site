@@ -702,22 +702,33 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 14px;
+      padding: 10px 16px;
       border-radius: var(--radius);
-      font-size: 0.8rem;
-      font-weight: 600;
+      font-size: 0.85rem;
+      font-weight: 700;
       text-decoration: none;
       transition: all var(--transition);
       gap: 8px;
+      background: #fff;
+      color: #222;
+      border: 1.5px solid rgba(0,0,0,0.08);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+      min-height: 44px;
     }
-    .cp-store-shopee { background: rgba(238,77,45,0.09); border: 1px solid rgba(238,77,45,0.22); color: #ff6b45; }
-    .cp-store-shopee:hover { background: rgba(238,77,45,0.17); }
-    .cp-store-ml { background: rgba(26,63,191,0.1); border: 1px solid rgba(26,63,191,0.25); color: #6b8cff; }
-    .cp-store-ml:hover { background: rgba(26,63,191,0.18); }
-    .cp-store-ali { background: rgba(255,100,0,0.08); border: 1px solid rgba(255,100,0,0.22); color: #ff7a30; }
-    .cp-store-ali:hover { background: rgba(255,100,0,0.16); }
-    .cp-store-amazon { background: rgba(255,153,0,0.08); border: 1px solid rgba(255,153,0,0.22); color: #ffaa30; }
-    .cp-store-amazon:hover { background: rgba(255,153,0,0.16); }
+    .cp-store-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.16); }
+    .cp-store-shopee { color: #EE4D2D; }
+    .cp-store-shopee:hover { border-color: rgba(238,77,45,0.45); }
+    .cp-store-ml { color: #1a3fbf; }
+    .cp-store-ml:hover { border-color: rgba(26,63,191,0.4); }
+    .cp-store-ali { color: #e43225; }
+    .cp-store-ali:hover { border-color: rgba(228,50,37,0.45); }
+    .cp-store-amazon { color: #b35d00; }
+    .cp-store-amazon:hover { border-color: rgba(255,153,0,0.45); }
+    .cp-store-name { display: inline-flex; align-items: center; justify-content: center; gap: 6px; flex: 1; }
+    .cp-store-logo { width: auto; object-fit: contain; flex-shrink: 0; display: block; }
+    .cp-store-ali .cp-store-logo    { height: 24px; }
+    .cp-store-shopee .cp-store-logo { height: 28px; }
+    .cp-store-ml .cp-store-logo     { height: 26px; margin-left: -8px; }
     .cp-ext-icon { flex-shrink: 0; opacity: 0.7; }
     .cp-cupom {
       display: flex;
@@ -1565,10 +1576,10 @@
         const priceBlock = priceHtmlRich(p);
         const mk = p.marketplaces || {};
         const storesData = [];
-        if (safeUrl(p.amazon_url)) storesData.push({ preco: mk.amazon?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-amazon"><span>Amazon</span>${EXT}</a>` });
-        if (safeUrl(p.ml_url))     storesData.push({ preco: mk.ml?.preco         ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-ml"><span>Mercado Livre</span>${EXT}</a>` });
-        if (safeUrl(p.shopee_url)) storesData.push({ preco: mk.shopee?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-shopee"><span>Shopee</span>${EXT}</a>` });
-        if (safeUrl(p.ali_url))    storesData.push({ preco: mk.aliexpress?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-ali"><span>AliExpress</span>${EXT}</a>` });
+        if (safeUrl(p.amazon_url)) storesData.push({ preco: mk.amazon?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-amazon" aria-label="Amazon"><span class="cp-store-name">Amazon</span>${EXT}</a>` });
+        if (safeUrl(p.ml_url))     storesData.push({ preco: mk.ml?.preco         ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-ml" aria-label="Mercado Livre"><span class="cp-store-name"><img src="./logo ml2.png" alt="" class="cp-store-logo">Mercado Livre</span>${EXT}</a>` });
+        if (safeUrl(p.shopee_url)) storesData.push({ preco: mk.shopee?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-shopee" aria-label="Shopee"><span class="cp-store-name"><img src="./logo shopee.png" alt="Shopee" class="cp-store-logo"></span>${EXT}</a>` });
+        if (safeUrl(p.ali_url))    storesData.push({ preco: mk.aliexpress?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-ali" aria-label="AliExpress"><span class="cp-store-name"><img src="./logo ali.svg" alt="AliExpress" class="cp-store-logo"></span>${EXT}</a>` });
         storesData.sort((a, b) => a.preco - b.preco);
         const stores = storesData.map(s => s.html);
 

@@ -567,42 +567,32 @@
     .qp-store-btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      padding: 11px 22px;
+      padding: 10px 18px;
       border-radius: var(--radius);
       font-size: 0.88rem;
       font-weight: 700;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--text);
+      background: #fff;
+      color: #222;
+      border: 1.5px solid rgba(0,0,0,0.08);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.10);
       text-decoration: none;
       transition: all var(--transition);
+      min-height: 44px;
     }
-    .store-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-
-    .qp-store-btn.ali {
-      background: rgba(255,106,0,0.1);
-      border-color: rgba(255,106,0,0.35);
-      color: #FF8C3A;
-    }
-    .qp-store-btn.ali:hover { background: rgba(255,106,0,0.2); border-color: rgba(255,106,0,0.6); }
-    .ali .store-dot { background: #FF6A00; }
-
-    .qp-store-btn.shopee {
-      background: rgba(238,77,45,0.1);
-      border-color: rgba(238,77,45,0.35);
-      color: #FF6B4A;
-    }
-    .qp-store-btn.shopee:hover { background: rgba(238,77,45,0.2); border-color: rgba(238,77,45,0.6); }
-    .shopee .store-dot { background: #EE4D2D; }
-
-    .qp-store-btn.ml {
-      background: rgba(255,230,0,0.08);
-      border-color: rgba(255,230,0,0.3);
-      color: #FFE040;
-    }
-    .qp-store-btn.ml:hover { background: rgba(255,230,0,0.16); border-color: rgba(255,230,0,0.55); }
-    .ml .store-dot { background: #FFE600; }
+    .qp-store-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.16); }
+    .store-dot { display: none; }
+    .qp-store-logo { width: auto; object-fit: contain; flex-shrink: 0; display: block; }
+    .qp-store-btn.ali { color: #e43225; }
+    .qp-store-btn.ali:hover { border-color: rgba(228,50,37,0.45); }
+    .qp-store-btn.ali .qp-store-logo { height: 24px; }
+    .qp-store-btn.shopee { color: #EE4D2D; }
+    .qp-store-btn.shopee:hover { border-color: rgba(238,77,45,0.45); }
+    .qp-store-btn.shopee .qp-store-logo { height: 28px; }
+    .qp-store-btn.ml { color: #1a3fbf; }
+    .qp-store-btn.ml:hover { border-color: rgba(26,63,191,0.4); }
+    .qp-store-btn.ml .qp-store-logo { height: 26px; margin-left: -8px; }
 
     .qp-store-btn.amazon {
       background: rgba(255,153,0,0.1);
@@ -1729,9 +1719,9 @@
 
       const mkts = p.marketplaces || {};
       const storesData = [];
-      if (safeUrl(p.ali_url))    storesData.push({ preco: mkts.aliexpress?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="noopener noreferrer" class="qp-store-btn ali"><span class="store-dot"></span>AliExpress</a>` });
-      if (safeUrl(p.ml_url))     storesData.push({ preco: mkts.ml?.preco         ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="noopener noreferrer" class="qp-store-btn ml"><span class="store-dot"></span>Mercado Livre</a>` });
-      if (safeUrl(p.shopee_url)) storesData.push({ preco: mkts.shopee?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="noopener noreferrer" class="qp-store-btn shopee"><span class="store-dot"></span>Shopee</a>` });
+      if (safeUrl(p.ali_url))    storesData.push({ preco: mkts.aliexpress?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="noopener noreferrer" class="qp-store-btn ali" aria-label="AliExpress"><img src="./logo ali.svg" alt="AliExpress" class="qp-store-logo"></a>` });
+      if (safeUrl(p.ml_url))     storesData.push({ preco: mkts.ml?.preco         ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="noopener noreferrer" class="qp-store-btn ml" aria-label="Mercado Livre"><img src="./logo ml2.png" alt="" class="qp-store-logo">Mercado Livre</a>` });
+      if (safeUrl(p.shopee_url)) storesData.push({ preco: mkts.shopee?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="noopener noreferrer" class="qp-store-btn shopee" aria-label="Shopee"><img src="./logo shopee.png" alt="Shopee" class="qp-store-logo"></a>` });
       if (safeUrl(p.amazon_url)) storesData.push({ preco: mkts.amazon?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="noopener noreferrer" class="qp-store-btn amazon"><span class="store-dot"></span>Amazon</a>` });
       storesData.sort((a, b) => a.preco - b.preco);
       const stores = storesData.map(s => s.html);

@@ -107,19 +107,28 @@
     .proj-price-cents { font-size: 1.1rem; color: var(--text-muted); margin-left: 4px; }
     .proj-price-meta { font-size: 0.85rem; color: var(--text-dim); margin-top: 8px; margin-bottom: 18px; }
     .proj-store-btns { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
-    .proj-store-btn {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 16px;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: rgba(79,163,199,0.04);
-      color: var(--text);
-      transition: all var(--transition);
-      font-size: 0.92rem;
-    }
-    .proj-store-btn:hover { border-color: var(--border-hover); background: rgba(79,163,199,0.10); transform: translateY(-1px); }
-    .proj-store-btn .store-name { display: flex; align-items: center; gap: 10px; font-weight: 600; }
-    .proj-store-btn .store-price { color: var(--accent); font-weight: 700; }
+    .proj-store-btn { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-radius: var(--radius); background: #fff; color: #222; border: 1.5px solid rgba(0,0,0,0.08); box-shadow: 0 2px 12px rgba(0,0,0,0.10); transition: all var(--transition); font-size: 0.92rem; text-decoration: none; min-height: 52px; }
+    .proj-store-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.16); }
+    .proj-store-btn .store-name { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+    .proj-store-btn .store-logo { width: auto; object-fit: contain; flex-shrink: 0; display: block; }
+    .proj-store-btn .store-price { font-weight: 800; font-size: 1rem; }
+    .proj-store-btn.store-ali { color: #e43225; }
+    .proj-store-btn.store-ali:hover { border-color: rgba(228,50,37,0.45); }
+    .proj-store-btn.store-ali .store-logo { height: 26px; }
+    .proj-store-btn.store-shopee { color: #EE4D2D; }
+    .proj-store-btn.store-shopee:hover { border-color: rgba(238,77,45,0.45); }
+    .proj-store-btn.store-shopee .store-logo { height: 32px; }
+    .proj-store-btn.store-ml { color: #1a3fbf; }
+    .proj-store-btn.store-ml:hover { border-color: rgba(26,63,191,0.4); }
+    .proj-store-btn.store-ml .store-logo { height: 28px; margin-left: -14px; }
+    .proj-store-btn.store-winner { position: relative; border-width: 2px; }
+    .proj-store-btn.store-winner.store-ali    { border-color: rgba(228,50,37,0.55); box-shadow: 0 4px 18px rgba(228,50,37,0.22); }
+    .proj-store-btn.store-winner.store-shopee { border-color: rgba(238,77,45,0.55); box-shadow: 0 4px 18px rgba(238,77,45,0.22); }
+    .proj-store-btn.store-winner.store-ml     { border-color: rgba(26,63,191,0.5);  box-shadow: 0 4px 18px rgba(26,63,191,0.22); }
+    .proj-store-btn.store-winner .winner-badge { position: absolute; top: -9px; right: 14px; padding: 2px 9px; border-radius: 999px; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.04em; color: #fff; line-height: 1.4; }
+    .proj-store-btn.store-winner.store-ali    .winner-badge { background: #e43225; }
+    .proj-store-btn.store-winner.store-shopee .winner-badge { background: #EE4D2D; }
+    .proj-store-btn.store-winner.store-ml     .winner-badge { background: #1a3fbf; }
     .proj-coupon {
       display: flex; align-items: center; justify-content: space-between;
       gap: 8px;
@@ -585,12 +594,12 @@
             </div>
 
             <div class="proj-store-btns" id="projStoreBtns">
-              <a href="https://s.shopee.com.br/5L8ViQYTqt" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn">
-                <span class="store-name">🛒 Shopee</span>
+              <a href="https://s.shopee.com.br/5L8ViQYTqt" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn store-shopee store-winner">
+                <span class="winner-badge">Melhor preço</span><span class="store-name"><img src="../logo shopee.png" alt="Shopee" class="store-logo"></span>
                 <span class="store-price">R$ 2.625,68</span>
               </a>
-              <a href="https://s.click.aliexpress.com/e/_c4VEt5yP" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn">
-                <span class="store-name">🛍️ AliExpress</span>
+              <a href="https://s.click.aliexpress.com/e/_c4VEt5yP" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn store-ali">
+                <span class="store-name"><img src="../logo ali.svg" alt="AliExpress" class="store-logo"></span>
                 <span class="store-price">R$ 2.694,21*</span>
               </a>
             </div>
@@ -1221,17 +1230,22 @@
 
         var mkts = p.marketplaces || {};
         var btns = [];
-        function btn(href, name, preco) {
+        function btn(href, klass, inner, preco) {
           var precoStr = preco ? 'R$ ' + Math.round(preco).toLocaleString('pt-BR') : 'Ver preço';
-          return '<a href="' + href + '" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn">' +
-                 '<span class="store-name">' + name + '</span>' +
+          return '<a href="' + href + '" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn ' + klass + '">' +
+                 '<span class="store-name">' + inner + '</span>' +
                  '<span class="store-price">' + precoStr + '</span></a>';
         }
-        if (p.ali_url)    btns.push({preco: (mkts.aliexpress && mkts.aliexpress.preco) || Infinity, html: btn(p.ali_url, '🛍️ AliExpress', mkts.aliexpress && mkts.aliexpress.preco)});
-        if (p.shopee_url) btns.push({preco: (mkts.shopee     && mkts.shopee.preco)     || Infinity, html: btn(p.shopee_url, '🛒 Shopee', mkts.shopee && mkts.shopee.preco)});
-        if (p.ml_url)     btns.push({preco: (mkts.ml         && mkts.ml.preco)         || Infinity, html: btn(p.ml_url, '🛒 Mercado Livre', mkts.ml && mkts.ml.preco)});
+        if (p.ali_url)    btns.push({preco: (mkts.aliexpress && mkts.aliexpress.preco) || Infinity, html: btn(p.ali_url,    'store-ali',    '<img src="../logo ali.svg" alt="AliExpress" class="store-logo">', mkts.aliexpress && mkts.aliexpress.preco)});
+        if (p.shopee_url) btns.push({preco: (mkts.shopee     && mkts.shopee.preco)     || Infinity, html: btn(p.shopee_url, 'store-shopee', '<img src="../logo shopee.png" alt="Shopee" class="store-logo">', mkts.shopee     && mkts.shopee.preco)});
+        if (p.ml_url)     btns.push({preco: (mkts.ml         && mkts.ml.preco)         || Infinity, html: btn(p.ml_url,     'store-ml',     '<img src="../logo ml2.png" alt="" class="store-logo">Mercado Livre', mkts.ml         && mkts.ml.preco)});
         if (btns.length) {
           btns.sort(function(a,b) { return a.preco - b.preco; });
+          if (btns.length > 1 && btns[0] && isFinite(btns[0].preco)) {
+            btns[0].html = btns[0].html
+              .replace('class="proj-store-btn ', 'class="proj-store-btn store-winner ')
+              .replace('<span class="store-name">', '<span class="winner-badge">Melhor preço</span><span class="store-name">');
+          }
           var slot = document.getElementById('projStoreBtns');
           if (slot) slot.innerHTML = btns.map(function(b){return b.html;}).join('');
         }
