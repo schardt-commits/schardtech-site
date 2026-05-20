@@ -5,7 +5,6 @@
 
 // ============================================================
 // DATA — Projetores (fonte: Planilha SchardTechOriginal.xlsx)
-// Para integração futura com XML: ver função loadFromXML() abaixo
 // ============================================================
 const projectors = [
   {
@@ -264,31 +263,6 @@ function initMobileMenu() {
     });
   });
 }
-
-// ============================================================
-// FUTURE — Carregamento via XML
-// Descomentar e adaptar quando o arquivo XML estiver disponível
-// ============================================================
-// async function loadFromXML(url) {
-//   const res = await fetch(url);
-//   const text = await res.text();
-//   const xml = new DOMParser().parseFromString(text, 'text/xml');
-//   return Array.from(xml.querySelectorAll('projetor')).map(node => ({
-//     id: node.querySelector('id')?.textContent,
-//     name: node.querySelector('nome')?.textContent,
-//     price: parseFloat(node.querySelector('preco')?.textContent) || null,
-//     resolution: node.querySelector('resolucao')?.textContent,
-//     lumens: parseInt(node.querySelector('lumens')?.textContent),
-//     inputLag: parseInt(node.querySelector('input_lag')?.textContent),
-//     support4k: node.querySelector('suporte_4k')?.textContent === 'true',
-//     battery: node.querySelector('bateria')?.textContent === 'true',
-//     system: node.querySelector('sistema')?.textContent,
-//     mlLink: node.querySelector('link_anuncio')?.textContent || null,
-//     videoId: node.querySelector('video_id')?.textContent,
-//     available: node.querySelector('disponivel')?.textContent !== 'false',
-//     image: node.querySelector('imagem')?.textContent || null,
-//   }));
-// }
 
 // ============================================================
 // CALCULADORA ANSI LUMENS

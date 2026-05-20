@@ -124,7 +124,9 @@
         const result = mergeOverlay(j.produtos || [], meta.indisponiveis || [], slugMap);
         window.PRICES_METADATA = meta;
         window.SLUGS_MAP = slugMap;
-        console.log('[prices-overlay] ok — merged=' + result.merged + ' zerados=' + result.zerados + ' slugged=' + result.slugged + ' de ' + (window.PROJETORES_DATA || []).length + ' (atualizado_em=' + meta.atualizado_em + ')');
+        if (location.search.indexOf('debug=1') !== -1) {
+          console.log('[prices-overlay] ok — merged=' + result.merged + ' zerados=' + result.zerados + ' slugged=' + result.slugged + ' de ' + (window.PROJETORES_DATA || []).length + ' (atualizado_em=' + meta.atualizado_em + ')');
+        }
         return result;
       })
       .catch(function (err) {
