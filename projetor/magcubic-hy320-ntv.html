@@ -345,7 +345,7 @@
               <span class="proj-price-value" id="projPriceValue">R$ 562<span class="proj-price-cents">,60</span></span>
             </div>
             <div class="proj-price-meta" id="projPriceMeta">
-              Verificado em 12/05/2026 · AliExpress · importado com taxas inclusas
+              Verificado em 12/05/2026 · AliExpress (importado)
             </div>
 
             <div class="proj-store-btns" id="projStoreBtns">
@@ -357,7 +357,7 @@
 
             <div id="projCupomSlot"></div>
             <p style="font-size:0.74rem;color:var(--text-muted);margin-top:10px;line-height:1.5;">
-              Importado — entrega via remessa conforme, sem alfândega.
+              Modelo chega importado da China. Preço pode variar com promoções e impostos.
             </p>
           </div>
         </div>
@@ -950,9 +950,16 @@
 
         var lojasDisponiveis = {};
         pontos.forEach(function(p) { lojasDisponiveis[p.loja] = true; });
-        var labelsSet = {};
-        pontos.forEach(function(p) { labelsSet[fmtDataChart(p.data)] = true; });
-        var labels = Object.keys(labelsSet);
+
+        // Labels cobrem TODOS os dias do primeiro ponto ate hoje (inclusive os sem
+        // dado). Dias sem ponto viram null na serie -> spanGaps:false quebra a linha
+        // visualmente, em vez de ligar dois dias separados por uma semana de OOS.
+        var firstDate = new Date(pontos[0].data.substr(0,10) + 'T00:00:00');
+        var today = new Date(); today.setHours(0,0,0,0);
+        var labels = [];
+        for (var d = new Date(firstDate); d <= today; d.setDate(d.getDate() + 1)) {
+          labels.push(('0'+d.getDate()).slice(-2) + '/' + ('0'+(d.getMonth()+1)).slice(-2));
+        }
 
         // Pra cada label, pega o ÚLTIMO preço de cada loja naquele dia
         function serieDeLoja(loja) {
@@ -989,7 +996,7 @@
             pointHoverRadius: 9,
             borderWidth: 2.5,
             tension: 0.25,
-            spanGaps: true
+            spanGaps: false
           });
         });
 

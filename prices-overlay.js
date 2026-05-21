@@ -104,6 +104,98 @@
     return { merged, zerados, slugged };
   }
 
+  /* Patch DOM em páginas individuais quando o produto está indisponível.
+     Reescreve o card de preço com estado "Sem estoque" + subtítulo por motivo.
+     Mantém link da loja (cookie de afiliado) exceto quando o anúncio foi retirado.
+     Roda só em /projetor/{slug}.html — em outras páginas não tem .proj-price-card. */
+  function patchIndisponiveisDOM(indisponiveis) {
+    if (!indisponiveis || !indisponiveis.length) return;
+    const card = document.querySelector('.proj-price-card[data-marca][data-modelo]');
+    if (!card) return;
+
+    const cardKey = norm(card.dataset.marca) + '|' + norm(card.dataset.modelo);
+    let motivo = null;
+    for (const x of indisponiveis) {
+      if (norm(x.marca) + '|' + norm(x.modelo) === cardKey) {
+        motivo = x.motivo;
+        break;
+      }
+    }
+    if (!motivo) return;
+
+    // ─── 1. Badge no topo (.proj-badges) — sempre reescrito ─────────────────────
+    const badgesContainer = document.querySelector('.proj-badges');
+    if (badgesContainer) {
+      const STATUS_RE = /^(Estoque nacional|Importado|Sem estoque|Esgotado|Anúncio retirado|Indispon[ií]vel)\b/i;
+      badgesContainer.querySelectorAll('.proj-badge').forEach(function(b) {
+        if (STATUS_RE.test(b.textContent.trim())) b.remove();
+      });
+      const labelBadgePorMotivo = {
+        'sem_estoque_br':         'Sem estoque',
+        'sem_estoque_importado':  'Importado',
+        'indisponivel':           'Anúncio retirado'
+      };
+      const newBadge = document.createElement('span');
+      newBadge.className = 'proj-badge proj-status-badge';
+      newBadge.textContent = labelBadgePorMotivo[motivo] || 'Indisponível';
+      badgesContainer.appendChild(newBadge);
+    }
+
+    // ─── 2. Aviso ao final do card (último <p style> dentro do .proj-price-card) ─
+    // Substitui o texto hardcoded de cada página por um aviso padronizado por motivo.
+    // Assim qualquer produto que entrar em sem_estoque_importado ganha automaticamente
+    // o alerta de taxa de importação, sem precisar editar HTML.
+    const avisos = card.querySelectorAll('p');
+    const avisoEl = avisos[avisos.length - 1] || null;
+    const avisoPorMotivo = {
+      'sem_estoque_br':         'Anúncio está sem estoque agora. Acompanhe — costuma voltar.',
+      'sem_estoque_importado':  '<strong>Produto importado</strong> — sujeito a taxa de importação cobrada pela Receita Federal. Prazo de entrega 15-30 dias e o preço pode variar com promoções e impostos.',
+      'indisponivel':           'A loja retirou esse anúncio. Veja modelos parecidos em <a href="../comparar.html">/comparar</a>.'
+    };
+    if (avisoEl && avisoPorMotivo[motivo]) avisoEl.innerHTML = avisoPorMotivo[motivo];
+
+    // ─── 3. sem_estoque_importado: NÃO reescrever preço/botões ──────────────────
+    // Produto está vendendo (importado), o JS da página já renderizou preço Ali.
+    // Só o badge e o aviso de taxa precisam ser reescritos (feito acima).
+    if (motivo === 'sem_estoque_importado') return;
+
+    // ─── 4. Demais motivos: card de preço vira "Sem estoque" ────────────────────
+    const subtituloPorMotivo = {
+      'sem_estoque_br': 'Anúncio sem estoque agora — costuma voltar',
+      'indisponivel':   'Anúncio foi retirado pela loja'
+    };
+    const subtitulo = subtituloPorMotivo[motivo] || 'Sem disponibilidade no momento';
+
+    const labelEl = card.querySelector('.proj-price-label');
+    if (labelEl) labelEl.textContent = 'Status';
+
+    const valueEl = card.querySelector('#projPriceValue, .proj-price-value');
+    if (valueEl) valueEl.innerHTML = 'Sem estoque';
+
+    const metaEl = card.querySelector('#projPriceMeta, .proj-price-meta');
+    if (metaEl) metaEl.textContent = subtitulo;
+
+    const btnsEl = card.querySelector('#projStoreBtns, .proj-store-btns');
+    if (btnsEl) {
+      if (motivo === 'indisponivel') {
+        // Anúncio retirado — link morto, esconde botões
+        btnsEl.style.display = 'none';
+      } else {
+        // Mantém botões pra gerar cookie de afiliado, mas troca preço por "Ver na loja"
+        btnsEl.querySelectorAll('.store-price').forEach(function(el) {
+          el.textContent = 'Ver na loja';
+        });
+        btnsEl.querySelectorAll('.winner-badge').forEach(function(el) { el.remove(); });
+        btnsEl.querySelectorAll('.store-winner').forEach(function(el) {
+          el.classList.remove('store-winner');
+        });
+      }
+    }
+
+    const cupomSlot = card.querySelector('#projCupomSlot');
+    if (cupomSlot) cupomSlot.innerHTML = '';
+  }
+
   function applyOverlay() {
     const bp = basePath();
     const fetchPrices = fetch(bp + 'data/prices.json', { cache: 'no-store' })
@@ -124,6 +216,17 @@
         const result = mergeOverlay(j.produtos || [], meta.indisponiveis || [], slugMap);
         window.PRICES_METADATA = meta;
         window.SLUGS_MAP = slugMap;
+
+        // Em /projetor/{slug}.html quando o produto está indisponivel, reescreve o card
+        // de preço (o JS da própria página bate "return" se preco_atual é null, deixando
+        // o texto hardcoded antigo).
+        const indispList = meta.indisponiveis || [];
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', function() { patchIndisponiveisDOM(indispList); });
+        } else {
+          patchIndisponiveisDOM(indispList);
+        }
+
         if (location.search.indexOf('debug=1') !== -1) {
           console.log('[prices-overlay] ok — merged=' + result.merged + ' zerados=' + result.zerados + ' slugged=' + result.slugged + ' de ' + (window.PROJETORES_DATA || []).length + ' (atualizado_em=' + meta.atualizado_em + ')');
         }
