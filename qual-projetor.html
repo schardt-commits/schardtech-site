@@ -1579,8 +1579,13 @@
         const custoPorAnsi = precoCalc / ansiEf;
         const ansiPenalty = Math.max(0, custoPorAnsi - 1.0) * 8;
 
+        // Curadoria editorial — modelos destacados por qualidade percebida (acabamento, marca, conjunto).
+        let curadoriaBonus = 0;
+        if (p.marca === 'Wupro' && p.modelo === 'G2') curadoriaBonus = 5;
+
         const cbScore = ratioPts + osBonus + batBonus + lagBonus + k4Bonus + techBonus
                        + audioBonus + bolsaBonus + baseBonus + autofocoBonus + oticaBonus + ramBonus
+                       + curadoriaBonus
                        - ansiPenalty;
         const weight = a.custo_beneficio === 'bastante' ? 0.5 : 0.3;
         s = Math.round(s * (1 - weight) + cbScore * weight);
