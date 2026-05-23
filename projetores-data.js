@@ -2584,3 +2584,39 @@ window.PROJETORES_DATA = [
     "bolsa": ""
   }
 ];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CAMPANHA DE CUPOM PLATAFORMA ALI (única fonte de verdade — atualizar AQUI
+// quando a campanha mudar). Substitui em runtime o ali_cupom_promo de TODOS
+// os projetores pelo tier de maior desconto cujo mínimo cabe no preço.
+//
+// Pra atualizar: trocar __ALI_PLATAFORMA pra nova campanha (ou zerar tiers
+// pra ocultar do site).
+// ─────────────────────────────────────────────────────────────────────────────
+window.__ALI_PLATAFORMA = {
+  campanha: "NAMR Maio 2026",
+  validade: "2026-05-28T23:59:59-03:00",
+  tiers: [
+    { cod: "NAMR7", off: 300, min: 2450 },
+    { cod: "NAMR6", off: 165, min: 1355 },
+    { cod: "NAMR5", off: 100, min: 825  },
+    { cod: "NAMR4", off: 60,  min: 490  },
+    { cod: "NAMR3", off: 40,  min: 320  },
+    { cod: "NAMR2", off: 30,  min: 230  },
+    { cod: "NAMR1", off: 12,  min: 90   }
+  ]
+};
+
+(function aplicarCupomPlataforma() {
+  const c = window.__ALI_PLATAFORMA;
+  const vigente = c && c.tiers && c.tiers.length && new Date(c.validade) > new Date();
+  for (const p of window.PROJETORES_DATA) {
+    if (!vigente) { p.ali_cupom_promo = ""; continue; }
+    // Tier escolhido = primeiro (maior off) cujo min cabe no preço de referência.
+    // Usa preco_min (mais seguro: garante que cupom também cabe quando produto baixa).
+    const ref = p.preco_min || p.preco_max || 0;
+    if (ref <= 0) { p.ali_cupom_promo = ""; continue; }
+    const tier = c.tiers.find(t => ref >= t.min);
+    p.ali_cupom_promo = tier ? tier.cod : "";
+  }
+})();
