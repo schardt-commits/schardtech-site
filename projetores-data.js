@@ -2611,9 +2611,9 @@ window.__ALI_PLATAFORMA = {
   const c = window.__ALI_PLATAFORMA;
   const vigente = c && c.tiers && c.tiers.length && new Date(c.validade) > new Date();
   for (const p of window.PROJETORES_DATA) {
+    // Cupom Ali SÓ em produto que tem link Ali. Se vende só Shopee/ML, zera.
+    if (!p.ali_url) { p.ali_cupom_promo = ""; continue; }
     if (!vigente) { p.ali_cupom_promo = ""; continue; }
-    // Tier escolhido = primeiro (maior off) cujo min cabe no preço de referência.
-    // Usa preco_min (mais seguro: garante que cupom também cabe quando produto baixa).
     const ref = p.preco_min || p.preco_max || 0;
     if (ref <= 0) { p.ali_cupom_promo = ""; continue; }
     const tier = c.tiers.find(t => ref >= t.min);
