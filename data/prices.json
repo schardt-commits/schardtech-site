@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "atualizado_em": "2026-05-25 08:35:56",
+    "atualizado_em": "2026-05-25 08:59:39",
     "total_produtos": 53,
     "fonte": "revisar.xlsx + precos.db (historico)",
     "obs": "Gerado por exportador.py a partir de revisar.xlsx + precos.db",
@@ -106,7 +106,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Bettdow",
@@ -127,7 +127,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Bettdow",
@@ -148,7 +148,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Bettdow",
@@ -169,7 +169,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Bettdow",
@@ -190,7 +190,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Bettdow",
@@ -211,7 +211,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Bettdow",
@@ -232,7 +232,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Bettdow",
@@ -253,7 +253,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Bettdow",
@@ -274,7 +274,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Byintek",
@@ -304,24 +304,24 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Byintek",
       "modelo": "Love U12",
-      "preco_atual": 1091.09,
+      "preco_atual": 1019.72,
       "preco_min_historico": 861.2,
       "preco_max_historico": 1230.1,
-      "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-05-25 08:15",
+      "marketplace_vencedor": "aliexpress",
+      "data_verificacao": "2026-05-25 08:53",
       "marketplaces": {
         "aliexpress": {
-          "preco": 1152.67,
-          "cupom": "U12SC25",
-          "valor_cupom": 132.5,
+          "preco": 1019.72,
+          "cupom": "U12SC30",
+          "valor_cupom": 162.21,
           "link": "https://s.click.aliexpress.com/e/_c4EtZJ3H",
-          "alerta": null,
-          "data_checagem": "2026-05-25 05:03",
+          "alerta": "VALIDADO",
+          "data_checagem": "2026-05-25 08:53",
           "cupom_plataforma": "NAMR5"
         },
         "shopee": {
@@ -334,7 +334,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Byintek",
@@ -364,7 +364,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Byintek",
@@ -394,7 +394,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Byintek",
@@ -424,7 +424,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Byintek",
@@ -454,7 +454,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Dangbei",
@@ -478,7 +478,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Everycom",
@@ -487,7 +487,7 @@
       "preco_min_historico": 2037.0,
       "preco_max_historico": 2037.0,
       "marketplace_vencedor": "mercado_livre",
-      "data_verificacao": "2026-05-25 08:35",
+      "data_verificacao": "2026-05-25 08:59",
       "marketplaces": {
         "mercado_livre": {
           "preco": 2037.0,
@@ -497,7 +497,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Everycom",
@@ -522,7 +522,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "FlixTone",
@@ -546,7 +546,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "FlixTone",
@@ -570,7 +570,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Formovie",
@@ -594,7 +594,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Formovie",
@@ -618,7 +618,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Horlat",
@@ -642,7 +642,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Magcubic",
@@ -672,7 +672,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Magcubic",
@@ -702,7 +702,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Magcubic",
@@ -723,7 +723,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Magcubic",
@@ -753,7 +753,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Magcubic",
@@ -783,7 +783,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Magcubic",
@@ -813,7 +813,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Progaga",
@@ -837,7 +837,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Progaga",
@@ -861,7 +861,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Progaga",
@@ -885,7 +885,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Thundeal",
@@ -909,31 +909,31 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD80W",
-      "preco_atual": 395.47,
+      "preco_atual": 386.33,
       "preco_min_historico": 340.5,
       "preco_max_historico": 413.85,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-05-25 05:17",
+      "data_verificacao": "2026-05-25 08:53",
       "marketplaces": {
         "aliexpress": {
-          "preco": 395.47,
-          "cupom": "BRBR15A",
-          "valor_cupom": 79.52,
+          "preco": 386.33,
+          "cupom": "SCHARD80F",
+          "valor_cupom": 37.85,
           "link": "https://s.click.aliexpress.com/e/_c4eXroxp",
-          "alerta": null,
-          "data_checagem": "2026-05-25 05:17",
+          "alerta": "VALIDADO",
+          "data_checagem": "2026-05-25 08:53",
           "cupom_plataforma": "NAMR3"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Thundeal",
@@ -957,7 +957,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Thundeal",
@@ -981,7 +981,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Thundeal",
@@ -1005,7 +1005,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Thundeal",
@@ -1029,7 +1029,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Thundeal",
@@ -1038,22 +1038,22 @@
       "preco_min_historico": 1370.37,
       "preco_max_historico": 2292.58,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-05-25 05:19",
+      "data_verificacao": "2026-05-25 08:53",
       "marketplaces": {
         "aliexpress": {
           "preco": 1504.76,
-          "cupom": null,
-          "valor_cupom": null,
+          "cupom": "SHHNRUP3K18S",
+          "valor_cupom": 27.04,
           "link": "https://s.click.aliexpress.com/e/_c4SAPL2b",
-          "alerta": null,
-          "data_checagem": "2026-05-25 05:19",
+          "alerta": "VALIDADO",
+          "data_checagem": "2026-05-25 08:53",
           "cupom_plataforma": "NAMR6"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Touyinger",
@@ -1077,7 +1077,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Touyinger",
@@ -1101,7 +1101,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Touyinger",
@@ -1125,7 +1125,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Vevshao",
@@ -1155,7 +1155,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Vevshao",
@@ -1185,7 +1185,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Vevshao",
@@ -1203,7 +1203,7 @@
           "link": "https://s.click.aliexpress.com/e/_c3QvX9OT",
           "alerta": null,
           "data_checagem": "2026-05-25 05:22",
-          "cupom_plataforma": "NAMR6"
+          "cupom_plataforma": "NAMR7"
         },
         "shopee": {
           "preco": 2092.09,
@@ -1215,7 +1215,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Voxflix",
@@ -1239,7 +1239,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Wanbo",
@@ -1267,7 +1267,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Wanbo",
@@ -1292,7 +1292,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Wanbo",
@@ -1317,7 +1317,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Wanbo",
@@ -1342,7 +1342,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Wupro",
@@ -1366,7 +1366,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Everycom",
@@ -1387,7 +1387,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     },
     {
       "marca": "Vevshao",
@@ -1396,15 +1396,15 @@
       "preco_min_historico": 1277.85,
       "preco_max_historico": 1747.08,
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-05-25 05:24",
+      "data_verificacao": "2026-05-25 08:54",
       "marketplaces": {
         "aliexpress": {
           "preco": 1440.31,
-          "cupom": null,
-          "valor_cupom": null,
+          "cupom": "A24BR50",
+          "valor_cupom": 270.36,
           "link": "https://s.click.aliexpress.com/e/_c4qK4bMz",
-          "alerta": null,
-          "data_checagem": "2026-05-25 05:24",
+          "alerta": "VALIDADO",
+          "data_checagem": "2026-05-25 08:54",
           "cupom_plataforma": "NAMR6"
         },
         "shopee": {
@@ -1417,7 +1417,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-05-25 08:35"
+      "ultima_atualizacao": "2026-05-25 08:59"
     }
   ]
 }
