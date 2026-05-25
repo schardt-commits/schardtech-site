@@ -83,6 +83,14 @@
           proj.ali_cupom_loja = mk.aliexpress.cupom;
         }
 
+        // Cupom plataforma Ali — usa o que o checker realmente aplicou no
+        // checkout (vem do precos.db). Sobrescreve o tier calculado por
+        // heurística em projetores-data.js (que usa preco_min e erra quando
+        // o preço base do anúncio fica acima de um limiar de tier maior).
+        if (mk.aliexpress && mk.aliexpress.cupom_plataforma) {
+          proj.ali_cupom_promo = mk.aliexpress.cupom_plataforma;
+        }
+
         merged++;
       } else if (indexIndisp.has(k)) {
         // Indisponível conhecido: zera preço para a regra existente filtrar
