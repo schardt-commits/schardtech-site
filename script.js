@@ -323,6 +323,85 @@ function downloadAnsiGuide() {
 }
 
 // ============================================================
+// BARRA DE QUEDAS (D-1 vs D) — topo do body, estilo CoinGecko
+// ============================================================
+function initBarraQuedas() {
+  if (document.getElementById('barra-quedas')) return;
+  const bp = window.SITE_BASE_PATH || (/\/projetor\//i.test(location.pathname) ? '../' : '');
+  fetch(bp + 'data/quedas-dia.json', { cache: 'no-store' })
+    .then(r => r.ok ? r.json() : null)
+    .then(j => {
+      if (!j || !Array.isArray(j.quedas) || !j.quedas.length) return;
+      _bqInjectStyles();
+      _bqInjectBar(j, bp);
+    })
+    .catch(() => {});
+}
+function _bqInjectStyles() {
+  if (document.getElementById('barra-quedas-css')) return;
+  const s = document.createElement('style');
+  s.id = 'barra-quedas-css';
+  s.textContent = `
+    #header .barra-quedas{margin:-18px 0 10px;background:rgba(11,11,11,0.92);backdrop-filter:blur(20px) saturate(1.5);color:#e6e6e6;font-size:12.5px;line-height:1;border-bottom:1px solid var(--border,#1f2937);font-family:inherit;display:flex;justify-content:center}
+    #header.scrolled .barra-quedas{margin-top:-12px}
+    .barra-quedas__inner{display:flex;align-items:center;gap:14px;padding:8px 20px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch;max-width:100%}
+    .barra-quedas__inner::-webkit-scrollbar{display:none;height:0}
+    .barra-quedas__label{font-weight:600;color:#94a3b8;flex-shrink:0;letter-spacing:.01em}
+    .barra-quedas__item{color:#e6e6e6;text-decoration:none;transition:color .15s;flex-shrink:0;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+    .barra-quedas__item:hover{color:#fff}
+    .barra-quedas__item:hover .barra-quedas__modelo{color:var(--primary,#7dd3fc)}
+    .barra-quedas__modelo{font-weight:600;transition:color .15s}
+    .barra-quedas__pct{color:#22c55e;font-weight:600}
+    .barra-quedas__sep{color:#334155;flex-shrink:0;user-select:none}
+    @media (max-width:600px){
+      #header .barra-quedas{margin:-18px 0 8px}
+      .barra-quedas__inner{padding:7px 14px;gap:12px;font-size:12px}
+      .barra-quedas__label{display:none}
+    }
+  `;
+  document.head.appendChild(s);
+}
+function _bqInjectBar(j, bp) {
+  const wrap = document.createElement('div');
+  wrap.id = 'barra-quedas';
+  wrap.className = 'barra-quedas';
+  const inner = document.createElement('div');
+  inner.className = 'barra-quedas__inner';
+  const labelData = j.data_coleta + (j.hora_coleta ? ' ' + j.hora_coleta : '');
+  const label = document.createElement('span');
+  label.className = 'barra-quedas__label';
+  label.textContent = '📉 Quedas ' + labelData + ':';
+  inner.appendChild(label);
+  j.quedas.forEach((q, i) => {
+    if (i > 0) {
+      const sep = document.createElement('span');
+      sep.className = 'barra-quedas__sep';
+      sep.textContent = '·';
+      inner.appendChild(sep);
+    }
+    const a = document.createElement('a');
+    a.className = 'barra-quedas__item';
+    a.href = bp + 'projetor/' + q.slug + '.html';
+    const modelo = document.createElement('span');
+    modelo.className = 'barra-quedas__modelo';
+    modelo.textContent = q.marca + ' ' + q.modelo;
+    const pct = document.createElement('span');
+    pct.className = 'barra-quedas__pct';
+    pct.textContent = '▼ ' + Math.abs(q.delta_pct).toFixed(1) + '%';
+    a.appendChild(modelo);
+    a.appendChild(pct);
+    inner.appendChild(a);
+  });
+  wrap.appendChild(inner);
+  const header = document.getElementById('header');
+  if (header) {
+    header.insertBefore(wrap, header.firstChild);
+  } else {
+    document.body.insertBefore(wrap, document.body.firstChild);
+  }
+}
+
+// ============================================================
 // INIT
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -332,6 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initCounters();
   observeFadeIn();
+  initBarraQuedas();
   document.getElementById('calcAnsiBtn')?.addEventListener('click', calcAnsiLumens);
   document.getElementById('downloadAnsiBtn')?.addEventListener('click', downloadAnsiGuide);
 });
