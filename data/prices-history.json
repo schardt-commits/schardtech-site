@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "gerado_em": "2026-05-27 10:41:44",
-    "total_modelos": 62,
-    "total_pontos": 1200,
+    "gerado_em": "2026-05-27 16:24:13",
+    "total_modelos": 63,
+    "total_pontos": 1201,
     "fonte": "precos.db (tabela precos, preco_final)"
   },
   "modelos": {
@@ -870,6 +870,21 @@
       "atual": 804.68,
       "data_min": "2026-05-22",
       "data_max": "2026-05-18"
+    },
+    "Bettdow|AC1095": {
+      "pontos": [
+        {
+          "data": "2026-05-27 16:23",
+          "loja": "shopee",
+          "preco": 2735.0
+        }
+      ],
+      "n": 1,
+      "min": 2735.0,
+      "max": 2735.0,
+      "atual": 2735.0,
+      "data_min": "2026-05-27",
+      "data_max": "2026-05-27"
     },
     "Byintek|Love U12": {
       "pontos": [
