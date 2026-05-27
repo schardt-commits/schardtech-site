@@ -355,8 +355,8 @@ function _bqInjectStyles() {
     .barra-quedas__sep{color:#334155;flex-shrink:0;user-select:none}
     @media (max-width:600px){
       #header .barra-quedas{margin:-18px 0 8px}
-      .barra-quedas__inner{padding:7px 14px;gap:12px;font-size:12px}
-      .barra-quedas__label{display:none}
+      .barra-quedas__inner{padding:7px 14px;gap:10px;font-size:12px;justify-content:flex-start}
+      .barra-quedas__label{font-size:11.5px}
     }
   `;
   document.head.appendChild(s);
