@@ -1,57 +1,57 @@
 {
-  "data_coleta": "26/05",
-  "hora_coleta": "09:17",
-  "total_quedas": 8,
+  "data_coleta": "27/05",
+  "hora_coleta": "10:00",
+  "total_quedas": 17,
   "quedas": [
     {
-      "marca": "Progaga",
-      "modelo": "PG370",
-      "slug": "progaga-pg370",
-      "preco_atual": 380.11,
-      "preco_ontem": 397.98,
-      "delta": -17.87,
-      "delta_pct": -4.49,
-      "data_checagem": "2026-05-26 09:17"
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 1858.45,
+      "preco_ontem": 2258.78,
+      "delta": -400.33,
+      "delta_pct": -17.72,
+      "data_checagem": "2026-05-27 10:00"
     },
     {
-      "marca": "Everycom",
-      "modelo": "Cubelite E1",
-      "slug": "everycom-cubelite-e1",
-      "preco_atual": 1999.0,
-      "preco_ontem": 2037.0,
-      "delta": -38.0,
-      "delta_pct": -1.87,
-      "data_checagem": "2026-05-26 09:11"
+      "marca": "Touyinger",
+      "modelo": "L9W Ultra",
+      "slug": "touyinger-l9w-ultra",
+      "preco_atual": 486.01,
+      "preco_ontem": 545.67,
+      "delta": -59.66,
+      "delta_pct": -10.93,
+      "data_checagem": "2026-05-27 05:20"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98W",
-      "slug": "thundeal-td98w",
-      "preco_atual": 1479.16,
-      "preco_ontem": 1504.76,
-      "delta": -25.6,
-      "delta_pct": -1.7,
-      "data_checagem": "2026-05-26 05:19"
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 930.48,
+      "preco_ontem": 1020.69,
+      "delta": -90.21,
+      "delta_pct": -8.84,
+      "data_checagem": "2026-05-27 10:00"
     },
     {
-      "marca": "Dangbei",
-      "modelo": "Mars Pro 2",
-      "slug": "dangbei-mars-pro-2",
-      "preco_atual": 7255.62,
-      "preco_ontem": 7372.62,
-      "delta": -117.0,
-      "delta_pct": -1.59,
-      "data_checagem": "2026-05-26 05:06"
+      "marca": "Byintek",
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 399.98,
+      "preco_ontem": 431.17,
+      "delta": -31.19,
+      "delta_pct": -7.23,
+      "data_checagem": "2026-05-27 10:00"
     },
     {
-      "marca": "Formovie",
-      "modelo": "Cinema Edge",
-      "slug": "formovie-cinema-edge",
-      "preco_atual": 8884.84,
-      "preco_ontem": 8997.71,
-      "delta": -112.87,
-      "delta_pct": -1.25,
-      "data_checagem": "2026-05-26 05:08"
+      "marca": "Magcubic",
+      "modelo": "HY300",
+      "slug": "magcubic-hy300",
+      "preco_atual": 197.9,
+      "preco_ontem": 212.8,
+      "delta": -14.9,
+      "delta_pct": -7.0,
+      "data_checagem": "2026-05-27 10:00"
     }
   ]
 }
