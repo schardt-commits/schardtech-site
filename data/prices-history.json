@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "gerado_em": "2026-05-27 16:24:13",
+    "gerado_em": "2026-05-27 16:47:24",
     "total_modelos": 63,
-    "total_pontos": 1201,
+    "total_pontos": 1202,
     "fonte": "precos.db (tabela precos, preco_final)"
   },
   "modelos": {
@@ -877,12 +877,17 @@
           "data": "2026-05-27 16:23",
           "loja": "shopee",
           "preco": 2735.0
+        },
+        {
+          "data": "2026-05-27 16:47",
+          "loja": "shopee",
+          "preco": 2675.0
         }
       ],
-      "n": 1,
-      "min": 2735.0,
+      "n": 2,
+      "min": 2675.0,
       "max": 2735.0,
-      "atual": 2735.0,
+      "atual": 2675.0,
       "data_min": "2026-05-27",
       "data_max": "2026-05-27"
     },
