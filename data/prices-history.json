@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "gerado_em": "2026-05-27 10:05:15",
+    "gerado_em": "2026-05-27 10:41:44",
     "total_modelos": 62,
-    "total_pontos": 1202,
+    "total_pontos": 1200,
     "fonte": "precos.db (tabela precos, preco_final)"
   },
   "modelos": {
@@ -3384,11 +3384,6 @@
           "preco": 523.48
         },
         {
-          "data": "2026-05-13 11:57",
-          "loja": "shopee",
-          "preco": 306.85
-        },
-        {
           "data": "2026-05-14 09:00",
           "loja": "shopee",
           "preco": 523.48
@@ -3397,11 +3392,6 @@
           "data": "2026-05-15 09:59",
           "loja": "shopee",
           "preco": 523.48
-        },
-        {
-          "data": "2026-05-18 00:39",
-          "loja": "shopee",
-          "preco": 341.05
         },
         {
           "data": "2026-05-19 02:00",
@@ -3449,11 +3439,11 @@
           "preco": 523.48
         }
       ],
-      "n": 15,
-      "min": 306.85,
+      "n": 13,
+      "min": 473.48,
       "max": 523.48,
       "atual": 523.48,
-      "data_min": "2026-05-13",
+      "data_min": "2026-05-22",
       "data_max": "2026-05-11"
     },
     "Magcubic|HY320 Mini": {
