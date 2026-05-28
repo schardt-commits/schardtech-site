@@ -1,9 +1,9 @@
 {
   "data_coleta": "28/05",
-  "hora_coleta": "08:27",
+  "hora_coleta": "08:47",
   "data_ontem": "27/05",
   "data_hoje": "28/05",
-  "total_quedas": 8,
+  "total_quedas": 9,
   "quedas": [
     {
       "marca": "Wanbo",
@@ -13,7 +13,7 @@
       "preco_ontem": 916.14,
       "delta": -199.0,
       "delta_pct": -21.72,
-      "data_checagem": "2026-05-28 05:25"
+      "data_checagem": "2026-05-28 08:47"
     },
     {
       "marca": "Everycom",
@@ -46,14 +46,14 @@
       "data_checagem": "2026-05-28 05:18"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG370",
-      "slug": "progaga-pg370",
-      "preco_atual": 384.16,
-      "preco_ontem": 391.49,
-      "delta": -7.33,
-      "delta_pct": -1.87,
-      "data_checagem": "2026-05-28 08:27"
+      "marca": "Wanbo",
+      "modelo": "T2 Ultra",
+      "slug": "wanbo-t2-ultra",
+      "preco_atual": 1340.0,
+      "preco_ontem": 1350.4,
+      "delta": -10.4,
+      "delta_pct": -0.77,
+      "data_checagem": "2026-05-28 08:47"
     }
   ]
 }
