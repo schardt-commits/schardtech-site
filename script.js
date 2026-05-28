@@ -367,7 +367,9 @@ function _bqInjectBar(j, bp) {
   wrap.className = 'barra-quedas';
   const inner = document.createElement('div');
   inner.className = 'barra-quedas__inner';
-  const labelData = j.data_coleta + (j.hora_coleta ? ' ' + j.hora_coleta : '');
+  const labelData = (j.data_ontem && j.data_hoje)
+    ? j.data_ontem + ' → ' + j.data_hoje + (j.hora_coleta ? ' ' + j.hora_coleta : '')
+    : j.data_coleta + (j.hora_coleta ? ' ' + j.hora_coleta : '');
   const label = document.createElement('span');
   label.className = 'barra-quedas__label';
   label.textContent = '📉 Quedas ' + labelData + ':';
