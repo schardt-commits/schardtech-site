@@ -1,6 +1,6 @@
 {
   "data_coleta": "29/05",
-  "hora_coleta": "09:54",
+  "hora_coleta": "18:24",
   "data_ontem": "28/05",
   "data_hoje": "29/05",
   "total_quedas": 4,
@@ -9,21 +9,31 @@
       "marca": "Vevshao",
       "modelo": "A22",
       "slug": "vevshao-a22",
-      "preco_atual": 1023.52,
+      "preco_atual": 1021.91,
       "preco_ontem": 1152.65,
-      "delta": -129.13,
-      "delta_pct": -11.2,
-      "data_checagem": "2026-05-29 09:54"
+      "delta": -130.74,
+      "delta_pct": -11.34,
+      "data_checagem": "2026-05-29 18:24"
     },
     {
       "marca": "Formovie",
       "modelo": "Xming Episode One",
       "slug": "formovie-xming-episode-one",
-      "preco_atual": 1085.55,
+      "preco_atual": 1086.36,
       "preco_ontem": 1114.17,
-      "delta": -28.62,
-      "delta_pct": -2.57,
-      "data_checagem": "2026-05-29 08:59"
+      "delta": -27.81,
+      "delta_pct": -2.5,
+      "data_checagem": "2026-05-29 15:45"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A24 MAX",
+      "slug": "vevshao-a24-max",
+      "preco_atual": 1436.35,
+      "preco_ontem": 1457.15,
+      "delta": -20.8,
+      "delta_pct": -1.43,
+      "data_checagem": "2026-05-29 18:24"
     },
     {
       "marca": "Wanbo",
@@ -33,17 +43,7 @@
       "preco_ontem": 2331.28,
       "delta": -32.2,
       "delta_pct": -1.38,
-      "data_checagem": "2026-05-29 09:54"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "A24 MAX",
-      "slug": "vevshao-a24-max",
-      "preco_atual": 1438.62,
-      "preco_ontem": 1457.15,
-      "delta": -18.53,
-      "delta_pct": -1.27,
-      "data_checagem": "2026-05-29 09:54"
+      "data_checagem": "2026-05-29 18:24"
     }
   ]
 }
