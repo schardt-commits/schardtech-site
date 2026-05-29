@@ -1,59 +1,59 @@
 {
-  "data_coleta": "28/05",
-  "hora_coleta": "08:47",
-  "data_ontem": "27/05",
-  "data_hoje": "28/05",
-  "total_quedas": 9,
+  "data_coleta": "29/05",
+  "hora_coleta": "09:54",
+  "data_ontem": "28/05",
+  "data_hoje": "29/05",
+  "total_quedas": 6,
   "quedas": [
     {
-      "marca": "Wanbo",
-      "modelo": "Dali 1",
-      "slug": "wanbo-dali-1",
-      "preco_atual": 717.14,
-      "preco_ontem": 916.14,
-      "delta": -199.0,
-      "delta_pct": -21.72,
-      "data_checagem": "2026-05-28 08:47"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 560.37,
-      "preco_ontem": 701.71,
-      "delta": -141.34,
-      "delta_pct": -20.14,
-      "data_checagem": "2026-05-28 08:27"
-    },
-    {
       "marca": "Magcubic",
-      "modelo": "HY450",
-      "slug": "magcubic-hy450",
-      "preco_atual": 732.32,
-      "preco_ontem": 782.13,
-      "delta": -49.81,
-      "delta_pct": -6.37,
-      "data_checagem": "2026-05-28 08:27"
+      "modelo": "HY350",
+      "slug": "magcubic-hy350",
+      "preco_atual": 542.8,
+      "preco_ontem": 714.6,
+      "delta": -171.8,
+      "delta_pct": -24.04,
+      "data_checagem": "2026-05-29 09:54"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 483.76,
-      "preco_ontem": 498.3,
-      "delta": -14.54,
-      "delta_pct": -2.92,
-      "data_checagem": "2026-05-28 05:18"
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 1023.52,
+      "preco_ontem": 1152.65,
+      "delta": -129.13,
+      "delta_pct": -11.2,
+      "data_checagem": "2026-05-29 09:54"
+    },
+    {
+      "marca": "Formovie",
+      "modelo": "Xming Episode One",
+      "slug": "formovie-xming-episode-one",
+      "preco_atual": 1085.55,
+      "preco_ontem": 1114.17,
+      "delta": -28.62,
+      "delta_pct": -2.57,
+      "data_checagem": "2026-05-29 08:59"
     },
     {
       "marca": "Wanbo",
-      "modelo": "T2 Ultra",
-      "slug": "wanbo-t2-ultra",
-      "preco_atual": 1340.0,
-      "preco_ontem": 1350.4,
-      "delta": -10.4,
-      "delta_pct": -0.77,
-      "data_checagem": "2026-05-28 08:47"
+      "modelo": "X5 Pro",
+      "slug": "wanbo-x5-pro",
+      "preco_atual": 2299.08,
+      "preco_ontem": 2331.28,
+      "delta": -32.2,
+      "delta_pct": -1.38,
+      "data_checagem": "2026-05-29 09:54"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A24 MAX",
+      "slug": "vevshao-a24-max",
+      "preco_atual": 1438.62,
+      "preco_ontem": 1457.15,
+      "delta": -18.53,
+      "delta_pct": -1.27,
+      "data_checagem": "2026-05-29 09:54"
     }
   ]
 }
