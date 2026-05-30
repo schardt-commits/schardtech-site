@@ -1,19 +1,59 @@
 {
   "data_coleta": "30/05",
-  "hora_coleta": "00:25",
+  "hora_coleta": "16:28",
   "data_ontem": "29/05",
   "data_hoje": "30/05",
-  "total_quedas": 1,
+  "total_quedas": 8,
   "quedas": [
     {
+      "marca": "Magcubic",
+      "modelo": "HY450",
+      "slug": "magcubic-hy450",
+      "preco_atual": 704.21,
+      "preco_ontem": 827.08,
+      "delta": -122.87,
+      "delta_pct": -14.86,
+      "data_checagem": "2026-05-30 16:28"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY320 Mini",
+      "slug": "magcubic-hy320-mini",
+      "preco_atual": 317.3,
+      "preco_ontem": 341.05,
+      "delta": -23.75,
+      "delta_pct": -6.96,
+      "data_checagem": "2026-05-30 16:28"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 536.55,
+      "preco_ontem": 561.16,
+      "delta": -24.61,
+      "delta_pct": -4.39,
+      "data_checagem": "2026-05-30 15:16"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD95W",
+      "slug": "thundeal-td95w",
+      "preco_atual": 690.38,
+      "preco_ontem": 719.85,
+      "delta": -29.47,
+      "delta_pct": -4.09,
+      "data_checagem": "2026-05-30 15:17"
+    },
+    {
       "marca": "Progaga",
-      "modelo": "PG370",
-      "slug": "progaga-pg370",
-      "preco_atual": 383.16,
-      "preco_ontem": 439.05,
-      "delta": -55.89,
-      "delta_pct": -12.73,
-      "data_checagem": "2026-05-30 00:25"
+      "modelo": "PG610W",
+      "slug": "progaga-pg610w",
+      "preco_atual": 1195.64,
+      "preco_ontem": 1231.08,
+      "delta": -35.44,
+      "delta_pct": -2.88,
+      "data_checagem": "2026-05-30 15:15"
     }
   ]
 }
