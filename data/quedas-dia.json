@@ -1,49 +1,19 @@
 {
-  "data_coleta": "29/05",
-  "hora_coleta": "18:24",
-  "data_ontem": "28/05",
-  "data_hoje": "29/05",
-  "total_quedas": 4,
+  "data_coleta": "30/05",
+  "hora_coleta": "00:25",
+  "data_ontem": "29/05",
+  "data_hoje": "30/05",
+  "total_quedas": 1,
   "quedas": [
     {
-      "marca": "Vevshao",
-      "modelo": "A22",
-      "slug": "vevshao-a22",
-      "preco_atual": 1021.91,
-      "preco_ontem": 1152.65,
-      "delta": -130.74,
-      "delta_pct": -11.34,
-      "data_checagem": "2026-05-29 18:24"
-    },
-    {
-      "marca": "Formovie",
-      "modelo": "Xming Episode One",
-      "slug": "formovie-xming-episode-one",
-      "preco_atual": 1086.36,
-      "preco_ontem": 1114.17,
-      "delta": -27.81,
-      "delta_pct": -2.5,
-      "data_checagem": "2026-05-29 15:45"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "A24 MAX",
-      "slug": "vevshao-a24-max",
-      "preco_atual": 1436.35,
-      "preco_ontem": 1457.15,
-      "delta": -20.8,
-      "delta_pct": -1.43,
-      "data_checagem": "2026-05-29 18:24"
-    },
-    {
-      "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 2299.08,
-      "preco_ontem": 2331.28,
-      "delta": -32.2,
-      "delta_pct": -1.38,
-      "data_checagem": "2026-05-29 18:24"
+      "marca": "Progaga",
+      "modelo": "PG370",
+      "slug": "progaga-pg370",
+      "preco_atual": 383.16,
+      "preco_ontem": 439.05,
+      "delta": -55.89,
+      "delta_pct": -12.73,
+      "data_checagem": "2026-05-30 00:25"
     }
   ]
 }
