@@ -1,59 +1,59 @@
 {
   "data_coleta": "31/05",
-  "hora_coleta": "03:45",
+  "hora_coleta": "15:32",
   "data_ontem": "30/05",
   "data_hoje": "31/05",
-  "total_quedas": 11,
+  "total_quedas": 26,
   "quedas": [
     {
       "marca": "Byintek",
       "modelo": "Plato T5 MAX",
       "slug": "byintek-plato-t5-max",
-      "preco_atual": 1307.9,
+      "preco_atual": 1277.9,
       "preco_ontem": 1751.05,
-      "delta": -443.15,
-      "delta_pct": -25.31,
-      "data_checagem": "2026-05-31 03:45"
+      "delta": -473.15,
+      "delta_pct": -27.02,
+      "data_checagem": "2026-05-31 15:32"
     },
     {
       "marca": "Vevshao",
       "modelo": "A22",
       "slug": "vevshao-a22",
-      "preco_atual": 1021.91,
+      "preco_atual": 991.91,
       "preco_ontem": 1248.57,
-      "delta": -226.66,
-      "delta_pct": -18.15,
-      "data_checagem": "2026-05-31 03:45"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG370",
-      "slug": "progaga-pg370",
-      "preco_atual": 383.16,
-      "preco_ontem": 439.05,
-      "delta": -55.89,
-      "delta_pct": -12.73,
-      "data_checagem": "2026-05-31 00:25"
+      "delta": -256.66,
+      "delta_pct": -20.56,
+      "data_checagem": "2026-05-31 15:32"
     },
     {
       "marca": "Byintek",
       "modelo": "Love U14",
       "slug": "byintek-u14",
-      "preco_atual": 1003.34,
+      "preco_atual": 973.34,
       "preco_ontem": 1076.45,
-      "delta": -73.11,
-      "delta_pct": -6.79,
-      "data_checagem": "2026-05-31 03:45"
+      "delta": -103.11,
+      "delta_pct": -9.58,
+      "data_checagem": "2026-05-31 15:32"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1458.16,
-      "preco_ontem": 1563.93,
-      "delta": -105.77,
-      "delta_pct": -6.76,
-      "data_checagem": "2026-05-31 00:28"
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 875.47,
+      "preco_ontem": 947.27,
+      "delta": -71.8,
+      "delta_pct": -7.58,
+      "data_checagem": "2026-05-31 15:09"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 461.81,
+      "preco_ontem": 496.3,
+      "delta": -34.49,
+      "delta_pct": -6.95,
+      "data_checagem": "2026-05-31 15:32"
     }
   ]
 }
