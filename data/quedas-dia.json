@@ -1,59 +1,59 @@
 {
-  "data_coleta": "30/05",
-  "hora_coleta": "16:28",
-  "data_ontem": "29/05",
-  "data_hoje": "30/05",
-  "total_quedas": 8,
+  "data_coleta": "31/05",
+  "hora_coleta": "03:45",
+  "data_ontem": "30/05",
+  "data_hoje": "31/05",
+  "total_quedas": 11,
   "quedas": [
     {
-      "marca": "Magcubic",
-      "modelo": "HY450",
-      "slug": "magcubic-hy450",
-      "preco_atual": 704.21,
-      "preco_ontem": 827.08,
-      "delta": -122.87,
-      "delta_pct": -14.86,
-      "data_checagem": "2026-05-30 16:28"
+      "marca": "Byintek",
+      "modelo": "Plato T5 MAX",
+      "slug": "byintek-plato-t5-max",
+      "preco_atual": 1307.9,
+      "preco_ontem": 1751.05,
+      "delta": -443.15,
+      "delta_pct": -25.31,
+      "data_checagem": "2026-05-31 03:45"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "HY320 Mini",
-      "slug": "magcubic-hy320-mini",
-      "preco_atual": 317.3,
-      "preco_ontem": 341.05,
-      "delta": -23.75,
-      "delta_pct": -6.96,
-      "data_checagem": "2026-05-30 16:28"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 536.55,
-      "preco_ontem": 561.16,
-      "delta": -24.61,
-      "delta_pct": -4.39,
-      "data_checagem": "2026-05-30 15:16"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD95W",
-      "slug": "thundeal-td95w",
-      "preco_atual": 690.38,
-      "preco_ontem": 719.85,
-      "delta": -29.47,
-      "delta_pct": -4.09,
-      "data_checagem": "2026-05-30 15:17"
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 1021.91,
+      "preco_ontem": 1248.57,
+      "delta": -226.66,
+      "delta_pct": -18.15,
+      "data_checagem": "2026-05-31 03:45"
     },
     {
       "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 1195.64,
-      "preco_ontem": 1231.08,
-      "delta": -35.44,
-      "delta_pct": -2.88,
-      "data_checagem": "2026-05-30 15:15"
+      "modelo": "PG370",
+      "slug": "progaga-pg370",
+      "preco_atual": 383.16,
+      "preco_ontem": 439.05,
+      "delta": -55.89,
+      "delta_pct": -12.73,
+      "data_checagem": "2026-05-31 00:25"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U14",
+      "slug": "byintek-u14",
+      "preco_atual": 1003.34,
+      "preco_ontem": 1076.45,
+      "delta": -73.11,
+      "delta_pct": -6.79,
+      "data_checagem": "2026-05-31 03:45"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1458.16,
+      "preco_ontem": 1563.93,
+      "delta": -105.77,
+      "delta_pct": -6.76,
+      "data_checagem": "2026-05-31 00:28"
     }
   ]
 }
