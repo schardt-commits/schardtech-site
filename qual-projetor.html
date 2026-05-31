@@ -1079,7 +1079,9 @@
 
       const precos = hist.pontos.map(p => p.preco);
       const min = Math.min(...precos), max = Math.max(...precos);
-      const media = precos.reduce((a,b) => a+b, 0) / precos.length;
+      const __porDia = {}; hist.pontos.forEach(p => { const k = p.data.slice(0,10); if (__porDia[k] == null || p.preco < __porDia[k]) __porDia[k] = p.preco; });
+      const __mins = Object.keys(__porDia).map(k => __porDia[k]);
+      const media = __mins.reduce((a,b) => a+b, 0) / __mins.length;  // media-minimos-diarios-2026-05-31
 
       // SVG sparkline
       const w = 90, h = 22, pad = 2;

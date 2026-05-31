@@ -964,7 +964,7 @@
         }
 
         // Atualiza stats grid
-        var media = pontos.reduce(function(s, p) { return s + p.preco; }, 0) / pontos.length;
+        var media = (function(){ var d={}; pontos.forEach(function(p){var k=p.data.slice(0,10); if(d[k]==null||p.preco<d[k])d[k]=p.preco;}); var a=Object.keys(d).map(function(k){return d[k];}); return a.reduce(function(x,y){return x+y;},0)/a.length; })();  // media-minimos-diarios-2026-05-31
         var statsWrap = document.querySelector('.price-stats-grid');
         if (statsWrap) {
           statsWrap.innerHTML =
@@ -980,8 +980,7 @@
           pontos.forEach(function(p) { if (p.data > dataMaisRecente) dataMaisRecente = p.data.slice(0, 10); });
           var precosHoje = pontos.filter(function(p) { return p.data.slice(0, 10) === dataMaisRecente; }).map(function(p) { return p.preco; });
           var atual = precosHoje.length ? Math.min.apply(null, precosHoje) : pontos[pontos.length - 1].preco;
-          var precosArr = pontos.map(function(p) { return p.preco; });
-          var media = precosArr.reduce(function(a,b) { return a+b; }, 0) / precosArr.length;
+          var media = (function(){ var d={}; pontos.forEach(function(p){var k=p.data.slice(0,10); if(d[k]==null||p.preco<d[k])d[k]=p.preco;}); var a=Object.keys(d).map(function(k){return d[k];}); return a.reduce(function(x,y){return x+y;},0)/a.length; })();  // media-minimos-diarios-2026-05-31
           var distMedia = ((atual - media) / media) * 100;
           var icon, classe, titulo, sub;
           if (distMedia <= -3) {
