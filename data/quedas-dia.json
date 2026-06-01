@@ -1,59 +1,59 @@
 {
   "data_coleta": "01/06",
-  "hora_coleta": "01:07",
+  "hora_coleta": "15:19",
   "data_ontem": "31/05",
   "data_hoje": "01/06",
-  "total_quedas": 46,
+  "total_quedas": 43,
   "quedas": [
     {
       "marca": "Thundeal",
       "modelo": "TD98PRO ATV",
       "slug": "thundeal-td98pro-atv",
-      "preco_atual": 1101.7,
+      "preco_atual": 1093.49,
       "preco_ontem": 1924.35,
-      "delta": -822.65,
-      "delta_pct": -42.75,
-      "data_checagem": "2026-06-01 00:52"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 414.46,
-      "preco_ontem": 697.94,
-      "delta": -283.48,
-      "delta_pct": -40.62,
-      "data_checagem": "2026-06-01 00:50"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "V60",
-      "slug": "vevshao-v60",
-      "preco_atual": 1588.74,
-      "preco_ontem": 2653.47,
-      "delta": -1064.73,
-      "delta_pct": -40.13,
-      "data_checagem": "2026-06-01 01:07"
+      "delta": -830.86,
+      "delta_pct": -43.18,
+      "data_checagem": "2026-06-01 15:18"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD98PRO",
       "slug": "thundeal-td98pro",
-      "preco_atual": 1116.73,
+      "preco_atual": 1063.56,
       "preco_ontem": 1860.69,
-      "delta": -743.96,
-      "delta_pct": -39.98,
-      "data_checagem": "2026-06-01 00:52"
+      "delta": -797.13,
+      "delta_pct": -42.84,
+      "data_checagem": "2026-06-01 15:18"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98W",
+      "slug": "thundeal-td98w",
+      "preco_atual": 1305.58,
+      "preco_ontem": 2195.43,
+      "delta": -889.85,
+      "delta_pct": -40.53,
+      "data_checagem": "2026-06-01 15:19"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 428.31,
+      "preco_ontem": 697.94,
+      "delta": -269.63,
+      "delta_pct": -38.63,
+      "data_checagem": "2026-06-01 15:16"
     },
     {
       "marca": "Jenovox",
       "modelo": "M5000 Mini",
       "slug": "jenovox-m5000-mini",
-      "preco_atual": 1600.75,
+      "preco_atual": 1588.04,
       "preco_ontem": 2514.69,
-      "delta": -913.94,
-      "delta_pct": -36.34,
-      "data_checagem": "2026-06-01 00:43"
+      "delta": -926.65,
+      "delta_pct": -36.85,
+      "data_checagem": "2026-06-01 15:10"
     }
   ]
 }
