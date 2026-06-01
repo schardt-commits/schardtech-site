@@ -7,16 +7,6 @@
   "quedas": [
     {
       "marca": "Thundeal",
-      "modelo": "TD98W",
-      "slug": "thundeal-td98w",
-      "preco_atual": 1245.29,
-      "preco_ontem": 2195.43,
-      "delta": -950.14,
-      "delta_pct": -43.28,
-      "data_checagem": "2026-06-01 00:53"
-    },
-    {
-      "marca": "Thundeal",
       "modelo": "TD98PRO ATV",
       "slug": "thundeal-td98pro-atv",
       "preco_atual": 1101.7,
@@ -54,6 +44,16 @@
       "delta": -743.96,
       "delta_pct": -39.98,
       "data_checagem": "2026-06-01 00:52"
+    },
+    {
+      "marca": "Jenovox",
+      "modelo": "M5000 Mini",
+      "slug": "jenovox-m5000-mini",
+      "preco_atual": 1600.75,
+      "preco_ontem": 2514.69,
+      "delta": -913.94,
+      "delta_pct": -36.34,
+      "data_checagem": "2026-06-01 00:43"
     }
   ]
 }
