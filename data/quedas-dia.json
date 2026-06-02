@@ -1,59 +1,59 @@
 {
-  "data_coleta": "01/06",
-  "hora_coleta": "15:18",
-  "data_ontem": "31/05",
-  "data_hoje": "01/06",
-  "total_quedas": 43,
+  "data_coleta": "02/06",
+  "hora_coleta": "00:46",
+  "data_ontem": "01/06",
+  "data_hoje": "02/06",
+  "total_quedas": 12,
   "quedas": [
     {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO ATV",
-      "slug": "thundeal-td98pro-atv",
-      "preco_atual": 1093.49,
-      "preco_ontem": 1924.35,
-      "delta": -830.86,
-      "delta_pct": -43.18,
-      "data_checagem": "2026-06-01 15:18"
+      "marca": "Vevshao",
+      "modelo": "A24 MAX",
+      "slug": "vevshao-a24-max",
+      "preco_atual": 1189.18,
+      "preco_ontem": 1460.86,
+      "delta": -271.68,
+      "delta_pct": -18.6,
+      "data_checagem": "2026-06-02 00:46"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1063.56,
-      "preco_ontem": 1860.69,
-      "delta": -797.13,
-      "delta_pct": -42.84,
-      "data_checagem": "2026-06-01 15:18"
+      "marca": "Magcubic",
+      "modelo": "HY310",
+      "slug": "magcubic-hy310",
+      "preco_atual": 323.0,
+      "preco_ontem": 373.15,
+      "delta": -50.15,
+      "delta_pct": -13.44,
+      "data_checagem": "2026-06-02 00:46"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 428.31,
-      "preco_ontem": 697.94,
-      "delta": -269.63,
-      "delta_pct": -38.63,
-      "data_checagem": "2026-06-01 15:16"
+      "marca": "Vevshao",
+      "modelo": "V60",
+      "slug": "vevshao-v60",
+      "preco_atual": 1576.96,
+      "preco_ontem": 1794.31,
+      "delta": -217.35,
+      "delta_pct": -12.11,
+      "data_checagem": "2026-06-02 00:34"
     },
     {
-      "marca": "Jenovox",
-      "modelo": "M5000 Mini",
-      "slug": "jenovox-m5000-mini",
-      "preco_atual": 1588.04,
-      "preco_ontem": 2514.69,
-      "delta": -926.65,
-      "delta_pct": -36.85,
-      "data_checagem": "2026-06-01 15:10"
+      "marca": "Magcubic",
+      "modelo": "HY450",
+      "slug": "magcubic-hy450",
+      "preco_atual": 686.0,
+      "preco_ontem": 777.08,
+      "delta": -91.08,
+      "delta_pct": -11.72,
+      "data_checagem": "2026-06-02 00:46"
     },
     {
-      "marca": "FlixTone",
-      "modelo": "D9W Mini",
-      "slug": "flixtone-d9w-mini",
-      "preco_atual": 847.11,
-      "preco_ontem": 1313.87,
-      "delta": -466.76,
-      "delta_pct": -35.53,
-      "data_checagem": "2026-06-01 15:07"
+      "marca": "Magcubic",
+      "modelo": "HY300",
+      "slug": "magcubic-hy300",
+      "preco_atual": 200.6,
+      "preco_ontem": 220.15,
+      "delta": -19.55,
+      "delta_pct": -8.88,
+      "data_checagem": "2026-06-02 00:46"
     }
   ]
 }
