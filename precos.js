@@ -83,18 +83,35 @@
     var da = ('0' + d.getDate()).slice(-2);
     return y + '-' + mo + '-' + da;
   }
-  // pct = (atual − preço de N dias atrás) / preço de N dias atrás * 100.
-  // "preço de N dias atrás" = mínimo diário mais recente com data <= hoje−N.
-  // Sem nenhum ponto nessa janela (histórico não cobre) → null → célula "—".
-  function varNd(porDia, datasAsc, atual, n) {
-    if (atual == null) return null;
-    var target = dateMinusDays(n);
-    var ref = null;
-    for (var i = datasAsc.length - 1; i >= 0; i--) {
-      if (datasAsc[i] <= target) { ref = porDia[datasAsc[i]]; break; }
+  // Soma/subtrai dias de uma data 'YYYY-MM-DD' e devolve string ISO.
+  function addDaysStr(dateStr, delta) {
+    var p = String(dateStr).split('-');
+    var d = new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
+    d.setDate(d.getDate() + delta);
+    var y = d.getFullYear(), mo = ('0' + (d.getMonth() + 1)).slice(-2), da = ('0' + d.getDate()).slice(-2);
+    return y + '-' + mo + '-' + da;
+  }
+
+  // Variação = (menor preço do dia mais recente − MÉDIA dos menores preços
+  // diários dos N dias ANTERIORES) ÷ essa média × 100.
+  // Cada "menor do dia" (porDia) já é o mais barato entre TODAS as plataformas
+  // (Ali/Shopee/ML) naquele dia. Pra N=1 a média de 1 dia = ontem → "hoje vs ontem".
+  // Sem nenhum dia na janela (produto novo demais) → null → célula "—".
+  function varNd(porDia, datasAsc, n) {
+    if (!datasAsc.length) return null;
+    var latest = datasAsc[datasAsc.length - 1];
+    var hoje = porDia[latest];
+    if (hoje == null) return null;
+    var lo = addDaysStr(latest, -n);
+    var soma = 0, cont = 0;
+    for (var i = 0; i < datasAsc.length; i++) {
+      var d = datasAsc[i];
+      if (d >= lo && d < latest) { soma += porDia[d]; cont++; }  // dias anteriores na janela
     }
-    if (ref == null || ref === 0) return null;
-    return ((atual - ref) / ref) * 100;
+    if (!cont) return null;
+    var media = soma / cont;
+    if (media === 0) return null;
+    return ((hoje - media) / media) * 100;
   }
 
   // ---------- sparkline (SVG inline, mesmo estilo de qual-projetor) ----------
@@ -137,11 +154,7 @@
       if (h && h.pontos && h.pontos.length) {
         var porDia = porDiaMins(h.pontos);
         var datasAsc = Object.keys(porDia).sort();
-        // Base = menor preço do dia mais recente (mesma fonte dos dois lados →
-        // apples-to-apples, igual à barra de quedas). Fallback se faltar dia.
-        var atual = datasAsc.length ? porDia[datasAsc[datasAsc.length - 1]]
-                  : ((h.atual != null) ? h.atual : proj.preco_atual);
-        WINDOWS.forEach(function (n) { v[n] = varNd(porDia, datasAsc, atual, n); });
+        WINDOWS.forEach(function (n) { v[n] = varNd(porDia, datasAsc, n); });
         spark = sparkSvg(h.pontos);
       }
 
