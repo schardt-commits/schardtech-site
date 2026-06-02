@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preços ao Vivo de Projetores — Variação diária, semanal e mais | SchardTech</title>
+  <meta name="description" content="Tabela ao vivo dos preços de projetores: veja o que mais caiu nas últimas 24h, na semana e no período. Link de compra e cupom de cada modelo. Dados reais atualizados todo dia.">
+  <link rel="canonical" href="https://schardtech.com.br/precos.html">
+  <link rel="icon" type="image/png" href="/favicon-192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Preços ao Vivo de Projetores — quem mais caiu hoje | SchardTech">
+  <meta property="og:description" content="Tabela ao vivo estilo cotação: ordene os projetores por maior queda no dia, na semana e no período. Link e cupom em cada linha.">
+  <meta property="og:url" content="https://schardtech.com.br/precos.html">
+  <meta property="og:image" content="https://schardtech.com.br/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://schardtech.com.br/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ===== Página de Preços (tabela estilo cotação) ===== */
+    .pt-hero { padding: 116px 0 24px; background: radial-gradient(ellipse 80% 60% at 50% 20%, rgba(79,163,199,0.10) 0%, transparent 60%), linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%); }
+    .pt-hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.9rem, 4.6vw, 3rem); line-height: 1.08; margin: 12px 0 10px; }
+    .pt-hero p { color: var(--text-muted); max-width: 640px; font-size: 1.02rem; }
+    .pt-updated { margin-top: 10px; font-size: 0.82rem; color: var(--text-dim); }
+
+    /* Toolbar: busca + segmented control */
+    .pt-toolbar { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; margin: 26px 0 16px; }
+    .pt-search { position: relative; flex: 1 1 280px; max-width: 380px; }
+    .pt-search input { width: 100%; padding: 12px 16px 12px 42px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--card-bg); color: var(--text); font-size: 0.95rem; transition: border-color var(--transition), box-shadow var(--transition); }
+    .pt-search input:focus { outline: none; border-color: var(--border-hover); box-shadow: var(--glow-sm); }
+    .pt-search svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-dim); pointer-events: none; }
+
+    .pt-segwrap { display: flex; align-items: center; gap: 10px; }
+    .pt-seglabel { font-size: 0.8rem; color: var(--text-dim); white-space: nowrap; }
+    .pt-seg { display: inline-flex; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 4px; gap: 2px; }
+    .pt-seg button { border: 0; background: transparent; color: var(--text-muted); font: 600 0.9rem 'Inter', sans-serif; padding: 8px 16px; border-radius: 9px; cursor: pointer; transition: all var(--transition); }
+    .pt-seg button:hover { color: var(--text); }
+    .pt-seg button.pt-active { background: var(--primary); color: #06121a; box-shadow: var(--glow-sm); }
+    .pt-seg .pt-sort-ind { font-size: 0.74rem; }
+
+    .pt-count { font-size: 0.82rem; color: var(--text-dim); margin: 0 0 10px; }
+
+    /* ===== Tabela (desktop) ===== */
+    .pt-tablewrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--card-bg); }
+    table.pt-table { width: 100%; border-collapse: collapse; min-width: 720px; }
+    .pt-table thead th { background: #121626; text-align: left; font: 600 0.78rem 'Inter', sans-serif; letter-spacing: .03em; text-transform: uppercase; color: var(--text-dim); padding: 14px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    .pt-table thead th.pt-th-var, .pt-table thead th.pt-th-num { text-align: right; }
+    .pt-table thead th[data-win] { cursor: pointer; user-select: none; transition: color var(--transition); }
+    .pt-table thead th[data-win]:hover { color: var(--accent); }
+    .pt-table thead th[data-win].pt-active { color: var(--primary); }
+    .pt-table tbody td { padding: 12px 14px; border-bottom: 1px solid rgba(79,163,199,0.07); vertical-align: middle; font-size: 0.93rem; }
+    .pt-table tbody tr:last-child td { border-bottom: 0; }
+    .pt-table tbody tr:hover { background: rgba(79,163,199,0.05); }
+    .pt-rank { color: var(--text-dim); width: 34px; font-size: 0.82rem; }
+    .pt-c-price { font-weight: 700; white-space: nowrap; }
+    .pt-c-var, .pt-th-var { text-align: right; white-space: nowrap; }
+    .pt-c-var.pt-active { background: rgba(79,163,199,0.06); }
+    .pt-c-spark { width: 96px; }
+    .pt-c-offer { text-align: right; white-space: nowrap; }
+
+    /* Nome + thumb */
+    .pt-name { display: flex; align-items: center; gap: 11px; color: var(--text); text-decoration: none; min-width: 200px; }
+    .pt-name:hover .pt-name-txt { color: var(--accent); }
+    .pt-thumb { width: 64px; height: 36px; border-radius: 7px; object-fit: contain; background: #0c0f1a; flex-shrink: 0; border: 1px solid var(--border); }
+    .pt-thumb-ph { display: inline-flex; align-items: center; justify-content: center; font-weight: 700; color: var(--text-dim); font-size: 1rem; }
+    .pt-name-txt { font-weight: 600; transition: color var(--transition); }
+
+    /* Variação */
+    .pt-var { font-weight: 700; font-size: 0.9rem; }
+    .pt-down { color: #5BD9A0; }              /* caiu = oportunidade pro comprador */
+    .pt-up   { color: #FF9B7A; }              /* subiu */
+    .pt-flat { color: var(--text-dim); }
+    .pt-na   { color: var(--text-dim); }
+
+    /* Oferta */
+    .pt-offer-btn { display: inline-block; padding: 8px 14px; border-radius: 9px; background: linear-gradient(135deg, var(--primary), var(--gradient-secondary)); color: #06121a; font: 700 0.84rem 'Inter', sans-serif; text-decoration: none; transition: filter var(--transition), transform var(--transition); }
+    .pt-offer-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+    .pt-offer-off { background: var(--bg-secondary); color: var(--text-dim); cursor: default; }
+    .pt-offer-off:hover { filter: none; transform: none; }
+    .pt-coupons { display: flex; gap: 6px; justify-content: flex-end; flex-wrap: wrap; margin-top: 7px; }
+    .pt-coupon { font: 600 0.72rem 'Inter', sans-serif; color: var(--accent); background: rgba(143,211,255,0.10); border: 1px dashed rgba(143,211,255,0.35); border-radius: 6px; padding: 3px 7px; white-space: nowrap; }
+    .pt-coupon-plat { color: #FFD27A; background: rgba(255,210,122,0.08); border-color: rgba(255,210,122,0.32); }
+
+    /* ===== Cards (mobile) ===== */
+    .pt-cards { display: none; flex-direction: column; gap: 12px; }
+    .pt-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 14px; }
+    .pt-card-top { display: flex; align-items: center; gap: 10px; }
+    .pt-card-rank { color: var(--text-dim); font-size: 0.8rem; min-width: 18px; }
+    .pt-card-mid { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 12px 0 10px; }
+    .pt-card-price { font-weight: 800; font-size: 1.15rem; }
+    .pt-chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .pt-chip { background: rgba(79,163,199,0.05); border: 1px solid var(--border); border-radius: 10px; padding: 8px 6px; text-align: center; }
+    .pt-chip.pt-active { border-color: var(--border-hover); background: rgba(79,163,199,0.12); }
+    .pt-chip-lbl { display: block; font-size: 0.68rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+    .pt-card-offer { margin-top: 12px; display: flex; flex-direction: column; align-items: stretch; gap: 8px; }
+    .pt-card-offer .pt-offer-btn { text-align: center; }
+    .pt-card-offer .pt-coupons { justify-content: flex-start; margin-top: 0; }
+
+    .pt-loading { text-align: center; padding: 50px 0; color: var(--text-dim); }
+
+    .pt-note { margin: 18px 0 60px; font-size: 0.82rem; color: var(--text-dim); line-height: 1.6; }
+    .pt-note strong { color: var(--text-muted); }
+
+    @media (max-width: 768px) {
+      .pt-tablewrap { display: none; }
+      .pt-cards { display: flex; }
+      .pt-toolbar { gap: 12px; }
+      .pt-search { max-width: none; flex-basis: 100%; }
+      .pt-segwrap { width: 100%; justify-content: space-between; }
+      .pt-seg { flex: 1; }
+      .pt-seg button { flex: 1; padding: 9px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header id="header">
+    <div class="container header-inner">
+      <a href="/" class="logo-link">
+        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img">
+      </a>
+      <nav id="mainNav">
+        <a href="comparar.html" class="nav-link">Comparativo</a>
+        <a href="qual-projetor.html" class="nav-link">Encontre seu projetor</a>
+        <a href="precos.html" class="nav-link" style="color:var(--primary);font-weight:600;">Preços ao Vivo</a>
+        <a href="acessorios-projetores.html" class="nav-link">Acessórios</a>
+        <a href="/#sobre" class="nav-link">Sobre</a>
+      </nav>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="pt-hero">
+      <div class="container">
+        <div class="section-tag">Tabela ao vivo</div>
+        <h1>Preços <span class="gradient-text">ao Vivo</span></h1>
+        <p>Todos os modelos numa tabela só. Clique em <strong>24h</strong>, <strong>7d</strong> ou <strong>20d</strong> pra ordenar por quem mais caiu na janela — e compre direto pelo link com o cupom do dia.</p>
+        <p class="pt-updated" id="ptUpdated"></p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="pt-toolbar">
+        <div class="pt-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="search" id="ptSearch" placeholder="Buscar projetor (marca ou modelo)..." aria-label="Buscar projetor">
+        </div>
+        <div class="pt-segwrap">
+          <span class="pt-seglabel">Maior queda em:</span>
+          <div class="pt-seg" id="ptSeg" role="group" aria-label="Ordenar por janela de variação"></div>
+        </div>
+      </div>
+
+      <p class="pt-count" id="ptCount"></p>
+
+      <div class="pt-loading" id="ptLoading">Carregando preços…</div>
+
+      <!-- Desktop -->
+      <div class="pt-tablewrap">
+        <table class="pt-table">
+          <thead id="ptHead"></thead>
+          <tbody id="ptBody"></tbody>
+        </table>
+      </div>
+
+      <!-- Mobile -->
+      <div class="pt-cards" id="ptCards"></div>
+
+      <p class="pt-note">
+        A variação compara o <strong>melhor preço de hoje</strong> com o de 24h, 7 ou 20 dias atrás (mínimo do dia no nosso histórico).
+        <strong>Verde = caiu</strong> (boa hora pra comprar), <strong>laranja = subiu</strong>.
+        Modelos sem histórico suficiente na janela aparecem como <strong>—</strong> (as janelas mais longas vão enchendo conforme o monitoramento amadurece).
+        Preços e cupons mudam o tempo todo — confira sempre na loja antes de finalizar.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo-link">
+          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo">
+        </a>
+        <div class="footer-social">
+          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          </a>
+          <span class="social-link social-disabled" aria-label="Instagram (em breve)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </span>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <a href="/">Projetores</a>
+          <a href="precos.html">Preços ao Vivo</a>
+          <a href="/#sobre">Sobre</a>
+        </div>
+        <div class="footer-col">
+          <h4>Ferramentas</h4>
+          <a href="qual-projetor.html">Encontre seu projetor</a>
+          <a href="comparar.html">Comparar projetores</a>
+          <a href="acessorios-projetores.html">Acessórios</a>
+        </div>
+        <div class="footer-col">
+          <h4>Conteúdo</h4>
+          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <span class="footer-disabled">Instagram (em breve)</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 SchardTech — Todos os direitos reservados</p>
+        <p style="margin-top:8px;font-size:0.78rem;color:var(--text-dim);">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script src="projetores-data.js"></script>
+  <script src="prices-overlay.js"></script>
+  <script src="search-global.js" defer></script>
+  <script src="precos.js" defer></script>
+</body>
+</html>

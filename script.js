@@ -347,6 +347,8 @@ function _bqInjectStyles() {
     .barra-quedas__inner{display:flex;align-items:center;gap:14px;padding:8px 20px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch;max-width:100%}
     .barra-quedas__inner::-webkit-scrollbar{display:none;height:0}
     .barra-quedas__label{font-weight:600;color:#94a3b8;flex-shrink:0;letter-spacing:.01em}
+    .barra-quedas__label--link{text-decoration:none;cursor:pointer;transition:color .15s}
+    .barra-quedas__label--link:hover{color:var(--primary,#7dd3fc);text-decoration:underline}
     .barra-quedas__item{color:#e6e6e6;text-decoration:none;transition:color .15s;flex-shrink:0;display:inline-flex;align-items:center;gap:8px;cursor:pointer}
     .barra-quedas__item:hover{color:#fff}
     .barra-quedas__item:hover .barra-quedas__modelo{color:var(--primary,#7dd3fc)}
@@ -370,8 +372,10 @@ function _bqInjectBar(j, bp) {
   const labelData = (j.data_ontem && j.data_hoje)
     ? j.data_ontem + ' → ' + j.data_hoje + (j.hora_coleta ? ' ' + j.hora_coleta : '')
     : j.data_coleta + (j.hora_coleta ? ' ' + j.hora_coleta : '');
-  const label = document.createElement('span');
-  label.className = 'barra-quedas__label';
+  const label = document.createElement('a');
+  label.className = 'barra-quedas__label barra-quedas__label--link';
+  label.href = bp + 'precos.html';
+  label.title = 'Ver preços ao vivo de todos os projetores';
   label.textContent = '📉 Quedas ' + labelData + ':';
   inner.appendChild(label);
   j.quedas.forEach((q, i) => {

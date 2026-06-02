@@ -551,7 +551,7 @@ window.PROJETORES_DATA = [
     "tecnologias": "HDR10, MEMC",
     "bateria": false,
     "cap_bateria": "",
-    "video_url": "",
+    "video_url": "https://youtu.be/_xe393q7BpA",
     "suporte_giratorio": false,
     "audio_qualidade": "",
     "uso_continuo": "6h",

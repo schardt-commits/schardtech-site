@@ -48,6 +48,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* Grid de ferramentas da home — 2x2 no desktop, 1 coluna no mobile */
+    .home-tools { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 40px; }
+    .home-tool-card { display: flex; flex-direction: column; background: rgba(79,163,199,0.07); border: 1px solid rgba(79,163,199,0.2); border-radius: 14px; padding: 28px 28px 24px; }
+    .home-tool-card .ht-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--primary); margin: 0 0 10px; }
+    .home-tool-card .ht-desc { margin: 0 0 22px; line-height: 1.6; }
+    .home-tool-card .btn { margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; }
+    @media (max-width: 768px) { .home-tools { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
 
@@ -60,8 +69,9 @@
         <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img">
       </a>
       <nav id="mainNav">
-        <a href="comparar.html" class="nav-link">Comparar</a>
+        <a href="comparar.html" class="nav-link">Comparativo</a>
         <a href="qual-projetor.html" class="nav-link" style="color:var(--primary);font-weight:600;">Encontre seu projetor</a>
+        <a href="precos.html" class="nav-link">Preços ao Vivo</a>
         <a href="acessorios-projetores.html" class="nav-link">Acessórios</a>
         <a href="#calculadora" class="nav-link">Calculadora</a>
         <a href="#sobre" class="nav-link">Sobre</a>
@@ -81,21 +91,37 @@
         <h1>Escolha o projetor certo. <span class="gradient-text">Com dados reais.</span></h1>
         <p>Mais de 60 projetores testados com ANSI Lumens medido, input lag aferido e specs verificadas.</p>
       </div>
-      <div class="fade-in" style="display:flex;gap:16px;margin-top:40px;flex-wrap:wrap;">
-        <div style="flex:1;min-width:260px;background:rgba(79,163,199,0.07);border:1px solid rgba(79,163,199,0.2);border-radius:14px;padding:28px 28px 24px;">
-          <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--primary);margin:0 0 10px;">Não sabe qual comprar?</p>
-          <p style="margin:0 0 20px;line-height:1.6;">Responda algumas perguntas sobre seu uso — games, cinema, quarto ou sala grande — e receba uma recomendação baseada em dados reais do canal.</p>
-          <a href="qual-projetor.html" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:8px;">
+      <div class="fade-in home-tools">
+        <div class="home-tool-card">
+          <p class="ht-eyebrow">Não sabe qual comprar?</p>
+          <p class="ht-desc">Responda algumas perguntas sobre seu uso — games, cinema, quarto ou sala grande — e receba uma recomendação baseada em dados reais do canal.</p>
+          <a href="qual-projetor.html" class="btn btn-primary">
             Qual projetor comprar?
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
-        <div style="flex:1;min-width:260px;background:rgba(79,163,199,0.07);border:1px solid rgba(79,163,199,0.2);border-radius:14px;padding:28px 28px 24px;">
-          <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--primary);margin:0 0 10px;">Já tem dois modelos em mente?</p>
-          <p style="margin:0 0 20px;line-height:1.6;">Compare specs lado a lado: ANSI Lumens, contraste, resolução e preço — tudo na mesma tela, sem abrir mil abas.</p>
-          <a href="comparar.html" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:8px;">
+        <div class="home-tool-card">
+          <p class="ht-eyebrow">Já tem dois modelos em mente?</p>
+          <p class="ht-desc">Compare specs lado a lado: ANSI Lumens, contraste, resolução e preço — tudo na mesma tela, sem abrir mil abas.</p>
+          <a href="comparar.html" class="btn btn-primary">
             Comparar projetores
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+          </a>
+        </div>
+        <div class="home-tool-card">
+          <p class="ht-eyebrow">Quanto custa hoje?</p>
+          <p class="ht-desc">Tabela ao vivo de todos os modelos: veja quem <strong>caiu de preço</strong> em 24h, 7 ou 20 dias e compre direto pelo link com o cupom do dia.</p>
+          <a href="precos.html" class="btn btn-primary">
+            Preços ao vivo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </a>
+        </div>
+        <div class="home-tool-card">
+          <p class="ht-eyebrow">Faltou alguma coisa?</p>
+          <p class="ht-desc">Telas, suportes, tripés e sticks de TV — os acessórios certos pra montar seu setup, cada um resolvendo um problema específico.</p>
+          <a href="acessorios-projetores.html" class="btn btn-primary">
+            Ver acessórios
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </a>
         </div>
       </div>
