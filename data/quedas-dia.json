@@ -1,19 +1,29 @@
 {
   "data_coleta": "02/06",
-  "hora_coleta": "00:46",
+  "hora_coleta": "11:26",
   "data_ontem": "01/06",
   "data_hoje": "02/06",
-  "total_quedas": 12,
+  "total_quedas": 25,
   "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "Love U14",
+      "slug": "byintek-u14",
+      "preco_atual": 884.67,
+      "preco_ontem": 1175.44,
+      "delta": -290.77,
+      "delta_pct": -24.74,
+      "data_checagem": "2026-06-02 11:26"
+    },
     {
       "marca": "Vevshao",
       "modelo": "A24 MAX",
       "slug": "vevshao-a24-max",
-      "preco_atual": 1189.18,
+      "preco_atual": 1186.15,
       "preco_ontem": 1460.86,
-      "delta": -271.68,
-      "delta_pct": -18.6,
-      "data_checagem": "2026-06-02 00:46"
+      "delta": -274.71,
+      "delta_pct": -18.8,
+      "data_checagem": "2026-06-02 11:26"
     },
     {
       "marca": "Magcubic",
@@ -23,17 +33,17 @@
       "preco_ontem": 373.15,
       "delta": -50.15,
       "delta_pct": -13.44,
-      "data_checagem": "2026-06-02 00:46"
+      "data_checagem": "2026-06-02 11:26"
     },
     {
       "marca": "Vevshao",
       "modelo": "V60",
       "slug": "vevshao-v60",
-      "preco_atual": 1576.96,
+      "preco_atual": 1572.92,
       "preco_ontem": 1794.31,
-      "delta": -217.35,
-      "delta_pct": -12.11,
-      "data_checagem": "2026-06-02 00:34"
+      "delta": -221.39,
+      "delta_pct": -12.34,
+      "data_checagem": "2026-06-02 11:26"
     },
     {
       "marca": "Magcubic",
@@ -43,17 +53,7 @@
       "preco_ontem": 777.08,
       "delta": -91.08,
       "delta_pct": -11.72,
-      "data_checagem": "2026-06-02 00:46"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY300",
-      "slug": "magcubic-hy300",
-      "preco_atual": 200.6,
-      "preco_ontem": 220.15,
-      "delta": -19.55,
-      "delta_pct": -8.88,
-      "data_checagem": "2026-06-02 00:46"
+      "data_checagem": "2026-06-02 11:26"
     }
   ]
 }
