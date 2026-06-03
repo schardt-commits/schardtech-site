@@ -1,49 +1,59 @@
 {
   "data_coleta": "03/06",
-  "hora_coleta": "00:30",
+  "hora_coleta": "16:55",
   "data_ontem": "02/06",
   "data_hoje": "03/06",
-  "total_quedas": 4,
+  "total_quedas": 8,
   "quedas": [
     {
       "marca": "Progaga",
       "modelo": "PG610W",
       "slug": "progaga-pg610w",
-      "preco_atual": 747.07,
+      "preco_atual": 750.62,
       "preco_ontem": 856.88,
-      "delta": -109.81,
-      "delta_pct": -12.82,
-      "data_checagem": "2026-06-03 00:19"
+      "delta": -106.26,
+      "delta_pct": -12.4,
+      "data_checagem": "2026-06-03 16:43"
     },
     {
-      "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 1950.6,
-      "preco_ontem": 2161.94,
-      "delta": -211.34,
-      "delta_pct": -9.78,
-      "data_checagem": "2026-06-03 00:30"
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 427.76,
+      "preco_ontem": 479.77,
+      "delta": -52.01,
+      "delta_pct": -10.84,
+      "data_checagem": "2026-06-03 16:43"
     },
     {
-      "marca": "Wanbo",
-      "modelo": "Vali 1",
-      "slug": "wanbo-vali-1",
-      "preco_atual": 1678.68,
-      "preco_ontem": 1698.0,
-      "delta": -19.32,
-      "delta_pct": -1.14,
-      "data_checagem": "2026-06-03 00:30"
+      "marca": "Bettdow",
+      "modelo": "AC1073",
+      "slug": "bettdow-ac1073",
+      "preco_atual": 869.08,
+      "preco_ontem": 951.88,
+      "delta": -82.8,
+      "delta_pct": -8.7,
+      "data_checagem": "2026-06-03 16:55"
     },
     {
-      "marca": "Wanbo",
-      "modelo": "T2 Ultra",
-      "slug": "wanbo-t2-ultra",
-      "preco_atual": 1325.4,
-      "preco_ontem": 1339.2,
-      "delta": -13.8,
-      "delta_pct": -1.03,
-      "data_checagem": "2026-06-03 00:30"
+      "marca": "Voxflix",
+      "modelo": "VF71",
+      "slug": "voxflix-vf71",
+      "preco_atual": 788.05,
+      "preco_ontem": 827.51,
+      "delta": -39.46,
+      "delta_pct": -4.77,
+      "data_checagem": "2026-06-03 16:45"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "Q13W",
+      "slug": "touyinger-q13w",
+      "preco_atual": 1407.72,
+      "preco_ontem": 1445.43,
+      "delta": -37.71,
+      "delta_pct": -2.61,
+      "data_checagem": "2026-06-03 16:44"
     }
   ]
 }
