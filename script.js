@@ -234,6 +234,7 @@ function initCounters() {
 // ============================================================
 function initHeader() {
   const header = document.getElementById('header');
+  if (!header) return;
   const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 36);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -327,7 +328,7 @@ function downloadAnsiGuide() {
 // ============================================================
 function initBarraQuedas() {
   if (document.getElementById('barra-quedas')) return;
-  const bp = window.SITE_BASE_PATH || (/\/projetor\//i.test(location.pathname) ? '../' : '');
+  const bp = window.SITE_BASE_PATH || (/\/(projetor|acessorios)\//i.test(location.pathname) ? '../' : '');
   fetch(bp + 'data/quedas-dia.json', { cache: 'no-store' })
     .then(r => r.ok ? r.json() : null)
     .then(j => {

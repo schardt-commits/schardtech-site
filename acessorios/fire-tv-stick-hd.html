@@ -634,10 +634,6 @@
   </footer>
 
   <script>
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 12);
-    });
     const galeriaImgs = ["../img/acessorios/fire-tv-stick-hd-1.jpg", "../img/acessorios/fire-tv-stick-hd-2.jpg", "../img/acessorios/fire-tv-stick-hd-3.jpg", "../img/acessorios/fire-tv-stick-hd-4.jpg", "../img/acessorios/fire-tv-stick-hd-5.jpg", "../img/acessorios/fire-tv-stick-hd-6.jpg", "../img/acessorios/fire-tv-stick-hd-7.jpg"];
     function setMain(i) {
       const main = document.getElementById('paMainImg');
@@ -645,25 +641,7 @@
       main.src = galeriaImgs[i];
       document.querySelectorAll('.pa-thumb').forEach((t, idx) => t.classList.toggle('active', idx === i));
     }
-    // Mobile menu toggle
-    const _mBtn = document.getElementById('mobileMenuBtn');
-    const _mNav = document.getElementById('mainNav');
-    if (_mBtn && _mNav) {
-      _mBtn.addEventListener('click', () => {
-        const open = _mNav.classList.toggle('open');
-        _mBtn.classList.toggle('active', open);
-        _mBtn.setAttribute('aria-expanded', String(open));
-        document.body.classList.toggle('menu-open', open);
-      });
-      _mNav.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          _mNav.classList.remove('open');
-          _mBtn.classList.remove('active');
-          _mBtn.setAttribute('aria-expanded', 'false');
-          document.body.classList.remove('menu-open');
-        });
-      });
-    }
   </script>
+  <script src="../script.js" defer></script>
 </body>
 </html>
