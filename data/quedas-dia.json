@@ -1,59 +1,59 @@
 {
   "data_coleta": "04/06",
-  "hora_coleta": "00:28",
+  "hora_coleta": "15:21",
   "data_ontem": "03/06",
   "data_hoje": "04/06",
-  "total_quedas": 7,
+  "total_quedas": 5,
   "quedas": [
-    {
-      "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 1958.65,
-      "preco_ontem": 2170.86,
-      "delta": -212.21,
-      "delta_pct": -9.78,
-      "data_checagem": "2026-06-04 00:28"
-    },
     {
       "marca": "Byintek",
       "modelo": "Love U14",
       "slug": "byintek-u14",
-      "preco_atual": 848.96,
+      "preco_atual": 844.87,
       "preco_ontem": 889.13,
-      "delta": -40.17,
-      "delta_pct": -4.52,
-      "data_checagem": "2026-06-04 00:28"
+      "delta": -44.26,
+      "delta_pct": -4.98,
+      "data_checagem": "2026-06-04 15:21"
     },
     {
       "marca": "FlixTone",
       "modelo": "D9W Mini",
       "slug": "flixtone-d9w-mini",
-      "preco_atual": 817.33,
+      "preco_atual": 823.22,
       "preco_ontem": 855.16,
-      "delta": -37.83,
-      "delta_pct": -4.42,
-      "data_checagem": "2026-06-04 00:14"
+      "delta": -31.94,
+      "delta_pct": -3.73,
+      "data_checagem": "2026-06-04 15:04"
     },
     {
-      "marca": "Byintek",
-      "modelo": "Love U4",
-      "slug": "byintek-love-u4",
-      "preco_atual": 491.88,
-      "preco_ontem": 503.84,
-      "delta": -11.96,
-      "delta_pct": -2.37,
-      "data_checagem": "2026-06-04 00:28"
+      "marca": "Thundeal",
+      "modelo": "TD95W",
+      "slug": "thundeal-td95w",
+      "preco_atual": 586.42,
+      "preco_ontem": 604.75,
+      "delta": -18.33,
+      "delta_pct": -3.03,
+      "data_checagem": "2026-06-04 15:11"
     },
     {
-      "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 2249.08,
-      "preco_ontem": 2281.28,
-      "delta": -32.2,
-      "delta_pct": -1.41,
-      "data_checagem": "2026-06-04 00:28"
+      "marca": "Formovie",
+      "modelo": "Xming Episode One",
+      "slug": "formovie-xming-episode-one",
+      "preco_atual": 1248.08,
+      "preco_ontem": 1280.53,
+      "delta": -32.45,
+      "delta_pct": -2.53,
+      "data_checagem": "2026-06-04 15:04"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1082",
+      "slug": "bettdow-ac1082",
+      "preco_atual": 796.4,
+      "preco_ontem": 803.76,
+      "delta": -7.36,
+      "delta_pct": -0.92,
+      "data_checagem": "2026-06-04 15:21"
     }
   ]
 }
