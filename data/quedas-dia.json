@@ -1,59 +1,59 @@
 {
-  "data_coleta": "03/06",
-  "hora_coleta": "16:55",
-  "data_ontem": "02/06",
-  "data_hoje": "03/06",
-  "total_quedas": 8,
+  "data_coleta": "04/06",
+  "hora_coleta": "00:28",
+  "data_ontem": "03/06",
+  "data_hoje": "04/06",
+  "total_quedas": 7,
   "quedas": [
     {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 750.62,
-      "preco_ontem": 856.88,
-      "delta": -106.26,
-      "delta_pct": -12.4,
-      "data_checagem": "2026-06-03 16:43"
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 1958.65,
+      "preco_ontem": 2170.86,
+      "delta": -212.21,
+      "delta_pct": -9.78,
+      "data_checagem": "2026-06-04 00:28"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 427.76,
-      "preco_ontem": 479.77,
-      "delta": -52.01,
-      "delta_pct": -10.84,
-      "data_checagem": "2026-06-03 16:43"
+      "marca": "Byintek",
+      "modelo": "Love U14",
+      "slug": "byintek-u14",
+      "preco_atual": 848.96,
+      "preco_ontem": 889.13,
+      "delta": -40.17,
+      "delta_pct": -4.52,
+      "data_checagem": "2026-06-04 00:28"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1073",
-      "slug": "bettdow-ac1073",
-      "preco_atual": 869.08,
-      "preco_ontem": 951.88,
-      "delta": -82.8,
-      "delta_pct": -8.7,
-      "data_checagem": "2026-06-03 16:55"
+      "marca": "FlixTone",
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 817.33,
+      "preco_ontem": 855.16,
+      "delta": -37.83,
+      "delta_pct": -4.42,
+      "data_checagem": "2026-06-04 00:14"
     },
     {
-      "marca": "Voxflix",
-      "modelo": "VF71",
-      "slug": "voxflix-vf71",
-      "preco_atual": 788.05,
-      "preco_ontem": 827.51,
-      "delta": -39.46,
-      "delta_pct": -4.77,
-      "data_checagem": "2026-06-03 16:45"
+      "marca": "Byintek",
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 491.88,
+      "preco_ontem": 503.84,
+      "delta": -11.96,
+      "delta_pct": -2.37,
+      "data_checagem": "2026-06-04 00:28"
     },
     {
-      "marca": "Touyinger",
-      "modelo": "Q13W",
-      "slug": "touyinger-q13w",
-      "preco_atual": 1407.72,
-      "preco_ontem": 1445.43,
-      "delta": -37.71,
-      "delta_pct": -2.61,
-      "data_checagem": "2026-06-03 16:44"
+      "marca": "Wanbo",
+      "modelo": "X5 Pro",
+      "slug": "wanbo-x5-pro",
+      "preco_atual": 2249.08,
+      "preco_ontem": 2281.28,
+      "delta": -32.2,
+      "delta_pct": -1.41,
+      "data_checagem": "2026-06-04 00:28"
     }
   ]
 }
