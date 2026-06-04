@@ -285,9 +285,6 @@
               <span>Cupom AliExpress: <code id="cupom-code">PG610ATV</code></span>
               <button class="copy-btn" onclick="navigator.clipboard.writeText('PG610ATV'); this.textContent='Copiado!'; setTimeout(()=>this.textContent='Copiar',1800)">Copiar</button>
             </div></div>
-            <p style="font-size:0.74rem;color:var(--text-muted);margin-top:10px;line-height:1.5;">
-              Estoque nacional pelo AliExpress. Bivolt e cabo já no padrão BR.
-            </p>
           </div>
         </div>
       </div>
@@ -666,21 +663,29 @@
           if (slot) slot.innerHTML = btns.map(function(b){return b.html;}).join('');
         }
 
-        // Cupom: usa o do marketplace vencedor (se existir)
+        // Cupom: plataforma AliExpress + loja (do marketplace vencedor), se existirem
         var venc = mkts[p.marketplace_vencedor] || {};
-        var cupom = venc.cupom || p.ali_cupom_loja;
-        if (cupom) {
+        var cupomLoja = venc.cupom || p.ali_cupom_loja;
+        var cupomPlat = (mkts.aliexpress && mkts.aliexpress.cupom_plataforma) || p.ali_cupom_promo;
+        if (cupomLoja || cupomPlat) {
           var slot = document.getElementById('projCupomSlot');
           if (slot) {
-            slot.innerHTML = '<div class="proj-coupon">' +
-              '<span>Cupom: <code>' + cupom + '</code></span>' +
-              '<button class="copy-btn" type="button">Copiar</button>' +
-              '</div>';
-            var b = slot.querySelector('.copy-btn');
-            if (b) b.addEventListener('click', function() {
-              navigator.clipboard.writeText(cupom);
-              b.textContent = 'Copiado!';
-              setTimeout(function() { b.textContent = 'Copiar'; }, 1800);
+            var linhaCupom = function(label, code) {
+              return '<div class="proj-coupon">' +
+                '<span>' + label + ': <code>' + code + '</code></span>' +
+                '<button class="copy-btn" type="button" data-code="' + code + '">Copiar</button>' +
+                '</div>';
+            };
+            var html = '';
+            if (cupomPlat) html += linhaCupom('Cupom AliExpress (plataforma)', cupomPlat);
+            if (cupomLoja) html += linhaCupom('Cupom AliExpress (loja)', cupomLoja);
+            slot.innerHTML = html;
+            slot.querySelectorAll('.copy-btn').forEach(function(b) {
+              b.addEventListener('click', function() {
+                navigator.clipboard.writeText(b.getAttribute('data-code'));
+                b.textContent = 'Copiado!';
+                setTimeout(function() { b.textContent = 'Copiar'; }, 1800);
+              });
             });
           }
         }
