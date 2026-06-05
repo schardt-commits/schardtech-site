@@ -1,19 +1,29 @@
 {
   "data_coleta": "05/06",
-  "hora_coleta": "00:30",
+  "hora_coleta": "11:30",
   "data_ontem": "04/06",
   "data_hoje": "05/06",
-  "total_quedas": 12,
+  "total_quedas": 15,
   "quedas": [
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 379.1,
+      "preco_ontem": 431.01,
+      "delta": -51.91,
+      "delta_pct": -12.04,
+      "data_checagem": "2026-06-05 11:19"
+    },
     {
       "marca": "Byintek",
       "modelo": "U90 MAX",
       "slug": "byintek-u90-max",
-      "preco_atual": 1971.57,
+      "preco_atual": 1984.5,
       "preco_ontem": 2185.19,
-      "delta": -213.62,
-      "delta_pct": -9.78,
-      "data_checagem": "2026-06-05 00:30"
+      "delta": -200.69,
+      "delta_pct": -9.18,
+      "data_checagem": "2026-06-05 11:30"
     },
     {
       "marca": "Wanbo",
@@ -23,37 +33,27 @@
       "preco_ontem": 2488.05,
       "delta": -206.77,
       "delta_pct": -8.31,
-      "data_checagem": "2026-06-05 00:30"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Plato T5 MAX",
-      "slug": "byintek-plato-t5-max",
-      "preco_atual": 1212.55,
-      "preco_ontem": 1305.55,
-      "delta": -93.0,
-      "delta_pct": -7.12,
-      "data_checagem": "2026-06-05 00:30"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY300",
-      "slug": "magcubic-hy300",
-      "preco_atual": 190.4,
-      "preco_ontem": 200.6,
-      "delta": -10.2,
-      "delta_pct": -5.08,
-      "data_checagem": "2026-06-05 00:30"
+      "data_checagem": "2026-06-05 11:30"
     },
     {
       "marca": "Byintek",
       "modelo": "Love U14",
       "slug": "byintek-u14",
-      "preco_atual": 830.51,
+      "preco_atual": 776.61,
       "preco_ontem": 844.87,
-      "delta": -14.36,
-      "delta_pct": -1.7,
-      "data_checagem": "2026-06-05 00:30"
+      "delta": -68.26,
+      "delta_pct": -8.08,
+      "data_checagem": "2026-06-05 11:30"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Plato T5 MAX",
+      "slug": "byintek-plato-t5-max",
+      "preco_atual": 1221.78,
+      "preco_ontem": 1305.55,
+      "delta": -83.77,
+      "delta_pct": -6.42,
+      "data_checagem": "2026-06-05 11:30"
     }
   ]
 }
