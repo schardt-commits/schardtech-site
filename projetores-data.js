@@ -465,7 +465,7 @@ window.PROJETORES_DATA = [
     "audio_w": "2x12",
     "distancia_100pol": "2.60m",
     "distancia_100pol_m": 2.6,
-    "otica_selada": "Selada",
+    "otica_selada": "Selada+",
     "input_lag_ms": 140.0,
     "ajuste_brilho": "Sim",
     "autofoco": "Sim",
