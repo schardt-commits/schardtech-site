@@ -1,9 +1,9 @@
 {
   "data_coleta": "05/06",
-  "hora_coleta": "11:30",
+  "hora_coleta": "15:20",
   "data_ontem": "04/06",
   "data_hoje": "05/06",
-  "total_quedas": 15,
+  "total_quedas": 14,
   "quedas": [
     {
       "marca": "Thundeal",
@@ -13,7 +13,7 @@
       "preco_ontem": 431.01,
       "delta": -51.91,
       "delta_pct": -12.04,
-      "data_checagem": "2026-06-05 11:19"
+      "data_checagem": "2026-06-05 15:09"
     },
     {
       "marca": "Byintek",
@@ -23,7 +23,7 @@
       "preco_ontem": 2185.19,
       "delta": -200.69,
       "delta_pct": -9.18,
-      "data_checagem": "2026-06-05 11:30"
+      "data_checagem": "2026-06-05 15:20"
     },
     {
       "marca": "Wanbo",
@@ -33,7 +33,7 @@
       "preco_ontem": 2488.05,
       "delta": -206.77,
       "delta_pct": -8.31,
-      "data_checagem": "2026-06-05 11:30"
+      "data_checagem": "2026-06-05 15:20"
     },
     {
       "marca": "Byintek",
@@ -43,7 +43,7 @@
       "preco_ontem": 844.87,
       "delta": -68.26,
       "delta_pct": -8.08,
-      "data_checagem": "2026-06-05 11:30"
+      "data_checagem": "2026-06-05 15:20"
     },
     {
       "marca": "Byintek",
@@ -53,7 +53,7 @@
       "preco_ontem": 1305.55,
       "delta": -83.77,
       "delta_pct": -6.42,
-      "data_checagem": "2026-06-05 11:30"
+      "data_checagem": "2026-06-05 15:20"
     }
   ]
 }
