@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "gerado_em": "2026-06-06 00:30:09",
+    "gerado_em": "2026-06-06 00:40:23",
     "total_modelos": 65,
     "total_pontos": 1970,
     "fonte": "precos.db (tabela precos, preco_final)"
@@ -8494,21 +8494,21 @@
           "preco": 630.8
         },
         {
-          "data": "2026-06-06 00:20",
-          "loja": "aliexpress",
-          "preco": 527.58
-        },
-        {
           "data": "2026-06-06 00:30",
           "loja": "shopee",
           "preco": 630.8
+        },
+        {
+          "data": "2026-06-06 00:37",
+          "loja": "aliexpress",
+          "preco": 483.45
         }
       ],
       "n": 52,
-      "min": 517.46,
+      "min": 483.45,
       "max": 1101.71,
-      "atual": 630.8,
-      "data_min": "2026-06-02",
+      "atual": 483.45,
+      "data_min": "2026-06-06",
       "data_max": "2026-05-16"
     },
     "Vevshao|A22": {
