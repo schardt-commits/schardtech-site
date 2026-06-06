@@ -1407,6 +1407,28 @@
           return `${(p.consumo_w/p.brilho_ansi).toFixed(2)} W/ANSI`;
         }),
       });
+      row({
+        label:'Real por ANSI', hint:'Preço por ANSI de brilho — menor = melhor',
+        dir:'low',
+        vals: projs.map(p=>{
+          const aplicavel = p.brilho_ansi && p.preco_atual
+            && p.status !== 'importado'
+            && !String(p.status||'').startsWith('sem_estoque')
+            && p.status !== 'indisponivel';
+          return aplicavel ? +((p.preco_atual/p.brilho_ansi).toFixed(2)) : null;
+        }),
+        display: projs.map(p=>{
+          if(!p.brilho_ansi)
+            return '<span class="val-dash" title="Sem ANSI medido">—</span>';
+          if(p.status === 'importado')
+            return '<span class="val-dash" title="Internacional: ICMS e importação tornam o custo enganoso — cálculo não se aplica">— internacional</span>';
+          if(String(p.status||'').startsWith('sem_estoque') || p.status === 'indisponivel')
+            return '<span class="val-dash" title="Sem estoque: sem preço do dia — cálculo não se aplica">— sem estoque</span>';
+          if(!p.preco_atual)
+            return '<span class="val-dash" title="Sem preço checado do dia — cálculo não se aplica">— sem preço do dia</span>';
+          return `R$ ${(p.preco_atual/p.brilho_ansi).toFixed(2)}/ANSI`;
+        }),
+      });
 
       return rows;
     }
