@@ -747,7 +747,7 @@ window.PROJETORES_DATA = [
     "uso_continuo": "12h",
     "preco_min": 7400,
     "preco_max": 8500,
-    "ali_url": "https://s.click.aliexpress.com/e/_c3XiiQYv",
+    "ali_url": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=dangbei-mars-pro-2&clickref2=site&clickref3=&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005011911118806.html&platform=pl",
     "ali_cupom_loja": "",
     "ali_cupom_promo": "",
     "ml_url": "",
