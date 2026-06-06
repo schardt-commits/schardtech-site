@@ -1763,7 +1763,7 @@ window.PROJETORES_DATA = [
     "autofoco": "Sim",
     "sistema_operacional": "Android não homologado",
     "consumo_w": 120,
-    "conectividade": "HDMI/USB/P2/WiFi/BT",
+    "conectividade": "HDMI/USB/P2/RJ45/WiFi/BT",
     "tecnologias": "",
     "bateria": false,
     "cap_bateria": "",
