@@ -1,9 +1,9 @@
 {
   "data_coleta": "06/06",
-  "hora_coleta": "00:37",
+  "hora_coleta": "15:22",
   "data_ontem": "05/06",
   "data_hoje": "06/06",
-  "total_quedas": 6,
+  "total_quedas": 18,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,7 +13,7 @@
       "preco_ontem": 1053.08,
       "delta": -101.2,
       "delta_pct": -9.61,
-      "data_checagem": "2026-06-06 00:30"
+      "data_checagem": "2026-06-06 15:22"
     },
     {
       "marca": "Vevshao",
@@ -23,7 +23,17 @@
       "preco_ontem": 527.58,
       "delta": -44.13,
       "delta_pct": -8.36,
-      "data_checagem": "2026-06-06 00:37"
+      "data_checagem": "2026-06-06 15:22"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1041",
+      "slug": "bettdow-ac1041",
+      "preco_atual": 754.08,
+      "preco_ontem": 804.68,
+      "delta": -50.6,
+      "delta_pct": -6.29,
+      "data_checagem": "2026-06-06 15:22"
     },
     {
       "marca": "Bettdow",
@@ -33,7 +43,7 @@
       "preco_ontem": 796.4,
       "delta": -42.32,
       "delta_pct": -5.31,
-      "data_checagem": "2026-06-06 00:30"
+      "data_checagem": "2026-06-06 15:22"
     },
     {
       "marca": "Magcubic",
@@ -43,17 +53,7 @@
       "preco_ontem": 323.0,
       "delta": -17.0,
       "delta_pct": -5.26,
-      "data_checagem": "2026-06-06 00:30"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY320 Mini",
-      "slug": "magcubic-hy320-mini",
-      "preco_atual": 274.55,
-      "preco_ontem": 289.0,
-      "delta": -14.45,
-      "delta_pct": -5.0,
-      "data_checagem": "2026-06-06 00:30"
+      "data_checagem": "2026-06-06 15:22"
     }
   ]
 }
