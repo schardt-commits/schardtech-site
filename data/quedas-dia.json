@@ -1,59 +1,49 @@
 {
-  "data_coleta": "06/06",
-  "hora_coleta": "20:28",
-  "data_ontem": "05/06",
-  "data_hoje": "06/06",
-  "total_quedas": 18,
+  "data_coleta": "07/06",
+  "hora_coleta": "00:32",
+  "data_ontem": "06/06",
+  "data_hoje": "07/06",
+  "total_quedas": 4,
   "quedas": [
     {
       "marca": "Bettdow",
-      "modelo": "AC1073",
-      "slug": "bettdow-ac1073",
-      "preco_atual": 951.88,
-      "preco_ontem": 1053.08,
-      "delta": -101.2,
-      "delta_pct": -9.61,
-      "data_checagem": "2026-06-06 20:28"
+      "modelo": "AC1061",
+      "slug": "bettdow-ac1061",
+      "preco_atual": 1401.76,
+      "preco_ontem": 1503.88,
+      "delta": -102.12,
+      "delta_pct": -6.79,
+      "data_checagem": "2026-06-07 00:32"
     },
     {
-      "marca": "Vevshao",
-      "modelo": "A10",
-      "slug": "vevshao-a10",
-      "preco_atual": 483.45,
-      "preco_ontem": 527.58,
-      "delta": -44.13,
-      "delta_pct": -8.36,
-      "data_checagem": "2026-06-06 20:28"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1041",
-      "slug": "bettdow-ac1041",
-      "preco_atual": 754.08,
-      "preco_ontem": 804.68,
-      "delta": -50.6,
-      "delta_pct": -6.29,
-      "data_checagem": "2026-06-06 20:28"
+      "marca": "Wanbo",
+      "modelo": "X5 Pro",
+      "slug": "wanbo-x5-pro",
+      "preco_atual": 2281.28,
+      "preco_ontem": 2341.08,
+      "delta": -59.8,
+      "delta_pct": -2.55,
+      "data_checagem": "2026-06-07 00:32"
     },
     {
       "marca": "Bettdow",
-      "modelo": "AC1082",
-      "slug": "bettdow-ac1082",
-      "preco_atual": 754.08,
-      "preco_ontem": 796.4,
-      "delta": -42.32,
-      "delta_pct": -5.31,
-      "data_checagem": "2026-06-06 20:28"
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 515.8,
+      "preco_ontem": 519.48,
+      "delta": -3.68,
+      "delta_pct": -0.71,
+      "data_checagem": "2026-06-07 00:32"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "HY310",
-      "slug": "magcubic-hy310",
-      "preco_atual": 306.0,
-      "preco_ontem": 323.0,
-      "delta": -17.0,
-      "delta_pct": -5.26,
-      "data_checagem": "2026-06-06 20:28"
+      "marca": "Bettdow",
+      "modelo": "AC1071",
+      "slug": "bettdow-ac1071",
+      "preco_atual": 1310.68,
+      "preco_ontem": 1313.44,
+      "delta": -2.76,
+      "delta_pct": -0.21,
+      "data_checagem": "2026-06-07 00:32"
     }
   ]
 }
