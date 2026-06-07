@@ -1080,8 +1080,11 @@
 
       const precos = hist.pontos.map(p => p.preco);
       const min = Math.min(...precos), max = Math.max(...precos);
-      const __porDia = {}; hist.pontos.forEach(p => { const k = p.data.slice(0,10); if (__porDia[k] == null || p.preco < __porDia[k]) __porDia[k] = p.preco; });
-      const __mins = Object.keys(__porDia).map(k => __porDia[k]);
+      const __byDay = {}; hist.pontos.forEach(p => { if (p.preco == null) return; const k = p.data.slice(0,10); (__byDay[k] = __byDay[k] || []).push(p.preco); });
+      const __dias = Object.keys(__byDay).sort();
+      const __porDia = {};
+      __dias.forEach((k, ix) => { let pool = __byDay[k].slice(); if (ix > 0 && __byDay[k].length < __byDay[__dias[ix-1]].length) pool = pool.concat(__byDay[__dias[ix-1]]); __porDia[k] = Math.min(...pool); });  // guard-fantasma-2026-06-07
+      const __mins = __dias.map(k => __porDia[k]);
       const media = __mins.reduce((a,b) => a+b, 0) / __mins.length;  // media-minimos-diarios-2026-05-31
 
       // SVG sparkline
