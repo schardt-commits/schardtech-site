@@ -89,6 +89,11 @@
         "marca": "Wanbo",
         "modelo": "T2 Max New",
         "motivo": "sem preço final ou sem vencedor"
+      },
+      {
+        "marca": "Magcubic",
+        "modelo": "HY320",
+        "motivo": "sem_estoque_br"
       }
     ]
   },
@@ -717,27 +722,6 @@
       },
       "frete_br": "sim",
       "icms": "não",
-      "status": "nacional",
-      "ultima_atualizacao": "2026-06-07 00:32"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY320",
-      "preco_atual": 473.48,
-      "preco_min_historico": 473.48,
-      "preco_max_historico": 523.48,
-      "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-06-07 00:32",
-      "marketplaces": {
-        "shopee": {
-          "preco": 473.48,
-          "link": "https://s.shopee.com.br/4ftELx9Y3q",
-          "obs": null,
-          "data_checagem": "2026-06-07 00:32"
-        }
-      },
-      "frete_br": "sim",
-      "icms": "?",
       "status": "nacional",
       "ultima_atualizacao": "2026-06-07 00:32"
     },
