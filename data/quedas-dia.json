@@ -1,9 +1,9 @@
 {
   "data_coleta": "07/06",
-  "hora_coleta": "00:32",
+  "hora_coleta": "15:27",
   "data_ontem": "06/06",
   "data_hoje": "07/06",
-  "total_quedas": 4,
+  "total_quedas": 7,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,7 +13,27 @@
       "preco_ontem": 1503.88,
       "delta": -102.12,
       "delta_pct": -6.79,
-      "data_checagem": "2026-06-07 00:32"
+      "data_checagem": "2026-06-07 15:27"
+    },
+    {
+      "marca": "Formovie",
+      "modelo": "Xming Episode One",
+      "slug": "formovie-xming-episode-one",
+      "preco_atual": 1253.96,
+      "preco_ontem": 1295.93,
+      "delta": -41.97,
+      "delta_pct": -3.24,
+      "data_checagem": "2026-06-07 15:09"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98W",
+      "slug": "thundeal-td98w",
+      "preco_atual": 1257.87,
+      "preco_ontem": 1293.32,
+      "delta": -35.45,
+      "delta_pct": -2.74,
+      "data_checagem": "2026-06-07 15:15"
     },
     {
       "marca": "Wanbo",
@@ -23,27 +43,17 @@
       "preco_ontem": 2341.08,
       "delta": -59.8,
       "delta_pct": -2.55,
-      "data_checagem": "2026-06-07 00:32"
+      "data_checagem": "2026-06-07 15:27"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1066",
-      "slug": "bettdow-ac1066",
-      "preco_atual": 515.8,
-      "preco_ontem": 519.48,
-      "delta": -3.68,
-      "delta_pct": -0.71,
-      "data_checagem": "2026-06-07 00:32"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1071",
-      "slug": "bettdow-ac1071",
-      "preco_atual": 1310.68,
-      "preco_ontem": 1313.44,
-      "delta": -2.76,
-      "delta_pct": -0.21,
-      "data_checagem": "2026-06-07 00:32"
+      "marca": "Wanbo",
+      "modelo": "Vali 1",
+      "slug": "wanbo-vali-1",
+      "preco_atual": 1678.68,
+      "preco_ontem": 1698.0,
+      "delta": -19.32,
+      "delta_pct": -1.14,
+      "data_checagem": "2026-06-07 15:27"
     }
   ]
 }
