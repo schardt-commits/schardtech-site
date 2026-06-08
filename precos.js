@@ -64,27 +64,13 @@
 
   // ---------- variação a partir do histórico ----------
   // Mínimo de preço por dia: 'YYYY-MM-DD' -> menor preco do dia.
-  // Guarda contra "preço fantasma": quando um dia tem MENOS pontos que o dia
-  // anterior (uma plataforma — em geral a mais barata — falhou em registrar),
-  // junta os pontos do dia anterior no cálculo. Só pode baixar um mínimo, nunca
-  // subir: barra o spike falso sem esconder queda real. guard-fantasma-2026-06-07
   function porDiaMins(pontos) {
-    var byDay = {};
+    var m = {};
     for (var i = 0; i < pontos.length; i++) {
       var d = String(pontos[i].data).slice(0, 10);
       var p = pontos[i].preco;
       if (p == null) continue;
-      if (!byDay[d]) byDay[d] = [];
-      byDay[d].push(p);
-    }
-    var dias = Object.keys(byDay).sort();
-    var m = {};
-    for (var j = 0; j < dias.length; j++) {
-      var pool = byDay[dias[j]].slice();
-      if (j > 0 && byDay[dias[j]].length < byDay[dias[j - 1]].length) {
-        pool = pool.concat(byDay[dias[j - 1]]);
-      }
-      m[dias[j]] = Math.min.apply(null, pool);
+      if (m[d] == null || p < m[d]) m[d] = p;
     }
     return m;
   }

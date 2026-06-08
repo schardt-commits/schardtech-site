@@ -1514,17 +1514,11 @@
         // Atualiza banner status — compara com PREÇO MÉDIO (estatisticamente neutro)
         var statusEl = document.getElementById('priceStatus');
         if (statusEl) {
-          // guard-fantasma-2026-06-07: menor preço de cada dia, juntando o dia anterior
-          // quando o dia perdeu uma plataforma (não cai num preço fantasma).
-          var __byDay = {};
-          pontos.forEach(function(p){ if(p.preco==null) return; var k=p.data.slice(0,10); (__byDay[k]=__byDay[k]||[]).push(p.preco); });
-          var __dias = Object.keys(__byDay).sort();
-          var __porDia = {};
-          __dias.forEach(function(k,ix){ var pool=__byDay[k].slice(); if(ix>0 && __byDay[k].length<__byDay[__dias[ix-1]].length){ pool=pool.concat(__byDay[__dias[ix-1]]); } __porDia[k]=Math.min.apply(null,pool); });
-          var dataMaisRecente = __dias.length ? __dias[__dias.length-1] : '';
-          var atual = dataMaisRecente ? __porDia[dataMaisRecente] : pontos[pontos.length-1].preco;
-          var __mins = __dias.map(function(k){ return __porDia[k]; });
-          var media = __mins.reduce(function(a,b){ return a+b; }, 0) / (__mins.length||1);
+          var dataMaisRecente = '';
+          pontos.forEach(function(p) { if (p.data > dataMaisRecente) dataMaisRecente = p.data.slice(0, 10); });
+          var precosHoje = pontos.filter(function(p) { return p.data.slice(0, 10) === dataMaisRecente; }).map(function(p) { return p.preco; });
+          var atual = precosHoje.length ? Math.min.apply(null, precosHoje) : pontos[pontos.length - 1].preco;
+          var media = (function(){ var d={}; pontos.forEach(function(p){var k=p.data.slice(0,10); if(d[k]==null||p.preco<d[k])d[k]=p.preco;}); var a=Object.keys(d).map(function(k){return d[k];}); return a.reduce(function(x,y){return x+y;},0)/a.length; })();  // media-minimos-diarios-2026-05-31
           var distMedia = ((atual - media) / media) * 100;
           var icon, classe, titulo, sub;
           if (distMedia <= -3) {
