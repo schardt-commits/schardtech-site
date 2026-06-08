@@ -1,59 +1,59 @@
 {
-  "data_coleta": "07/06",
-  "hora_coleta": "15:27",
-  "data_ontem": "06/06",
-  "data_hoje": "07/06",
-  "total_quedas": 7,
+  "data_coleta": "08/06",
+  "hora_coleta": "01:47",
+  "data_ontem": "07/06",
+  "data_hoje": "08/06",
+  "total_quedas": 15,
   "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1446.56,
+      "preco_ontem": 1771.6,
+      "delta": -325.04,
+      "delta_pct": -18.35,
+      "data_checagem": "2026-06-08 01:47"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1053",
+      "slug": "bettdow-ac1053",
+      "preco_atual": 776.16,
+      "preco_ontem": 916.0,
+      "delta": -139.84,
+      "delta_pct": -15.27,
+      "data_checagem": "2026-06-08 01:47"
+    },
     {
       "marca": "Bettdow",
       "modelo": "AC1061",
       "slug": "bettdow-ac1061",
-      "preco_atual": 1401.76,
-      "preco_ontem": 1503.88,
-      "delta": -102.12,
-      "delta_pct": -6.79,
-      "data_checagem": "2026-06-07 15:27"
+      "preco_atual": 1200.28,
+      "preco_ontem": 1401.76,
+      "delta": -201.48,
+      "delta_pct": -14.37,
+      "data_checagem": "2026-06-08 01:47"
     },
     {
-      "marca": "Formovie",
-      "modelo": "Xming Episode One",
-      "slug": "formovie-xming-episode-one",
-      "preco_atual": 1253.96,
-      "preco_ontem": 1295.93,
-      "delta": -41.97,
-      "delta_pct": -3.24,
-      "data_checagem": "2026-06-07 15:09"
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 872.01,
+      "preco_ontem": 995.74,
+      "delta": -123.73,
+      "delta_pct": -12.43,
+      "data_checagem": "2026-06-08 01:47"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98W",
-      "slug": "thundeal-td98w",
-      "preco_atual": 1257.87,
-      "preco_ontem": 1293.32,
-      "delta": -35.45,
-      "delta_pct": -2.74,
-      "data_checagem": "2026-06-07 15:15"
-    },
-    {
-      "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 2281.28,
-      "preco_ontem": 2341.08,
-      "delta": -59.8,
-      "delta_pct": -2.55,
-      "data_checagem": "2026-06-07 15:27"
-    },
-    {
-      "marca": "Wanbo",
-      "modelo": "Vali 1",
-      "slug": "wanbo-vali-1",
-      "preco_atual": 1678.68,
-      "preco_ontem": 1698.0,
-      "delta": -19.32,
-      "delta_pct": -1.14,
-      "data_checagem": "2026-06-07 15:27"
+      "marca": "Byintek",
+      "modelo": "Love U14",
+      "slug": "byintek-u14",
+      "preco_atual": 766.14,
+      "preco_ontem": 848.26,
+      "delta": -82.12,
+      "delta_pct": -9.68,
+      "data_checagem": "2026-06-08 01:47"
     }
   ]
 }
