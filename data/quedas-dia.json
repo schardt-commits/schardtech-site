@@ -1,6 +1,6 @@
 {
   "data_coleta": "08/06",
-  "hora_coleta": "01:47",
+  "hora_coleta": "15:22",
   "data_ontem": "07/06",
   "data_hoje": "08/06",
   "total_quedas": 15,
@@ -9,11 +9,11 @@
       "marca": "Byintek",
       "modelo": "U14 PRO",
       "slug": "byintek-u14-pro",
-      "preco_atual": 1446.56,
+      "preco_atual": 1387.85,
       "preco_ontem": 1771.6,
-      "delta": -325.04,
-      "delta_pct": -18.35,
-      "data_checagem": "2026-06-08 01:47"
+      "delta": -383.75,
+      "delta_pct": -21.66,
+      "data_checagem": "2026-06-08 15:22"
     },
     {
       "marca": "Bettdow",
@@ -23,17 +23,7 @@
       "preco_ontem": 916.0,
       "delta": -139.84,
       "delta_pct": -15.27,
-      "data_checagem": "2026-06-08 01:47"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1061",
-      "slug": "bettdow-ac1061",
-      "preco_atual": 1200.28,
-      "preco_ontem": 1401.76,
-      "delta": -201.48,
-      "delta_pct": -14.37,
-      "data_checagem": "2026-06-08 01:47"
+      "data_checagem": "2026-06-08 15:22"
     },
     {
       "marca": "Vevshao",
@@ -43,7 +33,17 @@
       "preco_ontem": 995.74,
       "delta": -123.73,
       "delta_pct": -12.43,
-      "data_checagem": "2026-06-08 01:47"
+      "data_checagem": "2026-06-08 15:22"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD95W",
+      "slug": "thundeal-td95w",
+      "preco_atual": 580.3,
+      "preco_ontem": 647.45,
+      "delta": -67.15,
+      "delta_pct": -10.37,
+      "data_checagem": "2026-06-08 15:11"
     },
     {
       "marca": "Byintek",
@@ -53,7 +53,7 @@
       "preco_ontem": 848.26,
       "delta": -82.12,
       "delta_pct": -9.68,
-      "data_checagem": "2026-06-08 01:47"
+      "data_checagem": "2026-06-08 15:22"
     }
   ]
 }
