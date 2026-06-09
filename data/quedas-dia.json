@@ -1,10 +1,20 @@
 {
   "data_coleta": "09/06",
-  "hora_coleta": "02:59",
+  "hora_coleta": "09:30",
   "data_ontem": "08/06",
   "data_hoje": "09/06",
   "total_quedas": 8,
   "quedas": [
+    {
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 215.35,
+      "preco_ontem": 245.41,
+      "delta": -30.06,
+      "delta_pct": -12.25,
+      "data_checagem": "2026-06-09 09:19"
+    },
     {
       "marca": "Bettdow",
       "modelo": "AC1082",
@@ -13,7 +23,7 @@
       "preco_ontem": 803.76,
       "delta": -66.24,
       "delta_pct": -8.24,
-      "data_checagem": "2026-06-09 02:59"
+      "data_checagem": "2026-06-09 09:30"
     },
     {
       "marca": "Byintek",
@@ -23,7 +33,7 @@
       "preco_ontem": 2004.18,
       "delta": -117.1,
       "delta_pct": -5.84,
-      "data_checagem": "2026-06-09 02:59"
+      "data_checagem": "2026-06-09 09:30"
     },
     {
       "marca": "FlixTone",
@@ -43,17 +53,7 @@
       "preco_ontem": 686.0,
       "delta": -18.4,
       "delta_pct": -2.68,
-      "data_checagem": "2026-06-09 02:59"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY310",
-      "slug": "magcubic-hy310",
-      "preco_atual": 314.5,
-      "preco_ontem": 323.0,
-      "delta": -8.5,
-      "delta_pct": -2.63,
-      "data_checagem": "2026-06-09 02:59"
+      "data_checagem": "2026-06-09 09:30"
     }
   ]
 }
