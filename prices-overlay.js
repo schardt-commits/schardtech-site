@@ -259,6 +259,35 @@
     }
   }
 
+  /* Pagina de projetor e longa (~7000px) e o unico botao de compra fica no topo.
+     Injeta um card "Comprar agora — R$ X" como 1o item de "Proximos passos" (fim da pagina),
+     SO pra produto disponivel, linkando pro marketplace vencedor. Esgotado nao ganha nada. */
+  function patchBuyCtaDOM(produtos) {
+    const ctaFinal = document.querySelector('.proj-cta-final');
+    if (!ctaFinal || ctaFinal.querySelector('.proj-cta-buy')) return;
+    const card = document.querySelector('.proj-price-card[data-marca][data-modelo]');
+    if (!card) return;
+    const key = norm(card.dataset.marca) + '|' + norm(card.dataset.modelo);
+    let live = null;
+    for (const p of produtos || []) {
+      if (norm(p.marca) + '|' + norm(p.modelo) === key) { live = p; break; }
+    }
+    if (!live || !live.preco_atual) return; // so disponivel
+    const venc = live.marketplace_vencedor;
+    const mk = (live.marketplaces || {})[venc] || (live.marketplaces || {}).mercado_livre || {};
+    if (!mk.link) return;
+    const lojaMap = { aliexpress: 'AliExpress', shopee: 'Shopee', mercado_livre: 'Mercado Livre', ml: 'Mercado Livre' };
+    const loja = lojaMap[venc] || 'loja';
+    const preco = 'R$ ' + Math.round(live.preco_atual).toLocaleString('pt-BR');
+    const a = document.createElement('a');
+    a.href = mk.link; a.target = '_blank'; a.rel = 'noopener nofollow sponsored';
+    a.className = 'proj-cta-card proj-cta-buy';
+    a.style.cssText = 'border-color:var(--border-hover);background:linear-gradient(135deg,rgba(79,163,199,0.12),rgba(123,140,255,0.05));';
+    a.innerHTML = '<h4 style="color:var(--accent)">Comprar agora — ' + preco + '</h4>' +
+      '<p>Melhor preço de hoje no ' + loja + ', testado no canal.</p>';
+    ctaFinal.insertBefore(a, ctaFinal.firstChild);
+  }
+
   function applyOverlay() {
     const bp = basePath();
     const fetchPrices = fetch(bp + 'data/prices.json', { cache: 'no-store' })
@@ -288,6 +317,7 @@
         function runDomPatches() {
           patchIndisponiveisDOM(indispList);
           patchJsonLdDOM(prodList, indispList);
+          patchBuyCtaDOM(prodList);
         }
         if (document.readyState === 'loading') {
           document.addEventListener('DOMContentLoaded', runDomPatches);
