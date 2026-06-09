@@ -1343,6 +1343,7 @@
     }
 
     function passesFilter(p, a) {
+      if (p.listar === false) return false; // produto banido — fora das recomendações
       // Projetor sem preço cadastrado nunca aparece
       // Preço base = atual (overlay) com fallback pro min estático da planilha mãe.
       const precoBase = p.preco_atual || p.preco_min;

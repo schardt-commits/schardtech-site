@@ -74,6 +74,10 @@
         proj.marketplaces         = overlay.marketplaces;  // pra o render acessar cupom/preço/link por marketplace
 
         const mk = overlay.marketplaces || {};
+        // Normaliza 'mercado_livre' (chave do prices.json) -> 'ml' (o que o resto do site espera).
+        // Sem isso a pagina ML le mkts.ml / marketplace_vencedor==='ml' e quebra (botao sem preco, label cru).
+        if (mk.mercado_livre && !mk.ml) mk.ml = mk.mercado_livre;
+        if (proj.marketplace_vencedor === 'mercado_livre') proj.marketplace_vencedor = 'ml';
         if (mk.aliexpress && mk.aliexpress.link) proj.ali_url    = mk.aliexpress.link;
         if (mk.shopee     && mk.shopee.link)     proj.shopee_url = mk.shopee.link;
         if (mk.ml         && mk.ml.link)         proj.ml_url     = mk.ml.link;
@@ -204,6 +208,47 @@
     if (cupomSlot) cupomSlot.innerHTML = '';
   }
 
+  /* Atualiza o JSON-LD (Product>offers) da página individual com o preço/disponibilidade
+     AO VIVO do prices.json. As páginas são geradas só na entrada do produto, então sem isso
+     o offers.price fica congelado na data de geração (Googlebot renderiza JS e lê este valor).
+     Roda só em /projetor/{slug}.html (precisa do .proj-price-card com marca/modelo). */
+  function patchJsonLdDOM(produtos, indisponiveis) {
+    const card = document.querySelector('.proj-price-card[data-marca][data-modelo]');
+    if (!card) return;
+    const key = norm(card.dataset.marca) + '|' + norm(card.dataset.modelo);
+
+    let live = null;
+    for (const p of produtos || []) {
+      if (norm(p.marca) + '|' + norm(p.modelo) === key) { live = p; break; }
+    }
+    let isOut = false;
+    for (const x of indisponiveis || []) {
+      if (norm(x.marca) + '|' + norm(x.modelo) === key) { isOut = true; break; }
+    }
+    if (!live && !isOut) return; // sem dado vivo e não listado: não mexe no estático
+
+    const sellerMap = { aliexpress: 'AliExpress', shopee: 'Shopee', mercado_livre: 'Mercado Livre', ml: 'Mercado Livre' };
+    const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+    for (const sc of scripts) {
+      let obj;
+      try { obj = JSON.parse(sc.textContent); } catch (e) { continue; }
+      if (!obj || !obj.offers) continue;
+      const off = obj.offers;
+      const out = isOut || !live || !live.preco_atual;
+      if (live && live.preco_atual) {
+        off.price = (Math.round(live.preco_atual * 100) / 100).toFixed(2);
+        const d = new Date(); d.setDate(d.getDate() + 7);
+        off.priceValidUntil = d.toISOString().slice(0, 10);
+      }
+      off.availability = 'https://schema.org/' + (out ? 'OutOfStock' : 'InStock');
+      if (live && live.marketplace_vencedor && off.seller && sellerMap[live.marketplace_vencedor]) {
+        off.seller.name = sellerMap[live.marketplace_vencedor];
+      }
+      sc.textContent = JSON.stringify(obj, null, 2);
+      break;
+    }
+  }
+
   function applyOverlay() {
     const bp = basePath();
     const fetchPrices = fetch(bp + 'data/prices.json', { cache: 'no-store' })
@@ -229,10 +274,15 @@
         // de preço (o JS da própria página bate "return" se preco_atual é null, deixando
         // o texto hardcoded antigo).
         const indispList = meta.indisponiveis || [];
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', function() { patchIndisponiveisDOM(indispList); });
-        } else {
+        const prodList = j.produtos || [];
+        function runDomPatches() {
           patchIndisponiveisDOM(indispList);
+          patchJsonLdDOM(prodList, indispList);
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', runDomPatches);
+        } else {
+          runDomPatches();
         }
 
         if (location.search.indexOf('debug=1') !== -1) {

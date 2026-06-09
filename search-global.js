@@ -170,6 +170,7 @@
     var data = window.PROJETORES_DATA || [];
     for (var i = 0; i < data.length; i++) {
       var p = data[i];
+      if (p.listar === false) continue; // produto banido — fora da busca
       if (!p.slug) continue;
       // monta string-índice de busca uma vez
       var hay = (String(p.marca || '') + ' ' + String(p.modelo || '')).toLowerCase();

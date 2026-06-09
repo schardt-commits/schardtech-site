@@ -1066,6 +1066,7 @@ window.PROJETORES_DATA = [
   {
     "marca": "Formovie",
     "modelo": "Xming Page One",
+    "listar": false,
     "tecnologia": "LCD LED",
     "resolucao_nativa": "1920x1080",
     "resolucao_max": "1080p 120hz",
