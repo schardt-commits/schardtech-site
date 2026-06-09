@@ -82,17 +82,16 @@
         if (mk.shopee     && mk.shopee.link)     proj.shopee_url = mk.shopee.link;
         if (mk.ml         && mk.ml.link)         proj.ml_url     = mk.ml.link;
 
-        // Cupom de loja (já é o de maior desconto não-concorrente)
-        if (mk.aliexpress && mk.aliexpress.cupom) {
-          proj.ali_cupom_loja = mk.aliexpress.cupom;
-        }
-
-        // Cupom plataforma Ali — usa o que o checker realmente aplicou no
-        // checkout (vem do precos.db). Sobrescreve o tier calculado por
-        // heurística em projetores-data.js (que usa preco_min e erra quando
-        // o preço base do anúncio fica acima de um limiar de tier maior).
-        if (mk.aliexpress && mk.aliexpress.cupom_plataforma) {
-          proj.ali_cupom_promo = mk.aliexpress.cupom_plataforma;
+        // Cupom Ali só quando o vencedor É AliExpress — senão levaria o usuário ao
+        // caminho MAIS CARO (a Shopee/ML está mais barata). Mesma regra do /precos
+        // (precos.js:165-166). Limpa o valor heurístico estático de projetores-data.js
+        // quando o vencedor é Shopee/ML. (cupom_plataforma vem do checker via precos.db.)
+        if (proj.marketplace_vencedor === 'aliexpress') {
+          if (mk.aliexpress && mk.aliexpress.cupom)            proj.ali_cupom_loja  = mk.aliexpress.cupom;
+          if (mk.aliexpress && mk.aliexpress.cupom_plataforma) proj.ali_cupom_promo = mk.aliexpress.cupom_plataforma;
+        } else {
+          proj.ali_cupom_loja  = '';
+          proj.ali_cupom_promo = '';
         }
 
         merged++;
@@ -246,6 +245,17 @@
       }
       sc.textContent = JSON.stringify(obj, null, 2);
       break;
+    }
+
+    // Cupom: em pagina de vencedor != Ali e SEM cupom proprio, limpa o slot pra nao exibir
+    // o cupom Ali estatico/legado (levaria ao caminho mais caro). mergeOverlay ja zerou os
+    // cupons Ali injetados via JS; isto mata so o fallback SSR baked na pagina.
+    if (live && live.marketplace_vencedor && live.marketplace_vencedor !== 'aliexpress') {
+      const wmk = (live.marketplaces || {})[live.marketplace_vencedor] || {};
+      if (!wmk.cupom) {
+        const cslot = document.getElementById('projCupomSlot');
+        if (cslot) cslot.innerHTML = '';
+      }
     }
   }
 
