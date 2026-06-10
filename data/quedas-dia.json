@@ -1,9 +1,9 @@
 {
   "data_coleta": "09/06",
-  "hora_coleta": "09:30",
+  "hora_coleta": "21:31",
   "data_ontem": "08/06",
   "data_hoje": "09/06",
-  "total_quedas": 8,
+  "total_quedas": 9,
   "quedas": [
     {
       "marca": "Progaga",
@@ -23,7 +23,7 @@
       "preco_ontem": 803.76,
       "delta": -66.24,
       "delta_pct": -8.24,
-      "data_checagem": "2026-06-09 09:30"
+      "data_checagem": "2026-06-09 21:31"
     },
     {
       "marca": "Byintek",
@@ -33,7 +33,7 @@
       "preco_ontem": 2004.18,
       "delta": -117.1,
       "delta_pct": -5.84,
-      "data_checagem": "2026-06-09 09:30"
+      "data_checagem": "2026-06-09 21:31"
     },
     {
       "marca": "FlixTone",
@@ -53,7 +53,7 @@
       "preco_ontem": 686.0,
       "delta": -18.4,
       "delta_pct": -2.68,
-      "data_checagem": "2026-06-09 09:30"
+      "data_checagem": "2026-06-09 21:31"
     }
   ]
 }
