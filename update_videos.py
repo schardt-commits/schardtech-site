@@ -26,16 +26,19 @@ def update_script_js(videos):
     with open("script.js", "r", encoding="utf-8") as f:
         content = f.read()
 
+    # json.dumps escapa backslash/aspas/controles (JSON é JS válido).
+    # ensure_ascii=False: títulos PT-BR com acento ficam legíveis no script.js.
     lines = ["const featuredVideos = ["]
     for v in videos:
-        title = v["title"].replace("'", "\\'")
-        lines.append(f"  {{ id: '{v['id']}', title: '{title}' }},")
+        lines.append(f"  {{ id: {json.dumps(v['id'])}, title: {json.dumps(v['title'], ensure_ascii=False)} }},")
     lines.append("];")
     new_array = "\n".join(lines)
 
+    # Replacement como FUNÇÃO: re.sub não processa escapes do replacement
+    # (string literal com \ no título viraria "bad escape" ou colapsaria \\).
     updated = re.sub(
         r"const featuredVideos = \[[\s\S]*?\];",
-        new_array,
+        lambda m: new_array,
         content,
     )
 
