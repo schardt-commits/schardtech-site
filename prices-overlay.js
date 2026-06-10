@@ -336,6 +336,66 @@
       });
   }
 
+  /* Tracking de clique de afiliado (GA4) — listener delegado único.
+     As páginas de acessório já medem click_affiliate com onclick próprio (e não
+     carregam este arquivo); isto cobre o resto: /projetor/, comparar, qual-projetor
+     e precos. Mesmos params do padrão dos acessórios (product_slug/loja/source).
+     Sem gtag na página (ex: precos.html hoje), não faz nada. */
+  function initClickTracking() {
+    var SOURCES = [
+      ['.proj-cta-buy',    'cta_fim'],
+      ['.proj-mobile-cta', 'mobile_sticky'],
+      ['.proj-store-btn',  'card_topo'],
+      ['.pt-offer-btn',    'tabela_precos'],
+      ['.cp-store-btn',    'comparador'],
+      ['.qp-store-btn',    'recomendador']
+    ];
+    document.addEventListener('click', function (e) {
+      try {
+        if (typeof gtag !== 'function' || !e.target || !e.target.closest) return;
+        var a = null, source = '';
+        for (var i = 0; i < SOURCES.length; i++) {
+          a = e.target.closest(SOURCES[i][0]);
+          if (a) { source = SOURCES[i][1]; break; }
+        }
+        if (!a || !a.href) return;
+        var h = a.href;
+        var loja = /aliexpress|awin1\./i.test(h) ? 'aliexpress'
+                 : /shopee/i.test(h)             ? 'shopee'
+                 : /mercadoli[bv]re|meli\.la/i.test(h) ? 'mercadolivre'
+                 : /amazon/i.test(h)             ? 'amazon' : 'outra';
+        // Produto: slug da página individual; nas ferramentas, nome no card mais próximo
+        var produto = '';
+        var m = location.pathname.match(/\/projetor\/([^\/]+)\.html/i);
+        if (m) produto = m[1];
+        if (!produto) {
+          var card = a.closest('.qp-card');
+          var nEl = card && card.querySelector('.qp-card-name');
+          if (nEl) produto = nEl.textContent.trim();
+        }
+        if (!produto) {
+          var slot = a.closest('.cp-slot');
+          if (slot) {
+            var b = slot.querySelector('.cp-slot-brand');
+            var mo = slot.querySelector('.cp-slot-model');
+            produto = ((b ? b.textContent : '') + ' ' + (mo ? mo.textContent : '')).trim();
+          }
+        }
+        if (!produto) {
+          var row = a.closest('tr, .pt-card');
+          var nm = row && row.querySelector('.pt-name-txt');
+          if (nm) produto = nm.textContent.trim();
+        }
+        gtag('event', 'click_affiliate', {
+          product_slug: produto || location.pathname,
+          loja: loja,
+          source: source
+        });
+      } catch (err) { /* tracking nunca pode quebrar a navegação */ }
+    }, true);
+  }
+  initClickTracking();
+
   // Exporto basePath pra outros scripts (busca global usa pra montar URLs)
   window.SITE_BASE_PATH = basePath();
   window.PRICES_OVERLAY_READY = applyOverlay();
