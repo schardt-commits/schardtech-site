@@ -1105,6 +1105,7 @@ window.PROJETORES_DATA = [
   {
     "marca": "Horlat",
     "modelo": "T09",
+    "listar": false,
     "tecnologia": "LCD LED",
     "resolucao_nativa": "1920x1080",
     "resolucao_max": "1080p 60hz",
@@ -2230,7 +2231,7 @@ window.PROJETORES_DATA = [
     "uso_continuo": "8h",
     "preco_min": 1350,
     "preco_max": 1750,
-    "ali_url": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=&clickref2=&clickref3=&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005006952317727.html&platform=pl",
+    "ali_url": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=flixtone-d10s&clickref2=site&clickref3=&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005006952317727.html&platform=pl",
     "ali_cupom_loja": "",
     "ali_cupom_promo": "",
     "ml_url": "",
