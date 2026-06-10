@@ -288,6 +288,54 @@
     ctaFinal.insertBefore(a, ctaFinal.firstChild);
   }
 
+  /* CTA fixo no rodapé do MOBILE nas páginas de projetor: a página tem ~7000px
+     e, entre o card do topo e o "Comprar agora" do fim, não havia nenhum caminho
+     de compra. Mesmo padrão da barra .pa-mobile-cta já validada nos acessórios —
+     CSS injetado aqui porque /projetor/ não carrega acessorio.css. Só produto
+     disponível; esgotado não ganha barra. O <a> usa a classe .proj-mobile-cta,
+     que o tracking de clique já mapeia como source 'mobile_sticky'. */
+  function patchMobileCtaDOM(produtos) {
+    try {
+      if (document.querySelector('.proj-mobile-bar')) return;
+      const card = document.querySelector('.proj-price-card[data-marca][data-modelo]');
+      if (!card) return;
+      const key = norm(card.dataset.marca) + '|' + norm(card.dataset.modelo);
+      let live = null;
+      for (const p of produtos || []) {
+        if (norm(p.marca) + '|' + norm(p.modelo) === key) { live = p; break; }
+      }
+      if (!live || !live.preco_atual) return;
+      const venc = live.marketplace_vencedor;
+      const mk = (live.marketplaces || {})[venc] || (live.marketplaces || {}).mercado_livre || {};
+      if (!mk.link) return;
+      const lojaMap = { aliexpress: 'AliExpress', shopee: 'Shopee', mercado_livre: 'Mercado Livre', ml: 'Mercado Livre' };
+
+      const style = document.createElement('style');
+      style.textContent =
+        '.proj-mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:rgba(11,11,11,0.96);backdrop-filter:blur(16px);border-top:1px solid var(--border);padding:12px 16px;align-items:center;justify-content:space-between;gap:12px}' +
+        '.proj-mobile-bar .preco-min{font-size:0.7rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.05em}' +
+        '.proj-mobile-bar .preco-val{font-size:1.15rem;font-weight:800;color:var(--accent);line-height:1;margin-top:2px}' +
+        '.proj-mobile-bar a.proj-mobile-cta{flex:1;max-width:220px;text-align:center;padding:12px 16px;background:linear-gradient(135deg,var(--primary),var(--gradient-secondary));color:#fff;font-weight:700;font-size:0.92rem;border-radius:var(--radius)}' +
+        '@media (max-width:880px){.proj-mobile-bar{display:flex}body{padding-bottom:74px}}';
+      document.head.appendChild(style);
+
+      const bar = document.createElement('div');
+      bar.className = 'proj-mobile-bar';
+      const info = document.createElement('div');
+      info.innerHTML = '<div class="preco-min">Melhor preço hoje</div><div class="preco-val">R$ ' +
+        Math.round(live.preco_atual).toLocaleString('pt-BR') + '</div>';
+      const a = document.createElement('a');
+      a.className = 'proj-mobile-cta';
+      a.href = mk.link;
+      a.target = '_blank';
+      a.rel = 'noopener nofollow sponsored';
+      a.textContent = 'Ver no ' + (lojaMap[venc] || 'loja') + ' ↗';
+      bar.appendChild(info);
+      bar.appendChild(a);
+      document.body.appendChild(bar);
+    } catch (e) { /* nunca derrubar os outros patches */ }
+  }
+
   function applyOverlay() {
     const bp = basePath();
     const fetchPrices = fetch(bp + 'data/prices.json', { cache: 'no-store' })
@@ -318,6 +366,7 @@
           patchIndisponiveisDOM(indispList);
           patchJsonLdDOM(prodList, indispList);
           patchBuyCtaDOM(prodList);
+          patchMobileCtaDOM(prodList);
         }
         if (document.readyState === 'loading') {
           document.addEventListener('DOMContentLoaded', runDomPatches);
