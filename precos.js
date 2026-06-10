@@ -128,9 +128,15 @@
       var y = h - pad - ((p.preco - min) / range) * (h - pad * 2);
       return x.toFixed(1) + ',' + y.toFixed(1);
     });
+    var first = coords[0].split(',');
     var last = coords[coords.length - 1].split(',');
-    var stroke = precos[precos.length - 1] <= precos[0] ? 'rgba(91,217,160,0.75)' : 'rgba(255,155,122,0.75)';
+    var queda = precos[precos.length - 1] <= precos[0];
+    var stroke = queda ? 'rgba(91,217,160,0.75)' : 'rgba(255,155,122,0.75)';
+    var fillCor = queda ? 'rgba(91,217,160,0.12)' : 'rgba(255,155,122,0.12)';
+    // área preenchida sob a linha (fecha pelo rodapé do SVG)
+    var fillPts = coords.join(' ') + ' ' + last[0] + ',' + (h - pad) + ' ' + first[0] + ',' + (h - pad);
     return '<svg class="pt-spark" width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + ' ' + h + '" aria-hidden="true">' +
+      '<polygon points="' + fillPts + '" fill="' + fillCor + '" stroke="none"/>' +
       '<polyline points="' + coords.join(' ') + '" fill="none" stroke="' + stroke + '" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
       '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="2.4" fill="' + stroke + '"/></svg>';
   }
@@ -323,9 +329,19 @@
       el.classList.toggle('pt-active', active);
       el.setAttribute('aria-pressed', active ? 'true' : 'false');
       var ind = el.querySelector('.pt-sort-ind');
-      if (ind) ind.textContent = active ? (' ' + arrow) : '';
+      // coluna inativa ganha "↕" apagado — sem isso ninguém descobre que ordena
+      if (ind) ind.textContent = active ? (' ' + arrow) : ' ↕';
     });
   }
+
+  // Estilo do indicador de sort injetado via JS — o <style> do precos.html é
+  // arquivo da VM (marcadores pt*), não editar lá.
+  (function injectSortCss() {
+    var st = document.createElement('style');
+    st.textContent = '[data-win] .pt-sort-ind{font-size:0.85em}' +
+      '[data-win]:not(.pt-active) .pt-sort-ind{opacity:0.45}';
+    document.head.appendChild(st);
+  })();
 
   function onWinClick(w) {
     if (w === state.win) {

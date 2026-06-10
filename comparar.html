@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     /* ── HERO ─────────────────────────────────── */
     .cp-hero {
@@ -408,7 +408,11 @@
     }
     .cp-table {
       width: 100%;
-      border-collapse: collapse;
+      /* separate (não collapse): com collapse o Chrome não pinta direito o
+         background das células sticky — o conteúdo vazava numa faixa na base
+         do cabeçalho (bug visto 10/06/2026). Borda de linha vai nos <td>. */
+      border-collapse: separate;
+      border-spacing: 0;
     }
     .cp-table caption {
       position: absolute;
@@ -418,8 +422,9 @@
       white-space: nowrap;
     }
 
-    /* Sticky thead */
-    .cp-thead { position: sticky; top: 64px; z-index: 10; }
+    /* Sticky thead — offset DINÂMICO: o header fixo + barra de quedas somam
+       ~100px (não 64px); o JS mede e mantém --cp-header-h atualizada. */
+    .cp-thead { position: sticky; top: var(--cp-header-h, 64px); z-index: 10; }
     .cp-th-corner {
       background: #0d1120;
       border-bottom: 2px solid rgba(79,163,199,0.18);
@@ -463,12 +468,13 @@
       background: #0d1120;
       border-top: 1px solid rgba(79,163,199,0.1);
       position: sticky;
-      top: calc(64px + var(--cp-thead-h, 70px));
+      top: calc(var(--cp-header-h, 64px) + var(--cp-thead-h, 70px));
       z-index: 9;
     }
 
-    /* Data rows */
-    .cp-tr { border-top: 1px solid rgba(79,163,199,0.07); transition: background 0.15s ease; }
+    /* Data rows — borda nos <td>: com border-collapse:separate, borda em <tr> não pinta */
+    .cp-tr { transition: background 0.15s ease; }
+    .cp-tr > td { border-top: 1px solid rgba(79,163,199,0.07); }
     .cp-tr:hover { background: rgba(79,163,199,0.025); }
     .cp-tr.diff-hidden { display: none; }
 
@@ -712,10 +718,43 @@
       background: #fff;
       color: #222;
       border: 1.5px solid rgba(0,0,0,0.08);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+      box-shadow: var(--elev-store);
       min-height: 44px;
     }
-    .cp-store-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.16); }
+    .cp-store-btn:hover { transform: translateY(-1px); box-shadow: var(--elev-store-hover); }
+
+    /* Cue de scroll horizontal da tabela no mobile (10/06/2026): hint + fade na
+       borda direita enquanto houver conteúdo escondido; some no fim do scroll. */
+    .cp-scroll-hint { display: none; }
+    .cp-scroll-shell { position: relative; }
+    .cp-scroll-shell::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 36px;
+      background: linear-gradient(to left, rgba(11,11,11,0.85), transparent);
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .cp-scroll-shell.has-overflow::after { opacity: 1; }
+    .cp-scroll-shell.at-end::after { opacity: 0; }
+    @media (max-width: 760px) {
+      .cp-scroll-hint {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 0.74rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        margin-bottom: 8px;
+        padding: 5px 12px;
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        background: rgba(79,163,199,0.06);
+      }
+    }
     .cp-store-shopee { color: #EE4D2D; }
     .cp-store-shopee:hover { border-color: rgba(238,77,45,0.45); }
     .cp-store-ml { color: #1a3fbf; }
@@ -809,9 +848,9 @@
       .cp-controls { flex-direction: column; align-items: stretch; }
       .cp-ctrl-btn, .cp-share-btn { justify-content: center; width: 100%; }
       .cp-radar-svg-wrap { max-width: 200px; }
-      /* Sticky com offset igual à altura do header fixo (~60px) pra não ficar coberto */
-      .cp-thead { top: 60px; }
-      .cp-tr-section td { top: calc(60px + var(--cp-thead-h, 70px)); }
+      /* Offset dinâmico também no mobile (header + barra de quedas variam) */
+      .cp-thead { top: var(--cp-header-h, 60px); }
+      .cp-tr-section td { top: calc(var(--cp-header-h, 60px) + var(--cp-thead-h, 70px)); }
       .cp-modal-overlay { padding: 12px; }
     }
     @media (max-width: 480px) {
@@ -894,7 +933,7 @@
   <header id="header">
     <div class="container header-inner">
       <a href="/" class="logo-link">
-        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img">
+        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img" width="402" height="216">
       </a>
       <nav id="mainNav">
         <a href="projetores.html" class="nav-link">Projetores</a>
@@ -958,8 +997,14 @@
       </div>
 
       <!-- Comparison table -->
-      <div class="cp-table-wrap">
-        <table class="cp-table" id="compTable"></table>
+      <div class="cp-scroll-hint" id="cpScrollHint" aria-hidden="true">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3L4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4"/></svg>
+        Arraste a tabela para o lado
+      </div>
+      <div class="cp-scroll-shell" id="cpScrollShell">
+        <div class="cp-table-wrap" id="cpTableWrap">
+          <table class="cp-table" id="compTable"></table>
+        </div>
       </div>
 
       <!-- Purchase section -->
@@ -1434,6 +1479,22 @@
       return rows;
     }
 
+    /* Mede header fixo (+ barra de quedas) e thead, publicando nas vars CSS
+       dos offsets sticky. Roda no render, no scroll (o header encolhe quando
+       a página scrolla) e no resize — throttle via rAF. */
+    let _stickyRaf = null;
+    function syncStickyOffsets() {
+      const header = document.getElementById('header');
+      if (header) document.documentElement.style.setProperty('--cp-header-h', header.getBoundingClientRect().height + 'px');
+      const theadEl = document.querySelector('.cp-thead');
+      if (theadEl) document.documentElement.style.setProperty('--cp-thead-h', theadEl.offsetHeight + 'px');
+    }
+    addEventListener('scroll', () => {
+      if (_stickyRaf) return;
+      _stickyRaf = requestAnimationFrame(() => { _stickyRaf = null; syncStickyOffsets(); });
+    }, { passive: true });
+    addEventListener('resize', syncStickyOffsets);
+
     /* ═══════════════════════════════════════════
        TABLE RENDER
     ═══════════════════════════════════════════ */
@@ -1533,11 +1594,10 @@
       html += '</tbody>';
       document.getElementById('compTable').innerHTML = html;
 
-      /* atualiza o offset sticky das seções com a altura real do thead */
-      requestAnimationFrame(() => {
-        const theadEl = document.querySelector('.cp-thead');
-        if (theadEl) document.documentElement.style.setProperty('--cp-thead-h', theadEl.offsetHeight + 'px');
-      });
+      /* offsets sticky com medidas REAIS: header fixo (+ barra de quedas) muda
+         de altura no scroll, e o thead muda com fonte/badges — medir uma vez
+         em 64px fixo deixava conteúdo vazando (bug 10/06/2026). */
+      requestAnimationFrame(syncStickyOffsets);
 
       /* restore calc distance */
       if (calcDist) {
@@ -1890,7 +1950,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="/" class="logo-link">
-          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo">
+          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo" width="402" height="216">
         </a>
         <div class="footer-social">
           <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
@@ -1932,5 +1992,29 @@
       </div>
     </div>
   </footer>
+  <script>
+    // Estado do cue de scroll da tabela (10/06/2026): mostra o fade/hint só
+    // quando há coluna escondida e apaga quando o scroll chega no fim.
+    (function () {
+      var wrap = document.getElementById('cpTableWrap');
+      var shell = document.getElementById('cpScrollShell');
+      var hint = document.getElementById('cpScrollHint');
+      var table = document.getElementById('compTable');
+      if (!wrap || !shell) return;
+      function sync() {
+        var overflow = wrap.scrollWidth > wrap.clientWidth + 4;
+        shell.classList.toggle('has-overflow', overflow);
+        if (hint) hint.style.display = overflow ? '' : 'none';
+        var atEnd = wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth - 8;
+        shell.classList.toggle('at-end', atEnd);
+      }
+      wrap.addEventListener('scroll', sync, { passive: true });
+      window.addEventListener('resize', sync);
+      if (table && 'MutationObserver' in window) {
+        new MutationObserver(sync).observe(table, { childList: true, subtree: true });
+      }
+      sync();
+    })();
+  </script>
 </body>
 </html>

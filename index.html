@@ -37,6 +37,7 @@
     "name": "SchardTech",
     "url": "https://schardtech.com.br",
     "description": "Reviews de projetores com dados reais testados no canal SchardTech",
+    "publisher": { "@id": "https://schardtech.com.br/#org" },
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://schardtech.com.br/qual-projetor.html",
@@ -44,18 +45,38 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://schardtech.com.br/#org",
+    "name": "SchardTech",
+    "url": "https://schardtech.com.br",
+    "logo": "https://schardtech.com.br/favicon-512.png",
+    "description": "Canal e site de reviews de projetores com medição real: ANSI Lumens com luxímetro, input lag e specs verificadas. Mais de 60 projetores testados. Marca depositada no INPI.",
+    "sameAs": [
+      "https://www.youtube.com/@SchardTech",
+      "https://www.tiktok.com/@schardtech"
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    /* Grid de ferramentas da home — 2x2 no desktop, 1 coluna no mobile */
-    .home-tools { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 40px; }
+    /* Hero (10/06/2026): prova social + 1 CTA primário; ferramentas viram
+       cards secundários (outline) pra hierarquia ficar clara */
+    .hero-stats { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 22px 0 26px; }
+    .hero-stat { display: inline-flex; align-items: center; gap: 7px; font-size: 0.78rem; font-weight: 600; color: var(--accent); background: rgba(79,163,199,0.08); border: 1px solid var(--border); border-radius: 100px; padding: 7px 15px; }
+    .hero-stat svg { flex-shrink: 0; }
+    .btn-hero { font-size: 1rem; padding: 16px 34px; }
+    .home-tools { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
     .home-tool-card { display: flex; flex-direction: column; background: rgba(79,163,199,0.07); border: 1px solid rgba(79,163,199,0.2); border-radius: 14px; padding: 28px 28px 24px; }
     .home-tool-card .ht-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--primary); margin: 0 0 10px; }
     .home-tool-card .ht-desc { margin: 0 0 22px; line-height: 1.6; }
     .home-tool-card .btn { margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; }
-    @media (max-width: 768px) { .home-tools { grid-template-columns: 1fr; } }
+    @media (max-width: 880px) { .home-tools { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -66,7 +87,7 @@
   <header id="header">
     <div class="container header-inner">
       <a href="/" class="logo-link">
-        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img">
+        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img" width="402" height="216">
       </a>
       <nav id="mainNav">
         <a href="projetores.html" class="nav-link">Projetores</a>
@@ -91,20 +112,30 @@
         <div class="section-tag">Canal SchardTech</div>
         <h1>Escolha o projetor certo. <span class="gradient-text">Com dados reais.</span></h1>
         <p>Mais de 60 projetores testados com ANSI Lumens medido, input lag aferido e specs verificadas.</p>
+        <div class="hero-stats">
+          <span class="hero-stat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            60+ projetores testados
+          </span>
+          <span class="hero-stat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            ANSI medido com luxímetro
+          </span>
+          <span class="hero-stat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            Preços monitorados todo dia
+          </span>
+        </div>
+        <a href="qual-projetor.html" class="btn btn-primary btn-hero">
+          Qual projetor comprar?
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
       <div class="fade-in home-tools">
         <div class="home-tool-card">
-          <p class="ht-eyebrow">Não sabe qual comprar?</p>
-          <p class="ht-desc">Responda algumas perguntas sobre seu uso — games, cinema, quarto ou sala grande — e receba uma recomendação baseada em dados reais do canal.</p>
-          <a href="qual-projetor.html" class="btn btn-primary">
-            Qual projetor comprar?
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-        <div class="home-tool-card">
           <p class="ht-eyebrow">Já tem dois modelos em mente?</p>
           <p class="ht-desc">Compare specs lado a lado: ANSI Lumens, contraste, resolução e preço — tudo na mesma tela, sem abrir mil abas.</p>
-          <a href="comparar.html" class="btn btn-primary">
+          <a href="comparar.html" class="btn btn-outline">
             Comparar projetores
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
           </a>
@@ -112,7 +143,7 @@
         <div class="home-tool-card">
           <p class="ht-eyebrow">Quanto custa hoje?</p>
           <p class="ht-desc">Tabela ao vivo de todos os modelos: veja quem <strong>caiu de preço</strong> em 24h, 7 ou 20 dias e compre direto pelo link com o cupom do dia.</p>
-          <a href="precos.html" class="btn btn-primary">
+          <a href="precos.html" class="btn btn-outline">
             Preços ao vivo
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           </a>
@@ -120,7 +151,7 @@
         <div class="home-tool-card">
           <p class="ht-eyebrow">Faltou alguma coisa?</p>
           <p class="ht-desc">Telas, suportes, tripés e sticks de TV — os acessórios certos pra montar seu setup, cada um resolvendo um problema específico.</p>
-          <a href="acessorios-projetores.html" class="btn btn-primary">
+          <a href="acessorios-projetores.html" class="btn btn-outline">
             Ver acessórios
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </a>
@@ -322,7 +353,7 @@
   <footer>
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo">
+        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo" width="402" height="216">
         <div class="footer-social">
           <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>

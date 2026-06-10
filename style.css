@@ -23,6 +23,16 @@
   --radius-lg: 18px;
   --radius-xl: 24px;
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Cores semânticas — usar estas em vez de hex solto (verde=bom/queda,
+     laranja=ruim/alta, vermelho=erro/esgotado, amarelo=destaque ML) */
+  --success: #5BD9A0;
+  --warning: #FF9B7A;
+  --danger: #ff7070;
+  --gold: #FFD15A;
+  /* Elevações dos botões brancos de loja (base/hover) */
+  --elev-store: 0 2px 12px rgba(0, 0, 0, 0.10);
+  --elev-store-hover: 0 4px 20px rgba(0, 0, 0, 0.16);
 }
 
 /* RESET */
@@ -445,7 +455,7 @@ button { cursor: pointer; font-family: inherit; }
 .badge-sold {
   background: rgba(255, 100, 100, 0.12);
   border: 1px solid rgba(255, 100, 100, 0.35);
-  color: #ff7070;
+  color: var(--danger);
 }
 .card-4k-badge {
   position: absolute;
@@ -599,7 +609,7 @@ button { cursor: pointer; font-family: inherit; }
 .card-price-sold {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #ff7070;
+  color: var(--danger);
 }
 
 .card-actions {

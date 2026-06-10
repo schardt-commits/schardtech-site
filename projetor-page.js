@@ -6,7 +6,42 @@
    minimos diarios). Mudancas vs inline: fetch do historico com cache default (era
    no-store) + nota de dados-offline no banner quando o fetch falha.
    Carregado com <script src="../projetor-page.js" defer> — depois de projetores-data.js
-   e prices-overlay.js. Fica inline por pagina: gtag, PRICE_HISTORY + initPriceChart. */
+   e prices-overlay.js. Fica inline por pagina: gtag, PRICE_HISTORY + initPriceChart
+   (exposto como window.__initStaticChart — chamado aqui quando o grafico entra na
+   viewport, junto da injecao lazy do ../chart.umd.min.js local).
+   Redesign 10/06/2026: facade do YouTube (player so carrega no clique) +
+   Chart.js/prices-history.json lazy via IntersectionObserver. */
+
+(function ytFacade() {
+      // Player do YouTube (~1MB+ de JS) so carrega quando o visitante clica na thumb.
+      document.addEventListener('click', function(e) {
+        var btn = e.target && e.target.closest ? e.target.closest('.yt-facade') : null;
+        if (!btn) return;
+        var id = btn.getAttribute('data-ytid');
+        if (!id) return;
+        var iframe = document.createElement('iframe');
+        var extra = btn.getAttribute('data-ytparams');  // ex: "start=49"
+        iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(id) + '?autoplay=1' + (extra ? '&' + extra : '');
+        iframe.title = btn.getAttribute('data-yttitle') || 'Vídeo do canal SchardTech';
+        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        // sem estilo inline: o iframe herda o CSS do contexto (.proj-video-wrap iframe / .video-card iframe)
+        btn.parentNode.replaceChild(iframe, btn);
+      }, false);
+
+      // Aquece DNS+TLS do player no primeiro hover/toque na thumb
+      var warmed = false;
+      document.addEventListener('pointerover', function(e) {
+        if (warmed || !e.target || !e.target.closest || !e.target.closest('.yt-facade')) return;
+        warmed = true;
+        ['https://www.youtube.com', 'https://www.google.com'].forEach(function(h) {
+          var l = document.createElement('link');
+          l.rel = 'preconnect';
+          l.href = h;
+          document.head.appendChild(l);
+        });
+      }, true);
+    })();
 
 (function applyHeroOverlay() {
       function fmtBRL(v) {
@@ -195,6 +230,11 @@
           ml:         { label: 'Mercado Livre', color: '#FFD93D' }
         };
 
+        // Redesign 10/06/2026: com 120 dias de janela, bolinha em todo ponto
+        // virava "lagarta" — pontos somem em série longa (hover continua via
+        // pointHitRadius). Buraco de coleta vira trecho TRACEJADO em vez de
+        // linha quebrada (tracejado = sem dado naquele dia, honesto e legível).
+        var muitosPontos = labels.length > 35;
         var datasets = [];
         Object.keys(lojasMeta).forEach(function(loja) {
           if (!lojasDisponiveis[loja]) return;
@@ -207,16 +247,37 @@
             pointBackgroundColor: meta.color,
             pointBorderColor: 'rgba(11,11,11,0.6)',
             pointBorderWidth: 2,
-            pointRadius: 6,
-            pointHoverRadius: 9,
+            pointRadius: muitosPontos ? 0 : 4,
+            pointHoverRadius: 7,
+            pointHitRadius: 16,
             borderWidth: 2.5,
             tension: 0.25,
-            spanGaps: false
+            spanGaps: true,
+            segment: {
+              borderDash: function(s) { return (s.p0.skip || s.p1.skip) ? [5, 5] : undefined; }
+            }
           });
         });
 
+        // Loja única: degradê sob a linha (estilo CoinGecko). Com 2+ lojas os
+        // preenchimentos se sobrepõem e viram lama — fica só a linha.
+        if (datasets.length === 1) {
+          var corFill = datasets[0].borderColor;
+          datasets[0].fill = 'origin';
+          datasets[0].backgroundColor = function(c) {
+            var area = c.chart.chartArea;
+            if (!area) return corFill + '14';
+            var g = c.chart.ctx.createLinearGradient(0, area.top, 0, area.bottom);
+            g.addColorStop(0, corFill + '30');
+            g.addColorStop(1, corFill + '00');
+            return g;
+          };
+        }
+
         var menor = historico.min;
         var maior = historico.max;
+        // média dos mínimos diários — MESMA régua do banner (media-minimos-diarios-2026-05-31)
+        var media = (function(){ var d={}; pontos.forEach(function(p){var k=p.data.slice(0,10); if(d[k]==null||p.preco<d[k])d[k]=p.preco;}); var a=Object.keys(d).map(function(k){return d[k];}); return a.reduce(function(x,y){return x+y;},0)/a.length; })();
 
         // Destrói chart antigo (Chart.js v4)
         var canvas = document.getElementById('priceChart');
@@ -247,13 +308,39 @@
           }
         };
 
+        // Linha da MÉDIA histórica — o banner fala "X% abaixo da média";
+        // agora a referência aparece no gráfico em vez de só no texto.
+        var mediaLinePlugin = {
+          id: 'mediaLine',
+          afterDatasetsDraw: function(chart) {
+            var ctx = chart.ctx, area = chart.chartArea, scales = chart.scales;
+            var y = scales.y.getPixelForValue(media);
+            if (y < area.top || y > area.bottom) return;
+            ctx.save();
+            ctx.setLineDash([2, 5]);
+            ctx.strokeStyle = 'rgba(234,234,234,0.30)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(area.left, y);
+            ctx.lineTo(area.right, y);
+            ctx.stroke();
+            ctx.setLineDash([]);
+            ctx.fillStyle = 'rgba(234,234,234,0.55)';
+            ctx.font = '600 10px Inter, sans-serif';
+            ctx.textAlign = 'left';
+            ctx.fillText('média', area.left + 6, y - 5);
+            ctx.restore();
+          }
+        };
+
         var chart = new Chart(canvas.getContext('2d'), {
           type: 'line',
           data: { labels: labels, datasets: datasets },
           options: {
             responsive: true,
             maintainAspectRatio: false,
-            interaction: { mode: 'nearest', intersect: false },
+            // 'index': hover num dia mostra TODAS as lojas daquele dia juntas
+            interaction: { mode: 'index', intersect: false },
             animation: { duration: 700, easing: 'easeOutCubic' },
             layout: { padding: { top: 20, right: 10, left: 0, bottom: 0 } },
             plugins: {
@@ -270,6 +357,7 @@
                 displayColors: true,
                 boxPadding: 4,
                 callbacks: {
+                  title: function(items) { return items.length ? 'Dia ' + items[0].label : ''; },
                   label: function(item) {
                     if (item.parsed.y == null) return null;
                     var loja = item.dataset.label;
@@ -282,7 +370,7 @@
               }
             },
             scales: {
-              x: { grid: { color: 'rgba(234,234,234,0.04)' }, ticks: { color: 'rgba(234,234,234,0.55)' } },
+              x: { grid: { color: 'rgba(234,234,234,0.04)' }, ticks: { color: 'rgba(234,234,234,0.55)', maxTicksLimit: 8, maxRotation: 0 } },
               y: {
                 grid: { color: 'rgba(234,234,234,0.05)' },
                 ticks: { color: 'rgba(234,234,234,0.55)', callback: function(v) { return 'R$ ' + v.toLocaleString('pt-BR'); } },
@@ -291,7 +379,7 @@
               }
             }
           },
-          plugins: [minLinePlugin]
+          plugins: [minLinePlugin, mediaLinePlugin]
         });
 
         // Atualiza chips de filtro: cria um chip por loja disponível
@@ -338,8 +426,7 @@
           }
         }
 
-        // Atualiza stats grid
-        var media = (function(){ var d={}; pontos.forEach(function(p){var k=p.data.slice(0,10); if(d[k]==null||p.preco<d[k])d[k]=p.preco;}); var a=Object.keys(d).map(function(k){return d[k];}); return a.reduce(function(x,y){return x+y;},0)/a.length; })();  // media-minimos-diarios-2026-05-31
+        // Atualiza stats grid (media já calculada antes do chart — mesma régua)
         var statsWrap = document.querySelector('.price-stats-grid');
         if (statsWrap) {
           statsWrap.innerHTML =
@@ -355,7 +442,6 @@
           pontos.forEach(function(p) { if (p.data > dataMaisRecente) dataMaisRecente = p.data.slice(0, 10); });
           var precosHoje = pontos.filter(function(p) { return p.data.slice(0, 10) === dataMaisRecente; }).map(function(p) { return p.preco; });
           var atual = precosHoje.length ? Math.min.apply(null, precosHoje) : pontos[pontos.length - 1].preco;
-          var media = (function(){ var d={}; pontos.forEach(function(p){var k=p.data.slice(0,10); if(d[k]==null||p.preco<d[k])d[k]=p.preco;}); var a=Object.keys(d).map(function(k){return d[k];}); return a.reduce(function(x,y){return x+y;},0)/a.length; })();  // media-minimos-diarios-2026-05-31
           var distMedia = ((atual - media) / media) * 100;
           var icon, classe, titulo, sub;
           if (distMedia <= -3) {
@@ -378,11 +464,45 @@
       }
 
       // Espera o overlay de prices.json terminar (carrega na mesma rodada) ou roda direto
-      if (window.PRICES_OVERLAY_READY && typeof window.PRICES_OVERLAY_READY.then === 'function') {
-        window.PRICES_OVERLAY_READY.then(run).catch(function() { run(); });
-      } else if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', run);
-      } else {
-        run();
+      function start() {
+        if (window.PRICES_OVERLAY_READY && typeof window.PRICES_OVERLAY_READY.then === 'function') {
+          window.PRICES_OVERLAY_READY.then(run).catch(function() { run(); });
+        } else {
+          run();
+        }
       }
+
+      // Lazy (10/06/2026): Chart.js (~70KB) + prices-history.json (~45KB) so
+      // baixam quando a secao do grafico se aproxima da viewport (600px antes).
+      // O snapshot estatico da pagina (window.__initStaticChart) renderiza
+      // primeiro; o run() substitui com o historico vivo.
+      function fire() {
+        if (fire.done) return;
+        fire.done = true;
+        if (typeof Chart === 'undefined' && !document.querySelector('script[src*="chart.umd.min.js"]')) {
+          var s = document.createElement('script');
+          s.src = (window.SITE_BASE_PATH || '../') + 'chart.umd.min.js';
+          document.head.appendChild(s);
+        }
+        if (typeof window.__initStaticChart === 'function') {
+          try { window.__initStaticChart(); } catch (e) {}
+        }
+        start();
+      }
+      function boot() {
+        var wrap = document.querySelector('.price-chart-wrap');
+        if (!wrap) return;
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function(entries) {
+            for (var i = 0; i < entries.length; i++) {
+              if (entries[i].isIntersecting) { io.disconnect(); fire(); break; }
+            }
+          }, { rootMargin: '600px 0px' });
+          io.observe(wrap);
+        } else {
+          fire();
+        }
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+      else boot();
     })();
