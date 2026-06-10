@@ -1203,6 +1203,13 @@ input:focus-visible,
   }
 }
 
+/* Páginas de projetor no mobile: card de preço (CTA) acima do vídeo —
+   o visitante vindo do YouTube já assistiu o vídeo; o botão de compra
+   não pode ficar abaixo da dobra. Grid vira 1 coluna em <=880px. */
+@media (max-width: 880px) {
+  .proj-hero-grid .proj-price-card { order: -1; }
+}
+
 /* ============================================================
    RESPONSIVE
 ============================================================ */
