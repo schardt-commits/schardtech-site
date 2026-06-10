@@ -180,7 +180,11 @@
         preco: proj.preco_atual,
         v: v, spark: spark,
         offerLink: offerLink, offerLabel: offerLabel,
-        cupomLoja: cupomLoja, cupomPlat: cupomPlat
+        cupomLoja: cupomLoja, cupomPlat: cupomPlat,
+        cupomLojaVal: venc === 'aliexpress' ? (mk.cupom_validade || null) : null,
+        cupomLojaMin: venc === 'aliexpress' ? (mk.cupom_minimo || null) : null,
+        cupomPlatVal: venc === 'aliexpress' ? (mk.cupom_plataforma_validade || null) : null,
+        cupomPlatMin: venc === 'aliexpress' ? (mk.cupom_plataforma_minimo || null) : null
       });
     }
     return rows;
@@ -202,6 +206,34 @@
     if (r.slug) return '<a class="pt-name" href="projetor/' + escHtml(r.slug) + '.html">' + inner + '</a>';
     return '<span class="pt-name">' + inner + '</span>';
   }
+  // Validade/mínimo do cupom (etapa 2.1) — espelhado em prerender_precos.py (cupom_meta_txt)
+  function cupomMetaTxt(validade, minimo) {
+    var partes = [];
+    var hoje = false;
+    if (validade && /^\d{4}-\d{2}-\d{2}$/.test(String(validade))) {
+      var d = new Date();
+      var hojeIso = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+      if (validade === hojeIso) { partes.push('expira hoje'); hoje = true; }
+      else if (validade > hojeIso) partes.push('válido até ' + validade.slice(8, 10) + '/' + validade.slice(5, 7));
+      // vencida: não mostra nada (próxima rodada limpa o cupom)
+    }
+    if (minimo && Number(minimo) > 0) partes.push('pedido mínimo R$ ' + Math.round(Number(minimo)).toLocaleString('pt-BR'));
+    return { txt: partes.join(' · '), hoje: hoje };
+  }
+
+  // data-cod: clique copia o código (listener no boot) e o prices-overlay manda
+  // gtag copy_coupon. Espelhado em prerender_precos.py (cupom_span).
+  function cupomSpan(cod, plat, validade, minimo) {
+    var meta = cupomMetaTxt(validade, minimo);
+    var base = plat ? 'Cupom da plataforma AliExpress' : 'Cupom da loja';
+    var title = base + (meta.txt ? ' · ' + meta.txt : '') + ' · clique para copiar';
+    var cls = plat ? 'pt-coupon pt-coupon-plat' : 'pt-coupon';
+    var pre = plat ? '+ ' : '🎟 ';
+    var inline = meta.hoje ? ' <span class="pt-coupon-hoje">· expira hoje</span>' : '';
+    return '<span class="' + cls + '" title="' + escHtml(title) + '" data-cod="' + escHtml(cod) + '"' +
+      ' role="button" tabindex="0">' + pre + escHtml(cod) + inline + '</span>';
+  }
+
   function offerCell(r) {
     var html = '';
     if (r.offerLink) {
@@ -211,8 +243,8 @@
     }
     if (r.cupomLoja || r.cupomPlat) {
       html += '<div class="pt-coupons">';
-      if (r.cupomLoja) html += '<span class="pt-coupon" title="Cupom da loja">🎟 ' + escHtml(r.cupomLoja) + '</span>';
-      if (r.cupomPlat) html += '<span class="pt-coupon pt-coupon-plat" title="Cupom da plataforma AliExpress">+ ' + escHtml(r.cupomPlat) + '</span>';
+      if (r.cupomLoja) html += cupomSpan(r.cupomLoja, false, r.cupomLojaVal, r.cupomLojaMin);
+      if (r.cupomPlat) html += cupomSpan(r.cupomPlat, true, r.cupomPlatVal, r.cupomPlatMin);
       html += '</div>';
     }
     return html;
@@ -335,12 +367,46 @@
   }
 
   // Estilo do indicador de sort injetado via JS — o <style> do precos.html é
-  // arquivo da VM (marcadores pt*), não editar lá.
+  // arquivo da VM (marcadores pt*), não editar lá. Mesmo motivo pro estilo do
+  // cupom copiável/expira hoje (etapa 2.1).
   (function injectSortCss() {
     var st = document.createElement('style');
     st.textContent = '[data-win] .pt-sort-ind{font-size:0.85em}' +
-      '[data-win]:not(.pt-active) .pt-sort-ind{opacity:0.45}';
+      '[data-win]:not(.pt-active) .pt-sort-ind{opacity:0.45}' +
+      '.pt-coupon[data-cod]{cursor:pointer}' +
+      '.pt-coupon-hoje{color:rgba(255,155,122,0.95);font-weight:600}';
     document.head.appendChild(st);
+  })();
+
+  // Cupom copiável (etapa 2.1): clique/Enter copia o código. Delegado no document
+  // — cobre tanto as linhas re-renderizadas pelo JS quanto as assadas no HTML
+  // estático pelo prerender. O gtag copy_coupon vem do prices-overlay.js.
+  (function bindCouponCopy() {
+    function copiar(el) {
+      var cod = el.getAttribute('data-cod');
+      if (!cod || !navigator.clipboard) return;
+      // feedback só DEPOIS da cópia confirmada (writeText pode rejeitar em
+      // webview/documento sem foco — "✓ copiado" com clipboard vazio é mentira)
+      navigator.clipboard.writeText(cod).then(function () {
+        if (el.getAttribute('data-copiando')) return; // 2º clique no feedback não vira texto preso
+        el.setAttribute('data-copiando', '1');
+        var antes = el.innerHTML;
+        el.innerHTML = '✓ copiado';
+        setTimeout(function () { el.innerHTML = antes; el.removeAttribute('data-copiando'); }, 1200);
+      }).catch(function () {});
+    }
+    document.addEventListener('click', function (e) {
+      var el = e.target && e.target.closest ? e.target.closest('.pt-coupon[data-cod]') : null;
+      if (el) copiar(el);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      var el = e.target && e.target.closest ? e.target.closest('.pt-coupon[data-cod]') : null;
+      // el.click() em vez de copiar(el): unifica com o fluxo de clique, onde o
+      // prices-overlay.js também emite o gtag copy_coupon (span role=button não
+      // sintetiza click no Enter sozinho)
+      if (el) { e.preventDefault(); el.click(); }
+    });
   })();
 
   function onWinClick(w) {

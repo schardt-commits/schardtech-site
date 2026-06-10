@@ -24,8 +24,9 @@
   // (raiz, /projetor/{slug}.html, etc.)
   function basePath() {
     var p = location.pathname;
-    // Se está em /projetor/algo.html, sobe uma pasta
-    if (/\/projetor\//i.test(p)) return '../';
+    // Se está em /projetor/{slug}.html ou /marca/{slug}.html, sobe uma pasta
+    // (sem o /marca/ os hubs fazem fetch de data/prices.json em caminho errado = 404)
+    if (/\/(projetor|marca)\//i.test(p)) return '../';
     return '';
   }
 
@@ -259,6 +260,55 @@
     }
   }
 
+  /* Selo "menor preco do historico" (etapa 2.1). Verdadeiro quando o preco de HOJE
+     e o menor da serie inteira do precos.db (prices.json: preco_min_historico inclui
+     a rodada de hoje; tolerancia de 50 centavos = mesma regua do tooltip do grafico).
+     Copy honesta: o selo cita a data real de inicio da serie DESTE produto
+     (historico_desde) e so entra com 14+ dias de historico — "menor preco" de uma
+     serie de 3 dias nao diz nada. */
+  function isMenorHistorico(live) {
+    if (!live || !live.preco_atual || !live.preco_min_historico || !live.historico_desde) return false;
+    // empate exato com o mínimo (o exportador clampa min <= atual; 0.005 = só ruído
+    // de float). Tolerância maior afirmaria "menor do histórico" com preço ACIMA
+    // do mínimo que o gráfico da própria página exibe — mentira por centavos.
+    if (live.preco_atual > live.preco_min_historico + 0.005) return false;
+    // série flat (min==max) tornaria o selo permanente e vazio — exige variação real
+    if (!(live.preco_max_historico > live.preco_min_historico + 0.5)) return false;
+    var ini = new Date(live.historico_desde + 'T00:00:00');
+    return !isNaN(ini) && (Date.now() - ini.getTime()) >= 14 * 864e5;
+  }
+
+  function liveDoCard(produtos) {
+    var card = document.querySelector('.proj-price-card[data-marca][data-modelo]');
+    if (!card) return null;
+    var key = norm(card.dataset.marca) + '|' + norm(card.dataset.modelo);
+    for (var i = 0; i < (produtos || []).length; i++) {
+      var p = produtos[i];
+      if (norm(p.marca) + '|' + norm(p.modelo) === key) return p;
+    }
+    return null;
+  }
+
+  /* Injeta o selo no card de preco do topo, logo abaixo do "Verificado em ...".
+     Elemento proprio (.proj-lowest-flag, estilo no projetor.css) — nao disputa
+     com o projetor-page.js, que reescreve só #projPriceValue/#projPriceMeta. */
+  function patchMenorPrecoDOM(produtos) {
+    try {
+      var card = document.querySelector('.proj-price-card[data-marca][data-modelo]');
+      if (!card || card.querySelector('.proj-lowest-flag')) return;
+      var live = liveDoCard(produtos);
+      if (!isMenorHistorico(live)) return;
+      var d = live.historico_desde;
+      var flag = document.createElement('div');
+      flag.className = 'proj-lowest-flag';
+      flag.innerHTML = '🔥 Menor preço do nosso histórico <span>(monitorado desde ' +
+        d.slice(8, 10) + '/' + d.slice(5, 7) + ')</span>';
+      var metaEl = card.querySelector('#projPriceMeta, .proj-price-meta');
+      if (metaEl) metaEl.insertAdjacentElement('afterend', flag);
+      else card.insertBefore(flag, card.firstChild);
+    } catch (e) { /* nunca derrubar os outros patches */ }
+  }
+
   /* Pagina de projetor e longa (~7000px) e o unico botao de compra fica no topo.
      Injeta um card "Comprar agora — R$ X" como 1o item de "Proximos passos" (fim da pagina),
      SO pra produto disponivel, linkando pro marketplace vencedor. Esgotado nao ganha nada. */
@@ -283,8 +333,11 @@
     a.href = mk.link; a.target = '_blank'; a.rel = 'noopener nofollow sponsored';
     a.className = 'proj-cta-card proj-cta-buy';
     a.style.cssText = 'border-color:var(--border-hover);background:linear-gradient(135deg,rgba(79,163,199,0.12),rgba(123,140,255,0.05));';
+    var pitch = isMenorHistorico(live)
+      ? 'Menor preço do nosso histórico, no ' + loja + '. Testado no canal.'
+      : 'Melhor preço de hoje no ' + loja + ', testado no canal.';
     a.innerHTML = '<h4 style="color:var(--accent)">Comprar agora — ' + preco + '</h4>' +
-      '<p>Melhor preço de hoje no ' + loja + ', testado no canal.</p>';
+      '<p>' + pitch + '</p>';
     ctaFinal.insertBefore(a, ctaFinal.firstChild);
   }
 
@@ -322,7 +375,8 @@
       const bar = document.createElement('div');
       bar.className = 'proj-mobile-bar';
       const info = document.createElement('div');
-      info.innerHTML = '<div class="preco-min">Melhor preço hoje</div><div class="preco-val">R$ ' +
+      const rotulo = isMenorHistorico(live) ? 'Menor preço do histórico' : 'Melhor preço hoje';
+      info.innerHTML = '<div class="preco-min">' + rotulo + '</div><div class="preco-val">R$ ' +
         Math.round(live.preco_atual).toLocaleString('pt-BR') + '</div>';
       const a = document.createElement('a');
       a.className = 'proj-mobile-cta';
@@ -365,6 +419,7 @@
         function runDomPatches() {
           patchIndisponiveisDOM(indispList);
           patchJsonLdDOM(prodList, indispList);
+          patchMenorPrecoDOM(prodList);
           patchBuyCtaDOM(prodList);
           patchMobileCtaDOM(prodList);
         }
@@ -385,11 +440,13 @@
       });
   }
 
-  /* Tracking de clique de afiliado (GA4) — listener delegado único.
-     As páginas de acessório já medem click_affiliate com onclick próprio (e não
+  /* Tracking GA4 — listener delegado único.
+     click_affiliate: as páginas de acessório já medem com onclick próprio (e não
      carregam este arquivo); isto cobre o resto: /projetor/, comparar, qual-projetor
      e precos. Mesmos params do padrão dos acessórios (product_slug/loja/source).
-     Sem gtag na página (ex: precos.html hoje), não faz nada. */
+     copy_coupon (etapa 2.1): cobre TODOS os botões de copiar cupom do site,
+     inclusive os assados estáticos nas páginas (que não têm gtag no onclick).
+     Sem gtag na página, não faz nada. */
   function initClickTracking() {
     var SOURCES = [
       ['.proj-cta-buy',    'cta_fim'],
@@ -399,6 +456,38 @@
       ['.cp-store-btn',    'comparador'],
       ['.qp-store-btn',    'recomendador']
     ];
+    var COPY_SOURCES = [
+      ['.copy-btn',            'card_topo'],
+      ['.cp-cupom-copy',       'comparador'],
+      ['.qp-coupon-copy',      'recomendador'],
+      ['.pt-coupon[data-cod]', 'tabela_precos']
+    ];
+    // Produto: slug da página individual; nas ferramentas, nome no card mais próximo
+    function resolveProduto(el) {
+      var produto = '';
+      var m = location.pathname.match(/\/projetor\/([^\/]+)\.html/i);
+      if (m) produto = m[1];
+      if (!produto) {
+        var card = el.closest('.qp-card');
+        var nEl = card && card.querySelector('.qp-card-name');
+        if (nEl) produto = nEl.textContent.trim();
+      }
+      if (!produto) {
+        // comparador: botões de loja/cupom vivem nos cards do #purchaseGrid (.cp-pcard)
+        var pcard = el.closest('.cp-pcard');
+        if (pcard) {
+          var b = pcard.querySelector('.cp-pcard-brand');
+          var mo = pcard.querySelector('.cp-pcard-model');
+          produto = ((b ? b.textContent : '') + ' ' + (mo ? mo.textContent : '')).trim();
+        }
+      }
+      if (!produto) {
+        var row = el.closest('tr, .pt-card');
+        var nm = row && row.querySelector('.pt-name-txt');
+        if (nm) produto = nm.textContent.trim();
+      }
+      return produto;
+    }
     document.addEventListener('click', function (e) {
       try {
         if (typeof gtag !== 'function' || !e.target || !e.target.closest) return;
@@ -407,38 +496,42 @@
           a = e.target.closest(SOURCES[i][0]);
           if (a) { source = SOURCES[i][1]; break; }
         }
-        if (!a || !a.href) return;
-        var h = a.href;
-        var loja = /aliexpress|awin1\./i.test(h) ? 'aliexpress'
-                 : /shopee/i.test(h)             ? 'shopee'
-                 : /mercadoli[bv]re|meli\.la/i.test(h) ? 'mercadolivre'
-                 : /amazon/i.test(h)             ? 'amazon' : 'outra';
-        // Produto: slug da página individual; nas ferramentas, nome no card mais próximo
-        var produto = '';
-        var m = location.pathname.match(/\/projetor\/([^\/]+)\.html/i);
-        if (m) produto = m[1];
-        if (!produto) {
-          var card = a.closest('.qp-card');
-          var nEl = card && card.querySelector('.qp-card-name');
-          if (nEl) produto = nEl.textContent.trim();
+        if (a && a.href) {
+          var h = a.href;
+          var loja = /aliexpress|awin1\./i.test(h) ? 'aliexpress'
+                   : /shopee/i.test(h)             ? 'shopee'
+                   : /mercadoli[bv]re|meli\.la/i.test(h) ? 'mercadolivre'
+                   : /amazon/i.test(h)             ? 'amazon' : 'outra';
+          gtag('event', 'click_affiliate', {
+            product_slug: resolveProduto(a) || location.pathname,
+            loja: loja,
+            source: source
+          });
+          return;
         }
-        if (!produto) {
-          var slot = a.closest('.cp-slot');
-          if (slot) {
-            var b = slot.querySelector('.cp-slot-brand');
-            var mo = slot.querySelector('.cp-slot-model');
-            produto = ((b ? b.textContent : '') + ' ' + (mo ? mo.textContent : '')).trim();
-          }
+        // Copiar cupom — o código copiado identifica o cupom (mede qual converte)
+        var c = null, csrc = '';
+        for (var j = 0; j < COPY_SOURCES.length; j++) {
+          c = e.target.closest(COPY_SOURCES[j][0]);
+          if (c) { csrc = COPY_SOURCES[j][1]; break; }
         }
-        if (!produto) {
-          var row = a.closest('tr, .pt-card');
-          var nm = row && row.querySelector('.pt-name-txt');
-          if (nm) produto = nm.textContent.trim();
+        if (!c) return;
+        // sem Clipboard API a cópia não acontece na maioria das fontes — não
+        // contar cópia falsa (o comparador tem fallback execCommand e fica
+        // subcontado nesse cenário raro; melhor que inflar o funil inteiro)
+        if (!navigator.clipboard) return;
+        var cod = c.getAttribute('data-cod') || c.getAttribute('data-code') || '';
+        if (!cod) {
+          // botão assado estático: código fica no <code> do mesmo .proj-coupon
+          var wrap = c.closest('.proj-coupon');
+          var codeEl = wrap && wrap.querySelector('code');
+          if (codeEl) cod = codeEl.textContent.trim();
         }
-        gtag('event', 'click_affiliate', {
-          product_slug: produto || location.pathname,
-          loja: loja,
-          source: source
+        if (!cod) return;
+        gtag('event', 'copy_coupon', {
+          cupom: cod,
+          product_slug: resolveProduto(c) || location.pathname,
+          source: csrc
         });
       } catch (err) { /* tracking nunca pode quebrar a navegação */ }
     }, true);

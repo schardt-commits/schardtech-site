@@ -255,3 +255,18 @@
 @supports not (aspect-ratio: 16 / 9) {
   .proj-video-wrap .yt-facade { position: absolute; top: 0; left: 0; }
 }
+
+/* ===== etapa 2.1 (10/06/2026): monetizacao mobile + selo + validade de cupom ===== */
+/* No mobile o hero empilha (880px, grid de 1 coluna) e o card de preco ficava
+   abaixo do video: o comprador rolava sem ver preco/CTA. order:-1 sobe o card. */
+@media (max-width: 880px) { .proj-hero-grid > .proj-price-card { order: -1; } }
+
+/* Selo "menor preco do nosso historico" no card (injetado por prices-overlay.js
+   so quando preco_atual <= preco_min_historico e a serie tem 14+ dias) */
+.proj-lowest-flag { margin: 10px 0 2px; font-size: 0.84rem; font-weight: 700; color: rgba(91, 217, 160, 0.95); }
+.proj-lowest-flag span { font-weight: 400; color: var(--text-dim); font-size: 0.74rem; }
+
+/* Validade/minimo do cupom ("expira hoje" / "valido ate dd/mm"), renderizado
+   pelo projetor-page.js a partir dos campos novos do prices.json */
+.proj-coupon-val { display: block; font-size: 0.72rem; color: var(--text-dim); font-weight: 400; margin-top: 2px; }
+.proj-coupon-val.hoje { color: rgba(255, 155, 122, 0.95); font-weight: 600; }

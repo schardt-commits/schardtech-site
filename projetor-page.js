@@ -110,26 +110,50 @@
           if (slot) slot.innerHTML = btns.map(function(b){return b.html;}).join('');
         }
 
+        // Validade/mínimo do cupom (campos novos do prices.json, etapa 2.1):
+        // "expira hoje" / "válido até dd/mm" + pedido mínimo. Campo ausente = null = silêncio.
+        function cupomMeta(validade, minimo) {
+          var partes = [];
+          var hoje = false;
+          if (validade && /^\d{4}-\d{2}-\d{2}$/.test(String(validade))) {
+            var d = new Date();
+            var hojeIso = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+            if (validade === hojeIso) { partes.push('expira hoje'); hoje = true; }
+            else if (validade > hojeIso) partes.push('válido até ' + validade.slice(8, 10) + '/' + validade.slice(5, 7));
+            // vencida: não mostra nada (a próxima rodada limpa o cupom)
+          }
+          if (minimo && Number(minimo) > 0) partes.push('pedido mín. R$ ' + Math.round(Number(minimo)).toLocaleString('pt-BR'));
+          return partes.length ? {txt: partes.join(' · '), hoje: hoje} : null;
+        }
+
         // Cupons: loja + plataforma (os dois que aparecem no anúncio)
         var venc = mkts[p.marketplace_vencedor] || {};
         var cupons = [];
         var cupomLoja = venc.cupom || p.ali_cupom_loja;
-        if (cupomLoja) cupons.push({rotulo: 'Cupom da loja', cod: cupomLoja});
-        if (venc.cupom_plataforma) cupons.push({rotulo: 'Cupom AliExpress', cod: venc.cupom_plataforma});
+        if (cupomLoja) cupons.push({rotulo: 'Cupom da loja', cod: cupomLoja,
+          // meta só quando o cupom vem do venc (o fallback estático não tem datas do db)
+          meta: venc.cupom ? cupomMeta(venc.cupom_validade, venc.cupom_minimo) : null});
+        if (venc.cupom_plataforma) cupons.push({rotulo: 'Cupom AliExpress', cod: venc.cupom_plataforma,
+          meta: cupomMeta(venc.cupom_plataforma_validade, venc.cupom_plataforma_minimo)});
         if (cupons.length) {
           var slot = document.getElementById('projCupomSlot');
           if (slot) {
             slot.innerHTML = cupons.map(function(cp, i) {
+              var metaHtml = cp.meta
+                ? '<span class="proj-coupon-val' + (cp.meta.hoje ? ' hoje' : '') + '">' + cp.meta.txt + '</span>'
+                : '';
               return '<div class="proj-coupon"' + (i ? ' style="margin-top:8px;"' : '') + '>' +
-                '<span>' + cp.rotulo + ': <code>' + cp.cod + '</code></span>' +
+                '<span>' + cp.rotulo + ': <code>' + cp.cod + '</code>' + metaHtml + '</span>' +
                 '<button class="copy-btn" type="button" data-cod="' + cp.cod + '">Copiar</button>' +
                 '</div>';
             }).join('');
             slot.querySelectorAll('.copy-btn').forEach(function(b) {
               b.addEventListener('click', function() {
-                navigator.clipboard.writeText(b.getAttribute('data-cod'));
-                b.textContent = 'Copiado!';
-                setTimeout(function() { b.textContent = 'Copiar'; }, 1800);
+                if (!navigator.clipboard) return; // webview antigo: sem API, sem feedback falso
+                navigator.clipboard.writeText(b.getAttribute('data-cod')).then(function() {
+                  b.textContent = 'Copiado!';
+                  setTimeout(function() { b.textContent = 'Copiar'; }, 1800);
+                }).catch(function() {});
               });
             });
           }
