@@ -12,12 +12,19 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      # Pinado por SHA (M4): o job tem contents:write + secret — tag móvel comprometida
+      # poderia exfiltrar o secret ou push malicioso no repo que publica o site
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4.3.1
 
       - name: Buscar últimos vídeos e atualizar script.js
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python update_videos.py
+
+      # Falha o job ANTES do commit se o script.js ficou inválido (M1):
+      # JS quebrado aqui derrubaria preço/busca/vídeos de todas as páginas
+      - name: Validar script.js
+        run: node --check script.js
 
       - name: Fazer commit se houve mudança
         run: |

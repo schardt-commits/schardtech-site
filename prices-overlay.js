@@ -138,7 +138,7 @@
     // ─── 1. Badge no topo (.proj-badges) — sempre reescrito ─────────────────────
     const badgesContainer = document.querySelector('.proj-badges');
     if (badgesContainer) {
-      const STATUS_RE = /^(Estoque nacional|Importado|Sem estoque|Esgotado|Anúncio retirado|Indispon[ií]vel)\b/i;
+      const STATUS_RE = /^(Estoque nacional|Importado|Sem estoque|Esgotado|Anúncio retirado|Indispon[ií]vel|Verificando preço)\b/i;
       badgesContainer.querySelectorAll('.proj-badge').forEach(function(b) {
         if (STATUS_RE.test(b.textContent.trim())) b.remove();
       });
@@ -149,9 +149,15 @@
       };
       const newBadge = document.createElement('span');
       newBadge.className = 'proj-badge proj-status-badge';
-      newBadge.textContent = labelBadgePorMotivo[motivo] || 'Indisponível';
+      newBadge.textContent = labelBadgePorMotivo[motivo] || 'Verificando preço';
       badgesContainer.appendChild(newBadge);
     }
+
+    // ─── Motivo fora do enum conhecido = diagnóstico do checker, não esgotado ───
+    // (M7 auditoria 02/06) Ex.: "sem preço final ou sem vencedor". Antes caía no
+    // ramo "Sem estoque" e escondia a compra de produto que ainda vende. Aqui o
+    // badge já virou "Verificando preço"; preço, botões e aviso ficam intactos.
+    if (motivo !== 'sem_estoque_br' && motivo !== 'sem_estoque_importado' && motivo !== 'indisponivel') return;
 
     // ─── 2. Aviso ao final do card (último <p style> dentro do .proj-price-card) ─
     // Substitui o texto hardcoded de cada página por um aviso padronizado por motivo.
@@ -223,7 +229,11 @@
     }
     let isOut = false;
     for (const x of indisponiveis || []) {
-      if (norm(x.marca) + '|' + norm(x.modelo) === key) { isOut = true; break; }
+      if (norm(x.marca) + '|' + norm(x.modelo) === key) {
+        // Motivo fora do enum = diagnóstico do checker (M7): não vira OutOfStock
+        isOut = (x.motivo === 'sem_estoque_br' || x.motivo === 'sem_estoque_importado' || x.motivo === 'indisponivel');
+        break;
+      }
     }
     if (!live && !isOut) return; // sem dado vivo e não listado: não mexe no estático
 

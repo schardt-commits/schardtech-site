@@ -265,7 +265,7 @@
           <h4>Navegação</h4>
           <a href="projetores.html">Projetores</a>
           <a href="/sobre.html">Sobre</a>
-          <a href="/politica-privacidade.html">Privacidade</a>
+          <a href="/politica-privacidade.html">Privacidade</a><a href="mailto:contato@schardtech.com.br">Contato</a>
         </div>
         <div class="footer-col">
           <h4>Ferramentas</h4>
@@ -370,6 +370,9 @@
       }
 
       function render() {
+        // Fetch falhou (ALL vazio): digitar na busca/ordenar NÃO pode apagar a
+        // grade estática assada pelo prerender_catalogo.py com "nenhum projetor"
+        if (!ALL.length) return;
         var q = (elSearch.value || '').toLowerCase().trim();
         var list = ALL.filter(function (p) {
           if (activeBrand && p.marca !== activeBrand) return false;
