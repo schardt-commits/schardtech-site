@@ -229,6 +229,8 @@
       transition: background var(--transition);
     }
     .qp-advanced-toggle:hover { background: rgba(79,163,199,0.05); }
+    /* Toggle é <button> (acessível por teclado) — desfaz o estilo de UA */
+    button.qp-advanced-toggle { font: inherit; color: inherit; background: none; border: 0; width: 100%; text-align: inherit; cursor: pointer; }
     .qp-advanced-toggle-label {
       display: flex;
       align-items: center;
@@ -841,13 +843,13 @@
 
       <!-- Painel avançado -->
       <div class="qp-advanced" id="advancedPanel">
-        <div class="qp-advanced-toggle" onclick="document.getElementById('advancedPanel').classList.toggle('open')">
-          <div class="qp-advanced-toggle-label">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-            Configurações técnicas — para quem quer mais controle
-          </div>
+        <button type="button" class="qp-advanced-toggle" aria-expanded="false" onclick="var p=document.getElementById('advancedPanel');p.classList.toggle('open');this.setAttribute('aria-expanded',p.classList.contains('open'))">
+          <span class="qp-advanced-toggle-label">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            Configurações técnicas (para quem quer mais controle)
+          </span>
           <span class="qp-advanced-chevron">▼</span>
-        </div>
+        </button>
         <div class="qp-advanced-body">
 
           <!-- Tecnologia -->
@@ -965,7 +967,7 @@
           Ver Recomendações
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
-        <p class="qp-live-count" id="liveCount"></p>
+        <p class="qp-live-count" id="liveCount" role="status"></p>
       </div>
 
     </div>
@@ -1183,7 +1185,16 @@
     }
 
     /* ── Contagem em tempo real ── */
+    /* aria-pressed espelha o .active em todos os botões de opção. Chamado do
+       updateCount() porque TODO caminho que muda seleção (pick*, inputs de
+       orçamento) termina nele — um ponto só, sem mexer em cada handler. */
+    function syncPressed() {
+      document.querySelectorAll('.qp-option').forEach(o =>
+        o.setAttribute('aria-pressed', o.classList.contains('active') ? 'true' : 'false'));
+    }
+
     function updateCount() {
+      syncPressed();
       const data = window.PROJETORES_DATA || [];
       const n = data.filter(p => passesFilter(p, answers)).length;
       const el = document.getElementById('liveCount');

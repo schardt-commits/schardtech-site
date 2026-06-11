@@ -99,6 +99,8 @@
       border-color: rgba(79,163,199,0.55);
       background: rgba(79,163,199,0.04);
     }
+    /* Slot vazio é <button> (acessível por teclado) — desfaz o estilo de UA */
+    button.cp-slot { font: inherit; color: inherit; width: 100%; }
     .cp-slot.filled {
       border-style: solid;
       cursor: default;
@@ -1708,11 +1710,11 @@
       const hints = ['Comece aqui', 'Segundo modelo', 'Terceiro (opcional)'];
       document.getElementById('slotsContainer').innerHTML = selected.map((p,i) => {
         if (!p) return `
-          <div class="cp-slot" data-slot="${i}" onclick="openModal(${i})">
-            <div class="cp-slot-add-icon">+</div>
-            <div class="cp-slot-add-text">Adicionar projetor</div>
-            <div class="cp-slot-add-hint">${hints[i]}</div>
-          </div>`;
+          <button type="button" class="cp-slot" data-slot="${i}" onclick="openModal(${i})">
+            <span class="cp-slot-add-icon">+</span>
+            <span class="cp-slot-add-text">Adicionar projetor</span>
+            <span class="cp-slot-add-hint">${hints[i]}</span>
+          </button>`;
         const price = fmtPrice(p.preco_atual || p.preco_min, null);
         return `
           <div class="cp-slot filled" data-slot="${i}">

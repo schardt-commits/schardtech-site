@@ -90,6 +90,7 @@
   var listed = [];          // projetores com slug, ordenados
   var visible = [];         // resultado filtrado atual
   var activeIdx = -1;
+  var lastFocus = null;     // quem abriu o modal — recebe o foco de volta no fechar
 
   function injectTrigger() {
     var header = document.querySelector('#header .header-inner');
@@ -150,6 +151,11 @@
 
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) closeModal();
+    });
+    // Esc fecha com o foco em QUALQUER lugar do overlay (botão fechar, item da
+    // lista...) — antes só o input tratava Escape e o resto ficava mudo
+    overlay.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { e.preventDefault(); closeModal(); }
     });
     overlay.querySelector('.sg-close').addEventListener('click', closeModal);
     input.addEventListener('input', function () { activeIdx = 0; render(); });
@@ -277,10 +283,8 @@
           location.href = item.getAttribute('href');
         }
       }
-    } else if (e.key === 'Escape') {
-      e.preventDefault();
-      closeModal();
     }
+    // Escape: tratado no keydown do overlay (bolha do input chega lá)
   }
 
   function updateActive(scrollIntoView) {
@@ -295,6 +299,7 @@
 
   function openModal() {
     if (!overlay) return;
+    lastFocus = document.activeElement;
     if (!listed.length) buildList();
     activeIdx = 0;
     render();
@@ -308,6 +313,11 @@
     overlay.classList.remove('open');
     document.body.style.overflow = '';
     input.value = '';
+    // Restaura o foco pra quem abriu (teclado não volta pro topo da página)
+    if (lastFocus && typeof lastFocus.focus === 'function') {
+      try { lastFocus.focus(); } catch (e) {}
+    }
+    lastFocus = null;
   }
 
   function onKeyGlobal(e) {
