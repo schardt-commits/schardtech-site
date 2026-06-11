@@ -85,11 +85,12 @@
 
         // Cupom Ali só quando o vencedor É AliExpress — senão levaria o usuário ao
         // caminho MAIS CARO (a Shopee/ML está mais barata). Mesma regra do /precos
-        // (precos.js:165-166). Limpa o valor heurístico estático de projetores-data.js
-        // quando o vencedor é Shopee/ML. (cupom_plataforma vem do checker via precos.db.)
+        // (precos.js:165-166). Atribuição SEMPRE incondicional: cupom exibido vem
+        // exclusivamente do prices.json; valor herdado de projetores-data.js ou de
+        // HTML antigo NUNCA sobrevive (auditoria cupons 11/06 — cupom fantasma).
         if (proj.marketplace_vencedor === 'aliexpress') {
-          if (mk.aliexpress && mk.aliexpress.cupom)            proj.ali_cupom_loja  = mk.aliexpress.cupom;
-          if (mk.aliexpress && mk.aliexpress.cupom_plataforma) proj.ali_cupom_promo = mk.aliexpress.cupom_plataforma;
+          proj.ali_cupom_loja  = (mk.aliexpress && mk.aliexpress.cupom)            || '';
+          proj.ali_cupom_promo = (mk.aliexpress && mk.aliexpress.cupom_plataforma) || '';
         } else {
           proj.ali_cupom_loja  = '';
           proj.ali_cupom_promo = '';

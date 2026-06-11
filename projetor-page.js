@@ -61,6 +61,11 @@
       function run() {
         var card = document.querySelector('.proj-price-card');
         if (!card) return;
+        // Cupom NUNCA vem do HTML estático: zera o slot SSR antes de qualquer
+        // bail-out (produto sem dado vivo, M7, importado, sem estoque). Só o
+        // bloco mais abaixo re-renderiza, e só com cupom vindo do prices.json.
+        var cupomSlotSSR = document.getElementById('projCupomSlot');
+        if (cupomSlotSSR) cupomSlotSSR.innerHTML = '';
         var marca = card.dataset.marca, modelo = card.dataset.modelo;
         if (!marca || !modelo) return;
         var data = window.PROJETORES_DATA;
@@ -129,10 +134,11 @@
         // Cupons: loja + plataforma (os dois que aparecem no anúncio)
         var venc = mkts[p.marketplace_vencedor] || {};
         var cupons = [];
-        var cupomLoja = venc.cupom || p.ali_cupom_loja;
+        // Sem fallback estático (p.ali_cupom_loja): cupom exibido vem SÓ do dado
+        // vivo do checker. Fallback antigo ressuscitava código morto (aud. 11/06).
+        var cupomLoja = venc.cupom;
         if (cupomLoja) cupons.push({rotulo: 'Cupom da loja', cod: cupomLoja,
-          // meta só quando o cupom vem do venc (o fallback estático não tem datas do db)
-          meta: venc.cupom ? cupomMeta(venc.cupom_validade, venc.cupom_minimo) : null});
+          meta: cupomMeta(venc.cupom_validade, venc.cupom_minimo)});
         if (venc.cupom_plataforma) cupons.push({rotulo: 'Cupom AliExpress', cod: venc.cupom_plataforma,
           meta: cupomMeta(venc.cupom_plataforma_validade, venc.cupom_plataforma_minimo)});
         if (cupons.length) {
