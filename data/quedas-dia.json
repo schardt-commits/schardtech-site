@@ -1,19 +1,19 @@
 {
   "data_coleta": "11/06",
-  "hora_coleta": "15:23",
+  "hora_coleta": "21:30",
   "data_ontem": "10/06",
   "data_hoje": "11/06",
   "total_quedas": 2,
   "quedas": [
     {
       "marca": "Bettdow",
-      "modelo": "AC1073",
-      "slug": "bettdow-ac1073",
-      "preco_atual": 938.08,
-      "preco_ontem": 951.88,
-      "delta": -13.8,
-      "delta_pct": -1.45,
-      "data_checagem": "2026-06-11 15:23"
+      "modelo": "AC1053",
+      "slug": "bettdow-ac1053",
+      "preco_atual": 764.94,
+      "preco_ontem": 916.0,
+      "delta": -151.06,
+      "delta_pct": -16.49,
+      "data_checagem": "2026-06-11 21:30"
     },
     {
       "marca": "Bettdow",
@@ -23,7 +23,7 @@
       "preco_ontem": 803.76,
       "delta": -7.36,
       "delta_pct": -0.92,
-      "data_checagem": "2026-06-11 15:23"
+      "data_checagem": "2026-06-11 21:30"
     }
   ]
 }
