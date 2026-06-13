@@ -1,59 +1,59 @@
 {
-  "data_coleta": "12/06",
-  "hora_coleta": "21:31",
-  "data_ontem": "11/06",
-  "data_hoje": "12/06",
-  "total_quedas": 29,
+  "data_coleta": "13/06",
+  "hora_coleta": "00:30",
+  "data_ontem": "12/06",
+  "data_hoje": "13/06",
+  "total_quedas": 5,
   "quedas": [
     {
-      "marca": "Thundeal",
-      "modelo": "TD95W",
-      "slug": "thundeal-td95w",
-      "preco_atual": 775.69,
-      "preco_ontem": 846.41,
-      "delta": -70.72,
-      "delta_pct": -8.36,
-      "data_checagem": "2026-06-12 21:20"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 616.85,
-      "preco_ontem": 670.55,
-      "delta": -53.7,
-      "delta_pct": -8.01,
-      "data_checagem": "2026-06-12 21:19"
+      "marca": "Bettdow",
+      "modelo": "AC1053",
+      "slug": "bettdow-ac1053",
+      "preco_atual": 764.94,
+      "preco_ontem": 916.0,
+      "delta": -151.06,
+      "delta_pct": -16.49,
+      "data_checagem": "2026-06-13 00:30"
     },
     {
       "marca": "Progaga",
       "modelo": "PG610W",
       "slug": "progaga-pg610w",
-      "preco_atual": 1060.79,
-      "preco_ontem": 1123.06,
-      "delta": -62.27,
-      "delta_pct": -5.54,
-      "data_checagem": "2026-06-12 21:19"
+      "preco_atual": 933.35,
+      "preco_ontem": 1060.79,
+      "delta": -127.44,
+      "delta_pct": -12.01,
+      "data_checagem": "2026-06-13 00:19"
     },
     {
       "marca": "Progaga",
       "modelo": "PG310",
       "slug": "progaga-pg310",
-      "preco_atual": 312.36,
-      "preco_ontem": 315.95,
-      "delta": -3.59,
-      "delta_pct": -1.14,
-      "data_checagem": "2026-06-12 21:19"
+      "preco_atual": 307.33,
+      "preco_ontem": 312.36,
+      "delta": -5.03,
+      "delta_pct": -1.61,
+      "data_checagem": "2026-06-13 00:18"
     },
     {
-      "marca": "Byintek",
-      "modelo": "Love U14",
-      "slug": "byintek-u14",
-      "preco_atual": 1044.54,
-      "preco_ontem": 1055.83,
-      "delta": -11.29,
-      "delta_pct": -1.07,
-      "data_checagem": "2026-06-12 21:31"
+      "marca": "Bettdow",
+      "modelo": "AC1041",
+      "slug": "bettdow-ac1041",
+      "preco_atual": 796.4,
+      "preco_ontem": 804.68,
+      "delta": -8.28,
+      "delta_pct": -1.03,
+      "data_checagem": "2026-06-13 00:30"
+    },
+    {
+      "marca": "Wanbo",
+      "modelo": "X5 Pro",
+      "slug": "wanbo-x5-pro",
+      "preco_atual": 2281.28,
+      "preco_ontem": 2291.4,
+      "delta": -10.12,
+      "delta_pct": -0.44,
+      "data_checagem": "2026-06-13 00:30"
     }
   ]
 }
