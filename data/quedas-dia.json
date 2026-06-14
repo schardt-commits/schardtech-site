@@ -1,59 +1,59 @@
 {
-  "data_coleta": "13/06",
-  "hora_coleta": "21:31",
-  "data_ontem": "12/06",
-  "data_hoje": "13/06",
-  "total_quedas": 14,
+  "data_coleta": "14/06",
+  "hora_coleta": "00:31",
+  "data_ontem": "13/06",
+  "data_hoje": "14/06",
+  "total_quedas": 6,
   "quedas": [
     {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 933.35,
-      "preco_ontem": 1060.79,
-      "delta": -127.44,
-      "delta_pct": -12.01,
-      "data_checagem": "2026-06-13 21:20"
+      "marca": "Bettdow",
+      "modelo": "AC1053",
+      "slug": "bettdow-ac1053",
+      "preco_atual": 764.94,
+      "preco_ontem": 916.0,
+      "delta": -151.06,
+      "delta_pct": -16.49,
+      "data_checagem": "2026-06-14 00:31"
     },
     {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1806.04,
-      "preco_ontem": 1869.69,
-      "delta": -63.65,
-      "delta_pct": -3.4,
-      "data_checagem": "2026-06-13 21:24"
+      "marca": "Bettdow",
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 502.0,
+      "preco_ontem": 519.48,
+      "delta": -17.48,
+      "delta_pct": -3.36,
+      "data_checagem": "2026-06-14 00:31"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 307.33,
-      "preco_ontem": 312.36,
-      "delta": -5.03,
-      "delta_pct": -1.61,
-      "data_checagem": "2026-06-13 15:08"
+      "marca": "Magcubic",
+      "modelo": "HY310",
+      "slug": "magcubic-hy310",
+      "preco_atual": 314.5,
+      "preco_ontem": 323.0,
+      "delta": -8.5,
+      "delta_pct": -2.63,
+      "data_checagem": "2026-06-14 00:31"
     },
     {
       "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 2281.28,
-      "preco_ontem": 2291.4,
-      "delta": -10.12,
-      "delta_pct": -0.44,
-      "data_checagem": "2026-06-13 21:31"
+      "modelo": "T2 Ultra",
+      "slug": "wanbo-t2-ultra",
+      "preco_atual": 1301.48,
+      "preco_ontem": 1329.08,
+      "delta": -27.6,
+      "delta_pct": -2.08,
+      "data_checagem": "2026-06-14 00:31"
     },
     {
-      "marca": "Jenovox",
-      "modelo": "M5000 Mini",
-      "slug": "jenovox-m5000-mini",
-      "preco_atual": 2529.52,
-      "preco_ontem": 2530.05,
-      "delta": -0.53,
-      "delta_pct": -0.02,
-      "data_checagem": "2026-06-13 21:16"
+      "marca": "Bettdow",
+      "modelo": "AC1041",
+      "slug": "bettdow-ac1041",
+      "preco_atual": 796.4,
+      "preco_ontem": 804.68,
+      "delta": -8.28,
+      "delta_pct": -1.03,
+      "data_checagem": "2026-06-14 00:31"
     }
   ]
 }
