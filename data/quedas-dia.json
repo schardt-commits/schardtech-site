@@ -1,9 +1,9 @@
 {
   "data_coleta": "14/06",
-  "hora_coleta": "00:31",
+  "hora_coleta": "09:31",
   "data_ontem": "13/06",
   "data_hoje": "14/06",
-  "total_quedas": 6,
+  "total_quedas": 7,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,7 +13,17 @@
       "preco_ontem": 916.0,
       "delta": -151.06,
       "delta_pct": -16.49,
-      "data_checagem": "2026-06-14 00:31"
+      "data_checagem": "2026-06-14 09:31"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 1755.76,
+      "preco_ontem": 1866.24,
+      "delta": -110.48,
+      "delta_pct": -5.92,
+      "data_checagem": "2026-06-14 09:15"
     },
     {
       "marca": "Bettdow",
@@ -23,7 +33,7 @@
       "preco_ontem": 519.48,
       "delta": -17.48,
       "delta_pct": -3.36,
-      "data_checagem": "2026-06-14 00:31"
+      "data_checagem": "2026-06-14 09:31"
     },
     {
       "marca": "Magcubic",
@@ -33,7 +43,7 @@
       "preco_ontem": 323.0,
       "delta": -8.5,
       "delta_pct": -2.63,
-      "data_checagem": "2026-06-14 00:31"
+      "data_checagem": "2026-06-14 09:31"
     },
     {
       "marca": "Wanbo",
@@ -43,17 +53,7 @@
       "preco_ontem": 1329.08,
       "delta": -27.6,
       "delta_pct": -2.08,
-      "data_checagem": "2026-06-14 00:31"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1041",
-      "slug": "bettdow-ac1041",
-      "preco_atual": 796.4,
-      "preco_ontem": 804.68,
-      "delta": -8.28,
-      "delta_pct": -1.03,
-      "data_checagem": "2026-06-14 00:31"
+      "data_checagem": "2026-06-14 09:31"
     }
   ]
 }
