@@ -1,9 +1,9 @@
 {
   "data_coleta": "13/06",
-  "hora_coleta": "15:21",
+  "hora_coleta": "21:31",
   "data_ontem": "12/06",
   "data_hoje": "13/06",
-  "total_quedas": 15,
+  "total_quedas": 14,
   "quedas": [
     {
       "marca": "Progaga",
@@ -13,7 +13,17 @@
       "preco_ontem": 1060.79,
       "delta": -127.44,
       "delta_pct": -12.01,
-      "data_checagem": "2026-06-13 15:09"
+      "data_checagem": "2026-06-13 21:20"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1806.04,
+      "preco_ontem": 1869.69,
+      "delta": -63.65,
+      "delta_pct": -3.4,
+      "data_checagem": "2026-06-13 21:24"
     },
     {
       "marca": "Progaga",
@@ -26,16 +36,6 @@
       "data_checagem": "2026-06-13 15:08"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1041",
-      "slug": "bettdow-ac1041",
-      "preco_atual": 796.4,
-      "preco_ontem": 804.68,
-      "delta": -8.28,
-      "delta_pct": -1.03,
-      "data_checagem": "2026-06-13 15:21"
-    },
-    {
       "marca": "Wanbo",
       "modelo": "X5 Pro",
       "slug": "wanbo-x5-pro",
@@ -43,7 +43,7 @@
       "preco_ontem": 2291.4,
       "delta": -10.12,
       "delta_pct": -0.44,
-      "data_checagem": "2026-06-13 15:21"
+      "data_checagem": "2026-06-13 21:31"
     },
     {
       "marca": "Jenovox",
@@ -53,7 +53,7 @@
       "preco_ontem": 2530.05,
       "delta": -0.53,
       "delta_pct": -0.02,
-      "data_checagem": "2026-06-13 15:06"
+      "data_checagem": "2026-06-13 21:16"
     }
   ]
 }
