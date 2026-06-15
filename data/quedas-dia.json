@@ -1,19 +1,39 @@
 {
   "data_coleta": "14/06",
-  "hora_coleta": "15:22",
+  "hora_coleta": "21:31",
   "data_ontem": "13/06",
   "data_hoje": "14/06",
-  "total_quedas": 7,
+  "total_quedas": 9,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1053",
-      "slug": "bettdow-ac1053",
-      "preco_atual": 764.94,
-      "preco_ontem": 916.0,
-      "delta": -151.06,
-      "delta_pct": -16.49,
-      "data_checagem": "2026-06-14 15:22"
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 2157.08,
+      "preco_ontem": 3308.32,
+      "delta": -1151.24,
+      "delta_pct": -34.8,
+      "data_checagem": "2026-06-14 21:31"
+    },
+    {
+      "marca": "Wanbo",
+      "modelo": "X5 Pro",
+      "slug": "wanbo-x5-pro",
+      "preco_atual": 1938.0,
+      "preco_ontem": 2281.28,
+      "delta": -343.28,
+      "delta_pct": -15.05,
+      "data_checagem": "2026-06-14 21:31"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D9W Ultra",
+      "slug": "flixtone-d9w-ultra",
+      "preco_atual": 1702.67,
+      "preco_ontem": 1947.77,
+      "delta": -245.1,
+      "delta_pct": -12.58,
+      "data_checagem": "2026-06-14 21:15"
     },
     {
       "marca": "FlixTone",
@@ -23,7 +43,7 @@
       "preco_ontem": 1866.24,
       "delta": -110.48,
       "delta_pct": -5.92,
-      "data_checagem": "2026-06-14 15:05"
+      "data_checagem": "2026-06-14 21:14"
     },
     {
       "marca": "Bettdow",
@@ -33,27 +53,7 @@
       "preco_ontem": 519.48,
       "delta": -17.48,
       "delta_pct": -3.36,
-      "data_checagem": "2026-06-14 15:22"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY310",
-      "slug": "magcubic-hy310",
-      "preco_atual": 314.5,
-      "preco_ontem": 323.0,
-      "delta": -8.5,
-      "delta_pct": -2.63,
-      "data_checagem": "2026-06-14 15:22"
-    },
-    {
-      "marca": "Wanbo",
-      "modelo": "T2 Ultra",
-      "slug": "wanbo-t2-ultra",
-      "preco_atual": 1301.48,
-      "preco_ontem": 1329.08,
-      "delta": -27.6,
-      "delta_pct": -2.08,
-      "data_checagem": "2026-06-14 15:22"
+      "data_checagem": "2026-06-14 21:31"
     }
   ]
 }
