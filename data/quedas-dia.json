@@ -1,59 +1,59 @@
 {
-  "data_coleta": "14/06",
-  "hora_coleta": "21:31",
-  "data_ontem": "13/06",
-  "data_hoje": "14/06",
-  "total_quedas": 9,
+  "data_coleta": "15/06",
+  "hora_coleta": "05:02",
+  "data_ontem": "14/06",
+  "data_hoje": "15/06",
+  "total_quedas": 33,
   "quedas": [
-    {
-      "marca": "Byintek",
-      "modelo": "U80 MAX",
-      "slug": "byintek-u80-max",
-      "preco_atual": 2157.08,
-      "preco_ontem": 3308.32,
-      "delta": -1151.24,
-      "delta_pct": -34.8,
-      "data_checagem": "2026-06-14 21:31"
-    },
-    {
-      "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 1938.0,
-      "preco_ontem": 2281.28,
-      "delta": -343.28,
-      "delta_pct": -15.05,
-      "data_checagem": "2026-06-14 21:31"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D9W Ultra",
-      "slug": "flixtone-d9w-ultra",
-      "preco_atual": 1702.67,
-      "preco_ontem": 1947.77,
-      "delta": -245.1,
-      "delta_pct": -12.58,
-      "data_checagem": "2026-06-14 21:15"
-    },
     {
       "marca": "FlixTone",
       "modelo": "D9W Mini",
       "slug": "flixtone-d9w-mini",
-      "preco_atual": 1755.76,
-      "preco_ontem": 1866.24,
-      "delta": -110.48,
-      "delta_pct": -5.92,
-      "data_checagem": "2026-06-14 21:14"
+      "preco_atual": 825.36,
+      "preco_ontem": 1755.76,
+      "delta": -930.4,
+      "delta_pct": -52.99,
+      "data_checagem": "2026-06-15 04:54"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1066",
-      "slug": "bettdow-ac1066",
-      "preco_atual": 502.0,
-      "preco_ontem": 519.48,
-      "delta": -17.48,
-      "delta_pct": -3.36,
-      "data_checagem": "2026-06-14 21:31"
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 1037.09,
+      "preco_ontem": 1903.36,
+      "delta": -866.27,
+      "delta_pct": -45.51,
+      "data_checagem": "2026-06-15 05:02"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 370.29,
+      "preco_ontem": 667.37,
+      "delta": -297.08,
+      "delta_pct": -44.52,
+      "data_checagem": "2026-06-15 04:58"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 580.62,
+      "preco_ontem": 923.41,
+      "delta": -342.79,
+      "delta_pct": -37.12,
+      "data_checagem": "2026-06-15 05:00"
+    },
+    {
+      "marca": "Jenovox",
+      "modelo": "M5000 Mini",
+      "slug": "jenovox-m5000-mini",
+      "preco_atual": 1695.52,
+      "preco_ontem": 2529.52,
+      "delta": -834.0,
+      "delta_pct": -32.97,
+      "data_checagem": "2026-06-15 04:55"
     }
   ]
 }
