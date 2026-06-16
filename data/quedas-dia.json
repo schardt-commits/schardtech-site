@@ -1,59 +1,59 @@
 {
-  "data_coleta": "15/06",
-  "hora_coleta": "21:22",
-  "data_ontem": "14/06",
-  "data_hoje": "15/06",
-  "total_quedas": 29,
+  "data_coleta": "16/06",
+  "hora_coleta": "09:31",
+  "data_ontem": "15/06",
+  "data_hoje": "16/06",
+  "total_quedas": 12,
   "quedas": [
     {
-      "marca": "FlixTone",
-      "modelo": "D9W Mini",
-      "slug": "flixtone-d9w-mini",
-      "preco_atual": 811.64,
-      "preco_ontem": 1755.76,
-      "delta": -944.12,
-      "delta_pct": -53.77,
-      "data_checagem": "2026-06-15 21:14"
+      "marca": "Vevshao",
+      "modelo": "A10",
+      "slug": "vevshao-a10",
+      "preco_atual": 424.15,
+      "preco_ontem": 909.81,
+      "delta": -485.66,
+      "delta_pct": -53.38,
+      "data_checagem": "2026-06-16 09:31"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG610W",
+      "slug": "progaga-pg610w",
+      "preco_atual": 789.29,
+      "preco_ontem": 911.77,
+      "delta": -122.48,
+      "delta_pct": -13.43,
+      "data_checagem": "2026-06-16 09:19"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 222.09,
+      "preco_ontem": 243.77,
+      "delta": -21.68,
+      "delta_pct": -8.89,
+      "data_checagem": "2026-06-16 09:19"
     },
     {
       "marca": "Progaga",
       "modelo": "PG610 ATV",
       "slug": "progaga-pg610-atv",
-      "preco_atual": 1019.34,
-      "preco_ontem": 1903.36,
-      "delta": -884.02,
-      "delta_pct": -46.45,
-      "data_checagem": "2026-06-15 21:22"
+      "preco_atual": 947.63,
+      "preco_ontem": 1019.34,
+      "delta": -71.71,
+      "delta_pct": -7.03,
+      "data_checagem": "2026-06-16 09:23"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 400.23,
-      "preco_ontem": 667.37,
-      "delta": -267.14,
-      "delta_pct": -40.03,
-      "data_checagem": "2026-06-15 21:19"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 571.23,
-      "preco_ontem": 923.41,
-      "delta": -352.18,
-      "delta_pct": -38.14,
-      "data_checagem": "2026-06-15 21:20"
-    },
-    {
-      "marca": "Jenovox",
-      "modelo": "M5000 Mini",
-      "slug": "jenovox-m5000-mini",
-      "preco_atual": 1668.52,
-      "preco_ontem": 2529.52,
-      "delta": -861.0,
-      "delta_pct": -34.04,
-      "data_checagem": "2026-06-15 21:15"
+      "marca": "FlixTone",
+      "modelo": "D10S",
+      "slug": "flixtone-d10s",
+      "preco_atual": 2105.88,
+      "preco_ontem": 2228.88,
+      "delta": -123.0,
+      "delta_pct": -5.52,
+      "data_checagem": "2026-06-16 09:23"
     }
   ]
 }
