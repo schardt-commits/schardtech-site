@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "atualizado_em": "2026-06-17 17:17:47",
-    "total_produtos": 51,
+    "atualizado_em": "2026-06-17 17:29:39",
+    "total_produtos": 50,
     "fonte": "revisar.xlsx + precos.db (historico)",
     "obs": "Gerado por exportador.py a partir de revisar.xlsx + precos.db",
     "indisponiveis": [
@@ -24,6 +24,11 @@
         "marca": "Byintek",
         "modelo": "Love U4",
         "motivo": "sem preço final ou sem vencedor"
+      },
+      {
+        "marca": "Byintek",
+        "modelo": "Love U14",
+        "motivo": "sem_estoque_br"
       },
       {
         "marca": "Byintek",
@@ -137,7 +142,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Bettdow",
@@ -159,7 +164,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Bettdow",
@@ -181,7 +186,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Bettdow",
@@ -203,7 +208,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Bettdow",
@@ -225,7 +230,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Bettdow",
@@ -247,7 +252,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Bettdow",
@@ -269,7 +274,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Byintek",
@@ -304,36 +309,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U14",
-      "preco_atual": 1128.99,
-      "preco_min_historico": 766.14,
-      "preco_max_historico": 1379.08,
-      "historico_desde": "2026-05-07",
-      "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-06-17 17:14",
-      "marketplaces": {
-        "aliexpress": {
-          "preco": 1128.99,
-          "cupom": "BRU1411",
-          "valor_cupom": 387.74,
-          "cupom_minimo": null,
-          "cupom_validade": "2026-06-30",
-          "link": "https://s.click.aliexpress.com/e/_c3oHaIox",
-          "alerta": null,
-          "data_checagem": "2026-06-17 17:14",
-          "cupom_plataforma": null,
-          "cupom_plataforma_minimo": null,
-          "cupom_plataforma_validade": null
-        }
-      },
-      "frete_br": "sim",
-      "icms": "não",
-      "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Byintek",
@@ -368,7 +344,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Byintek",
@@ -403,7 +379,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Byintek",
@@ -438,7 +414,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Everycom",
@@ -448,7 +424,7 @@
       "preco_max_historico": 2800.0,
       "historico_desde": "2026-05-11",
       "marketplace_vencedor": "mercado_livre",
-      "data_verificacao": "2026-06-17 17:17",
+      "data_verificacao": "2026-06-17 17:29",
       "marketplaces": {
         "mercado_livre": {
           "preco": 2800.0,
@@ -458,7 +434,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Everycom",
@@ -484,7 +460,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Everycom",
@@ -513,7 +489,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "FlixTone",
@@ -542,7 +518,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "FlixTone",
@@ -571,7 +547,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Formovie",
@@ -600,7 +576,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Horlat",
@@ -629,7 +605,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Jenovox",
@@ -658,7 +634,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Magcubic",
@@ -680,7 +656,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Magcubic",
@@ -702,7 +678,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Magcubic",
@@ -724,7 +700,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Magcubic",
@@ -746,7 +722,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Progaga",
@@ -775,7 +751,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Progaga",
@@ -804,7 +780,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Thundeal",
@@ -833,7 +809,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Thundeal",
@@ -862,7 +838,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Thundeal",
@@ -891,7 +867,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Thundeal",
@@ -920,7 +896,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Thundeal",
@@ -949,7 +925,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Thundeal",
@@ -978,7 +954,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Thundeal",
@@ -1007,7 +983,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Touyinger",
@@ -1036,7 +1012,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Touyinger",
@@ -1065,7 +1041,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Touyinger",
@@ -1094,7 +1070,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Vevshao",
@@ -1129,7 +1105,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Vevshao",
@@ -1164,7 +1140,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Vevshao",
@@ -1199,7 +1175,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Voxflix",
@@ -1228,7 +1204,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Wanbo",
@@ -1261,7 +1237,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Wanbo",
@@ -1287,7 +1263,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Wanbo",
@@ -1313,7 +1289,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Wanbo",
@@ -1339,7 +1315,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Wupro",
@@ -1368,7 +1344,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Everycom",
@@ -1390,7 +1366,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Vevshao",
@@ -1425,7 +1401,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Bettdow",
@@ -1447,7 +1423,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Byintek",
@@ -1480,7 +1456,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "Progaga",
@@ -1509,7 +1485,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     },
     {
       "marca": "FlixTone",
@@ -1538,7 +1514,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-06-17 17:17"
+      "ultima_atualizacao": "2026-06-17 17:29"
     }
   ]
 }
