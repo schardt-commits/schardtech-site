@@ -1,59 +1,59 @@
 {
-  "data_coleta": "16/06",
-  "hora_coleta": "09:31",
-  "data_ontem": "15/06",
-  "data_hoje": "16/06",
-  "total_quedas": 12,
+  "data_coleta": "17/06",
+  "hora_coleta": "15:23",
+  "data_ontem": "16/06",
+  "data_hoje": "17/06",
+  "total_quedas": 10,
   "quedas": [
     {
-      "marca": "Vevshao",
-      "modelo": "A10",
-      "slug": "vevshao-a10",
-      "preco_atual": 424.15,
-      "preco_ontem": 909.81,
-      "delta": -485.66,
-      "delta_pct": -53.38,
-      "data_checagem": "2026-06-16 09:31"
+      "marca": "Bettdow",
+      "modelo": "AC1073",
+      "slug": "bettdow-ac1073",
+      "preco_atual": 1026.4,
+      "preco_ontem": 1145.08,
+      "delta": -118.68,
+      "delta_pct": -10.36,
+      "data_checagem": "2026-06-17 15:23"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 789.29,
-      "preco_ontem": 911.77,
-      "delta": -122.48,
-      "delta_pct": -13.43,
-      "data_checagem": "2026-06-16 09:19"
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1331.93,
+      "preco_ontem": 1428.58,
+      "delta": -96.65,
+      "delta_pct": -6.77,
+      "data_checagem": "2026-06-17 15:09"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 222.09,
-      "preco_ontem": 243.77,
-      "delta": -21.68,
-      "delta_pct": -8.89,
-      "data_checagem": "2026-06-16 09:19"
+      "marca": "Thundeal",
+      "modelo": "TD98PRO ATV",
+      "slug": "thundeal-td98pro-atv",
+      "preco_atual": 1465.5,
+      "preco_ontem": 1565.69,
+      "delta": -100.19,
+      "delta_pct": -6.4,
+      "data_checagem": "2026-06-17 15:10"
     },
     {
       "marca": "Progaga",
       "modelo": "PG610 ATV",
       "slug": "progaga-pg610-atv",
-      "preco_atual": 947.63,
-      "preco_ontem": 1019.34,
-      "delta": -71.71,
-      "delta_pct": -7.03,
-      "data_checagem": "2026-06-16 09:23"
+      "preco_atual": 949.2,
+      "preco_ontem": 1008.82,
+      "delta": -59.62,
+      "delta_pct": -5.91,
+      "data_checagem": "2026-06-17 15:14"
     },
     {
-      "marca": "FlixTone",
-      "modelo": "D10S",
-      "slug": "flixtone-d10s",
-      "preco_atual": 2105.88,
-      "preco_ontem": 2228.88,
-      "delta": -123.0,
-      "delta_pct": -5.52,
-      "data_checagem": "2026-06-16 09:23"
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 850.24,
+      "preco_ontem": 897.3,
+      "delta": -47.06,
+      "delta_pct": -5.24,
+      "data_checagem": "2026-06-17 15:05"
     }
   ]
 }
