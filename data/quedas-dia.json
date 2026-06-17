@@ -1,10 +1,20 @@
 {
   "data_coleta": "17/06",
-  "hora_coleta": "15:23",
+  "hora_coleta": "16:53",
   "data_ontem": "16/06",
   "data_hoje": "17/06",
   "total_quedas": 10,
   "quedas": [
+    {
+      "marca": "FlixTone",
+      "modelo": "D10S",
+      "slug": "flixtone-d10s",
+      "preco_atual": 1711.31,
+      "preco_ontem": 2129.78,
+      "delta": -418.47,
+      "delta_pct": -19.65,
+      "data_checagem": "2026-06-17 16:53"
+    },
     {
       "marca": "Bettdow",
       "modelo": "AC1073",
@@ -44,16 +54,6 @@
       "delta": -59.62,
       "delta_pct": -5.91,
       "data_checagem": "2026-06-17 15:14"
-    },
-    {
-      "marca": "Horlat",
-      "modelo": "T9N",
-      "slug": "horlat-t9n",
-      "preco_atual": 850.24,
-      "preco_ontem": 897.3,
-      "delta": -47.06,
-      "delta_pct": -5.24,
-      "data_checagem": "2026-06-17 15:05"
     }
   ]
 }
