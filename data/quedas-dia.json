@@ -1,59 +1,59 @@
 {
-  "data_coleta": "17/06",
-  "hora_coleta": "17:10",
-  "data_ontem": "16/06",
-  "data_hoje": "17/06",
-  "total_quedas": 10,
+  "data_coleta": "18/06",
+  "hora_coleta": "09:31",
+  "data_ontem": "17/06",
+  "data_hoje": "18/06",
+  "total_quedas": 11,
   "quedas": [
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1082",
+      "slug": "bettdow-ac1082",
+      "preco_atual": 581.1,
+      "preco_ontem": 779.93,
+      "delta": -198.83,
+      "delta_pct": -25.49,
+      "data_checagem": "2026-06-18 09:31"
+    },
     {
       "marca": "FlixTone",
       "modelo": "D10S",
       "slug": "flixtone-d10s",
-      "preco_atual": 1711.31,
-      "preco_ontem": 2129.78,
-      "delta": -418.47,
-      "delta_pct": -19.65,
-      "data_checagem": "2026-06-17 16:53"
+      "preco_atual": 1768.2,
+      "preco_ontem": 2125.74,
+      "delta": -357.54,
+      "delta_pct": -16.82,
+      "data_checagem": "2026-06-18 09:24"
     },
     {
       "marca": "Bettdow",
-      "modelo": "AC1073",
-      "slug": "bettdow-ac1073",
-      "preco_atual": 1026.4,
-      "preco_ontem": 1145.08,
-      "delta": -118.68,
-      "delta_pct": -10.36,
-      "data_checagem": "2026-06-17 15:23"
+      "modelo": "AC1061",
+      "slug": "bettdow-ac1061",
+      "preco_atual": 1498.34,
+      "preco_ontem": 1697.08,
+      "delta": -198.74,
+      "delta_pct": -11.71,
+      "data_checagem": "2026-06-18 09:31"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY320 Mini",
+      "slug": "magcubic-hy320-mini",
+      "preco_atual": 283.9,
+      "preco_ontem": 305.15,
+      "delta": -21.25,
+      "delta_pct": -6.96,
+      "data_checagem": "2026-06-18 09:31"
     },
     {
       "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1331.93,
-      "preco_ontem": 1428.58,
-      "delta": -96.65,
-      "delta_pct": -6.77,
-      "data_checagem": "2026-06-17 17:10"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO ATV",
-      "slug": "thundeal-td98pro-atv",
-      "preco_atual": 1465.5,
-      "preco_ontem": 1565.69,
-      "delta": -100.19,
-      "delta_pct": -6.4,
-      "data_checagem": "2026-06-17 17:10"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 949.2,
-      "preco_ontem": 1008.82,
-      "delta": -59.62,
-      "delta_pct": -5.91,
-      "data_checagem": "2026-06-17 15:14"
+      "modelo": "TD80W",
+      "slug": "thundeal-td80w",
+      "preco_atual": 344.3,
+      "preco_ontem": 366.71,
+      "delta": -22.41,
+      "delta_pct": -6.11,
+      "data_checagem": "2026-06-18 09:19"
     }
   ]
 }
