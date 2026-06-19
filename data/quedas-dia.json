@@ -1,59 +1,59 @@
 {
-  "data_coleta": "18/06",
-  "hora_coleta": "21:31",
-  "data_ontem": "17/06",
-  "data_hoje": "18/06",
+  "data_coleta": "19/06",
+  "hora_coleta": "10:27",
+  "data_ontem": "18/06",
+  "data_hoje": "19/06",
   "total_quedas": 9,
   "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "Plato T5 MAX",
+      "slug": "byintek-plato-t5-max",
+      "preco_atual": 1244.25,
+      "preco_ontem": 1340.25,
+      "delta": -96.0,
+      "delta_pct": -7.16,
+      "data_checagem": "2026-06-19 10:27"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO ATV",
+      "slug": "thundeal-td98pro-atv",
+      "preco_atual": 1540.52,
+      "preco_ontem": 1606.2,
+      "delta": -65.68,
+      "delta_pct": -4.09,
+      "data_checagem": "2026-06-19 10:15"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 218.07,
+      "preco_ontem": 227.02,
+      "delta": -8.95,
+      "delta_pct": -3.94,
+      "data_checagem": "2026-06-19 10:13"
+    },
     {
       "marca": "FlixTone",
       "modelo": "D10S",
       "slug": "flixtone-d10s",
-      "preco_atual": 1785.5,
-      "preco_ontem": 2125.74,
-      "delta": -340.24,
-      "delta_pct": -16.01,
-      "data_checagem": "2026-06-18 21:23"
+      "preco_atual": 1728.5,
+      "preco_ontem": 1785.5,
+      "delta": -57.0,
+      "delta_pct": -3.19,
+      "data_checagem": "2026-06-19 10:18"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD80W",
-      "slug": "thundeal-td80w",
-      "preco_atual": 348.49,
-      "preco_ontem": 366.71,
-      "delta": -18.22,
-      "delta_pct": -4.97,
-      "data_checagem": "2026-06-18 21:19"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D9W Mini",
-      "slug": "flixtone-d9w-mini",
-      "preco_atual": 789.17,
-      "preco_ontem": 817.5,
-      "delta": -28.33,
-      "delta_pct": -3.47,
-      "data_checagem": "2026-06-18 21:14"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1066",
-      "slug": "bettdow-ac1066",
-      "preco_atual": 502.0,
-      "preco_ontem": 519.48,
-      "delta": -17.48,
-      "delta_pct": -3.36,
-      "data_checagem": "2026-06-18 21:31"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1293.33,
-      "preco_ontem": 1331.93,
-      "delta": -38.6,
-      "delta_pct": -2.9,
-      "data_checagem": "2026-06-18 21:20"
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 933.82,
+      "preco_ontem": 963.19,
+      "delta": -29.37,
+      "delta_pct": -3.05,
+      "data_checagem": "2026-06-19 10:17"
     }
   ]
 }
