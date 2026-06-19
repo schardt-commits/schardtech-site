@@ -1,59 +1,59 @@
 {
   "data_coleta": "18/06",
-  "hora_coleta": "09:31",
+  "hora_coleta": "21:31",
   "data_ontem": "17/06",
   "data_hoje": "18/06",
-  "total_quedas": 12,
+  "total_quedas": 9,
   "quedas": [
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1082",
-      "slug": "bettdow-ac1082",
-      "preco_atual": 581.1,
-      "preco_ontem": 779.93,
-      "delta": -198.83,
-      "delta_pct": -25.49,
-      "data_checagem": "2026-06-18 09:31"
-    },
     {
       "marca": "FlixTone",
       "modelo": "D10S",
       "slug": "flixtone-d10s",
-      "preco_atual": 1768.2,
+      "preco_atual": 1785.5,
       "preco_ontem": 2125.74,
-      "delta": -357.54,
-      "delta_pct": -16.82,
-      "data_checagem": "2026-06-18 09:24"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1061",
-      "slug": "bettdow-ac1061",
-      "preco_atual": 1498.34,
-      "preco_ontem": 1697.08,
-      "delta": -198.74,
-      "delta_pct": -11.71,
-      "data_checagem": "2026-06-18 09:31"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY320 Mini",
-      "slug": "magcubic-hy320-mini",
-      "preco_atual": 283.9,
-      "preco_ontem": 305.15,
-      "delta": -21.25,
-      "delta_pct": -6.96,
-      "data_checagem": "2026-06-18 09:31"
+      "delta": -340.24,
+      "delta_pct": -16.01,
+      "data_checagem": "2026-06-18 21:23"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD80W",
       "slug": "thundeal-td80w",
-      "preco_atual": 344.3,
+      "preco_atual": 348.49,
       "preco_ontem": 366.71,
-      "delta": -22.41,
-      "delta_pct": -6.11,
-      "data_checagem": "2026-06-18 09:19"
+      "delta": -18.22,
+      "delta_pct": -4.97,
+      "data_checagem": "2026-06-18 21:19"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 789.17,
+      "preco_ontem": 817.5,
+      "delta": -28.33,
+      "delta_pct": -3.47,
+      "data_checagem": "2026-06-18 21:14"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 502.0,
+      "preco_ontem": 519.48,
+      "delta": -17.48,
+      "delta_pct": -3.36,
+      "data_checagem": "2026-06-18 21:31"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1293.33,
+      "preco_ontem": 1331.93,
+      "delta": -38.6,
+      "delta_pct": -2.9,
+      "data_checagem": "2026-06-18 21:20"
     }
   ]
 }
