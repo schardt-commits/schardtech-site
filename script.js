@@ -51,12 +51,12 @@ const projectors = [
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
 // ============================================================
 const featuredVideos = [
+  { id: "-jDGpRWrybw", title: "Projetores e Eletrônicos no Paraguai: Vale a pena em 2026?" },
   { id: "TahKwwg71ts", title: "O Projetor Led MAIS POTENTE! D10S Flixtone!" },
   { id: "dfb5McbzahY", title: "O Progaga PG610 ATV é o Melhor Projetor Abaixo de R$ 900?" },
   { id: "_xe393q7BpA", title: "Seu Novo Projetor Para Copa!? Testei o U14 PRO Da Byintek" },
   { id: "Ffx2fUOPGRU", title: "AC1095 O PROJETOR MAIS COMPLETO QUE JÁ TESTEI DA BETTDOW!" },
   { id: "0ihG8QKEioQ", title: "BRILHO ABSURDO! Testei o A24 Max Novo projetor da Vevshao" },
-  { id: "PGbi8fr7aS4", title: "Esse projetor esconde algo: Everycom HQ9W Ultra | Análise completa" },
 ];
 
 // ============================================================
