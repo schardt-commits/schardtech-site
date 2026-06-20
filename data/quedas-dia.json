@@ -1,9 +1,9 @@
 {
   "data_coleta": "19/06",
-  "hora_coleta": "15:25",
+  "hora_coleta": "21:33",
   "data_ontem": "18/06",
   "data_hoje": "19/06",
-  "total_quedas": 7,
+  "total_quedas": 5,
   "quedas": [
     {
       "marca": "Byintek",
@@ -13,7 +13,7 @@
       "preco_ontem": 1340.25,
       "delta": -90.55,
       "delta_pct": -6.76,
-      "data_checagem": "2026-06-19 15:25"
+      "data_checagem": "2026-06-19 21:33"
     },
     {
       "marca": "Vevshao",
@@ -23,17 +23,17 @@
       "preco_ontem": 1341.91,
       "delta": -74.49,
       "delta_pct": -5.55,
-      "data_checagem": "2026-06-19 15:25"
+      "data_checagem": "2026-06-19 21:33"
     },
     {
       "marca": "Thundeal",
-      "modelo": "TD98PRO ATV",
-      "slug": "thundeal-td98pro-atv",
-      "preco_atual": 1540.52,
-      "preco_ontem": 1606.2,
-      "delta": -65.68,
-      "delta_pct": -4.09,
-      "data_checagem": "2026-06-19 10:15"
+      "modelo": "TD95W",
+      "slug": "thundeal-td95w",
+      "preco_atual": 676.8,
+      "preco_ontem": 694.6,
+      "delta": -17.8,
+      "delta_pct": -2.56,
+      "data_checagem": "2026-06-19 21:20"
     },
     {
       "marca": "Magcubic",
@@ -43,17 +43,17 @@
       "preco_ontem": 200.6,
       "delta": -5.1,
       "delta_pct": -2.54,
-      "data_checagem": "2026-06-19 15:25"
+      "data_checagem": "2026-06-19 21:33"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD95W",
-      "slug": "thundeal-td95w",
-      "preco_atual": 676.96,
-      "preco_ontem": 694.6,
-      "delta": -17.64,
-      "delta_pct": -2.54,
-      "data_checagem": "2026-06-19 15:10"
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 2560.91,
+      "preco_ontem": 2575.68,
+      "delta": -14.77,
+      "delta_pct": -0.57,
+      "data_checagem": "2026-06-19 21:33"
     }
   ]
 }
