@@ -1,9 +1,9 @@
 {
   "data_coleta": "20/06",
-  "hora_coleta": "00:33",
+  "hora_coleta": "09:33",
   "data_ontem": "19/06",
   "data_hoje": "20/06",
-  "total_quedas": 7,
+  "total_quedas": 15,
   "quedas": [
     {
       "marca": "Progaga",
@@ -13,27 +13,17 @@
       "preco_ontem": 941.13,
       "delta": -125.17,
       "delta_pct": -13.3,
-      "data_checagem": "2026-06-20 00:19"
+      "data_checagem": "2026-06-20 09:19"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 218.99,
-      "preco_ontem": 241.88,
-      "delta": -22.89,
-      "delta_pct": -9.46,
-      "data_checagem": "2026-06-20 00:19"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 937.8,
-      "preco_ontem": 1011.39,
-      "delta": -73.59,
-      "delta_pct": -7.28,
-      "data_checagem": "2026-06-20 00:23"
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1299.03,
+      "preco_ontem": 1396.33,
+      "delta": -97.3,
+      "delta_pct": -6.97,
+      "data_checagem": "2026-06-20 09:20"
     },
     {
       "marca": "Magcubic",
@@ -43,17 +33,27 @@
       "preco_ontem": 735.68,
       "delta": -49.68,
       "delta_pct": -6.75,
-      "data_checagem": "2026-06-20 00:33"
+      "data_checagem": "2026-06-20 09:33"
     },
     {
-      "marca": "Wanbo",
-      "modelo": "Vali 1",
-      "slug": "wanbo-vali-1",
-      "preco_atual": 1698.44,
-      "preco_ontem": 1742.16,
-      "delta": -43.72,
-      "delta_pct": -2.51,
-      "data_checagem": "2026-06-20 00:33"
+      "marca": "Thundeal",
+      "modelo": "TD98PRO ATV",
+      "slug": "thundeal-td98pro-atv",
+      "preco_atual": 1557.27,
+      "preco_ontem": 1657.41,
+      "delta": -100.14,
+      "delta_pct": -6.04,
+      "data_checagem": "2026-06-20 09:21"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 583.86,
+      "preco_ontem": 620.92,
+      "delta": -37.06,
+      "delta_pct": -5.97,
+      "data_checagem": "2026-06-20 09:21"
     }
   ]
 }
