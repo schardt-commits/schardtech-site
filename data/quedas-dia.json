@@ -1,59 +1,59 @@
 {
-  "data_coleta": "19/06",
-  "hora_coleta": "21:33",
-  "data_ontem": "18/06",
-  "data_hoje": "19/06",
-  "total_quedas": 5,
+  "data_coleta": "20/06",
+  "hora_coleta": "00:33",
+  "data_ontem": "19/06",
+  "data_hoje": "20/06",
+  "total_quedas": 7,
   "quedas": [
     {
-      "marca": "Byintek",
-      "modelo": "Plato T5 MAX",
-      "slug": "byintek-plato-t5-max",
-      "preco_atual": 1249.7,
-      "preco_ontem": 1340.25,
-      "delta": -90.55,
-      "delta_pct": -6.76,
-      "data_checagem": "2026-06-19 21:33"
+      "marca": "Progaga",
+      "modelo": "PG610W",
+      "slug": "progaga-pg610w",
+      "preco_atual": 815.96,
+      "preco_ontem": 941.13,
+      "delta": -125.17,
+      "delta_pct": -13.3,
+      "data_checagem": "2026-06-20 00:19"
     },
     {
-      "marca": "Vevshao",
-      "modelo": "A24 MAX",
-      "slug": "vevshao-a24-max",
-      "preco_atual": 1267.42,
-      "preco_ontem": 1341.91,
-      "delta": -74.49,
-      "delta_pct": -5.55,
-      "data_checagem": "2026-06-19 21:33"
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 218.99,
+      "preco_ontem": 241.88,
+      "delta": -22.89,
+      "delta_pct": -9.46,
+      "data_checagem": "2026-06-20 00:19"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD95W",
-      "slug": "thundeal-td95w",
-      "preco_atual": 676.8,
-      "preco_ontem": 694.6,
-      "delta": -17.8,
-      "delta_pct": -2.56,
-      "data_checagem": "2026-06-19 21:20"
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 937.8,
+      "preco_ontem": 1011.39,
+      "delta": -73.59,
+      "delta_pct": -7.28,
+      "data_checagem": "2026-06-20 00:23"
     },
     {
       "marca": "Magcubic",
-      "modelo": "HY300",
-      "slug": "magcubic-hy300",
-      "preco_atual": 195.5,
-      "preco_ontem": 200.6,
-      "delta": -5.1,
-      "delta_pct": -2.54,
-      "data_checagem": "2026-06-19 21:33"
+      "modelo": "HY450",
+      "slug": "magcubic-hy450",
+      "preco_atual": 686.0,
+      "preco_ontem": 735.68,
+      "delta": -49.68,
+      "delta_pct": -6.75,
+      "data_checagem": "2026-06-20 00:33"
     },
     {
-      "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 2560.91,
-      "preco_ontem": 2575.68,
-      "delta": -14.77,
-      "delta_pct": -0.57,
-      "data_checagem": "2026-06-19 21:33"
+      "marca": "Wanbo",
+      "modelo": "Vali 1",
+      "slug": "wanbo-vali-1",
+      "preco_atual": 1698.44,
+      "preco_ontem": 1742.16,
+      "delta": -43.72,
+      "delta_pct": -2.51,
+      "data_checagem": "2026-06-20 00:33"
     }
   ]
 }
