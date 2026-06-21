@@ -1,59 +1,29 @@
 {
-  "data_coleta": "20/06",
-  "hora_coleta": "21:33",
-  "data_ontem": "19/06",
-  "data_hoje": "20/06",
-  "total_quedas": 11,
+  "data_coleta": "21/06",
+  "hora_coleta": "09:24",
+  "data_ontem": "20/06",
+  "data_hoje": "21/06",
+  "total_quedas": 2,
   "quedas": [
     {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1299.03,
-      "preco_ontem": 1396.33,
-      "delta": -97.3,
-      "delta_pct": -6.97,
-      "data_checagem": "2026-06-20 21:20"
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1599.41,
+      "preco_ontem": 1910.0,
+      "delta": -310.59,
+      "delta_pct": -16.26,
+      "data_checagem": "2026-06-21 09:24"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO ATV",
-      "slug": "thundeal-td98pro-atv",
-      "preco_atual": 1557.27,
-      "preco_ontem": 1657.41,
-      "delta": -100.14,
-      "delta_pct": -6.04,
-      "data_checagem": "2026-06-20 21:20"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 584.25,
-      "preco_ontem": 620.92,
-      "delta": -36.67,
-      "delta_pct": -5.91,
-      "data_checagem": "2026-06-20 21:21"
-    },
-    {
-      "marca": "Horlat",
-      "modelo": "T9N",
-      "slug": "horlat-t9n",
-      "preco_atual": 860.96,
-      "preco_ontem": 910.33,
-      "delta": -49.37,
-      "delta_pct": -5.42,
-      "data_checagem": "2026-06-20 21:15"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "A22",
-      "slug": "vevshao-a22",
-      "preco_atual": 1049.94,
-      "preco_ontem": 1081.09,
-      "delta": -31.15,
-      "delta_pct": -2.88,
-      "data_checagem": "2026-06-20 21:33"
+      "marca": "FlixTone",
+      "modelo": "D10S",
+      "slug": "flixtone-d10s",
+      "preco_atual": 1897.29,
+      "preco_ontem": 1931.41,
+      "delta": -34.12,
+      "delta_pct": -1.77,
+      "data_checagem": "2026-06-21 09:24"
     }
   ]
 }
