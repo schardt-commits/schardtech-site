@@ -1,29 +1,59 @@
 {
-  "data_coleta": "21/06",
-  "hora_coleta": "21:24",
-  "data_ontem": "20/06",
-  "data_hoje": "21/06",
-  "total_quedas": 2,
+  "data_coleta": "22/06",
+  "hora_coleta": "07:10",
+  "data_ontem": "21/06",
+  "data_hoje": "22/06",
+  "total_quedas": 29,
   "quedas": [
     {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1599.41,
-      "preco_ontem": 1910.0,
-      "delta": -310.59,
-      "delta_pct": -16.26,
-      "data_checagem": "2026-06-21 21:24"
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 1174.64,
+      "preco_ontem": 1919.13,
+      "delta": -744.49,
+      "delta_pct": -38.79,
+      "data_checagem": "2026-06-22 07:01"
     },
     {
       "marca": "FlixTone",
-      "modelo": "D10S",
-      "slug": "flixtone-d10s",
-      "preco_atual": 1897.61,
-      "preco_ontem": 1931.41,
-      "delta": -33.8,
-      "delta_pct": -1.75,
-      "data_checagem": "2026-06-21 21:24"
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 967.5,
+      "preco_ontem": 1504.46,
+      "delta": -536.96,
+      "delta_pct": -35.69,
+      "data_checagem": "2026-06-22 06:49"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1061",
+      "slug": "bettdow-ac1061",
+      "preco_atual": 1200.28,
+      "preco_ontem": 1697.08,
+      "delta": -496.8,
+      "delta_pct": -29.27,
+      "data_checagem": "2026-06-22 07:10"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D9W Ultra",
+      "slug": "flixtone-d9w-ultra",
+      "preco_atual": 1536.5,
+      "preco_ontem": 2172.02,
+      "delta": -635.52,
+      "delta_pct": -29.26,
+      "data_checagem": "2026-06-22 06:49"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 968.36,
+      "preco_ontem": 1198.19,
+      "delta": -229.83,
+      "delta_pct": -19.18,
+      "data_checagem": "2026-06-22 07:10"
     }
   ]
 }
