@@ -1,59 +1,59 @@
 {
   "data_coleta": "22/06",
-  "hora_coleta": "07:10",
+  "hora_coleta": "15:17",
   "data_ontem": "21/06",
   "data_hoje": "22/06",
-  "total_quedas": 29,
+  "total_quedas": 28,
   "quedas": [
     {
       "marca": "Progaga",
       "modelo": "PG610 ATV",
       "slug": "progaga-pg610-atv",
-      "preco_atual": 1174.64,
+      "preco_atual": 1175.08,
       "preco_ontem": 1919.13,
-      "delta": -744.49,
-      "delta_pct": -38.79,
-      "data_checagem": "2026-06-22 07:01"
+      "delta": -744.05,
+      "delta_pct": -38.77,
+      "data_checagem": "2026-06-22 15:17"
     },
     {
       "marca": "FlixTone",
       "modelo": "D9W Mini",
       "slug": "flixtone-d9w-mini",
-      "preco_atual": 967.5,
+      "preco_atual": 968.47,
       "preco_ontem": 1504.46,
-      "delta": -536.96,
-      "delta_pct": -35.69,
-      "data_checagem": "2026-06-22 06:49"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1061",
-      "slug": "bettdow-ac1061",
-      "preco_atual": 1200.28,
-      "preco_ontem": 1697.08,
-      "delta": -496.8,
-      "delta_pct": -29.27,
-      "data_checagem": "2026-06-22 07:10"
+      "delta": -535.99,
+      "delta_pct": -35.63,
+      "data_checagem": "2026-06-22 15:05"
     },
     {
       "marca": "FlixTone",
       "modelo": "D9W Ultra",
       "slug": "flixtone-d9w-ultra",
-      "preco_atual": 1536.5,
+      "preco_atual": 1526.37,
       "preco_ontem": 2172.02,
-      "delta": -635.52,
-      "delta_pct": -29.26,
-      "data_checagem": "2026-06-22 06:49"
+      "delta": -645.65,
+      "delta_pct": -29.73,
+      "data_checagem": "2026-06-22 15:05"
     },
     {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 968.36,
-      "preco_ontem": 1198.19,
-      "delta": -229.83,
-      "delta_pct": -19.18,
-      "data_checagem": "2026-06-22 07:10"
+      "marca": "Everycom",
+      "modelo": "Cubelite E1",
+      "slug": "everycom-cubelite-e1",
+      "preco_atual": 2009.84,
+      "preco_ontem": 2800.0,
+      "delta": -790.16,
+      "delta_pct": -28.22,
+      "data_checagem": "2026-06-22 15:17"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80W",
+      "slug": "thundeal-td80w",
+      "preco_atual": 350.76,
+      "preco_ontem": 438.65,
+      "delta": -87.89,
+      "delta_pct": -20.04,
+      "data_checagem": "2026-06-22 15:11"
     }
   ]
 }
