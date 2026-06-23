@@ -1,59 +1,59 @@
 {
-  "data_coleta": "22/06",
-  "hora_coleta": "21:35",
-  "data_ontem": "21/06",
-  "data_hoje": "22/06",
-  "total_quedas": 28,
+  "data_coleta": "23/06",
+  "hora_coleta": "00:35",
+  "data_ontem": "22/06",
+  "data_hoje": "23/06",
+  "total_quedas": 11,
   "quedas": [
     {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 1143.11,
-      "preco_ontem": 1919.13,
-      "delta": -776.02,
-      "delta_pct": -40.44,
-      "data_checagem": "2026-06-22 21:26"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D9W Mini",
-      "slug": "flixtone-d9w-mini",
-      "preco_atual": 968.47,
-      "preco_ontem": 1504.46,
-      "delta": -535.99,
-      "delta_pct": -35.63,
-      "data_checagem": "2026-06-22 21:15"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D9W Ultra",
-      "slug": "flixtone-d9w-ultra",
-      "preco_atual": 1526.37,
-      "preco_ontem": 2172.02,
-      "delta": -645.65,
-      "delta_pct": -29.73,
-      "data_checagem": "2026-06-22 21:15"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "Cubelite E1",
-      "slug": "everycom-cubelite-e1",
-      "preco_atual": 2009.84,
-      "preco_ontem": 2800.0,
-      "delta": -790.16,
-      "delta_pct": -28.22,
-      "data_checagem": "2026-06-22 21:27"
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 505.0,
+      "preco_ontem": 560.75,
+      "delta": -55.75,
+      "delta_pct": -9.94,
+      "data_checagem": "2026-06-23 00:21"
     },
     {
       "marca": "Byintek",
       "modelo": "Plato T5 MAX",
       "slug": "byintek-plato-t5-max",
-      "preco_atual": 1180.15,
-      "preco_ontem": 1561.06,
-      "delta": -380.91,
-      "delta_pct": -24.4,
-      "data_checagem": "2026-06-22 21:35"
+      "preco_atual": 1090.61,
+      "preco_ontem": 1180.15,
+      "delta": -89.54,
+      "delta_pct": -7.59,
+      "data_checagem": "2026-06-23 00:35"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1418.55,
+      "preco_ontem": 1522.92,
+      "delta": -104.37,
+      "delta_pct": -6.85,
+      "data_checagem": "2026-06-23 00:21"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1295.84,
+      "preco_ontem": 1389.56,
+      "delta": -93.72,
+      "delta_pct": -6.74,
+      "data_checagem": "2026-06-23 00:27"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO ATV",
+      "slug": "thundeal-td98pro-atv",
+      "preco_atual": 1605.88,
+      "preco_ontem": 1720.11,
+      "delta": -114.23,
+      "delta_pct": -6.64,
+      "data_checagem": "2026-06-23 00:22"
     }
   ]
 }
