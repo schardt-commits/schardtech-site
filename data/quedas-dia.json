@@ -1,10 +1,30 @@
 {
   "data_coleta": "23/06",
-  "hora_coleta": "00:35",
+  "hora_coleta": "09:35",
   "data_ontem": "22/06",
   "data_hoje": "23/06",
-  "total_quedas": 11,
+  "total_quedas": 12,
   "quedas": [
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1320.99,
+      "preco_ontem": 1522.92,
+      "delta": -201.93,
+      "delta_pct": -13.26,
+      "data_checagem": "2026-06-23 09:22"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A24 MAX",
+      "slug": "vevshao-a24-max",
+      "preco_atual": 1163.04,
+      "preco_ontem": 1303.88,
+      "delta": -140.84,
+      "delta_pct": -10.8,
+      "data_checagem": "2026-06-23 09:35"
+    },
     {
       "marca": "Thundeal",
       "modelo": "TD80PRO",
@@ -13,47 +33,27 @@
       "preco_ontem": 560.75,
       "delta": -55.75,
       "delta_pct": -9.94,
-      "data_checagem": "2026-06-23 00:21"
+      "data_checagem": "2026-06-23 09:21"
     },
     {
       "marca": "Byintek",
       "modelo": "Plato T5 MAX",
       "slug": "byintek-plato-t5-max",
-      "preco_atual": 1090.61,
+      "preco_atual": 1091.34,
       "preco_ontem": 1180.15,
-      "delta": -89.54,
-      "delta_pct": -7.59,
-      "data_checagem": "2026-06-23 00:35"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1418.55,
-      "preco_ontem": 1522.92,
-      "delta": -104.37,
-      "delta_pct": -6.85,
-      "data_checagem": "2026-06-23 00:21"
+      "delta": -88.81,
+      "delta_pct": -7.53,
+      "data_checagem": "2026-06-23 09:35"
     },
     {
       "marca": "Byintek",
       "modelo": "U14 PRO",
       "slug": "byintek-u14-pro",
-      "preco_atual": 1295.84,
+      "preco_atual": 1290.3,
       "preco_ontem": 1389.56,
-      "delta": -93.72,
-      "delta_pct": -6.74,
-      "data_checagem": "2026-06-23 00:27"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO ATV",
-      "slug": "thundeal-td98pro-atv",
-      "preco_atual": 1605.88,
-      "preco_ontem": 1720.11,
-      "delta": -114.23,
-      "delta_pct": -6.64,
-      "data_checagem": "2026-06-23 00:22"
+      "delta": -99.26,
+      "delta_pct": -7.14,
+      "data_checagem": "2026-06-23 09:27"
     }
   ]
 }
