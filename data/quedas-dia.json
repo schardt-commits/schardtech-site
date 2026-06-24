@@ -1,59 +1,8 @@
 {
-  "data_coleta": "23/06",
-  "hora_coleta": "21:32",
-  "data_ontem": "22/06",
-  "data_hoje": "23/06",
-  "total_quedas": 13,
-  "quedas": [
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1326.2,
-      "preco_ontem": 1522.92,
-      "delta": -196.72,
-      "delta_pct": -12.92,
-      "data_checagem": "2026-06-23 21:21"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "A24 MAX",
-      "slug": "vevshao-a24-max",
-      "preco_atual": 1167.72,
-      "preco_ontem": 1303.88,
-      "delta": -136.16,
-      "delta_pct": -10.44,
-      "data_checagem": "2026-06-23 21:32"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 507.01,
-      "preco_ontem": 560.75,
-      "delta": -53.74,
-      "delta_pct": -9.58,
-      "data_checagem": "2026-06-23 21:20"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Plato T5 MAX",
-      "slug": "byintek-plato-t5-max",
-      "preco_atual": 1098.75,
-      "preco_ontem": 1180.15,
-      "delta": -81.4,
-      "delta_pct": -6.9,
-      "data_checagem": "2026-06-23 21:32"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO ATV",
-      "slug": "thundeal-td98pro-atv",
-      "preco_atual": 1612.04,
-      "preco_ontem": 1720.11,
-      "delta": -108.07,
-      "delta_pct": -6.28,
-      "data_checagem": "2026-06-23 21:21"
-    }
-  ]
+  "data_coleta": "24/06",
+  "hora_coleta": "",
+  "data_ontem": "23/06",
+  "data_hoje": "24/06",
+  "total_quedas": 0,
+  "quedas": []
 }
