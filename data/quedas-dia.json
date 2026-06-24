@@ -1,59 +1,59 @@
 {
   "data_coleta": "24/06",
-  "hora_coleta": "09:31",
+  "hora_coleta": "15:21",
   "data_ontem": "23/06",
   "data_hoje": "24/06",
-  "total_quedas": 7,
+  "total_quedas": 11,
   "quedas": [
     {
       "marca": "Byintek",
       "modelo": "U90 MAX",
       "slug": "byintek-u90-max",
-      "preco_atual": 1884.49,
+      "preco_atual": 1901.87,
       "preco_ontem": 2509.37,
-      "delta": -624.88,
-      "delta_pct": -24.9,
-      "data_checagem": "2026-06-24 09:31"
+      "delta": -607.5,
+      "delta_pct": -24.21,
+      "data_checagem": "2026-06-24 15:21"
+    },
+    {
+      "marca": "Wupro",
+      "modelo": "G2",
+      "slug": "wupro-g2",
+      "preco_atual": 838.03,
+      "preco_ontem": 934.99,
+      "delta": -96.96,
+      "delta_pct": -10.37,
+      "data_checagem": "2026-06-24 15:12"
     },
     {
       "marca": "Horlat",
       "modelo": "T9N",
       "slug": "horlat-t9n",
-      "preco_atual": 852.1,
+      "preco_atual": 845.93,
       "preco_ontem": 924.47,
-      "delta": -72.37,
-      "delta_pct": -7.83,
-      "data_checagem": "2026-06-24 09:15"
+      "delta": -78.54,
+      "delta_pct": -8.5,
+      "data_checagem": "2026-06-24 15:05"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 949.58,
+      "preco_ontem": 1013.75,
+      "delta": -64.17,
+      "delta_pct": -6.33,
+      "data_checagem": "2026-06-24 15:21"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD98PRO ATV",
       "slug": "thundeal-td98pro-atv",
-      "preco_atual": 1546.71,
+      "preco_atual": 1560.59,
       "preco_ontem": 1612.04,
-      "delta": -65.33,
-      "delta_pct": -4.05,
-      "data_checagem": "2026-06-24 09:20"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 498.34,
-      "preco_ontem": 507.01,
-      "delta": -8.67,
-      "delta_pct": -1.71,
-      "data_checagem": "2026-06-24 09:19"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Plato T5 MAX",
-      "slug": "byintek-plato-t5-max",
-      "preco_atual": 1080.73,
-      "preco_ontem": 1098.75,
-      "delta": -18.02,
-      "delta_pct": -1.64,
-      "data_checagem": "2026-06-24 09:31"
+      "delta": -51.45,
+      "delta_pct": -3.19,
+      "data_checagem": "2026-06-24 15:10"
     }
   ]
 }
