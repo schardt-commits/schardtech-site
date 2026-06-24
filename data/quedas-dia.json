@@ -1,8 +1,59 @@
 {
   "data_coleta": "24/06",
-  "hora_coleta": "",
+  "hora_coleta": "09:31",
   "data_ontem": "23/06",
   "data_hoje": "24/06",
-  "total_quedas": 0,
-  "quedas": []
+  "total_quedas": 7,
+  "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 1884.49,
+      "preco_ontem": 2509.37,
+      "delta": -624.88,
+      "delta_pct": -24.9,
+      "data_checagem": "2026-06-24 09:31"
+    },
+    {
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 852.1,
+      "preco_ontem": 924.47,
+      "delta": -72.37,
+      "delta_pct": -7.83,
+      "data_checagem": "2026-06-24 09:15"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO ATV",
+      "slug": "thundeal-td98pro-atv",
+      "preco_atual": 1546.71,
+      "preco_ontem": 1612.04,
+      "delta": -65.33,
+      "delta_pct": -4.05,
+      "data_checagem": "2026-06-24 09:20"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 498.34,
+      "preco_ontem": 507.01,
+      "delta": -8.67,
+      "delta_pct": -1.71,
+      "data_checagem": "2026-06-24 09:19"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Plato T5 MAX",
+      "slug": "byintek-plato-t5-max",
+      "preco_atual": 1080.73,
+      "preco_ontem": 1098.75,
+      "delta": -18.02,
+      "delta_pct": -1.64,
+      "data_checagem": "2026-06-24 09:31"
+    }
+  ]
 }
