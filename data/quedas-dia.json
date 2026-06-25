@@ -1,39 +1,49 @@
 {
   "data_coleta": "25/06",
-  "hora_coleta": "09:31",
+  "hora_coleta": "15:24",
   "data_ontem": "24/06",
   "data_hoje": "25/06",
-  "total_quedas": 4,
+  "total_quedas": 17,
   "quedas": [
+    {
+      "marca": "Thundeal",
+      "modelo": "TD95W",
+      "slug": "thundeal-td95w",
+      "preco_atual": 754.87,
+      "preco_ontem": 839.63,
+      "delta": -84.76,
+      "delta_pct": -10.09,
+      "data_checagem": "2026-06-25 15:10"
+    },
     {
       "marca": "Byintek",
       "modelo": "Love U14",
       "slug": "byintek-u14",
-      "preco_atual": 843.26,
+      "preco_atual": 843.0,
       "preco_ontem": 917.0,
-      "delta": -73.74,
-      "delta_pct": -8.04,
-      "data_checagem": "2026-06-25 09:13"
+      "delta": -74.0,
+      "delta_pct": -8.07,
+      "data_checagem": "2026-06-25 15:03"
     },
     {
       "marca": "Byintek",
       "modelo": "Love U4",
       "slug": "byintek-love-u4",
-      "preco_atual": 564.79,
+      "preco_atual": 564.64,
       "preco_ontem": 597.6,
-      "delta": -32.81,
-      "delta_pct": -5.49,
-      "data_checagem": "2026-06-25 09:13"
+      "delta": -32.96,
+      "delta_pct": -5.52,
+      "data_checagem": "2026-06-25 15:03"
     },
     {
       "marca": "Touyinger",
       "modelo": "ET32",
       "slug": "touyinger-et32",
-      "preco_atual": 717.03,
+      "preco_atual": 718.86,
       "preco_ontem": 754.77,
-      "delta": -37.74,
-      "delta_pct": -5.0,
-      "data_checagem": "2026-06-25 09:21"
+      "delta": -35.91,
+      "delta_pct": -4.76,
+      "data_checagem": "2026-06-25 15:11"
     },
     {
       "marca": "Wanbo",
@@ -43,7 +53,7 @@
       "preco_ontem": 1301.48,
       "delta": -7.36,
       "delta_pct": -0.57,
-      "data_checagem": "2026-06-25 09:31"
+      "data_checagem": "2026-06-25 15:24"
     }
   ]
 }
