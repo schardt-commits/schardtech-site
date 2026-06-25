@@ -1,59 +1,59 @@
 {
-  "data_coleta": "24/06",
-  "hora_coleta": "21:32",
-  "data_ontem": "23/06",
-  "data_hoje": "24/06",
-  "total_quedas": 10,
+  "data_coleta": "25/06",
+  "hora_coleta": "00:34",
+  "data_ontem": "24/06",
+  "data_hoje": "25/06",
+  "total_quedas": 5,
   "quedas": [
     {
       "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 1848.88,
-      "preco_ontem": 2509.37,
-      "delta": -660.49,
-      "delta_pct": -26.32,
-      "data_checagem": "2026-06-24 21:32"
+      "modelo": "Love U14",
+      "slug": "byintek-u14",
+      "preco_atual": 843.26,
+      "preco_ontem": 917.0,
+      "delta": -73.74,
+      "delta_pct": -8.04,
+      "data_checagem": "2026-06-25 00:14"
     },
     {
-      "marca": "Wupro",
-      "modelo": "G2",
-      "slug": "wupro-g2",
-      "preco_atual": 838.25,
-      "preco_ontem": 934.99,
-      "delta": -96.74,
-      "delta_pct": -10.35,
-      "data_checagem": "2026-06-24 21:22"
-    },
-    {
-      "marca": "Horlat",
-      "modelo": "T9N",
-      "slug": "horlat-t9n",
-      "preco_atual": 845.93,
-      "preco_ontem": 924.47,
-      "delta": -78.54,
-      "delta_pct": -8.5,
-      "data_checagem": "2026-06-24 21:15"
+      "marca": "Bettdow",
+      "modelo": "AC1041",
+      "slug": "bettdow-ac1041",
+      "preco_atual": 859.0,
+      "preco_ontem": 915.08,
+      "delta": -56.08,
+      "delta_pct": -6.13,
+      "data_checagem": "2026-06-25 00:34"
     },
     {
       "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 949.58,
-      "preco_ontem": 1013.75,
-      "delta": -64.17,
-      "delta_pct": -6.33,
-      "data_checagem": "2026-06-24 21:32"
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 564.79,
+      "preco_ontem": 597.6,
+      "delta": -32.81,
+      "delta_pct": -5.49,
+      "data_checagem": "2026-06-25 00:14"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO ATV",
-      "slug": "thundeal-td98pro-atv",
-      "preco_atual": 1560.59,
-      "preco_ontem": 1612.04,
-      "delta": -51.45,
-      "delta_pct": -3.19,
-      "data_checagem": "2026-06-24 21:21"
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 717.03,
+      "preco_ontem": 754.77,
+      "delta": -37.74,
+      "delta_pct": -5.0,
+      "data_checagem": "2026-06-25 00:22"
+    },
+    {
+      "marca": "Wanbo",
+      "modelo": "T2 Ultra",
+      "slug": "wanbo-t2-ultra",
+      "preco_atual": 1294.12,
+      "preco_ontem": 1301.48,
+      "delta": -7.36,
+      "delta_pct": -0.57,
+      "data_checagem": "2026-06-25 00:34"
     }
   ]
 }
