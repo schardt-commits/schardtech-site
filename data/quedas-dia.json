@@ -1,29 +1,29 @@
 {
   "data_coleta": "24/06",
-  "hora_coleta": "15:21",
+  "hora_coleta": "21:32",
   "data_ontem": "23/06",
   "data_hoje": "24/06",
-  "total_quedas": 11,
+  "total_quedas": 10,
   "quedas": [
     {
       "marca": "Byintek",
       "modelo": "U90 MAX",
       "slug": "byintek-u90-max",
-      "preco_atual": 1901.87,
+      "preco_atual": 1848.88,
       "preco_ontem": 2509.37,
-      "delta": -607.5,
-      "delta_pct": -24.21,
-      "data_checagem": "2026-06-24 15:21"
+      "delta": -660.49,
+      "delta_pct": -26.32,
+      "data_checagem": "2026-06-24 21:32"
     },
     {
       "marca": "Wupro",
       "modelo": "G2",
       "slug": "wupro-g2",
-      "preco_atual": 838.03,
+      "preco_atual": 838.25,
       "preco_ontem": 934.99,
-      "delta": -96.96,
-      "delta_pct": -10.37,
-      "data_checagem": "2026-06-24 15:12"
+      "delta": -96.74,
+      "delta_pct": -10.35,
+      "data_checagem": "2026-06-24 21:22"
     },
     {
       "marca": "Horlat",
@@ -33,7 +33,7 @@
       "preco_ontem": 924.47,
       "delta": -78.54,
       "delta_pct": -8.5,
-      "data_checagem": "2026-06-24 15:05"
+      "data_checagem": "2026-06-24 21:15"
     },
     {
       "marca": "Byintek",
@@ -43,7 +43,7 @@
       "preco_ontem": 1013.75,
       "delta": -64.17,
       "delta_pct": -6.33,
-      "data_checagem": "2026-06-24 15:21"
+      "data_checagem": "2026-06-24 21:32"
     },
     {
       "marca": "Thundeal",
@@ -53,7 +53,7 @@
       "preco_ontem": 1612.04,
       "delta": -51.45,
       "delta_pct": -3.19,
-      "data_checagem": "2026-06-24 15:10"
+      "data_checagem": "2026-06-24 21:21"
     }
   ]
 }
