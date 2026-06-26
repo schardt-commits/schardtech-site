@@ -1,19 +1,19 @@
 {
   "data_coleta": "25/06",
-  "hora_coleta": "15:24",
+  "hora_coleta": "21:31",
   "data_ontem": "24/06",
   "data_hoje": "25/06",
-  "total_quedas": 17,
+  "total_quedas": 16,
   "quedas": [
     {
       "marca": "Thundeal",
       "modelo": "TD95W",
       "slug": "thundeal-td95w",
-      "preco_atual": 754.87,
+      "preco_atual": 738.75,
       "preco_ontem": 839.63,
-      "delta": -84.76,
-      "delta_pct": -10.09,
-      "data_checagem": "2026-06-25 15:10"
+      "delta": -100.88,
+      "delta_pct": -12.01,
+      "data_checagem": "2026-06-25 21:20"
     },
     {
       "marca": "Byintek",
@@ -23,7 +23,7 @@
       "preco_ontem": 917.0,
       "delta": -74.0,
       "delta_pct": -8.07,
-      "data_checagem": "2026-06-25 15:03"
+      "data_checagem": "2026-06-25 21:13"
     },
     {
       "marca": "Byintek",
@@ -33,27 +33,27 @@
       "preco_ontem": 597.6,
       "delta": -32.96,
       "delta_pct": -5.52,
-      "data_checagem": "2026-06-25 15:03"
+      "data_checagem": "2026-06-25 21:13"
     },
     {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 718.86,
-      "preco_ontem": 754.77,
-      "delta": -35.91,
-      "delta_pct": -4.76,
-      "data_checagem": "2026-06-25 15:11"
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 494.03,
+      "preco_ontem": 521.29,
+      "delta": -27.26,
+      "delta_pct": -5.23,
+      "data_checagem": "2026-06-25 21:19"
     },
     {
-      "marca": "Wanbo",
-      "modelo": "T2 Ultra",
-      "slug": "wanbo-t2-ultra",
-      "preco_atual": 1294.12,
-      "preco_ontem": 1301.48,
-      "delta": -7.36,
-      "delta_pct": -0.57,
-      "data_checagem": "2026-06-25 15:24"
+      "marca": "Magcubic",
+      "modelo": "HY450",
+      "slug": "magcubic-hy450",
+      "preco_atual": 633.45,
+      "preco_ontem": 667.6,
+      "delta": -34.15,
+      "delta_pct": -5.12,
+      "data_checagem": "2026-06-25 21:31"
     }
   ]
 }
