@@ -52,11 +52,11 @@ const projectors = [
 // ============================================================
 const featuredVideos = [
   { id: "-jDGpRWrybw", title: "Projetores e Eletrônicos no Paraguai: Vale a pena em 2026?" },
+  { id: "TahKwwg71ts", title: "O Projetor Led MAIS POTENTE! D10S Flixtone!" },
   { id: "dfb5McbzahY", title: "O Progaga PG610 ATV é o Melhor Projetor Abaixo de R$ 900?" },
   { id: "_xe393q7BpA", title: "Seu Novo Projetor Para Copa!? Testei o U14 PRO Da Byintek" },
   { id: "Ffx2fUOPGRU", title: "AC1095 O PROJETOR MAIS COMPLETO QUE JÁ TESTEI DA BETTDOW!" },
   { id: "0ihG8QKEioQ", title: "BRILHO ABSURDO! Testei o A24 Max Novo projetor da Vevshao" },
-  { id: "s7gfCpdJCVw", title: "Tela 100&quot; Portátil Byintek: DÁ PARA VER DOS DOIS LADOS?" },
 ];
 
 // ============================================================
