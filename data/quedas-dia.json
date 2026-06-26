@@ -1,39 +1,59 @@
 {
   "data_coleta": "26/06",
-  "hora_coleta": "00:32",
+  "hora_coleta": "15:12",
   "data_ontem": "25/06",
   "data_hoje": "26/06",
-  "total_quedas": 3,
+  "total_quedas": 25,
   "quedas": [
     {
       "marca": "Horlat",
       "modelo": "T9N",
       "slug": "horlat-t9n",
-      "preco_atual": 844.86,
+      "preco_atual": 837.93,
       "preco_ontem": 848.32,
-      "delta": -3.46,
-      "delta_pct": -0.41,
-      "data_checagem": "2026-06-26 00:15"
+      "delta": -10.39,
+      "delta_pct": -1.22,
+      "data_checagem": "2026-06-26 15:05"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1095",
-      "slug": "bettdow-ac1095",
-      "preco_atual": 2616.16,
-      "preco_ontem": 2617.08,
-      "delta": -0.92,
-      "delta_pct": -0.04,
-      "data_checagem": "2026-06-26 00:32"
+      "marca": "FlixTone",
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 1009.91,
+      "preco_ontem": 1018.57,
+      "delta": -8.66,
+      "delta_pct": -0.85,
+      "data_checagem": "2026-06-26 15:04"
     },
     {
-      "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 2339.45,
-      "preco_ontem": 2340.16,
-      "delta": -0.71,
-      "delta_pct": -0.03,
-      "data_checagem": "2026-06-26 00:32"
+      "marca": "FlixTone",
+      "modelo": "D9W Ultra",
+      "slug": "flixtone-d9w-ultra",
+      "preco_atual": 1544.34,
+      "preco_ontem": 1557.48,
+      "delta": -13.14,
+      "delta_pct": -0.84,
+      "data_checagem": "2026-06-26 15:04"
+    },
+    {
+      "marca": "Wupro",
+      "modelo": "G2",
+      "slug": "wupro-g2",
+      "preco_atual": 834.28,
+      "preco_ontem": 841.25,
+      "delta": -6.97,
+      "delta_pct": -0.83,
+      "data_checagem": "2026-06-26 15:12"
+    },
+    {
+      "marca": "Formovie",
+      "modelo": "Xming Episode One",
+      "slug": "formovie-xming-episode-one",
+      "preco_atual": 1350.73,
+      "preco_ontem": 1361.62,
+      "delta": -10.89,
+      "delta_pct": -0.8,
+      "data_checagem": "2026-06-26 15:05"
     }
   ]
 }
