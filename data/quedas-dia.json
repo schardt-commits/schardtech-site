@@ -1,10 +1,20 @@
 {
   "data_coleta": "27/06",
-  "hora_coleta": "09:31",
+  "hora_coleta": "15:24",
   "data_ontem": "26/06",
   "data_hoje": "27/06",
-  "total_quedas": 1,
+  "total_quedas": 2,
   "quedas": [
+    {
+      "marca": "Wanbo",
+      "modelo": "X5 Pro",
+      "slug": "wanbo-x5-pro",
+      "preco_atual": 2304.08,
+      "preco_ontem": 2339.45,
+      "delta": -35.37,
+      "delta_pct": -1.51,
+      "data_checagem": "2026-06-27 15:24"
+    },
     {
       "marca": "Wanbo",
       "modelo": "T2 Ultra",
@@ -13,7 +23,7 @@
       "preco_ontem": 1301.48,
       "delta": -7.36,
       "delta_pct": -0.57,
-      "data_checagem": "2026-06-27 09:31"
+      "data_checagem": "2026-06-27 15:24"
     }
   ]
 }
