@@ -1,9 +1,9 @@
 {
   "data_coleta": "26/06",
-  "hora_coleta": "15:12",
+  "hora_coleta": "21:23",
   "data_ontem": "25/06",
   "data_hoje": "26/06",
-  "total_quedas": 25,
+  "total_quedas": 26,
   "quedas": [
     {
       "marca": "Horlat",
@@ -13,7 +13,7 @@
       "preco_ontem": 848.32,
       "delta": -10.39,
       "delta_pct": -1.22,
-      "data_checagem": "2026-06-26 15:05"
+      "data_checagem": "2026-06-26 21:15"
     },
     {
       "marca": "FlixTone",
@@ -23,7 +23,17 @@
       "preco_ontem": 1018.57,
       "delta": -8.66,
       "delta_pct": -0.85,
-      "data_checagem": "2026-06-26 15:04"
+      "data_checagem": "2026-06-26 21:14"
+    },
+    {
+      "marca": "Wupro",
+      "modelo": "G2",
+      "slug": "wupro-g2",
+      "preco_atual": 834.06,
+      "preco_ontem": 841.25,
+      "delta": -7.19,
+      "delta_pct": -0.85,
+      "data_checagem": "2026-06-26 21:23"
     },
     {
       "marca": "FlixTone",
@@ -33,17 +43,7 @@
       "preco_ontem": 1557.48,
       "delta": -13.14,
       "delta_pct": -0.84,
-      "data_checagem": "2026-06-26 15:04"
-    },
-    {
-      "marca": "Wupro",
-      "modelo": "G2",
-      "slug": "wupro-g2",
-      "preco_atual": 834.28,
-      "preco_ontem": 841.25,
-      "delta": -6.97,
-      "delta_pct": -0.83,
-      "data_checagem": "2026-06-26 15:12"
+      "data_checagem": "2026-06-26 21:14"
     },
     {
       "marca": "Formovie",
@@ -53,7 +53,7 @@
       "preco_ontem": 1361.62,
       "delta": -10.89,
       "delta_pct": -0.8,
-      "data_checagem": "2026-06-26 15:05"
+      "data_checagem": "2026-06-26 21:14"
     }
   ]
 }
