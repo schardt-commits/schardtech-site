@@ -1,19 +1,29 @@
 {
   "data_coleta": "28/06",
-  "hora_coleta": "09:15",
+  "hora_coleta": "15:05",
   "data_ontem": "27/06",
   "data_hoje": "28/06",
-  "total_quedas": 1,
+  "total_quedas": 2,
   "quedas": [
     {
       "marca": "FlixTone",
       "modelo": "D9W Ultra",
       "slug": "flixtone-d9w-ultra",
-      "preco_atual": 2033.61,
+      "preco_atual": 1819.68,
       "preco_ontem": 2140.64,
-      "delta": -107.03,
-      "delta_pct": -5.0,
-      "data_checagem": "2026-06-28 09:15"
+      "delta": -320.96,
+      "delta_pct": -14.99,
+      "data_checagem": "2026-06-28 15:05"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 1525.74,
+      "preco_ontem": 1558.65,
+      "delta": -32.91,
+      "delta_pct": -2.11,
+      "data_checagem": "2026-06-28 15:05"
     }
   ]
 }
