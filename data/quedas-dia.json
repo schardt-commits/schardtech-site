@@ -1,10 +1,20 @@
 {
   "data_coleta": "27/06",
-  "hora_coleta": "15:24",
+  "hora_coleta": "21:31",
   "data_ontem": "26/06",
   "data_hoje": "27/06",
-  "total_quedas": 2,
+  "total_quedas": 4,
   "quedas": [
+    {
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 271.83,
+      "preco_ontem": 290.0,
+      "delta": -18.17,
+      "delta_pct": -6.27,
+      "data_checagem": "2026-06-27 21:19"
+    },
     {
       "marca": "Wanbo",
       "modelo": "X5 Pro",
@@ -13,7 +23,17 @@
       "preco_ontem": 2339.45,
       "delta": -35.37,
       "delta_pct": -1.51,
-      "data_checagem": "2026-06-27 15:24"
+      "data_checagem": "2026-06-27 21:31"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG610W",
+      "slug": "progaga-pg610w",
+      "preco_atual": 950.98,
+      "preco_ontem": 960.11,
+      "delta": -9.13,
+      "delta_pct": -0.95,
+      "data_checagem": "2026-06-27 21:19"
     },
     {
       "marca": "Wanbo",
@@ -23,7 +43,7 @@
       "preco_ontem": 1301.48,
       "delta": -7.36,
       "delta_pct": -0.57,
-      "data_checagem": "2026-06-27 15:24"
+      "data_checagem": "2026-06-27 21:31"
     }
   ]
 }
