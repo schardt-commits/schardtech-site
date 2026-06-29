@@ -1,9 +1,9 @@
 {
   "data_coleta": "28/06",
-  "hora_coleta": "15:05",
+  "hora_coleta": "21:24",
   "data_ontem": "27/06",
   "data_hoje": "28/06",
-  "total_quedas": 2,
+  "total_quedas": 4,
   "quedas": [
     {
       "marca": "FlixTone",
@@ -13,7 +13,7 @@
       "preco_ontem": 2140.64,
       "delta": -320.96,
       "delta_pct": -14.99,
-      "data_checagem": "2026-06-28 15:05"
+      "data_checagem": "2026-06-28 21:14"
     },
     {
       "marca": "FlixTone",
@@ -23,7 +23,27 @@
       "preco_ontem": 1558.65,
       "delta": -32.91,
       "delta_pct": -2.11,
-      "data_checagem": "2026-06-28 15:05"
+      "data_checagem": "2026-06-28 21:14"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 737.35,
+      "preco_ontem": 738.97,
+      "delta": -1.62,
+      "delta_pct": -0.22,
+      "data_checagem": "2026-06-28 21:22"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 1507.62,
+      "preco_ontem": 1510.59,
+      "delta": -2.97,
+      "delta_pct": -0.2,
+      "data_checagem": "2026-06-28 21:24"
     }
   ]
 }
