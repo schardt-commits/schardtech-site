@@ -1,9 +1,9 @@
 {
   "data_coleta": "29/06",
-  "hora_coleta": "00:32",
+  "hora_coleta": "15:25",
   "data_ontem": "28/06",
   "data_hoje": "29/06",
-  "total_quedas": 7,
+  "total_quedas": 13,
   "quedas": [
     {
       "marca": "Byintek",
@@ -13,27 +13,27 @@
       "preco_ontem": 1208.11,
       "delta": -246.11,
       "delta_pct": -20.37,
-      "data_checagem": "2026-06-29 00:32"
+      "data_checagem": "2026-06-29 15:25"
     },
     {
       "marca": "FlixTone",
       "modelo": "D9W Mini",
       "slug": "flixtone-d9w-mini",
-      "preco_atual": 1365.51,
+      "preco_atual": 1347.5,
       "preco_ontem": 1525.74,
-      "delta": -160.23,
-      "delta_pct": -10.5,
-      "data_checagem": "2026-06-29 00:14"
+      "delta": -178.24,
+      "delta_pct": -11.68,
+      "data_checagem": "2026-06-29 15:04"
     },
     {
       "marca": "Progaga",
       "modelo": "PG610W",
       "slug": "progaga-pg610w",
-      "preco_atual": 960.11,
+      "preco_atual": 957.54,
       "preco_ontem": 1026.28,
-      "delta": -66.17,
-      "delta_pct": -6.45,
-      "data_checagem": "2026-06-29 00:20"
+      "delta": -68.74,
+      "delta_pct": -6.7,
+      "data_checagem": "2026-06-29 15:10"
     },
     {
       "marca": "Vevshao",
@@ -43,7 +43,7 @@
       "preco_ontem": 611.48,
       "delta": -33.12,
       "delta_pct": -5.42,
-      "data_checagem": "2026-06-29 00:32"
+      "data_checagem": "2026-06-29 15:25"
     },
     {
       "marca": "Byintek",
@@ -53,7 +53,7 @@
       "preco_ontem": 2157.08,
       "delta": -110.4,
       "delta_pct": -5.12,
-      "data_checagem": "2026-06-29 00:32"
+      "data_checagem": "2026-06-29 15:25"
     }
   ]
 }
