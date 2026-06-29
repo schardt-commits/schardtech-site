@@ -1,49 +1,59 @@
 {
-  "data_coleta": "28/06",
-  "hora_coleta": "21:24",
-  "data_ontem": "27/06",
-  "data_hoje": "28/06",
-  "total_quedas": 4,
+  "data_coleta": "29/06",
+  "hora_coleta": "00:32",
+  "data_ontem": "28/06",
+  "data_hoje": "29/06",
+  "total_quedas": 7,
   "quedas": [
     {
-      "marca": "FlixTone",
-      "modelo": "D9W Ultra",
-      "slug": "flixtone-d9w-ultra",
-      "preco_atual": 1819.68,
-      "preco_ontem": 2140.64,
-      "delta": -320.96,
-      "delta_pct": -14.99,
-      "data_checagem": "2026-06-28 21:14"
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 962.0,
+      "preco_ontem": 1208.11,
+      "delta": -246.11,
+      "delta_pct": -20.37,
+      "data_checagem": "2026-06-29 00:32"
     },
     {
       "marca": "FlixTone",
       "modelo": "D9W Mini",
       "slug": "flixtone-d9w-mini",
-      "preco_atual": 1525.74,
-      "preco_ontem": 1558.65,
-      "delta": -32.91,
-      "delta_pct": -2.11,
-      "data_checagem": "2026-06-28 21:14"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 737.35,
-      "preco_ontem": 738.97,
-      "delta": -1.62,
-      "delta_pct": -0.22,
-      "data_checagem": "2026-06-28 21:22"
+      "preco_atual": 1365.51,
+      "preco_ontem": 1525.74,
+      "delta": -160.23,
+      "delta_pct": -10.5,
+      "data_checagem": "2026-06-29 00:14"
     },
     {
       "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 1507.62,
-      "preco_ontem": 1510.59,
-      "delta": -2.97,
-      "delta_pct": -0.2,
-      "data_checagem": "2026-06-28 21:24"
+      "modelo": "PG610W",
+      "slug": "progaga-pg610w",
+      "preco_atual": 960.11,
+      "preco_ontem": 1026.28,
+      "delta": -66.17,
+      "delta_pct": -6.45,
+      "data_checagem": "2026-06-29 00:20"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A10",
+      "slug": "vevshao-a10",
+      "preco_atual": 578.36,
+      "preco_ontem": 611.48,
+      "delta": -33.12,
+      "delta_pct": -5.42,
+      "data_checagem": "2026-06-29 00:32"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 2046.68,
+      "preco_ontem": 2157.08,
+      "delta": -110.4,
+      "delta_pct": -5.12,
+      "data_checagem": "2026-06-29 00:32"
     }
   ]
 }
