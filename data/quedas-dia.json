@@ -1,10 +1,20 @@
 {
   "data_coleta": "30/06",
-  "hora_coleta": "00:33",
+  "hora_coleta": "09:33",
   "data_ontem": "29/06",
   "data_hoje": "30/06",
-  "total_quedas": 4,
+  "total_quedas": 18,
   "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "Love U14",
+      "slug": "byintek-u14",
+      "preco_atual": 993.79,
+      "preco_ontem": 1212.87,
+      "delta": -219.08,
+      "delta_pct": -18.06,
+      "data_checagem": "2026-06-30 09:13"
+    },
     {
       "marca": "Magcubic",
       "modelo": "HY300",
@@ -13,37 +23,37 @@
       "preco_ontem": 228.65,
       "delta": -33.15,
       "delta_pct": -14.5,
-      "data_checagem": "2026-06-30 00:33"
+      "data_checagem": "2026-06-30 09:33"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 957.54,
-      "preco_ontem": 1023.55,
-      "delta": -66.01,
-      "delta_pct": -6.45,
-      "data_checagem": "2026-06-30 00:20"
+      "marca": "FlixTone",
+      "modelo": "D9W Ultra",
+      "slug": "flixtone-d9w-ultra",
+      "preco_atual": 1816.14,
+      "preco_ontem": 2065.7,
+      "delta": -249.56,
+      "delta_pct": -12.08,
+      "data_checagem": "2026-06-30 09:15"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 272.73,
-      "preco_ontem": 279.04,
-      "delta": -6.31,
-      "delta_pct": -2.26,
-      "data_checagem": "2026-06-30 00:20"
+      "marca": "FlixTone",
+      "modelo": "D10S",
+      "slug": "flixtone-d10s",
+      "preco_atual": 2037.61,
+      "preco_ontem": 2300.59,
+      "delta": -262.98,
+      "delta_pct": -11.43,
+      "data_checagem": "2026-06-30 09:24"
     },
     {
-      "marca": "Wanbo",
-      "modelo": "T2 Ultra",
-      "slug": "wanbo-t2-ultra",
-      "preco_atual": 1294.12,
-      "preco_ontem": 1301.48,
-      "delta": -7.36,
-      "delta_pct": -0.57,
-      "data_checagem": "2026-06-30 00:33"
+      "marca": "Byintek",
+      "modelo": "Plato T5 MAX",
+      "slug": "byintek-plato-t5-max",
+      "preco_atual": 1459.69,
+      "preco_ontem": 1628.6,
+      "delta": -168.91,
+      "delta_pct": -10.37,
+      "data_checagem": "2026-06-30 09:33"
     }
   ]
 }
