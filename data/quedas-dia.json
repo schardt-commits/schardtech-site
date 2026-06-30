@@ -1,6 +1,6 @@
 {
   "data_coleta": "29/06",
-  "hora_coleta": "15:25",
+  "hora_coleta": "21:32",
   "data_ontem": "28/06",
   "data_hoje": "29/06",
   "total_quedas": 13,
@@ -13,7 +13,7 @@
       "preco_ontem": 1208.11,
       "delta": -246.11,
       "delta_pct": -20.37,
-      "data_checagem": "2026-06-29 15:25"
+      "data_checagem": "2026-06-29 21:32"
     },
     {
       "marca": "FlixTone",
@@ -23,17 +23,7 @@
       "preco_ontem": 1525.74,
       "delta": -178.24,
       "delta_pct": -11.68,
-      "data_checagem": "2026-06-29 15:04"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 957.54,
-      "preco_ontem": 1026.28,
-      "delta": -68.74,
-      "delta_pct": -6.7,
-      "data_checagem": "2026-06-29 15:10"
+      "data_checagem": "2026-06-29 21:14"
     },
     {
       "marca": "Vevshao",
@@ -43,7 +33,7 @@
       "preco_ontem": 611.48,
       "delta": -33.12,
       "delta_pct": -5.42,
-      "data_checagem": "2026-06-29 15:25"
+      "data_checagem": "2026-06-29 21:32"
     },
     {
       "marca": "Byintek",
@@ -53,7 +43,17 @@
       "preco_ontem": 2157.08,
       "delta": -110.4,
       "delta_pct": -5.12,
-      "data_checagem": "2026-06-29 15:25"
+      "data_checagem": "2026-06-29 21:32"
+    },
+    {
+      "marca": "Wupro",
+      "modelo": "G2",
+      "slug": "wupro-g2",
+      "preco_atual": 1017.18,
+      "preco_ontem": 1028.99,
+      "delta": -11.81,
+      "delta_pct": -1.15,
+      "data_checagem": "2026-06-29 21:23"
     }
   ]
 }
