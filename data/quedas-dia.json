@@ -1,59 +1,59 @@
 {
-  "data_coleta": "30/06",
-  "hora_coleta": "21:33",
-  "data_ontem": "29/06",
-  "data_hoje": "30/06",
-  "total_quedas": 19,
+  "data_coleta": "01/07",
+  "hora_coleta": "00:32",
+  "data_ontem": "30/06",
+  "data_hoje": "01/07",
+  "total_quedas": 30,
   "quedas": [
     {
-      "marca": "Byintek",
-      "modelo": "Love U14",
-      "slug": "byintek-u14",
-      "preco_atual": 997.83,
-      "preco_ontem": 1212.87,
-      "delta": -215.04,
-      "delta_pct": -17.73,
-      "data_checagem": "2026-06-30 21:13"
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 359.46,
+      "preco_ontem": 642.06,
+      "delta": -282.6,
+      "delta_pct": -44.01,
+      "data_checagem": "2026-07-01 00:20"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "HY300",
-      "slug": "magcubic-hy300",
-      "preco_atual": 195.5,
-      "preco_ontem": 228.65,
-      "delta": -33.15,
-      "delta_pct": -14.5,
-      "data_checagem": "2026-06-30 21:33"
+      "marca": "Thundeal",
+      "modelo": "TD95W",
+      "slug": "thundeal-td95w",
+      "preco_atual": 653.66,
+      "preco_ontem": 885.53,
+      "delta": -231.87,
+      "delta_pct": -26.18,
+      "data_checagem": "2026-07-01 00:21"
     },
     {
-      "marca": "Byintek",
-      "modelo": "Plato T5 MAX",
-      "slug": "byintek-plato-t5-max",
-      "preco_atual": 1397.95,
-      "preco_ontem": 1628.6,
-      "delta": -230.65,
-      "delta_pct": -14.16,
-      "data_checagem": "2026-06-30 21:33"
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 706.62,
+      "preco_ontem": 953.48,
+      "delta": -246.86,
+      "delta_pct": -25.89,
+      "data_checagem": "2026-07-01 00:22"
     },
     {
-      "marca": "Horlat",
-      "modelo": "T9N",
-      "slug": "horlat-t9n",
-      "preco_atual": 880.07,
-      "preco_ontem": 1014.28,
-      "delta": -134.21,
-      "delta_pct": -13.23,
-      "data_checagem": "2026-06-30 21:16"
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 1147.42,
+      "preco_ontem": 1512.77,
+      "delta": -365.35,
+      "delta_pct": -24.15,
+      "data_checagem": "2026-07-01 00:23"
     },
     {
       "marca": "Byintek",
       "modelo": "U90 MAX",
       "slug": "byintek-u90-max",
-      "preco_atual": 2177.03,
-      "preco_ontem": 2467.52,
-      "delta": -290.49,
-      "delta_pct": -11.77,
-      "data_checagem": "2026-06-30 21:33"
+      "preco_atual": 1698.34,
+      "preco_ontem": 2177.03,
+      "delta": -478.69,
+      "delta_pct": -21.99,
+      "data_checagem": "2026-07-01 00:32"
     }
   ]
 }
