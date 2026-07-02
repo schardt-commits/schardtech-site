@@ -1,10 +1,20 @@
 {
   "data_coleta": "02/07",
-  "hora_coleta": "15:23",
+  "hora_coleta": "18:48",
   "data_ontem": "01/07",
   "data_hoje": "02/07",
-  "total_quedas": 11,
+  "total_quedas": 12,
   "quedas": [
+    {
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 260.42,
+      "preco_ontem": 288.99,
+      "delta": -28.57,
+      "delta_pct": -9.89,
+      "data_checagem": "2026-07-02 18:45"
+    },
     {
       "marca": "FlixTone",
       "modelo": "D9W Mini",
@@ -13,7 +23,7 @@
       "preco_ontem": 1152.64,
       "delta": -93.8,
       "delta_pct": -8.14,
-      "data_checagem": "2026-07-02 15:06"
+      "data_checagem": "2026-07-02 18:39"
     },
     {
       "marca": "Wupro",
@@ -23,7 +33,17 @@
       "preco_ontem": 953.81,
       "delta": -71.55,
       "delta_pct": -7.5,
-      "data_checagem": "2026-07-02 15:14"
+      "data_checagem": "2026-07-02 18:48"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 568.65,
+      "preco_ontem": 587.42,
+      "delta": -18.77,
+      "delta_pct": -3.2,
+      "data_checagem": "2026-07-02 18:38"
     },
     {
       "marca": "Byintek",
@@ -33,27 +53,7 @@
       "preco_ontem": 1141.85,
       "delta": -36.25,
       "delta_pct": -3.17,
-      "data_checagem": "2026-07-02 15:03"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 929.45,
-      "preco_ontem": 957.76,
-      "delta": -28.31,
-      "delta_pct": -2.96,
-      "data_checagem": "2026-07-02 15:23"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "A24 MAX",
-      "slug": "vevshao-a24-max",
-      "preco_atual": 1442.15,
-      "preco_ontem": 1461.85,
-      "delta": -19.7,
-      "delta_pct": -1.35,
-      "data_checagem": "2026-07-02 15:23"
+      "data_checagem": "2026-07-02 18:38"
     }
   ]
 }
