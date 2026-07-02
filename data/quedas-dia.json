@@ -1,59 +1,39 @@
 {
-  "data_coleta": "01/07",
-  "hora_coleta": "21:23",
-  "data_ontem": "30/06",
-  "data_hoje": "01/07",
-  "total_quedas": 27,
+  "data_coleta": "02/07",
+  "hora_coleta": "00:24",
+  "data_ontem": "01/07",
+  "data_hoje": "02/07",
+  "total_quedas": 3,
   "quedas": [
     {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 408.04,
-      "preco_ontem": 642.06,
-      "delta": -234.02,
-      "delta_pct": -36.45,
-      "data_checagem": "2026-07-01 21:20"
+      "marca": "Progaga",
+      "modelo": "PG610W",
+      "slug": "progaga-pg610w",
+      "preco_atual": 879.14,
+      "preco_ontem": 1005.61,
+      "delta": -126.47,
+      "delta_pct": -12.58,
+      "data_checagem": "2026-07-02 00:20"
     },
     {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 683.76,
-      "preco_ontem": 953.48,
-      "delta": -269.72,
-      "delta_pct": -28.29,
-      "data_checagem": "2026-07-01 21:22"
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 255.29,
+      "preco_ontem": 288.99,
+      "delta": -33.7,
+      "delta_pct": -11.66,
+      "data_checagem": "2026-07-02 00:20"
     },
     {
       "marca": "Progaga",
       "modelo": "PG610 ATV",
       "slug": "progaga-pg610-atv",
-      "preco_atual": 1111.3,
-      "preco_ontem": 1512.77,
-      "delta": -401.47,
-      "delta_pct": -26.54,
-      "data_checagem": "2026-07-01 21:23"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD95W",
-      "slug": "thundeal-td95w",
-      "preco_atual": 657.48,
-      "preco_ontem": 885.53,
-      "delta": -228.05,
-      "delta_pct": -25.75,
-      "data_checagem": "2026-07-01 21:21"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1324.33,
-      "preco_ontem": 1719.57,
-      "delta": -395.24,
-      "delta_pct": -22.98,
-      "data_checagem": "2026-07-01 21:21"
+      "preco_atual": 1030.82,
+      "preco_ontem": 1111.3,
+      "delta": -80.48,
+      "delta_pct": -7.24,
+      "data_checagem": "2026-07-02 00:24"
     }
   ]
 }
