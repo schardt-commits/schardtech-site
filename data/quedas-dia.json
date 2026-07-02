@@ -1,9 +1,9 @@
 {
   "data_coleta": "02/07",
-  "hora_coleta": "00:24",
+  "hora_coleta": "09:33",
   "data_ontem": "01/07",
   "data_hoje": "02/07",
-  "total_quedas": 3,
+  "total_quedas": 5,
   "quedas": [
     {
       "marca": "Progaga",
@@ -13,7 +13,7 @@
       "preco_ontem": 1005.61,
       "delta": -126.47,
       "delta_pct": -12.58,
-      "data_checagem": "2026-07-02 00:20"
+      "data_checagem": "2026-07-02 09:20"
     },
     {
       "marca": "Progaga",
@@ -23,7 +23,7 @@
       "preco_ontem": 288.99,
       "delta": -33.7,
       "delta_pct": -11.66,
-      "data_checagem": "2026-07-02 00:20"
+      "data_checagem": "2026-07-02 09:20"
     },
     {
       "marca": "Progaga",
@@ -33,7 +33,27 @@
       "preco_ontem": 1111.3,
       "delta": -80.48,
       "delta_pct": -7.24,
-      "data_checagem": "2026-07-02 00:24"
+      "data_checagem": "2026-07-02 09:24"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A24 MAX",
+      "slug": "vevshao-a24-max",
+      "preco_atual": 1445.79,
+      "preco_ontem": 1461.85,
+      "delta": -16.06,
+      "delta_pct": -1.1,
+      "data_checagem": "2026-07-02 09:33"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1310.67,
+      "preco_ontem": 1324.33,
+      "delta": -13.66,
+      "delta_pct": -1.03,
+      "data_checagem": "2026-07-02 09:21"
     }
   ]
 }
