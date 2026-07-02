@@ -1,59 +1,59 @@
 {
   "data_coleta": "02/07",
-  "hora_coleta": "09:33",
+  "hora_coleta": "15:23",
   "data_ontem": "01/07",
   "data_hoje": "02/07",
-  "total_quedas": 5,
+  "total_quedas": 11,
   "quedas": [
     {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 879.14,
-      "preco_ontem": 1005.61,
-      "delta": -126.47,
-      "delta_pct": -12.58,
-      "data_checagem": "2026-07-02 09:20"
+      "marca": "FlixTone",
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 1058.84,
+      "preco_ontem": 1152.64,
+      "delta": -93.8,
+      "delta_pct": -8.14,
+      "data_checagem": "2026-07-02 15:06"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 255.29,
-      "preco_ontem": 288.99,
-      "delta": -33.7,
-      "delta_pct": -11.66,
-      "data_checagem": "2026-07-02 09:20"
+      "marca": "Wupro",
+      "modelo": "G2",
+      "slug": "wupro-g2",
+      "preco_atual": 882.26,
+      "preco_ontem": 953.81,
+      "delta": -71.55,
+      "delta_pct": -7.5,
+      "data_checagem": "2026-07-02 15:14"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 1030.82,
-      "preco_ontem": 1111.3,
-      "delta": -80.48,
-      "delta_pct": -7.24,
-      "data_checagem": "2026-07-02 09:24"
+      "marca": "Byintek",
+      "modelo": "Love U14",
+      "slug": "byintek-u14",
+      "preco_atual": 1105.6,
+      "preco_ontem": 1141.85,
+      "delta": -36.25,
+      "delta_pct": -3.17,
+      "data_checagem": "2026-07-02 15:03"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 929.45,
+      "preco_ontem": 957.76,
+      "delta": -28.31,
+      "delta_pct": -2.96,
+      "data_checagem": "2026-07-02 15:23"
     },
     {
       "marca": "Vevshao",
       "modelo": "A24 MAX",
       "slug": "vevshao-a24-max",
-      "preco_atual": 1445.79,
+      "preco_atual": 1442.15,
       "preco_ontem": 1461.85,
-      "delta": -16.06,
-      "delta_pct": -1.1,
-      "data_checagem": "2026-07-02 09:33"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1310.67,
-      "preco_ontem": 1324.33,
-      "delta": -13.66,
-      "delta_pct": -1.03,
-      "data_checagem": "2026-07-02 09:21"
+      "delta": -19.7,
+      "delta_pct": -1.35,
+      "data_checagem": "2026-07-02 15:23"
     }
   ]
 }
