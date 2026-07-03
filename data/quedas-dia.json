@@ -1,9 +1,9 @@
 {
   "data_coleta": "02/07",
-  "hora_coleta": "18:48",
+  "hora_coleta": "21:34",
   "data_ontem": "01/07",
   "data_hoje": "02/07",
-  "total_quedas": 12,
+  "total_quedas": 19,
   "quedas": [
     {
       "marca": "Progaga",
@@ -13,47 +13,47 @@
       "preco_ontem": 288.99,
       "delta": -28.57,
       "delta_pct": -9.89,
-      "data_checagem": "2026-07-02 18:45"
+      "data_checagem": "2026-07-02 21:20"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 868.99,
+      "preco_ontem": 957.76,
+      "delta": -88.77,
+      "delta_pct": -9.27,
+      "data_checagem": "2026-07-02 21:34"
     },
     {
       "marca": "FlixTone",
       "modelo": "D9W Mini",
       "slug": "flixtone-d9w-mini",
-      "preco_atual": 1058.84,
+      "preco_atual": 1058.79,
       "preco_ontem": 1152.64,
-      "delta": -93.8,
+      "delta": -93.85,
       "delta_pct": -8.14,
-      "data_checagem": "2026-07-02 18:39"
+      "data_checagem": "2026-07-02 21:14"
     },
     {
       "marca": "Wupro",
       "modelo": "G2",
       "slug": "wupro-g2",
-      "preco_atual": 882.26,
+      "preco_atual": 882.2,
       "preco_ontem": 953.81,
-      "delta": -71.55,
-      "delta_pct": -7.5,
-      "data_checagem": "2026-07-02 18:48"
+      "delta": -71.61,
+      "delta_pct": -7.51,
+      "data_checagem": "2026-07-02 21:24"
     },
     {
-      "marca": "Byintek",
-      "modelo": "Love U4",
-      "slug": "byintek-love-u4",
-      "preco_atual": 568.65,
-      "preco_ontem": 587.42,
-      "delta": -18.77,
-      "delta_pct": -3.2,
-      "data_checagem": "2026-07-02 18:38"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U14",
-      "slug": "byintek-u14",
-      "preco_atual": 1105.6,
-      "preco_ontem": 1141.85,
-      "delta": -36.25,
-      "delta_pct": -3.17,
-      "data_checagem": "2026-07-02 18:38"
+      "marca": "Progaga",
+      "modelo": "PG610W",
+      "slug": "progaga-pg610w",
+      "preco_atual": 974.97,
+      "preco_ontem": 1005.61,
+      "delta": -30.64,
+      "delta_pct": -3.05,
+      "data_checagem": "2026-07-02 21:21"
     }
   ]
 }
