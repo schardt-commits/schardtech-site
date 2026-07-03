@@ -1,9 +1,9 @@
 {
   "data_coleta": "03/07",
-  "hora_coleta": "00:34",
+  "hora_coleta": "09:34",
   "data_ontem": "02/07",
   "data_hoje": "03/07",
-  "total_quedas": 5,
+  "total_quedas": 19,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,7 +13,17 @@
       "preco_ontem": 824.0,
       "delta": -146.74,
       "delta_pct": -17.81,
-      "data_checagem": "2026-07-03 00:34"
+      "data_checagem": "2026-07-03 09:34"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 389.03,
+      "preco_ontem": 448.87,
+      "delta": -59.84,
+      "delta_pct": -13.33,
+      "data_checagem": "2026-07-03 09:21"
     },
     {
       "marca": "Progaga",
@@ -23,7 +33,7 @@
       "preco_ontem": 260.42,
       "delta": -33.79,
       "delta_pct": -12.98,
-      "data_checagem": "2026-07-03 00:20"
+      "data_checagem": "2026-07-03 09:20"
     },
     {
       "marca": "Progaga",
@@ -33,27 +43,17 @@
       "preco_ontem": 974.97,
       "delta": -125.99,
       "delta_pct": -12.92,
-      "data_checagem": "2026-07-03 00:21"
+      "data_checagem": "2026-07-03 09:21"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 407.07,
-      "preco_ontem": 448.87,
-      "delta": -41.8,
-      "delta_pct": -9.31,
-      "data_checagem": "2026-07-03 00:21"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 1028.35,
-      "preco_ontem": 1108.65,
-      "delta": -80.3,
-      "delta_pct": -7.24,
-      "data_checagem": "2026-07-03 00:24"
+      "marca": "Byintek",
+      "modelo": "Plato T5 MAX",
+      "slug": "byintek-plato-t5-max",
+      "preco_atual": 1202.04,
+      "preco_ontem": 1341.74,
+      "delta": -139.7,
+      "delta_pct": -10.41,
+      "data_checagem": "2026-07-03 09:34"
     }
   ]
 }
