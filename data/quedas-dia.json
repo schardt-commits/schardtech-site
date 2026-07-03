@@ -1,9 +1,9 @@
 {
   "data_coleta": "03/07",
-  "hora_coleta": "09:34",
+  "hora_coleta": "15:24",
   "data_ontem": "02/07",
   "data_hoje": "03/07",
-  "total_quedas": 19,
+  "total_quedas": 26,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,47 +13,47 @@
       "preco_ontem": 824.0,
       "delta": -146.74,
       "delta_pct": -17.81,
-      "data_checagem": "2026-07-03 09:34"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 389.03,
-      "preco_ontem": 448.87,
-      "delta": -59.84,
-      "delta_pct": -13.33,
-      "data_checagem": "2026-07-03 09:21"
+      "data_checagem": "2026-07-03 15:24"
     },
     {
       "marca": "Progaga",
       "modelo": "PG310",
       "slug": "progaga-pg310",
-      "preco_atual": 226.63,
+      "preco_atual": 226.29,
       "preco_ontem": 260.42,
-      "delta": -33.79,
-      "delta_pct": -12.98,
-      "data_checagem": "2026-07-03 09:20"
+      "delta": -34.13,
+      "delta_pct": -13.11,
+      "data_checagem": "2026-07-03 15:10"
     },
     {
       "marca": "Progaga",
       "modelo": "PG610W",
       "slug": "progaga-pg610w",
-      "preco_atual": 848.98,
+      "preco_atual": 847.72,
       "preco_ontem": 974.97,
-      "delta": -125.99,
-      "delta_pct": -12.92,
-      "data_checagem": "2026-07-03 09:21"
+      "delta": -127.25,
+      "delta_pct": -13.05,
+      "data_checagem": "2026-07-03 15:11"
     },
     {
       "marca": "Byintek",
-      "modelo": "Plato T5 MAX",
-      "slug": "byintek-plato-t5-max",
-      "preco_atual": 1202.04,
-      "preco_ontem": 1341.74,
-      "delta": -139.7,
-      "delta_pct": -10.41,
-      "data_checagem": "2026-07-03 09:34"
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1435.1,
+      "preco_ontem": 1582.97,
+      "delta": -147.87,
+      "delta_pct": -9.34,
+      "data_checagem": "2026-07-03 15:15"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 1014.48,
+      "preco_ontem": 1108.65,
+      "delta": -94.17,
+      "delta_pct": -8.49,
+      "data_checagem": "2026-07-03 15:14"
     }
   ]
 }
