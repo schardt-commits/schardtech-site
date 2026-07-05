@@ -1,9 +1,9 @@
 {
   "data_coleta": "05/07",
-  "hora_coleta": "09:35",
+  "hora_coleta": "15:16",
   "data_ontem": "04/07",
   "data_hoje": "05/07",
-  "total_quedas": 5,
+  "total_quedas": 15,
   "quedas": [
     {
       "marca": "Progaga",
@@ -23,7 +23,7 @@
       "preco_ontem": 973.74,
       "delta": -126.02,
       "delta_pct": -12.94,
-      "data_checagem": "2026-07-05 09:21"
+      "data_checagem": "2026-07-05 15:11"
     },
     {
       "marca": "Progaga",
@@ -33,27 +33,27 @@
       "preco_ontem": 1107.03,
       "delta": -92.55,
       "delta_pct": -8.36,
-      "data_checagem": "2026-07-05 09:25"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "A24 MAX",
-      "slug": "vevshao-a24-max",
-      "preco_atual": 1439.91,
-      "preco_ontem": 1455.92,
-      "delta": -16.01,
-      "delta_pct": -1.1,
-      "data_checagem": "2026-07-05 09:35"
+      "data_checagem": "2026-07-05 15:16"
     },
     {
       "marca": "Thundeal",
-      "modelo": "TD92 Pro",
-      "slug": "thundeal-td92-pro",
-      "preco_atual": 585.33,
-      "preco_ontem": 588.69,
-      "delta": -3.36,
-      "delta_pct": -0.57,
-      "data_checagem": "2026-07-05 09:21"
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1305.21,
+      "preco_ontem": 1402.91,
+      "delta": -97.7,
+      "delta_pct": -6.96,
+      "data_checagem": "2026-07-05 15:13"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 1043.24,
+      "preco_ontem": 1120.24,
+      "delta": -77.0,
+      "delta_pct": -6.87,
+      "data_checagem": "2026-07-05 15:16"
     }
   ]
 }
