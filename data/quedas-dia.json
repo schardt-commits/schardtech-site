@@ -1,8 +1,19 @@
 {
   "data_coleta": "04/07",
-  "hora_coleta": "",
+  "hora_coleta": "21:24",
   "data_ontem": "03/07",
   "data_hoje": "04/07",
-  "total_quedas": 0,
-  "quedas": []
+  "total_quedas": 1,
+  "quedas": [
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98W",
+      "slug": "thundeal-td98w",
+      "preco_atual": 2337.79,
+      "preco_ontem": 2424.69,
+      "delta": -86.9,
+      "delta_pct": -3.58,
+      "data_checagem": "2026-07-04 21:24"
+    }
+  ]
 }
