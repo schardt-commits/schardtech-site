@@ -1,40 +1,10 @@
 {
   "data_coleta": "05/07",
-  "hora_coleta": "15:16",
+  "hora_coleta": "21:35",
   "data_ontem": "04/07",
   "data_hoje": "05/07",
-  "total_quedas": 15,
+  "total_quedas": 12,
   "quedas": [
-    {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 226.29,
-      "preco_ontem": 260.01,
-      "delta": -33.72,
-      "delta_pct": -12.97,
-      "data_checagem": "2026-07-05 09:21"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 847.72,
-      "preco_ontem": 973.74,
-      "delta": -126.02,
-      "delta_pct": -12.94,
-      "data_checagem": "2026-07-05 15:11"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 1014.48,
-      "preco_ontem": 1107.03,
-      "delta": -92.55,
-      "delta_pct": -8.36,
-      "data_checagem": "2026-07-05 15:16"
-    },
     {
       "marca": "Thundeal",
       "modelo": "TD98PRO",
@@ -43,7 +13,7 @@
       "preco_ontem": 1402.91,
       "delta": -97.7,
       "delta_pct": -6.96,
-      "data_checagem": "2026-07-05 15:13"
+      "data_checagem": "2026-07-05 21:22"
     },
     {
       "marca": "Thundeal",
@@ -53,7 +23,37 @@
       "preco_ontem": 1120.24,
       "delta": -77.0,
       "delta_pct": -6.87,
-      "data_checagem": "2026-07-05 15:16"
+      "data_checagem": "2026-07-05 21:26"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO ATV",
+      "slug": "thundeal-td98pro-atv",
+      "preco_atual": 1564.24,
+      "preco_ontem": 1675.88,
+      "delta": -111.64,
+      "delta_pct": -6.66,
+      "data_checagem": "2026-07-05 21:22"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 1694.52,
+      "preco_ontem": 1812.87,
+      "delta": -118.35,
+      "delta_pct": -6.53,
+      "data_checagem": "2026-07-05 21:14"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 855.4,
+      "preco_ontem": 915.11,
+      "delta": -59.71,
+      "delta_pct": -6.52,
+      "data_checagem": "2026-07-05 21:35"
     }
   ]
 }
