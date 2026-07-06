@@ -1,9 +1,9 @@
 {
   "data_coleta": "06/07",
-  "hora_coleta": "09:35",
+  "hora_coleta": "15:26",
   "data_ontem": "05/07",
   "data_hoje": "06/07",
-  "total_quedas": 7,
+  "total_quedas": 14,
   "quedas": [
     {
       "marca": "Magcubic",
@@ -13,7 +13,7 @@
       "preco_ontem": 870.0,
       "delta": -322.92,
       "delta_pct": -37.12,
-      "data_checagem": "2026-07-06 09:35"
+      "data_checagem": "2026-07-06 15:26"
     },
     {
       "marca": "Vevshao",
@@ -23,7 +23,7 @@
       "preco_ontem": 2355.27,
       "delta": -395.99,
       "delta_pct": -16.81,
-      "data_checagem": "2026-07-06 09:35"
+      "data_checagem": "2026-07-06 15:26"
     },
     {
       "marca": "Progaga",
@@ -39,21 +39,21 @@
       "marca": "Progaga",
       "modelo": "PG610W",
       "slug": "progaga-pg610w",
-      "preco_atual": 847.72,
+      "preco_atual": 848.58,
       "preco_ontem": 973.74,
-      "delta": -126.02,
-      "delta_pct": -12.94,
-      "data_checagem": "2026-07-06 09:21"
+      "delta": -125.16,
+      "delta_pct": -12.85,
+      "data_checagem": "2026-07-06 15:11"
     },
     {
       "marca": "Progaga",
       "modelo": "PG610 ATV",
       "slug": "progaga-pg610-atv",
-      "preco_atual": 1014.48,
+      "preco_atual": 1015.48,
       "preco_ontem": 1107.03,
-      "delta": -92.55,
-      "delta_pct": -8.36,
-      "data_checagem": "2026-07-06 09:25"
+      "delta": -91.55,
+      "delta_pct": -8.27,
+      "data_checagem": "2026-07-06 15:16"
     }
   ]
 }
