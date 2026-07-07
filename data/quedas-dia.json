@@ -1,59 +1,59 @@
 {
-  "data_coleta": "06/07",
-  "hora_coleta": "21:35",
-  "data_ontem": "05/07",
-  "data_hoje": "06/07",
-  "total_quedas": 12,
+  "data_coleta": "07/07",
+  "hora_coleta": "00:35",
+  "data_ontem": "06/07",
+  "data_hoje": "07/07",
+  "total_quedas": 15,
   "quedas": [
     {
       "marca": "Magcubic",
-      "modelo": "HY350",
-      "slug": "magcubic-hy350",
-      "preco_atual": 547.08,
-      "preco_ontem": 870.0,
-      "delta": -322.92,
-      "delta_pct": -37.12,
-      "data_checagem": "2026-07-06 21:35"
+      "modelo": "HY450",
+      "slug": "magcubic-hy450",
+      "preco_atual": 631.72,
+      "preco_ontem": 777.08,
+      "delta": -145.36,
+      "delta_pct": -18.71,
+      "data_checagem": "2026-07-07 00:35"
     },
     {
-      "marca": "Vevshao",
-      "modelo": "V60",
-      "slug": "vevshao-v60",
-      "preco_atual": 1959.28,
-      "preco_ontem": 2355.27,
-      "delta": -395.99,
-      "delta_pct": -16.81,
-      "data_checagem": "2026-07-06 21:35"
+      "marca": "Magcubic",
+      "modelo": "HY310",
+      "slug": "magcubic-hy310",
+      "preco_atual": 306.0,
+      "preco_ontem": 373.15,
+      "delta": -67.15,
+      "delta_pct": -18.0,
+      "data_checagem": "2026-07-07 00:35"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD80W",
-      "slug": "thundeal-td80w",
-      "preco_atual": 388.84,
-      "preco_ontem": 398.07,
-      "delta": -9.23,
-      "delta_pct": -2.32,
-      "data_checagem": "2026-07-06 21:21"
+      "marca": "Progaga",
+      "modelo": "PG610W",
+      "slug": "progaga-pg610w",
+      "preco_atual": 848.58,
+      "preco_ontem": 974.71,
+      "delta": -126.13,
+      "delta_pct": -12.94,
+      "data_checagem": "2026-07-07 00:21"
     },
     {
-      "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 2270.0,
-      "preco_ontem": 2304.08,
-      "delta": -34.08,
-      "delta_pct": -1.48,
-      "data_checagem": "2026-07-06 21:35"
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 226.53,
+      "preco_ontem": 259.99,
+      "delta": -33.46,
+      "delta_pct": -12.87,
+      "data_checagem": "2026-07-07 00:20"
     },
     {
-      "marca": "FlixTone",
-      "modelo": "D10S",
-      "slug": "flixtone-d10s",
-      "preco_atual": 2069.54,
-      "preco_ontem": 2072.68,
-      "delta": -3.14,
-      "delta_pct": -0.15,
-      "data_checagem": "2026-07-06 21:25"
+      "marca": "Magcubic",
+      "modelo": "L018",
+      "slug": "magcubic-l018",
+      "preco_atual": 501.08,
+      "preco_ontem": 565.48,
+      "delta": -64.4,
+      "delta_pct": -11.39,
+      "data_checagem": "2026-07-07 00:35"
     }
   ]
 }
