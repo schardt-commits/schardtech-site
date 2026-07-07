@@ -1,49 +1,49 @@
 {
   "data_coleta": "07/07",
-  "hora_coleta": "09:34",
+  "hora_coleta": "15:24",
   "data_ontem": "06/07",
   "data_hoje": "07/07",
-  "total_quedas": 16,
+  "total_quedas": 38,
   "quedas": [
     {
       "marca": "Magcubic",
-      "modelo": "HY450",
-      "slug": "magcubic-hy450",
-      "preco_atual": 631.72,
-      "preco_ontem": 777.08,
-      "delta": -145.36,
-      "delta_pct": -18.71,
-      "data_checagem": "2026-07-07 09:34"
+      "modelo": "HY310",
+      "slug": "magcubic-hy310",
+      "preco_atual": 306.0,
+      "preco_ontem": 373.15,
+      "delta": -67.15,
+      "delta_pct": -18.0,
+      "data_checagem": "2026-07-07 15:24"
     },
     {
       "marca": "Progaga",
       "modelo": "PG610W",
       "slug": "progaga-pg610w",
-      "preco_atual": 848.58,
+      "preco_atual": 842.02,
       "preco_ontem": 974.71,
-      "delta": -126.13,
-      "delta_pct": -12.94,
-      "data_checagem": "2026-07-07 09:20"
+      "delta": -132.69,
+      "delta_pct": -13.61,
+      "data_checagem": "2026-07-07 15:10"
     },
     {
       "marca": "Progaga",
       "modelo": "PG310",
       "slug": "progaga-pg310",
-      "preco_atual": 226.53,
+      "preco_atual": 224.7,
       "preco_ontem": 259.99,
-      "delta": -33.46,
-      "delta_pct": -12.87,
-      "data_checagem": "2026-07-07 09:20"
+      "delta": -35.29,
+      "delta_pct": -13.57,
+      "data_checagem": "2026-07-07 15:09"
     },
     {
       "marca": "Magcubic",
-      "modelo": "L018",
-      "slug": "magcubic-l018",
-      "preco_atual": 501.08,
-      "preco_ontem": 565.48,
-      "delta": -64.4,
-      "delta_pct": -11.39,
-      "data_checagem": "2026-07-07 09:34"
+      "modelo": "HY450",
+      "slug": "magcubic-hy450",
+      "preco_atual": 676.8,
+      "preco_ontem": 777.08,
+      "delta": -100.28,
+      "delta_pct": -12.9,
+      "data_checagem": "2026-07-07 15:24"
     },
     {
       "marca": "Magcubic",
@@ -53,7 +53,7 @@
       "preco_ontem": 869.08,
       "delta": -92.0,
       "delta_pct": -10.59,
-      "data_checagem": "2026-07-07 09:34"
+      "data_checagem": "2026-07-07 15:24"
     }
   ]
 }
