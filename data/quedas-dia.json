@@ -1,9 +1,9 @@
 {
   "data_coleta": "07/07",
-  "hora_coleta": "00:35",
+  "hora_coleta": "09:34",
   "data_ontem": "06/07",
   "data_hoje": "07/07",
-  "total_quedas": 15,
+  "total_quedas": 16,
   "quedas": [
     {
       "marca": "Magcubic",
@@ -13,17 +13,7 @@
       "preco_ontem": 777.08,
       "delta": -145.36,
       "delta_pct": -18.71,
-      "data_checagem": "2026-07-07 00:35"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY310",
-      "slug": "magcubic-hy310",
-      "preco_atual": 306.0,
-      "preco_ontem": 373.15,
-      "delta": -67.15,
-      "delta_pct": -18.0,
-      "data_checagem": "2026-07-07 00:35"
+      "data_checagem": "2026-07-07 09:34"
     },
     {
       "marca": "Progaga",
@@ -33,7 +23,7 @@
       "preco_ontem": 974.71,
       "delta": -126.13,
       "delta_pct": -12.94,
-      "data_checagem": "2026-07-07 00:21"
+      "data_checagem": "2026-07-07 09:20"
     },
     {
       "marca": "Progaga",
@@ -43,7 +33,7 @@
       "preco_ontem": 259.99,
       "delta": -33.46,
       "delta_pct": -12.87,
-      "data_checagem": "2026-07-07 00:20"
+      "data_checagem": "2026-07-07 09:20"
     },
     {
       "marca": "Magcubic",
@@ -53,7 +43,17 @@
       "preco_ontem": 565.48,
       "delta": -64.4,
       "delta_pct": -11.39,
-      "data_checagem": "2026-07-07 00:35"
+      "data_checagem": "2026-07-07 09:34"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY450C",
+      "slug": "magcubic-hy450c",
+      "preco_atual": 777.08,
+      "preco_ontem": 869.08,
+      "delta": -92.0,
+      "delta_pct": -10.59,
+      "data_checagem": "2026-07-07 09:34"
     }
   ]
 }
