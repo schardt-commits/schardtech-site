@@ -1,39 +1,19 @@
 {
   "data_coleta": "07/07",
-  "hora_coleta": "15:24",
+  "hora_coleta": "21:34",
   "data_ontem": "06/07",
   "data_hoje": "07/07",
-  "total_quedas": 38,
+  "total_quedas": 37,
   "quedas": [
     {
       "marca": "Magcubic",
       "modelo": "HY310",
       "slug": "magcubic-hy310",
-      "preco_atual": 306.0,
+      "preco_atual": 314.5,
       "preco_ontem": 373.15,
-      "delta": -67.15,
-      "delta_pct": -18.0,
-      "data_checagem": "2026-07-07 15:24"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 842.02,
-      "preco_ontem": 974.71,
-      "delta": -132.69,
-      "delta_pct": -13.61,
-      "data_checagem": "2026-07-07 15:10"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 224.7,
-      "preco_ontem": 259.99,
-      "delta": -35.29,
-      "delta_pct": -13.57,
-      "data_checagem": "2026-07-07 15:09"
+      "delta": -58.65,
+      "delta_pct": -15.72,
+      "data_checagem": "2026-07-07 21:34"
     },
     {
       "marca": "Magcubic",
@@ -43,7 +23,7 @@
       "preco_ontem": 777.08,
       "delta": -100.28,
       "delta_pct": -12.9,
-      "data_checagem": "2026-07-07 15:24"
+      "data_checagem": "2026-07-07 21:34"
     },
     {
       "marca": "Magcubic",
@@ -53,7 +33,27 @@
       "preco_ontem": 869.08,
       "delta": -92.0,
       "delta_pct": -10.59,
-      "data_checagem": "2026-07-07 15:24"
+      "data_checagem": "2026-07-07 21:34"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY310X",
+      "slug": "magcubic-hy310x",
+      "preco_atual": 374.0,
+      "preco_ontem": 415.65,
+      "delta": -41.65,
+      "delta_pct": -10.02,
+      "data_checagem": "2026-07-07 21:34"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 385.88,
+      "preco_ontem": 424.9,
+      "delta": -39.02,
+      "delta_pct": -9.18,
+      "data_checagem": "2026-07-07 21:20"
     }
   ]
 }
