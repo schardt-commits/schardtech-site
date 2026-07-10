@@ -1,39 +1,49 @@
 {
-  "data_coleta": "09/07",
-  "hora_coleta": "21:26",
-  "data_ontem": "08/07",
-  "data_hoje": "09/07",
-  "total_quedas": 3,
+  "data_coleta": "10/07",
+  "hora_coleta": "00:34",
+  "data_ontem": "09/07",
+  "data_hoje": "10/07",
+  "total_quedas": 4,
   "quedas": [
     {
-      "marca": "Wanbo",
-      "modelo": "Vali 1",
-      "slug": "wanbo-vali-1",
-      "preco_atual": 2092.0,
-      "preco_ontem": 2199.0,
-      "delta": -107.0,
-      "delta_pct": -4.87,
-      "data_checagem": "2026-07-09 21:26"
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 270.68,
+      "preco_ontem": 310.04,
+      "delta": -39.36,
+      "delta_pct": -12.7,
+      "data_checagem": "2026-07-10 00:20"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD95W",
-      "slug": "thundeal-td95w",
-      "preco_atual": 708.42,
-      "preco_ontem": 734.8,
-      "delta": -26.38,
-      "delta_pct": -3.59,
-      "data_checagem": "2026-07-09 21:21"
+      "marca": "Progaga",
+      "modelo": "PG610W",
+      "slug": "progaga-pg610w",
+      "preco_atual": 946.95,
+      "preco_ontem": 1075.51,
+      "delta": -128.56,
+      "delta_pct": -11.95,
+      "data_checagem": "2026-07-10 00:20"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 371.92,
-      "preco_ontem": 380.01,
-      "delta": -8.09,
-      "delta_pct": -2.13,
-      "data_checagem": "2026-07-09 21:20"
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 1135.61,
+      "preco_ontem": 1231.34,
+      "delta": -95.73,
+      "delta_pct": -7.77,
+      "data_checagem": "2026-07-10 00:25"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1095",
+      "slug": "bettdow-ac1095",
+      "preco_atual": 2616.16,
+      "preco_ontem": 2617.08,
+      "delta": -0.92,
+      "delta_pct": -0.04,
+      "data_checagem": "2026-07-10 00:34"
     }
   ]
 }
