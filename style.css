@@ -89,7 +89,9 @@ button { cursor: pointer; font-family: inherit; }
   align-items: center;
   justify-content: space-between;
 }
-.logo-link { display: flex; align-items: center; }
+/* flex-shrink:0 — sem isso a logo é espremida (aspecto distorcido) quando o
+   header enche: busca global + 8 itens de menu roubavam a largura dela. */
+.logo-link { display: flex; align-items: center; flex-shrink: 0; }
 .logo-img { height: 50px; width: auto; }
 #mainNav {
   display: flex;
