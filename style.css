@@ -94,7 +94,10 @@ button { cursor: pointer; font-family: inherit; }
 #mainNav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  /* Gap fluido: com a busca global no header e 8 itens de menu, o gap fixo de
+     40px fazia os rótulos longos ("Encontre seu projetor") quebrarem em 2 e 3
+     linhas em qualquer largura de desktop. */
+  gap: clamp(12px, 1.7vw, 40px);
 }
 .nav-link {
   font-size: 0.875rem;
@@ -102,6 +105,7 @@ button { cursor: pointer; font-family: inherit; }
   color: var(--text-muted);
   letter-spacing: 0.01em;
   position: relative;
+  white-space: nowrap;
   transition: color var(--transition);
 }
 .nav-link::after {
@@ -1229,9 +1233,12 @@ input:focus-visible,
   .sobre-inner { grid-template-columns: 1fr; gap: 48px; }
   .ansi-layout { grid-template-columns: 1fr; }
 }
-@media (max-width: 768px) {
+/* Header: logo + busca global + 8 itens de menu só cabem numa linha a partir de
+   ~1055px. O hambúrguer entra antes do breakpoint geral de mobile (768px),
+   senão o nav estoura o header entre 769px e 1055px. */
+@media (max-width: 1080px) {
   #mainNav { display: none; }
-  .mobile-menu-btn { display: flex; }
+  .mobile-menu-btn { display: flex; position: relative; z-index: 1600; }
   #mainNav.open {
     display: flex;
     flex-direction: column;
@@ -1252,12 +1259,12 @@ input:focus-visible,
   }
   #mainNav.open .nav-link { font-size: 1.4rem; font-weight: 600; color: var(--text); }
   #mainNav.open .nav-link::after { display: none; }
-  /* Botão do hambúrguer fica acima do menu pra poder fechar */
-  .mobile-menu-btn { position: relative; z-index: 1600; }
   .mobile-menu-btn.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
   .mobile-menu-btn.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   body.menu-open { overflow: hidden; }
+}
+@media (max-width: 768px) {
   .projectors-grid { grid-template-columns: 1fr; }
   .videos-grid { grid-template-columns: 1fr; }
   .authority-grid { flex-direction: column; gap: 0; }
