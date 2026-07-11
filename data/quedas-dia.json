@@ -1,59 +1,59 @@
 {
-  "data_coleta": "10/07",
-  "hora_coleta": "21:25",
-  "data_ontem": "09/07",
-  "data_hoje": "10/07",
-  "total_quedas": 23,
+  "data_coleta": "11/07",
+  "hora_coleta": "09:34",
+  "data_ontem": "10/07",
+  "data_hoje": "11/07",
+  "total_quedas": 7,
   "quedas": [
     {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 268.39,
-      "preco_ontem": 310.04,
-      "delta": -41.65,
-      "delta_pct": -13.43,
-      "data_checagem": "2026-07-10 21:20"
+      "marca": "Magcubic",
+      "modelo": "HY450",
+      "slug": "magcubic-hy450",
+      "preco_atual": 676.8,
+      "preco_ontem": 777.08,
+      "delta": -100.28,
+      "delta_pct": -12.9,
+      "data_checagem": "2026-07-11 09:34"
     },
     {
-      "marca": "Horlat",
-      "modelo": "T9N",
-      "slug": "horlat-t9n",
-      "preco_atual": 823.58,
-      "preco_ontem": 943.43,
-      "delta": -119.85,
-      "delta_pct": -12.7,
-      "data_checagem": "2026-07-10 21:16"
+      "marca": "Magcubic",
+      "modelo": "L018",
+      "slug": "magcubic-l018",
+      "preco_atual": 538.8,
+      "preco_ontem": 593.08,
+      "delta": -54.28,
+      "delta_pct": -9.15,
+      "data_checagem": "2026-07-11 09:34"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 938.93,
-      "preco_ontem": 1075.51,
-      "delta": -136.58,
-      "delta_pct": -12.7,
-      "data_checagem": "2026-07-10 21:20"
+      "marca": "Magcubic",
+      "modelo": "HY450C",
+      "slug": "magcubic-hy450c",
+      "preco_atual": 804.68,
+      "preco_ontem": 869.08,
+      "delta": -64.4,
+      "delta_pct": -7.41,
+      "data_checagem": "2026-07-11 09:34"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD80W",
-      "slug": "thundeal-td80w",
-      "preco_atual": 366.84,
-      "preco_ontem": 408.6,
-      "delta": -41.76,
-      "delta_pct": -10.22,
-      "data_checagem": "2026-07-10 21:21"
+      "marca": "Magcubic",
+      "modelo": "HY310X",
+      "slug": "magcubic-hy310x",
+      "preco_atual": 394.4,
+      "preco_ontem": 415.65,
+      "delta": -21.25,
+      "delta_pct": -5.11,
+      "data_checagem": "2026-07-11 09:34"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 1125.99,
-      "preco_ontem": 1231.34,
-      "delta": -105.35,
-      "delta_pct": -8.56,
-      "data_checagem": "2026-07-10 21:25"
+      "marca": "Bettdow",
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 502.0,
+      "preco_ontem": 511.2,
+      "delta": -9.2,
+      "delta_pct": -1.8,
+      "data_checagem": "2026-07-11 09:34"
     }
   ]
 }
