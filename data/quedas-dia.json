@@ -1,9 +1,9 @@
 {
   "data_coleta": "10/07",
-  "hora_coleta": "15:15",
+  "hora_coleta": "21:25",
   "data_ontem": "09/07",
   "data_hoje": "10/07",
-  "total_quedas": 24,
+  "total_quedas": 23,
   "quedas": [
     {
       "marca": "Progaga",
@@ -13,7 +13,17 @@
       "preco_ontem": 310.04,
       "delta": -41.65,
       "delta_pct": -13.43,
-      "data_checagem": "2026-07-10 15:10"
+      "data_checagem": "2026-07-10 21:20"
+    },
+    {
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 823.58,
+      "preco_ontem": 943.43,
+      "delta": -119.85,
+      "delta_pct": -12.7,
+      "data_checagem": "2026-07-10 21:16"
     },
     {
       "marca": "Progaga",
@@ -23,7 +33,17 @@
       "preco_ontem": 1075.51,
       "delta": -136.58,
       "delta_pct": -12.7,
-      "data_checagem": "2026-07-10 15:10"
+      "data_checagem": "2026-07-10 21:20"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80W",
+      "slug": "thundeal-td80w",
+      "preco_atual": 366.84,
+      "preco_ontem": 408.6,
+      "delta": -41.76,
+      "delta_pct": -10.22,
+      "data_checagem": "2026-07-10 21:21"
     },
     {
       "marca": "Progaga",
@@ -33,27 +53,7 @@
       "preco_ontem": 1231.34,
       "delta": -105.35,
       "delta_pct": -8.56,
-      "data_checagem": "2026-07-10 15:15"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 855.7,
-      "preco_ontem": 934.69,
-      "delta": -78.99,
-      "delta_pct": -8.45,
-      "data_checagem": "2026-07-10 15:15"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1465.31,
-      "preco_ontem": 1587.48,
-      "delta": -122.17,
-      "delta_pct": -7.7,
-      "data_checagem": "2026-07-10 15:12"
+      "data_checagem": "2026-07-10 21:25"
     }
   ]
 }
