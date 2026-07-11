@@ -1705,8 +1705,8 @@ window.PROJETORES_DATA = [
     "ml_url": "",
     "shopee_url": "",
     "amazon_url": "",
-    "ram_gb": null,
-    "armazenamento_gb": null,
+    "ram_gb": 2,
+    "armazenamento_gb": 16,
     "status": "sem_estoque_br",
     "link_importado": "",
     "bolsa": ""
