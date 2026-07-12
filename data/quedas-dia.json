@@ -1,9 +1,9 @@
 {
   "data_coleta": "11/07",
-  "hora_coleta": "15:25",
+  "hora_coleta": "21:34",
   "data_ontem": "10/07",
   "data_hoje": "11/07",
-  "total_quedas": 7,
+  "total_quedas": 5,
   "quedas": [
     {
       "marca": "Magcubic",
@@ -13,17 +13,7 @@
       "preco_ontem": 777.08,
       "delta": -100.28,
       "delta_pct": -12.9,
-      "data_checagem": "2026-07-11 15:25"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "L018",
-      "slug": "magcubic-l018",
-      "preco_atual": 538.8,
-      "preco_ontem": 593.08,
-      "delta": -54.28,
-      "delta_pct": -9.15,
-      "data_checagem": "2026-07-11 15:25"
+      "data_checagem": "2026-07-11 21:34"
     },
     {
       "marca": "Magcubic",
@@ -33,17 +23,7 @@
       "preco_ontem": 869.08,
       "delta": -64.4,
       "delta_pct": -7.41,
-      "data_checagem": "2026-07-11 15:25"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY310X",
-      "slug": "magcubic-hy310x",
-      "preco_atual": 394.4,
-      "preco_ontem": 415.65,
-      "delta": -21.25,
-      "delta_pct": -5.11,
-      "data_checagem": "2026-07-11 15:25"
+      "data_checagem": "2026-07-11 21:34"
     },
     {
       "marca": "Bettdow",
@@ -53,7 +33,27 @@
       "preco_ontem": 511.2,
       "delta": -9.2,
       "delta_pct": -1.8,
-      "data_checagem": "2026-07-11 15:25"
+      "data_checagem": "2026-07-11 21:34"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1061",
+      "slug": "bettdow-ac1061",
+      "preco_atual": 1660.28,
+      "preco_ontem": 1687.88,
+      "delta": -27.6,
+      "delta_pct": -1.64,
+      "data_checagem": "2026-07-11 21:34"
+    },
+    {
+      "marca": "Wanbo",
+      "modelo": "T2 Ultra",
+      "slug": "wanbo-t2-ultra",
+      "preco_atual": 1294.12,
+      "preco_ontem": 1294.73,
+      "delta": -0.61,
+      "delta_pct": -0.05,
+      "data_checagem": "2026-07-11 21:34"
     }
   ]
 }
