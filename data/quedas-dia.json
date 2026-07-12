@@ -1,59 +1,39 @@
 {
-  "data_coleta": "11/07",
-  "hora_coleta": "21:34",
-  "data_ontem": "10/07",
-  "data_hoje": "11/07",
-  "total_quedas": 5,
+  "data_coleta": "12/07",
+  "hora_coleta": "00:34",
+  "data_ontem": "11/07",
+  "data_hoje": "12/07",
+  "total_quedas": 3,
   "quedas": [
     {
       "marca": "Magcubic",
-      "modelo": "HY450",
-      "slug": "magcubic-hy450",
-      "preco_atual": 676.8,
-      "preco_ontem": 777.08,
-      "delta": -100.28,
-      "delta_pct": -12.9,
-      "data_checagem": "2026-07-11 21:34"
+      "modelo": "L018",
+      "slug": "magcubic-l018",
+      "preco_atual": 538.8,
+      "preco_ontem": 593.08,
+      "delta": -54.28,
+      "delta_pct": -9.15,
+      "data_checagem": "2026-07-12 00:34"
     },
     {
       "marca": "Magcubic",
-      "modelo": "HY450C",
-      "slug": "magcubic-hy450c",
-      "preco_atual": 804.68,
-      "preco_ontem": 869.08,
-      "delta": -64.4,
-      "delta_pct": -7.41,
-      "data_checagem": "2026-07-11 21:34"
+      "modelo": "HY310X",
+      "slug": "magcubic-hy310x",
+      "preco_atual": 394.4,
+      "preco_ontem": 415.65,
+      "delta": -21.25,
+      "delta_pct": -5.11,
+      "data_checagem": "2026-07-12 00:34"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1066",
-      "slug": "bettdow-ac1066",
-      "preco_atual": 502.0,
-      "preco_ontem": 511.2,
-      "delta": -9.2,
-      "delta_pct": -1.8,
-      "data_checagem": "2026-07-11 21:34"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1061",
-      "slug": "bettdow-ac1061",
-      "preco_atual": 1660.28,
-      "preco_ontem": 1687.88,
-      "delta": -27.6,
-      "delta_pct": -1.64,
-      "data_checagem": "2026-07-11 21:34"
-    },
-    {
-      "marca": "Wanbo",
-      "modelo": "T2 Ultra",
-      "slug": "wanbo-t2-ultra",
-      "preco_atual": 1294.12,
-      "preco_ontem": 1294.73,
-      "delta": -0.61,
-      "delta_pct": -0.05,
-      "data_checagem": "2026-07-11 21:34"
+      "marca": "Progaga",
+      "modelo": "PG610W",
+      "slug": "progaga-pg610w",
+      "preco_atual": 938.93,
+      "preco_ontem": 946.29,
+      "delta": -7.36,
+      "delta_pct": -0.78,
+      "data_checagem": "2026-07-12 00:20"
     }
   ]
 }
