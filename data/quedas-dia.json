@@ -1,9 +1,9 @@
 {
   "data_coleta": "12/07",
-  "hora_coleta": "15:25",
+  "hora_coleta": "21:34",
   "data_ontem": "11/07",
   "data_hoje": "12/07",
-  "total_quedas": 13,
+  "total_quedas": 14,
   "quedas": [
     {
       "marca": "Byintek",
@@ -13,17 +13,7 @@
       "preco_ontem": 1606.71,
       "delta": -927.15,
       "delta_pct": -57.7,
-      "data_checagem": "2026-07-12 15:25"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "L018",
-      "slug": "magcubic-l018",
-      "preco_atual": 538.8,
-      "preco_ontem": 593.08,
-      "delta": -54.28,
-      "delta_pct": -9.15,
-      "data_checagem": "2026-07-12 15:25"
+      "data_checagem": "2026-07-12 21:34"
     },
     {
       "marca": "Thundeal",
@@ -33,7 +23,7 @@
       "preco_ontem": 1330.7,
       "delta": -83.14,
       "delta_pct": -6.25,
-      "data_checagem": "2026-07-12 15:16"
+      "data_checagem": "2026-07-12 21:25"
     },
     {
       "marca": "Thundeal",
@@ -43,17 +33,27 @@
       "preco_ontem": 1802.13,
       "delta": -106.82,
       "delta_pct": -5.93,
-      "data_checagem": "2026-07-12 15:13"
+      "data_checagem": "2026-07-12 21:21"
     },
     {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 1053.43,
-      "preco_ontem": 1119.1,
-      "delta": -65.67,
-      "delta_pct": -5.87,
-      "data_checagem": "2026-07-12 15:03"
+      "marca": "Thundeal",
+      "modelo": "TD98PRO ATV",
+      "slug": "thundeal-td98pro-atv",
+      "preco_atual": 1820.31,
+      "preco_ontem": 1933.31,
+      "delta": -113.0,
+      "delta_pct": -5.84,
+      "data_checagem": "2026-07-12 21:22"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 1072.92,
+      "preco_ontem": 1138.21,
+      "delta": -65.29,
+      "delta_pct": -5.74,
+      "data_checagem": "2026-07-12 21:34"
     }
   ]
 }
