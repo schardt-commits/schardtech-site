@@ -1,9 +1,9 @@
 {
   "data_coleta": "13/07",
-  "hora_coleta": "11:52",
+  "hora_coleta": "15:24",
   "data_ontem": "12/07",
   "data_hoje": "13/07",
-  "total_quedas": 27,
+  "total_quedas": 26,
   "quedas": [
     {
       "marca": "Vevshao",
@@ -13,7 +13,7 @@
       "preco_ontem": 2955.88,
       "delta": -1448.37,
       "delta_pct": -49.0,
-      "data_checagem": "2026-07-13 11:52"
+      "data_checagem": "2026-07-13 15:14"
     },
     {
       "marca": "Thundeal",
@@ -23,7 +23,7 @@
       "preco_ontem": 663.42,
       "delta": -288.02,
       "delta_pct": -43.41,
-      "data_checagem": "2026-07-13 11:48"
+      "data_checagem": "2026-07-13 15:10"
     },
     {
       "marca": "Thundeal",
@@ -33,17 +33,7 @@
       "preco_ontem": 873.03,
       "delta": -249.78,
       "delta_pct": -28.61,
-      "data_checagem": "2026-07-13 11:49"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 225.16,
-      "preco_ontem": 307.35,
-      "delta": -82.19,
-      "delta_pct": -26.74,
-      "data_checagem": "2026-07-13 11:48"
+      "data_checagem": "2026-07-13 15:11"
     },
     {
       "marca": "FlixTone",
@@ -53,7 +43,17 @@
       "preco_ontem": 1377.47,
       "delta": -356.37,
       "delta_pct": -25.87,
-      "data_checagem": "2026-07-13 11:42"
+      "data_checagem": "2026-07-13 15:05"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 846.53,
+      "preco_ontem": 1072.92,
+      "delta": -226.39,
+      "delta_pct": -21.1,
+      "data_checagem": "2026-07-13 15:24"
     }
   ]
 }
