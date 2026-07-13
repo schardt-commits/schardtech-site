@@ -44,12 +44,14 @@
   "url": "https://schardtech.com.br/projetor/magcubic-x7.html",
   "offers": {
     "@type": "Offer",
-    "url": "https://schardtech.com.br/projetor/magcubic-x7.html",
+    "url": "https://meli.la/2MwEpT5",
     "priceCurrency": "BRL",
-    "availability": "https://schema.org/OutOfStock",
+    "price": "1090.00",
+    "priceValidUntil": "2026-12-31",
+    "availability": "https://schema.org/InStock",
     "seller": {
       "@type": "Organization",
-      "name": "Shopee"
+      "name": "Mercado Livre"
     }
   }
 }
@@ -101,7 +103,7 @@
           <span class="proj-badge">Input lag 75ms</span>
           <span class="proj-badge">Autofoco (câmera)</span>
           <span class="proj-badge">Wi-Fi + BT</span>
-          <span class="proj-badge">Sem estoque</span>
+          <span class="proj-badge">Estoque nacional</span>
         </div>
 
         <div class="proj-hero-grid">
@@ -110,16 +112,19 @@
           </div>
 
           <div class="proj-price-card" data-marca="Magcubic" data-modelo="X7">
-            <div class="proj-price-label">Status</div>
+            <div class="proj-price-label">Melhor preço hoje</div>
             <div>
-              <span class="proj-price-value" id="projPriceValue">Sem estoque</span>
+              <span class="proj-price-value" id="projPriceValue">R$ 1.090<span class="proj-price-cents">,00</span></span>
             </div>
             <div class="proj-price-meta" id="projPriceMeta">
-              Anúncio sem estoque agora, costuma voltar
+              Verificado em 13/07/2026 · Mercado Livre
             </div>
 
             <div class="proj-store-btns" id="projStoreBtns">
-
+              <a href="https://meli.la/2MwEpT5" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn store-ml">
+                <span class="store-name"><img src="../logo ml2.png" alt="" class="store-logo">Mercado Livre</span>
+                <span class="store-price">Ver preço</span>
+              </a>
             </div>
             <div id="projCupomSlot"></div>
             <p style="font-size:0.74rem;color:var(--text-muted);margin-top:10px;line-height:1.5;">
@@ -173,7 +178,35 @@
       </div>
     </section>
 
+    <section class="proj-section">
+      <div class="container">
+        <h2 class="section-title">Histórico de preço</h2>
+        <p class="section-sub">Preços coletados automaticamente do AliExpress.</p>
 
+        <div class="price-chart-wrap">
+          <div id="priceStatus" class="price-status neutral">
+            <span class="ps-icon">🔵</span>
+            <div>
+              <strong>Histórico recente</strong>
+              <span class="ps-sub">AliExpress em R$ 1.090,00. Menor preço já registrado: R$ 1.090,00.</span>
+            </div>
+          </div>
+
+          <div class="price-filters" role="tablist" aria-label="Filtrar marketplace">
+            <button type="button" class="filter-chip active" data-filter="todos" aria-pressed="true">Todos</button>
+            <button type="button" class="filter-chip active" data-filter="aliexpress" aria-pressed="true">Mercado Livre</button>
+          </div>
+
+          <div class="chart-canvas-wrap"><canvas id="priceChart"></canvas></div>
+
+          <div class="price-stats-grid">
+            <div class="price-stat min"><div class="label">Mínimo histórico</div><div class="val">R$ 1.090,00</div></div>
+            <div class="price-stat"><div class="label">Preço médio</div><div class="val">R$ 1.090,00</div></div>
+            <div class="price-stat max"><div class="label">Máximo histórico</div><div class="val">R$ 1.090,00</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="proj-section">
       <div class="container">
@@ -269,7 +302,134 @@
     </div>
   </footer>
 
+  <script>
+    // Header scroll + mobile menu controlados via ../script.js (initHeader + initMobileMenu).
 
+    const PRICE_HISTORY = {
+      labels: ["13/07"],
+      aliexpress: [1090.0],
+      menor: 1090.0
+    };
+
+    const fmtBRL = (v) => v == null ? '—' : 'R$ ' + v.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
+    function buildDataset(label, color, data, hidden = false) {
+      return {
+        label, data,
+        borderColor: color, backgroundColor: color + '22',
+        pointBackgroundColor: color, pointBorderColor: 'rgba(11,11,11,0.6)',
+        pointBorderWidth: 2, pointRadius: 6, pointHoverRadius: 9, pointHoverBorderWidth: 2,
+        borderWidth: 2.5, tension: 0.25, spanGaps: true, hidden
+      };
+    }
+
+    const minLinePlugin = {
+      id: 'minLine',
+      afterDatasetsDraw(chart) {
+        const { ctx, chartArea, scales } = chart;
+        const y = scales.y.getPixelForValue(PRICE_HISTORY.menor);
+        if (y < chartArea.top || y > chartArea.bottom) return;
+        ctx.save();
+        ctx.setLineDash([4, 4]);
+        ctx.strokeStyle = 'rgba(91,217,160,0.55)';
+        ctx.lineWidth = 1.2;
+        ctx.beginPath();
+        ctx.moveTo(chartArea.left, y);
+        ctx.lineTo(chartArea.right, y);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = 'rgba(91,217,160,0.95)';
+        ctx.font = '600 10px Inter, sans-serif';
+        ctx.textAlign = 'right';
+        ctx.fillText('▼ menor já visto', chartArea.right - 6, y - 6);
+        ctx.restore();
+      }
+    };
+
+    function initPriceChart() {
+      if (typeof Chart === 'undefined') { setTimeout(initPriceChart, 100); return; }
+      Chart.defaults.color = 'rgba(234,234,234,0.55)';
+      Chart.defaults.font.family = 'Inter, -apple-system, sans-serif';
+      Chart.defaults.font.size = 11;
+      const ctx = document.getElementById('priceChart').getContext('2d');
+      const chart = new Chart(ctx, {
+        type: 'line',
+        data: { labels: PRICE_HISTORY.labels, datasets: [
+          buildDataset('Mercado Livre', '#8FD3FF', PRICE_HISTORY.aliexpress)
+        ]},
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          interaction: { mode: 'nearest', intersect: false },
+          animation: { duration: 900, easing: 'easeOutCubic' },
+          layout: { padding: { top: 20, right: 10, left: 0, bottom: 0 } },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: 'rgba(20,24,43,0.95)', titleColor: '#EAEAEA',
+              titleFont: { weight: '600', size: 12 }, bodyColor: '#EAEAEA', bodyFont: { size: 12 },
+              padding: 12, borderColor: 'rgba(79,163,199,0.42)', borderWidth: 1,
+              displayColors: true, boxPadding: 4,
+              callbacks: {
+                title: (items) => 'Dia ' + items[0].label + '/2026',
+                label: (item) => {
+                  if (item.parsed.y == null) return null;
+                  const loja = item.dataset.label;
+                  const valor = fmtBRL(item.parsed.y);
+                  const diff = item.parsed.y - PRICE_HISTORY.menor;
+                  if (diff <= 0.5) return `${loja}: ${valor}  · 🟢 menor preço`;
+                  return `${loja}: ${valor}  · ${fmtBRL(diff)} acima do menor`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: { grid: { color: 'rgba(234,234,234,0.04)', drawBorder: false }, ticks: { color: 'rgba(234,234,234,0.55)' } },
+            y: {
+              grid: { color: 'rgba(234,234,234,0.05)', drawBorder: false },
+              ticks: { color: 'rgba(234,234,234,0.55)', callback: (v) => 'R$ ' + v.toLocaleString('pt-BR') },
+              suggestedMin: PRICE_HISTORY.menor - 54,
+              suggestedMax: 1177
+            }
+          }
+        },
+        plugins: [minLinePlugin]
+      });
+
+      const chips = document.querySelectorAll('.filter-chip');
+      const updateFilters = () => {
+        const todos = document.querySelector('.filter-chip[data-filter="todos"]');
+        const ali = document.querySelector('.filter-chip[data-filter="aliexpress"]');
+        const showAli = todos.classList.contains('active') || ali.classList.contains('active');
+        chart.setDatasetVisibility(0, showAli);
+        chart.update();
+      };
+
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          const f = chip.dataset.filter;
+          if (f === 'todos') {
+            const wasActive = chip.classList.contains('active');
+            document.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', !wasActive));
+            if (!wasActive) chip.classList.add('active');
+          } else {
+            chip.classList.toggle('active');
+            const aliActive = document.querySelector('.filter-chip[data-filter="aliexpress"]').classList.contains('active');
+            const todos = document.querySelector('.filter-chip[data-filter="todos"]');
+            if (!aliActive) {
+              todos.classList.add('active');
+              document.querySelectorAll('.filter-chip').forEach(c => c.classList.add('active'));
+            } else {
+              todos.classList.toggle('active', aliActive);
+            }
+          }
+          chips.forEach(c => c.setAttribute('aria-pressed', c.classList.contains('active')));
+          updateFilters();
+        });
+      });
+    }
+
+    window.__initStaticChart = initPriceChart;  // chamado pelo projetor-page.js quando o gráfico entra na viewport (lazy 10/06/2026)
+  </script>
   <!-- overlay-patched-2026-05-14 -->
   <!-- Header mobile menu + busca global de projetores -->
   <script src="../script.js" defer></script>
