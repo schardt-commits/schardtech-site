@@ -14,10 +14,10 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <title>Sobre a SchardTech — Como Testamos Projetores | SchardTech</title>
+  <title>Sobre a SchardTech · Como Testamos Projetores | SchardTech</title>
   <meta name="description" content="Quem está por trás do schardtech.com.br: como medimos ANSI Lumens com luxímetro, como o site se sustenta com links de afiliado e como falar com a gente.">
   <link rel="canonical" href="https://schardtech.com.br/sobre.html">
-  <meta property="og:title" content="Sobre a SchardTech — Como Testamos Projetores">
+  <meta property="og:title" content="Sobre a SchardTech · Como Testamos Projetores">
   <meta property="og:description" content="ANSI Lumens medido com luxímetro, input lag aferido e specs verificadas em todos os projetores do site.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://schardtech.com.br/sobre.html">
@@ -33,70 +33,82 @@
     "isPartOf": { "@type": "WebSite", "name": "SchardTech", "url": "https://schardtech.com.br" }
   }
   </script>
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="v2.css">
   <style>
-    .page-hero { padding: 140px 0 24px; position: relative; text-align: center; }
-    .page-hero::before { content:''; position:absolute; inset:0; background: radial-gradient(60% 70% at 50% 0%, rgba(79,163,199,0.16), transparent 70%); pointer-events:none; }
-    .page-hero .container { position: relative; }
-    .page-hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; }
-    .page-hero p { color: var(--text-muted); max-width: 640px; margin: 16px auto 0; line-height: 1.6; }
-    .page-body { padding: 28px 0 90px; }
-    .page-body .container { max-width: 760px; }
-    .page-body h2 { font-size: 1.45rem; font-weight: 800; letter-spacing: -0.02em; margin: 40px 0 14px; }
-    .page-body p, .page-body li { color: var(--text-muted); line-height: 1.75; margin-bottom: 14px; font-size: 0.97rem; }
+    .page-body { border-top: 0; padding: 12px 0 90px; }
+    .page-body .wrap { max-width: 780px; }
+    .page-body h2 { font-size: 24px; margin: 40px 0 14px; }
+    .page-body p, .page-body li { color: var(--txt-2); line-height: 1.75; margin-bottom: 14px; font-size: 15.5px; }
     .page-body ul { padding-left: 22px; margin-bottom: 14px; }
     .page-body li { margin-bottom: 8px; }
-    .page-body a { color: var(--accent); }
-    .page-body strong { color: var(--text); }
-    .contact-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 28px; margin-top: 28px; }
+    .page-body a { color: var(--brand); }
+    .page-body strong { color: var(--txt); }
+    .contact-card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px 28px; margin-top: 28px; }
     .contact-card h2 { margin-top: 0; }
   </style>
 </head>
 <body>
   <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
-  <header id="header">
-    <div class="container header-inner">
-      <a href="/" class="logo-link">
-        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img" width="402" height="216">
-      </a>
-      <nav id="mainNav">
-        <a href="projetores.html" class="nav-link">Projetores</a>
-        <a href="comparar.html" class="nav-link">Comparativo</a>
-        <a href="qual-projetor.html" class="nav-link">Encontre seu projetor</a>
-        <a href="precos.html" class="nav-link">Preços ao Vivo</a>
-        <a href="ranking.html" class="nav-link">Ranking</a>
-        <a href="acessorios-projetores.html" class="nav-link">Acessórios</a>
-        <a href="/#calculadora" class="nav-link">Calculadora</a>
-        <a href="sobre.html" class="nav-link" style="color:var(--primary);font-weight:600;">Sobre</a>
+
+  <div class="quedas" id="barra-quedas"></div>
+
+  <header class="topo">
+    <div class="wrap header-in">
+      <a class="logo" href="/"><img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216"></a>
+      <div class="busca">
+        <span class="lupa" aria-hidden="true"></span>
+        <input id="busca-input" type="search" placeholder="Buscar projetor..." autocomplete="off" aria-label="Buscar projetor">
+        <div class="busca-drop" id="busca-drop" role="listbox"></div>
+      </div>
+      <nav class="principal" aria-label="Navegação principal">
+        <a href="projetores.html">Projetores</a>
+        <a href="comparar.html">Comparativo</a>
+        <a href="qual-projetor.html">Encontre seu projetor</a>
+        <a class="destaque" href="precos.html">Preços ao Vivo</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="acessorios-projetores.html">Acessórios</a>
+        <a href="calculadora-ansi.html">Calculadora</a>
+        <a class="atual" href="sobre.html">Sobre</a>
       </nav>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
+  <div class="menu-mobile" id="menu-mobile">
+    <button class="fechar" id="menu-fechar">Fechar X</button>
+    <a href="projetores.html">Projetores</a>
+    <a href="comparar.html">Comparativo</a>
+    <a href="qual-projetor.html">Encontre seu projetor</a>
+    <a href="precos.html">Preços ao Vivo</a>
+    <a href="ranking.html">Ranking</a>
+    <a href="acessorios-projetores.html">Acessórios</a>
+    <a href="calculadora-ansi.html">Calculadora</a>
+    <a href="sobre.html">Sobre</a>
+  </div>
+
   <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <div class="section-tag">Quem somos</div>
-        <h1>Review de projetor com <span class="gradient-text">número medido</span>, não com folder de fábrica</h1>
-        <p>O schardtech.com.br é o braço escrito do canal SchardTech no YouTube. Tudo que está listado aqui passou pelas nossas mãos e pelo nosso luxímetro.</p>
+    <section class="page-head sem-borda">
+      <div class="wrap">
+        <div class="migalha"><a href="/">Home</a> <span class="sep">/</span> <span>Sobre</span></div>
+        <div class="eyebrow">Quem somos</div>
+        <h1>Review de projetor com <span class="grad">número medido</span>, não com folder de fábrica</h1>
+        <p class="sub">O schardtech.com.br é o braço escrito do canal SchardTech no YouTube. Tudo que está listado aqui passou pelas nossas mãos e pelo nosso luxímetro.</p>
       </div>
     </section>
 
     <section class="page-body">
-      <div class="container">
+      <div class="wrap">
         <h2>Como testamos</h2>
         <p>Specs de fabricante de projetor compacto costumam ser otimistas, especialmente o brilho. Por isso nenhum número entra no site sem verificação:</p>
         <ul>
-          <li><strong>ANSI Lumens medido de verdade:</strong> luxímetro em 9 pontos da imagem projetada, no padrão ANSI. É o mesmo método da nossa <a href="/#calculadora">calculadora pública</a>, que qualquer pessoa pode usar pra conferir o próprio aparelho.</li>
+          <li><strong>ANSI Lumens medido de verdade:</strong> luxímetro em 9 pontos da imagem projetada, no padrão ANSI. É o mesmo método da nossa <a href="calculadora-ansi.html">calculadora pública</a>, que qualquer pessoa pode usar pra conferir o próprio aparelho.</li>
           <li><strong>Input lag aferido</strong> pra quem joga, e brilho nos modos Máx/Médio/Mín.</li>
           <li><strong>Uso real:</strong> os aparelhos passam semanas em uso aqui antes do veredito, não é unboxing com nota.</li>
         </ul>
-        <p>São mais de <strong>60 projetores testados</strong> e publicados no <a href="projetores.html">catálogo</a>, com <a href="comparar.html">comparativo lado a lado</a>, <a href="qual-projetor.html">recomendador</a> e <a href="precos.html">preços verificados várias vezes por dia</a> com histórico.</p>
+        <p>São mais de <strong><span class="js-dezena">70</span> projetores testados</strong> e publicados no <a href="projetores.html">catálogo</a>, com <a href="comparar.html">comparativo lado a lado</a>, <a href="qual-projetor.html">recomendador</a> e <a href="precos.html">preços verificados várias vezes por dia</a> com histórico.</p>
 
         <h2>Como o site se sustenta</h2>
         <p>O site usa <strong>links de afiliado</strong> (AliExpress, Shopee, Mercado Livre e rede Awin). Quando você compra por um link daqui, podemos receber uma comissão, <strong>sem nenhum custo adicional pra você</strong>: o preço é o mesmo. Também revendemos algumas unidades à pronta-entrega, sempre identificadas como tal.</p>
@@ -114,55 +126,59 @@
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="/" class="logo-link">
-          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo" width="402" height="216">
-        </a>
-        <div class="footer-social">
-          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
-          </a>
-          <span class="social-link social-disabled" aria-label="Instagram (em breve)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          </span>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216">
+          <p>Projetores testados de verdade na bancada do canal SchardTech.</p>
+          <div class="social">
+            <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="ico" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg></a>
+            <span class="off" aria-label="Instagram em breve"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.51"/></svg></span>
+          </div>
         </div>
-      </div>
-      <div class="footer-nav">
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Navegação</h4>
           <a href="projetores.html">Projetores</a>
-          <a href="/sobre.html">Sobre</a>
-          <a href="/politica-privacidade.html">Privacidade</a><a href="mailto:contato@schardtech.com.br">Contato</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="politica-privacidade.html">Privacidade</a>
+          <a href="mailto:contato@schardtech.com.br">Contato</a>
         </div>
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Ferramentas</h4>
-          <a href="ranking.html">Ranking dos testes</a><a href="qual-projetor.html">Encontre seu projetor</a>
+          <a href="ranking.html">Ranking dos testes</a>
+          <a href="qual-projetor.html">Encontre seu projetor</a>
           <a href="comparar.html">Comparar projetores</a>
           <a href="acessorios-projetores.html">Acessórios</a>
         </div>
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Conteúdo</h4>
           <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
           <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <span class="footer-disabled">Instagram (em breve)</span>
+          <span class="off">Instagram (em breve)</span>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© 2026 SchardTech — Todos os direitos reservados</p>
-        <p style="margin-top:8px;font-size:0.78rem;color:var(--text-dim);">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
+      <div class="foot-bottom">
+        <p>&copy; 2026 SchardTech. Todos os direitos reservados.</p>
+        <p style="margin-top: 6px;">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
       </div>
     </div>
   </footer>
 
   <script src="script.js" defer></script>
-  <script src="projetores-data.js"></script>
-  <script src="prices-overlay.js"></script>
-  <script src="search-global.js" defer></script>
+  <script src="projetores-data.js" defer></script>
+  <script src="prices-overlay.js" defer></script>
+  <script src="ui-interacoes.js" defer></script>
+  <script>
+    /* contagem "70+" derivada do data.js (nunca assada) */
+    document.addEventListener('DOMContentLoaded', function () {
+      var data = window.PROJETORES_DATA || [];
+      var n = data.filter(function (p) { return p.listar !== false; }).length;
+      var dez = Math.floor(n / 10) * 10;
+      if (!(dez > 0)) return;
+      var els = document.querySelectorAll('.js-dezena');
+      for (var i = 0; i < els.length; i++) els[i].textContent = String(dez);
+    });
+  </script>
 </body>
 </html>

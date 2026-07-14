@@ -46,173 +46,91 @@
     }
   }
   </script>
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="v2.css">
   <style>
-    /* ── HERO ─────────────────────────────────── */
-    .rk-hero {
-      padding: 140px 0 56px;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(79,163,199,0.12) 0%, transparent 65%),
-        linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-      text-align: center;
-    }
-    .rk-hero .section-tag { display: inline-flex; margin: 0 auto 20px; }
-    .rk-hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; }
-    .rk-hero p {
-      max-width: 640px; margin: 20px auto 0;
-      color: var(--text-muted); font-size: 1.02rem;
-    }
-
-    /* ── SEÇÃO ────────────────────────────────── */
-    .rk-section { padding: 0 0 96px; }
-
-    /* ── SELETOR DE MÉTRICA ───────────────────── */
-    /* Offset dinâmico: o #header é fixed e a barra de quedas fica acima dele,
-       então "top:0" enfiava os chips embaixo do header. O JS mede e mantém
-       --rk-header-h atualizada (mesma solução do comparar.html). */
+    /* ── seletor de métrica (sticky abaixo do header sticky) ── */
     .rk-picker {
-      position: sticky; top: var(--rk-header-h, 96px); z-index: 40;
-      margin: 0 0 28px;
-      padding: 14px 0;
-      background: rgba(11,11,11,0.82);
+      position: sticky; top: var(--rk-header-h, 82px); z-index: 40;
+      margin: 0 0 28px; padding: 14px 0;
+      background: rgba(9, 12, 17, 0.88);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--line);
     }
-    .rk-chips {
-      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
-    }
-    .rk-chip {
-      display: inline-flex; align-items: center; gap: 7px;
-      padding: 9px 16px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: var(--card-bg);
-      color: var(--text-dim);
-      font-size: 0.86rem; font-weight: 600;
-      transition: var(--transition);
-      white-space: nowrap;
-    }
-    .rk-chip:hover { border-color: var(--border-hover); color: var(--text); }
-    .rk-chip[aria-pressed="true"] {
-      background: var(--primary);
-      border-color: var(--primary);
-      color: #0B0B0B;
-      box-shadow: var(--glow-sm);
-    }
+    .rk-picker .rank-chips { margin-top: 0; justify-content: center; }
 
-    /* ── CARD DO GRÁFICO ──────────────────────── */
-    .rk-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 28px 24px 20px;
-    }
-    .rk-card-head {
-      display: flex; flex-wrap: wrap; align-items: flex-end;
-      justify-content: space-between; gap: 12px;
-      margin-bottom: 4px;
-    }
-    .rk-card-title { font-size: 1.28rem; font-weight: 800; letter-spacing: -0.01em; }
-    .rk-card-sub { margin-top: 6px; color: var(--text-muted); font-size: 0.9rem; }
-    .rk-count { color: var(--text-dim); font-size: 0.82rem; font-weight: 600; white-space: nowrap; }
+    /* ── card do gráfico ── */
+    .rk-section { border-top: 0; padding: 0 0 96px; }
+    .rk-card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 28px 24px 20px; }
+    .rk-card-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+    .rk-card-title { font-family: var(--display); font-size: 21px; font-weight: 700; letter-spacing: -0.01em; }
+    .rk-card-title .m-tag { font-size: 10px; }
+    .rk-card-sub { margin-top: 6px; color: var(--txt-2); font-size: 14.5px; max-width: 720px; }
+    .rk-count { font-family: var(--mono); color: var(--txt-2); font-size: 12px; font-weight: 600; white-space: nowrap; }
     .rk-dir {
-      display: inline-block; margin-left: 8px;
-      padding: 2px 9px; border-radius: 999px;
-      font-size: 0.72rem; font-weight: 700; vertical-align: middle;
-      background: rgba(91,217,160,0.12); color: var(--success);
-      border: 1px solid rgba(91,217,160,0.25);
+      display: inline-block; margin-left: 10px; padding: 3px 10px; border-radius: 999px;
+      font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; vertical-align: middle;
+      background: var(--win-dim); color: var(--win); border: 1px solid rgba(47, 224, 138, 0.3);
     }
-    /* Métrica sem "melhor" objetivo (consumo, potência de áudio): tom neutro,
-       pra não sugerir que gastar menos watt é sempre bom. */
-    .rk-dir.is-neutro {
-      background: rgba(234,234,234,0.06); color: var(--text-dim);
-      border-color: var(--border);
-    }
+    /* métrica sem "melhor" objetivo (distância, consumo): tom neutro */
+    .rk-dir.is-neutro { background: var(--card-2); color: var(--txt-2); border-color: var(--line); }
 
-    /* ── FILTROS ──────────────────────────────── */
-    .rk-filters {
-      display: flex; flex-wrap: wrap; align-items: flex-end; gap: 14px;
-      margin-top: 20px;
-    }
+    /* ── filtros ── */
+    .rk-filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 14px; margin-top: 20px; }
     .rk-field { display: flex; flex-direction: column; gap: 6px; }
     .rk-field > span {
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em;
-      text-transform: uppercase; color: var(--text-dim);
+      font-family: var(--mono); font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--txt-2);
     }
     .rk-select-wrap { position: relative; }
     .rk-select {
       appearance: none; -webkit-appearance: none;
-      min-width: 190px;
-      padding: 10px 36px 10px 14px;
-      background: var(--bg-primary);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      color: var(--text);
-      font-family: inherit; font-size: 0.9rem; font-weight: 500;
-      cursor: pointer;
-      transition: var(--transition);
+      min-width: 190px; height: 44px; padding: 0 36px 0 14px;
+      background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
+      color: var(--txt); font-family: var(--mono); font-size: 13px; cursor: pointer;
+      transition: border-color 150ms;
     }
-    .rk-select:hover { border-color: var(--border-hover); }
-    .rk-select:focus-visible { outline: none; border-color: var(--primary); box-shadow: var(--glow-sm); }
-    .rk-select-chevron {
-      position: absolute; right: 13px; top: 50%; transform: translateY(-50%);
-      color: var(--text-dim); pointer-events: none;
-    }
+    .rk-select:hover, .rk-select:focus-visible { border-color: var(--brand); outline: none; }
+    .rk-select-chevron { position: absolute; right: 13px; top: 50%; transform: translateY(-50%); color: var(--txt-2); pointer-events: none; }
     .rk-clear {
-      padding: 10px 16px;
-      background: transparent;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      color: var(--text-dim);
-      font-family: inherit; font-size: 0.84rem; font-weight: 600;
-      transition: var(--transition);
+      height: 44px; padding: 0 16px; background: transparent;
+      border: 1px solid var(--line); border-radius: var(--radius);
+      color: var(--txt-2); font-family: var(--mono); font-size: 12px; font-weight: 600; cursor: pointer;
+      transition: border-color 150ms, color 150ms;
     }
-    .rk-clear:hover { border-color: var(--danger); color: var(--danger); }
+    .rk-clear:hover { border-color: var(--alerta); color: var(--alerta); }
 
-    /* ── LEGENDA DE TECNOLOGIA ────────────────── */
-    .rk-legend {
-      display: flex; flex-wrap: wrap; gap: 16px;
-      margin: 18px 0 8px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-    }
-    .rk-leg-item { display: inline-flex; align-items: center; gap: 7px; font-size: 0.8rem; color: var(--text-dim); }
+    /* ── legenda de tecnologia ── */
+    .rk-legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 18px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+    .rk-leg-item { display: inline-flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 12px; color: var(--txt-2); }
     .rk-leg-dot { width: 11px; height: 11px; border-radius: 3px; flex: none; }
 
-    /* ── GRÁFICO ──────────────────────────────── */
+    /* ── gráfico ── */
     .rk-chart-wrap { position: relative; margin-top: 18px; min-height: 320px; }
     .rk-chart-wrap canvas { cursor: pointer; }
 
-    /* ── NOTA / METODOLOGIA ───────────────────── */
+    /* ── nota / metodologia ── */
     .rk-note {
       margin-top: 22px; padding: 16px 18px;
-      background: rgba(79,163,199,0.05);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--primary);
+      background: var(--brand-dim);
+      border: 1px solid var(--line); border-left: 3px solid var(--brand);
       border-radius: var(--radius);
-      color: var(--text-muted);
-      font-size: 0.85rem; line-height: 1.65;
+      color: var(--txt-2); font-size: 13.5px; line-height: 1.65;
     }
-    .rk-note strong { color: var(--text); font-weight: 600; }
-    .rk-note a { color: var(--accent); }
+    .rk-note strong { color: var(--txt); font-weight: 600; }
+    .rk-note a { color: var(--brand); }
     .rk-note a:hover { text-decoration: underline; }
 
-    .rk-fallback {
-      display: none;
-      padding: 40px 20px; text-align: center;
-      color: var(--text-muted); font-size: 0.92rem;
-    }
-    .rk-fallback a { color: var(--accent); }
+    .rk-fallback { display: none; padding: 40px 20px; text-align: center; color: var(--txt-2); font-size: 14.5px; }
+    .rk-fallback a { color: var(--brand); }
 
     @media (max-width: 720px) {
-      .rk-hero { padding: 120px 0 40px; }
-      .rk-card { padding: 20px 12px 14px; border-radius: var(--radius); }
-      .rk-card-title { font-size: 1.08rem; }
-      .rk-chip { padding: 8px 13px; font-size: 0.8rem; }
+      .rk-card { padding: 20px 12px 14px; }
+      .rk-card-title { font-size: 17px; }
       .rk-picker { padding: 11px 0; }
       .rk-filters { gap: 10px; }
       .rk-field { flex: 1 1 100%; }
@@ -223,43 +141,63 @@
 </head>
 <body>
 
-  <header id="header">
-    <div class="container header-inner">
-      <a href="/" class="logo-link">
-        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img" width="402" height="216">
-      </a>
-      <nav id="mainNav">
-        <a href="projetores.html" class="nav-link">Projetores</a>
-        <a href="comparar.html" class="nav-link">Comparativo</a>
-        <a href="qual-projetor.html" class="nav-link">Encontre seu projetor</a>
-        <a href="precos.html" class="nav-link">Preços ao Vivo</a>
-        <a href="ranking.html" class="nav-link" style="color:var(--primary);font-weight:600;">Ranking</a>
-        <a href="acessorios-projetores.html" class="nav-link">Acessórios</a>
-        <a href="/#calculadora" class="nav-link">Calculadora</a>
-        <a href="/#sobre" class="nav-link">Sobre</a>
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
+  <div class="quedas" id="barra-quedas"></div>
+
+  <header class="topo">
+    <div class="wrap header-in">
+      <a class="logo" href="/"><img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216"></a>
+      <div class="busca">
+        <span class="lupa" aria-hidden="true"></span>
+        <input id="busca-input" type="search" placeholder="Buscar projetor..." autocomplete="off" aria-label="Buscar projetor">
+        <div class="busca-drop" id="busca-drop" role="listbox"></div>
+      </div>
+      <nav class="principal" aria-label="Navegação principal">
+        <a href="projetores.html">Projetores</a>
+        <a href="comparar.html">Comparativo</a>
+        <a href="qual-projetor.html">Encontre seu projetor</a>
+        <a class="destaque" href="precos.html">Preços ao Vivo</a>
+        <a class="atual" href="ranking.html">Ranking</a>
+        <a href="acessorios-projetores.html">Acessórios</a>
+        <a href="calculadora-ansi.html">Calculadora</a>
+        <a href="sobre.html">Sobre</a>
       </nav>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
+  <div class="menu-mobile" id="menu-mobile">
+    <button class="fechar" id="menu-fechar">Fechar X</button>
+    <a href="projetores.html">Projetores</a>
+    <a href="comparar.html">Comparativo</a>
+    <a href="qual-projetor.html">Encontre seu projetor</a>
+    <a href="precos.html">Preços ao Vivo</a>
+    <a href="ranking.html">Ranking</a>
+    <a href="acessorios-projetores.html">Acessórios</a>
+    <a href="calculadora-ansi.html">Calculadora</a>
+    <a href="sobre.html">Sobre</a>
+  </div>
+
   <main id="main">
-  <section class="rk-hero">
-    <div class="container">
-      <div class="section-tag">Medições do canal</div>
-      <h1>Ranking dos projetores<br><span class="gradient-text">que eu testei</span></h1>
+
+  <section class="page-head sem-borda">
+    <div class="wrap">
+      <div class="migalha"><a href="/">Home</a> <span class="sep">/</span> <span>Ranking</span></div>
+      <div class="eyebrow">Medições do canal</div>
+      <h1>Ranking dos projetores <span class="grad">que eu testei</span></h1>
+      <p class="sub">Valor bruto medido na bancada, sem número de fabricante. Escolha a métrica e clique em qualquer barra para abrir a análise completa.</p>
     </div>
   </section>
 
   <section class="rk-section">
     <div class="rk-picker">
-      <div class="container">
-        <div class="rk-chips" id="rkChips" role="group" aria-label="Escolha a métrica"></div>
+      <div class="wrap">
+        <div class="rank-chips" id="rkChips" role="group" aria-label="Escolha a métrica"></div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="wrap">
       <div class="rk-card">
         <div class="rk-card-head">
           <div>
@@ -307,61 +245,54 @@
       </div>
     </div>
   </section>
+
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="/" class="logo-link">
-          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo" width="402" height="216">
-        </a>
-        <div class="footer-social">
-          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
-          </a>
-          <span class="social-link social-disabled" aria-label="Instagram (em breve)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          </span>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216">
+          <p>Projetores testados de verdade na bancada do canal SchardTech.</p>
+          <div class="social">
+            <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="ico" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg></a>
+            <span class="off" aria-label="Instagram em breve"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.51"/></svg></span>
+          </div>
         </div>
-      </div>
-      <div class="footer-nav">
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Navegação</h4>
-          <a href="/">Projetores</a>
-          <a href="/sobre.html">Sobre</a>
-          <a href="/politica-privacidade.html">Privacidade</a><a href="mailto:contato@schardtech.com.br">Contato</a>
+          <a href="projetores.html">Projetores</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="politica-privacidade.html">Privacidade</a>
+          <a href="mailto:contato@schardtech.com.br">Contato</a>
         </div>
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Ferramentas</h4>
           <a href="ranking.html">Ranking dos testes</a>
           <a href="qual-projetor.html">Encontre seu projetor</a>
           <a href="comparar.html">Comparar projetores</a>
           <a href="acessorios-projetores.html">Acessórios</a>
         </div>
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Conteúdo</h4>
           <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
           <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <span class="footer-disabled">Instagram (em breve)</span>
+          <span class="off">Instagram (em breve)</span>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© 2026 SchardTech — Todos os direitos reservados</p>
-        <p style="margin-top:8px;font-size:0.78rem;color:var(--text-dim);">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
+      <div class="foot-bottom">
+        <p>&copy; 2026 SchardTech. Todos os direitos reservados.</p>
+        <p style="margin-top: 6px;">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
       </div>
     </div>
   </footer>
 
   <script src="script.js" defer></script>
-  <script src="projetores-data.js"></script>
-  <script src="prices-overlay.js"></script>
+  <script src="projetores-data.js" defer></script>
+  <script src="prices-overlay.js" defer></script>
+  <script src="ui-interacoes.js" defer></script>
   <script src="chart.umd.min.js" defer></script>
-  <script src="search-global.js" defer></script>
   <script>
     /* ═══════════════════════════════════════════════════════════
        ranking.html — gráfico de barras das medições do canal.
@@ -369,16 +300,18 @@
        Nada é calculado nem normalizado: valor bruto, ordenado.
        O slug (link p/ a página do projetor) é injetado depois
        por prices-overlay.js, então é lido no clique, não no build.
+       v2 (B1 13/07): dados carregam com defer — BASE é preenchida
+       no boot(), que só roda no DOMContentLoaded.
     ═══════════════════════════════════════════════════════════ */
     (function () {
       'use strict';
 
       var CORES = {
-        'LCD LED':   '#4FA3C7',
+        'LCD LED':   '#5BC8EE',
         'DLP LED':   '#7B8CFF',
-        'DLP Laser': '#FFD15A'
+        'DLP Laser': '#F6C453'
       };
-      var COR_PADRAO = 'rgba(234,234,234,0.35)';
+      var COR_PADRAO = 'rgba(141,156,178,0.35)';
 
       function num(v) {
         var n = Number(v);
@@ -392,6 +325,7 @@
           titulo: 'Brilho ANSI medido',
           sub: 'Lumens ANSI que eu li no luxímetro, com o projetor de fábrica.',
           badge: 'maior é melhor',
+          medido: true,
           maiorPrimeiro: true,
           valor: function (p) { return num(p.brilho_ansi); },
           fmt: function (v) { return v.toLocaleString('pt-BR') + ' ANSI'; }
@@ -402,6 +336,7 @@
           titulo: 'Input lag',
           sub: '',
           badge: 'menor é melhor',
+          medido: true,
           maiorPrimeiro: false,
           valor: function (p) { return num(p.input_lag_ms); },
           fmt: function (v) { return v.toLocaleString('pt-BR') + ' ms'; }
@@ -430,9 +365,7 @@
         }
       ];
 
-      var BASE = (window.PROJETORES_DATA || []).filter(function (p) {
-        return p && p.listar !== false;
-      });
+      var BASE = [];
 
       var elChips    = document.getElementById('rkChips');
       var elTitle    = document.getElementById('rkTitle');
@@ -446,12 +379,11 @@
       var chart = null;
       var linhas = [];   // produtos ordenados da métrica ativa
 
-      var LABEL_FONT = '700 11px Inter, -apple-system, sans-serif';
+      var LABEL_FONT = '600 11px "IBM Plex Mono", monospace';
 
       /* Rótulo do valor SEMPRE logo à direita da barra, mesma cor pra todo mundo
-         (Chart.js 4 não traz datalabels). Antes o texto ia pra dentro nas barras
-         grandes e pra fora nas pequenas — ficava desalinhado. Agora é uniforme;
-         o render reserva padding à direita pra caber o rótulo mais largo. */
+         (Chart.js 4 não traz datalabels). O render reserva padding à direita
+         pra caber o rótulo mais largo. */
       var pluginRotulo = {
         id: 'rotuloValor',
         afterDatasetsDraw: function (c) {
@@ -462,7 +394,7 @@
           ctx.font = LABEL_FONT;
           ctx.textBaseline = 'middle';
           ctx.textAlign = 'left';
-          ctx.fillStyle = 'rgba(234,234,234,0.92)';
+          ctx.fillStyle = 'rgba(188,231,248,0.95)';
           meta.data.forEach(function (barra, i) {
             var linha = linhas[i];
             if (!linha) return;
@@ -504,6 +436,9 @@
           });
 
         elTitle.textContent = metrica.titulo;
+        if (metrica.medido) {
+          elTitle.insertAdjacentHTML('beforeend', '<span class="m-tag">MEDIDO</span>');
+        }
         elTitle.insertAdjacentHTML('beforeend',
           '<span class="rk-dir' + (metrica.neutro ? ' is-neutro' : '') + '">' + metrica.badge + '</span>');
         elSub.textContent = metrica.sub || '';
@@ -574,13 +509,13 @@
             plugins: {
               legend: { display: false },
               tooltip: {
-                backgroundColor: 'rgba(20,24,43,0.95)',
-                titleColor: '#EAEAEA',
-                titleFont: { weight: '600', size: 12 },
-                bodyColor: '#EAEAEA',
-                bodyFont: { size: 12 },
+                backgroundColor: 'rgba(17,23,34,0.96)',
+                titleColor: '#EEF3FA',
+                titleFont: { weight: '600', size: 12, family: 'Inter' },
+                bodyColor: '#EEF3FA',
+                bodyFont: { size: 12, family: 'Inter' },
                 padding: 12,
-                borderColor: 'rgba(79,163,199,0.42)',
+                borderColor: 'rgba(91,200,238,0.42)',
                 borderWidth: 1,
                 displayColors: false,
                 callbacks: {
@@ -597,15 +532,15 @@
             scales: {
               x: {
                 beginAtZero: true,
-                grid: { color: 'rgba(234,234,234,0.05)' },
-                ticks: { color: 'rgba(234,234,234,0.45)', maxTicksLimit: 7 }
+                grid: { color: 'rgba(238,243,250,0.05)' },
+                ticks: { color: 'rgba(141,156,178,0.8)', maxTicksLimit: 7, font: { family: '"IBM Plex Mono", monospace', size: 10 } }
               },
               y: {
                 grid: { display: false },
                 ticks: {
                   autoSkip: false,
-                  color: 'rgba(234,234,234,0.78)',
-                  font: { size: 11 },
+                  color: 'rgba(238,243,250,0.78)',
+                  font: { size: 11, family: 'Inter' },
                   crossAlign: 'far'
                 }
               }
@@ -638,15 +573,16 @@
 
       function montarChips() {
         elChips.innerHTML = METRICAS.map(function (m, i) {
-          return '<button type="button" class="rk-chip" data-i="' + i + '" aria-pressed="' + (i === 0) + '">' + m.chip + '</button>';
+          return '<button type="button" class="rank-chip' + (i === 0 ? ' ativa' : '') + '" data-i="' + i + '" aria-pressed="' + (i === 0) + '">' + m.chip + '</button>';
         }).join('');
 
         elChips.addEventListener('click', function (e) {
-          var btn = e.target.closest('.rk-chip');
+          var btn = e.target.closest('.rank-chip');
           if (!btn) return;
           var i = Number(btn.dataset.i);
           Array.prototype.forEach.call(elChips.children, function (b) {
             b.setAttribute('aria-pressed', b === btn);
+            b.classList.toggle('ativa', b === btn);
           });
           estado.metrica = METRICAS[i];
           aplicar();
@@ -703,17 +639,21 @@
         });
       }
 
-      /* Mantém os chips grudados logo abaixo do header fixo (que muda de altura
-         ao rolar, e ganha a barra de quedas por cima). */
+      /* Mantém os chips grudados logo abaixo do header sticky (a altura dele
+         varia com wrap do nav e com a barra de quedas acima). */
       var rafSticky = null;
       function syncSticky() {
-        var header = document.getElementById('header');
+        var header = document.querySelector('header.topo');
         if (!header) return;
         var base = Math.max(0, header.getBoundingClientRect().bottom);
         document.documentElement.style.setProperty('--rk-header-h', base + 'px');
       }
 
       function boot() {
+        BASE = (window.PROJETORES_DATA || []).filter(function (p) {
+          return p && p.listar !== false;
+        });
+
         syncSticky();
         addEventListener('scroll', function () {
           if (rafSticky) return;

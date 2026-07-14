@@ -14,10 +14,10 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <title>Comparar Projetores Lado a Lado — ANSI Real e Specs | SchardTech</title>
+  <title>Comparar Projetores Lado a Lado · ANSI Real e Specs | SchardTech</title>
   <meta name="description" content="Compare até 3 projetores lado a lado com dados reais testados no canal: ANSI Lumens medido, input lag, ótica selada, áudio e gráfico radar. Grátis.">
   <link rel="canonical" href="https://schardtech.com.br/comparar.html">
-  <meta property="og:title" content="Comparar Projetores Lado a Lado — ANSI Real e Specs | SchardTech">
+  <meta property="og:title" content="Comparar Projetores Lado a Lado · ANSI Real e Specs | SchardTech">
   <meta property="og:description" content="Compare até 3 projetores lado a lado com dados reais testados no canal: ANSI Lumens medido, input lag, ótica, áudio e gráfico radar.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://schardtech.com.br/comparar.html">
@@ -26,7 +26,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Comparar Projetores Lado a Lado — ANSI Real e Specs | SchardTech">
+  <meta name="twitter:title" content="Comparar Projetores Lado a Lado · ANSI Real e Specs | SchardTech">
   <meta name="twitter:description" content="Compare até 3 projetores lado a lado com dados reais. ANSI Lumens medido, input lag, ótica, áudio e gráfico radar.">
   <meta name="twitter:image" content="https://schardtech.com.br/og-image.jpg">
   <script type="application/ld+json">
@@ -44,117 +44,75 @@
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" }
   }
   </script>
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="v2.css">
   <style>
-    /* ── HERO ─────────────────────────────────── */
-    .cp-hero {
-      padding: 140px 0 64px;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(79,163,199,0.12) 0%, transparent 65%),
-        linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-      text-align: center;
-    }
-    .cp-hero .section-tag { display: inline-flex; margin: 0 auto 20px; }
-    .cp-hero h1 {
-      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
-      font-weight: 900;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin-bottom: 18px;
-    }
-    .cp-hero p {
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 500px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
+    /* ── util ─────────────────────────────────── */
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .spec-tag { display: inline-flex; font-family: var(--mono); font-size: 10.5px; font-weight: 600; border-radius: 5px; padding: 3px 8px; color: var(--txt-2); background: var(--card-2); border: 1px solid var(--line); }
+    .spec-tag.tag-type { color: var(--brand); border-color: var(--brand-borda); background: var(--brand-dim); }
 
-    /* ── SELECTOR ─────────────────────────────── */
-    .cp-selector { padding: 56px 0 0; }
-    .cp-slots {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
+    /* ── layout da página ─────────────────────── */
+    .cp-selector { border-top: 0; padding: 8px 0 0; }
+    .cp-comparison { border-top: 0; padding: 48px 0 88px; }
+
+    /* ── SELECTOR (slots) ─────────────────────── */
+    .cp-slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .cp-slot {
-      background: var(--card-bg);
-      border: 1.5px dashed rgba(79,163,199,0.22);
-      border-radius: var(--radius-lg);
+      background: var(--card);
+      border: 1.5px dashed var(--brand-borda);
+      border-radius: var(--radius);
       min-height: 148px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
       cursor: pointer;
-      transition: all var(--transition);
+      transition: border-color 150ms, background 150ms;
       padding: 24px;
       text-align: center;
       position: relative;
     }
-    .cp-slot:hover {
-      border-color: rgba(79,163,199,0.55);
-      background: rgba(79,163,199,0.04);
-    }
-    /* Slot vazio é <button> (acessível por teclado) — desfaz o estilo de UA */
+    .cp-slot:hover { border-color: var(--brand); background: var(--brand-dim); }
+    /* Slot vazio é <button> (acessível por teclado): desfaz o estilo de UA */
     button.cp-slot { font: inherit; color: inherit; width: 100%; }
-    .cp-slot.filled {
-      border-style: solid;
-      cursor: default;
-      align-items: stretch;
-      justify-content: flex-start;
-      text-align: left;
-    }
-    .cp-slot.filled:hover { border-color: var(--border); background: var(--card-bg); }
-    .cp-slot[data-slot="0"].filled { border-color: rgba(79,163,199,0.4); }
-    .cp-slot[data-slot="1"].filled { border-color: rgba(255,210,60,0.38); }
-    .cp-slot[data-slot="2"].filled { border-color: rgba(176,122,255,0.38); }
+    .cp-slot.filled { border-style: solid; cursor: default; align-items: stretch; justify-content: flex-start; text-align: left; }
+    .cp-slot.filled:hover { border-color: var(--line); background: var(--card); }
+    .cp-slot[data-slot="0"].filled { border-color: rgba(91,200,238,0.45); }
+    .cp-slot[data-slot="1"].filled { border-color: rgba(246,196,83,0.4); }
+    .cp-slot[data-slot="2"].filled { border-color: rgba(176,122,255,0.4); }
 
     .cp-slot-add-icon {
       width: 46px; height: 46px;
       border-radius: 50%;
-      background: rgba(79,163,199,0.1);
-      border: 1px solid rgba(79,163,199,0.28);
+      background: var(--brand-dim);
+      border: 1px solid var(--brand-borda);
       display: flex; align-items: center; justify-content: center;
       margin-bottom: 12px;
-      color: var(--primary);
+      color: var(--brand);
       font-size: 1.5rem;
       font-weight: 300;
       line-height: 1;
     }
-    .cp-slot-add-text { font-size: 0.87rem; color: var(--text-muted); font-weight: 600; }
-    .cp-slot-add-hint { font-size: 0.72rem; color: var(--text-dim); margin-top: 5px; }
+    .cp-slot-add-text { font-size: 0.87rem; color: var(--txt-2); font-weight: 600; }
+    .cp-slot-add-hint { font-family: var(--mono); font-size: 0.7rem; color: var(--txt-2); opacity: 0.75; margin-top: 5px; }
 
-    .cp-slot-color-bar {
-      height: 3px;
-      border-radius: 0 0 2px 2px;
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      border-radius: 14px 14px 0 0;
-    }
-    .cp-slot[data-slot="0"] .cp-slot-color-bar { background: var(--primary); }
-    .cp-slot[data-slot="1"] .cp-slot-color-bar { background: #ffd23c; }
-    .cp-slot[data-slot="2"] .cp-slot-color-bar { background: #b07aff; }
+    .cp-slot-color-bar { height: 3px; position: absolute; top: 0; left: 0; right: 0; border-radius: var(--radius) var(--radius) 0 0; }
+    .cp-slot[data-slot="0"] .cp-slot-color-bar { background: #5BC8EE; }
+    .cp-slot[data-slot="1"] .cp-slot-color-bar { background: #F6C453; }
+    .cp-slot[data-slot="2"] .cp-slot-color-bar { background: #B07AFF; }
 
     .cp-slot-inner { padding-top: 10px; flex: 1; display: flex; flex-direction: column; }
-    .cp-slot-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 14px;
-    }
+    .cp-slot-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 14px; }
     .cp-slot-brand {
-      font-size: 0.68rem;
-      font-weight: 700;
-      color: var(--text-dim);
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--txt-2);
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.14em;
       margin-bottom: 4px;
     }
-    .cp-slot-model { font-size: 1.05rem; font-weight: 700; color: var(--text); line-height: 1.2; }
+    .cp-slot-model { font-family: var(--display); font-size: 1.1rem; font-weight: 700; color: var(--txt); line-height: 1.2; letter-spacing: -0.01em; }
     /* Quando tem página individual, brand+model viram link */
     a.cp-slot-name-link {
       display: inline-flex;
@@ -162,23 +120,20 @@
       gap: 4px;
       color: inherit;
       text-decoration: none;
-      transition: color 0.15s ease;
+      transition: color 150ms;
       position: relative;
     }
-    a.cp-slot-name-link:hover .cp-slot-model { color: var(--accent); }
+    a.cp-slot-name-link:hover .cp-slot-model { color: var(--brand); }
     a.cp-slot-name-link .cp-slot-link-arrow {
       position: absolute;
       top: 0;
       right: -20px;
       opacity: 0;
       transform: translate(-4px, 0);
-      transition: opacity 0.18s ease, transform 0.18s ease;
-      color: var(--primary);
+      transition: opacity 180ms, transform 180ms;
+      color: var(--brand);
     }
-    a.cp-slot-name-link:hover .cp-slot-link-arrow {
-      opacity: 1;
-      transform: translate(0, 0);
-    }
+    a.cp-slot-name-link:hover .cp-slot-link-arrow { opacity: 1; transform: translate(0, 0); }
     /* hint sutil de "tem página" pro user descobrir */
     a.cp-slot-name-link::after {
       content: '';
@@ -189,25 +144,25 @@
       height: 1px;
       background: currentColor;
       opacity: 0;
-      transition: opacity 0.15s ease;
+      transition: opacity 150ms;
     }
     a.cp-slot-name-link:hover::after { opacity: 0.4; }
     .cp-slot-remove {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 8px;
+      background: var(--card-2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
       width: 36px; height: 36px;
       display: flex; align-items: center; justify-content: center;
       cursor: pointer;
-      color: var(--text-dim);
+      color: var(--txt-2);
       font-size: 1rem;
       flex-shrink: 0;
-      transition: all var(--transition);
+      transition: color 150ms, border-color 150ms, background 150ms;
     }
     .cp-slot-remove:hover {
-      background: rgba(255,80,80,0.12);
-      border-color: rgba(255,80,80,0.3);
-      color: #ff7070;
+      background: rgba(255,155,122,0.12);
+      border-color: rgba(255,155,122,0.4);
+      color: var(--alerta);
     }
     .cp-slot-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: auto; padding-top: 8px; }
 
@@ -224,50 +179,75 @@
       backdrop-filter: blur(5px);
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.2s ease;
+      transition: opacity 200ms;
     }
     .cp-modal-overlay.open { opacity: 1; pointer-events: all; }
     .cp-modal {
-      background: #141828;
-      border: 1px solid rgba(79,163,199,0.28);
-      border-radius: var(--radius-xl);
+      background: var(--card-2);
+      border: 1px solid var(--brand-borda);
+      border-radius: 14px;
       width: 100%;
       max-width: 560px;
       max-height: 82vh;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 24px 80px rgba(0,0,0,0.65), 0 0 0 1px rgba(79,163,199,0.08);
+      box-shadow: 0 24px 80px rgba(0,0,0,0.65);
       transform: translateY(8px);
-      transition: transform 0.2s ease;
+      transition: transform 200ms;
     }
     .cp-modal-overlay.open .cp-modal { transform: translateY(0); }
     .cp-modal-top {
       padding: 20px 20px 14px;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--line);
       flex-shrink: 0;
     }
-    .cp-modal-title {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-      color: var(--text-dim);
+    .cp-modal-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       margin-bottom: 12px;
+    }
+    .cp-modal-title {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--txt-2);
+    }
+    .cp-modal-close {
+      background: none;
+      border: 1px solid transparent;
+      color: var(--txt-2);
+      font-size: 1.25rem;
+      cursor: pointer;
+      padding: 2px 8px;
+      border-radius: 6px;
+      line-height: 1;
+      transition: color 150ms, background 150ms, border-color 150ms;
+      font-family: inherit;
+      flex-shrink: 0;
+    }
+    .cp-modal-close:hover {
+      color: var(--txt);
+      background: var(--card);
+      border-color: var(--line);
     }
     .cp-search-input {
       width: 100%;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(79,163,199,0.22);
+      height: 44px;
+      background: var(--bg);
+      border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 12px 16px;
-      color: var(--text);
-      font-family: inherit;
-      font-size: 0.95rem;
+      padding: 0 14px;
+      color: var(--txt);
+      font-family: var(--mono);
+      font-size: 13px;
       outline: none;
-      transition: border-color var(--transition);
+      transition: border-color 150ms;
     }
-    .cp-search-input:focus { border-color: var(--primary); background: rgba(79,163,199,0.05); }
-    .cp-search-input::placeholder { color: var(--text-dim); }
+    .cp-search-input:focus { border-color: var(--brand); }
+    .cp-search-input::placeholder { color: var(--txt-2); }
     .cp-modal-brands {
       display: flex;
       flex-wrap: wrap;
@@ -276,21 +256,20 @@
       flex-shrink: 0;
     }
     .cp-brand-pill {
-      padding: 4px 12px;
-      border-radius: 100px;
-      font-size: 0.7rem;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-family: var(--mono);
+      font-size: 10.5px;
       font-weight: 600;
-      background: rgba(79,163,199,0.06);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
+      letter-spacing: 0.04em;
+      background: var(--card);
+      border: 1px solid var(--line);
+      color: var(--txt-2);
       cursor: pointer;
-      transition: all var(--transition);
+      transition: color 150ms, border-color 150ms, background 150ms;
     }
-    .cp-brand-pill:hover, .cp-brand-pill.active {
-      background: rgba(79,163,199,0.14);
-      border-color: var(--primary);
-      color: var(--accent);
-    }
+    .cp-brand-pill:hover { color: var(--txt); border-color: var(--brand); }
+    .cp-brand-pill.active { color: #08222E; background: var(--brand); border-color: var(--brand); }
     .cp-modal-list {
       overflow-y: auto;
       flex: 1;
@@ -303,20 +282,34 @@
       padding: 11px 12px;
       border-radius: var(--radius);
       cursor: pointer;
-      transition: background var(--transition);
+      transition: background 150ms, border-color 150ms;
       border: 1px solid transparent;
       gap: 12px;
     }
-    .cp-modal-item:hover { background: rgba(79,163,199,0.07); border-color: var(--border); }
+    .cp-modal-item:hover { background: var(--brand-dim); border-color: var(--line); }
     .cp-modal-item.already-selected { opacity: 0.35; cursor: not-allowed; pointer-events: none; }
-    .cp-modal-item-name { font-size: 0.9rem; font-weight: 600; color: var(--text); }
-    .cp-modal-item-sub { font-size: 0.74rem; color: var(--text-muted); margin-top: 2px; }
-    .cp-modal-item-price { font-size: 0.82rem; font-weight: 700; color: var(--accent); white-space: nowrap; flex-shrink: 0; }
-    .cp-modal-empty { text-align: center; padding: 36px 24px; color: var(--text-dim); font-size: 0.85rem; }
+    .cp-modal-item-name { font-size: 0.9rem; font-weight: 600; color: var(--txt); }
+    .cp-modal-item-sub { font-family: var(--mono); font-size: 11px; color: var(--txt-2); margin-top: 2px; }
+    .cp-modal-item-price { font-family: var(--mono); font-size: 12.5px; font-weight: 700; color: var(--num); white-space: nowrap; flex-shrink: 0; }
+    .cp-modal-empty { text-align: center; padding: 36px 24px; color: var(--txt-2); font-family: var(--mono); font-size: 12px; }
+    .cp-modal-clear-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 7px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: none;
+      color: var(--brand);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: border-color 150ms, background 150ms;
+    }
+    .cp-modal-clear-btn:hover { border-color: var(--brand); background: var(--brand-dim); }
 
-    /* ── COMPARISON SECTION ───────────────────── */
-    .cp-comparison { padding: 48px 0 80px; }
-
+    /* ── CONTROLES ────────────────────────────── */
     .cp-controls {
       display: flex;
       align-items: center;
@@ -326,50 +319,34 @@
       gap: 12px;
     }
     .cp-controls-left { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-    .cp-ctrl-btn {
+    .cp-ctrl-btn, .cp-share-btn {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 12px 18px;
+      gap: 8px;
+      padding: 10px 16px;
       min-height: 44px;
-      border-radius: 100px;
-      border: 1px solid var(--border);
+      border-radius: 999px;
+      border: 1px solid var(--line);
       background: transparent;
-      color: var(--text-muted);
-      font-size: 0.82rem;
+      color: var(--txt-2);
+      font-family: var(--mono);
+      font-size: 11.5px;
       font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
       cursor: pointer;
-      transition: all var(--transition);
-      font-family: inherit;
+      transition: color 150ms, border-color 150ms, background 150ms;
     }
-    .cp-ctrl-btn:hover, .cp-ctrl-btn.active {
-      border-color: var(--primary);
-      color: var(--accent);
-      background: rgba(79,163,199,0.08);
-    }
-    .cp-share-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 12px 18px;
-      min-height: 44px;
-      border-radius: 100px;
-      border: 1px solid rgba(79,163,199,0.32);
-      background: transparent;
-      color: var(--primary);
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all var(--transition);
-      font-family: inherit;
-    }
-    .cp-share-btn:hover { background: rgba(79,163,199,0.1); border-color: var(--primary); }
+    .cp-ctrl-btn:hover { color: var(--txt); border-color: var(--brand); }
+    .cp-ctrl-btn.active { color: #08222E; background: var(--brand); border-color: var(--brand); }
+    .cp-share-btn { color: var(--brand); border-color: var(--brand-borda); }
+    .cp-share-btn:hover { background: var(--brand-dim); border-color: var(--brand); }
 
-    /* ── RADAR CHART ──────────────────────────── */
+    /* ── RADAR ────────────────────────────────── */
     .cp-radar-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-xl);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
       padding: 28px 32px;
       margin-bottom: 28px;
       display: flex;
@@ -380,38 +357,40 @@
     .cp-radar-svg-wrap svg { width: 100%; height: 100%; display: block; }
     .cp-radar-info { flex: 1; min-width: 0; }
     .cp-radar-info-title {
-      font-size: 0.68rem;
-      font-weight: 700;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-dim);
+      letter-spacing: 0.14em;
+      color: var(--txt-2);
       margin-bottom: 18px;
     }
     .cp-radar-legend { display: flex; flex-direction: column; gap: 11px; margin-bottom: 20px; }
     .cp-radar-legend-item { display: flex; align-items: flex-start; gap: 10px; }
-    .cp-radar-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 3px; }
-    .cp-radar-model { font-size: 0.88rem; font-weight: 700; color: var(--text); }
-    .cp-radar-brand { font-size: 0.75rem; color: var(--text-muted); }
+    .cp-radar-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+    .cp-radar-model { font-family: var(--display); font-size: 0.95rem; font-weight: 700; color: var(--txt); }
+    .cp-radar-brand { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--txt-2); }
     .cp-radar-axes-note {
-      font-size: 0.7rem;
-      color: var(--text-dim);
+      font-size: 0.72rem;
+      color: var(--txt-2);
       line-height: 1.6;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid var(--line);
       padding-top: 14px;
     }
+    .cp-radar-axes-note strong { color: var(--txt); }
 
-    /* ── TABLE ────────────────────────────────── */
+    /* ── TABELA ───────────────────────────────── */
     .cp-table-wrap {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      background: var(--bg-primary);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--bg);
     }
     .cp-table {
       width: 100%;
       /* separate (não collapse): com collapse o Chrome não pinta direito o
-         background das células sticky — o conteúdo vazava numa faixa na base
+         background das células sticky, o conteúdo vazava numa faixa na base
          do cabeçalho (bug visto 10/06/2026). Borda de linha vai nos <td>. */
       border-collapse: separate;
       border-spacing: 0;
@@ -424,12 +403,12 @@
       white-space: nowrap;
     }
 
-    /* Sticky thead — offset DINÂMICO: o header fixo + barra de quedas somam
-       ~100px (não 64px); o JS mede e mantém --cp-header-h atualizada. */
+    /* Sticky thead com offset DINÂMICO: o header v2 é sticky e a altura varia
+       (wrap da busca no mobile); o JS mede e mantém --cp-header-h atualizada. */
     .cp-thead { position: sticky; top: var(--cp-header-h, 64px); z-index: 10; }
     .cp-th-corner {
-      background: #0d1120;
-      border-bottom: 2px solid rgba(79,163,199,0.18);
+      background: var(--bg-2);
+      border-bottom: 2px solid var(--brand-borda);
       padding: 0;
       position: sticky;
       left: 0;
@@ -438,67 +417,70 @@
       min-width: 170px;
     }
     .cp-th-col {
-      background: #0d1120;
-      border-bottom: 2px solid rgba(79,163,199,0.18);
-      border-left: 1px solid var(--border);
+      background: var(--bg-2);
+      border-bottom: 2px solid var(--brand-borda);
+      border-left: 1px solid var(--line);
       padding: 10px 18px 12px;
       text-align: center;
       min-width: 170px;
       vertical-align: top;
       overflow: hidden;
     }
-    .cp-th-top-bar { height: 3px; border-radius: 0; margin: -10px -18px 6px; }
-    .cp-th-brand { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); }
-    .cp-th-model { font-size: 0.98rem; font-weight: 800; color: var(--text); margin-top: 3px; line-height: 1.2; }
+    .cp-th-top-bar { height: 3px; margin: -10px -18px 6px; }
+    .cp-th-brand { font-family: var(--mono); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--txt-2); }
+    .cp-th-model { font-family: var(--display); font-size: 0.98rem; font-weight: 700; color: var(--txt); margin-top: 3px; line-height: 1.2; letter-spacing: -0.01em; }
     .cp-th-wins-badge {
       display: inline-block;
       margin-top: 5px;
-      font-size: 0.7rem;
+      font-family: var(--mono);
+      font-size: 10px;
       font-weight: 700;
       padding: 3px 9px;
-      border-radius: 100px;
+      border-radius: 999px;
     }
 
-    /* Section header rows — sticky below the projector thead */
+    /* Linhas de seção: sticky abaixo do thead dos projetores */
     .cp-tr-section td {
       padding: 8px 16px;
-      font-size: 0.72rem;
-      font-weight: 800;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.14em;
-      color: var(--primary);
-      background: #0d1120;
-      border-top: 1px solid rgba(79,163,199,0.1);
+      color: var(--brand);
+      background: var(--bg-2);
+      border-top: 1px solid var(--line);
       position: sticky;
       top: calc(var(--cp-header-h, 64px) + var(--cp-thead-h, 70px));
       z-index: 9;
     }
 
-    /* Data rows — borda nos <td>: com border-collapse:separate, borda em <tr> não pinta */
-    .cp-tr { transition: background 0.15s ease; }
-    .cp-tr > td { border-top: 1px solid rgba(79,163,199,0.07); }
-    .cp-tr:hover { background: rgba(79,163,199,0.025); }
+    /* Linhas de dados: borda nos <td>. Com border-collapse:separate, borda em <tr> não pinta */
+    .cp-tr { transition: background 150ms; }
+    .cp-tr > td { border-top: 1px solid var(--line); }
+    .cp-tr:hover { background: rgba(91,200,238,0.03); }
     .cp-tr.diff-hidden { display: none; }
 
     .cp-td-label {
       padding: 13px 16px;
       font-size: 0.8rem;
       font-weight: 600;
-      color: var(--text-muted);
+      color: var(--txt-2);
       position: sticky;
       left: 0;
-      background: var(--bg-primary);
+      background: var(--bg);
       z-index: 2;
       vertical-align: middle;
-      border-right: 1px solid var(--border);
-      transition: background 0.15s ease;
+      border-right: 1px solid var(--line);
+      transition: background 150ms;
     }
-    .cp-tr:hover .cp-td-label { background: #0e1421; }
+    .cp-tr:hover .cp-td-label { background: var(--bg-2); }
     .cp-td-label-hint {
       display: block;
       font-size: 0.72rem;
       font-weight: 400;
-      color: var(--text-dim);
+      color: var(--txt-2);
+      opacity: 0.75;
       margin-top: 2px;
       line-height: 1.4;
       max-width: 145px;
@@ -507,53 +489,54 @@
 
     .cp-td-val {
       padding: 13px 18px;
-      font-size: 0.88rem;
+      font-family: var(--mono);
+      font-size: 13px;
       font-weight: 500;
-      color: var(--text-muted);
+      color: var(--txt-2);
       text-align: center;
       vertical-align: middle;
-      border-left: 1px solid var(--border);
+      border-left: 1px solid var(--line);
     }
     .cp-td-val.winner {
-      background: rgba(77,220,120,0.05);
-      color: var(--text);
+      background: var(--brand-dim);
+      color: var(--txt);
       font-weight: 600;
     }
     .win-badge {
       display: inline-block;
-      font-size: 0.58rem;
-      font-weight: 800;
-      background: rgba(77,220,120,0.15);
-      color: #4ddc78;
-      border: 1px solid rgba(77,220,120,0.3);
-      border-radius: 100px;
-      padding: 1px 7px;
+      font-family: var(--mono);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: var(--brand-dim);
+      color: var(--brand);
+      border: 1px solid var(--brand-borda);
+      border-radius: 4px;
+      padding: 1px 6px;
       margin-left: 6px;
       vertical-align: middle;
-      letter-spacing: 0.02em;
     }
-    .cp-bool-yes { color: #4ddc78; font-weight: 700; }
-    .cp-bool-no { color: var(--text-dim); }
-    .val-dash { color: var(--text-dim); }
+    .cp-bool-yes { color: var(--brand); font-weight: 700; }
+    .cp-bool-no { color: var(--txt-2); opacity: 0.6; }
+    .val-dash { color: var(--txt-2); opacity: 0.6; }
 
-    /* Connectivity port pills */
+    /* pills de conectividade */
     .cp-port {
       display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 700;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      font-weight: 600;
       padding: 3px 9px;
-      border-radius: 100px;
-      background: rgba(79,163,199,0.09);
-      border: 1px solid rgba(79,163,199,0.2);
-      color: var(--primary);
+      border-radius: 5px;
+      background: var(--brand-dim);
+      border: 1px solid var(--brand-borda);
+      color: var(--brand);
       white-space: nowrap;
     }
 
-    /* Calc row */
-    .cp-tr-calc .cp-td-val {
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
+    /* linha da calculadora de distância */
+    .cp-tr-calc .cp-td-val { font-weight: 700; font-size: 14px; }
     .cp-calc-cell {
       padding: 10px 16px;
       display: flex;
@@ -561,66 +544,72 @@
       gap: 8px;
       white-space: nowrap;
     }
-    .cp-calc-label { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); }
+    .cp-calc-label { font-size: 0.75rem; font-weight: 600; color: var(--txt-2); }
     .cp-calc-input {
       width: 76px;
       padding: 6px 10px;
-      background: var(--bg-primary);
-      border: 1px solid rgba(79,163,199,0.28);
-      border-radius: 8px;
-      color: var(--text);
-      font-family: inherit;
-      font-size: 0.88rem;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: var(--txt);
+      font-family: var(--mono);
+      font-size: 13px;
       outline: none;
-      transition: border-color var(--transition);
+      transition: border-color 150ms;
       -moz-appearance: textfield;
     }
     .cp-calc-input::-webkit-outer-spin-button,
     .cp-calc-input::-webkit-inner-spin-button { -webkit-appearance: none; }
-    .cp-calc-input:focus { border-color: var(--primary); }
-    .cp-calc-unit { font-size: 0.72rem; color: var(--text-dim); }
+    .cp-calc-input:focus { border-color: var(--brand); }
+    .cp-calc-unit { font-family: var(--mono); font-size: 10.5px; color: var(--txt-2); }
 
-    /* ── PURCHASE SECTION ─────────────────────── */
+    /* ── ONDE COMPRAR ─────────────────────────── */
     .cp-purchase-wrap { margin-top: 36px; }
     .cp-purchase-title {
-      font-size: 0.68rem;
-      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-dim);
+      letter-spacing: 0.16em;
+      color: var(--brand);
       margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
     }
+    .cp-purchase-title::after { content: ''; height: 1px; flex: 1; background: var(--line); }
     .cp-purchase-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 16px;
+      gap: 14px;
     }
     .cp-pcard {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-xl);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
       padding: 22px 22px 20px;
       border-top-width: 3px;
     }
-    .cp-pcard[data-slot="0"] { border-top-color: var(--primary); }
-    .cp-pcard[data-slot="1"] { border-top-color: #ffd23c; }
-    .cp-pcard[data-slot="2"] { border-top-color: #b07aff; }
+    .cp-pcard[data-slot="0"] { border-top-color: #5BC8EE; }
+    .cp-pcard[data-slot="1"] { border-top-color: #F6C453; }
+    .cp-pcard[data-slot="2"] { border-top-color: #B07AFF; }
     .cp-pcard-brand {
-      font-size: 0.65rem;
-      font-weight: 700;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-dim);
+      letter-spacing: 0.14em;
+      color: var(--txt-2);
       margin-bottom: 4px;
     }
     .cp-pcard-model {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--text);
+      font-family: var(--display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--txt);
       margin-bottom: 14px;
       line-height: 1.2;
+      letter-spacing: -0.01em;
     }
     /* Brand+model viram link no purchase card quando tem página individual */
     a.cp-pcard-name-link {
@@ -628,20 +617,20 @@
       color: inherit;
       text-decoration: none;
       margin-bottom: 14px;
-      transition: color 0.15s ease;
+      transition: color 150ms;
       position: relative;
     }
     a.cp-pcard-name-link .cp-pcard-brand,
     a.cp-pcard-name-link .cp-pcard-model { margin-bottom: 4px; }
     a.cp-pcard-name-link .cp-pcard-model { margin-bottom: 0; }
-    a.cp-pcard-name-link:hover .cp-pcard-model { color: var(--accent); }
+    a.cp-pcard-name-link:hover .cp-pcard-model { color: var(--brand); }
     a.cp-pcard-name-link .cp-pcard-link-arrow {
       position: absolute;
       top: 2px;
       right: 0;
-      color: var(--primary);
+      color: var(--brand);
       opacity: 0.45;
-      transition: opacity 0.18s ease, transform 0.18s ease;
+      transition: opacity 180ms, transform 180ms;
     }
     a.cp-pcard-name-link:hover .cp-pcard-link-arrow {
       opacity: 1;
@@ -649,42 +638,41 @@
     }
     .cp-pcard-price {
       font-size: 0.78rem;
-      color: var(--text-muted);
+      color: var(--txt-2);
       margin-bottom: 16px;
       line-height: 1.5;
     }
-    .cp-pcard-price strong { color: var(--accent); font-size: 1rem; }
+    .cp-pcard-price strong { font-family: var(--mono); color: var(--num); font-size: 1rem; }
     .cp-price-block {
       margin-bottom: 16px;
       line-height: 1.35;
       word-break: break-word;
     }
+    .cp-price-block .regua-blk { margin: 12px 0 0; }
     .cp-price-current {
-      font-size: 1.35rem;
+      font-family: var(--mono);
+      font-size: 22px;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--txt);
     }
     .cp-price-marketplace {
-      font-size: 0.78rem;
+      font-family: Inter, sans-serif;
+      font-size: 12px;
       font-weight: 500;
-      color: var(--text-muted);
+      color: var(--txt-2);
       margin-left: 4px;
     }
-    .cp-price-history {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
     .cp-price-meta {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      margin-top: 2px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--txt-2);
+      margin-top: 4px;
     }
     .cp-price-meta strong {
-      color: var(--accent);
+      color: var(--brand);
       font-weight: 600;
       padding: 1px 5px;
-      background: rgba(143, 211, 255, 0.08);
+      background: var(--brand-dim);
       border-radius: 3px;
     }
     .cp-tag-importado {
@@ -692,111 +680,73 @@
       align-items: center;
       margin-left: 7px;
       padding: 2px 8px;
-      font-size: 0.7rem;
+      font-family: var(--mono);
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: #FFAA32;
-      background: rgba(255, 170, 50, 0.15);
-      border-radius: 100px;
+      color: var(--alerta);
+      background: rgba(255,155,122,0.12);
+      border: 1px solid rgba(255,155,122,0.4);
+      border-radius: 4px;
       vertical-align: middle;
     }
     @media (max-width: 480px) {
-      .cp-price-current { font-size: 1.15rem; }
+      .cp-price-current { font-size: 19px; }
       .cp-price-marketplace { display: block; margin-left: 0; margin-top: 2px; }
     }
     .cp-store-btns { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
+    /* Visual do .btn-loja (v2): amarelo é exclusivo de botão de compra */
     .cp-store-btn {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 16px;
-      border-radius: var(--radius);
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: all var(--transition);
       gap: 8px;
-      background: #fff;
-      color: #222;
-      border: 1.5px solid rgba(0,0,0,0.08);
-      box-shadow: var(--elev-store);
+      background: var(--cta);
+      color: #14100A;
+      text-decoration: none;
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 14px;
+      border-radius: var(--radius);
       min-height: 44px;
+      padding: 8px 14px;
+      transition: transform 100ms, filter 100ms;
     }
-    .cp-store-btn:hover { transform: translateY(-1px); box-shadow: var(--elev-store-hover); }
-
-    /* Cue de scroll horizontal da tabela no mobile (10/06/2026): hint + fade na
-       borda direita enquanto houver conteúdo escondido; some no fim do scroll. */
-    .cp-scroll-hint { display: none; }
-    .cp-scroll-shell { position: relative; }
-    .cp-scroll-shell::after {
-      content: '';
-      position: absolute;
-      top: 0; right: 0; bottom: 0;
-      width: 36px;
-      background: linear-gradient(to left, rgba(11,11,11,0.85), transparent);
-      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.25s ease;
-    }
-    .cp-scroll-shell.has-overflow::after { opacity: 1; }
-    .cp-scroll-shell.at-end::after { opacity: 0; }
-    @media (max-width: 760px) {
-      .cp-scroll-hint {
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-        font-size: 0.74rem;
-        font-weight: 600;
-        color: var(--text-muted);
-        margin-bottom: 8px;
-        padding: 5px 12px;
-        border: 1px solid var(--border);
-        border-radius: 100px;
-        background: rgba(79,163,199,0.06);
-      }
-    }
-    .cp-store-shopee { color: #EE4D2D; }
-    .cp-store-shopee:hover { border-color: rgba(238,77,45,0.45); }
-    .cp-store-ml { color: #1a3fbf; }
-    .cp-store-ml:hover { border-color: rgba(26,63,191,0.4); }
-    .cp-store-ali { color: #e43225; }
-    .cp-store-ali:hover { border-color: rgba(228,50,37,0.45); }
-    .cp-store-amazon { color: #b35d00; }
-    .cp-store-amazon:hover { border-color: rgba(255,153,0,0.45); }
+    .cp-store-btn:hover { filter: brightness(1.08); }
+    .cp-store-btn:active { transform: translateY(2px); }
     .cp-store-name { display: inline-flex; align-items: center; justify-content: center; gap: 6px; flex: 1; }
-    .cp-store-logo { width: auto; object-fit: contain; flex-shrink: 0; display: block; }
-    .cp-store-ali .cp-store-logo    { height: 24px; }
-    .cp-store-shopee .cp-store-logo { height: 28px; }
-    .cp-store-ml .cp-store-logo     { height: 26px; margin-left: -8px; }
-    .cp-ext-icon { flex-shrink: 0; opacity: 0.7; }
+    .cp-ext-icon { flex-shrink: 0; opacity: 0.65; }
+    /* cupom (Ali-only): chip tracejado ciano do v2 */
     .cp-cupom {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(79,163,199,0.06);
-      border: 1px dashed rgba(79,163,199,0.28);
-      border-radius: 8px;
-      padding: 7px 12px;
-      margin-top: 6px;
+      gap: 10px;
+      background: rgba(91,200,238,0.10);
+      border: 1px dashed rgba(91,200,238,0.55);
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-top: 8px;
     }
-    .cp-cupom-label { font-size: 0.62rem; color: var(--text-dim); margin-bottom: 2px; }
-    .cp-cupom-code { font-size: 0.8rem; font-weight: 700; color: var(--accent); font-family: monospace; letter-spacing: 0.04em; }
+    .cp-cupom-label { font-family: var(--mono); font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--txt-2); margin-bottom: 2px; }
+    .cp-cupom-code { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--num); letter-spacing: 0.05em; text-transform: uppercase; }
     .cp-cupom-copy {
       background: none;
-      border: none;
-      color: var(--primary);
-      font-size: 0.7rem;
+      border: 1px solid var(--brand-borda);
+      color: var(--brand);
+      font-family: var(--mono);
+      font-size: 10.5px;
       font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
       cursor: pointer;
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-family: inherit;
-      transition: background var(--transition);
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background 150ms;
       flex-shrink: 0;
     }
-    .cp-cupom-copy:hover { background: rgba(79,163,199,0.14); }
+    .cp-cupom-copy:hover { background: var(--brand-dim); }
     .cp-review-btn {
       display: flex;
       align-items: center;
@@ -805,17 +755,51 @@
       width: 100%;
       padding: 10px 14px;
       border-radius: var(--radius);
-      border: 1px solid rgba(79,163,199,0.28);
+      border: 1px solid var(--line);
       background: transparent;
-      color: var(--accent);
-      font-size: 0.82rem;
-      font-weight: 600;
+      color: var(--txt);
+      font-family: var(--display);
+      font-size: 14px;
+      font-weight: 700;
       text-decoration: none;
       margin-top: 14px;
-      transition: all var(--transition);
+      transition: color 150ms, border-color 150ms, background 150ms;
     }
-    .cp-review-btn:hover { background: rgba(79,163,199,0.08); border-color: var(--primary); }
-    .cp-no-links { font-size: 0.78rem; color: var(--text-dim); }
+    .cp-review-btn:hover { border-color: var(--brand); color: var(--brand); }
+    .cp-no-links { font-family: var(--mono); font-size: 11.5px; color: var(--txt-2); }
+
+    /* ── cue de scroll horizontal da tabela ───── */
+    .cp-scroll-hint { display: none; }
+    .cp-scroll-shell { position: relative; }
+    .cp-scroll-shell::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 36px;
+      background: linear-gradient(to left, rgba(9,12,17,0.85), transparent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 250ms;
+    }
+    .cp-scroll-shell.has-overflow::after { opacity: 1; }
+    .cp-scroll-shell.at-end::after { opacity: 0; }
+    @media (max-width: 760px) {
+      .cp-scroll-hint {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-family: var(--mono);
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--txt-2);
+        margin-bottom: 8px;
+        padding: 6px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--card);
+      }
+    }
 
     /* ── TOAST ────────────────────────────────── */
     .cp-toast {
@@ -823,23 +807,24 @@
       bottom: 32px;
       left: 50%;
       transform: translateX(-50%) translateY(16px);
-      background: #1a1f3a;
-      border: 1px solid rgba(79,163,199,0.38);
+      background: var(--card-2);
+      border: 1px solid var(--brand-borda);
       border-radius: var(--radius);
       padding: 12px 24px;
-      font-size: 0.875rem;
+      font-family: var(--mono);
+      font-size: 13px;
       font-weight: 600;
-      color: var(--accent);
+      color: var(--brand);
       z-index: 9999;
       pointer-events: none;
       opacity: 0;
-      transition: all 0.28s cubic-bezier(0.34,1.56,0.64,1);
+      transition: opacity 280ms, transform 280ms cubic-bezier(0.34,1.56,0.64,1);
       box-shadow: 0 8px 32px rgba(0,0,0,0.45);
       white-space: nowrap;
     }
     .cp-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-    /* ── RESPONSIVE ───────────────────────────── */
+    /* ── RESPONSIVO ───────────────────────────── */
     @media (max-width: 900px) {
       .cp-slots { grid-template-columns: repeat(2, 1fr); }
       .cp-radar-card { flex-direction: column; gap: 20px; padding: 24px 20px; }
@@ -850,13 +835,13 @@
       .cp-controls { flex-direction: column; align-items: stretch; }
       .cp-ctrl-btn, .cp-share-btn { justify-content: center; width: 100%; }
       .cp-radar-svg-wrap { max-width: 200px; }
-      /* Offset dinâmico também no mobile (header + barra de quedas variam) */
+      /* Offset dinâmico também no mobile (a altura do header varia) */
       .cp-thead { top: var(--cp-header-h, 60px); }
       .cp-tr-section td { top: calc(var(--cp-header-h, 60px) + var(--cp-thead-h, 70px)); }
       .cp-modal-overlay { padding: 12px; }
     }
     @media (max-width: 480px) {
-      /* Força colunas a respeitar a largura definida — sem isso o conteúdo expande as células */
+      /* Força colunas a respeitar a largura definida; sem isso o conteúdo expande as células */
       .cp-table { table-layout: fixed; }
       .cp-th-corner, .cp-td-label {
         min-width: 90px; width: 90px; max-width: 90px;
@@ -868,108 +853,83 @@
         padding: 10px 8px 12px;
       }
       .cp-th-top-bar { margin: -10px -8px 6px; }
-      .cp-th-brand { font-size: 0.62rem; }
+      .cp-th-brand { font-size: 9px; }
       .cp-th-model { font-size: 0.86rem; }
       .cp-th-wins-badge {
-        font-size: 0.6rem;
+        font-size: 9px;
         padding: 2px 6px;
         line-height: 1.35;
         white-space: normal;
       }
       .cp-td-val {
         padding: 11px 7px;
-        font-size: 0.78rem;
+        font-size: 12px;
         word-break: break-word;
         overflow-wrap: break-word;
       }
       .cp-modal { max-width: 100%; }
     }
-
-    /* ── MODAL CLOSE BUTTON ───────────────────── */
-    .cp-modal-top-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 12px;
-    }
-    .cp-modal-title { margin-bottom: 0; }
-    .cp-modal-close {
-      background: none;
-      border: 1px solid transparent;
-      color: var(--text-dim);
-      font-size: 1.25rem;
-      cursor: pointer;
-      padding: 2px 8px;
-      border-radius: 6px;
-      line-height: 1;
-      transition: all var(--transition);
-      font-family: inherit;
-      flex-shrink: 0;
-    }
-    .cp-modal-close:hover {
-      color: var(--text);
-      background: rgba(255,255,255,0.07);
-      border-color: rgba(255,255,255,0.1);
-    }
-    .cp-modal-clear-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 7px 18px;
-      border-radius: 100px;
-      border: 1px solid var(--border);
-      background: none;
-      color: var(--primary);
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      font-family: inherit;
-      transition: all var(--transition);
-    }
-    .cp-modal-clear-btn:hover { border-color: var(--primary); background: rgba(79,163,199,0.08); }
   </style>
 </head>
 <body>
 
   <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
 
-  <header id="header">
-    <div class="container header-inner">
-      <a href="/" class="logo-link">
-        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img" width="402" height="216">
-      </a>
-      <nav id="mainNav">
-        <a href="projetores.html" class="nav-link">Projetores</a>
-        <a href="comparar.html" class="nav-link" style="color:var(--primary);font-weight:600;">Comparativo</a>
-        <a href="qual-projetor.html" class="nav-link">Encontre seu projetor</a>
-        <a href="precos.html" class="nav-link">Preços ao Vivo</a>
-        <a href="ranking.html" class="nav-link">Ranking</a>
-        <a href="acessorios-projetores.html" class="nav-link">Acessórios</a>
-        <a href="/#calculadora" class="nav-link">Calculadora</a>
-        <a href="/#sobre" class="nav-link">Sobre</a>
+  <div class="quedas" id="barra-quedas"></div>
+
+  <header class="topo">
+    <div class="wrap header-in">
+      <a class="logo" href="/"><img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216"></a>
+      <div class="busca">
+        <span class="lupa" aria-hidden="true"></span>
+        <input id="busca-input" type="search" placeholder="Buscar projetor..." autocomplete="off" aria-label="Buscar projetor">
+        <div class="busca-drop" id="busca-drop" role="listbox"></div>
+      </div>
+      <nav class="principal" aria-label="Navegação principal">
+        <a href="projetores.html">Projetores</a>
+        <a class="atual" href="comparar.html">Comparativo</a>
+        <a href="qual-projetor.html">Encontre seu projetor</a>
+        <a class="destaque" href="precos.html">Preços ao Vivo</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="acessorios-projetores.html">Acessórios</a>
+        <a href="calculadora-ansi.html">Calculadora</a>
+        <a href="sobre.html">Sobre</a>
       </nav>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
+  <div class="menu-mobile" id="menu-mobile">
+    <button class="fechar" id="menu-fechar">Fechar X</button>
+    <a href="projetores.html">Projetores</a>
+    <a href="comparar.html">Comparativo</a>
+    <a href="qual-projetor.html">Encontre seu projetor</a>
+    <a href="precos.html">Preços ao Vivo</a>
+    <a href="ranking.html">Ranking</a>
+    <a href="acessorios-projetores.html">Acessórios</a>
+    <a href="calculadora-ansi.html">Calculadora</a>
+    <a href="sobre.html">Sobre</a>
+  </div>
+
   <main id="main">
-  <section class="cp-hero">
-    <div class="container">
-      <div class="section-tag">Dados Reais do Canal</div>
-      <h1>Compare até 3<br><span class="gradient-text">projetores</span></h1>
-      <p>Todas as specs testadas no canal, lado a lado. Escolha os modelos e decida você mesmo.</p>
+
+  <section class="page-head sem-borda">
+    <div class="wrap">
+      <div class="migalha"><a href="/">Home</a> <span class="sep">/</span> <span>Comparar</span></div>
+      <div class="eyebrow">Dados reais do canal</div>
+      <h1>Compare até 3 <span class="grad">projetores</span> lado a lado</h1>
+      <p class="sub">Todas as specs testadas no canal. Escolha os modelos e decida você mesmo.</p>
     </div>
   </section>
 
-  <section class="cp-selector">
-    <div class="container">
+  <section class="cp-selector sem-borda">
+    <div class="wrap">
       <div class="cp-slots" id="slotsContainer"></div>
     </div>
   </section>
 
-  <section class="cp-comparison" id="compSection" style="display:none">
-    <div class="container">
+  <section class="cp-comparison sem-borda" id="compSection" style="display:none">
+    <div class="wrap">
 
       <div class="cp-controls">
         <div class="cp-controls-left">
@@ -993,8 +953,8 @@
           <div class="cp-radar-info-title">Perfil de desempenho</div>
           <div class="cp-radar-legend" id="radarLegend"></div>
           <div class="cp-radar-axes-note">
-            Eixos: <strong>Brilho</strong> (ANSI) · <strong>Input Lag</strong> (invertido — menor lag = maior pontuação) · <strong>Áudio</strong> (potência total) · <strong>Ótica</strong> (tier de selagem) · <strong>Duração</strong> (uso contínuo)<br>
-            Normalizado em relação ao maior valor entre os 68 projetores do banco.
+            Eixos: <strong>Brilho</strong> (ANSI) · <strong>Input Lag</strong> (invertido: menor lag pontua mais) · <strong>Áudio</strong> (potência total) · <strong>Ótica</strong> (tier de selagem) · <strong>Duração</strong> (uso contínuo)<br>
+            Normalizado em relação ao maior valor entre todos os projetores testados no canal.
           </div>
         </div>
       </div>
@@ -1037,16 +997,62 @@
   <div class="cp-toast" id="toast"></div>
   </main>
 
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216">
+          <p>Projetores testados de verdade na bancada do canal SchardTech.</p>
+          <div class="social">
+            <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="ico" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg></a>
+            <span class="off" aria-label="Instagram em breve"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.51"/></svg></span>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h4>Navegação</h4>
+          <a href="projetores.html">Projetores</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="politica-privacidade.html">Privacidade</a>
+          <a href="mailto:contato@schardtech.com.br">Contato</a>
+        </div>
+        <div class="foot-col">
+          <h4>Ferramentas</h4>
+          <a href="ranking.html">Ranking dos testes</a>
+          <a href="qual-projetor.html">Encontre seu projetor</a>
+          <a href="comparar.html">Comparar projetores</a>
+          <a href="acessorios-projetores.html">Acessórios</a>
+        </div>
+        <div class="foot-col">
+          <h4>Conteúdo</h4>
+          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <span class="off">Instagram (em breve)</span>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <p>&copy; 2026 SchardTech. Todos os direitos reservados.</p>
+        <p style="margin-top: 6px;">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js" defer></script>
-  <script src="projetores-data.js"></script>
-  <script src="prices-overlay.js"></script>
-  <script src="search-global.js" defer></script>
+  <script src="projetores-data.js" defer></script>
+  <script src="prices-overlay.js" defer></script>
+  <script src="ui-interacoes.js" defer></script>
   <script>
+  /* Comparador (reskin v2, Etapa B1). Tudo dentro do DOMContentLoaded: os
+     <script defer> acima (dados + overlay + UI2) já executaram quando ele
+     dispara; o que depende de preço espera window.PRICES_OVERLAY_READY.
+     Header/menu/busca/barra de quedas são do ui-interacoes.js. */
+  document.addEventListener('DOMContentLoaded', function () {
+
     /* ═══════════════════════════════════════════
        STATE
     ═══════════════════════════════════════════ */
     const selected = [null, null, null];
-    const COLORS   = ['#4FA3C7', '#ffd23c', '#b07aff'];
+    const COLORS   = ['#5BC8EE', '#F6C453', '#B07AFF'];
     let activeSlot   = -1;
     let showOnlyDiff = false;
     let activeBrand  = null;
@@ -1137,13 +1143,13 @@
 
     function fmtPrice(min, max) {
       if (!min && !max) return null;
-      const r = n => 'R$ ' + Math.round(Number(n)).toLocaleString('pt-BR');
+      const r = n => 'R$ ' + Math.round(Number(n)).toLocaleString('pt-BR');
       if (min && max && Math.round(min) !== Math.round(max)) return `${r(min)} – ${r(max)}`;
       return r(min || max);
     }
 
     function fmtMarketplaceLabel(slug) {
-      // Retorna {label, prep} — preposição obedece o gênero do marketplace.
+      // Retorna {label, prep}: a preposição obedece o gênero do marketplace.
       return ({
         'aliexpress':    { label: 'AliExpress',    prep: 'no' },
         'shopee':        { label: 'Shopee',        prep: 'na' },
@@ -1166,19 +1172,22 @@
     }
 
     function priceHtmlRich(p) {
-      // Render expandido (preço atual + marketplace + min/max histórico) com
-      // dados do prices-overlay.js. Fallback pro display antigo quando overlay
-      // não trouxe dados (produto fora do prices.json mas com preço estático).
+      // Render expandido (preço atual + marketplace + régua min/máx histórico)
+      // com dados do prices-overlay.js. Fallback pro display antigo quando o
+      // overlay não trouxe dados (produto fora do prices.json mas com preço estático).
       const r = n => 'R$ ' + Math.round(Number(n)).toLocaleString('pt-BR');
       if (p.preco_atual) {
         const mk   = fmtMarketplaceLabel(p.marketplace_vencedor);
         const min  = p.preco_min_historico;
         const max  = p.preco_max_historico;
-        const hist = (min && max && Math.round(min) !== Math.round(max))
-          ? `<div class="cp-price-history">min ${r(min)} · max ${r(max)}</div>`
-          : '';
+        let regua = '';
+        if (min && max && Math.round(min) !== Math.round(max)) {
+          const pos = Math.round(Math.max(0, Math.min(1, (p.preco_atual - min) / (max - min))) * 100);
+          regua = `<div class="regua-blk"><div class="regua"><div class="r-fill" style="width:${pos}%"></div><div class="r-dot" style="left:${pos}%"></div></div>` +
+            `<div class="regua-labels"><span class="min">mín ${r(min)}</span><span>máx ${r(max)}</span></div></div>`;
+        }
         const imp  = (p.status === 'importado')
-          ? `<span class="cp-tag-importado" title="Produto importado — pode ter ICMS e prazo de entrega maior">importado</span>`
+          ? `<span class="cp-tag-importado" title="Produto importado: pode ter ICMS e prazo de entrega maior">importado</span>`
           : '';
         const mkSpan = mk ? ` <span class="cp-price-marketplace">${mk.prep} ${mk.label}</span>` : '';
         const venc = (p.marketplaces && p.marketplaces[p.marketplace_vencedor]) || {};
@@ -1191,7 +1200,7 @@
         return `<div class="cp-price-block">
           <div class="cp-price-current">${r(p.preco_atual)}${mkSpan}${imp}</div>
           ${extraLine}
-          ${hist}
+          ${regua}
         </div>`;
       }
       const faixa = fmtPrice(p.preco_min, p.preco_max);
@@ -1248,19 +1257,19 @@
       for (let lvl = 1; lvl <= 5; lvl++) {
         const r = R * lvl / 5;
         const pts = Array.from({length:N}, (_,i) => pt(i,r).map(v=>v.toFixed(2)).join(',')).join(' ');
-        svg += `<polygon points="${pts}" fill="none" stroke="rgba(79,163,199,${lvl===5?'0.22':'0.09'})" stroke-width="${lvl===5?1.5:0.8}"/>`;
+        svg += `<polygon points="${pts}" fill="none" stroke="rgba(91,200,238,${lvl===5?'0.25':'0.10'})" stroke-width="${lvl===5?1.5:0.8}"/>`;
       }
 
       /* axis lines */
       for (let i = 0; i < N; i++) {
         const [x,y] = pt(i, R);
-        svg += `<line x1="${CX}" y1="${CY}" x2="${x.toFixed(2)}" y2="${y.toFixed(2)}" stroke="rgba(79,163,199,0.18)" stroke-width="1"/>`;
+        svg += `<line x1="${CX}" y1="${CY}" x2="${x.toFixed(2)}" y2="${y.toFixed(2)}" stroke="rgba(91,200,238,0.18)" stroke-width="1"/>`;
       }
 
       /* labels */
       for (let i = 0; i < N; i++) {
         const [x,y] = pt(i, R + 22);
-        svg += `<text x="${x.toFixed(2)}" y="${y.toFixed(2)}" text-anchor="middle" dominant-baseline="middle" fill="rgba(234,234,234,0.5)" font-size="11" font-family="Inter,sans-serif" font-weight="600">${LABELS[i]}</text>`;
+        svg += `<text x="${x.toFixed(2)}" y="${y.toFixed(2)}" text-anchor="middle" dominant-baseline="middle" fill="#8D9CB2" font-size="11" font-family="Inter,sans-serif" font-weight="600">${LABELS[i]}</text>`;
       }
 
       /* projector polygons */
@@ -1382,7 +1391,7 @@
       /* PERFORMANCE */
       sec('Performance');
       row({
-        label:'Input Lag', hint:'Medido pelo canal — menor é melhor para jogos',
+        label:'Input Lag', hint:'Medido pelo canal. Menor é melhor para jogos',
         dir:'low',
         vals:    projs.map(p=>p.input_lag_ms),
         display: projs.map(p=>p.input_lag_ms ? `${p.input_lag_ms} ms` : null),
@@ -1407,7 +1416,7 @@
       sec('Projeção');
       row({
         label:'Throw Ratio (100pol)',
-        hint:'Distância para projetar 100pol — sem vencedor, depende do ambiente',
+        hint:'Distância para projetar 100pol. Sem vencedor: depende do ambiente',
         dir:'none',
         vals:projs.map(p=>p.distancia_100pol||null),
       });
@@ -1448,7 +1457,7 @@
         display: projs.map(p=>p.consumo_w ? `${p.consumo_w} W` : null),
       });
       row({
-        label:'Eficiência Energética', hint:'Watts por ANSI — menor = mais eficiente por brilho',
+        label:'Eficiência Energética', hint:'Watts por ANSI. Menor = mais eficiente por brilho',
         dir:'low',
         vals:    projs.map(p=>(p.consumo_w&&p.brilho_ansi)?+(p.consumo_w/p.brilho_ansi).toFixed(2):null),
         display: projs.map(p=>{
@@ -1457,7 +1466,7 @@
         }),
       });
       row({
-        label:'Real por ANSI', hint:'Preço por ANSI de brilho — menor = melhor',
+        label:'Real por ANSI', hint:'Preço por ANSI de brilho. Menor = melhor',
         dir:'low',
         vals: projs.map(p=>{
           const aplicavel = p.brilho_ansi && p.preco_atual
@@ -1470,11 +1479,11 @@
           if(!p.brilho_ansi)
             return '<span class="val-dash" title="Sem ANSI medido">—</span>';
           if(p.status === 'importado')
-            return '<span class="val-dash" title="Internacional: ICMS e importação tornam o custo enganoso — cálculo não se aplica">— internacional</span>';
+            return '<span class="val-dash" title="Internacional: ICMS e importação distorcem o custo, então o cálculo não se aplica">internacional</span>';
           if(String(p.status||'').startsWith('sem_estoque') || p.status === 'indisponivel')
-            return '<span class="val-dash" title="Sem estoque: sem preço do dia — cálculo não se aplica">— sem estoque</span>';
+            return '<span class="val-dash" title="Sem estoque: sem preço do dia, então o cálculo não se aplica">sem estoque</span>';
           if(!p.preco_atual)
-            return '<span class="val-dash" title="Sem preço checado do dia — cálculo não se aplica">— sem preço do dia</span>';
+            return '<span class="val-dash" title="Sem preço checado do dia, então o cálculo não se aplica">sem preço do dia</span>';
           return `R$ ${(p.preco_atual/p.brilho_ansi).toFixed(2)}/ANSI`;
         }),
       });
@@ -1482,12 +1491,12 @@
       return rows;
     }
 
-    /* Mede header fixo (+ barra de quedas) e thead, publicando nas vars CSS
-       dos offsets sticky. Roda no render, no scroll (o header encolhe quando
-       a página scrolla) e no resize — throttle via rAF. */
+    /* Mede o header sticky do v2 e o thead, publicando nas vars CSS dos
+       offsets sticky. Roda no render, no scroll e no resize (a altura do
+       header varia com o wrap da busca no mobile) — throttle via rAF. */
     let _stickyRaf = null;
     function syncStickyOffsets() {
-      const header = document.getElementById('header');
+      const header = document.querySelector('header.topo');
       if (header) document.documentElement.style.setProperty('--cp-header-h', header.getBoundingClientRect().height + 'px');
       const theadEl = document.querySelector('.cp-thead');
       if (theadEl) document.documentElement.style.setProperty('--cp-thead-h', theadEl.offsetHeight + 'px');
@@ -1539,14 +1548,14 @@
 
         if (row.type === 'calc') {
           html += `<tr class="cp-tr cp-tr-calc">
-            <td class="cp-td-label" style="padding:0;border-right:1px solid var(--border)">
+            <td class="cp-td-label" style="padding:0;border-right:1px solid var(--line)">
               <div class="cp-calc-cell">
                 <span class="cp-calc-label">Com</span>
                 <input type="number" class="cp-calc-input" id="calcDist" placeholder="2.5" min="0.3" max="20" step="0.1" oninput="updateCalc()" aria-label="Distância em metros para cálculo do tamanho da imagem">
-                <span class="cp-calc-unit">metros →</span>
+                <span class="cp-calc-unit">metros &rarr;</span>
               </div>
             </td>
-            ${row.projs.map((_,i) => `<td class="cp-td-val" id="calcV${i}" style="color:var(--text-dim);border-left:1px solid var(--border)">—</td>`).join('')}
+            ${row.projs.map((_,i) => `<td class="cp-td-val" id="calcV${i}" style="color:var(--txt-2);border-left:1px solid var(--line)">—</td>`).join('')}
           </tr>`;
           return;
         }
@@ -1597,9 +1606,9 @@
       html += '</tbody>';
       document.getElementById('compTable').innerHTML = html;
 
-      /* offsets sticky com medidas REAIS: header fixo (+ barra de quedas) muda
-         de altura no scroll, e o thead muda com fonte/badges — medir uma vez
-         em 64px fixo deixava conteúdo vazando (bug 10/06/2026). */
+      /* offsets sticky com medidas REAIS: o header muda de altura conforme o
+         viewport, e o thead muda com fonte/badges — medir uma vez em 64px
+         fixo deixava conteúdo vazando (bug 10/06/2026). */
       requestAnimationFrame(syncStickyOffsets);
 
       /* restore calc distance */
@@ -1616,11 +1625,11 @@
       selected.filter(Boolean).forEach((p, i) => {
         const cell = document.getElementById(`calcV${i}`);
         if (!cell) return;
-        if (!calcDist || !p.distancia_100pol_m) { cell.textContent='—'; cell.style.color='var(--text-dim)'; return; }
+        if (!calcDist || !p.distancia_100pol_m) { cell.textContent='—'; cell.style.color='var(--txt-2)'; return; }
         const pol = Math.round((calcDist / p.distancia_100pol_m) * 100);
-        if (pol < 20) { cell.textContent='< 20pol'; cell.style.color='#e06060'; }
-        else if (pol > 300) { cell.textContent='> 300pol'; cell.style.color='#e06060'; }
-        else { cell.textContent=`~${pol} pol`; cell.style.color='var(--accent)'; }
+        if (pol < 20) { cell.textContent='< 20pol'; cell.style.color='var(--alerta)'; }
+        else if (pol > 300) { cell.textContent='> 300pol'; cell.style.color='var(--alerta)'; }
+        else { cell.textContent=`~${pol} pol`; cell.style.color='var(--num)'; }
       });
     }
 
@@ -1662,10 +1671,10 @@
         const priceBlock = priceHtmlRich(p);
         const mk = p.marketplaces || {};
         const storesData = [];
-        if (safeUrl(p.amazon_url)) storesData.push({ preco: mk.amazon?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-amazon" aria-label="Amazon"><span class="cp-store-name">Amazon</span>${EXT}</a>` });
-        if (safeUrl(p.ml_url))     storesData.push({ preco: mk.ml?.preco         ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-ml" aria-label="Mercado Livre"><span class="cp-store-name"><img src="./logo ml2.png" alt="" class="cp-store-logo">Mercado Livre</span>${EXT}</a>` });
-        if (safeUrl(p.shopee_url)) storesData.push({ preco: mk.shopee?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-shopee" aria-label="Shopee"><span class="cp-store-name"><img src="./logo shopee.png" alt="Shopee" class="cp-store-logo"></span>${EXT}</a>` });
-        if (safeUrl(p.ali_url))    storesData.push({ preco: mk.aliexpress?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="noopener noreferrer" class="cp-store-btn cp-store-ali" aria-label="AliExpress"><span class="cp-store-name"><img src="./logo ali.svg" alt="AliExpress" class="cp-store-logo"></span>${EXT}</a>` });
+        if (safeUrl(p.amazon_url)) storesData.push({ preco: mk.amazon?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="sponsored noopener" class="cp-store-btn cp-store-amazon" aria-label="Comprar na Amazon"><span class="cp-store-name">Amazon</span>${EXT}</a>` });
+        if (safeUrl(p.ml_url))     storesData.push({ preco: mk.ml?.preco         ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="sponsored noopener" class="cp-store-btn cp-store-ml" aria-label="Comprar no Mercado Livre"><span class="cp-store-name">Mercado Livre</span>${EXT}</a>` });
+        if (safeUrl(p.shopee_url)) storesData.push({ preco: mk.shopee?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="sponsored noopener" class="cp-store-btn cp-store-shopee" aria-label="Comprar na Shopee"><span class="cp-store-name">Shopee</span>${EXT}</a>` });
+        if (safeUrl(p.ali_url))    storesData.push({ preco: mk.aliexpress?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="sponsored noopener" class="cp-store-btn cp-store-ali" aria-label="Comprar no AliExpress"><span class="cp-store-name">AliExpress</span>${EXT}</a>` });
         storesData.sort((a, b) => a.preco - b.preco);
         const stores = storesData.map(s => s.html);
 
@@ -1739,7 +1748,7 @@
                 <span class="spec-tag tag-type">${p.tecnologia}</span>
                 <span class="spec-tag">${p.resolucao_nativa}</span>
                 ${p.brilho_ansi ? `<span class="spec-tag">${p.brilho_ansi} ANSI</span>` : ''}
-                ${price ? `<span class="spec-tag" style="color:var(--accent)">${price}</span>` : ''}
+                ${price ? `<span class="spec-tag" style="color:var(--num)">${price}</span>` : ''}
               </div>
             </div>
           </div>`;
@@ -1907,7 +1916,6 @@
 
     /* ═══════════════════════════════════════════
        INIT
-       Header scroll + mobile menu controlados via script.js (initHeader + initMobileMenu).
     ═══════════════════════════════════════════ */
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') closeModal();
@@ -1940,6 +1948,15 @@
       if (btn) copyText(btn.dataset.code, 'Cupom copiado!');
     });
 
+    /* handlers chamados por atributos onclick/oninput do HTML (estático e gerado) */
+    window.toggleDiff = toggleDiff;
+    window.shareUrl = shareUrl;
+    window.handleOverlayClick = handleOverlayClick;
+    window.filterModal = filterModal;
+    window.openModal = openModal;
+    window.removeProj = removeProj;
+    window.updateCalc = updateCalc;
+
     // Espera o overlay de preços (data/prices.json) antes do primeiro render.
     // Se o overlay falhar, a Promise resolve com null e o site renderiza com dados
     // estáticos antigos de projetores-data.js — backward-compat garantido.
@@ -1947,54 +1964,8 @@
       loadFromUrl();
       renderAll();
     });
+  });
   </script>
-
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="/" class="logo-link">
-          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo" width="402" height="216">
-        </a>
-        <div class="footer-social">
-          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
-          </a>
-          <span class="social-link social-disabled" aria-label="Instagram (em breve)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          </span>
-        </div>
-      </div>
-      <div class="footer-nav">
-        <div class="footer-col">
-          <h4>Navegação</h4>
-          <a href="/">Projetores</a>
-          <a href="/sobre.html">Sobre</a>
-          <a href="/politica-privacidade.html">Privacidade</a><a href="mailto:contato@schardtech.com.br">Contato</a>
-        </div>
-        <div class="footer-col">
-          <h4>Ferramentas</h4>
-          <a href="ranking.html">Ranking dos testes</a><a href="qual-projetor.html">Encontre seu projetor</a>
-          <a href="comparar.html">Comparar projetores</a>
-          <a href="acessorios-projetores.html">Acessórios</a>
-        </div>
-        <div class="footer-col">
-          <h4>Conteúdo</h4>
-          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
-          <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <span class="footer-disabled">Instagram (em breve)</span>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© 2026 SchardTech — Todos os direitos reservados</p>
-        <p style="margin-top:8px;font-size:0.78rem;color:var(--text-dim);">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
-      </div>
-    </div>
-  </footer>
   <script>
     // Estado do cue de scroll da tabela (10/06/2026): mostra o fade/hint só
     // quando há coluna escondida e apaga quando o scroll chega no fim.

@@ -15,10 +15,10 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <title>SchardTech — Projetores Testados no Canal</title>
+  <title>SchardTech · Projetores Testados no Canal</title>
   <meta name="description" content="Projetores testados pessoalmente no canal SchardTech. Reviews reais com ANSI Lumens medido, input lag testado e specs verificadas. Encontre o projetor ideal para você.">
   <link rel="canonical" href="https://schardtech.com.br/">
-  <meta property="og:title" content="SchardTech — Projetores Testados no Canal">
+  <meta property="og:title" content="SchardTech · Projetores Testados no Canal">
   <meta property="og:description" content="Projetores testados pessoalmente no canal SchardTech. Reviews reais com ANSI Lumens medido, input lag testado e specs verificadas.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://schardtech.com.br/">
@@ -27,7 +27,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SchardTech — Projetores Testados no Canal">
+  <meta name="twitter:title" content="SchardTech · Projetores Testados no Canal">
   <meta name="twitter:description" content="Reviews reais com ANSI Lumens medido, input lag testado e specs verificadas. Encontre seu projetor ideal.">
   <meta name="twitter:image" content="https://schardtech.com.br/og-image.jpg">
   <script type="application/ld+json">
@@ -53,353 +53,600 @@
     "name": "SchardTech",
     "url": "https://schardtech.com.br",
     "logo": "https://schardtech.com.br/favicon-512.png",
-    "description": "Canal e site de reviews de projetores com medição real: ANSI Lumens com luxímetro, input lag e specs verificadas. Mais de 60 projetores testados.",
+    "description": "Canal e site de reviews de projetores com medição real: ANSI Lumens com luxímetro, input lag e specs verificadas. Mais de 70 projetores testados.",
     "sameAs": [
       "https://www.youtube.com/@SchardTech",
       "https://www.tiktok.com/@schardtech"
     ]
   }
   </script>
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    /* Hero (10/06/2026): prova social + 1 CTA primário; ferramentas viram
-       cards secundários (outline) pra hierarquia ficar clara */
-    .hero-stats { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 22px 0 26px; }
-    .hero-stat { display: inline-flex; align-items: center; gap: 7px; font-size: 0.78rem; font-weight: 600; color: var(--accent); background: rgba(79,163,199,0.08); border: 1px solid var(--border); border-radius: 100px; padding: 7px 15px; }
-    .hero-stat svg { flex-shrink: 0; }
-    .btn-hero { font-size: 1rem; padding: 16px 34px; }
-    .home-tools { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
-    .home-tool-card { display: flex; flex-direction: column; background: rgba(79,163,199,0.07); border: 1px solid rgba(79,163,199,0.2); border-radius: 14px; padding: 28px 28px 24px; }
-    .home-tool-card .ht-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--primary); margin: 0 0 10px; }
-    .home-tool-card .ht-desc { margin: 0 0 22px; line-height: 1.6; }
-    .home-tool-card .btn { margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; }
-    @media (max-width: 880px) { .home-tools { grid-template-columns: 1fr; } }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="v2.css">
 </head>
 <body>
 
   <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
 
-  <!-- HEADER -->
-  <header id="header">
-    <div class="container header-inner">
-      <a href="/" class="logo-link">
-        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img" width="402" height="216">
-      </a>
-      <nav id="mainNav">
-        <a href="projetores.html" class="nav-link">Projetores</a>
-        <a href="comparar.html" class="nav-link">Comparativo</a>
-        <a href="qual-projetor.html" class="nav-link">Encontre seu projetor</a>
-        <a href="precos.html" class="nav-link">Preços ao Vivo</a>
-        <a href="ranking.html" class="nav-link">Ranking</a>
-        <a href="acessorios-projetores.html" class="nav-link">Acessórios</a>
-        <a href="/#calculadora" class="nav-link">Calculadora</a>
-        <a href="/#sobre" class="nav-link">Sobre</a>
+  <div class="quedas" id="barra-quedas"></div>
+
+  <header class="topo">
+    <div class="wrap header-in">
+      <a class="logo" href="/"><img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216"></a>
+      <div class="busca">
+        <span class="lupa" aria-hidden="true"></span>
+        <input id="busca-input" type="search" placeholder="Buscar projetor..." autocomplete="off" aria-label="Buscar projetor">
+        <div class="busca-drop" id="busca-drop" role="listbox"></div>
+      </div>
+      <nav class="principal" aria-label="Navegação principal">
+        <a href="projetores.html">Projetores</a>
+        <a href="#comparativo">Comparativo</a>
+        <a href="qual-projetor.html">Encontre seu projetor</a>
+        <a class="destaque" href="precos.html">Preços ao Vivo</a>
+        <a href="#ranking">Ranking</a>
+        <a href="acessorios-projetores.html">Acessórios</a>
+        <a href="calculadora-ansi.html">Calculadora</a>
+        <a href="sobre.html">Sobre</a>
       </nav>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
+  <div class="menu-mobile" id="menu-mobile">
+    <button class="fechar" id="menu-fechar">Fechar X</button>
+    <a href="projetores.html">Projetores</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="qual-projetor.html">Encontre seu projetor</a>
+    <a href="precos.html">Preços ao Vivo</a>
+    <a href="#ranking">Ranking</a>
+    <a href="acessorios-projetores.html">Acessórios</a>
+    <a href="calculadora-ansi.html">Calculadora</a>
+    <a href="sobre.html">Sobre</a>
+  </div>
+
   <main id="main">
-  <!-- HERO -->
-  <section class="section" style="padding:100px 0 0;">
-    <div class="container">
-      <div class="section-header fade-in" style="text-align:center;max-width:700px;margin:0 auto;">
-        <div class="section-tag">Canal SchardTech</div>
-        <h1>Escolha o projetor certo. <span class="gradient-text">Com dados reais.</span></h1>
-        <p>Mais de 60 projetores testados com ANSI Lumens medido, input lag aferido e specs verificadas.</p>
+
+  <section class="hero sem-borda">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Escolha o projetor certo. <span class="grad">Com dados reais.</span></h1>
+        <p class="sub">Mais de <span class="js-dezena">70</span> projetores testados com ANSI Lumens medido, input lag aferido e specs verificadas.</p>
         <div class="hero-stats">
-          <span class="hero-stat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-            60+ projetores testados
-          </span>
-          <span class="hero-stat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-            ANSI medido com luxímetro
-          </span>
-          <span class="hero-stat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-            Preços monitorados todo dia
-          </span>
+          <span class="hero-stat"><span class="js-dezena">70</span>+ testados</span>
+          <span class="hero-stat">ANSI com luxímetro</span>
+          <span class="hero-stat">Preços 4x ao dia</span>
         </div>
-        <a href="qual-projetor.html" class="btn btn-primary btn-hero">
-          Qual projetor comprar?
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <a class="btn btn-primary" href="qual-projetor.html">Qual projetor comprar? <span class="seta">&rarr;</span></a>
+      </div>
+      <div class="painel" id="painel-vivo"></div>
+    </div>
+  </section>
+
+  <section id="projetores" class="sem-borda" style="padding-top: 0;">
+    <div class="wrap">
+      <div class="sec-head-row reveal">
+        <div>
+          <div class="eyebrow"><span class="num">01</span> Testados no canal</div>
+          <h2>Mais de <span class="js-dezena">70</span> projetores testados</h2>
+          <p class="sec-sub">Escolha a faixa de preço: os melhores por custo-benefício, na mesma régua do recomendador. Brilho e input lag medidos na bancada.</p>
+        </div>
+        <a class="btn btn-outline" href="projetores.html">Ver todos os projetores <span class="seta">&rarr;</span></a>
+      </div>
+      <div class="rank-chips reveal" id="faixa-chips" role="tablist" aria-label="Faixa de preço"></div>
+      <div class="prod-grid" id="prod-grid"></div>
+    </div>
+  </section>
+
+  <section id="comparativo">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow"><span class="num">02</span> Comparativo</div>
+        <h2>Coloque dois frente a frente</h2>
+        <p class="sec-sub">Escolha dois modelos e veja o preço de hoje lado a lado. As specs completas ficam na página do comparativo.</p>
+      </div>
+      <div class="vs-painel reveal">
+        <div class="vs-selects">
+          <select class="sel" id="vs-a" aria-label="Projetor A"></select>
+          <span class="vs-circle">VS</span>
+          <select class="sel" id="vs-b" aria-label="Projetor B"></select>
+        </div>
+        <div class="vs-preview" id="vs-preview"></div>
+        <div class="vs-cta">
+          <span class="v-nota">preços da rodada de hoje · specs completas no comparativo</span>
+          <a class="btn btn-primary" id="vs-link" href="comparar.html">Comparar specs completas <span class="seta">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ranking">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow"><span class="num">03</span> Ranking</div>
+        <h2>Top 5 da bancada</h2>
+        <p class="sec-sub" id="rank-sub">Os maiores ANSI Lumens que já passaram pelo luxímetro da bancada.</p>
+      </div>
+      <div class="rank-chips reveal" id="rank-chips" role="tablist" aria-label="Métrica do ranking"></div>
+      <div class="podio" id="podio"></div>
+      <div class="rank-rows" id="rank-rows"></div>
+      <div class="rank-foot reveal">
+        <span class="r-nota" id="rank-nota">medições feitas no padrão ANSI de 9 pontos</span>
+        <a class="btn btn-outline" href="ranking.html">Ver o ranking completo <span class="seta">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="ferramentas">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow"><span class="num">04</span> Ferramentas</div>
+        <h2>Pra fechar a escolha</h2>
+      </div>
+      <div class="tools-grid">
+        <a class="tool reveal" href="qual-projetor.html">
+          <span class="t-topo"><span class="t-ico"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12" y2="17.01"/></svg></span><span class="t-nome">Encontre seu projetor</span></span>
+          <span class="t-desc">Responda o que você quer assistir, onde e por quanto: o site aponta o modelo certo.</span>
+          <span class="t-cta">Fazer o teste &rarr;</span>
         </a>
-      </div>
-      <div class="fade-in home-tools">
-        <div class="home-tool-card">
-          <p class="ht-eyebrow">Já tem dois modelos em mente?</p>
-          <p class="ht-desc">Compare specs lado a lado: ANSI Lumens, contraste, resolução e preço — tudo na mesma tela, sem abrir mil abas.</p>
-          <a href="comparar.html" class="btn btn-outline">
-            Comparar projetores
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
-          </a>
-        </div>
-        <div class="home-tool-card">
-          <p class="ht-eyebrow">Quanto custa hoje?</p>
-          <p class="ht-desc">Tabela ao vivo de todos os modelos: veja quem <strong>caiu de preço</strong> em 24h, 7 ou 20 dias e compre direto pelo link com o cupom do dia.</p>
-          <a href="precos.html" class="btn btn-outline">
-            Preços ao vivo
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-          </a>
-        </div>
-        <div class="home-tool-card">
-          <p class="ht-eyebrow">Faltou alguma coisa?</p>
-          <p class="ht-desc">Telas, suportes, tripés e sticks de TV — os acessórios certos pra montar seu setup, cada um resolvendo um problema específico.</p>
-          <a href="acessorios-projetores.html" class="btn btn-outline">
-            Ver acessórios
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTORS SECTION -->
-  <section id="projetores" class="section">
-    <div class="container">
-      <div class="section-header fade-in" style="text-align:center;max-width:680px;margin:0 auto;">
-        <div class="section-tag">Testados no Canal</div>
-        <h2>Mais de 60 projetores <span class="gradient-text">testados</span></h2>
-        <p>Cada modelo foi testado pessoalmente no canal — ANSI Lumens medido, input lag aferido e specs verificadas. Navegue o acervo completo, filtre por marca e preço, e veja também os que vendo à pronta-entrega.</p>
-        <a href="projetores.html" class="btn btn-primary" style="margin-top:24px;">
-          Ver todos os projetores
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <a class="tool reveal" href="acessorios-projetores.html">
+          <span class="t-topo"><span class="t-ico"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span><span class="t-nome">Acessórios</span></span>
+          <span class="t-desc">Telas, suportes, tripés e sticks de TV pra completar o setup.</span>
+          <span class="t-cta">Ver acessórios &rarr;</span>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CALCULADORA ANSI LUMENS -->
-  <section id="calculadora" class="section">
-    <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-tag">Ferramenta</div>
-        <h2>Calculadora <span class="gradient-text">ANSI Lumens</span></h2>
-      </div>
-
-      <div class="ansi-app-tip fade-in">
-        <div class="ansi-tip-main">
-          <span class="ansi-tip-icon">📱</span>
-          <div>Não tem luxímetro? Use um app de medição de luz no celular — funciona como referência. <strong>Atenção: celular costuma registrar 10 a 20% a menos</strong> que um luxímetro profissional.</div>
-        </div>
-        <div class="ansi-store-links">
-          <a href="https://play.google.com/store/apps/details?id=com.phuongpn.illuminance.luxlight&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="ansi-store-btn">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.33.19.7.24 1.06.15l12.74-7.36-2.9-2.9L3.18 23.76zm-1.9-20.5C1.1 3.6 1 4 1 4.43v15.14c0 .43.1.83.28 1.17l8.55-8.55-8.55-8.93zm20.13 8.88-2.9-1.68-3.23 3.23 3.23 3.23 2.92-1.68c.83-.48.83-1.62-.02-2.1zM4.24.09l12.74 7.36-2.9 2.9L4.17.24C4.51.15 4.9.21 5.24.4z"/></svg>
-            Android
-          </a>
-          <a href="https://apps.apple.com/br/app/lux-light-meter-exponometer/id6447008772" target="_blank" rel="noopener noreferrer" class="ansi-store-btn">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            iOS
-          </a>
-        </div>
-      </div>
-
-      <div class="ansi-layout fade-in">
-
-        <div class="ansi-svg-panel">
-          <p class="ansi-panel-label">Padrão de medição ANSI (9 pontos)</p>
-          <div class="ansi-svg-wrapper">
-            <svg id="ansiSvg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <mask id="wm-mask">
-                  <rect width="1920" height="1080" fill="white"/>
-                  <circle cx="320" cy="180" r="135" fill="black"/>
-                  <circle cx="960" cy="180" r="135" fill="black"/>
-                  <circle cx="1600" cy="180" r="135" fill="black"/>
-                  <circle cx="320" cy="540" r="135" fill="black"/>
-                  <circle cx="960" cy="540" r="135" fill="black"/>
-                  <circle cx="1600" cy="540" r="135" fill="black"/>
-                  <circle cx="320" cy="900" r="135" fill="black"/>
-                  <circle cx="960" cy="900" r="135" fill="black"/>
-                  <circle cx="1600" cy="900" r="135" fill="black"/>
-                </mask>
-              </defs>
-              <rect width="1920" height="1080" fill="white"/>
-              <rect x="1" y="1" width="1918" height="1078" fill="none" stroke="#cccccc" stroke-width="3"/>
-              <line x1="640" y1="0" x2="640" y2="1080" stroke="#cccccc" stroke-width="3"/>
-              <line x1="1280" y1="0" x2="1280" y2="1080" stroke="#cccccc" stroke-width="3"/>
-              <line x1="0" y1="360" x2="1920" y2="360" stroke="#cccccc" stroke-width="3"/>
-              <line x1="0" y1="720" x2="1920" y2="720" stroke="#cccccc" stroke-width="3"/>
-              <!-- Row 1 -->
-              <text x="44" y="88" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">1</text>
-              <circle cx="320" cy="180" r="110" fill="none" stroke="#333333" stroke-width="5"/>
-              <text x="684" y="88" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">2</text>
-              <circle cx="960" cy="180" r="110" fill="none" stroke="#333333" stroke-width="5"/>
-              <text x="1324" y="88" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">3</text>
-              <circle cx="1600" cy="180" r="110" fill="none" stroke="#333333" stroke-width="5"/>
-              <!-- Row 2 -->
-              <text x="44" y="448" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">4</text>
-              <circle cx="320" cy="540" r="110" fill="none" stroke="#333333" stroke-width="5"/>
-              <text x="684" y="448" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">5</text>
-              <circle cx="960" cy="540" r="110" fill="none" stroke="#333333" stroke-width="5"/>
-              <text x="1324" y="448" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">6</text>
-              <circle cx="1600" cy="540" r="110" fill="none" stroke="#333333" stroke-width="5"/>
-              <!-- Row 3 -->
-              <text x="44" y="808" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">7</text>
-              <circle cx="320" cy="900" r="110" fill="none" stroke="#333333" stroke-width="5"/>
-              <text x="684" y="808" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">8</text>
-              <circle cx="960" cy="900" r="110" fill="none" stroke="#333333" stroke-width="5"/>
-              <text x="1324" y="808" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">9</text>
-              <circle cx="1600" cy="900" r="110" fill="none" stroke="#333333" stroke-width="5"/>
-              <image x="410" y="244" width="1100" height="591" opacity="0.09" mask="url(#wm-mask)" href="img/watermark.webp"/>
-            </svg>
-          </div>
-          <p class="ansi-svg-caption">Posicione o luxímetro no centro de cada círculo e registre o valor medido.</p>
-          <button class="ansi-download-btn" id="downloadAnsiBtn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 20v-2h14v2H5z"/></svg>
-            Download do guia (1080p PNG)
-          </button>
-        </div>
-
-        <div class="ansi-inputs-panel">
-          <p class="ansi-panel-label">Valores medidos (lux)</p>
-          <div class="ansi-points-grid">
-            <div class="ansi-point"><label for="p1">Ponto 1</label><input type="number" class="ansi-input" id="p1" min="0" step="0.01" placeholder="0.00"></div>
-            <div class="ansi-point"><label for="p2">Ponto 2</label><input type="number" class="ansi-input" id="p2" min="0" step="0.01" placeholder="0.00"></div>
-            <div class="ansi-point"><label for="p3">Ponto 3</label><input type="number" class="ansi-input" id="p3" min="0" step="0.01" placeholder="0.00"></div>
-            <div class="ansi-point"><label for="p4">Ponto 4</label><input type="number" class="ansi-input" id="p4" min="0" step="0.01" placeholder="0.00"></div>
-            <div class="ansi-point"><label for="p5">Ponto 5</label><input type="number" class="ansi-input" id="p5" min="0" step="0.01" placeholder="0.00"></div>
-            <div class="ansi-point"><label for="p6">Ponto 6</label><input type="number" class="ansi-input" id="p6" min="0" step="0.01" placeholder="0.00"></div>
-            <div class="ansi-point"><label for="p7">Ponto 7</label><input type="number" class="ansi-input" id="p7" min="0" step="0.01" placeholder="0.00"></div>
-            <div class="ansi-point"><label for="p8">Ponto 8</label><input type="number" class="ansi-input" id="p8" min="0" step="0.01" placeholder="0.00"></div>
-            <div class="ansi-point"><label for="p9">Ponto 9</label><input type="number" class="ansi-input" id="p9" min="0" step="0.01" placeholder="0.00"></div>
-          </div>
-          <p class="ansi-panel-label" style="margin-top:20px">Dimensões da imagem</p>
-          <div class="ansi-dims">
-            <div class="ansi-dim"><label for="ansiW">Largura (m)</label><input type="number" class="ansi-input" id="ansiW" min="0.1" step="0.01" placeholder="Ex: 2.50"></div>
-            <div class="ansi-dim"><label for="ansiH">Altura (m)</label><input type="number" class="ansi-input" id="ansiH" min="0.1" step="0.01" placeholder="Ex: 1.40"></div>
-          </div>
-          <button class="btn btn-primary ansi-calc-btn" id="calcAnsiBtn">Calcular ANSI Lumens</button>
-          <div class="ansi-result" id="ansiResult">
-            <span class="ansi-result-dashes">— — —</span>
-            <span class="ansi-result-unit">ANSI Lumens</span>
-          </div>
-          <p class="ansi-formula">Fórmula: ANSI Lumens = (Soma ÷ 9) × (Largura × Altura)</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- VIDEOS SECTION -->
-  <section id="videos" class="section section-alt">
-    <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-tag">Canal SchardTech</div>
-        <h2>Últimos <span class="gradient-text">Reviews</span></h2>
-      </div>
-      <div class="videos-grid" id="videosGrid">
-        <!-- Populado por script.js -->
-      </div>
-      <div class="section-cta fade-in">
-        <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          Ver Todos os Vídeos
+        <a class="tool reveal" href="calculadora-ansi.html">
+          <span class="t-topo"><span class="t-ico"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="12" x2="8" y2="12.01"/><line x1="12" y1="12" x2="12" y2="12.01"/><line x1="16" y1="12" x2="16" y2="12.01"/><line x1="8" y1="16" x2="8" y2="16.01"/><line x1="12" y1="16" x2="12" y2="16.01"/><line x1="16" y1="16" x2="16" y2="16.01"/></svg></span><span class="t-nome">Calculadora ANSI</span></span>
+          <span class="t-desc">Meça os 9 pontos com um luxímetro ou app e calcule o ANSI Lumens real.</span>
+          <span class="t-cta">Usar a calculadora &rarr;</span>
         </a>
       </div>
     </div>
   </section>
 
-
-  <!-- SOBRE -->
-  <section id="sobre" class="section section-alt sobre-section">
-    <div class="container sobre-inner">
-      <div class="sobre-text fade-in">
-        <div class="section-tag">O Canal</div>
-        <h2>SchardTech —<br><span class="gradient-text">Tudo sobre</span> Projetores</h2>
-        <p>Análises técnicas reais para você acertar na escolha. Mais de 60 projetores testados com equipamento de medição.</p>
-        <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver o Canal</a>
+  <section id="videos">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow"><span class="num">05</span> Canal SchardTech</div>
+        <h2>Últimos reviews</h2>
       </div>
-      <div class="sobre-badges fade-in">
-        <div class="sobre-badge-item">
-          <span class="sobre-badge-icon">📏</span>
-          <div>
-            <strong>ANSI Lumens Reais</strong>
-          </div>
-        </div>
-        <div class="sobre-badge-item">
-          <span class="sobre-badge-icon">🎮</span>
-          <div>
-            <strong>Input Lag Testado</strong>
-          </div>
-        </div>
-        <div class="sobre-badge-item">
-          <span class="sobre-badge-icon">🔊</span>
-          <div>
-            <strong>Áudio Avaliado</strong>
-          </div>
-        </div>
-        <div class="sobre-badge-item">
-          <span class="sobre-badge-icon">📱</span>
-          <div>
-            <strong>Sistema Testado</strong>
-          </div>
-        </div>
+      <div class="videos-grid" id="videos-grid"></div>
+      <div class="center reveal">
+        <a class="btn btn-primary" href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">Ver todos os vídeos <span class="seta">&rarr;</span></a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   </main>
 
+  <div class="cred">
+    <div class="wrap cred-in">
+      <span class="cred-item"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>ANSI Lumens reais</span>
+      <span class="cred-item"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M9 2h6"/></svg>Input lag testado</span>
+      <span class="cred-item"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>Áudio avaliado</span>
+      <span class="cred-item"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>Sistema testado</span>
+      <a class="btn btn-outline" href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">Ver o canal</a>
+    </div>
+  </div>
+
   <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo" width="402" height="216">
-        <div class="footer-social">
-          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
-          </a>
-          <span class="social-link social-disabled" aria-label="Instagram (em breve)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          </span>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216">
+          <p>Projetores testados de verdade na bancada do canal SchardTech.</p>
+          <div class="social">
+            <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="ico" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg></a>
+            <span class="off" aria-label="Instagram em breve"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.51"/></svg></span>
+          </div>
         </div>
-      </div>
-      <div class="footer-nav">
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Navegação</h4>
           <a href="projetores.html">Projetores</a>
-          <a href="/sobre.html">Sobre</a>
-          <a href="/politica-privacidade.html">Privacidade</a><a href="mailto:contato@schardtech.com.br">Contato</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="politica-privacidade.html">Privacidade</a>
+          <a href="mailto:contato@schardtech.com.br">Contato</a>
         </div>
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Ferramentas</h4>
-          <a href="ranking.html">Ranking dos testes</a><a href="qual-projetor.html">Encontre seu projetor</a>
+          <a href="ranking.html">Ranking dos testes</a>
+          <a href="qual-projetor.html">Encontre seu projetor</a>
           <a href="comparar.html">Comparar projetores</a>
           <a href="acessorios-projetores.html">Acessórios</a>
         </div>
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Conteúdo</h4>
           <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
           <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <span class="footer-disabled">Instagram (em breve)</span>
+          <span class="off">Instagram (em breve)</span>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© 2026 SchardTech — Todos os direitos reservados</p>
-        <p style="margin-top:8px;font-size:0.78rem;color:var(--text-dim);">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
+      <div class="foot-bottom">
+        <p>&copy; 2026 SchardTech. Todos os direitos reservados.</p>
+        <p style="margin-top: 6px;">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
       </div>
     </div>
   </footer>
 
   <script src="script.js" defer></script>
-  <!-- Busca global (depende de PROJETORES_DATA + slugs do overlay) -->
   <script src="projetores-data.js" defer></script>
   <script src="prices-overlay.js" defer></script>
-  <script src="search-global.js" defer></script>
+  <script src="ui-interacoes.js" defer></script>
+  <script>
+  /* Home v2 (Etapa B1). Roda no DOMContentLoaded: os defer acima já executaram
+     (UI2 e PROJETORES_DATA existem); o que depende de preço espera o overlay. */
+  document.addEventListener('DOMContentLoaded', function () {
+    'use strict';
+    var U = window.UI2;
+    var DATA = window.PROJETORES_DATA || [];
+    var LISTAVEIS = DATA.filter(function (p) { return p.listar !== false; });
+
+    /* ---- contadores "70+" derivados do data.js (nunca assados) ---- */
+    (function () {
+      var dez = Math.floor(LISTAVEIS.length / 10) * 10;
+      if (!(dez > 0)) return;
+      var els = document.querySelectorAll('.js-dezena');
+      for (var i = 0; i < els.length; i++) els[i].textContent = String(dez);
+    })();
+
+    /* ---- vídeos (featuredVideos vem do script.js — contrato da GitHub Action) ---- */
+    (function () {
+      var grid = document.getElementById('videos-grid');
+      if (!grid || typeof featuredVideos === 'undefined') return;
+      grid.innerHTML = featuredVideos.slice(0, 6).map(function (v, i) {
+        return '<a class="video reveal" style="transition-delay:' + (i % 3 * 70) + 'ms" href="https://www.youtube.com/watch?v=' + U.esc(v.id) + '" target="_blank" rel="noopener noreferrer">' +
+          '<span class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/' + U.esc(v.id) + '/hqdefault.jpg" alt="' + U.esc(v.title) + '"><span class="play" aria-hidden="true"></span></span>' +
+          '<p>' + U.esc(v.title) + '</p></a>';
+      }).join('');
+      U.observaReveals(grid);
+    })();
+
+    /* ---- tudo que depende de preço vivo ---- */
+    var pronto = window.PRICES_OVERLAY_READY && typeof window.PRICES_OVERLAY_READY.then === 'function'
+      ? window.PRICES_OVERLAY_READY : Promise.resolve();
+
+    /* painel "Monitor de preços · ao vivo" — contadores 100% derivados */
+    Promise.all([pronto, U.getQuedas()]).then(function (res) {
+      var q = res[1];
+      var monitorados = DATA.filter(function (p) { return p.preco_atual != null; });
+      var nHist = monitorados.filter(U.emMenorHistorico).length;
+      var nQuedas = q && Array.isArray(q.quedas) ? (q.total_quedas || q.quedas.length) : 0;
+      var meta = window.PRICES_METADATA || {};
+      var painel = document.getElementById('painel-vivo');
+      if (!painel || !monitorados.length) return;
+      painel.innerHTML =
+        '<div class="painel-topo"><span class="p-titulo">Monitor de preços</span><span class="p-live">ao vivo</span></div>' +
+        '<div class="painel-grid">' +
+        '<div class="painel-cel"><span class="p-num" data-alvo="' + monitorados.length + '">0</span><span class="p-label">projetores monitorados</span></div>' +
+        '<div class="painel-cel"><span class="p-num verde" data-alvo="' + nHist + '">0</span><span class="p-label">no menor preço histórico</span></div>' +
+        '<div class="painel-cel"><span class="p-num verde" data-alvo="' + nQuedas + '">0</span><span class="p-label">quedas nas últimas 24h</span></div>' +
+        '<div class="painel-cel"><span class="p-num ciano" data-alvo="4" data-sufixo="x">0</span><span class="p-label">verificações por dia</span></div>' +
+        '</div>' +
+        '<div class="painel-foot">última rodada ' + U.esc(U.fmtData(meta.atualizado_em || '')) + ' &middot; <a href="precos.html">ver a tabela completa</a></div>';
+      U.animaContadores(painel);
+    });
+
+    pronto.then(function () {
+
+      /* ---- 01 destaques por faixa de preço: custo-benefício OFICIAL ----
+         Score portado 1:1 do qual-projetor.html (bloco "priorizar custo-
+         benefício"), sem critério próprio. Helpers parseAudio/audioCategory
+         verbatim. Mudou lá, replica aqui. */
+      (function () {
+        function parseAudio(audioW) {
+          if (!audioW) return { total: 0, stereo: false, channels: 1 };
+          var s = String(audioW).trim().toLowerCase();
+          if (s.indexOf('x') !== -1) {
+            var parts = s.split('x').map(function (v) { return parseFloat(v); });
+            return { total: parts[0] * parts[1], stereo: parts[0] >= 2, channels: parts[0] };
+          }
+          var total = parseFloat(s) || 0;
+          return { total: total, stereo: false, channels: 1 };
+        }
+        function audioCategory(au, override) {
+          if (override) {
+            var v = String(override).trim().toLowerCase();
+            if (v === 'basico' || v === 'básico') return 'basico';
+            if (v === 'razoavel' || v === 'razoável') return 'razoavel';
+            if (v === 'bom') return 'bom';
+            if (v === 'excelente') return 'excelente';
+          }
+          if (au.channels >= 3) return 'excelente';
+          if (au.stereo && au.total >= 30) return 'excelente';
+          if (!au.stereo && au.total >= 15) return 'excelente';
+          if (au.stereo && au.total >= 16) return 'bom';
+          if (au.stereo) return 'razoavel';
+          if (au.total >= 7) return 'razoavel';
+          return 'basico';
+        }
+        var OTICA_CB = { 'Não Selada': 0, 'Não Selada+': 0.5, 'Não Selada++': 1, 'Selada-': 1.5, 'Selada': 2, 'Selada+': 2.5, 'Selada++': 3 };
+        function cbScore(p) {
+          var precoRef = p.preco_atual || p.preco_min;
+          if (!(precoRef > 0) || !p.brilho_ansi) return null;
+          var isDLP = (p.tecnologia || '').indexOf('DLP') !== -1;
+          var ansiEf = isDLP ? p.brilho_ansi * 1.5 : p.brilho_ansi;
+          var precoCalc = (p.status === 'importado') ? precoRef * 2 : precoRef;
+          var ratioPts = (ansiEf / precoCalc) * 50;
+          var os_ = p.sistema_operacional || '';
+          var osBase = os_.indexOf('Google TV') !== -1 ? 8 : os_.indexOf('Android TV') !== -1 ? 5 : os_.indexOf('WhaleOS') !== -1 ? 2 : 0;
+          var soOverride = 0;
+          if (p.marca === 'Magcubic') soOverride = 1;
+          else if (p.marca === 'Progaga' && (p.modelo === 'PG310' || p.modelo === 'PG370')) soOverride = 1;
+          var au = parseAudio(p.audio_w);
+          var aCat = audioCategory(au, p.audio_qualidade);
+          var audioBase = aCat === 'excelente' ? 4 : aCat === 'bom' ? 2 : aCat === 'razoavel' ? 1 : 0;
+          var audioOverride = 0;
+          if (p.marca === 'Wanbo') audioOverride = 2;
+          else if (p.marca === 'Wupro' && p.modelo === 'G2') audioOverride = 2;
+          else if (p.marca === 'Formovie' && p.modelo === 'Xming Episode One') audioOverride = 2;
+          else if (p.marca === 'Bettdow' && (p.modelo === 'AC1073' || p.modelo === 'AC1061')) audioOverride = 1;
+          else if (p.marca === 'Vevshao' && p.modelo === 'A22') audioOverride = 1;
+          var mahMatch = (p.cap_bateria || '').match(/\d+/);
+          var mah = mahMatch ? parseInt(mahMatch[0], 10) : 0;
+          var batBonus = mah >= 15000 ? 6 : mah >= 8000 ? 4 : p.bateria ? 2.5 : 0;
+          var lag = p.input_lag_ms;
+          var lagBonus = lag && lag <= 26 ? 8 : lag && lag <= 50 ? 4 : 0;
+          var rmaxLow = (p.resolucao_max || '').toLowerCase();
+          var k4Bonus = 0;
+          if (/4k\s*60\s*hz/.test(rmaxLow)) k4Bonus = /120\s*hz|240\s*hz/.test(rmaxLow) ? 3 : 2.5;
+          var tec = p.tecnologias || '';
+          var techBonus = (tec.indexOf('MEMC') !== -1 ? 2 : 0) + (tec.indexOf('HDR') !== -1 ? 2 : 0);
+          var bolsaBonus = p.bolsa === 'premium' ? 5 : p.bolsa === 'basica' ? 3 : 0;
+          var baseBonus = p.suporte_giratorio ? 1.5 : 0;
+          var autofocoBonus = p.autofoco === 'Sim' ? 1 : 0;
+          var oticaBonus = OTICA_CB[p.otica_selada] != null ? OTICA_CB[p.otica_selada] : 0;
+          var ramBonus = (p.ram_gb || 0) >= 3 ? 1 : 0;
+          var ansiPenalty = Math.max(0, (precoCalc / ansiEf) - 1.0) * 8;
+          var curadoriaBonus = (p.marca === 'Wupro' && p.modelo === 'G2') ? 5 : 0;
+          return ratioPts + (osBase + soOverride) + batBonus + lagBonus + k4Bonus + techBonus
+            + (audioBase + audioOverride) + bolsaBonus + baseBonus + autofocoBonus + oticaBonus + ramBonus
+            + curadoriaBonus - ansiPenalty;
+        }
+
+        var FAIXAS = [
+          { id: 'f500', chip: 'Até R$ 500', min: 0, max: 500 },
+          { id: 'f1000', chip: 'R$ 500 a 1.000', min: 500, max: 1000 },
+          { id: 'f1500', chip: 'R$ 1.000 a 1.500', min: 1000, max: 1500 },
+          { id: 'f2000', chip: 'R$ 1.500 a 2.000', min: 1500, max: 2000 }
+        ];
+        var grid = document.getElementById('prod-grid');
+        var chipsEl = document.getElementById('faixa-chips');
+        if (!grid || !chipsEl) return;
+
+        var primeira = true;
+        function render(fx) {
+          var top = LISTAVEIS
+            .map(function (p) {
+              if (!(p.preco_atual > fx.min && p.preco_atual <= fx.max)) return null;
+              var s = cbScore(p);
+              return s === null ? null : { p: p, s: s };
+            })
+            .filter(Boolean)
+            .sort(function (a, b) {
+              if (b.s !== a.s) return b.s - a.s;
+              return U.chaveNome(a.p).localeCompare(U.chaveNome(b.p), 'pt-BR');
+            })
+            .slice(0, 4);
+          grid.innerHTML = top.map(function (x, idx) {
+            var p = x.p;
+            var venc = p.marketplace_vencedor;
+            var mk = (p.marketplaces || {})[venc] || {};
+            var yt = U.ytId(p.video_url) || '';
+            var ansiPct = Math.max(4, Math.min(100, Math.round(p.brilho_ansi / 1800 * 100)));
+            var nomeHtml = '<span class="m-marca">' + U.esc(p.marca) + '</span><span class="m-modelo">' + U.esc(p.modelo) + '</span>';
+            var c = '<article class="prod reveal" style="transition-delay:' + (idx * 70) + 'ms">';
+            c += '<div class="media">' +
+              '<a class="m-video" href="https://youtu.be/' + U.esc(yt) + '" target="_blank" rel="noopener" aria-label="Review do ' + U.esc(p.marca + ' ' + p.modelo) + ' no YouTube">' +
+              '<img loading="lazy" src="https://i.ytimg.com/vi/' + U.esc(yt) + '/hq720.jpg" alt="' + U.esc(p.marca + ' ' + p.modelo) + ' testado no canal SchardTech">' +
+              '<span class="m-play" aria-hidden="true"></span></a>' +
+              (p.slug
+                ? '<a class="m-nome" href="projetor/' + U.esc(p.slug) + '.html">' + nomeHtml + '</a>'
+                : '<span class="m-nome">' + nomeHtml + '</span>') +
+              '</div>';
+            c += '<div class="prod-body">';
+            c += '<div class="stats">';
+            c += '<div class="stat"><span class="s-label">Brilho</span><div class="seg"><div class="seg-fill" data-w="' + ansiPct + '"></div></div><span class="s-val">' + p.brilho_ansi + ' ANSI</span></div>';
+            if (p.input_lag_ms) {
+              var lagPct = Math.max(4, Math.min(100, Math.round((1 - p.input_lag_ms / 200) * 100)));
+              c += '<div class="stat"><span class="s-label">Lag</span><div class="seg"><div class="seg-fill" data-w="' + lagPct + '"></div></div><span class="s-val">' + Math.round(p.input_lag_ms) + ' ms</span></div>';
+            }
+            c += '</div>';
+            c += '<span class="chip-spec">' + U.esc(p.resolucao_nativa || '') + ' nativo</span>';
+            c += '<div class="preco-row"><span class="preco">' + U.fmtBRL(p.preco_atual) + '</span>' +
+              (U.emMenorHistorico(p) ? '<span class="badge-hist" data-pop>menor histórico</span>' : '') + '</div>';
+            if (p.preco_max_historico != null) {
+              var pos = Math.round(U.posRegua(p) * 100);
+              c += '<div class="regua-blk"><div class="regua" title="mín ' + U.fmtBRL(p.preco_min_historico) + ' · máx ' + U.fmtBRL(p.preco_max_historico) + '">' +
+                '<div class="r-fill" data-w="' + pos + '"></div><div class="r-dot" data-x="' + pos + '"></div></div>' +
+                '<div class="regua-labels"><span class="min">mín ' + U.fmtBRL(p.preco_min_historico) + '</span><span>máx ' + U.fmtBRL(p.preco_max_historico) + '</span></div></div>';
+            }
+            /* cupom é Ali-only: só quando o botão manda pro AliExpress.
+               Validade vencida = código não renderiza. */
+            if (venc === 'aliexpress' && p.marketplaces && p.marketplaces.aliexpress) {
+              var ali = p.marketplaces.aliexpress;
+              var chips = [];
+              if (U.cupomVivo(ali.cupom, ali.cupom_validade)) chips.push(ali.cupom);
+              if (U.cupomVivo(ali.cupom_plataforma, ali.cupom_plataforma_validade)) chips.push(ali.cupom_plataforma);
+              if (chips.length) {
+                c += '<div class="cupom-row">' + chips.map(function (cod) {
+                  return '<button type="button" class="cupom-chip" data-cod="' + U.esc(cod) + '" data-slug="' + U.esc(p.slug || '') + '" data-source="home_destaques" title="clique para copiar">cupom ' + U.esc(cod) + '</button>';
+                }).join('') + '</div>';
+              }
+            }
+            if (mk.link) c += '<a class="btn-loja" href="' + U.esc(mk.link) + '" target="_blank" rel="sponsored noopener">' + U.esc(U.nomeLoja(venc)) + ' &middot; ' + U.fmtBRL(p.preco_atual) + '</a>';
+            c += '</div></article>';
+            return c;
+          }).join('');
+          if (primeira) {
+            U.observaReveals(grid);
+          } else {
+            var cards = grid.querySelectorAll('.prod');
+            for (var i = 0; i < cards.length; i++) U.ligaAgora(cards[i]);
+          }
+          return top;
+        }
+
+        chipsEl.innerHTML = FAIXAS.map(function (f, i) {
+          return '<button type="button" class="rank-chip' + (i === 0 ? ' ativa' : '') + '" role="tab" ' +
+            'aria-selected="' + (i === 0) + '" data-faixa="' + f.id + '">' + f.chip + '</button>';
+        }).join('');
+        chipsEl.addEventListener('click', function (ev) {
+          var btn = ev.target.closest('.rank-chip');
+          if (!btn) return;
+          chipsEl.querySelectorAll('.rank-chip').forEach(function (c) {
+            c.classList.toggle('ativa', c === btn);
+            c.setAttribute('aria-selected', c === btn ? 'true' : 'false');
+          });
+          primeira = false;
+          render(FAIXAS.filter(function (f) { return f.id === btn.dataset.faixa; })[0]);
+        });
+        var topInicial = render(FAIXAS[0]);
+
+        /* defaults do comparativo mini = 2 primeiros destaques da faixa inicial */
+        window.__vsDefaults = (topInicial || []).slice(0, 2).map(function (x) { return U.chaveNome(x.p); });
+      })();
+
+      /* ---- 02 comparativo mini ---- */
+      (function () {
+        var selA = document.getElementById('vs-a');
+        var selB = document.getElementById('vs-b');
+        var preview = document.getElementById('vs-preview');
+        var linkEl = document.getElementById('vs-link');
+        if (!selA || !selB || !preview || !linkEl) return;
+        var lista = DATA.filter(function (p) { return p.listar !== false && p.preco_atual != null; })
+          .sort(function (a, b) { return (a.marca + a.modelo).localeCompare(b.marca + b.modelo, 'pt-BR'); });
+        if (lista.length < 2) return;
+        var opts = lista.map(function (p, i) {
+          return '<option value="' + i + '">' + U.esc(p.marca + ' ' + p.modelo) + '</option>';
+        }).join('');
+        selA.innerHTML = opts;
+        selB.innerHTML = opts;
+        var defs = window.__vsDefaults || [];
+        selA.value = '0'; selB.value = '1';
+        for (var i = 0; i < lista.length; i++) {
+          if (U.chaveNome(lista[i]) === defs[0]) selA.value = String(i);
+          if (U.chaveNome(lista[i]) === defs[1]) selB.value = String(i);
+        }
+        function cartao(p) {
+          var pos = Math.round(U.posRegua(p) * 100);
+          var h = '<div class="vs-card">';
+          h += '<span class="v-marca">' + U.esc(p.marca) + '</span>';
+          h += '<div class="v-modelo">' + U.esc(p.modelo) + '</div>';
+          h += '<div class="v-preco">' + U.fmtBRL(p.preco_atual) + (U.emMenorHistorico(p) ? ' <span class="badge-hist">menor histórico</span>' : '') + '</div>';
+          h += '<div class="regua-blk"><div class="regua"><div class="r-fill" style="width:' + pos + '%"></div><div class="r-dot" style="left:' + pos + '%"></div></div>' +
+            '<div class="regua-labels"><span class="min">mín ' + U.fmtBRL(p.preco_min_historico) + '</span><span>máx ' + U.fmtBRL(p.preco_max_historico) + '</span></div></div>';
+          h += '<span class="v-loja">melhor preço hoje: ' + U.esc(U.nomeLoja(p.marketplace_vencedor)) + '</span>';
+          h += '</div>';
+          return h;
+        }
+        function render() {
+          var a = lista[parseInt(selA.value, 10)];
+          var b = lista[parseInt(selB.value, 10)];
+          if (!a || !b) return;
+          preview.innerHTML = cartao(a) + cartao(b);
+          linkEl.href = 'comparar.html?c=' + encodeURIComponent(a.modelo) + ',' + encodeURIComponent(b.modelo);
+        }
+        selA.addEventListener('change', render);
+        selB.addEventListener('change', render);
+        render();
+      })();
+
+      /* ---- 03 ranking top 5 da bancada (espelho do ranking.html) ----
+         Valor bruto medido, ordenado por métrica ativa, empate por nome.
+         Nada de score composto. Selo MEDIDO só em ANSI e input lag. */
+      (function () {
+        var RANKING = LISTAVEIS;
+        if (!RANKING.length) return;
+        var METRICAS = [
+          { id: 'ansi', chip: 'Brilho ANSI', campo: 'brilho_ansi', maiorPrimeiro: true, medido: true,
+            unidade: ' ANSI', sub: 'Os maiores ANSI Lumens que já passaram pelo luxímetro da bancada.',
+            nota: 'medições feitas no padrão ANSI de 9 pontos' },
+          { id: 'lag', chip: 'Input Lag', campo: 'input_lag_ms', maiorPrimeiro: false, medido: true,
+            unidade: ' ms', sub: 'Os menores input lag aferidos na bancada. Menor é melhor pra jogo.',
+            nota: 'aferido na bancada, modo padrão de fábrica' },
+          { id: 'consumo', campo: 'consumo_w', chip: 'Consumo', maiorPrimeiro: false, medido: false,
+            unidade: ' W', sub: 'Os que gastam menos watts na tomada em uso. Gastar menos não é vantagem sozinho: brilho custa watt.',
+            nota: 'watts lidos na tomada com o projetor em uso' }
+        ];
+        var chipsEl = document.getElementById('rank-chips');
+        var subEl = document.getElementById('rank-sub');
+        var notaEl = document.getElementById('rank-nota');
+        var podioEl = document.getElementById('podio');
+        var rowsEl = document.getElementById('rank-rows');
+        if (!chipsEl || !podioEl || !rowsEl) return;
+
+        function nomeDe(p) { return (p.marca + ' ' + p.modelo); }
+        function fmtVal(v, m) { return v.toLocaleString('pt-BR') + m.unidade; }
+
+        var primeira = true;
+        function render(m) {
+          var top = RANKING
+            .filter(function (p) { return p[m.campo] != null && p[m.campo] > 0; })
+            .sort(function (a, b) {
+              var d = m.maiorPrimeiro ? b[m.campo] - a[m.campo] : a[m.campo] - b[m.campo];
+              if (d !== 0) return d;
+              return nomeDe(a).localeCompare(nomeDe(b), 'pt-BR');
+            })
+            .slice(0, 5);
+          if (!top.length) return;
+          var maxV = Math.max.apply(null, top.map(function (p) { return p[m.campo]; }));
+          function barra(v) { return Math.max(8, Math.round(v / maxV * 100)); }
+          function segFill(v) {
+            var w = barra(v);
+            return '<div class="seg-fill" data-w="' + w + '"' + (primeira ? '' : ' style="width:' + w + '%"') + '></div>';
+          }
+          var cls = primeira ? 'reveal' : 'reveal on';
+          var tag = m.medido ? '<span class="m-tag">MEDIDO</span>' : '';
+
+          var ordem = [[1, 'p2', '2'], [0, 'p1', '1'], [2, 'p3', '3']];
+          podioEl.innerHTML = ordem.map(function (o, idx) {
+            var p = top[o[0]];
+            if (!p) return '';
+            var h = '<div class="podio-col ' + o[1] + ' ' + cls + '" style="transition-delay:' + (idx * 90) + 'ms">';
+            h += '<div class="medal">' + o[2] + '</div>';
+            h += '<span class="r-marca">' + U.esc(p.marca) + '</span>';
+            h += '<div class="r-modelo">' + U.esc(p.modelo) + '</div>';
+            h += '<span class="r-ansi">' + fmtVal(p[m.campo], m) + tag + '</span>';
+            h += '<div class="seg">' + segFill(p[m.campo]) + '</div>';
+            if (p.preco_atual != null) h += '<span class="r-preco">hoje ' + U.fmtBRL(p.preco_atual) + '</span>';
+            h += '</div>';
+            return h;
+          }).join('');
+          rowsEl.innerHTML = top.slice(3).map(function (p, i) {
+            var h = '<div class="rank-row ' + cls + '" style="transition-delay:' + (i * 70) + 'ms">';
+            h += '<span class="r-pos">' + (i + 4) + '</span>';
+            h += '<span class="r-nome"><span class="r-marca">' + U.esc(p.marca) + '</span><span class="r-modelo">' + U.esc(p.modelo) + '</span></span>';
+            h += '<div class="seg r-ansi-bar">' + segFill(p[m.campo]) + '</div>';
+            h += '<span class="r-ansi">' + fmtVal(p[m.campo], m) + '</span>';
+            h += '</div>';
+            return h;
+          }).join('');
+          subEl.textContent = m.sub;
+          notaEl.textContent = m.nota;
+          if (primeira) {
+            U.observaReveals(podioEl.parentNode);
+          }
+        }
+
+        chipsEl.innerHTML = METRICAS.map(function (m, i) {
+          return '<button type="button" class="rank-chip' + (i === 0 ? ' ativa' : '') + '" role="tab" ' +
+            'aria-selected="' + (i === 0) + '" data-metrica="' + m.id + '">' + m.chip + '</button>';
+        }).join('');
+        chipsEl.addEventListener('click', function (ev) {
+          var btn = ev.target.closest('.rank-chip');
+          if (!btn) return;
+          chipsEl.querySelectorAll('.rank-chip').forEach(function (c) {
+            c.classList.toggle('ativa', c === btn);
+            c.setAttribute('aria-selected', c === btn ? 'true' : 'false');
+          });
+          primeira = false;
+          render(METRICAS.filter(function (m) { return m.id === btn.dataset.metrica; })[0]);
+        });
+        render(METRICAS[0]);
+      })();
+
+    });
+  });
+  </script>
 </body>
 </html>

@@ -465,7 +465,8 @@
       ['.proj-store-btn',  'card_topo'],
       ['.pt-offer-btn',    'tabela_precos'],
       ['.cp-store-btn',    'comparador'],
-      ['.qp-store-btn',    'recomendador']
+      ['.qp-store-btn',    'recomendador'],
+      ['.btn-loja',        'v2_card']
     ];
     var COPY_SOURCES = [
       ['.copy-btn',            'card_topo'],
@@ -496,6 +497,15 @@
         var row = el.closest('tr, .pt-card');
         var nm = row && row.querySelector('.pt-name-txt');
         if (nm) produto = nm.textContent.trim();
+      }
+      if (!produto) {
+        // cards do redesign v2 (home/páginas de código): marca+modelo no .m-nome ou .vs-card
+        var v2 = el.closest('.prod, .vs-card');
+        if (v2) {
+          var ma = v2.querySelector('.m-marca, .v-marca');
+          var mo = v2.querySelector('.m-modelo, .v-modelo');
+          produto = ((ma ? ma.textContent : '') + ' ' + (mo ? mo.textContent : '')).trim();
+        }
       }
       return produto;
     }

@@ -289,7 +289,7 @@ function calcAnsiLumens() {
 
 function showAnsiError(msg) {
   const el = document.getElementById('ansiResult');
-  if (el) el.innerHTML = `<span class="ansi-result-error">⚠ ${msg}</span>`;
+  if (el) el.innerHTML = `<span class="ansi-result-error">${msg}</span>`;
 }
 
 function downloadAnsiGuide() {

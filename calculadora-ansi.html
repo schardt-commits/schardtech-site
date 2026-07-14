@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net;">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7738V0HHSF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7738V0HHSF');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon-192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>Calculadora ANSI Lumens · Meça o Brilho Real do Projetor | SchardTech</title>
+  <meta name="description" content="Calcule o ANSI Lumens real do seu projetor: meça 9 pontos com luxímetro ou app de luz, informe o tamanho da imagem e veja o brilho verdadeiro. Grátis, com guia 1080p.">
+  <link rel="canonical" href="https://schardtech.com.br/calculadora-ansi.html">
+  <meta property="og:title" content="Calculadora ANSI Lumens · SchardTech">
+  <meta property="og:description" content="Meça os 9 pontos com um luxímetro ou app e calcule o ANSI Lumens real do seu projetor.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://schardtech.com.br/calculadora-ansi.html">
+  <meta property="og:site_name" content="SchardTech">
+  <meta property="og:image" content="https://schardtech.com.br/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora ANSI Lumens · SchardTech">
+  <meta name="twitter:description" content="Meça os 9 pontos e calcule o ANSI Lumens real do seu projetor.">
+  <meta name="twitter:image" content="https://schardtech.com.br/og-image.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora ANSI Lumens",
+    "url": "https://schardtech.com.br/calculadora-ansi.html",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
+    "description": "Calculadora gratuita de ANSI Lumens: medição em 9 pontos no padrão ANSI com luxímetro ou app de luz.",
+    "publisher": { "@type": "Organization", "name": "SchardTech", "url": "https://schardtech.com.br" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="v2.css">
+  <style>
+    /* dica do app de luz */
+    .ansi-app-tip {
+      display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+      background: var(--brand-dim); border: 1px solid var(--brand-borda); border-radius: var(--radius);
+      padding: 16px 20px; margin-bottom: 28px; color: var(--txt-2); font-size: 14.5px; line-height: 1.6;
+    }
+    .ansi-tip-main { display: flex; align-items: center; gap: 14px; flex: 1; min-width: 260px; }
+    .ansi-tip-main svg { color: var(--brand); flex-shrink: 0; }
+    .ansi-tip-main strong { color: var(--txt); }
+    .ansi-store-links { display: flex; gap: 8px; }
+    .ansi-store-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--txt);
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 8px 14px; text-decoration: none; transition: border-color 150ms, color 150ms;
+    }
+    .ansi-store-btn:hover { border-color: var(--brand); color: var(--brand); }
+
+    /* layout em 2 painéis */
+    .ansi-layout { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 14px; align-items: start; }
+    .ansi-svg-panel, .ansi-inputs-panel { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+    .ansi-panel-label { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--txt-2); margin-bottom: 14px; }
+    .ansi-svg-wrapper { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+    .ansi-svg-wrapper svg { display: block; width: 100%; height: auto; }
+    .ansi-svg-caption { color: var(--txt-2); font-size: 13px; margin-top: 12px; line-height: 1.6; }
+    .ansi-download-btn {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; cursor: pointer;
+      font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--brand);
+      background: transparent; border: 1px solid var(--brand-borda); border-radius: var(--radius); padding: 10px 16px;
+      transition: background 150ms;
+    }
+    .ansi-download-btn:hover { background: var(--brand-dim); }
+
+    .ansi-points-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .ansi-point label, .ansi-dim label { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--txt-2); margin-bottom: 5px; }
+    .ansi-input {
+      width: 100%; height: 42px; padding: 0 10px; text-align: center;
+      background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
+      color: var(--txt); font-family: var(--mono); font-size: 13.5px; outline: none;
+    }
+    .ansi-input:focus { border-color: var(--brand); }
+    .ansi-input::placeholder { color: var(--txt-2); opacity: 0.6; }
+    .ansi-dims { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .ansi-calc-btn { width: 100%; justify-content: center; margin-top: 20px; }
+    .ansi-result {
+      margin-top: 16px; padding: 18px; text-align: center;
+      background: var(--bg-2); border: 1px dashed var(--line); border-radius: var(--radius);
+    }
+    .ansi-result-dashes { display: block; font-family: var(--mono); font-size: 26px; font-weight: 700; color: var(--txt-2); }
+    .ansi-result-value { display: block; font-family: var(--mono); font-size: 34px; font-weight: 700; color: var(--num); }
+    .ansi-result-unit { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--txt-2); margin-top: 4px; }
+    .ansi-result-error { font-family: var(--mono); font-size: 13px; color: var(--alerta); }
+    .ansi-formula { font-family: var(--mono); font-size: 11.5px; color: var(--txt-2); margin-top: 14px; text-align: center; }
+
+    /* como funciona */
+    .ansi-como { border-top: 0; padding-top: 56px; }
+    .ansi-como .wrap { max-width: 780px; }
+    .ansi-como p { color: var(--txt-2); line-height: 1.75; margin-bottom: 14px; font-size: 15.5px; }
+    .ansi-como strong { color: var(--txt); }
+    .ansi-como a { color: var(--brand); }
+
+    @media (max-width: 980px) {
+      .ansi-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 700px) {
+      .ansi-points-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .ansi-svg-panel, .ansi-inputs-panel { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
+  <div class="quedas" id="barra-quedas"></div>
+
+  <header class="topo">
+    <div class="wrap header-in">
+      <a class="logo" href="/"><img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216"></a>
+      <div class="busca">
+        <span class="lupa" aria-hidden="true"></span>
+        <input id="busca-input" type="search" placeholder="Buscar projetor..." autocomplete="off" aria-label="Buscar projetor">
+        <div class="busca-drop" id="busca-drop" role="listbox"></div>
+      </div>
+      <nav class="principal" aria-label="Navegação principal">
+        <a href="projetores.html">Projetores</a>
+        <a href="comparar.html">Comparativo</a>
+        <a href="qual-projetor.html">Encontre seu projetor</a>
+        <a class="destaque" href="precos.html">Preços ao Vivo</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="acessorios-projetores.html">Acessórios</a>
+        <a class="atual" href="calculadora-ansi.html">Calculadora</a>
+        <a href="sobre.html">Sobre</a>
+      </nav>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="menu-mobile" id="menu-mobile">
+    <button class="fechar" id="menu-fechar">Fechar X</button>
+    <a href="projetores.html">Projetores</a>
+    <a href="comparar.html">Comparativo</a>
+    <a href="qual-projetor.html">Encontre seu projetor</a>
+    <a href="precos.html">Preços ao Vivo</a>
+    <a href="ranking.html">Ranking</a>
+    <a href="acessorios-projetores.html">Acessórios</a>
+    <a href="calculadora-ansi.html">Calculadora</a>
+    <a href="sobre.html">Sobre</a>
+  </div>
+
+  <main id="main">
+    <section class="page-head sem-borda">
+      <div class="wrap">
+        <div class="migalha"><a href="/">Home</a> <span class="sep">/</span> <span>Calculadora ANSI</span></div>
+        <div class="eyebrow">Ferramenta</div>
+        <h1>Calculadora <span class="grad">ANSI Lumens</span></h1>
+        <p class="sub">O mesmo método que usamos na bancada do canal: 9 pontos medidos na imagem projetada, no padrão ANSI. Meça, preencha e descubra o brilho real do seu projetor.</p>
+      </div>
+    </section>
+
+    <section class="sem-borda" style="padding-top: 0;">
+      <div class="wrap">
+
+        <div class="ansi-app-tip reveal">
+          <div class="ansi-tip-main">
+            <svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+            <div>Não tem luxímetro? Use um app de medição de luz no celular, que funciona como referência. <strong>Atenção: celular costuma registrar 10 a 20% a menos</strong> que um luxímetro profissional.</div>
+          </div>
+          <div class="ansi-store-links">
+            <a href="https://play.google.com/store/apps/details?id=com.phuongpn.illuminance.luxlight&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="ansi-store-btn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.33.19.7.24 1.06.15l12.74-7.36-2.9-2.9L3.18 23.76zm-1.9-20.5C1.1 3.6 1 4 1 4.43v15.14c0 .43.1.83.28 1.17l8.55-8.55-8.55-8.93zm20.13 8.88-2.9-1.68-3.23 3.23 3.23 3.23 2.92-1.68c.83-.48.83-1.62-.02-2.1zM4.24.09l12.74 7.36-2.9 2.9L4.17.24C4.51.15 4.9.21 5.24.4z"/></svg>
+              Android
+            </a>
+            <a href="https://apps.apple.com/br/app/lux-light-meter-exponometer/id6447008772" target="_blank" rel="noopener noreferrer" class="ansi-store-btn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              iOS
+            </a>
+          </div>
+        </div>
+
+        <div class="ansi-layout">
+
+          <div class="ansi-svg-panel reveal">
+            <p class="ansi-panel-label">Padrão de medição ANSI (9 pontos)</p>
+            <div class="ansi-svg-wrapper">
+              <svg id="ansiSvg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <mask id="wm-mask">
+                    <rect width="1920" height="1080" fill="white"/>
+                    <circle cx="320" cy="180" r="135" fill="black"/>
+                    <circle cx="960" cy="180" r="135" fill="black"/>
+                    <circle cx="1600" cy="180" r="135" fill="black"/>
+                    <circle cx="320" cy="540" r="135" fill="black"/>
+                    <circle cx="960" cy="540" r="135" fill="black"/>
+                    <circle cx="1600" cy="540" r="135" fill="black"/>
+                    <circle cx="320" cy="900" r="135" fill="black"/>
+                    <circle cx="960" cy="900" r="135" fill="black"/>
+                    <circle cx="1600" cy="900" r="135" fill="black"/>
+                  </mask>
+                </defs>
+                <rect width="1920" height="1080" fill="white"/>
+                <rect x="1" y="1" width="1918" height="1078" fill="none" stroke="#cccccc" stroke-width="3"/>
+                <line x1="640" y1="0" x2="640" y2="1080" stroke="#cccccc" stroke-width="3"/>
+                <line x1="1280" y1="0" x2="1280" y2="1080" stroke="#cccccc" stroke-width="3"/>
+                <line x1="0" y1="360" x2="1920" y2="360" stroke="#cccccc" stroke-width="3"/>
+                <line x1="0" y1="720" x2="1920" y2="720" stroke="#cccccc" stroke-width="3"/>
+                <!-- Linha 1 -->
+                <text x="44" y="88" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">1</text>
+                <circle cx="320" cy="180" r="110" fill="none" stroke="#333333" stroke-width="5"/>
+                <text x="684" y="88" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">2</text>
+                <circle cx="960" cy="180" r="110" fill="none" stroke="#333333" stroke-width="5"/>
+                <text x="1324" y="88" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">3</text>
+                <circle cx="1600" cy="180" r="110" fill="none" stroke="#333333" stroke-width="5"/>
+                <!-- Linha 2 -->
+                <text x="44" y="448" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">4</text>
+                <circle cx="320" cy="540" r="110" fill="none" stroke="#333333" stroke-width="5"/>
+                <text x="684" y="448" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">5</text>
+                <circle cx="960" cy="540" r="110" fill="none" stroke="#333333" stroke-width="5"/>
+                <text x="1324" y="448" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">6</text>
+                <circle cx="1600" cy="540" r="110" fill="none" stroke="#333333" stroke-width="5"/>
+                <!-- Linha 3 -->
+                <text x="44" y="808" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">7</text>
+                <circle cx="320" cy="900" r="110" fill="none" stroke="#333333" stroke-width="5"/>
+                <text x="684" y="808" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">8</text>
+                <circle cx="960" cy="900" r="110" fill="none" stroke="#333333" stroke-width="5"/>
+                <text x="1324" y="808" font-family="Arial,sans-serif" font-size="72" font-weight="600" fill="#555555">9</text>
+                <circle cx="1600" cy="900" r="110" fill="none" stroke="#333333" stroke-width="5"/>
+                <image x="410" y="244" width="1100" height="591" opacity="0.09" mask="url(#wm-mask)" href="img/watermark.webp"/>
+              </svg>
+            </div>
+            <p class="ansi-svg-caption">Posicione o luxímetro no centro de cada círculo e registre o valor medido.</p>
+            <button class="ansi-download-btn" id="downloadAnsiBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 20v-2h14v2H5z"/></svg>
+              Download do guia (1080p PNG)
+            </button>
+          </div>
+
+          <div class="ansi-inputs-panel reveal">
+            <p class="ansi-panel-label">Valores medidos (lux)</p>
+            <div class="ansi-points-grid">
+              <div class="ansi-point"><label for="p1">Ponto 1</label><input type="number" class="ansi-input" id="p1" min="0" step="0.01" placeholder="0.00"></div>
+              <div class="ansi-point"><label for="p2">Ponto 2</label><input type="number" class="ansi-input" id="p2" min="0" step="0.01" placeholder="0.00"></div>
+              <div class="ansi-point"><label for="p3">Ponto 3</label><input type="number" class="ansi-input" id="p3" min="0" step="0.01" placeholder="0.00"></div>
+              <div class="ansi-point"><label for="p4">Ponto 4</label><input type="number" class="ansi-input" id="p4" min="0" step="0.01" placeholder="0.00"></div>
+              <div class="ansi-point"><label for="p5">Ponto 5</label><input type="number" class="ansi-input" id="p5" min="0" step="0.01" placeholder="0.00"></div>
+              <div class="ansi-point"><label for="p6">Ponto 6</label><input type="number" class="ansi-input" id="p6" min="0" step="0.01" placeholder="0.00"></div>
+              <div class="ansi-point"><label for="p7">Ponto 7</label><input type="number" class="ansi-input" id="p7" min="0" step="0.01" placeholder="0.00"></div>
+              <div class="ansi-point"><label for="p8">Ponto 8</label><input type="number" class="ansi-input" id="p8" min="0" step="0.01" placeholder="0.00"></div>
+              <div class="ansi-point"><label for="p9">Ponto 9</label><input type="number" class="ansi-input" id="p9" min="0" step="0.01" placeholder="0.00"></div>
+            </div>
+            <p class="ansi-panel-label" style="margin-top: 20px;">Dimensões da imagem</p>
+            <div class="ansi-dims">
+              <div class="ansi-dim"><label for="ansiW">Largura (m)</label><input type="number" class="ansi-input" id="ansiW" min="0.1" step="0.01" placeholder="Ex: 2.50"></div>
+              <div class="ansi-dim"><label for="ansiH">Altura (m)</label><input type="number" class="ansi-input" id="ansiH" min="0.1" step="0.01" placeholder="Ex: 1.40"></div>
+            </div>
+            <button class="btn btn-primary ansi-calc-btn" id="calcAnsiBtn">Calcular ANSI Lumens</button>
+            <div class="ansi-result" id="ansiResult">
+              <span class="ansi-result-dashes">&mdash; &mdash; &mdash;</span>
+              <span class="ansi-result-unit">ANSI Lumens</span>
+            </div>
+            <p class="ansi-formula">ANSI Lumens = (Soma dos 9 pontos &divide; 9) &times; (Largura &times; Altura)</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="ansi-como">
+      <div class="wrap">
+        <div class="eyebrow">Por que ANSI</div>
+        <h2>Por que medir em 9 pontos</h2>
+        <p style="margin-top: 14px;">Projetor compacto quase nunca entrega o brilho anunciado na caixa. O padrão ANSI mede a imagem em 9 pontos e tira a média, porque o centro costuma ser bem mais claro que os cantos. Multiplicando a média pela área projetada, o resultado sai em lumens comparáveis entre aparelhos.</p>
+        <p>É exatamente assim que medimos <strong>todos os projetores do canal</strong>: os números que você vê no <a href="ranking.html">ranking</a> e nas análises saíram deste método, com luxímetro. Se o seu resultado ficou muito abaixo do anunciado pelo fabricante, é normal: compare com os <a href="projetores.html">modelos que já testamos</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216">
+          <p>Projetores testados de verdade na bancada do canal SchardTech.</p>
+          <div class="social">
+            <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="ico" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg></a>
+            <span class="off" aria-label="Instagram em breve"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.51"/></svg></span>
+          </div>
+        </div>
+        <div class="foot-col">
+          <h4>Navegação</h4>
+          <a href="projetores.html">Projetores</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="politica-privacidade.html">Privacidade</a>
+          <a href="mailto:contato@schardtech.com.br">Contato</a>
+        </div>
+        <div class="foot-col">
+          <h4>Ferramentas</h4>
+          <a href="ranking.html">Ranking dos testes</a>
+          <a href="qual-projetor.html">Encontre seu projetor</a>
+          <a href="comparar.html">Comparar projetores</a>
+          <a href="acessorios-projetores.html">Acessórios</a>
+        </div>
+        <div class="foot-col">
+          <h4>Conteúdo</h4>
+          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <span class="off">Instagram (em breve)</span>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <p>&copy; 2026 SchardTech. Todos os direitos reservados.</p>
+        <p style="margin-top: 6px;">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script src="projetores-data.js" defer></script>
+  <script src="prices-overlay.js" defer></script>
+  <script src="ui-interacoes.js" defer></script>
+</body>
+</html>
