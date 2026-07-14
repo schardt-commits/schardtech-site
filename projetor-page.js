@@ -301,20 +301,21 @@
           });
         });
 
-        // Loja única: degradê sob a linha (estilo CoinGecko). Com 2+ lojas os
-        // preenchimentos se sobrepõem e viram lama — fica só a linha.
-        if (datasets.length === 1) {
-          var corFill = datasets[0].borderColor;
-          datasets[0].fill = 'origin';
-          datasets[0].backgroundColor = function(c) {
+        // Degradê sob as linhas (estilo CoinGecko). Loja única = mais presente;
+        // com 2+ lojas o topo cai pra 7% pra sobreposição não virar lama.
+        var alphaTopo = datasets.length === 1 ? '30' : '12';
+        datasets.forEach(function(ds) {
+          var corFill = ds.borderColor;
+          ds.fill = 'origin';
+          ds.backgroundColor = function(c) {
             var area = c.chart.chartArea;
             if (!area) return corFill + '14';
             var g = c.chart.ctx.createLinearGradient(0, area.top, 0, area.bottom);
-            g.addColorStop(0, corFill + '30');
+            g.addColorStop(0, corFill + alphaTopo);
             g.addColorStop(1, corFill + '00');
             return g;
           };
-        }
+        });
 
         var menor = historico.min;
         var maior = historico.max;
@@ -343,7 +344,7 @@
             ctx.stroke();
             ctx.setLineDash([]);
             ctx.fillStyle = 'rgba(91,217,160,0.95)';
-            ctx.font = '600 10px Inter, sans-serif';
+            ctx.font = '600 10px "IBM Plex Mono", monospace';
             ctx.textAlign = 'right';
             ctx.fillText('▼ menor já visto', area.right - 6, y - 6);
             ctx.restore();
@@ -368,9 +369,29 @@
             ctx.stroke();
             ctx.setLineDash([]);
             ctx.fillStyle = 'rgba(234,234,234,0.55)';
-            ctx.font = '600 10px Inter, sans-serif';
+            ctx.font = '600 10px "IBM Plex Mono", monospace';
             ctx.textAlign = 'left';
             ctx.fillText('média', area.left + 6, y - 5);
+            ctx.restore();
+          }
+        };
+
+        // Linha vertical tracejada acompanhando o hover (leitura de bancada)
+        var crosshairPlugin = {
+          id: 'crosshair',
+          afterDatasetsDraw: function(chart) {
+            var atv = chart.tooltip && chart.tooltip.getActiveElements ? chart.tooltip.getActiveElements() : [];
+            if (!atv.length) return;
+            var ctx = chart.ctx, area = chart.chartArea, x = atv[0].element.x;
+            if (x < area.left || x > area.right) return;
+            ctx.save();
+            ctx.setLineDash([3, 4]);
+            ctx.strokeStyle = 'rgba(238, 243, 250, 0.22)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(x, area.top);
+            ctx.lineTo(x, area.bottom);
+            ctx.stroke();
             ctx.restore();
           }
         };
@@ -388,11 +409,13 @@
             plugins: {
               legend: { display: false },
               tooltip: {
-                backgroundColor: 'rgba(17,23,34,0.96)',
+                backgroundColor: 'rgba(15,21,32,0.97)',
                 titleColor: '#EEF3FA',
-                titleFont: { weight: '600', size: 12 },
+                titleFont: { family: '"IBM Plex Mono", monospace', weight: '600', size: 11 },
                 bodyColor: '#EEF3FA',
-                bodyFont: { size: 12 },
+                bodyFont: { family: '"IBM Plex Mono", monospace', size: 11.5 },
+                cornerRadius: 8,
+                caretSize: 6,
                 padding: 12,
                 borderColor: 'rgba(91,200,238,0.30)',
                 borderWidth: 1,
@@ -412,16 +435,19 @@
               }
             },
             scales: {
-              x: { grid: { color: 'rgba(234,234,234,0.04)' }, ticks: { color: 'rgba(234,234,234,0.55)', maxTicksLimit: 8, maxRotation: 0 } },
+              x: {
+                grid: { color: 'rgba(234,234,234,0.04)' },
+                ticks: { color: 'rgba(234,234,234,0.45)', maxTicksLimit: 8, maxRotation: 0, font: { family: '"IBM Plex Mono", monospace', size: 10 } }
+              },
               y: {
                 grid: { color: 'rgba(234,234,234,0.05)' },
-                ticks: { color: 'rgba(234,234,234,0.55)', callback: function(v) { return 'R$ ' + v.toLocaleString('pt-BR'); } },
+                ticks: { color: 'rgba(234,234,234,0.45)', maxTicksLimit: 6, font: { family: '"IBM Plex Mono", monospace', size: 10 }, callback: function(v) { return 'R$ ' + v.toLocaleString('pt-BR'); } },
                 suggestedMin: menor * 0.92,
                 suggestedMax: maior * 1.08
               }
             }
           },
-          plugins: [minLinePlugin, mediaLinePlugin]
+          plugins: [minLinePlugin, mediaLinePlugin, crosshairPlugin]
         });
 
         // Atualiza chips de filtro: cria um chip por loja disponível
