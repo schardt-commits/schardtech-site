@@ -62,12 +62,26 @@
     .qp-short-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(9, 12, 17, 0.3); }
     .qp-short-play svg { width: 52px; height: 52px; filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6)); }
 
-    /* QUESTIONÁRIO */
+    /* QUESTIONÁRIO (seções numeradas, mesmo ritmo do comparativo) */
     .qp-questions { border-top: 0; padding: 12px 0 0; }
     .qp-question { margin-bottom: 44px; }
     .qp-question h3 { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 18px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 6px; }
-    .qp-question h3 .q-num { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: var(--brand-dim); border: 1px solid var(--brand-borda); color: var(--brand); font-family: var(--mono); font-size: 11px; font-weight: 700; }
-    .q-hint { font-size: 13px; color: var(--txt-2); margin-bottom: 14px; line-height: 1.55; padding-left: 34px; }
+    .qp-question h3::after { content: ''; height: 1px; flex: 1; min-width: 24px; background: var(--line); margin-left: 6px; }
+    .qp-question h3 .q-num { flex-shrink: 0; width: 26px; font-family: var(--mono); font-size: 12.5px; font-weight: 700; color: var(--brand); opacity: 0.75; }
+    .q-hint { font-size: 13px; color: var(--txt-2); margin-bottom: 14px; line-height: 1.55; padding-left: 36px; }
+
+    /* entrada em cascata do questionário (CSS puro: o quiz não fica refém de JS) */
+    @keyframes qpIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    .qp-questions .qp-question { animation: qpIn 420ms cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+    .qp-questions .qp-question:nth-child(1) { animation-delay: 40ms; }
+    .qp-questions .qp-question:nth-child(2) { animation-delay: 100ms; }
+    .qp-questions .qp-question:nth-child(3) { animation-delay: 160ms; }
+    .qp-questions .qp-question:nth-child(4) { animation-delay: 220ms; }
+    .qp-questions .qp-question:nth-child(5) { animation-delay: 280ms; }
+    .qp-questions .qp-question:nth-child(6) { animation-delay: 340ms; }
+    .qp-questions .qp-question:nth-child(7) { animation-delay: 400ms; }
+    .qp-questions .qp-advanced { animation: qpIn 420ms cubic-bezier(0.22, 1, 0.36, 1) 460ms backwards; }
+    .qp-questions .qp-cta { animation: qpIn 420ms cubic-bezier(0.22, 1, 0.36, 1) 520ms backwards; }
 
     .qp-options { display: flex; flex-wrap: wrap; gap: 8px; }
     .qp-option {
@@ -121,24 +135,53 @@
     .qp-results-header .eyebrow { justify-content: center; }
     .qp-results-header h2 .grad { color: var(--brand); }
     .qp-results-header p { color: var(--txt-2); font-size: 14px; margin-top: 12px; }
-    .qp-back-btn { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 36px; padding: 9px 18px; border-radius: var(--radius); border: 1px solid var(--line); background: transparent; color: var(--txt-2); font-family: var(--mono); font-size: 12px; font-weight: 600; cursor: pointer; transition: color 150ms, border-color 150ms, background 150ms; }
+    .qp-back-btn { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 20px; padding: 9px 18px; border-radius: var(--radius); border: 1px solid var(--line); background: transparent; color: var(--txt-2); font-family: var(--mono); font-size: 12px; font-weight: 600; cursor: pointer; transition: color 150ms, border-color 150ms, background 150ms; }
     .qp-back-btn:hover { border-color: var(--brand); color: var(--brand); background: var(--brand-dim); }
+
+    /* arena: resultados numa bandeja um tom mais clara que o fundo (padrão do comparativo) */
+    .qp-arena { background: #0F1520; border: 1px solid var(--line); border-radius: 18px; padding: 34px clamp(16px, 3vw, 32px) 38px; }
 
     /* CARDS DE RESULTADO */
     .qp-cards { display: flex; flex-direction: column; gap: 16px; }
-    .qp-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 28px; position: relative; overflow: hidden; transition: border-color 150ms, box-shadow 150ms; }
+    .qp-card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 0; position: relative; overflow: hidden; transition: border-color 150ms, box-shadow 150ms; }
     .qp-card:hover { border-color: var(--brand); box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45), 0 0 0 1px var(--brand-borda); }
-    /* barras vivas de Brilho/Lag (mesma régua da home) + entrada em cascata */
-    .qp-card .qp-stats { margin: 2px 0 18px; max-width: 470px; gap: 8px; }
+    /* entrada em cascata (transitionDelay vem do JS) */
     .qp-card.nasce { opacity: 0; transform: translateY(16px); transition: opacity 500ms ease, transform 500ms ease, border-color 150ms, box-shadow 150ms; }
     .qp-card.nasce.viva { opacity: 1; transform: none; }
-    .qp-card.featured { border-color: var(--brand-borda); background: linear-gradient(135deg, var(--brand-dim) 0%, var(--card) 55%); }
-    .qp-card.featured::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--brand), var(--num)); }
+    /* nº 1 = tinta verde (mesma decisão do MELHOR no comparativo) */
+    .qp-card.featured { border-color: rgba(47, 224, 138, 0.32); }
+    .qp-card.featured .qp-card-body { background: linear-gradient(135deg, var(--win-dim) 0%, transparent 50%); }
+
+    /* thumb do review no topo do card (mesmo tratamento dos slots do comparativo) */
+    .qp-card-media { position: relative; display: block; height: 150px; overflow: hidden; background: var(--card-2); }
+    .qp-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.92); transform: scale(1.02); transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1); }
+    .qp-card:hover .qp-card-media img { transform: scale(1.06); }
+    .qp-card-media::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--brand), transparent 85%); z-index: 2; }
+    .qp-card.featured .qp-card-media::after { background: linear-gradient(90deg, var(--win), var(--brand) 55%, transparent 95%); }
+    .qp-card-media-veil { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(17, 23, 34, 0.94) 100%), linear-gradient(90deg, rgba(91, 200, 238, 0.10), transparent 55%); pointer-events: none; }
+    .qp-card.featured .qp-card-media-veil { background: linear-gradient(180deg, transparent 30%, rgba(17, 23, 34, 0.94) 100%), linear-gradient(90deg, rgba(47, 224, 138, 0.10), transparent 55%); }
+    .qp-card-media.sem-video { display: flex; align-items: center; justify-content: center; }
+    .qp-card-media-ini { font-family: var(--display); font-weight: 700; font-size: 1.3rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--txt-2); opacity: 0.45; }
+
+    /* posição na lista: número colorido no top 3 (mesma regra do ranking) */
+    .qp-rank { position: absolute; top: 12px; left: 16px; z-index: 3; font-family: var(--mono); font-weight: 700; font-size: 15px; color: var(--txt-2); text-shadow: 0 1px 8px rgba(0, 0, 0, 0.85); }
+    .qp-rank.r1 { color: var(--ouro); font-size: 19px; text-shadow: 0 0 16px rgba(246, 196, 83, 0.45), 0 1px 8px rgba(0, 0, 0, 0.85); }
+    .qp-rank.r2 { color: var(--prata); font-size: 17px; }
+    .qp-rank.r3 { color: var(--bronze); font-size: 17px; }
+
+    /* chip de play: a própria thumb é o link da análise completa */
+    .qp-card-media-play { position: absolute; right: 12px; bottom: 10px; z-index: 3; display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 999px; background: rgba(9, 12, 17, 0.72); border: 1px solid var(--line); color: var(--txt); font-family: var(--mono); font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 150ms, color 150ms; }
+    .qp-card-media-play svg { flex-shrink: 0; }
+    a.qp-card-media:hover .qp-card-media-play { border-color: var(--brand); color: var(--brand); }
+
+    .qp-card-body { padding: 20px 26px 26px; }
+    /* barras vivas de Brilho/Lag (mesma régua da home) */
+    .qp-card .qp-stats { margin: 2px 0 18px; max-width: 470px; gap: 8px; }
 
     .qp-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
     .qp-card-badge-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
     .qp-card-badge { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 4px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-    .qp-card-badge.featured { background: var(--brand-dim); color: var(--brand); border: 1px solid var(--brand-borda); }
+    .qp-card-badge.featured { background: var(--win-dim); color: var(--win); border: 1px solid rgba(47, 224, 138, 0.35); }
     .qp-card-badge.alt { background: var(--card-2); color: var(--txt-2); border: 1px solid var(--line); }
     .qp-match-pill { display: inline-flex; align-items: center; padding: 3px 9px; border-radius: 999px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.04em; background: var(--card-2); color: var(--txt-2); border: 1px solid var(--line); }
     .qp-match-pill.hi  { color: var(--win); border-color: rgba(47, 224, 138, 0.35); background: var(--win-dim); }
@@ -211,19 +254,23 @@
     .qp-buy-section { margin-top: 16px; padding: 14px 16px; border-radius: var(--radius); background: var(--bg-2); border: 1px solid var(--line); }
     .qp-buy-label { font-family: var(--mono); font-size: 10px; font-weight: 700; color: var(--txt-2); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
 
-    .qp-review-banner { display: flex; align-items: center; gap: 14px; margin-top: 14px; border-radius: var(--radius); overflow: hidden; text-decoration: none; border: 1px solid var(--line); background: var(--card-2); transition: border-color 150ms, background 150ms; }
-    .qp-review-banner:hover { border-color: var(--brand); background: var(--brand-dim); }
-    .qp-review-thumb { width: 130px; height: 73px; object-fit: cover; flex-shrink: 0; display: block; }
-    .qp-review-cta { font-size: 13.5px; font-weight: 600; color: var(--txt); display: flex; align-items: center; gap: 7px; }
-    .qp-review-cta svg { color: var(--brand); flex-shrink: 0; }
-
     @media (max-width: 640px) {
-      .qp-card { padding: 20px 18px; }
+      .qp-arena { padding: 20px 12px 26px; border-radius: 14px; }
+      .qp-card-body { padding: 18px 16px 22px; }
+      .qp-card-media { height: 116px; }
+      .qp-rank { top: 9px; left: 12px; }
       .qp-card-top { flex-direction: column; }
       .qp-card-price { text-align: left; }
       .qp-card-price .regua-blk { margin-left: 0; }
       .qp-spark { justify-content: flex-start; }
-      .qp-review-thumb { width: 100px; height: 56px; }
+    }
+
+    /* movimento reduzido: tudo estático */
+    @media (prefers-reduced-motion: reduce) {
+      .qp-questions .qp-question, .qp-questions .qp-advanced, .qp-questions .qp-cta { animation: none; }
+      .qp-card.nasce { opacity: 1; transform: none; transition: border-color 150ms, box-shadow 150ms; }
+      .qp-card-media img { transition: none; transform: none; }
+      .qp-card .seg-fill { transition: none; }
     }
   </style>
 </head>
@@ -295,7 +342,7 @@
 
       <!-- 1. Iluminação -->
       <div class="qp-question">
-        <h3><span class="q-num">1</span> Como é a iluminação do ambiente?</h3>
+        <h3><span class="q-num">01</span> Como é a iluminação do ambiente?</h3>
         <p class="q-hint">Onde você vai usar o projetor com mais frequência.</p>
         <div class="qp-options">
           <button class="qp-option" onclick="pick('iluminacao','escuro',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> Escuro</button>
@@ -307,7 +354,7 @@
 
       <!-- 2. Orçamento -->
       <div class="qp-question">
-        <h3><span class="q-num">2</span> Qual o seu orçamento?</h3>
+        <h3><span class="q-num">02</span> Qual o seu orçamento?</h3>
         <p class="q-hint">Baseado no valor mínimo por loja. Promoções e variações de estoque podem mudar bastante. Use como referência.</p>
         <div class="qp-options" id="orcPills">
           <button class="qp-option" onclick="pickOrc(null,null,this)">Sem limite</button>
@@ -327,7 +374,7 @@
 
       <!-- 3. Uso principal -->
       <div class="qp-question">
-        <h3><span class="q-num">3</span> Qual o uso principal?</h3>
+        <h3><span class="q-num">03</span> Qual o uso principal?</h3>
         <p class="q-hint">Para jogos, a velocidade de resposta é prioridade. Para filmes, qualidade de imagem e HDR.</p>
         <div class="qp-options">
           <button class="qp-option" onclick="pick('uso','filmes',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2.18"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/></svg> Filmes e séries</button>
@@ -338,7 +385,7 @@
 
       <!-- 4. Apps nativos (SO simplificado) -->
       <div class="qp-question">
-        <h3><span class="q-num">4</span> Como vai usar streaming no projetor?</h3>
+        <h3><span class="q-num">04</span> Como vai usar streaming no projetor?</h3>
         <p class="q-hint">Netflix, Prime Video e HBO só rodam em qualidade máxima em sistemas licenciados. No Android não homologado o YouTube funciona bem, mas serviços de streaming ficam em SD.</p>
         <div class="qp-options" id="appsMain">
           <button class="qp-option" onclick="pickApps('quero',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> Quero Netflix e afins em qualidade máxima</button>
@@ -348,7 +395,7 @@
 
       <!-- 5. Mobilidade -->
       <div class="qp-question">
-        <h3><span class="q-num">5</span> Como vai usar?</h3>
+        <h3><span class="q-num">05</span> Como vai usar?</h3>
         <div class="qp-options">
           <button class="qp-option" onclick="pick('mobilidade','fixo',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg> Fixo</button>
           <button class="qp-option" onclick="pick('mobilidade','base',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg> Preciso de base giratória</button>
@@ -359,7 +406,7 @@
 
       <!-- 6. Som -->
       <div class="qp-question">
-        <h3><span class="q-num">6</span> Som nativo do projetor</h3>
+        <h3><span class="q-num">06</span> Som nativo do projetor</h3>
         <p class="q-hint">Som estéreo, mesmo com menos watts, faz diferença real em relação a um único alto-falante.</p>
         <div class="qp-options">
           <button class="qp-option" onclick="pick('som',null,this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M23 9l-6 6M17 9l6 6"/></svg> Tenho caixa / Não me importo</button>
@@ -370,7 +417,7 @@
 
       <!-- 7. Distância -->
       <div class="qp-question">
-        <h3><span class="q-num">7</span> Distância até onde vai projetar</h3>
+        <h3><span class="q-num">07</span> Distância até onde vai projetar</h3>
         <p class="q-hint">O tamanho estimado da imagem para a sua distância aparece em cada resultado.</p>
         <div class="qp-dist-input-row">
           <label for="distInput" class="visually-hidden">Distância em metros até a parede</label>
@@ -514,12 +561,14 @@
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
         Ajustar filtros
       </button>
-      <div class="qp-results-header">
-        <div class="eyebrow">Resultado</div>
-        <h2>Recomendados <span class="grad">para você</span></h2>
-        <p id="resultsSubtitle">Baseado nas suas respostas, estes são os projetores que mais combinam com o seu perfil.</p>
+      <div class="qp-arena">
+        <div class="qp-results-header">
+          <div class="eyebrow">Resultado</div>
+          <h2>Recomendados <span class="grad">para você</span></h2>
+          <p id="resultsSubtitle">Baseado nas suas respostas, estes são os projetores que mais combinam com o seu perfil.</p>
+        </div>
+        <div class="qp-cards" id="cardsContainer"></div>
       </div>
-      <div class="qp-cards" id="cardsContainer"></div>
     </div>
   </section>
 
@@ -1197,7 +1246,7 @@
       return `verificado há ${diff} dias`;
     }
 
-    function renderCard(p, badge, featured, matchPct) {
+    function renderCard(p, badge, featured, matchPct, idx) {
       const hasPrice = p.preco_atual || p.preco_min || p.preco_max;
       const r = n => 'R$ ' + Math.round(Number(n)).toLocaleString('pt-BR');
       const isImportado = p.status === 'importado';
@@ -1236,8 +1285,10 @@
         priceHtml = `<div class="qp-card-price"><div class="qp-card-price-na">sem estimativa</div></div>`;
       }
 
+      // contador animado (UI2.animaContadores lê data-alvo/data-sufixo); o texto
+      // final já vem no markup pro caso do ui-interacoes.js não carregar
       const matchPill = (matchPct !== null)
-        ? `<span class="qp-match-pill${matchPct >= 90 ? ' hi' : matchPct >= 70 ? ' mid' : ''}">${matchPct}% de match</span>`
+        ? `<span class="qp-match-pill${matchPct >= 90 ? ' hi' : matchPct >= 70 ? ' mid' : ''}"><span data-alvo="${matchPct}" data-sufixo="% de match">${matchPct}% de match</span></span>`
         : '';
 
       // Brilho e Lag saem dos chips e viram barras vivas (régua da home:
@@ -1301,26 +1352,30 @@
             </div>`).join('')}</div>${coupons.length >= 2 ? `<p class="qp-coupon-note">Use os 2 cupons para o desconto máximo.</p>` : ''}`
         : '';
 
+      // thumb do review vira a capa do card (padrão dos slots do comparativo);
+      // a própria capa é o link da análise completa
       const vidUrl = safeUrl(p.video_url);
       const vidId = getYouTubeId(vidUrl);
-      const reviewHtml = vidId
-        ? `<a href="${escAttr(vidUrl)}" target="_blank" rel="noopener noreferrer" class="qp-review-banner">
-            <img src="https://img.youtube.com/vi/${escAttr(vidId)}/mqdefault.jpg" class="qp-review-thumb" alt="Review ${escAttr(p.marca)} ${escAttr(p.modelo)}" loading="lazy">
-            <div class="qp-review-cta">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              Análise completa
-            </div>
+      const rankCls = idx === 0 ? ' r1' : idx === 1 ? ' r2' : idx === 2 ? ' r3' : '';
+      const rankHtml = `<span class="qp-rank${rankCls}">${String((idx == null ? 0 : idx) + 1).padStart(2, '0')}</span>`;
+      const veilHtml = '<span class="qp-card-media-veil"></span>';
+      const mediaHtml = vidId
+        ? `<a class="qp-card-media" href="${escAttr(vidUrl)}" target="_blank" rel="noopener noreferrer" aria-label="Ver análise completa do ${escAttr(p.marca)} ${escAttr(p.modelo)} no YouTube">
+            <img src="https://i.ytimg.com/vi/${escAttr(vidId)}/hqdefault.jpg" alt="" loading="lazy">
+            ${veilHtml}${rankHtml}
+            <span class="qp-card-media-play"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Análise completa</span>
           </a>`
-        : '';
+        : `<div class="qp-card-media sem-video"><span class="qp-card-media-ini">${escAttr(p.marca)}</span>${veilHtml}${rankHtml}</div>`;
 
-      const bottomHtml = (stores.length || reviewHtml)
+      const bottomHtml = stores.length
         ? `<hr class="qp-divider">
-           ${reviewHtml}
-           ${stores.length ? `<div class="qp-buy-section"><div class="qp-buy-label">Compre pelo melhor preço</div><div class="qp-card-actions">${stores.join('')}</div>${couponsHtml}</div>` : couponsHtml}`
-        : '';
+           <div class="qp-buy-section"><div class="qp-buy-label">Compre pelo melhor preço</div><div class="qp-card-actions">${stores.join('')}</div>${couponsHtml}</div>`
+        : couponsHtml;
 
       return `
         <div class="qp-card nasce${featured ? ' featured' : ''}">
+          ${mediaHtml}
+          <div class="qp-card-body">
           <div class="qp-card-top">
             <div>
               <div class="qp-card-badge-row">
@@ -1337,6 +1392,7 @@
           ${statsHtml}
           <div class="qp-card-specs">${specs.join('')}</div>
           ${bottomHtml}
+          </div>
         </div>`;
     }
 
@@ -1388,9 +1444,12 @@
       document.getElementById('cardsContainer').innerHTML = scored
         .map((p, i) => {
           const pct = i === 0 ? null : Math.round(p._score / topScore * 100);
-          return renderCard(p, getBadge(p, i, scored), i === 0, pct);
+          return renderCard(p, getBadge(p, i, scored), i === 0, pct, i);
         })
         .join('');
+
+      // contadores de % de match sobem junto com a cascata (helper do placar do comparativo)
+      if (window.UI2 && UI2.animaContadores) UI2.animaContadores(document.getElementById('cardsContainer'));
 
       // cascata: cada card sobe em sequência e as barras crescem junto
       const cards = document.querySelectorAll('#cardsContainer .qp-card.nasce');
