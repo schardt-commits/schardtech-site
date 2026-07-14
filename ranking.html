@@ -54,7 +54,7 @@
     /* ── seletor de métrica (sticky abaixo do header sticky) ── */
     .rk-picker {
       position: sticky; top: var(--rk-header-h, 82px); z-index: 40;
-      margin: 0 0 28px; padding: 14px 0;
+      margin: 0 0 26px; padding: 14px 0;
       background: rgba(9, 12, 17, 0.88);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -62,80 +62,115 @@
     }
     .rk-picker .rank-chips { margin-top: 0; justify-content: center; }
 
-    /* ── card do gráfico ── */
     .rk-section { border-top: 0; padding: 0 0 96px; }
-    .rk-card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 28px 24px 20px; }
-    .rk-card-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
-    .rk-card-title { font-family: var(--display); font-size: 21px; font-weight: 700; letter-spacing: -0.01em; }
-    .rk-card-title .m-tag { font-size: 10px; }
-    .rk-card-sub { margin-top: 6px; color: var(--txt-2); font-size: 14.5px; max-width: 720px; }
+
+    /* ── linha compacta: badge da métrica + filtros + contagem ── */
+    .rk-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 14px; }
+    .rk-head-esq { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .rk-title { font-family: var(--display); font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
+    .rk-title .m-tag { font-size: 10px; }
     .rk-count { font-family: var(--mono); color: var(--txt-2); font-size: 12px; font-weight: 600; white-space: nowrap; }
     .rk-dir {
-      display: inline-block; margin-left: 10px; padding: 3px 10px; border-radius: 999px;
+      display: inline-block; padding: 3px 10px; border-radius: 999px;
       font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
       text-transform: uppercase; vertical-align: middle;
       background: var(--win-dim); color: var(--win); border: 1px solid rgba(47, 224, 138, 0.3);
     }
-    /* métrica sem "melhor" objetivo (distância, consumo): tom neutro */
     .rk-dir.is-neutro { background: var(--card-2); color: var(--txt-2); border-color: var(--line); }
 
     /* ── filtros ── */
-    .rk-filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 14px; margin-top: 20px; }
-    .rk-field { display: flex; flex-direction: column; gap: 6px; }
-    .rk-field > span {
-      font-family: var(--mono); font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--txt-2);
-    }
+    .rk-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
     .rk-select-wrap { position: relative; }
     .rk-select {
       appearance: none; -webkit-appearance: none;
-      min-width: 190px; height: 44px; padding: 0 36px 0 14px;
+      min-width: 170px; height: 40px; padding: 0 34px 0 14px;
       background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
-      color: var(--txt); font-family: var(--mono); font-size: 13px; cursor: pointer;
+      color: var(--txt); font-family: var(--mono); font-size: 12.5px; cursor: pointer;
       transition: border-color 150ms;
     }
     .rk-select:hover, .rk-select:focus-visible { border-color: var(--brand); outline: none; }
-    .rk-select-chevron { position: absolute; right: 13px; top: 50%; transform: translateY(-50%); color: var(--txt-2); pointer-events: none; }
+    .rk-select-chevron { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--txt-2); pointer-events: none; }
     .rk-clear {
-      height: 44px; padding: 0 16px; background: transparent;
+      height: 40px; padding: 0 14px; background: transparent;
       border: 1px solid var(--line); border-radius: var(--radius);
-      color: var(--txt-2); font-family: var(--mono); font-size: 12px; font-weight: 600; cursor: pointer;
+      color: var(--txt-2); font-family: var(--mono); font-size: 11.5px; font-weight: 600; cursor: pointer;
       transition: border-color 150ms, color 150ms;
     }
     .rk-clear:hover { border-color: var(--alerta); color: var(--alerta); }
 
     /* ── legenda de tecnologia ── */
-    .rk-legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 18px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+    .rk-legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 0 0 18px; }
     .rk-leg-item { display: inline-flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 12px; color: var(--txt-2); }
     .rk-leg-dot { width: 11px; height: 11px; border-radius: 3px; flex: none; }
 
-    /* ── gráfico ── */
-    .rk-chart-wrap { position: relative; margin-top: 18px; min-height: 320px; }
-    .rk-chart-wrap canvas { cursor: pointer; }
+    /* ── leaderboard vivo ──────────────────────────────────────
+       Todas as linhas absolutas; a posição é translateY animado.
+       Trocou métrica/filtro: as linhas DESLIZAM pro novo lugar e
+       as barras crescem/encolhem com transição fluida. ── */
+    .rk-board { position: relative; --rk-row: 58px; transition: height 450ms cubic-bezier(0.22, 1, 0.36, 1); }
+    .rk-row {
+      position: absolute; left: 0; right: 0; top: 0; height: var(--rk-row);
+      display: grid; grid-template-columns: 46px minmax(170px, 250px) 1fr 122px;
+      gap: 14px; align-items: center; padding: 0 14px;
+      border-radius: var(--radius);
+      text-decoration: none; color: var(--txt);
+      transition: transform 550ms cubic-bezier(0.22, 1, 0.36, 1), opacity 300ms, background 120ms;
+      will-change: transform;
+    }
+    .rk-row:nth-child(even) { background: rgba(17, 23, 34, 0.4); }
+    a.rk-row[href]:hover { background: var(--card-2); }
+    a.rk-row[href]:hover .rr-modelo { color: var(--brand); }
+    a.rk-row[href]:hover .rr-pos::after { content: '\2192'; font-family: var(--mono); font-size: 12px; color: var(--brand); position: absolute; left: 100%; margin-left: 4px; }
+    .rk-row.fora { opacity: 0; pointer-events: none; }
+
+    .rr-pos { position: relative; font-family: var(--mono); font-weight: 700; font-size: 15px; color: var(--txt-2); }
+    .rr-pos.r1 { color: var(--ouro); font-size: 18px; text-shadow: 0 0 16px rgba(246, 196, 83, 0.45); }
+    .rr-pos.r2 { color: var(--prata); font-size: 17px; }
+    .rr-pos.r3 { color: var(--bronze); font-size: 17px; }
+    .rr-nome { min-width: 0; }
+    .rr-marca { display: block; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--txt-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .rr-modelo { display: block; font-family: var(--display); font-weight: 700; font-size: 15px; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: color 120ms; }
+    .rr-modelo .desc { opacity: 0.5; font-size: 0.72em; font-weight: 400; }
+
+    .rr-bar { position: relative; height: 12px; border-radius: 999px; background: var(--card-2); overflow: hidden; }
+    .rr-fill {
+      position: absolute; inset: 0 auto 0 0; width: 0; border-radius: 999px;
+      transition: width 750ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .rr-fill::after { content: ''; position: absolute; inset: 0; border-radius: 999px; background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), transparent 55%); }
+
+    .rr-val { font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--num); text-align: right; white-space: nowrap; }
+
+    .rk-fallback { display: none; padding: 40px 20px; text-align: center; color: var(--txt-2); font-size: 14.5px; border: 1px dashed var(--line); border-radius: var(--radius); margin-top: 8px; }
+    .rk-fallback a { color: var(--brand); }
 
     /* ── nota / metodologia ── */
     .rk-note {
-      margin-top: 22px; padding: 16px 18px;
+      margin-top: 30px; padding: 16px 18px;
       background: var(--brand-dim);
       border: 1px solid var(--line); border-left: 3px solid var(--brand);
       border-radius: var(--radius);
       color: var(--txt-2); font-size: 13.5px; line-height: 1.65;
     }
     .rk-note strong { color: var(--txt); font-weight: 600; }
-    .rk-note a { color: var(--brand); }
-    .rk-note a:hover { text-decoration: underline; }
 
-    .rk-fallback { display: none; padding: 40px 20px; text-align: center; color: var(--txt-2); font-size: 14.5px; }
-    .rk-fallback a { color: var(--brand); }
-
+    @media (max-width: 980px) {
+      .rk-row { grid-template-columns: 40px minmax(150px, 200px) 1fr 110px; }
+    }
     @media (max-width: 720px) {
-      .rk-card { padding: 20px 12px 14px; }
-      .rk-card-title { font-size: 17px; }
       .rk-picker { padding: 11px 0; }
-      .rk-filters { gap: 10px; }
-      .rk-field { flex: 1 1 100%; }
-      .rk-select { width: 100%; min-width: 0; }
-      .rk-clear { flex: 1 1 100%; }
+      .rk-board { --rk-row: 72px; }
+      .rk-row {
+        grid-template-columns: 30px 1fr 96px; grid-template-rows: auto 12px;
+        row-gap: 7px; column-gap: 10px; padding: 0 10px; align-content: center;
+      }
+      .rr-pos { grid-row: 1; }
+      .rr-nome { grid-row: 1; }
+      .rr-val { grid-row: 1; font-size: 12.5px; }
+      .rr-bar { grid-column: 2 / 4; grid-row: 2; height: 9px; }
+      .rr-pos.r1 { font-size: 16px; }
+      .rk-select { min-width: 0; flex: 1; }
+      .rk-filters { width: 100%; }
     }
   </style>
 </head>
@@ -186,7 +221,6 @@
       <div class="migalha"><a href="/">Home</a> <span class="sep">/</span> <span>Ranking</span></div>
       <div class="eyebrow">Medições do canal</div>
       <h1>Ranking dos projetores <span class="grad">que eu testei</span></h1>
-      <p class="sub">Valor bruto medido na bancada, sem número de fabricante. Escolha a métrica e clique em qualquer barra para abrir a análise completa.</p>
     </div>
   </section>
 
@@ -198,50 +232,38 @@
     </div>
 
     <div class="wrap">
-      <div class="rk-card">
-        <div class="rk-card-head">
-          <div>
-            <div class="rk-card-title" id="rkTitle">Brilho ANSI</div>
-            <div class="rk-card-sub" id="rkSub"></div>
-          </div>
-          <div class="rk-count" id="rkCount"></div>
+      <div class="rk-head">
+        <div class="rk-head-esq">
+          <span class="rk-title" id="rkTitle">Brilho ANSI</span>
+          <span id="rkDir"></span>
         </div>
-
         <div class="rk-filters">
-          <label class="rk-field">
-            <span>Marca</span>
-            <div class="rk-select-wrap">
-              <select class="rk-select" id="rkBrand" aria-label="Filtrar por marca"></select>
-              <svg class="rk-select-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-            </div>
-          </label>
-          <label class="rk-field">
-            <span>Tecnologia</span>
-            <div class="rk-select-wrap">
-              <select class="rk-select" id="rkTech" aria-label="Filtrar por tecnologia"></select>
-              <svg class="rk-select-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-            </div>
-          </label>
-          <button type="button" class="rk-clear" id="rkClear" hidden>Limpar filtros</button>
+          <div class="rk-select-wrap">
+            <select class="rk-select" id="rkBrand" aria-label="Filtrar por marca"></select>
+            <svg class="rk-select-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="rk-select-wrap">
+            <select class="rk-select" id="rkTech" aria-label="Filtrar por tecnologia"></select>
+            <svg class="rk-select-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <button type="button" class="rk-clear" id="rkClear" hidden>Limpar</button>
+          <span class="rk-count" id="rkCount"></span>
         </div>
+      </div>
 
-        <div class="rk-legend" id="rkLegend"></div>
+      <div class="rk-legend" id="rkLegend"></div>
 
-        <div class="rk-chart-wrap" id="rkChartWrap">
-          <canvas id="rkChart" role="img" aria-label="Gráfico de barras com o ranking dos projetores na métrica selecionada"></canvas>
-        </div>
+      <div class="rk-board" id="rkBoard"></div>
 
-        <div class="rk-fallback" id="rkFallback">
-          Não consegui carregar o gráfico neste navegador.
-          Veja as specs completas em <a href="comparar.html">Comparativo</a> ou na lista de <a href="projetores.html">projetores</a>.
-        </div>
+      <div class="rk-fallback" id="rkFallback">
+        Nenhum projetor com essa combinação de filtros.
+        Veja as specs completas em <a href="comparar.html">Comparativo</a> ou na lista de <a href="projetores.html">projetores</a>.
+      </div>
 
-        <div class="rk-note">
-          <strong>Como eu meço.</strong> O brilho sai do luxímetro, com o projetor na configuração de fábrica.
-          Input lag, distância e consumo são medidos por mim no mesmo setup.
-          Nenhum valor vem da ficha técnica do fabricante, por isso os números costumam ser mais baixos do que o anunciado.
-          Clique em qualquer barra para abrir a análise completa do projetor.
-        </div>
+      <div class="rk-note">
+        <strong>Como eu meço.</strong> O brilho sai do luxímetro, com o projetor na configuração de fábrica.
+        Input lag, distância e consumo são medidos por mim no mesmo setup.
+        Nenhum valor vem da ficha técnica do fabricante, por isso os números costumam ser mais baixos do que o anunciado.
       </div>
     </div>
   </section>
@@ -292,16 +314,14 @@
   <script src="projetores-data.js" defer></script>
   <script src="prices-overlay.js" defer></script>
   <script src="ui-interacoes.js" defer></script>
-  <script src="chart.umd.min.js" defer></script>
   <script>
     /* ═══════════════════════════════════════════════════════════
-       ranking.html — gráfico de barras das medições do canal.
-       Lê window.PROJETORES_DATA (mesmo banco do comparar.html).
-       Nada é calculado nem normalizado: valor bruto, ordenado.
-       O slug (link p/ a página do projetor) é injetado depois
-       por prices-overlay.js, então é lido no clique, não no build.
-       v2 (B1 13/07): dados carregam com defer — BASE é preenchida
-       no boot(), que só roda no DOMContentLoaded.
+       ranking.html v2 — leaderboard vivo.
+       Uma linha por projetor, criada UMA vez e reaproveitada:
+       trocar métrica/filtro recalcula ordem e a linha DESLIZA pro
+       novo lugar (translateY animado) enquanto a barra cresce ou
+       encolhe. Valor bruto medido, empate por nome, cores por
+       tecnologia, clique abre o review (slug vem do overlay).
     ═══════════════════════════════════════════════════════════ */
     (function () {
       'use strict';
@@ -311,7 +331,7 @@
         'DLP LED':   '#7B8CFF',
         'DLP Laser': '#F6C453'
       };
-      var COR_PADRAO = 'rgba(141,156,178,0.35)';
+      var COR_PADRAO = '#8D9CB2';
 
       function num(v) {
         var n = Number(v);
@@ -319,95 +339,77 @@
       }
 
       var METRICAS = [
-        {
-          id: 'ansi',
-          chip: 'Brilho ANSI',
-          titulo: 'Brilho ANSI medido',
-          sub: 'Lumens ANSI que eu li no luxímetro, com o projetor de fábrica.',
-          badge: 'maior é melhor',
-          medido: true,
-          maiorPrimeiro: true,
+        { id: 'ansi', chip: 'Brilho ANSI', titulo: 'Brilho ANSI', badge: 'maior é melhor', medido: true, maiorPrimeiro: true,
           valor: function (p) { return num(p.brilho_ansi); },
-          fmt: function (v) { return v.toLocaleString('pt-BR') + ' ANSI'; }
-        },
-        {
-          id: 'lag',
-          chip: 'Input Lag',
-          titulo: 'Input lag',
-          sub: '',
-          badge: 'menor é melhor',
-          medido: true,
-          maiorPrimeiro: false,
+          fmt: function (v) { return v.toLocaleString('pt-BR') + ' ANSI'; } },
+        { id: 'lag', chip: 'Input Lag', titulo: 'Input lag', badge: 'menor é melhor', medido: true, maiorPrimeiro: false,
           valor: function (p) { return num(p.input_lag_ms); },
-          fmt: function (v) { return v.toLocaleString('pt-BR') + ' ms'; }
-        },
-        {
-          id: 'dist',
-          chip: 'Distância p/ 100"',
-          titulo: 'Distância para projetar 100 polegadas',
-          sub: 'Ordenado do foco mais curto para o mais longo. Projetar mais perto da parede ajuda em sala pequena, mas não é sempre o melhor: dependendo de onde o projetor vai ficar, um alcance maior pode encaixar melhor no ambiente.',
-          badge: 'menor distância primeiro',
-          neutro: true,
-          maiorPrimeiro: false,
+          fmt: function (v) { return v.toLocaleString('pt-BR') + ' ms'; } },
+        { id: 'dist', chip: 'Distância p/ 100"', titulo: 'Distância p/ 100 polegadas', badge: 'foco mais curto primeiro', neutro: true, maiorPrimeiro: false,
           valor: function (p) { return num(p.distancia_100pol_m); },
-          fmt: function (v) { return v.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 2 }) + ' m'; }
-        },
-        {
-          id: 'consumo',
-          chip: 'Consumo',
-          titulo: 'Consumo de energia',
-          sub: 'Watts na tomada com o projetor em uso. Gastar menos não é vantagem sozinho, porque brilho custa watt: compare com o ranking de ANSI.',
-          badge: 'gasta menos primeiro',
-          neutro: true,
-          maiorPrimeiro: false,
+          fmt: function (v) { return v.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 2 }) + ' m'; } },
+        { id: 'consumo', chip: 'Consumo', titulo: 'Consumo na tomada', badge: 'gasta menos primeiro', neutro: true, maiorPrimeiro: false,
           valor: function (p) { return num(p.consumo_w); },
-          fmt: function (v) { return v.toLocaleString('pt-BR') + ' W'; }
-        }
+          fmt: function (v) { return v.toLocaleString('pt-BR') + ' W'; } }
       ];
 
       var BASE = [];
+      var NODES = [];   // [{p, el, fill, val, hoje, pos}]
 
       var elChips    = document.getElementById('rkChips');
       var elTitle    = document.getElementById('rkTitle');
-      var elSub      = document.getElementById('rkSub');
+      var elDir      = document.getElementById('rkDir');
       var elCount    = document.getElementById('rkCount');
       var elLegend   = document.getElementById('rkLegend');
-      var elWrap     = document.getElementById('rkChartWrap');
-      var elCanvas   = document.getElementById('rkChart');
+      var elBoard    = document.getElementById('rkBoard');
       var elFallback = document.getElementById('rkFallback');
+      var elBrand    = document.getElementById('rkBrand');
+      var elTech     = document.getElementById('rkTech');
+      var elClear    = document.getElementById('rkClear');
 
-      var chart = null;
-      var linhas = [];   // produtos ordenados da métrica ativa
+      function corDe(p) { return CORES[p.tecnologia] || COR_PADRAO; }
+      function nomeOrd(p) { return ((p.marca || '') + ' ' + (p.modelo || '')).trim(); }
 
-      var LABEL_FONT = '600 11px "IBM Plex Mono", monospace';
+      function rowH() {
+        return parseFloat(getComputedStyle(elBoard).getPropertyValue('--rk-row')) || 58;
+      }
 
-      /* Rótulo do valor SEMPRE logo à direita da barra, mesma cor pra todo mundo
-         (Chart.js 4 não traz datalabels). O render reserva padding à direita
-         pra caber o rótulo mais largo. */
-      var pluginRotulo = {
-        id: 'rotuloValor',
-        afterDatasetsDraw: function (c) {
-          var meta = c.getDatasetMeta(0);
-          if (!meta || !meta.data) return;
-          var ctx = c.ctx;
-          ctx.save();
-          ctx.font = LABEL_FONT;
-          ctx.textBaseline = 'middle';
-          ctx.textAlign = 'left';
-          ctx.fillStyle = 'rgba(188,231,248,0.95)';
-          meta.data.forEach(function (barra, i) {
-            var linha = linhas[i];
-            if (!linha) return;
-            ctx.fillText(linha.rotulo, barra.x + 8, barra.y);
+      /* cria as linhas UMA vez (specs já disponíveis no boot) */
+      function montarLinhas() {
+        var U = window.UI2;
+        var frag = document.createDocumentFragment();
+        BASE.forEach(function (p) {
+          var a = document.createElement('a');
+          a.className = 'rk-row fora';
+          var cor = corDe(p);
+          a.innerHTML =
+            '<span class="rr-pos"></span>' +
+            '<span class="rr-nome"><span class="rr-marca">' + U.esc(p.marca) + '</span>' +
+            '<span class="rr-modelo">' + U.esc(p.modelo) +
+            (p.status === 'descontinuado' ? ' <span class="desc">(descontinuado)</span>' : '') +
+            '</span></span>' +
+            '<span class="rr-bar"><span class="rr-fill" style="background:linear-gradient(90deg,' + cor + '59,' + cor + ');box-shadow:0 0 14px ' + cor + '3d"></span></span>' +
+            '<span class="rr-val"></span>';
+          frag.appendChild(a);
+          NODES.push({
+            p: p, el: a,
+            fill: a.querySelector('.rr-fill'),
+            val: a.querySelector('.rr-val'),
+            pos: a.querySelector('.rr-pos')
           });
-          ctx.restore();
-        }
-      };
+        });
+        elBoard.appendChild(frag);
+      }
 
-      function nomeDe(p) {
-        var n = (p.marca || '') + ' ' + (p.modelo || '');
-        n = n.trim();
-        return p.status === 'descontinuado' ? n + ' (descontinuado)' : n;
+      /* link pro review chega com o overlay (slug) — sem preço aqui:
+         ranking é medição; preço é papel do /precos.html */
+      function aplicarOverlay() {
+        NODES.forEach(function (n) {
+          if (n.p.slug) {
+            n.el.href = 'projetor/' + encodeURIComponent(n.p.slug) + '.html';
+            n.el.setAttribute('aria-label', 'Abrir a análise do ' + nomeOrd(n.p));
+          }
+        });
       }
 
       function montarLegenda() {
@@ -420,162 +422,97 @@
           }).join('');
       }
 
-      function render(metrica, base) {
-        linhas = base
-          .map(function (p) {
-            var v = metrica.valor(p);
-            return v === null ? null : { p: p, v: v, rotulo: metrica.fmt(v) };
-          })
-          .filter(Boolean)
+      var estado = { metrica: METRICAS[0], marca: '', tec: '' };
+      var marcaFiltro = {}; // opção do filtro -> [marcas reais] (grupos OEM)
+
+      function render(entrada, replay, lenta) {
+        var m = estado.metrica;
+        var alvo = estado.marca ? (marcaFiltro[estado.marca] || [estado.marca]) : null;
+
+        var vivos = NODES
+          .map(function (n) {
+            var dentro = (!alvo || alvo.indexOf(n.p.marca) >= 0) && (!estado.tec || n.p.tecnologia === estado.tec);
+            var v = dentro ? m.valor(n.p) : null;
+            return v === null ? { n: n, v: null } : { n: n, v: v };
+          });
+        var lista = vivos.filter(function (x) { return x.v !== null; })
           .sort(function (a, b) {
-            var d = metrica.maiorPrimeiro ? b.v - a.v : a.v - b.v;
-            /* Empate (ex.: 5 projetores com 10 ms) desempata por nome, senão a
-               ordem do ranking muda toda vez que o data.js é reordenado. */
+            var d = m.maiorPrimeiro ? b.v - a.v : a.v - b.v;
+            /* empate desempata por nome, senão a ordem muda quando o data.js é reordenado */
             if (d !== 0) return d;
-            return nomeDe(a.p).localeCompare(nomeDe(b.p), 'pt-BR');
+            return nomeOrd(a.n.p).localeCompare(nomeOrd(b.n.p), 'pt-BR');
           });
 
-        elTitle.textContent = metrica.titulo;
-        if (metrica.medido) {
-          elTitle.insertAdjacentHTML('beforeend', '<span class="m-tag">MEDIDO</span>');
-        }
-        elTitle.insertAdjacentHTML('beforeend',
-          '<span class="rk-dir' + (metrica.neutro ? ' is-neutro' : '') + '">' + metrica.badge + '</span>');
-        elSub.textContent = metrica.sub || '';
-        elSub.style.display = metrica.sub ? '' : 'none';
+        elTitle.textContent = m.titulo;
+        if (m.medido) elTitle.insertAdjacentHTML('beforeend', '<span class="m-tag">MEDIDO</span>');
+        elDir.innerHTML = '<span class="rk-dir' + (m.neutro ? ' is-neutro' : '') + '">' + m.badge + '</span>';
 
-        var faltando = base.length - linhas.length;
-        elCount.textContent = linhas.length + (linhas.length === 1 ? ' projetor' : ' projetores') +
-          (faltando > 0 ? ' · ' + faltando + ' sem medição' : '');
+        var base = NODES.length;
+        elCount.textContent = lista.length + '/' + base + ' com medição';
 
-        // Sem nenhum resultado (filtro apertado demais): mostra aviso, sem gráfico.
-        if (!linhas.length) {
-          if (chart) { chart.destroy(); chart = null; }
-          elWrap.style.height = '0px';
-          elFallback.style.display = 'block';
-          elFallback.textContent = 'Nenhum projetor com essa combinação de filtros tem medição de ' + metrica.chip + '.';
-          return;
-        }
-        elFallback.style.display = 'none';
+        elFallback.style.display = lista.length ? 'none' : 'block';
 
-        elWrap.style.height = (linhas.length * 27 + 44) + 'px';
+        var H = rowH();
+        elBoard.style.height = (lista.length * H) + 'px';
+        var maxV = lista.length ? Math.max.apply(null, lista.map(function (x) { return x.v; })) : 1;
 
-        var cores = linhas.map(function (l) { return CORES[l.p.tecnologia] || COR_PADRAO; });
-
-        // Reserva à direita = rótulo mais largo + folga, pra o valor nunca vazar.
-        var medCtx = elCanvas.getContext('2d');
-        medCtx.font = LABEL_FONT;
-        var maxLabelW = 0;
-        linhas.forEach(function (l) {
-          maxLabelW = Math.max(maxLabelW, medCtx.measureText(l.rotulo).width);
+        var noBoard = {};
+        lista.forEach(function (x, i) {
+          noBoard[nomeOrd(x.n.p)] = true;
+          var n = x.n;
+          n.el.classList.remove('fora');
+          n.el.style.transform = 'translateY(' + (i * H) + 'px)';
+          if (entrada) n.el.style.transitionDelay = Math.min(i, 24) * 28 + 'ms';
+          var w = Math.max(6, Math.round(x.v / maxV * 100));
+          if (replay) n.fill.style.transitionDelay = Math.min(i, 24) * (lenta ? 27 : 18) + 'ms';
+          n.fill.style.width = w + '%';
+          n.val.textContent = m.fmt(x.v);
+          n.pos.textContent = String(i + 1);
+          n.pos.className = 'rr-pos' + (i === 0 ? ' r1' : i === 1 ? ' r2' : i === 2 ? ' r3' : '');
         });
-        var padRight = Math.ceil(maxLabelW) + 16;
-
-        if (chart) { chart.destroy(); }
-        chart = new Chart(elCanvas.getContext('2d'), {
-          type: 'bar',
-          data: {
-            labels: linhas.map(function (l, i) { return (i + 1) + '.  ' + nomeDe(l.p); }),
-            datasets: [{
-              data: linhas.map(function (l) { return l.v; }),
-              backgroundColor: cores,
-              hoverBackgroundColor: cores,
-              borderRadius: 4,
-              borderSkipped: false,
-              barThickness: 15
-            }]
-          },
-          options: {
-            indexAxis: 'y',
-            responsive: true,
-            maintainAspectRatio: false,
-            animation: { duration: 500, easing: 'easeOutCubic' },
-            layout: { padding: { right: padRight, left: 2 } },
-            /* Os 3 descontinuados não têm página individual (slug vazio). A
-               medição deles continua valendo, mas a barra não é clicável. */
-            onHover: function (e, els) {
-              var alvo = e.native && e.native.target;
-              if (!alvo) return;
-              var linha = els.length ? linhas[els[0].index] : null;
-              alvo.style.cursor = (linha && linha.p.slug) ? 'pointer' : 'default';
-            },
-            onClick: function (e, els) {
-              if (!els.length) return;
-              var linha = linhas[els[0].index];
-              if (linha && linha.p.slug) {
-                window.location.href = 'projetor/' + linha.p.slug + '.html';
-              }
-            },
-            plugins: {
-              legend: { display: false },
-              tooltip: {
-                backgroundColor: 'rgba(17,23,34,0.96)',
-                titleColor: '#EEF3FA',
-                titleFont: { weight: '600', size: 12, family: 'Inter' },
-                bodyColor: '#EEF3FA',
-                bodyFont: { size: 12, family: 'Inter' },
-                padding: 12,
-                borderColor: 'rgba(91,200,238,0.42)',
-                borderWidth: 1,
-                displayColors: false,
-                callbacks: {
-                  label: function (item) {
-                    var linha = linhas[item.dataIndex];
-                    var out = [metrica.titulo + ': ' + linha.rotulo];
-                    if (linha.p.tecnologia) out.push(linha.p.tecnologia);
-                    out.push(linha.p.slug ? 'Clique para ver a análise' : '');
-                    return out.filter(Boolean);
-                  }
-                }
-              }
-            },
-            scales: {
-              x: {
-                beginAtZero: true,
-                grid: { color: 'rgba(238,243,250,0.05)' },
-                ticks: { color: 'rgba(141,156,178,0.8)', maxTicksLimit: 7, font: { family: '"IBM Plex Mono", monospace', size: 10 } }
-              },
-              y: {
-                grid: { display: false },
-                ticks: {
-                  autoSkip: false,
-                  color: 'rgba(238,243,250,0.78)',
-                  font: { size: 11, family: 'Inter' },
-                  crossAlign: 'far'
-                }
-              }
-            }
-          },
-          plugins: [pluginRotulo]
+        NODES.forEach(function (n) {
+          if (!noBoard[nomeOrd(n.p)]) {
+            n.el.classList.add('fora');
+            n.fill.style.width = '0%';
+          }
         });
+        if (entrada) {
+          /* o stagger é só da entrada; depois toda troca responde na hora */
+          setTimeout(function () {
+            NODES.forEach(function (n) { n.el.style.transitionDelay = ''; });
+          }, 24 * 28 + 800);
+        }
+        if (replay) {
+          setTimeout(function () {
+            NODES.forEach(function (n) {
+              n.fill.style.transitionDelay = '';
+              n.fill.style.transitionDuration = '';
+            });
+          }, 24 * 27 + 1400);
+        }
       }
 
-      /* Estado atual: métrica + filtros. aplicar() é o único ponto que desenha. */
-      var estado = { metrica: METRICAS[0], marca: '', tec: '' };
-      var elBrand = document.getElementById('rkBrand');
-      var elTech  = document.getElementById('rkTech');
-      var elClear = document.getElementById('rkClear');
-
-      /* Grupos de marca OEM: no filtro contam como uma opção só, mas cada barra
-         segue mostrando a marca real. Preenchido em montarFiltros(). */
-      var marcaFiltro = {}; // valor da opção -> [marcas reais]
-
-      function aplicar() {
-        var alvo = estado.marca ? (marcaFiltro[estado.marca] || [estado.marca]) : null;
-        var base = BASE.filter(function (p) {
-          if (alvo && alvo.indexOf(p.marca) < 0) return false;
-          if (estado.tec && p.tecnologia !== estado.tec) return false;
-          return true;
+      /* clique em chip re-anima as barras do zero: zera sem transição, força
+         o reflow e deixa o render animar até o alvo. No chip da métrica JÁ
+         ativa a subida é ~50% mais lenta (só contemplação); trocando de
+         métrica fica no ritmo normal. */
+      function reanimaBarras(lenta) {
+        NODES.forEach(function (n) {
+          n.fill.style.transition = 'none';
+          n.fill.style.width = '0%';
         });
-        elClear.hidden = !(estado.marca || estado.tec);
-        render(estado.metrica, base);
+        void elBoard.offsetHeight;
+        NODES.forEach(function (n) {
+          n.fill.style.transition = '';
+          n.fill.style.transitionDuration = lenta ? '1125ms' : '';
+        });
+        render(false, true, lenta);
       }
 
       function montarChips() {
         elChips.innerHTML = METRICAS.map(function (m, i) {
           return '<button type="button" class="rank-chip' + (i === 0 ? ' ativa' : '') + '" data-i="' + i + '" aria-pressed="' + (i === 0) + '">' + m.chip + '</button>';
         }).join('');
-
         elChips.addEventListener('click', function (e) {
           var btn = e.target.closest('.rank-chip');
           if (!btn) return;
@@ -584,8 +521,9 @@
             b.setAttribute('aria-pressed', b === btn);
             b.classList.toggle('ativa', b === btn);
           });
+          var mesma = estado.metrica === METRICAS[i];
           estado.metrica = METRICAS[i];
-          aplicar();
+          reanimaBarras(mesma);
           if (typeof gtag === 'function') {
             gtag('event', 'ranking_metrica', { metrica: METRICAS[i].id });
           }
@@ -622,7 +560,6 @@
         elBrand.innerHTML = '<option value="">Todas as marcas</option>' +
           opcoes.map(function (o) { return '<option value="' + o + '">' + o + '</option>'; }).join('');
 
-        // Tecnologias, na ordem natural LCD → DLP LED → DLP Laser.
         var ordemTec = ['LCD LED', 'DLP LED', 'DLP Laser'];
         var tecs = ordemTec.filter(function (t) {
           return BASE.some(function (p) { return p.tecnologia === t; });
@@ -630,17 +567,20 @@
         elTech.innerHTML = '<option value="">Todas as tecnologias</option>' +
           tecs.map(function (t) { return '<option value="' + t + '">' + t + '</option>'; }).join('');
 
-        elBrand.addEventListener('change', function () { estado.marca = elBrand.value; aplicar(); });
-        elTech.addEventListener('change', function () { estado.tec = elTech.value; aplicar(); });
+        function mexeu() {
+          elClear.hidden = !(estado.marca || estado.tec);
+          render(false);
+        }
+        elBrand.addEventListener('change', function () { estado.marca = elBrand.value; mexeu(); });
+        elTech.addEventListener('change', function () { estado.tec = elTech.value; mexeu(); });
         elClear.addEventListener('click', function () {
           estado.marca = ''; estado.tec = '';
           elBrand.value = ''; elTech.value = '';
-          aplicar();
+          mexeu();
         });
       }
 
-      /* Mantém os chips grudados logo abaixo do header sticky (a altura dele
-         varia com wrap do nav e com a barra de quedas acima). */
+      /* chips grudados logo abaixo do header sticky (altura variável) */
       var rafSticky = null;
       function syncSticky() {
         var header = document.querySelector('header.topo');
@@ -649,28 +589,41 @@
         document.documentElement.style.setProperty('--rk-header-h', base + 'px');
       }
 
+      var ultimaH = 0;
+      function onResize() {
+        syncSticky();
+        var H = rowH();
+        if (H !== ultimaH) { ultimaH = H; render(false); }
+      }
+
       function boot() {
         BASE = (window.PROJETORES_DATA || []).filter(function (p) {
           return p && p.listar !== false;
         });
+        if (!BASE.length) { elFallback.style.display = 'block'; return; }
 
         syncSticky();
+        ultimaH = 0;
         addEventListener('scroll', function () {
           if (rafSticky) return;
           rafSticky = requestAnimationFrame(function () { rafSticky = null; syncSticky(); });
         }, { passive: true });
-        addEventListener('resize', syncSticky);
+        addEventListener('resize', onResize);
 
-        if (!BASE.length || typeof Chart === 'undefined' || !elCanvas) {
-          if (elWrap) elWrap.style.display = 'none';
-          if (elLegend) elLegend.style.display = 'none';
-          if (elFallback) elFallback.style.display = 'block';
-          return;
-        }
         montarLegenda();
         montarChips();
         montarFiltros();
-        aplicar();
+        montarLinhas();
+        ultimaH = rowH();
+
+        /* 1ª pintura: barras crescem do zero em cascata (2 frames pra
+           transição pegar). Preço/link chegam com o overlay, sem re-animar. */
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () { render(true); });
+        });
+        if (window.PRICES_OVERLAY_READY && typeof window.PRICES_OVERLAY_READY.then === 'function') {
+          window.PRICES_OVERLAY_READY.then(aplicarOverlay);
+        }
       }
 
       if (document.readyState === 'loading') {

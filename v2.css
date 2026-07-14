@@ -80,9 +80,10 @@ h2 { font-family: var(--display); font-size: clamp(26px, 3vw, 38px); font-weight
 .stat { display: grid; grid-template-columns: 52px 1fr auto; align-items: center; gap: 10px; }
 .stat .s-label { font-family: var(--mono); font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--txt-2); }
 .stat .s-val { font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--num); white-space: nowrap; }
-.seg { height: 8px; border-radius: 3px; background: var(--card-2); position: relative; overflow: hidden; }
-.seg .seg-fill { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--brand); border-radius: 3px; transition: width 800ms cubic-bezier(0.22, 1, 0.36, 1); }
-.seg::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0 7px, var(--card) 7px 10px); }
+/* barra lisa (13/07, pedido do dono): gradiente + brilho, sem listrado */
+.seg { height: 9px; border-radius: 999px; background: var(--card-2); position: relative; overflow: hidden; }
+.seg .seg-fill { position: absolute; inset: 0 auto 0 0; width: 0; border-radius: 999px; background: linear-gradient(90deg, rgba(91, 200, 238, 0.35), var(--brand)); box-shadow: 0 0 12px rgba(91, 200, 238, 0.25); transition: width 750ms cubic-bezier(0.22, 1, 0.36, 1); }
+.seg .seg-fill::after { content: ''; position: absolute; inset: 0; border-radius: 999px; background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), transparent 55%); }
 
 /* ---------- barra de quedas ---------- */
 .quedas { background: var(--bg-2); border-bottom: 1px solid var(--line); color: var(--txt-2); font-family: var(--mono); font-size: 12.5px; font-weight: 600; padding: 7px 0; white-space: nowrap; overflow-x: auto; }

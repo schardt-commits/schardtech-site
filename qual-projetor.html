@@ -44,181 +44,664 @@
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" }
   }
   </script>
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="v2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    /* ===== reskin v2 do recomendador (classes .qp-* preservadas) ===== */
-    .wrap.qp-narrow { max-width: 800px; }
-    .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
-
-    /* SHORT de apoio no topo */
-    .qp-short-wrap { margin-top: 30px; max-width: 240px; }
-    .qp-short-label { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--txt-2); margin-bottom: 10px; }
-    .qp-short-link { display: block; position: relative; width: 100%; padding-top: 177.78%; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45); text-decoration: none; transition: transform 150ms, border-color 150ms; }
-    .qp-short-link:hover { transform: translateY(-3px); border-color: var(--brand); }
-    .qp-short-link img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    .qp-short-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(9, 12, 17, 0.3); }
-    .qp-short-play svg { width: 52px; height: 52px; filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6)); }
-
-    /* QUESTIONÁRIO */
-    .qp-questions { border-top: 0; padding: 12px 0 0; }
-    .qp-question { margin-bottom: 44px; }
-    .qp-question h3 { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 18px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 6px; }
-    .qp-question h3 .q-num { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: var(--brand-dim); border: 1px solid var(--brand-borda); color: var(--brand); font-family: var(--mono); font-size: 11px; font-weight: 700; }
-    .q-hint { font-size: 13px; color: var(--txt-2); margin-bottom: 14px; line-height: 1.55; padding-left: 34px; }
-
-    .qp-options { display: flex; flex-wrap: wrap; gap: 8px; }
-    .qp-option {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 16px; min-height: 44px; border-radius: 999px;
-      border: 1px solid var(--line); background: var(--card-2); color: var(--txt-2);
-      font-family: var(--mono); font-size: 12.5px; font-weight: 600; cursor: pointer;
-      transition: color 150ms, border-color 150ms, background 150ms;
+    /* HERO */
+    .qp-hero {
+      padding: 140px 0 64px;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(79,163,199,0.12) 0%, transparent 65%),
+        linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+      text-align: center;
     }
-    .qp-option:hover { color: var(--txt); border-color: var(--brand); }
-    .qp-option.active { color: #08222E; background: var(--brand); border-color: var(--brand); }
-    .qp-option svg { flex-shrink: 0; }
+    .qp-hero .section-tag { display: inline-flex; margin: 0 auto 20px; }
+    .qp-hero h1 {
+      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    .qp-hero p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .qp-hero-note {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 10px auto 0;
+    }
+    .qp-short-wrap {
+      margin: 32px auto 0;
+      max-width: 260px;
+    }
+    .qp-short-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .qp-short-link {
+      display: block;
+      position: relative;
+      width: 100%;
+      padding-top: 177.78%;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .qp-short-link:hover { transform: scale(1.02); box-shadow: 0 12px 40px rgba(0,0,0,0.5); }
+    .qp-short-link img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .qp-short-play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.25);
+    }
+    .qp-short-play svg {
+      width: 56px;
+      height: 56px;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+    }
 
-    .qp-sub-options { margin-top: 12px; padding: 14px 16px; border-left: 2px solid var(--brand-borda); background: var(--brand-dim); border-radius: 0 var(--radius) var(--radius) 0; }
-    .qp-sub-label { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--txt-2); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.1em; }
+    /* QUESTIONS */
+    .qp-questions { padding: 64px 0 0; }
+    .qp-question { margin-bottom: 44px; }
+    .qp-question h3 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .qp-question h3 .q-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: rgba(79,163,199,0.15);
+      color: var(--primary);
+      font-size: 0.72rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .q-hint {
+      font-size: 0.79rem;
+      color: var(--text-dim);
+      margin-bottom: 14px;
+      line-height: 1.5;
+      padding-left: 32px;
+    }
 
-    .qp-dist-input-row { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
-    .qp-dist-label { font-size: 13px; color: var(--txt-2); white-space: nowrap; }
-    .qp-lux-input { width: 110px; height: 44px; padding: 0 14px; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); color: var(--txt); font-family: var(--mono); font-size: 14px; outline: none; transition: border-color 150ms; }
-    .qp-lux-input:hover, .qp-lux-input:focus { border-color: var(--brand); }
-    .qp-lux-unit { color: var(--txt-2); font-family: var(--mono); font-size: 13px; }
+    .qp-options { display: flex; flex-wrap: wrap; gap: 10px; }
+    .qp-option {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      min-height: 44px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .qp-option:hover {
+      border-color: rgba(79,163,199,0.45);
+      color: var(--text);
+      background: rgba(79,163,199,0.06);
+    }
+    .qp-option.active {
+      border-color: var(--primary);
+      background: rgba(79,163,199,0.14);
+      color: var(--accent);
+      box-shadow: 0 0 14px rgba(79,163,199,0.2);
+    }
 
-    /* PAINEL AVANÇADO */
-    .qp-advanced { margin: 12px 0 28px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--card); }
-    button.qp-advanced-toggle { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 15px 22px; background: none; border: 0; cursor: pointer; text-align: inherit; transition: background 150ms; }
-    button.qp-advanced-toggle:hover { background: var(--brand-dim); }
-    .qp-advanced-toggle-label { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--brand); }
-    .qp-advanced-chevron { color: var(--brand); font-family: var(--mono); font-size: 13px; font-weight: 700; transition: transform 0.3s ease; }
+    .qp-sub-options {
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-left: 2px solid rgba(79,163,199,0.3);
+      background: rgba(79,163,199,0.03);
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+    .qp-sub-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-weight: 600;
+    }
+
+    .qp-dist-input-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .qp-dist-label { font-size: 0.82rem; color: var(--text-muted); white-space: nowrap; }
+
+    /* ADVANCED PANEL */
+    .qp-advanced {
+      margin: 12px 0 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .qp-advanced-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 22px;
+      background: var(--card-bg);
+      cursor: pointer;
+      user-select: none;
+      transition: background var(--transition);
+    }
+    .qp-advanced-toggle:hover { background: rgba(79,163,199,0.05); }
+    /* Toggle é <button> (acessível por teclado) — desfaz o estilo de UA */
+    button.qp-advanced-toggle { font: inherit; color: inherit; background: none; border: 0; width: 100%; text-align: inherit; cursor: pointer; }
+    .qp-advanced-toggle-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .qp-advanced-chevron {
+      color: var(--primary);
+      font-size: 0.7rem;
+      transition: transform 0.3s ease;
+    }
     .qp-advanced.open .qp-advanced-chevron { transform: rotate(180deg); }
-    .qp-advanced-body { display: none; padding: 26px 22px; background: var(--bg-2); border-top: 1px solid var(--line); }
+    .qp-advanced-body {
+      display: none;
+      padding: 26px 22px;
+      background: rgba(20,24,43,0.6);
+      border-top: 1px solid var(--border);
+    }
     .qp-advanced.open .qp-advanced-body { display: block; }
 
     .qp-adv-section { margin-bottom: 26px; }
     .qp-adv-section:last-child { margin-bottom: 0; }
-    .qp-adv-title { font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--txt); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 7px; }
-    .qp-adv-hint { font-size: 13px; color: var(--txt-2); margin-bottom: 12px; line-height: 1.55; }
-    .qp-adv-sep { border: none; border-top: 1px solid var(--line); margin: 22px 0; }
-    .qp-embreve { font-family: var(--mono); font-size: 9.5px; font-weight: 600; color: var(--brand); background: var(--brand-dim); border: 1px solid var(--brand-borda); border-radius: 4px; padding: 2px 7px; margin-left: 6px; vertical-align: middle; letter-spacing: 0.06em; text-transform: uppercase; }
-    .qp-lux-row { display: flex; align-items: center; gap: 12px; margin-top: 14px; }
+    .qp-adv-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 7px;
+    }
+    .qp-adv-hint {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .qp-adv-sep {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin: 22px 0;
+    }
 
-    /* CTA */
-    .qp-cta { text-align: center; padding: 44px 0 90px; }
-    .qp-live-count { margin-top: 16px; font-family: var(--mono); font-size: 12.5px; min-height: 1.2em; color: var(--txt-2); transition: color 0.25s; }
-    .qp-live-count.ok   { color: var(--brand); }
-    .qp-live-count.warn { color: var(--alerta); }
+    .qp-lux-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .qp-lux-input {
+      width: 110px;
+      padding: 10px 14px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .qp-lux-input:focus { border-color: var(--primary); }
+    .qp-lux-unit { color: var(--text-muted); font-size: 0.9rem; }
 
-    /* RESULTADOS */
-    .qp-results { display: none; border-top: 0; padding: 0 0 100px; }
-    .qp-results.visible { display: block; }
-    .qp-results-header { text-align: center; margin-bottom: 48px; }
-    .qp-results-header .eyebrow { justify-content: center; }
-    .qp-results-header h2 .grad { color: var(--brand); }
-    .qp-results-header p { color: var(--txt-2); font-size: 14px; margin-top: 12px; }
-    .qp-back-btn { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 36px; padding: 9px 18px; border-radius: var(--radius); border: 1px solid var(--line); background: transparent; color: var(--txt-2); font-family: var(--mono); font-size: 12px; font-weight: 600; cursor: pointer; transition: color 150ms, border-color 150ms, background 150ms; }
-    .qp-back-btn:hover { border-color: var(--brand); color: var(--brand); background: var(--brand-dim); }
-
-    /* CARDS DE RESULTADO */
-    .qp-cards { display: flex; flex-direction: column; gap: 16px; }
-    .qp-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 28px; position: relative; overflow: hidden; transition: border-color 150ms, box-shadow 150ms; }
-    .qp-card:hover { border-color: var(--brand); box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45), 0 0 0 1px var(--brand-borda); }
-    .qp-card.featured { border-color: var(--brand-borda); background: linear-gradient(135deg, var(--brand-dim) 0%, var(--card) 55%); }
-    .qp-card.featured::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--brand), var(--num)); }
-
-    .qp-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
-    .qp-card-badge-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
-    .qp-card-badge { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 4px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-    .qp-card-badge.featured { background: var(--brand-dim); color: var(--brand); border: 1px solid var(--brand-borda); }
-    .qp-card-badge.alt { background: var(--card-2); color: var(--txt-2); border: 1px solid var(--line); }
-    .qp-match-pill { display: inline-flex; align-items: center; padding: 3px 9px; border-radius: 999px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.04em; background: var(--card-2); color: var(--txt-2); border: 1px solid var(--line); }
-    .qp-match-pill.hi  { color: var(--win); border-color: rgba(47, 224, 138, 0.35); background: var(--win-dim); }
-    .qp-match-pill.mid { color: var(--num); border-color: var(--brand-borda); background: var(--brand-dim); }
-
-    .qp-card-name { font-family: var(--display); font-size: 21px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: var(--txt); }
-    .qp-card-name .marca { color: var(--txt-2); font-weight: 500; }
-    /* Quando tem página individual, o nome vira link */
-    a.qp-card-name { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; transition: color 150ms; }
-    a.qp-card-name:hover { color: var(--brand); }
-    a.qp-card-name:hover .marca { color: var(--txt); }
-    a.qp-card-name .qp-card-name-arrow { opacity: 0; transform: translate(-4px, 0); transition: opacity 0.18s ease, transform 0.18s ease; color: var(--brand); flex-shrink: 0; }
-    a.qp-card-name:hover .qp-card-name-arrow { opacity: 1; transform: translate(0, 0); }
-
-    .qp-card-price { text-align: right; flex-shrink: 0; }
-    .qp-price-current { font-family: var(--mono); font-size: 22px; font-weight: 700; color: var(--txt); line-height: 1.2; word-break: break-word; }
-    .qp-price-marketplace { font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--txt-2); margin-left: 4px; }
-    .qp-price-meta { font-family: var(--mono); font-size: 11px; color: var(--txt-2); margin-top: 4px; }
-    .qp-price-meta strong { color: var(--num); font-weight: 600; padding: 1px 5px; background: var(--brand-dim); border-radius: 3px; }
-    .qp-card-price .regua-blk { width: 210px; margin: 12px 0 0 auto; gap: 6px; }
-    .qp-card-price-range { font-family: var(--mono); font-size: 17px; font-weight: 700; color: var(--txt); white-space: nowrap; }
-    .qp-card-price-note { font-family: var(--mono); font-size: 10.5px; color: var(--txt-2); margin-top: 3px; }
-    .qp-card-price-na { font-family: var(--mono); font-size: 12px; color: var(--txt-2); font-style: italic; }
+    .qp-price-current {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.2;
+      word-break: break-word;
+    }
+    .qp-price-marketplace {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-left: 4px;
+    }
+    .qp-price-history {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .qp-price-meta {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .qp-price-meta strong {
+      color: var(--accent);
+      font-weight: 600;
+      padding: 1px 5px;
+      background: rgba(143, 211, 255, 0.08);
+      border-radius: 3px;
+    }
     @media (max-width: 480px) {
-      .qp-price-current { font-size: 18px; }
+      .qp-price-current { font-size: 1.15rem; }
       .qp-price-marketplace { display: block; margin-left: 0; margin-top: 2px; }
     }
-    .qp-tag-importado { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 4px; background: rgba(255, 155, 122, 0.12); border: 1px solid rgba(255, 155, 122, 0.4); color: var(--alerta); font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.05em; vertical-align: middle; margin-left: 7px; text-transform: uppercase; }
+    .qp-tag-importado {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 8px;
+      border-radius: 100px;
+      background: rgba(255,170,50,0.15);
+      color: #FFAA32;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      vertical-align: middle;
+      margin-left: 7px;
+      text-transform: uppercase;
+    }
+
+    .qp-lux-ref {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .qp-lux-ref-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.03);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .qp-lux-ref-badge { font-weight: 700; color: var(--accent); white-space: nowrap; }
+
+    /* CTA */
+    .qp-cta { text-align: center; padding: 40px 0 90px; }
+    .qp-cta .btn { font-size: 1rem; padding: 15px 40px; }
+    .qp-live-count {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      min-height: 1.2em;
+      color: var(--text-dim);
+      transition: color 0.25s;
+    }
+    .qp-live-count.ok   { color: var(--primary); }
+    .qp-live-count.warn { color: #ffb347; }
+
+    /* RESULTS */
+    .qp-results { padding: 0 0 100px; display: none; }
+    .qp-results.visible { display: block; }
+
+    .qp-results-header { text-align: center; margin-bottom: 52px; }
+    .qp-results-header h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+    .qp-results-header p { color: var(--text-muted); font-size: 0.9rem; }
+
+    .qp-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 36px;
+      padding: 9px 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: inherit;
+    }
+    .qp-back-btn:hover {
+      border-color: var(--primary);
+      color: var(--accent);
+      background: rgba(79,163,199,0.05);
+    }
+
+    /* CARDS */
+    .qp-cards { display: flex; flex-direction: column; gap: 20px; }
+    .qp-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 28px 30px;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .qp-card:hover { border-color: var(--border-hover); box-shadow: var(--glow-sm); }
+    .qp-card.featured {
+      border-color: rgba(79,163,199,0.38);
+      background: linear-gradient(135deg, rgba(79,163,199,0.07) 0%, var(--card-bg) 55%);
+    }
+    .qp-card.featured::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent), var(--gradient-secondary));
+    }
+
+    .qp-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .qp-card-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .qp-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .qp-card-badge.featured {
+      background: rgba(79,163,199,0.16);
+      color: var(--accent);
+      border: 1px solid rgba(79,163,199,0.32);
+    }
+    .qp-card-badge.alt {
+      background: rgba(123,140,255,0.1);
+      color: #a5b0ff;
+      border: 1px solid rgba(123,140,255,0.22);
+    }
+    .qp-match-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 9px;
+      border-radius: 100px;
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      background: rgba(255,255,255,0.04);
+      color: var(--text-dim);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .qp-match-pill.hi  { color: #6be58a; border-color: rgba(107,229,138,0.22); background: rgba(107,229,138,0.06); }
+    .qp-match-pill.mid { color: #ffdb6b; border-color: rgba(255,219,107,0.22); background: rgba(255,219,107,0.06); }
+
+    .qp-card-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .qp-card-name .marca { color: var(--text-muted); font-weight: 500; }
+    /* Quando tem página individual, o nome vira link */
+    a.qp-card-name {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    a.qp-card-name:hover { color: var(--accent); }
+    a.qp-card-name:hover .marca { color: var(--text); }
+    a.qp-card-name .qp-card-name-arrow {
+      opacity: 0;
+      transform: translate(-4px, 0);
+      transition: opacity 0.18s ease, transform 0.18s ease;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    a.qp-card-name:hover .qp-card-name-arrow {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    .qp-card-price { text-align: right; flex-shrink: 0; }
+    .qp-card-price-range {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .qp-card-price-note { font-size: 0.7rem; color: var(--text-dim); margin-top: 3px; }
+    .qp-card-price-na { font-size: 0.8rem; color: var(--text-dim); font-style: italic; }
 
     /* Mini sparkline + indicador "vs preço médio" */
-    .qp-spark { display: flex; align-items: center; gap: 8px; margin-top: 8px; justify-content: flex-end; }
+    .qp-spark {
+      display: flex; align-items: center; gap: 8px;
+      margin-top: 6px; justify-content: flex-end;
+    }
     .qp-spark svg { display: block; flex-shrink: 0; }
-    .qp-spark-label { display: inline-flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: 10.5px; font-weight: 600; white-space: nowrap; }
+    .qp-spark-label {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.7rem; font-weight: 600; white-space: nowrap;
+    }
     .qp-spark-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-    .qp-spark-label.good { color: var(--win); }   .qp-spark-label.good .qp-spark-dot { background: var(--win); }
-    .qp-spark-label.mid  { color: var(--txt-2); } .qp-spark-label.mid .qp-spark-dot  { background: var(--txt-2); }
-    .qp-spark-label.bad  { color: var(--alerta); } .qp-spark-label.bad .qp-spark-dot { background: var(--alerta); }
+    .qp-spark-label.good { color: #5BD9A0; } .qp-spark-label.good .qp-spark-dot { background: #5BD9A0; }
+    .qp-spark-label.mid  { color: var(--text-muted); } .qp-spark-label.mid .qp-spark-dot { background: var(--text-muted); }
+    .qp-spark-label.bad  { color: #FF9B7A; } .qp-spark-label.bad .qp-spark-dot { background: #FF9B7A; }
+    @media (max-width: 580px) {
+      .qp-spark { justify-content: flex-start; }
+    }
 
-    .qp-card-specs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
-    .qp-spec { display: flex; align-items: center; gap: 6px; padding: 4px 10px; background: var(--card-2); border: 1px solid var(--line); border-radius: 5px; font-family: var(--mono); font-size: 11.5px; }
-    .qp-spec-label { color: var(--txt-2); }
-    .qp-spec-value { font-weight: 600; color: var(--txt); }
-    .qp-spec-value.hi   { color: var(--num); }
-    .qp-spec-value.warn { color: var(--alerta); }
+    .qp-card-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .qp-spec {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 7px;
+      font-size: 0.8rem;
+    }
+    .qp-spec-label { color: var(--text-muted); }
+    .qp-spec-value { font-weight: 600; color: var(--text); }
+    .qp-spec-value.hi   { color: var(--accent); }
+    .qp-spec-value.warn { color: #ffb347; }
 
-    .qp-divider { border: none; border-top: 1px solid var(--line); margin: 16px 0; }
+    .qp-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
     .qp-card-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 
-    /* Botão de compra: amarelo --cta, mesmo visual do .btn-loja do v2 */
     .qp-store-btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      min-height: 42px; padding: 8px 16px; border-radius: var(--radius);
-      background: var(--cta); color: #14100A; text-decoration: none;
-      font-family: var(--display); font-weight: 700; font-size: 14px;
-      transition: transform 100ms, filter 100ms;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: #fff;
+      color: #222;
+      border: 1.5px solid rgba(0,0,0,0.08);
+      box-shadow: var(--elev-store);
+      text-decoration: none;
+      transition: all var(--transition);
+      min-height: 44px;
     }
-    .qp-store-btn:hover { filter: brightness(1.08); }
-    .qp-store-btn:active { transform: translateY(2px); }
+    .qp-store-btn:hover { transform: translateY(-1px); box-shadow: var(--elev-store-hover); }
+    .store-dot { display: none; }
+    .qp-store-logo { width: auto; object-fit: contain; flex-shrink: 0; display: block; }
+    .qp-store-btn.ali { color: #e43225; }
+    .qp-store-btn.ali:hover { border-color: rgba(228,50,37,0.45); }
+    .qp-store-btn.ali .qp-store-logo { height: 24px; }
+    .qp-store-btn.shopee { color: #EE4D2D; }
+    .qp-store-btn.shopee:hover { border-color: rgba(238,77,45,0.45); }
+    .qp-store-btn.shopee .qp-store-logo { height: 28px; }
+    .qp-store-btn.ml { color: #1a3fbf; }
+    .qp-store-btn.ml:hover { border-color: rgba(26,63,191,0.4); }
+    .qp-store-btn.ml .qp-store-logo { height: 26px; margin-left: -8px; }
 
-    /* Cupom (Ali-only): padrão tracejado ciano do v2 */
+    .qp-store-btn.amazon {
+      background: rgba(255,153,0,0.1);
+      border-color: rgba(255,153,0,0.35);
+      color: #FFB347;
+    }
+    .qp-store-btn.amazon:hover { background: rgba(255,153,0,0.2); border-color: rgba(255,153,0,0.6); }
+    .amazon .store-dot { background: #FF9900; }
+
+    .qp-video-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: var(--radius);
+      background: rgba(255,0,0,0.09);
+      border: 1px solid rgba(255,0,0,0.18);
+      color: #ff7070;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+    .qp-video-link:hover { background: rgba(255,0,0,0.16); border-color: rgba(255,0,0,0.32); }
+
     .qp-coupons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-    .qp-coupon { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 6px; border: 1px dashed rgba(91, 200, 238, 0.55); background: rgba(91, 200, 238, 0.10); font-family: var(--mono); font-size: 11.5px; }
-    .qp-coupon-label { color: var(--txt-2); }
-    .qp-coupon-code { font-weight: 700; color: var(--num); letter-spacing: 0.05em; text-transform: uppercase; }
-    .qp-coupon-copy { padding: 3px 9px; border-radius: 4px; border: 1px solid var(--brand-borda); background: transparent; color: var(--brand); font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; transition: background 150ms, color 150ms, border-color 150ms; }
-    .qp-coupon-copy:hover { background: var(--brand-dim); }
-    .qp-coupon-copy.copied { color: var(--win); border-color: var(--win); }
-    .qp-coupon-note { font-family: var(--mono); font-size: 11px; color: var(--txt-2); margin-top: 7px; }
+    .qp-coupon {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px dashed rgba(79,163,199,0.3);
+      background: rgba(79,163,199,0.05);
+      font-size: 0.8rem;
+    }
+    .qp-coupon-label { color: var(--text-muted); }
+    .qp-coupon-code { font-family: 'Courier New', monospace; font-weight: 700; color: var(--accent); letter-spacing: 0.05em; }
+    .qp-coupon-copy {
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(79,163,199,0.25);
+      background: transparent;
+      color: var(--primary);
+      font-size: 0.7rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .qp-coupon-copy:hover { background: rgba(79,163,199,0.1); }
+    .qp-coupon-copy.copied { color: #4caf50; border-color: #4caf50; }
+    .qp-coupon-note { font-size: 0.73rem; color: var(--text-muted); margin-top: 7px; }
 
-    .qp-buy-section { margin-top: 16px; padding: 14px 16px; border-radius: var(--radius); background: var(--bg-2); border: 1px solid var(--line); }
-    .qp-buy-label { font-family: var(--mono); font-size: 10px; font-weight: 700; color: var(--txt-2); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+    .qp-buy-section {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      background: rgba(255,210,0,0.05);
+      border: 1px solid rgba(255,210,0,0.22);
+    }
+    .qp-buy-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: rgba(255,210,0,0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
 
-    .qp-review-banner { display: flex; align-items: center; gap: 14px; margin-top: 14px; border-radius: var(--radius); overflow: hidden; text-decoration: none; border: 1px solid var(--line); background: var(--card-2); transition: border-color 150ms, background 150ms; }
-    .qp-review-banner:hover { border-color: var(--brand); background: var(--brand-dim); }
-    .qp-review-thumb { width: 130px; height: 73px; object-fit: cover; flex-shrink: 0; display: block; }
-    .qp-review-cta { font-size: 13.5px; font-weight: 600; color: var(--txt); display: flex; align-items: center; gap: 7px; }
-    .qp-review-cta svg { color: var(--brand); flex-shrink: 0; }
+    .qp-review-banner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 14px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      text-decoration: none;
+      border: 1px solid rgba(255,0,0,0.15);
+      background: rgba(255,0,0,0.05);
+      transition: all var(--transition);
+    }
+    .qp-review-banner:hover {
+      border-color: rgba(255,0,0,0.3);
+      background: rgba(255,0,0,0.1);
+    }
+    .qp-review-thumb {
+      width: 130px;
+      height: 73px;
+      object-fit: cover;
+      flex-shrink: 0;
+      display: block;
+    }
+    .qp-review-cta {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #ff7070;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
 
     @media (max-width: 640px) {
       .qp-card { padding: 20px 18px; }
       .qp-card-top { flex-direction: column; }
       .qp-card-price { text-align: left; }
-      .qp-card-price .regua-blk { margin-left: 0; }
-      .qp-spark { justify-content: flex-start; }
+      .qp-lux-ref { grid-template-columns: 1fr; }
       .qp-review-thumb { width: 100px; height: 56px; }
     }
   </style>
@@ -227,50 +710,34 @@
 
   <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
 
-  <div class="quedas" id="barra-quedas"></div>
-
-  <header class="topo">
-    <div class="wrap header-in">
-      <a class="logo" href="/"><img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216"></a>
-      <div class="busca">
-        <span class="lupa" aria-hidden="true"></span>
-        <input id="busca-input" type="search" placeholder="Buscar projetor..." autocomplete="off" aria-label="Buscar projetor">
-        <div class="busca-drop" id="busca-drop" role="listbox"></div>
-      </div>
-      <nav class="principal" aria-label="Navegação principal">
-        <a href="projetores.html">Projetores</a>
-        <a href="comparar.html">Comparativo</a>
-        <a class="atual" href="qual-projetor.html">Encontre seu projetor</a>
-        <a class="destaque" href="precos.html">Preços ao Vivo</a>
-        <a href="ranking.html">Ranking</a>
-        <a href="acessorios-projetores.html">Acessórios</a>
-        <a href="calculadora-ansi.html">Calculadora</a>
-        <a href="sobre.html">Sobre</a>
+  <header id="header">
+    <div class="container header-inner">
+      <a href="/" class="logo-link">
+        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img" width="402" height="216">
+      </a>
+      <nav id="mainNav">
+        <a href="projetores.html" class="nav-link">Projetores</a>
+        <a href="comparar.html" class="nav-link">Comparativo</a>
+        <a href="qual-projetor.html" class="nav-link" style="color:var(--primary);font-weight:600;">Encontre seu projetor</a>
+        <a href="precos.html" class="nav-link">Preços ao Vivo</a>
+        <a href="ranking.html" class="nav-link">Ranking</a>
+        <a href="acessorios-projetores.html" class="nav-link">Acessórios</a>
+        <a href="calculadora-ansi.html" class="nav-link">Calculadora</a>
+        <a href="sobre.html" class="nav-link">Sobre</a>
       </nav>
-      <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <div class="menu-mobile" id="menu-mobile">
-    <button class="fechar" id="menu-fechar">Fechar X</button>
-    <a href="projetores.html">Projetores</a>
-    <a href="comparar.html">Comparativo</a>
-    <a href="qual-projetor.html">Encontre seu projetor</a>
-    <a href="precos.html">Preços ao Vivo</a>
-    <a href="ranking.html">Ranking</a>
-    <a href="acessorios-projetores.html">Acessórios</a>
-    <a href="calculadora-ansi.html">Calculadora</a>
-    <a href="sobre.html">Sobre</a>
-  </div>
-
   <main id="main">
-
-  <section class="page-head sem-borda">
-    <div class="wrap qp-narrow">
-      <div class="migalha"><a href="/">Home</a> <span class="sep">/</span> <span>Encontre seu projetor</span></div>
-      <div class="eyebrow">Ferramenta gratuita</div>
-      <h1>Qual projetor <span class="grad">é pra você?</span></h1>
-      <p class="sub">Responda algumas perguntas e receba recomendações baseadas em dados reais testados no canal. Nenhuma pergunta é obrigatória.</p>
+  <section class="qp-hero">
+    <div class="container">
+      <div class="section-tag">Ferramenta Gratuita</div>
+      <h1>Qual projetor<br><span class="gradient-text">é pra você?</span></h1>
+      <p>Responda algumas perguntas e receba recomendações baseadas em dados reais testados no canal.</p>
+      <p class="qp-hero-note">Nenhuma pergunta é obrigatória.</p>
       <div class="qp-short-wrap">
         <p class="qp-short-label">Não sabe por onde começar?</p>
         <a class="qp-short-link" href="https://youtube.com/shorts/y40NWkwjuYg" target="_blank" rel="noopener" aria-label="Ver como usar a ferramenta no YouTube">
@@ -286,8 +753,8 @@
     </div>
   </section>
 
-  <section class="qp-questions sem-borda">
-    <div class="wrap qp-narrow">
+  <section class="qp-questions">
+    <div class="container" style="max-width:760px;">
 
       <!-- 1. Iluminação -->
       <div class="qp-question">
@@ -304,7 +771,7 @@
       <!-- 2. Orçamento -->
       <div class="qp-question">
         <h3><span class="q-num">2</span> Qual o seu orçamento?</h3>
-        <p class="q-hint">Baseado no valor mínimo por loja. Promoções e variações de estoque podem mudar bastante. Use como referência.</p>
+        <p class="q-hint">Baseado no valor mínimo por loja. Promoções e variações de estoque podem mudar bastante — use como referência.</p>
         <div class="qp-options" id="orcPills">
           <button class="qp-option" onclick="pickOrc(null,null,this)">Sem limite</button>
           <button class="qp-option" onclick="pickOrc(null,400,this)">Até R$400</button>
@@ -382,7 +849,7 @@
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
             Configurações técnicas (para quem quer mais controle)
           </span>
-          <span class="qp-advanced-chevron">&darr;</span>
+          <span class="qp-advanced-chevron">▼</span>
         </button>
         <div class="qp-advanced-body">
 
@@ -408,7 +875,7 @@
           <!-- Resolução nativa -->
           <div class="qp-adv-section">
             <div class="qp-adv-title">Resolução nativa</div>
-            <div class="qp-adv-hint">É o que o projetor projeta de fato, independente do sinal que você envia. 1080p já entrega ótima qualidade para a maioria dos usos.</div>
+            <div class="qp-adv-hint">É o que o projetor projeta de fato — independente do sinal que você envia. 1080p já entrega ótima qualidade para a maioria dos usos.</div>
             <div class="qp-options">
               <button class="qp-option" onclick="pick('resolucao','720p',this)">720p</button>
               <button class="qp-option" onclick="pick('resolucao','1080p',this)">Full HD (1080p)</button>
@@ -435,7 +902,7 @@
           <!-- Ótica selada -->
           <div class="qp-adv-section">
             <div class="qp-adv-title">Ótica selada</div>
-            <div class="qp-adv-hint">Ótica selada protege as lentes de poeira interna e preserva a qualidade da imagem a longo prazo. Quanto mais uso contínuo, mais importa. Os níveis são classificados pelo canal com base nos testes.</div>
+            <div class="qp-adv-hint">Ótica selada protege as lentes de poeira interna — preserva a qualidade da imagem a longo prazo. Quanto mais uso contínuo, mais importa. Os níveis são classificados pelo canal com base nos testes.</div>
             <div class="qp-options">
               <button class="qp-option" onclick="pickOtica('boa',this)">Boa</button>
               <button class="qp-option" onclick="pickOtica('otima',this)">Ótima</button>
@@ -448,7 +915,7 @@
           <!-- SO detalhado — só aparece quando "quero apps" foi selecionado -->
           <div class="qp-adv-section" id="advSoSection" style="display:none;">
             <div class="qp-adv-title">Qual sistema prefere?</div>
-            <div class="qp-adv-hint">Google TV tem a melhor compatibilidade e suporta 4K quando o projetor tem suporte. Android TV é excelente para HD. WhaleOS é um sistema próprio com boa compatibilidade, muito melhor que Android não homologado.</div>
+            <div class="qp-adv-hint">Google TV tem a melhor compatibilidade e suporta 4K quando o projetor tem suporte. Android TV é excelente para HD. WhaleOS é um sistema próprio com boa compatibilidade — muito melhor que Android não homologado.</div>
             <div class="qp-options" id="advSoOptions">
               <button class="qp-option" onclick="pickSOAdv('google_tv',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> Google TV</button>
               <button class="qp-option" onclick="pickSOAdv('android_tv',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg> Android TV</button>
@@ -473,7 +940,7 @@
           <!-- Custo-benefício -->
           <div class="qp-adv-section">
             <div class="qp-adv-title">Custo-benefício</div>
-            <div class="qp-adv-hint">Projetos mais baratos dentro do orçamento ganham pontos extras. Funciona melhor com orçamento máximo definido. Preços são estimativas e podem variar bastante com promoções e estoque.</div>
+            <div class="qp-adv-hint">Projetos mais baratos dentro do orçamento ganham pontos extras. Funciona melhor com orçamento máximo definido. Preços são estimativas — podem variar bastante com promoções e estoque.</div>
             <div class="qp-options">
               <button class="qp-option active" onclick="pick('custo_beneficio',null,this)">Não priorizar</button>
               <button class="qp-option" onclick="pick('custo_beneficio','moderado',this)">Moderado</button>
@@ -485,8 +952,8 @@
 
           <!-- Lux -->
           <div class="qp-adv-section" style="opacity:0.45;pointer-events:none;user-select:none;">
-            <div class="qp-adv-title">Luminosidade medida do ambiente (lux) <span class="qp-embreve">Em breve</span></div>
-            <div class="qp-adv-hint">Medição por lux para afinar a recomendação de brilho, disponível em breve.</div>
+            <div class="qp-adv-title">Luminosidade medida do ambiente (lux) <span style="font-size:0.7rem;font-weight:500;color:var(--accent);background:rgba(79,163,199,0.12);border:1px solid rgba(79,163,199,0.25);border-radius:4px;padding:2px 7px;margin-left:6px;vertical-align:middle;">Em breve</span></div>
+            <div class="qp-adv-hint">Medição por lux para afinar a recomendação de brilho — disponível em breve.</div>
             <div class="qp-lux-row">
               <input type="number" class="qp-lux-input" id="luxInput" placeholder="Ex: 150" min="0" max="9999" disabled>
               <span class="qp-lux-unit">lux</span>
@@ -497,7 +964,10 @@
       </div>
 
       <div class="qp-cta">
-        <button class="btn btn-primary" onclick="showResults()">Ver Recomendações <span class="seta">&rarr;</span></button>
+        <button class="btn btn-primary" onclick="showResults()">
+          Ver Recomendações
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
         <p class="qp-live-count" id="liveCount" role="status"></p>
       </div>
 
@@ -505,14 +975,14 @@
   </section>
 
   <section class="qp-results" id="resultsSection">
-    <div class="wrap qp-narrow">
+    <div class="container" style="max-width:760px;">
       <button class="qp-back-btn" onclick="scrollToQuestions()">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
         Ajustar filtros
       </button>
       <div class="qp-results-header">
-        <div class="eyebrow">Resultado</div>
-        <h2>Recomendados <span class="grad">para você</span></h2>
+        <div class="section-tag" style="display:inline-flex;margin:0 auto 18px;">Resultado</div>
+        <h2>Recomendados<br><span class="gradient-text">para você</span></h2>
         <p id="resultsSubtitle">Baseado nas suas respostas, estes são os projetores que mais combinam com o seu perfil.</p>
       </div>
       <div class="qp-cards" id="cardsContainer"></div>
@@ -529,49 +999,56 @@
   </main>
 
   <footer>
-    <div class="wrap">
-      <div class="foot-grid">
-        <div>
-          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216">
-          <p>Projetores testados de verdade na bancada do canal SchardTech.</p>
-          <div class="social">
-            <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="ico" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-            <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg></a>
-            <span class="off" aria-label="Instagram em breve"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.51"/></svg></span>
-          </div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo-link">
+          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo" width="402" height="216">
+        </a>
+        <div class="footer-social">
+          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          </a>
+          <span class="social-link social-disabled" aria-label="Instagram (em breve)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </span>
         </div>
-        <div class="foot-col">
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
           <h4>Navegação</h4>
-          <a href="projetores.html">Projetores</a>
-          <a href="sobre.html">Sobre</a>
-          <a href="politica-privacidade.html">Privacidade</a>
-          <a href="mailto:contato@schardtech.com.br">Contato</a>
+          <a href="/">Projetores</a>
+          <a href="/sobre.html">Sobre</a>
+          <a href="/politica-privacidade.html">Privacidade</a><a href="mailto:contato@schardtech.com.br">Contato</a>
         </div>
-        <div class="foot-col">
+        <div class="footer-col">
           <h4>Ferramentas</h4>
-          <a href="ranking.html">Ranking dos testes</a>
-          <a href="qual-projetor.html">Encontre seu projetor</a>
+          <a href="ranking.html">Ranking dos testes</a><a href="qual-projetor.html">Encontre seu projetor</a>
           <a href="comparar.html">Comparar projetores</a>
           <a href="acessorios-projetores.html">Acessórios</a>
         </div>
-        <div class="foot-col">
+        <div class="footer-col">
           <h4>Conteúdo</h4>
           <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
           <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <span class="off">Instagram (em breve)</span>
+          <span class="footer-disabled">Instagram (em breve)</span>
         </div>
       </div>
-      <div class="foot-bottom">
-        <p>&copy; 2026 SchardTech. Todos os direitos reservados.</p>
-        <p style="margin-top: 6px;">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 SchardTech — Todos os direitos reservados</p>
+        <p style="margin-top:8px;font-size:0.78rem;color:var(--text-dim);">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
       </div>
     </div>
   </footer>
 
   <script src="script.js" defer></script>
-  <script src="projetores-data.js" defer></script>
-  <script src="prices-overlay.js" defer></script>
-  <script src="ui-interacoes.js" defer></script>
+  <script src="projetores-data.js"></script>
+  <script src="prices-overlay.js"></script>
+  <script src="search-global.js" defer></script>
   <script>
     // Helpers de escape pra defender contra XSS quando dados vierem de fora.
     // Hoje os dados são controlados pelo dono do site, mas se a planilha mãe passar
@@ -588,7 +1065,7 @@
     }
 
     // ============ Sparkline + indicador "vs preço médio" ============
-    // Carrega prices-history.json em window.PRICES_HISTORY (assíncrono, não bloqueia o render).
+    // Carrega prices-history.json em window.PRICES_HISTORY (assíncrono — não bloqueia o render).
     window.PRICES_HISTORY = null;
     fetch((window.SITE_BASE_PATH || '') + 'data/prices-history.json', { cache: 'no-store' })
       .then(r => r.ok ? r.json() : null)
@@ -625,9 +1102,9 @@
       const lastY = coords[coords.length-1].split(',')[1];
       const fillPts = coords.join(' ') + ' ' + lastX + ',' + (h - pad) + ' ' + firstX + ',' + (h - pad);
       const svg = '<svg width="'+w+'" height="'+h+'" viewBox="0 0 '+w+' '+h+'">' +
-        '<polygon points="'+fillPts+'" fill="rgba(91,200,238,0.10)" stroke="none"/>' +
-        '<polyline points="'+coords.join(' ')+'" fill="none" stroke="rgba(91,200,238,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-        '<circle cx="'+lastX+'" cy="'+lastY+'" r="2.5" fill="#5BC8EE"/>' +
+        '<polygon points="'+fillPts+'" fill="rgba(143,211,255,0.10)" stroke="none"/>' +
+        '<polyline points="'+coords.join(' ')+'" fill="none" stroke="rgba(143,211,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '<circle cx="'+lastX+'" cy="'+lastY+'" r="2.5" fill="#8FD3FF"/>' +
         '</svg>';
 
       // Status vs média
@@ -670,6 +1147,10 @@
       custo_beneficio: null,
     };
 
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('distInput').addEventListener('input', function() {
         const v = parseFloat(this.value);
@@ -689,7 +1170,7 @@
         updateCount();
       });
       updateCount();
-      // Reconta após o overlay carregar: pros 6 indisponíveis (X30, R16, Page One, T09,
+      // Reconta após o overlay carregar — pros 6 indisponíveis (X30, R16, Page One, T09,
       // DaVinci 1, Mozart 1, T2 Max New) caírem do contador inicial assim que o fetch volta.
       (window.PRICES_OVERLAY_READY || Promise.resolve()).then(() => updateCount());
     });
@@ -707,7 +1188,7 @@
     /* ── Contagem em tempo real ── */
     /* aria-pressed espelha o .active em todos os botões de opção. Chamado do
        updateCount() porque TODO caminho que muda seleção (pick*, inputs de
-       orçamento) termina nele: um ponto só, sem mexer em cada handler. */
+       orçamento) termina nele — um ponto só, sem mexer em cada handler. */
     function syncPressed() {
       document.querySelectorAll('.qp-option').forEach(o =>
         o.setAttribute('aria-pressed', o.classList.contains('active') ? 'true' : 'false'));
@@ -720,7 +1201,7 @@
       const el = document.getElementById('liveCount');
       if (!el) return;
       if (n === 0) {
-        el.textContent = 'Nenhum projetor com esses filtros. Tente remover algum critério.';
+        el.textContent = 'Nenhum projetor com esses filtros — tente remover algum critério';
         el.className = 'qp-live-count warn';
       } else {
         el.textContent = `${n} projetor${n !== 1 ? 'es' : ''} encontrado${n !== 1 ? 's' : ''} com esses filtros`;
@@ -842,7 +1323,7 @@
       'Selada-': 3, 'Selada': 4, 'Selada+': 5, 'Selada++': 6
     };
 
-    // Pontuação direta: Não Selada++ > Selada- intencionalmente
+    // Pontuação direta — Não Selada++ > Selada- intencionalmente
     const OTICA_POINTS = {
       'Não Selada': 0, 'Não Selada+': 3, 'Selada-': 10,
       'Não Selada++': 13, 'Selada': 17, 'Selada+': 22, 'Selada++': 30
@@ -850,7 +1331,7 @@
 
     function audioCategory(au, override) {
       // Override manual via campo audio_qualidade da planilha
-      // ('basico' / 'razoavel' / 'bom' / 'excelente'). Valor "vencido": quando
+      // ('basico' / 'razoavel' / 'bom' / 'excelente'). Valor "vencido" — quando
       // o canal mediu na prática (Dolby ativo, qualidade real) e a heurística por
       // watts não captura. Vazio = usa a classificação automática abaixo.
       if (override) {
@@ -879,15 +1360,15 @@
     }
 
     function passesFilter(p, a) {
-      if (p.listar === false) return false; // produto banido: fora das recomendações
+      if (p.listar === false) return false; // produto banido — fora das recomendações
       // Projetor sem preço cadastrado nunca aparece
       // Preço base = atual (overlay) com fallback pro min estático da planilha mãe.
       const precoBase = p.preco_atual || p.preco_min;
       if (!precoBase) return false;
       // Preço efetivo pro consumidor BR: importado custa 2x (ICMS + frete real).
-      // Mesma regra do custo-benefício, usuário decidiu padronizar pra não confundir.
+      // Mesma regra do custo-benefício — usuário decidiu padronizar pra não confundir.
       const precoRef = precoBase * (p.status === 'importado' ? 2 : 1);
-      // Orçamento: usa preço efetivo (com ajuste de importado)
+      // Orçamento — usa preço efetivo (com ajuste de importado)
       if (a.orcamento_min !== null || a.orcamento_max !== null) {
         if (a.orcamento_min !== null && precoRef < a.orcamento_min) return false;
         if (a.orcamento_max !== null && precoRef > a.orcamento_max) return false;
@@ -1043,7 +1524,7 @@
         const minAnsi = lux >= 500 ? 3000 : lux >= 200 ? 1500 : lux >= 50 ? 500 : 0;
         if (minAnsi > 0) s += ansi >= minAnsi * 1.5 ? 20 : ansi >= minAnsi ? 10 : 0;
       }
-      // Custo-benefício: ANSI efetivo por real investido + bônus de features
+      // Custo-benefício — ANSI efetivo por real investido + bônus de features
       const precoRef = p.preco_atual || p.preco_min;
       if (a.custo_beneficio && precoRef > 0 && p.brilho_ansi) {
         const isDLP = (p.tecnologia || '').includes('DLP');
@@ -1057,18 +1538,18 @@
         // Bonus de SO calibrado: Google TV ≈ preço de um Fire Stick (~R$ 300). Antes valia 15
         // (em projetor de R$ 2k equivalia a R$ 1.000-1.500 de desconto fantasma).
         const osBase = os_.includes('Google TV') ? 8 : os_.includes('Android TV') ? 5 : os_.includes('WhaleOS') ? 2 : 0;
-        // soOverride: marcas com sistema Android não-homologado mas notavelmente bom ganham +1
+        // soOverride — marcas com sistema Android não-homologado mas notavelmente bom ganham +1
         // (entre NH=0 e WhaleOS=2, sem passar do WhaleOS).
         let soOverride = 0;
         if (p.marca === 'Magcubic') soOverride = 1;
         else if (p.marca === 'Progaga' && (p.modelo === 'PG310' || p.modelo === 'PG370')) soOverride = 1;
         const osBonus = osBase + soOverride;
 
-        // Bonus de áudio: usa parseAudio + audioCategory já definidos antes neste arquivo
+        // Bonus de áudio — usa parseAudio + audioCategory já definidos antes neste arquivo
         const au = parseAudio(p.audio_w);
         const aCat = audioCategory(au, p.audio_qualidade);
         const audioBase = aCat === 'excelente' ? 4 : aCat === 'bom' ? 2 : aCat === 'razoavel' ? 1 : 0;
-        // audioOverride: marcas com áudio reconhecidamente bom ganham extra
+        // audioOverride — marcas com áudio reconhecidamente bom ganham extra
         let audioOverride = 0;
         if (p.marca === 'Wanbo') audioOverride = 2;
         else if (p.marca === 'Wupro' && p.modelo === 'G2') audioOverride = 2;
@@ -1077,7 +1558,7 @@
         else if (p.marca === 'Vevshao' && p.modelo === 'A22') audioOverride = 1;
         const audioBonus = audioBase + audioOverride;
 
-        // Bateria: pesos pela metade do original (12/8/5 → 6/4/2.5)
+        // Bateria — pesos pela metade do original (12/8/5 → 6/4/2.5)
         const mahMatch = (p.cap_bateria || '').match(/\d+/);
         const mah = mahMatch ? parseInt(mahMatch[0]) : 0;
         const batBonus = mah >= 15000 ? 6 : mah >= 8000 ? 4 : p.bateria ? 2.5 : 0;
@@ -1117,7 +1598,7 @@
         const custoPorAnsi = precoCalc / ansiEf;
         const ansiPenalty = Math.max(0, custoPorAnsi - 1.0) * 8;
 
-        // Curadoria editorial: modelos destacados por qualidade percebida (acabamento, marca, conjunto).
+        // Curadoria editorial — modelos destacados por qualidade percebida (acabamento, marca, conjunto).
         let curadoriaBonus = 0;
         if (p.marca === 'Wupro' && p.modelo === 'G2') curadoriaBonus = 5;
 
@@ -1133,25 +1614,25 @@
 
     function getBadge(p, idx, top) {
       if (idx === 0) {
-        if (answers.uso === 'jogos') return { text: 'Ideal para jogos', cls: 'featured' };
-        if (answers.mobilidade === 'bateria' || answers.mobilidade === 'ambos') return { text: 'Melhor portátil', cls: 'featured' };
-        if (answers.iluminacao === 'luz_intensa') return { text: 'Máximo brilho', cls: 'featured' };
-        if (answers.resolucao === '4k_nativa') return { text: 'Melhor em 4K', cls: 'featured' };
-        if (answers.tec_sub === 'dlp_laser') return { text: 'Melhor DLP Laser', cls: 'featured' };
-        return { text: 'Recomendado para você', cls: 'featured' };
+        if (answers.uso === 'jogos') return { text: '⚡ Ideal para jogos', cls: 'featured' };
+        if (answers.mobilidade === 'bateria' || answers.mobilidade === 'ambos') return { text: '🔋 Melhor portátil', cls: 'featured' };
+        if (answers.iluminacao === 'luz_intensa') return { text: '💡 Máximo brilho', cls: 'featured' };
+        if (answers.resolucao === '4k_nativa') return { text: '✨ Melhor em 4K', cls: 'featured' };
+        if (answers.tec_sub === 'dlp_laser') return { text: '⚡ Melhor DLP Laser', cls: 'featured' };
+        return { text: '★ Recomendado para você', cls: 'featured' };
       }
       const t = top[0];
       // Preço efetivo pro consumidor BR: importado custa 2x (ICMS + frete), mesma regra do score.
       const pP = (p.preco_atual || p.preco_min) * (p.status === 'importado' ? 2 : 1);
       const tP = (t.preco_atual || t.preco_min) * (t.status === 'importado' ? 2 : 1);
-      if (pP && tP && pP < tP * 0.85) return { text: 'Mais econômico', cls: 'alt' };
-      if (p.brilho_ansi && t.brilho_ansi && p.brilho_ansi > t.brilho_ansi * 1.2) return { text: 'Mais brilhante', cls: 'alt' };
-      if (answers.uso === 'jogos' && p.input_lag_ms != null && t.input_lag_ms != null && p.input_lag_ms < t.input_lag_ms * 0.8) return { text: 'Menor input lag', cls: 'alt' };
-      if (p.bateria && !t.bateria) return { text: 'Opção com bateria', cls: 'alt' };
+      if (pP && tP && pP < tP * 0.85) return { text: '💰 Mais econômico', cls: 'alt' };
+      if (p.brilho_ansi && t.brilho_ansi && p.brilho_ansi > t.brilho_ansi * 1.2) return { text: '💡 Mais brilhante', cls: 'alt' };
+      if (answers.uso === 'jogos' && p.input_lag_ms != null && t.input_lag_ms != null && p.input_lag_ms < t.input_lag_ms * 0.8) return { text: '⚡ Menor input lag', cls: 'alt' };
+      if (p.bateria && !t.bateria) return { text: '🔋 Opção com bateria', cls: 'alt' };
       const selada = v => v && v.startsWith('Selada');
-      if (selada(p.otica_selada) && !selada(t.otica_selada)) return { text: 'Ótica selada', cls: 'alt' };
-      if (p.tecnologia === 'DLP Laser' && t.tecnologia !== 'DLP Laser') return { text: 'DLP Laser', cls: 'alt' };
-      return { text: 'Boa alternativa', cls: 'alt' };
+      if (selada(p.otica_selada) && !selada(t.otica_selada)) return { text: '🔒 Ótica selada', cls: 'alt' };
+      if (p.tecnologia === 'DLP Laser' && t.tecnologia !== 'DLP Laser') return { text: '⚡ DLP Laser', cls: 'alt' };
+      return { text: '✓ Boa alternativa', cls: 'alt' };
     }
 
     function lagClass(lag) {
@@ -1202,12 +1683,9 @@
       let priceHtml;
       if (p.preco_atual) {
         const min = p.preco_min_historico, max = p.preco_max_historico;
-        // Régua min/máx do v2 (estática: width/left direto no style)
-        let histLine = '';
-        if (min && max && Math.round(min) !== Math.round(max)) {
-          const pos = Math.round(Math.max(0, Math.min(1, (p.preco_atual - min) / ((max - min) || 1))) * 100);
-          histLine = `<div class="regua-blk"><div class="regua"><div class="r-fill" style="width:${pos}%"></div><div class="r-dot" style="left:${pos}%"></div></div><div class="regua-labels"><span class="min">mín ${r(min)}</span><span>máx ${r(max)}</span></div></div>`;
-        }
+        const histLine = (min && max && Math.round(min) !== Math.round(max))
+          ? `<div class="qp-price-history">min ${r(min)} · max ${r(max)}</div>`
+          : '';
         const mkSpan = mk ? ` <span class="qp-price-marketplace">${mk.prep} ${mk.label}</span>` : '';
         // Linha extra: "verificado há X" + indicação se preço já tem cupom aplicado
         const venc = (p.marketplaces && p.marketplaces[p.marketplace_vencedor]) || {};
@@ -1256,21 +1734,20 @@
           : parseFloat(wRaw) + 'W';
         specs.push(`<div class="qp-spec"><span class="qp-spec-label">Som</span><span class="qp-spec-value">${audioLbl} (${wFmt})</span></div>`);
       }
-      if (p.tecnologias)          specs.push(`<div class="qp-spec"><span class="qp-spec-value" style="color:var(--txt-2)">${p.tecnologias}</span></div>`);
-      if (p.autofoco === 'Sim')   specs.push(`<div class="qp-spec"><span class="qp-spec-value">Autofoco</span></div>`);
+      if (p.tecnologias)          specs.push(`<div class="qp-spec"><span class="qp-spec-value" style="color:var(--text-muted)">${p.tecnologias}</span></div>`);
+      if (p.autofoco === 'Sim')   specs.push(`<div class="qp-spec"><span class="qp-spec-value">✓ Autofoco</span></div>`);
       if (p.bateria) {
-        const batTxt = p.cap_bateria ? `Bateria ${p.cap_bateria}` : 'Com bateria';
+        const batTxt = p.cap_bateria ? `🔋 Bateria ${p.cap_bateria}` : '🔋 Com bateria';
         specs.push(`<div class="qp-spec"><span class="qp-spec-value">${batTxt}</span></div>`);
       }
       if (p.uso_continuo)         specs.push(`<div class="qp-spec"><span class="qp-spec-label">Uso contínuo</span><span class="qp-spec-value">${p.uso_continuo}</span></div>`);
 
       const mkts = p.marketplaces || {};
-      const btnPreco = v => (v != null && isFinite(v) && v > 0) ? ' &middot; ' + r(v) : '';
       const storesData = [];
-      if (safeUrl(p.ali_url))    storesData.push({ preco: mkts.aliexpress?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="sponsored noopener" class="qp-store-btn ali">AliExpress${btnPreco(mkts.aliexpress?.preco)}</a>` });
-      if (safeUrl(p.ml_url))     storesData.push({ preco: mkts.ml?.preco         ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="sponsored noopener" class="qp-store-btn ml">Mercado Livre${btnPreco(mkts.ml?.preco)}</a>` });
-      if (safeUrl(p.shopee_url)) storesData.push({ preco: mkts.shopee?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="sponsored noopener" class="qp-store-btn shopee">Shopee${btnPreco(mkts.shopee?.preco)}</a>` });
-      if (safeUrl(p.amazon_url)) storesData.push({ preco: mkts.amazon?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="sponsored noopener" class="qp-store-btn amazon">Amazon${btnPreco(mkts.amazon?.preco)}</a>` });
+      if (safeUrl(p.ali_url))    storesData.push({ preco: mkts.aliexpress?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="noopener noreferrer" class="qp-store-btn ali" aria-label="AliExpress"><img src="./logo ali.svg" alt="AliExpress" class="qp-store-logo"></a>` });
+      if (safeUrl(p.ml_url))     storesData.push({ preco: mkts.ml?.preco         ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="noopener noreferrer" class="qp-store-btn ml" aria-label="Mercado Livre"><img src="./logo ml2.png" alt="" class="qp-store-logo">Mercado Livre</a>` });
+      if (safeUrl(p.shopee_url)) storesData.push({ preco: mkts.shopee?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="noopener noreferrer" class="qp-store-btn shopee" aria-label="Shopee"><img src="./logo shopee.png" alt="Shopee" class="qp-store-logo"></a>` });
+      if (safeUrl(p.amazon_url)) storesData.push({ preco: mkts.amazon?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="noopener noreferrer" class="qp-store-btn amazon"><span class="store-dot"></span>Amazon</a>` });
       storesData.sort((a, b) => a.preco - b.preco);
       const stores = storesData.map(s => s.html);
 
@@ -1355,7 +1832,7 @@
 
       if (filtered.length === 0) {
         document.getElementById('cardsContainer').innerHTML =
-          '<p style="text-align:center;color:var(--txt-2);padding:60px 0;font-size:0.95rem;">Nenhum projetor encontrado com esses filtros.<br>Tente remover alguns critérios mais restritivos.</p>';
+          '<p style="text-align:center;color:var(--text-muted);padding:60px 0;font-size:0.95rem;">Nenhum projetor encontrado com esses filtros.<br>Tente remover alguns critérios mais restritivos.</p>';
         const sec = document.getElementById('resultsSection');
         sec.classList.add('visible');
         setTimeout(() => sec.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
@@ -1397,7 +1874,7 @@
       const sec = document.getElementById('resultsSection');
       sec.classList.add('visible');
       setTimeout(() => sec.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
-      // Email capture desativado (10/05/2026): sem estratégia de envio definida ainda.
+      // Email capture desativado (10/05/2026) — sem estratégia de envio definida ainda.
       // Pra reativar: descomentar as 2 linhas abaixo + voltar o style do <section id="emailCapture">.
       // const emailCap = document.getElementById('emailCapture');
       // if (emailCap) emailCap.style.display = '';
