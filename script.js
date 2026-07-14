@@ -6,46 +6,7 @@
 // ============================================================
 // DATA — Projetores (fonte: Planilha SchardTechOriginal.xlsx)
 // ============================================================
-const projectors = [
-  {
-    id: 'voxflix-vf71',
-    name: 'Voxflix VF71',
-    price: 850,
-    resolution: '1080p',
-    lumens: 580,
-    inputLag: 40,
-    support4k: false,
-    sealedOptics: false,
-    battery: false,
-    batteryMah: null,
-    audio: '5W',
-    system: 'Android',
-    type: 'LED/LCD',
-    mlLink: 'https://www.mercadolivre.com.br/projetor-voxflix-vf71/up/MLBU3897198654?pdp_filters=item_id:MLB6594040884',
-    videoId: '1soF7qRHsCo',
-    available: true,
-    image: 'https://http2.mlstatic.com/D_NQ_NP_2X_920630-MLB104799973149_012026-F.webp'
-  },
-  {
-    id: 'wanbo-vali-1',
-    name: 'Wanbo Vali 1',
-    price: 1500,
-    resolution: '1080p',
-    lumens: 500,
-    inputLag: 50,
-    support4k: false,
-    sealedOptics: true,
-    battery: false,
-    batteryMah: null,
-    audio: '2x6W',
-    system: 'Android TV',
-    type: 'LED/LCD',
-    mlLink: 'https://www.mercadolivre.com.br/projetor-wanbo-vali-1-android-tv/up/MLBU3897190056?pdp_filters=item_id:MLB6594052510',
-    videoId: 'L_0ajiDrnUI',
-    available: true,
-    image: 'https://http2.mlstatic.com/D_NQ_NP_2X_788810-MLB96055877561_102025-F.webp'
-  }
-];
+const projectors = [];
 
 // ============================================================
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
@@ -296,31 +257,48 @@ function downloadAnsiGuide() {
   const svg = document.getElementById('ansiSvg');
   if (!svg) return;
 
-  const svgData = new XMLSerializer().serializeToString(svg);
-  const canvas = document.createElement('canvas');
-  canvas.width = 1920;
-  canvas.height = 1080;
-  const ctx = canvas.getContext('2d');
-  const img = new Image();
-  const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
-  const url = URL.createObjectURL(blob);
+  /* CSP não libera img-src blob:, então o SVG vai pro canvas como data: URI;
+     o watermark externo precisa virar data: URI também, senão some do PNG
+     (SVG carregado como imagem não busca recurso externo) */
+  const clone = svg.cloneNode(true);
+  const wm = clone.querySelector('image');
 
-  img.onload = () => {
-    ctx.drawImage(img, 0, 0, 1920, 1080);
-    URL.revokeObjectURL(url);
-    const a = document.createElement('a');
-    a.download = 'guia-medicao-ansi-lumens-schardtech.png';
-    a.href = canvas.toDataURL('image/png');
-    a.click();
+  const render = () => {
+    const svgData = new XMLSerializer().serializeToString(clone);
+    const svgUri = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgData);
+    const canvas = document.createElement('canvas');
+    canvas.width = 1920;
+    canvas.height = 1080;
+    const ctx = canvas.getContext('2d');
+    const img = new Image();
+
+    img.onload = () => {
+      ctx.drawImage(img, 0, 0, 1920, 1080);
+      const a = document.createElement('a');
+      a.download = 'guia-medicao-ansi-lumens-schardtech.png';
+      a.href = canvas.toDataURL('image/png');
+      a.click();
+    };
+    img.onerror = () => {
+      const a = document.createElement('a');
+      a.download = 'guia-medicao-ansi-lumens-schardtech.svg';
+      a.href = svgUri;
+      a.click();
+    };
+    img.src = svgUri;
   };
-  img.onerror = () => {
-    URL.revokeObjectURL(url);
-    const a = document.createElement('a');
-    a.download = 'guia-medicao-ansi-lumens-schardtech.svg';
-    a.href = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgData);
-    a.click();
-  };
-  img.src = url;
+
+  if (!wm) { render(); return; }
+  fetch(wm.getAttribute('href'))
+    .then(r => { if (!r.ok) throw new Error(String(r.status)); return r.blob(); })
+    .then(b => new Promise((resolve, reject) => {
+      const fr = new FileReader();
+      fr.onload = () => resolve(fr.result);
+      fr.onerror = reject;
+      fr.readAsDataURL(b);
+    }))
+    .then(dataUrl => { wm.setAttribute('href', dataUrl); render(); })
+    .catch(() => { wm.remove(); render(); });
 }
 
 // ============================================================

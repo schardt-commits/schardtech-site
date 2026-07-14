@@ -2795,7 +2795,7 @@ window.PROJETORES_DATA = [
     "tecnologias": "Dolby Audio",
     "bateria": false,
     "cap_bateria": "",
-    "video_url": "https://www.youtube.com/watch?v=0wSWO1-y1XA",
+    "video_url": "https://www.youtube.com/watch?v=PGbi8fr7aS4",
     "suporte_giratorio": false,
     "audio_qualidade": "excelente",
     "uso_continuo": "6h",
