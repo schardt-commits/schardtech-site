@@ -20,36 +20,473 @@
   <meta property="og:type" content="product">
   <meta property="og:url" content="https://schardtech.com.br/acessorios/xiaomi-mi-box-s-4k.html">
   <meta property="og:image" content="https://schardtech.com.br/img/acessorios/xiaomi-mi-box-s-4k-1.jpg">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Xiaomi Mi Box S 4K (3ª geração)", "description": "TV Box em formato de cubo (não stick) — tem mais memória RAM, processador maior, ventilação ativa e 32 GB de armazenamento interno. Aguenta uso pesado sem travar: streaming em 4K + emulador de jogo + navegador rodando ao mesmo tempo. Pra quem usa muito o dispositivo e cansou de stick engasgando.", "category": "Sticks TV / Streaming", "image": ["https://schardtech.com.br/img/acessorios/xiaomi-mi-box-s-4k-1.jpg", "https://schardtech.com.br/img/acessorios/xiaomi-mi-box-s-4k-2.jpg", "https://schardtech.com.br/img/acessorios/xiaomi-mi-box-s-4k-3.jpg"], "brand": {"@type": "Brand", "name": "Xiaomi"}, "offers": {"@type": "Offer", "price": "439.0", "priceCurrency": "BRL", "availability": "https://schema.org/OutOfStock", "url": "https://www.mercadolivre.com.br/p/MLB57288386"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Xiaomi Mi Box S 4K (3ª geração)", "description": "TV Box em formato de cubo (não stick) — tem mais memória RAM, processador maior, ventilação ativa e 32 GB de armazenamento interno. Aguenta uso pesado sem travar: streaming em 4K + emulador de jogo + navegador rodando ao mesmo tempo. Pra quem usa muito o dispositivo e cansou de stick engasgando.", "category": "Sticks TV / Streaming", "image": ["https://schardtech.com.br/img/acessorios/xiaomi-mi-box-s-4k-1.jpg", "https://schardtech.com.br/img/acessorios/xiaomi-mi-box-s-4k-1.webp", "https://schardtech.com.br/img/acessorios/xiaomi-mi-box-s-4k-2.jpg"], "brand": {"@type": "Brand", "name": "Xiaomi"}, "offers": {"@type": "Offer", "price": "439.0", "priceCurrency": "BRL", "availability": "https://schema.org/InStock", "url": "https://www.mercadolivre.com.br/p/MLB57288386"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://schardtech.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Acessórios", "item": "https://schardtech.com.br/acessorios-projetores.html"}, {"@type": "ListItem", "position": 3, "name": "Sticks TV / Streaming", "item": "https://schardtech.com.br/acessorios-projetores.html#sticks_tv"}, {"@type": "ListItem", "position": 4, "name": "Xiaomi Mi Box S 4K (3ª geração)"}]}</script>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../v2.css">
+  <link rel="stylesheet" href="../compat-v2.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../acessorio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* === ACESSORIOS === */
+    .ac-hero {
+      padding: 140px 0 56px;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(79,163,199,0.12) 0%, transparent 65%),
+        linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+      text-align: center;
+    }
+    .ac-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      margin-bottom: 14px;
+    }
+    .ac-hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(79, 163, 199, 0.1);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+      margin-bottom: 18px;
+    }
+    .ac-nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .ac-nav-pills a {
+      padding: 8px 16px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      transition: all var(--transition);
+    }
+    .ac-nav-pills a:hover {
+      border-color: var(--border-hover);
+      color: var(--accent);
+    }
+    .ac-section { padding: 60px 0; border-top: 1px solid var(--border); }
+    .ac-section:first-of-type { border-top: 0; }
+    .ac-section-head { margin-bottom: 28px; }
+    .ac-section-head h2 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .ac-section-head p { color: var(--text-muted); font-size: 0.98rem; }
+    .ac-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .ac-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .ac-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-hover);
+      box-shadow: var(--glow-sm);
+    }
+    .ac-card-img {
+      aspect-ratio: 4 / 3;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .ac-card-img img { width: 100%; height: 100%; object-fit: contain; padding: 18px; }
+    .ac-card-img.placeholder {
+      background: var(--card-bg);
+      color: var(--text-dim);
+      font-size: 0.82rem;
+      border-bottom: 1px dashed var(--border);
+    }
+    .ac-card-body { padding: 16px 18px 20px; display: flex; flex-direction: column; flex: 1; gap: 10px; }
+    .ac-card-tier {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(143, 211, 255, 0.08);
+      padding: 4px 10px;
+      border-radius: 999px;
+      align-self: flex-start;
+    }
+    .ac-card-name {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--text);
+    }
+    .ac-card-tagline {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      flex: 1;
+    }
+    .ac-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .ac-card-preco {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .ac-card-lojas {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .ac-card-cta {
+      display: block;
+      text-align: center;
+      margin-top: 4px;
+      padding: 10px 14px;
+      background: linear-gradient(135deg, var(--primary), var(--gradient-secondary));
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.88rem;
+      border-radius: var(--radius);
+      transition: filter var(--transition);
+    }
+    .ac-card-cta:hover { filter: brightness(1.12); }
+
+    /* === PAGINA INDIVIDUAL === */
+    .pa-wrapper { padding: 120px 0 64px; }
+    .pa-breadcrumb {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .pa-breadcrumb a { color: var(--accent); }
+    .pa-breadcrumb a:hover { text-decoration: underline; }
+    .pa-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    @media (max-width: 860px) { .pa-grid { grid-template-columns: 1fr; gap: 28px; } }
+    .pa-gallery { display: flex; flex-direction: column; gap: 12px; position: sticky; top: 100px; }
+    @media (max-width: 860px) { .pa-gallery { position: static; } }
+    .pa-gallery-main {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #fff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pa-gallery-main img { width: 100%; height: 100%; object-fit: contain; padding: 32px; }
+    .pa-gallery-placeholder {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: var(--card-bg);
+      border: 2px dashed var(--border);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--text-dim);
+      text-align: center;
+      padding: 24px;
+    }
+    .pa-gallery-placeholder svg { opacity: 0.4; }
+    .pa-gallery-placeholder span { font-size: 0.9rem; max-width: 240px; line-height: 1.4; }
+    .pa-gallery-thumbs { display: grid; grid-template-columns: repeat(auto-fit, minmax(64px, 1fr)); gap: 8px; }
+    .pa-thumb {
+      aspect-ratio: 1 / 1;
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color var(--transition);
+    }
+    .pa-thumb:hover, .pa-thumb.active { border-color: var(--primary); }
+    .pa-thumb img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
+
+    .pa-info h1 {
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .pa-tagline {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+    .pa-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
+    .pa-tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+    .pa-tag.tier { background: rgba(143, 211, 255, 0.12); color: var(--accent); }
+    .pa-tag.marca { background: rgba(123, 140, 255, 0.16); color: #B0BCFF; }
+
+    /* Problema/Solucao block */
+    .pa-ps-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      margin-bottom: 22px;
+    }
+    .pa-ps-prob { color: var(--accent); font-size: 1.02rem; margin-bottom: 14px; font-style: italic; font-weight: 500; line-height: 1.5; }
+    .pa-ps-sol { color: var(--text); line-height: 1.65; font-size: 0.98rem; }
+    .pa-lojas-nota {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      margin: 8px 0 24px;
+      padding: 12px 14px;
+      background: rgba(79, 163, 199, 0.05);
+      border-left: 2px solid var(--border);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      line-height: 1.5;
+    }
+    .pa-lojas-nota strong { color: var(--text); font-weight: 600; }
+
+    /* Destaques */
+    .pa-destaques {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+    .pa-destaque {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 14px;
+      background: rgba(79, 163, 199, 0.05);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+      line-height: 1.4;
+    }
+    .pa-destaque svg { flex-shrink: 0; color: var(--accent); margin-top: 2px; }
+
+    .pa-atencao {
+      padding: 14px 18px;
+      background: rgba(255, 187, 79, 0.08);
+      border: 1px solid rgba(255, 187, 79, 0.25);
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      color: #FFD79A;
+      line-height: 1.5;
+      margin-bottom: 22px;
+    }
+    .pa-atencao::before { content: "⚠ "; font-weight: 700; }
+
+    /* Compras (multiplas opcoes) */
+    .pa-compras h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+    .pa-compras-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+    .pa-compra-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 16px 18px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: border-color var(--transition);
+    }
+    .pa-compra-card:hover { border-color: var(--border-hover); }
+    .pa-compra-card.destaque {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px var(--primary) inset, var(--glow-sm);
+    }
+    .pa-compra-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 0;
+    }
+    .pa-compra-topo { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .pa-compra-loja { font-weight: 700; font-size: 0.92rem; color: var(--text); }
+    .pa-compra-loja-sub { font-weight: 400; font-size: 0.78rem; color: var(--text-dim); margin-left: 4px; }
+    .pa-compra-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(143, 211, 255, 0.16);
+      color: var(--accent);
+    }
+    .pa-compra-preco { font-size: 1.4rem; font-weight: 800; color: var(--accent); line-height: 1; }
+    .pa-compra-obs { font-size: 0.78rem; color: var(--text-dim); }
+    .pa-compra-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      background: linear-gradient(135deg, var(--primary), var(--gradient-secondary));
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.92rem;
+      border-radius: var(--radius);
+      white-space: nowrap;
+      transition: filter var(--transition);
+    }
+    .pa-compra-cta:hover { filter: brightness(1.12); }
+    @media (max-width: 560px) {
+      .pa-compra-card { grid-template-columns: 1fr; }
+      .pa-compra-cta { justify-content: center; }
+    }
+
+    .pa-secao { margin-bottom: 28px; }
+    .pa-secao h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .pa-secao p { color: var(--text-muted); line-height: 1.7; }
+    .pa-specs {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 18px;
+    }
+    @media (max-width: 480px) { .pa-specs { grid-template-columns: 1fr; } }
+    .pa-specs li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .pa-specs .k { color: var(--text-dim); }
+    .pa-specs .v { color: var(--text); font-weight: 500; text-align: right; }
+
+    /* Video embed */
+    .pa-video { margin-top: 36px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .pa-video-label { font-size: 0.74rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+    .pa-video h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 14px; color: var(--text); line-height: 1.3; }
+    .pa-video-wrap { position: relative; aspect-ratio: 16/9; border-radius: var(--radius-lg); overflow: hidden; background: #000; }
+    .pa-video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+    .pa-relacionados { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .pa-relacionados h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 20px; }
+    .pa-back-link { display: inline-block; margin-top: 18px; color: var(--accent); font-size: 0.92rem; font-weight: 500; }
+    .pa-back-link:hover { text-decoration: underline; }
+
+    /* CTA flutuante mobile */
+    .pa-mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 900;
+      background: rgba(11, 11, 11, 0.96);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border);
+      padding: 12px 16px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .pa-mobile-cta .preco-min { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
+    .pa-mobile-cta .preco-val { font-size: 1.15rem; font-weight: 800; color: var(--accent); line-height: 1; margin-top: 2px; }
+    .pa-mobile-cta a {
+      flex: 1;
+      max-width: 220px;
+      text-align: center;
+      padding: 12px 16px;
+      background: linear-gradient(135deg, var(--primary), var(--gradient-secondary));
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.92rem;
+      border-radius: var(--radius);
+    }
+    @media (max-width: 860px) { .pa-mobile-cta { display: flex; } main { padding-bottom: 90px; } }
+
+  </style>
 </head>
 <body>
   <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
-  <header id="header">
-    <div class="container header-inner">
-      <a href="/" class="logo-link">
-        <img src="../LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img" width="402" height="216">
-      </a>
-      <nav id="mainNav">
-        <a href="../projetores.html" class="nav-link">Projetores</a>
-        <a href="../comparar.html" class="nav-link">Comparativo</a>
-        <a href="../qual-projetor.html" class="nav-link">Encontre seu projetor</a>
-        <a href="../precos.html" class="nav-link">Preços ao Vivo</a>
-        <a href="../ranking.html" class="nav-link">Ranking</a>
-        <a href="../acessorios-projetores.html" class="nav-link" style="color:var(--primary);font-weight:600;">Acessórios</a>
-        <a href="/#calculadora" class="nav-link">Calculadora</a>
-        <a href="/#sobre" class="nav-link">Sobre</a>
+
+  <div class="quedas" id="barra-quedas"></div>
+
+  <header class="topo">
+    <div class="wrap header-in">
+      <a class="logo" href="/"><img src="../LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216"></a>
+      <div class="busca">
+        <span class="lupa" aria-hidden="true"></span>
+        <input id="busca-input" type="search" placeholder="Buscar projetor..." autocomplete="off" aria-label="Buscar projetor">
+        <div class="busca-drop" id="busca-drop" role="listbox"></div>
+      </div>
+      <nav class="principal" aria-label="Navegação principal">
+        <a href="../projetores.html">Projetores</a>
+        <a href="../comparar.html">Comparativo</a>
+        <a href="../qual-projetor.html">Encontre seu projetor</a>
+        <a class="destaque" href="../precos.html">Preços ao Vivo</a>
+        <a href="../ranking.html">Ranking</a>
+        <a class="atual" href="../acessorios-projetores.html">Acessórios</a>
+        <a href="../calculadora-ansi.html">Calculadora</a>
+        <a href="../sobre.html">Sobre</a>
       </nav>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
+
+  <div class="menu-mobile" id="menu-mobile">
+    <button class="fechar" id="menu-fechar">Fechar X</button>
+    <a href="../projetores.html">Projetores</a>
+    <a href="../comparar.html">Comparativo</a>
+    <a href="../qual-projetor.html">Encontre seu projetor</a>
+    <a href="../precos.html">Preços ao Vivo</a>
+    <a href="../ranking.html">Ranking</a>
+    <a href="../acessorios-projetores.html">Acessórios</a>
+    <a href="../calculadora-ansi.html">Calculadora</a>
+    <a href="../sobre.html">Sobre</a>
+  </div>
 
   <main id="main">
     <section class="pa-wrapper">
@@ -59,7 +496,7 @@
         </div>
         <div class="pa-grid">
           <div class="pa-gallery">
-            <div class="pa-gallery-main"><img id="paMainImg" src="../img/acessorios/xiaomi-mi-box-s-4k-1.webp" alt="Xiaomi Mi Box S 4K (3ª geração)"></div><div class="pa-gallery-thumbs"><button type="button" class="pa-thumb active" onclick="setMain(0)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-1.webp" alt="Xiaomi Mi Box S 4K (3ª geração) (foto 1)" loading="lazy"></button><button type="button" class="pa-thumb" onclick="setMain(1)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-2.webp" alt="Xiaomi Mi Box S 4K (3ª geração) (foto 2)" loading="lazy"></button><button type="button" class="pa-thumb" onclick="setMain(2)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-3.webp" alt="Xiaomi Mi Box S 4K (3ª geração) (foto 3)" loading="lazy"></button><button type="button" class="pa-thumb" onclick="setMain(3)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-4.webp" alt="Xiaomi Mi Box S 4K (3ª geração) (foto 4)" loading="lazy"></button><button type="button" class="pa-thumb" onclick="setMain(4)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-5.webp" alt="Xiaomi Mi Box S 4K (3ª geração) (foto 5)" loading="lazy"></button></div>
+            <div class="pa-gallery-main"><img id="paMainImg" src="../img/acessorios/xiaomi-mi-box-s-4k-1.jpg" alt="Xiaomi Mi Box S 4K (3ª geração)"></div><div class="pa-gallery-thumbs"><div class="pa-thumb active" onclick="setMain(0)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-1.jpg" alt="" loading="lazy"></div><div class="pa-thumb" onclick="setMain(1)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-1.webp" alt="" loading="lazy"></div><div class="pa-thumb" onclick="setMain(2)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-2.jpg" alt="" loading="lazy"></div><div class="pa-thumb" onclick="setMain(3)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-2.webp" alt="" loading="lazy"></div><div class="pa-thumb" onclick="setMain(4)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-3.jpg" alt="" loading="lazy"></div><div class="pa-thumb" onclick="setMain(5)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-3.webp" alt="" loading="lazy"></div><div class="pa-thumb" onclick="setMain(6)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-4.jpg" alt="" loading="lazy"></div><div class="pa-thumb" onclick="setMain(7)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-4.webp" alt="" loading="lazy"></div><div class="pa-thumb" onclick="setMain(8)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-5.jpg" alt="" loading="lazy"></div><div class="pa-thumb" onclick="setMain(9)"><img src="../img/acessorios/xiaomi-mi-box-s-4k-5.webp" alt="" loading="lazy"></div></div>
           </div>
           <div class="pa-info">
             <h1>Xiaomi Mi Box S 4K (3ª geração)</h1>
@@ -83,10 +520,14 @@
             <span class="pa-compra-loja">Mercado Livre</span>
             
           </div>
-          <div class="pa-compra-preco" style="color:var(--text-dim);font-size:1.05rem;">Sem estoque no momento</div>
-
+          <div class="pa-compra-preco">R$ 439,00</div>
+          
         </div>
-        <span class="pa-compra-cta" style="opacity:.45;pointer-events:none;" aria-disabled="true">Sem estoque</span>
+        <a href="https://www.mercadolivre.com.br/p/MLB57288386" target="_blank" rel="noopener nofollow sponsored" class="pa-compra-cta"
+           onclick="gtag('event','click_affiliate',{'product_slug':'xiaomi-mi-box-s-4k','loja':'mercadolivre'});">
+          Ver no Mercado Livre
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
       </div>
             </div>
             <div class="pa-lojas-nota">
@@ -104,7 +545,7 @@
       <h2>Mais sticks tv / streaming</h2>
       <div class="ac-grid">
         <a href="../acessorios/fire-tv-stick-hd.html" class="ac-card">
-          <div class="ac-card-img"><img src="../img/acessorios/fire-tv-stick-hd-1.webp" alt="Fire TV Stick HD (3ª geração)" loading="lazy"></div>
+          <div class="ac-card-img"><img src="../img/acessorios/fire-tv-stick-hd-1.jpg" alt="Fire TV Stick HD (3ª geração)" loading="lazy"></div>
           <div class="ac-card-body">
             <span class="ac-card-tier">Entrada</span>
             <div class="ac-card-name">Fire TV Stick HD (3ª geração)</div>
@@ -117,9 +558,9 @@
           </div>
         </a>
         <a href="../acessorios/fire-tv-stick-4k.html" class="ac-card">
-          <div class="ac-card-img"><img src="../img/acessorios/fire-tv-stick-4k-1.webp" alt="Fire TV Stick 4K com Wi-Fi 6" loading="lazy"></div>
+          <div class="ac-card-img"><img src="../img/acessorios/fire-tv-stick-4k-1.jpg" alt="Fire TV Stick 4K com Wi-Fi 6" loading="lazy"></div>
           <div class="ac-card-body">
-            <span class="ac-card-tier">Custo-benefício ⭐</span>
+            <span class="ac-card-tier">Custo-benefício</span>
             <div class="ac-card-name">Fire TV Stick 4K com Wi-Fi 6</div>
             <div class="ac-card-tagline">Custo-benefício — 4K real + Wi-Fi 6 por +R$ 31 que o HD</div>
             <div class="ac-card-footer">
@@ -130,7 +571,7 @@
           </div>
         </a>
         <a href="../acessorios/xiaomi-mi-tv-stick-4k.html" class="ac-card">
-          <div class="ac-card-img"><img src="../img/acessorios/xiaomi-mi-tv-stick-4k-1.webp" alt="Xiaomi Mi TV Stick 4K" loading="lazy"></div>
+          <div class="ac-card-img"><img src="../img/acessorios/xiaomi-mi-tv-stick-4k-1.jpg" alt="Xiaomi Mi TV Stick 4K" loading="lazy"></div>
           <div class="ac-card-body">
             <span class="ac-card-tier">Android TV</span>
             <div class="ac-card-name">Xiaomi Mi TV Stick 4K</div>
@@ -143,7 +584,7 @@
           </div>
         </a>
         <a href="../acessorios/chromecast-hd-google-tv.html" class="ac-card">
-          <div class="ac-card-img"><img src="../img/acessorios/chromecast-hd-google-tv-1.webp" alt="Chromecast HD com Google TV" loading="lazy"></div>
+          <div class="ac-card-img"><img src="../img/acessorios/chromecast-hd-google-tv-1.jpg" alt="Chromecast HD com Google TV" loading="lazy"></div>
           <div class="ac-card-body">
             <span class="ac-card-tier">Google TV</span>
             <div class="ac-card-name">Chromecast HD com Google TV</div>
@@ -161,51 +602,57 @@
   </section>
   </main>
 
-  <footer id="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="/" class="logo-link">
-          <img src="../LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo" width="402" height="216">
-        </a>
-        <div class="footer-social">
-          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
-          </a>
+  <div class="pa-mobile-cta">
+    <div>
+      <div class="preco-min">Mercado Livre</div>
+      <div class="preco-val">R$ 439,00</div>
+    </div>
+    <a href="https://www.mercadolivre.com.br/p/MLB57288386" target="_blank" rel="noopener nofollow sponsored"
+       onclick="gtag('event','click_affiliate',{'product_slug':'xiaomi-mi-box-s-4k','loja':'mercadolivre','source':'mobile_sticky'});">Ver na loja</a>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <img src="../LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216">
+          <p>Projetores testados de verdade na bancada do canal SchardTech.</p>
+          <div class="social">
+            <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="ico" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg></a>
+            <span class="off" aria-label="Instagram em breve"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.51"/></svg></span>
+          </div>
         </div>
-      </div>
-      <div class="footer-nav">
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Navegação</h4>
-          <a href="/">Projetores</a>
-          <a href="/sobre.html">Sobre</a>
-          <a href="/politica-privacidade.html">Privacidade</a><a href="mailto:contato@schardtech.com.br">Contato</a>
+          <a href="../projetores.html">Projetores</a>
+          <a href="../sobre.html">Sobre</a>
+          <a href="../politica-privacidade.html">Privacidade</a>
+          <a href="mailto:contato@schardtech.com.br">Contato</a>
         </div>
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Ferramentas</h4>
-          <a href="../ranking.html">Ranking dos testes</a><a href="../qual-projetor.html">Encontre seu projetor</a>
+          <a href="../ranking.html">Ranking dos testes</a>
+          <a href="../qual-projetor.html">Encontre seu projetor</a>
           <a href="../comparar.html">Comparar projetores</a>
           <a href="../acessorios-projetores.html">Acessórios</a>
         </div>
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Conteúdo</h4>
           <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
           <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <span class="off">Instagram (em breve)</span>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2026 SchardTech &mdash; Todos os direitos reservados</p>
-        <p style="margin-top:8px;font-size:0.78rem;color:var(--text-dim);">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
+      <div class="foot-bottom">
+        <p>&copy; 2026 SchardTech. Todos os direitos reservados.</p>
+        <p style="margin-top: 6px;">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
       </div>
     </div>
   </footer>
 
   <script>
-    const galeriaImgs = ["../img/acessorios/xiaomi-mi-box-s-4k-1.webp", "../img/acessorios/xiaomi-mi-box-s-4k-2.webp", "../img/acessorios/xiaomi-mi-box-s-4k-3.webp", "../img/acessorios/xiaomi-mi-box-s-4k-4.webp", "../img/acessorios/xiaomi-mi-box-s-4k-5.webp"];
+    const galeriaImgs = ["../img/acessorios/xiaomi-mi-box-s-4k-1.jpg", "../img/acessorios/xiaomi-mi-box-s-4k-1.webp", "../img/acessorios/xiaomi-mi-box-s-4k-2.jpg", "../img/acessorios/xiaomi-mi-box-s-4k-2.webp", "../img/acessorios/xiaomi-mi-box-s-4k-3.jpg", "../img/acessorios/xiaomi-mi-box-s-4k-3.webp", "../img/acessorios/xiaomi-mi-box-s-4k-4.jpg", "../img/acessorios/xiaomi-mi-box-s-4k-4.webp", "../img/acessorios/xiaomi-mi-box-s-4k-5.jpg", "../img/acessorios/xiaomi-mi-box-s-4k-5.webp"];
     function setMain(i) {
       const main = document.getElementById('paMainImg');
       if (!main || !galeriaImgs[i]) return;
@@ -214,5 +661,8 @@
     }
   </script>
   <script src="../script.js" defer></script>
+  <script src="../projetores-data.js" defer></script>
+  <script src="../prices-overlay.js" defer></script>
+  <script src="../ui-interacoes.js" defer></script>
 </body>
 </html>

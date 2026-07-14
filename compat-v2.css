@@ -1,0 +1,82 @@
+/* ============================================================
+   compat-v2.css — ponte de tokens do redesign v2 (Etapa B2, 14/07/2026)
+
+   Carregado SÓ nas páginas GERADAS (projetor/ , marca/ , acessorios/),
+   DEPOIS de v2.css e do CSS do corpo (projetor.css ou o <style> inline
+   dos hubs/acessórios). Essas páginas mantêm o CORPO antigo (.proj-* ,
+   .mk-* , .ac-*/.pa-*), que referencia tokens do style.css (--primary,
+   --card-bg, --border...). O style.css saiu do <head> dessas páginas;
+   esta ponte:
+     1. re-aponta cada token antigo pro valor v2 (re-tema, sem tocar no
+        layout — só a paleta e as fontes migram);
+     2. fornece as 3 utilitárias que eram exclusivas do style.css e o
+        corpo usa (.container, .gradient-text, .section-tag);
+     3. migra a tipografia dentro do #main (títulos = Space Grotesk,
+        números-chave = IBM Plex Mono), sem tocar no chrome v2.
+   NÃO redefine --radius (fica o 8px do v2). Reversível: é só apagar o
+   <link> e voltar o style.css.
+   ============================================================ */
+
+:root {
+  /* paleta antiga -> valores v2 */
+  --primary: var(--brand);
+  --accent: var(--brand);
+  --gradient-secondary: #7B8CFF;      /* mesma família do "DLP LED" do ranking v2 */
+  --bg-primary: var(--bg);
+  --bg-secondary: var(--bg-2);
+  --text: var(--txt);
+  --card-bg: var(--card);
+  --text-muted: var(--txt-2);
+  --text-dim: var(--txt-2);
+  --border: var(--line);
+  --border-hover: var(--brand-borda);
+  --success: var(--win);
+  --warning: var(--alerta);
+  --danger: #FF7A6B;
+  --gold: var(--ouro);
+  /* sem equivalente direto no v2 — mantidos (re-tingidos pro ciano v2) */
+  --glow-sm: 0 0 16px rgba(91, 200, 238, 0.18);
+  --glow-md: 0 0 32px rgba(91, 200, 238, 0.26);
+  --glow-lg: 0 0 56px rgba(91, 200, 238, 0.36);
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --elev-store: 0 2px 12px rgba(0, 0, 0, 0.10);
+  --elev-store-hover: 0 4px 20px rgba(0, 0, 0, 0.16);
+}
+
+/* ---- base herdada do style.css (v2.css não tem reset global de <a>/<button>;
+   as páginas v2 coloriam cada link por classe. O corpo antigo depende do reset
+   pra links sem classe não caírem no azul-padrão do navegador). Especificidade
+   de elemento (baixa): qualquer regra por classe do v2/corpo continua vencendo. */
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: inherit; }
+
+/* ---- utilitárias que eram exclusivas do style.css ---- */
+.container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+@media (max-width: 480px) { .container { padding: 0 18px; } }
+.gradient-text { color: var(--brand); }
+.section-tag {
+  display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand); margin-bottom: 12px;
+}
+
+/* ---- tipografia v2 dentro do conteúdo (não toca no chrome) ---- */
+#main h1, #main h2, #main h3, #main h4 { font-family: var(--display); letter-spacing: -0.02em; }
+.proj-price-value, .proj-price-cents,
+.spec-card .val, .price-stat .val,
+.ac-card-preco, .pa-compra-preco,
+.mk-table .num, .mk-stat {
+  font-family: var(--mono); font-variant-numeric: tabular-nums;
+}
+
+/* ---- neutraliza a borda de topo que o v2 põe em todo <section> ----
+   (o corpo antigo controla as próprias bordas/paddings; só o .proj-section
+   tinha borda própria e continua com ela) */
+.proj-hero, .mk-hero, .mk-sec, .ac-hero, .ac-section { border-top: 0; }
+
+/* ---- ponto de status do gráfico: bolinha colorida por estado, sem emoji ---- */
+.price-status .ps-icon {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: currentColor; font-size: 0; flex-shrink: 0; align-self: center;
+}
