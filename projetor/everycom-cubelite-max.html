@@ -33,14 +33,7 @@
   <meta name="twitter:image" content="https://img.youtube.com/vi/_ghhW7yBUnU/maxresdefault.jpg">
   <!-- og:patched-2026-05-14 -->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://i.ytimg.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../v2.css">
-  <link rel="stylesheet" href="../projetor.css">
-  <link rel="stylesheet" href="../compat-v2.css">
-<script type="application/ld+json">{
+  <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Everycom Cubelite MAX",
@@ -68,7 +61,14 @@
 }</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://schardtech.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Projetores", "item": "https://schardtech.com.br/projetores.html"}, {"@type": "ListItem", "position": 3, "name": "Projetores Everycom", "item": "https://schardtech.com.br/marca/everycom.html"}, {"@type": "ListItem", "position": 4, "name": "Everycom Cubelite MAX"}]}</script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "VideoObject", "name": "🟠NOVA VERSÃO🟠 CubeLite MAX Everycom – Os Upgrades Que Pedimos!!! Análise Completa!!!", "description": "Testamos o Everycom Cubelite MAX: projetor LCD 1080p com 1475 ANSI, áudio 3x10W e ruído baixo até no brilho máximo. Veja como ele se saiu no teste.", "thumbnailUrl": ["https://i.ytimg.com/vi/_ghhW7yBUnU/maxresdefault.jpg"], "embedUrl": "https://www.youtube.com/embed/_ghhW7yBUnU", "contentUrl": "https://www.youtube.com/watch?v=_ghhW7yBUnU", "publisher": {"@type": "Organization", "name": "SchardTech", "url": "https://schardtech.com.br", "sameAs": ["https://www.youtube.com/@SchardTech"]}, "uploadDate": "2025-09-25T15:23:55Z", "duration": "PT14M28S"}, {"@context": "https://schema.org", "@type": "VideoObject", "name": "Unboxing Satisfatório  Projetor CubeLite MAX Everycom #unboxing #satisfying   #projetor", "description": "Testamos o Everycom Cubelite MAX: projetor LCD 1080p com 1475 ANSI, áudio 3x10W e ruído baixo até no brilho máximo. Veja como ele se saiu no teste.", "thumbnailUrl": ["https://i.ytimg.com/vi/TZi6Lm9hsuw/maxresdefault.jpg"], "embedUrl": "https://www.youtube.com/embed/TZi6Lm9hsuw", "contentUrl": "https://www.youtube.com/watch?v=TZi6Lm9hsuw", "publisher": {"@type": "Organization", "name": "SchardTech", "url": "https://schardtech.com.br", "sameAs": ["https://www.youtube.com/@SchardTech"]}, "uploadDate": "2025-09-27T14:07:45Z", "duration": "PT40S"}]</script>
-  </head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://i.ytimg.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../v2.css">
+  <link rel="stylesheet" href="../projetor-v2.css">
+</head>
 <body>
   <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
 
@@ -109,9 +109,15 @@
   </div>
 
   <main id="main">
-    <section class="proj-hero">
-      <div class="container">
-        <div class="proj-breadcrumb"><a href="../">Projetores</a> &nbsp;/&nbsp; <a href="../marca/everycom.html">Everycom</a> &nbsp;/&nbsp; Cubelite MAX</div>
+    <!-- ========== HERO ========== -->
+    <section class="proj-hero sem-borda">
+      <div class="wrap">
+        <div class="migalha">
+          <a href="../">Home</a> <span class="sep">/</span>
+          <a href="../projetores.html">Projetores</a> <span class="sep">/</span>
+          <a href="../marca/everycom.html">Everycom</a> <span class="sep">/</span>
+          <span>Cubelite MAX</span>
+        </div>
 
         <div class="proj-title-row">
           <span class="proj-brand">Everycom</span>
@@ -119,78 +125,91 @@
         </div>
 
         <div class="proj-byline">Testado e medido pelo canal SchardTech · análise publicada em 25/09/2025</div>
-        <div class="proj-badges">
-          <span class="proj-badge">LCD LED</span>
-          <span class="proj-badge">1080p nativo</span>
-          <span class="proj-badge">1475 ANSI</span>
-          <span class="proj-badge">4K 60Hz / 1080p 120Hz HDMI</span>
-          <span class="proj-badge">Ótica Selada</span>
-          <span class="proj-badge">Áudio 3x10W</span>
-          <span class="proj-badge">128GB</span>
-          <span class="proj-badge">RJ45 (rede cabeada)</span>
-          <span class="proj-badge">Estoque nacional</span>
-        </div>
+        <!-- specs saem do hero (já vivem na bancada); o container fica pro
+             prices-overlay injetar badge de status (Sem estoque/Importado) -->
+        <div class="proj-badges"></div>
 
         <div class="proj-hero-grid">
           <div class="proj-video-wrap">
-            <button type="button" class="yt-facade" data-ytid="_ghhW7yBUnU" data-yttitle="Everycom Cubelite MAX — Análise Completa" aria-label="Reproduzir vídeo: Everycom Cubelite MAX — Análise Completa"><img src="https://i.ytimg.com/vi/_ghhW7yBUnU/hq720.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_ghhW7yBUnU/hqdefault.jpg'" alt="Everycom Cubelite MAX — Análise Completa" width="1280" height="720" fetchpriority="high"><span class="yt-facade-play"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button>
+            <button type="button" class="yt-facade" data-ytid="_ghhW7yBUnU" data-yttitle="Everycom Cubelite MAX: análise completa" aria-label="Reproduzir a análise completa do Everycom Cubelite MAX"><img src="https://i.ytimg.com/vi/_ghhW7yBUnU/hq720.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_ghhW7yBUnU/hqdefault.jpg'" alt="Everycom Cubelite MAX testado no canal SchardTech" width="1280" height="720" fetchpriority="high"><span class="yt-facade-play"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button>
           </div>
 
           <div class="proj-price-card" data-marca="Everycom" data-modelo="Cubelite MAX">
-            <div class="proj-price-label">Melhor preço hoje</div>
-            <div>
-              <span class="proj-price-value" id="projPriceValue">R$ 2.043<span class="proj-price-cents">,00</span></span>
+            <div class="pj-price-topo">
+              <span class="proj-price-label">Melhor preço hoje</span>
+              <span class="p-live">ao vivo</span>
             </div>
-            <div class="proj-price-meta" id="projPriceMeta">
-              Verificado em 12/07/2026 · Shopee
-            </div>
+            <div class="pj-price-body">
+              <div>
+                <span class="proj-price-value" id="projPriceValue">R$ 2.043<span class="proj-price-cents">,00</span></span>
+              </div>
+              <div class="proj-price-meta" id="projPriceMeta">Verificado em 12/07/2026 · Shopee</div>
 
-            <div class="proj-store-btns" id="projStoreBtns">
-              <a href="https://s.shopee.com.br/3VhGuV8Ser" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn store-shopee store-winner">
-                <span class="winner-badge">Melhor preço</span><span class="store-name"><img src="../logo shopee.png" alt="Shopee" class="store-logo"></span>
-                <span class="store-price">R$ 2.043,00</span>
-              </a>
-              <a href="https://meli.la/1faS5r2" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn store-ml">
-                <span class="store-name"><img src="../logo ml2.png" alt="" class="store-logo">Mercado Livre</span>
-                <span class="store-price">R$ 2.279,00</span>
-              </a>
+              <div class="regua-blk">
+                <div class="regua"><div class="r-fill" style="width:0%"></div><div class="r-dot" style="left:0%"></div></div>
+                <div class="regua-labels"><span class="min" id="pjReguaMin">mín R$ 2.043</span><span id="pjReguaMax">máx R$ 2.093</span></div>
+              </div>
+              <div class="proj-store-btns" id="projStoreBtns">
+                <a href="https://s.shopee.com.br/3VhGuV8Ser" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn store-shopee store-winner"><span class="winner-badge">Melhor preço</span><span class="store-name"><img src="../logo shopee.png" alt="Shopee" class="store-logo"></span><span class="store-price">R$ 2.043,00</span></a>
+                <a href="https://meli.la/1faS5r2" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn store-ml"><span class="store-name"><img src="../logo ml2.png" alt="" class="store-logo">Mercado Livre</span><span class="store-price">R$ 2.279,00</span></a>
+              </div>
+              <div id="projCupomSlot"></div>
             </div>
-
-            <div id="projCupomSlot"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="proj-section">
-      <div class="container">
-        <h2 class="section-title">O que eu acho</h2>
-        <p class="section-sub">Resumo da minha experiência depois de testar e usar o projetor.</p>
+    <!-- ========== HISTÓRICO DE PREÇO ========== -->
+    <section id="historico-preco">
+      <div class="wrap">
+        <div class="reveal">
+          <div class="eyebrow"><span class="num">01</span> Preço</div>
+          <h2>Histórico de preço</h2>
+          <p class="sec-sub">Coleta automática 4 vezes por dia, na Shopee e no Mercado Livre.</p>
+        </div>
 
-        <div class="proj-verdict">
-          O Cubelite MAX é <strong>um dos LCDs mais brilhantes</strong> que testei e ainda
-          consegue manter o ruído baixo mesmo na potência máxima — um equilíbrio raro nessa
-          tecnologia.
+        <div class="price-chart-wrap">
+          <div id="priceStatus" class="price-status good"><span class="ps-icon" aria-hidden="true"></span><div><strong>Tá no menor preço já visto</strong><span class="ps-sub">Shopee em R$ 2.043,00. Menor preço já registrado: R$ 2.043,00.</span></div></div>
+
+          <div class="price-filters" role="tablist" aria-label="Filtrar marketplace">
+            <button type="button" class="filter-chip active" data-filter="todos" aria-pressed="true">Todos</button>
+            <button type="button" class="filter-chip active" data-filter="shopee" aria-pressed="true">Shopee</button>
+            <button type="button" class="filter-chip active" data-filter="ml" aria-pressed="true">Mercado Livre</button>
+          </div>
+
+          <div class="chart-canvas-wrap">
+            <canvas id="priceChart"></canvas>
+          </div>
+
+          <div class="price-stats-grid">
+            <div class="price-stat min"><div class="label">Mínimo histórico</div><div class="val">R$ 2.043,00</div></div>
+            <div class="price-stat"><div class="label">Preço médio</div><div class="val"></div></div>
+            <div class="price-stat max"><div class="label">Máximo histórico</div><div class="val">R$ 2.093,00</div></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="proj-section">
-      <div class="container">
-        <h2 class="section-title">Pontos fortes e fracos</h2>
-        <p class="section-sub">Destilado dos testes em vídeo e das dúvidas mais frequentes dos espectadores.</p>
+    <!-- ========== PRÓS E CONTRAS ========== -->
+    <section id="pontos">
+      <div class="wrap">
+        <div class="reveal">
+          <div class="eyebrow"><span class="num">02</span> Teste</div>
+          <h2>Pontos fortes e fracos</h2>
+        </div>
 
-        <div class="proj-pc-grid">
+        <div class="proj-pc-grid reveal">
           <div class="proj-pc-col pros">
             <h3>O que ele tem de bom</h3>
             <ul>
-              <li><strong>1475 ANSI reais</strong> — rende bem com luz artificial</li>
-              <li><strong>1080p nativo</strong> + 4K 60Hz / 1080p 120Hz HDR via HDMI</li>
+              <li><strong>1475 ANSI reais</strong><span>rende bem com luz artificial</span></li>
+              <li><strong>1080p nativo</strong><span>+ 4K 60Hz / 1080p 120Hz HDR via HDMI</span></li>
               <li><strong>Ótica Selada</strong></li>
-              <li><strong>Áudio 3x10W (30W total)</strong> — som encorpado, dispensa caixa externa</li>
+              <li><strong>Áudio 3x10W (30W total)</strong><span>som encorpado, dispensa caixa externa</span></li>
               <li><strong>Input lag de 35ms</strong></li>
               <li><strong>3GB RAM / 128GB de armazenamento</strong></li>
-              <li><strong>Ruído baixo</strong> mesmo no brilho máximo</li>
+              <li><strong>Ruído baixo</strong><span>mesmo no brilho máximo</span></li>
               <li><strong>Modo Low Noise silencioso</strong></li>
               <li><strong>Wi-Fi + Bluetooth</strong></li>
               <li><strong>Uso contínuo recomendado de até 8h</strong></li>
@@ -200,158 +219,58 @@
           <div class="proj-pc-col cons">
             <h3>O que pesa contra</h3>
             <ul>
-              <li><strong>Android não homologado</strong> — Netflix/Disney precisam de stick pra rodar em qualidade máxima</li>
-              <li><strong>HDR só ativa via HDMI</strong> — o sistema interno não tem HDR</li>
-              <li><strong>Consumo de 203W</strong> — alto pela faixa</li>
-              <li><strong>LCD pra não usar várias horas no brilho máximo direto</strong> — potência 3 ajuda na vida útil</li>
+              <li><strong>Android não homologado</strong><span>Netflix/Disney precisam de stick pra rodar em qualidade máxima</span></li>
+              <li><strong>HDR só ativa via HDMI</strong><span>o sistema interno não tem HDR</span></li>
+              <li><strong>Consumo de 203W</strong><span>alto pela faixa</span></li>
+              <li><strong>LCD pra não usar várias horas no brilho máximo direto</strong><span>potência 3 ajuda na vida útil</span></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="proj-section">
-      <div class="container">
-        <h2 class="section-title">Acessórios indicados para Everycom Cubelite MAX</h2>
-        <p class="section-sub">Itens que se encaixam bem com o uso desse modelo.</p>
-
-        <div class="acc-cat">
-          <div class="acc-cat-label">Telas</div>
-          <div class="acc-grid">
-            <a href="../acessorios/tela-byintek-com-suporte.html" class="acc-card">
-              <div class="acc-card-img"><img src="../img/acessorios/tela-byintek-com-suporte-1.jpg" alt="Tela 100&quot; com Cavalete" loading="lazy"></div>
-              <div class="acc-card-body">
-                <h4>Tela 100" com Cavalete</h4>
-                <p>Cavalete portátil Byintek — montagem rápida</p>
-              </div>
-            </a>
-            <a href="../acessorios/tela-eletrica-retratil-globalstock.html" class="acc-card">
-              <div class="acc-card-img"><img src="../img/acessorios/tela-eletrica-retratil-globalstock-1.webp" alt="Tela Elétrica Retrátil" loading="lazy"></div>
-              <div class="acc-card-body">
-                <h4>Tela Elétrica Retrátil</h4>
-                <p>Motorizada — pra projetores potentes (≥700 ANSI)</p>
-              </div>
-            </a>
-          </div>
+    <!-- ========== BANCADA: MEDIÇÕES + FICHA ========== -->
+    <section id="bancada">
+      <div class="wrap">
+        <div class="reveal">
+          <div class="eyebrow"><span class="num">03</span> Bancada</div>
+          <h2>Medições e ficha técnica</h2>
         </div>
-        <div class="acc-cat">
-          <div class="acc-cat-label">Suportes & instalação</div>
-          <div class="acc-grid">
-            <a href="../acessorios/tripe-fotografico-2-8m-inox.html" class="acc-card">
-              <div class="acc-card-img"><img src="../img/acessorios/tripe-fotografico-2-8m-inox-1.jpg" alt="Tripé Fotográfico 2,8m" loading="lazy"></div>
-              <div class="acc-card-body">
-                <h4>Tripé Fotográfico 2,8m</h4>
-                <p>Até 2,8m, aço inox — estável pra qualquer projetor</p>
-              </div>
-            </a>
-            <a href="../acessorios/suporte-supratick-25kg.html" class="acc-card">
-              <div class="acc-card-img"><img src="../img/acessorios/suporte-supratick-25kg-1.jpg" alt="Suporte Premium Supratick" loading="lazy"></div>
-              <div class="acc-card-body">
-                <h4>Suporte Premium Supratick</h4>
-                <p>4 pontos, até 25kg — pra projetores pesados</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="acc-cat">
-          <div class="acc-cat-label">TV Box & sticks</div>
-          <div class="acc-grid">
-            <a href="../acessorios/fire-tv-stick-hd.html" class="acc-card">
-              <div class="acc-card-img"><img src="../img/acessorios/fire-tv-stick-hd-1.jpg" alt="Fire TV Stick HD" loading="lazy"></div>
-              <div class="acc-card-body">
-                <h4>Fire TV Stick HD</h4>
-                <p>HD da Amazon — econômico, ideal sem 4K HDMI</p>
-              </div>
-            </a>
-            <a href="../acessorios/fire-tv-stick-4k.html" class="acc-card">
-              <div class="acc-card-img"><img src="../img/acessorios/fire-tv-stick-4k-1.jpg" alt="Fire TV Stick 4K" loading="lazy"></div>
-              <div class="acc-card-body">
-                <h4>Fire TV Stick 4K</h4>
-                <p>4K com Wi-Fi 6 — pra extrair o máximo do 4K HDMI</p>
-              </div>
-            </a>
-            <a href="../acessorios/chromecast-hd-google-tv.html" class="acc-card">
-              <div class="acc-card-img"><img src="../img/acessorios/chromecast-hd-google-tv-1.jpg" alt="Chromecast HD" loading="lazy"></div>
-              <div class="acc-card-body">
-                <h4>Chromecast HD</h4>
-                <p>Google TV nativo em HD</p>
-              </div>
-            </a>
-            <a href="../acessorios/xiaomi-mi-box-s-4k.html" class="acc-card">
-              <div class="acc-card-img"><img src="../img/acessorios/xiaomi-mi-box-s-4k-1.jpg" alt="Xiaomi Mi Box S 4K" loading="lazy"></div>
-              <div class="acc-card-body">
-                <h4>Xiaomi Mi Box S 4K</h4>
-                <p>Box Android TV 4K — mais potente pra apps pesados</p>
-              </div>
-            </a>
-            <a href="../acessorios/xiaomi-mi-tv-stick-4k.html" class="acc-card">
-              <div class="acc-card-img"><img src="../img/acessorios/xiaomi-mi-tv-stick-4k-1.jpg" alt="Xiaomi Mi TV Stick 4K" loading="lazy"></div>
-              <div class="acc-card-body">
-                <h4>Xiaomi Mi TV Stick 4K</h4>
-                <p>Stick Android TV 4K — compacto e versátil</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="proj-section">
-      <div class="container">
-        <h2 class="section-title">Histórico de preço</h2>
-        <p class="section-sub">Preço acompanhado na Shopee e no Mercado Livre.</p>
-
-        <div class="price-chart-wrap">
-          <div id="priceStatus" class="price-status good">
-            <span class="ps-icon" aria-hidden="true"></span>
+        <div class="pj-medidas reveal">
+          <div class="pj-medida">
             <div>
-              <strong>Tá no menor preço já visto</strong>
-              <span class="ps-sub">Shopee em R$ 2.043,00. Menor preço já registrado: R$ 2.043,00.</span>
+              <div class="m-rotulo">Brilho</div>
+              <div class="m-valor">1475 ANSI<span class="m-tag">MEDIDO</span></div>
+            </div>
+            <div class="regua-blk">
+              <div class="regua"><div class="r-fill" data-w="55"></div><div class="r-dot" data-x="55"></div></div>
+              <div class="regua-labels"><span class="min">menor do catálogo: 120 ANSI</span><span>maior: 2600 ANSI</span></div>
             </div>
           </div>
-
-          <div class="price-filters" role="tablist" aria-label="Filtrar marketplace">
-            <button type="button" class="filter-chip active" data-filter="todos" aria-pressed="true">Todos</button>
-            <button type="button" class="filter-chip active" data-filter="shopee" aria-pressed="true">Shopee</button>
-            <button type="button" class="filter-chip active" data-filter="ml" aria-pressed="true">Mercado Livre</button>
+          <div class="pj-medida">
+            <div>
+              <div class="m-rotulo">Input lag</div>
+              <div class="m-valor">35 ms<span class="m-tag">MEDIDO</span></div>
+            </div>
+            <div class="regua-blk">
+              <div class="regua"><div class="r-fill" data-w="15"></div><div class="r-dot" data-x="15"></div></div>
+              <div class="regua-labels"><span class="min">mais rápido do catálogo: 10 ms</span><span>mais lento: 180 ms</span></div>
+            </div>
           </div>
-
-          <div class="chart-canvas-wrap"><canvas id="priceChart"></canvas></div>
-
-          <div class="price-stats-grid">
-            <div class="price-stat min"><div class="label">Mínimo histórico</div><div class="val">R$ 2.043,00</div></div>
-            <div class="price-stat"><div class="label">Preço médio</div><div class="val">R$ 2.058,08</div></div>
-            <div class="price-stat max"><div class="label">Máximo histórico</div><div class="val">R$ 2.093,00</div></div>
+          <div class="pj-medida">
+            <div>
+              <div class="m-rotulo">Consumo máximo</div>
+              <div class="m-valor">203 W</div>
+            </div>
+            <div class="regua-blk">
+              <div class="regua"><div class="r-fill" data-w="78"></div><div class="r-dot" data-x="78"></div></div>
+              <div class="regua-labels"><span class="min">menor do catálogo: 35 W</span><span>maior: 250 W</span></div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="proj-section">
-      <div class="container">
-        <h2 class="section-title">Ficha técnica completa</h2>
-        <p class="section-sub">Dados confirmados em teste — todos medidos no canal.</p>
-
-        <div class="specs-grid">
+        <div class="specs-grid reveal">
           <div class="spec-card"><div class="label">Tecnologia</div><div class="val">LCD LED</div></div>
           <div class="spec-card"><div class="label">Resolução nativa</div><div class="val">1920 × 1080</div></div>
           <div class="spec-card"><div class="label">Suporte máximo</div><div class="val">4K 60Hz / 1080p 120Hz (via HDMI)</div></div>
@@ -362,7 +281,7 @@
           <div class="spec-card"><div class="label">Sistema operacional</div><div class="val">Android não homologado</div></div>
           <div class="spec-card"><div class="label">RAM / Storage</div><div class="val">3GB / 128GB</div></div>
           <div class="spec-card"><div class="label">Conectividade</div><div class="val">HDMI / 2×USB / P2 / RJ45 / Wi-Fi / BT</div></div>
-          <div class="spec-card"><div class="label">HDR</div><div class="val">Sim — via HDMI (FireTV 4K)</div></div>
+          <div class="spec-card"><div class="label">HDR</div><div class="val">Sim, via HDMI (FireTV 4K)</div></div>
           <div class="spec-card"><div class="label">Distância pra 100"</div><div class="val">~2,80m</div></div>
           <div class="spec-card"><div class="label">Consumo</div><div class="val">203W</div></div>
           <div class="spec-card"><div class="label">Uso contínuo recomendado</div><div class="val">Até 8h</div></div>
@@ -373,70 +292,161 @@
       </div>
     </section>
 
-    <section class="proj-section">
-      <div class="container">
-        <h2 class="section-title">Vídeos do canal</h2>
-        <p class="section-sub">Análise solo + unboxing.</p>
+    <!-- ========== ACESSÓRIOS ========== -->
+    <section id="acessorios">
+      <div class="wrap">
+        <div class="reveal">
+          <div class="eyebrow"><span class="num">04</span> Complementos</div>
+          <h2>Acessórios indicados para Everycom Cubelite MAX</h2>
+        </div>
 
-        <div class="videos-grid">
-          <div class="video-card">
-            <button type="button" class="yt-facade" data-ytid="_ghhW7yBUnU" data-yttitle="Cubelite MAX — Análise Completa" aria-label="Reproduzir vídeo: Cubelite MAX — Análise Completa"><img src="https://i.ytimg.com/vi/_ghhW7yBUnU/hq720.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_ghhW7yBUnU/hqdefault.jpg'" alt="Cubelite MAX — Análise Completa" width="1280" height="720" loading="lazy"><span class="yt-facade-play"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button>
-            <div class="video-card-body">
-              <div class="video-type">Análise completa</div>
-              <h4>Cubelite MAX — Os Upgrades Que Pedimos!</h4>
-              <p>14 minutos · 25/09/2025 · brilho, foco, sistema e input lag.</p>
+        <div class="reveal">
+          <div class="acc-cat">
+            <div class="acc-cat-label">Telas</div>
+            <div class="acc-grid">
+              <a href="../acessorios/tela-byintek-com-suporte.html" class="acc-card">
+                <div class="acc-card-img"><img src="../img/acessorios/tela-byintek-com-suporte-1.jpg" alt="Tela 100&quot; com Cavalete" loading="lazy"></div>
+                <div class="acc-card-body">
+                  <h4>Tela 100" com Cavalete</h4>
+                  <p>Cavalete portátil Byintek, montagem rápida</p>
+                </div>
+              </a>
+              <a href="../acessorios/tela-eletrica-retratil-globalstock.html" class="acc-card">
+                <div class="acc-card-img"><img src="../img/acessorios/tela-eletrica-retratil-globalstock-1.webp" alt="Tela Elétrica Retrátil" loading="lazy"></div>
+                <div class="acc-card-body">
+                  <h4>Tela Elétrica Retrátil</h4>
+                  <p>Motorizada, pra projetores potentes (≥700 ANSI)</p>
+                </div>
+              </a>
             </div>
           </div>
-
-          <div class="video-card">
-            <button type="button" class="yt-facade" data-ytid="TZi6Lm9hsuw" data-yttitle="Unboxing — Cubelite MAX" aria-label="Reproduzir vídeo: Unboxing — Cubelite MAX"><img src="https://i.ytimg.com/vi/TZi6Lm9hsuw/hq720.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/TZi6Lm9hsuw/hqdefault.jpg'" alt="Unboxing — Cubelite MAX" width="1280" height="720" loading="lazy"><span class="yt-facade-play"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button>
-            <div class="video-card-body">
-              <div class="video-type">Unboxing</div>
-              <h4>Unboxing Satisfatório — Cubelite MAX</h4>
-              <p>27/09/2025 · embalagem, conteúdo da caixa e primeira impressão.</p>
+          <div class="acc-cat">
+            <div class="acc-cat-label">Suportes & instalação</div>
+            <div class="acc-grid">
+              <a href="../acessorios/tripe-fotografico-2-8m-inox.html" class="acc-card">
+                <div class="acc-card-img"><img src="../img/acessorios/tripe-fotografico-2-8m-inox-1.jpg" alt="Tripé Fotográfico 2,8m" loading="lazy"></div>
+                <div class="acc-card-body">
+                  <h4>Tripé Fotográfico 2,8m</h4>
+                  <p>Até 2,8m, aço inox, estável pra qualquer projetor</p>
+                </div>
+              </a>
+              <a href="../acessorios/suporte-supratick-25kg.html" class="acc-card">
+                <div class="acc-card-img"><img src="../img/acessorios/suporte-supratick-25kg-1.jpg" alt="Suporte Premium Supratick" loading="lazy"></div>
+                <div class="acc-card-body">
+                  <h4>Suporte Premium Supratick</h4>
+                  <p>4 pontos, até 25kg, pra projetores pesados</p>
+                </div>
+              </a>
             </div>
           </div>
-
+          <div class="acc-cat">
+            <div class="acc-cat-label">TV Box & sticks</div>
+            <div class="acc-grid">
+              <a href="../acessorios/fire-tv-stick-hd.html" class="acc-card">
+                <div class="acc-card-img"><img src="../img/acessorios/fire-tv-stick-hd-1.jpg" alt="Fire TV Stick HD" loading="lazy"></div>
+                <div class="acc-card-body">
+                  <h4>Fire TV Stick HD</h4>
+                  <p>HD da Amazon, econômico, ideal sem 4K HDMI</p>
+                </div>
+              </a>
+              <a href="../acessorios/fire-tv-stick-4k.html" class="acc-card">
+                <div class="acc-card-img"><img src="../img/acessorios/fire-tv-stick-4k-1.jpg" alt="Fire TV Stick 4K" loading="lazy"></div>
+                <div class="acc-card-body">
+                  <h4>Fire TV Stick 4K</h4>
+                  <p>4K com Wi-Fi 6, pra extrair o máximo do 4K HDMI</p>
+                </div>
+              </a>
+              <a href="../acessorios/chromecast-hd-google-tv.html" class="acc-card">
+                <div class="acc-card-img"><img src="../img/acessorios/chromecast-hd-google-tv-1.jpg" alt="Chromecast HD" loading="lazy"></div>
+                <div class="acc-card-body">
+                  <h4>Chromecast HD</h4>
+                  <p>Google TV nativo em HD</p>
+                </div>
+              </a>
+              <a href="../acessorios/xiaomi-mi-box-s-4k.html" class="acc-card">
+                <div class="acc-card-img"><img src="../img/acessorios/xiaomi-mi-box-s-4k-1.jpg" alt="Xiaomi Mi Box S 4K" loading="lazy"></div>
+                <div class="acc-card-body">
+                  <h4>Xiaomi Mi Box S 4K</h4>
+                  <p>Box Android TV 4K, mais potente pra apps pesados</p>
+                </div>
+              </a>
+              <a href="../acessorios/xiaomi-mi-tv-stick-4k.html" class="acc-card">
+                <div class="acc-card-img"><img src="../img/acessorios/xiaomi-mi-tv-stick-4k-1.jpg" alt="Xiaomi Mi TV Stick 4K" loading="lazy"></div>
+                <div class="acc-card-body">
+                  <h4>Xiaomi Mi TV Stick 4K</h4>
+                  <p>Stick Android TV 4K, compacto e versátil</p>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="proj-section">
-      <div class="container">
-        <h2 class="section-title">Dúvidas dos espectadores</h2>
-        <p class="section-sub">Perguntas reais feitas nos comentários — com a minha resposta.</p>
+    <!-- ========== VÍDEOS DO CANAL ========== -->
+    <section id="videos">
+      <div class="wrap">
+        <div class="reveal">
+          <div class="eyebrow"><span class="num">05</span> Canal</div>
+          <h2>Vídeos com o Cubelite MAX</h2>
+        </div>
 
-        <div class="qa-list">
+        <div class="proj-videos-grid reveal">
+          <div class="video-card">
+            <button type="button" class="yt-facade" data-ytid="_ghhW7yBUnU" data-yttitle="Everycom Cubelite MAX: análise completa" aria-label="Reproduzir a análise completa do Everycom Cubelite MAX"><img src="https://i.ytimg.com/vi/_ghhW7yBUnU/hq720.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_ghhW7yBUnU/hqdefault.jpg'" alt="Everycom Cubelite MAX, análise completa" width="1280" height="720" loading="lazy"><span class="yt-facade-play"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button>
+            <div class="video-card-body">
+              <div class="video-type">Análise completa</div>
+              <h4>Cubelite MAX, Os Upgrades Que Pedimos!</h4>
+              <p>14 minutos · 25/09/2025 · brilho, foco, sistema e input lag.</p>
+            </div>
+          </div>
+          <div class="video-card">
+            <button type="button" class="yt-facade" data-ytid="TZi6Lm9hsuw" data-yttitle="Everycom Cubelite MAX: análise completa" aria-label="Reproduzir a análise completa do Everycom Cubelite MAX"><img src="https://i.ytimg.com/vi/TZi6Lm9hsuw/hq720.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/TZi6Lm9hsuw/hqdefault.jpg'" alt="Everycom Cubelite MAX, análise completa" width="1280" height="720" loading="lazy"><span class="yt-facade-play"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span></button>
+            <div class="video-card-body">
+              <div class="video-type">Unboxing</div>
+              <h4>Unboxing Satisfatório, Cubelite MAX</h4>
+              <p>27/09/2025 · embalagem, conteúdo da caixa e primeira impressão.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Q&A ========== -->
+    <section id="perguntas">
+      <div class="wrap">
+        <div class="reveal">
+          <div class="eyebrow"><span class="num">06</span> Comentários</div>
+          <h2>Perguntas dos espectadores</h2>
+          <p class="sec-sub">Perguntas reais dos comentários dos vídeos, com a resposta do canal.</p>
+        </div>
+
+        <div class="qa-list reveal">
           <div class="qa-item">
-            <div class="qa-q">Cubelite MAX ou TD98 PRO — qual escolheria?</div>
+            <div class="qa-q">Cubelite MAX ou TD98 PRO, qual escolheria?</div>
             <div class="qa-a">Sem contar preço, Cubelite MAX. Em brilho ele ganha com certeza.</div>
             <div class="qa-author">Resposta a @luizclaudiobueno9082</div>
           </div>
-
           <div class="qa-item">
-            <div class="qa-q">Pelo FireTV no YouTube aparece 4K 2160 HDR — ou só pelo sistema do projetor?</div>
+            <div class="qa-q">Pelo FireTV no YouTube aparece 4K 2160 HDR, ou só pelo sistema do projetor?</div>
             <div class="qa-a">Pelo FireTV vc usa todo conteúdo em 4K. Mas o FireTV precisa ser a versão 4K.</div>
             <div class="qa-author">Resposta a @Tassiotony</div>
           </div>
-
           <div class="qa-item">
             <div class="qa-q">Tem Dolby Vision e Dolby Atmos?</div>
             <div class="qa-a">Infelizmente não tem suporte a Dolby Vision.</div>
             <div class="qa-author">Resposta a @danoceueolimite</div>
           </div>
-
           <div class="qa-item">
             <div class="qa-q">O ruído continua alto? Incomoda quando não tá usando o som do projetor.</div>
             <div class="qa-a">Ruído está idêntico ao E1. Como uso na potência 3, ele cai bastante. Comparado a projetores ~1000 ANSI (AC1071, TD98 PRO), mesmo no máximo o Cubelite MAX fica com ruído menor. No Low Noise, fica bem silencioso.</div>
             <div class="qa-author">Resposta a @yurimorais3496</div>
           </div>
-
           <div class="qa-item">
             <div class="qa-q">Tipo um clone do D9W?</div>
-            <div class="qa-a">Ao contrário — o Cubelite é a versão primária. A Everycom é fabricante, não white label.</div>
+            <div class="qa-a">Ao contrário, o Cubelite é a versão primária. A Everycom é fabricante, não white label.</div>
             <div class="qa-author">Resposta a @paulorleitejr</div>
           </div>
-
           <div class="qa-item">
             <div class="qa-q">Pelo preço merecia o Google TV.</div>
             <div class="qa-a">Com Google TV ia ficar topíssimo mesmo.</div>
@@ -446,18 +456,20 @@
       </div>
     </section>
 
-
-    <section class="proj-section">
-      <div class="container">
-        <h2 class="section-title">Próximos passos</h2>
-        <div class="proj-cta-final">
-          <a href="../comparar.html" class="proj-cta-card">
+    <!-- ========== CTA FINAL ========== -->
+    <section id="proximos">
+      <div class="wrap">
+        <div class="reveal">
+          <h2>Próximos passos</h2>
+        </div>
+        <div class="proj-cta-final reveal">
+          <a href="../comparar.html?c=Cubelite%20MAX" class="proj-cta-card">
             <h4>Comparar com outros projetores</h4>
             <p>Coloque o Cubelite MAX lado a lado com até 2 modelos pra ver as diferenças técnicas.</p>
           </a>
           <a href="../qual-projetor.html" class="proj-cta-card">
             <h4>Não sabe se é esse mesmo?</h4>
-            <p>Responde 6 perguntas e descobre o projetor certo pra você.</p>
+            <p>Responde as perguntas e descobre o projetor certo pra você.</p>
           </a>
         </div>
       </div>
@@ -506,20 +518,19 @@
 
   <script>
     const PRICE_HISTORY = {
-      labels: ['09/05', '11/05', '12/05'],
-      shopee: [2093.00, 2093.00, 2033.00],
-      ml:     [null,    null,    2279.00],
-      menor: 2033.00
+      labels: ["09/05", "11/05", "12/05"],
+      shopee: [2093.0, 2093.0, 2033.0],
+      ml: [null, null, 2279.0],
+      menor: 2033.0
     };
 
-    const fmtBRL = (v) => v == null ? '—' : 'R$ ' + v.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    const fmtBRL = (v) => v == null ? '' : 'R$ ' + v.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
 
     function buildDataset(label, color, data, hidden = false) {
       return {
-        label, data,
-        borderColor: color, backgroundColor: color + '22',
-        pointBackgroundColor: color, pointBorderColor: 'rgba(11,11,11,0.6)',
-        pointBorderWidth: 2, pointRadius: 6, pointHoverRadius: 9, pointHoverBorderWidth: 2,
+        label, data, borderColor: color, backgroundColor: color + '22',
+        pointBackgroundColor: color, pointBorderColor: 'rgba(9,12,17,0.6)',
+        pointBorderWidth: 2, pointRadius: 0, pointHoverRadius: 7, pointHoverBorderWidth: 2,
         borderWidth: 2.5, tension: 0.25, spanGaps: true, hidden
       };
     }
@@ -531,34 +542,74 @@
         const y = scales.y.getPixelForValue(PRICE_HISTORY.menor);
         if (y < chartArea.top || y > chartArea.bottom) return;
         ctx.save();
-        ctx.setLineDash([4, 4]);
-        ctx.strokeStyle = 'rgba(47,224,138,0.55)';
-        ctx.lineWidth = 1.2;
-        ctx.beginPath();
-        ctx.moveTo(chartArea.left, y);
-        ctx.lineTo(chartArea.right, y);
-        ctx.stroke();
-        ctx.setLineDash([]);
-        ctx.fillStyle = 'rgba(47,224,138,0.95)';
-        ctx.font = '600 10px Inter, sans-serif';
-        ctx.textAlign = 'right';
-        ctx.fillText('▼ menor já visto', chartArea.right - 6, y - 6);
-        ctx.restore();
+        ctx.setLineDash([4, 4]); ctx.strokeStyle = 'rgba(47,224,138,0.55)'; ctx.lineWidth = 1.2;
+        ctx.beginPath(); ctx.moveTo(chartArea.left, y); ctx.lineTo(chartArea.right, y); ctx.stroke();
+        ctx.setLineDash([]); ctx.fillStyle = 'rgba(47,224,138,0.95)';
+        ctx.font = '600 10px "IBM Plex Mono", monospace'; ctx.textAlign = 'right';
+        ctx.fillText('▼ menor já visto', chartArea.right - 6, y - 6); ctx.restore();
+      }
+    };
+
+    const crosshairPlugin = {
+      id: 'crosshair',
+      afterDatasetsDraw(chart) {
+        const atv = chart.tooltip && chart.tooltip.getActiveElements ? chart.tooltip.getActiveElements() : [];
+        if (!atv.length) return;
+        const { ctx, chartArea } = chart;
+        const x = atv[0].element.x;
+        if (x < chartArea.left || x > chartArea.right) return;
+        ctx.save(); ctx.setLineDash([3, 4]); ctx.strokeStyle = 'rgba(238, 243, 250, 0.22)'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(x, chartArea.top); ctx.lineTo(x, chartArea.bottom); ctx.stroke(); ctx.restore();
+      }
+    };
+
+    const ultimoPontoPlugin = {
+      id: 'ultimoPonto',
+      afterDatasetsDraw(chart) {
+        chart.data.datasets.forEach((ds, i) => {
+          if (!chart.isDatasetVisible(i)) return;
+          let idx = -1;
+          for (let k = ds.data.length - 1; k >= 0; k--) { if (ds.data[k] != null) { idx = k; break; } }
+          if (idx < 0) return;
+          const el = chart.getDatasetMeta(i).data[idx];
+          if (!el) return;
+          const ctx = chart.ctx; ctx.save();
+          ctx.fillStyle = ds.borderColor + '2E';
+          ctx.beginPath(); ctx.arc(el.x, el.y, 9, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = ds.borderColor; ctx.strokeStyle = 'rgba(9,12,17,0.8)'; ctx.lineWidth = 2;
+          ctx.beginPath(); ctx.arc(el.x, el.y, 4, 0, Math.PI * 2); ctx.fill(); ctx.stroke(); ctx.restore();
+        });
       }
     };
 
     function initPriceChart() {
       if (typeof Chart === 'undefined') { setTimeout(initPriceChart, 100); return; }
-      Chart.defaults.color = 'rgba(234,234,234,0.55)';
+      const cvExist = document.getElementById('priceChart');
+      if (!cvExist) return;
+      if (Chart.getChart && Chart.getChart(cvExist)) return;
+
+      Chart.defaults.color = 'rgba(238,243,250,0.55)';
       Chart.defaults.font.family = 'Inter, -apple-system, sans-serif';
       Chart.defaults.font.size = 11;
-      const ctx = document.getElementById('priceChart').getContext('2d');
+      const ctx = cvExist.getContext('2d');
+      const datasets = [
+        buildDataset('Shopee', '#FF7A45', PRICE_HISTORY.shopee),
+        buildDataset('Mercado Livre', '#FFD93D', PRICE_HISTORY.ml)
+      ];
+      const alphaTopo = datasets.length === 1 ? '30' : '12';
+      datasets.forEach((ds) => {
+        const corFill = ds.borderColor;
+        ds.fill = 'origin';
+        ds.backgroundColor = (c) => {
+          const area = c.chart.chartArea;
+          if (!area) return corFill + '14';
+          const g = c.chart.ctx.createLinearGradient(0, area.top, 0, area.bottom);
+          g.addColorStop(0, corFill + alphaTopo); g.addColorStop(1, corFill + '00'); return g;
+        };
+      });
       const chart = new Chart(ctx, {
         type: 'line',
-        data: { labels: PRICE_HISTORY.labels, datasets: [
-          buildDataset('Shopee',        '#FF9B7A', PRICE_HISTORY.shopee),
-          buildDataset('Mercado Livre', '#FFD15A', PRICE_HISTORY.ml)
-        ]},
+        data: { labels: PRICE_HISTORY.labels, datasets },
         options: {
           responsive: true, maintainAspectRatio: false,
           interaction: { mode: 'nearest', intersect: false },
@@ -567,16 +618,16 @@
           plugins: {
             legend: { display: false },
             tooltip: {
-              backgroundColor: 'rgba(17,23,34,0.96)', titleColor: '#EAEAEA',
-              titleFont: { weight: '600', size: 12 }, bodyColor: '#EAEAEA', bodyFont: { size: 12 },
-              padding: 12, borderColor: 'rgba(91,200,238,0.30)', borderWidth: 1,
-              displayColors: true, boxPadding: 4,
+              backgroundColor: 'rgba(15,21,32,0.97)', titleColor: '#EEF3FA',
+              titleFont: { family: '"IBM Plex Mono", monospace', weight: '600', size: 11 },
+              bodyColor: '#EEF3FA', bodyFont: { family: '"IBM Plex Mono", monospace', size: 11.5 },
+              cornerRadius: 8, caretSize: 6, padding: 12,
+              borderColor: 'rgba(91,200,238,0.30)', borderWidth: 1, displayColors: true, boxPadding: 4,
               callbacks: {
                 title: (items) => 'Dia ' + items[0].label + '/2026',
                 label: (item) => {
                   if (item.parsed.y == null) return null;
-                  const loja = item.dataset.label;
-                  const valor = fmtBRL(item.parsed.y);
+                  const loja = item.dataset.label; const valor = fmtBRL(item.parsed.y);
                   const diff = item.parsed.y - PRICE_HISTORY.menor;
                   if (diff <= 0.5) return `${loja}: ${valor}  · menor preço`;
                   return `${loja}: ${valor}  · ${fmtBRL(diff)} acima do menor`;
@@ -585,30 +636,27 @@
             }
           },
           scales: {
-            x: { grid: { color: 'rgba(234,234,234,0.04)', drawBorder: false }, ticks: { color: 'rgba(234,234,234,0.55)' } },
-            y: {
-              grid: { color: 'rgba(234,234,234,0.05)', drawBorder: false },
-              ticks: { color: 'rgba(234,234,234,0.55)', callback: (v) => 'R$ ' + v.toLocaleString('pt-BR') },
-              suggestedMin: 1980,
-              suggestedMax: 2330
-            }
+            x: { grid: { color: 'rgba(238,243,250,0.04)', drawBorder: false },
+                 ticks: { color: 'rgba(238,243,250,0.45)', maxTicksLimit: 8, maxRotation: 0, font: { family: '"IBM Plex Mono", monospace', size: 10 } } },
+            y: { grid: { color: 'rgba(238,243,250,0.05)', drawBorder: false },
+                 ticks: { color: 'rgba(238,243,250,0.45)', maxTicksLimit: 6, font: { family: '"IBM Plex Mono", monospace', size: 10 }, callback: (v) => 'R$ ' + v.toLocaleString('pt-BR') },
+                 suggestedMin: PRICE_HISTORY.menor - 80, suggestedMax: 2432 }
           }
         },
-        plugins: [minLinePlugin]
+        plugins: [minLinePlugin, crosshairPlugin, ultimoPontoPlugin]
       });
 
+      const STORES = ["shopee", "ml"];
       const chips = document.querySelectorAll('.filter-chip');
-      const updateFilters = () => {
+      const sync = () => {
         const todos = document.querySelector('.filter-chip[data-filter="todos"]');
-        const shop  = document.querySelector('.filter-chip[data-filter="shopee"]');
-        const ml    = document.querySelector('.filter-chip[data-filter="ml"]');
-        const showShop = todos.classList.contains('active') || shop.classList.contains('active');
-        const showMl   = todos.classList.contains('active') || ml.classList.contains('active');
-        chart.setDatasetVisibility(0, showShop);
-        chart.setDatasetVisibility(1, showMl);
+        STORES.forEach((s, i) => {
+          const chip = document.querySelector('.filter-chip[data-filter="' + s + '"]');
+          const show = todos.classList.contains('active') || (chip && chip.classList.contains('active'));
+          chart.setDatasetVisibility(i, show);
+        });
         chart.update();
       };
-
       chips.forEach(chip => {
         chip.addEventListener('click', () => {
           const f = chip.dataset.filter;
@@ -618,23 +666,54 @@
             if (!wasActive) chip.classList.add('active');
           } else {
             chip.classList.toggle('active');
-            const shopActive = document.querySelector('.filter-chip[data-filter="shopee"]').classList.contains('active');
-            const mlActive   = document.querySelector('.filter-chip[data-filter="ml"]').classList.contains('active');
+            const anyStore = STORES.some(s => { const c = document.querySelector('.filter-chip[data-filter="' + s + '"]'); return c && c.classList.contains('active'); });
+            const allStore = STORES.every(s => { const c = document.querySelector('.filter-chip[data-filter="' + s + '"]'); return c && c.classList.contains('active'); });
             const todos = document.querySelector('.filter-chip[data-filter="todos"]');
-            if (!shopActive && !mlActive) {
-              todos.classList.add('active');
-              document.querySelectorAll('.filter-chip').forEach(c => c.classList.add('active'));
-            } else {
-              todos.classList.toggle('active', shopActive && mlActive);
-            }
+            if (!anyStore) { document.querySelectorAll('.filter-chip').forEach(c => c.classList.add('active')); }
+            else { todos.classList.toggle('active', allStore); }
           }
           chips.forEach(c => c.setAttribute('aria-pressed', c.classList.contains('active')));
-          updateFilters();
+          sync();
         });
       });
     }
 
-    window.__initStaticChart = initPriceChart;  // chamado pelo projetor-page.js quando o gráfico entra na viewport (lazy 10/06/2026)
+    window.__initStaticChart = initPriceChart;
+  </script>
+  <script>
+    (function reguaViva() {
+      function fmt(v) { return 'R$ ' + Math.round(v).toLocaleString('pt-BR'); }
+      function run() {
+        try {
+          var card = document.querySelector('.proj-price-card[data-marca][data-modelo]');
+          if (!card || !window.UI2 || !Array.isArray(window.PROJETORES_DATA)) return;
+          var key = UI2.norm(card.dataset.marca) + '|' + UI2.norm(card.dataset.modelo);
+          var p = null;
+          for (var i = 0; i < PROJETORES_DATA.length; i++) {
+            var x = PROJETORES_DATA[i];
+            if (UI2.norm(x.marca) + '|' + UI2.norm(x.modelo) === key) { p = x; break; }
+          }
+          if (!p || !p.preco_atual || !p.preco_min_historico || !p.preco_max_historico) return;
+          var pos = Math.round(UI2.posRegua(p) * 1000) / 10;
+          var fill = card.querySelector('.regua .r-fill');
+          var dot = card.querySelector('.regua .r-dot');
+          if (fill) fill.style.width = pos + '%';
+          if (dot) dot.style.left = pos + '%';
+          var mn = document.getElementById('pjReguaMin');
+          var mx = document.getElementById('pjReguaMax');
+          if (mn) mn.textContent = 'mín ' + fmt(p.preco_min_historico);
+          if (mx) mx.textContent = 'máx ' + fmt(p.preco_max_historico);
+        } catch (e) { /* régua nunca derruba a página */ }
+      }
+      var tries = 0;
+      function espera() {
+        if (window.PRICES_OVERLAY_READY && typeof window.PRICES_OVERLAY_READY.then === 'function') {
+          window.PRICES_OVERLAY_READY.then(run).catch(function () { run(); });
+        } else if (++tries < 60) { setTimeout(espera, 50); } else { run(); }
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', espera);
+      else espera();
+    })();
   </script>
   <!-- overlay-patched-2026-05-14 -->
   <script src="../script.js" defer></script>
@@ -644,7 +723,6 @@
   <script src="../projetor-page.js" defer></script>
   <!-- overlay-timing-fix-2026-05-14 -->
   <!-- chart-history-patched-2026-05-14 -->
-  <!-- Substitui o gráfico hardcoded por dados reais do prices-history.json -->
-  
+
 </body>
 </html>
