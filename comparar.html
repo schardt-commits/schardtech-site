@@ -54,35 +54,68 @@
     .spec-tag { display: inline-flex; font-family: var(--mono); font-size: 10.5px; font-weight: 600; border-radius: 5px; padding: 3px 8px; color: var(--txt-2); background: var(--card-2); border: 1px solid var(--line); }
     .spec-tag.tag-type { color: var(--brand); border-color: var(--brand-borda); background: var(--brand-dim); }
 
+    /* ── keyframes ────────────────────────────── */
+    @keyframes cpIn     { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    @keyframes cpRowIn  { from { opacity: 0; transform: translateY(8px); }  to { opacity: 1; transform: none; } }
+    @keyframes cpFadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes cpPop    { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+    @keyframes cpRadarGrow { from { transform: scale(0.12); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    @keyframes cpRing   { 0% { transform: scale(1); opacity: 0.7; } 70%, 100% { transform: scale(1.55); opacity: 0; } }
+    @keyframes cpVsGlow { 0%, 100% { box-shadow: 0 0 0 0 rgba(91,200,238,0); } 50% { box-shadow: 0 0 18px 2px rgba(91,200,238,0.28); } }
+
     /* ── layout da página ─────────────────────── */
     .cp-selector { border-top: 0; padding: 8px 0 0; }
-    .cp-comparison { border-top: 0; padding: 48px 0 88px; }
+    .cp-comparison { border-top: 0; padding: 44px 0 88px; }
 
-    /* ── SELECTOR (slots) ─────────────────────── */
-    .cp-slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    /* título de bloco (mono + linha, mesmo ritmo do v2) */
+    .cp-sec-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--brand);
+      margin: 0 0 16px;
+    }
+    .cp-sec-title::after { content: ''; height: 1px; flex: 1; background: var(--line); }
+
+    /* ── SELECTOR (slots com thumb + VS) ──────── */
+    .cp-slots { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .cp-slot {
+      --sc: var(--brand);
       background: var(--card);
       border: 1.5px dashed var(--brand-borda);
-      border-radius: var(--radius);
-      min-height: 148px;
+      border-radius: 12px;
+      min-height: 216px;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       cursor: pointer;
-      transition: border-color 150ms, background 150ms;
+      transition: border-color 180ms, background 180ms, transform 180ms;
       padding: 24px;
       text-align: center;
       position: relative;
+      overflow: hidden;
+      animation: cpIn 380ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
     }
-    .cp-slot:hover { border-color: var(--brand); background: var(--brand-dim); }
+    .cp-slot:hover { border-color: var(--brand); background: var(--brand-dim); transform: translateY(-2px); }
     /* Slot vazio é <button> (acessível por teclado): desfaz o estilo de UA */
     button.cp-slot { font: inherit; color: inherit; width: 100%; }
-    .cp-slot.filled { border-style: solid; cursor: default; align-items: stretch; justify-content: flex-start; text-align: left; }
-    .cp-slot.filled:hover { border-color: var(--line); background: var(--card); }
-    .cp-slot[data-slot="0"].filled { border-color: rgba(91,200,238,0.45); }
-    .cp-slot[data-slot="1"].filled { border-color: rgba(246,196,83,0.4); }
-    .cp-slot[data-slot="2"].filled { border-color: rgba(176,122,255,0.4); }
+    .cp-slot.filled {
+      border-style: solid;
+      border-color: var(--sc-soft);
+      cursor: default;
+      align-items: stretch; justify-content: flex-start;
+      text-align: left;
+      padding: 0;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+    }
+    .cp-slot.filled:hover { transform: none; background: var(--card); border-color: var(--sc-soft); }
 
     .cp-slot-add-icon {
-      width: 46px; height: 46px;
+      position: relative;
+      width: 48px; height: 48px;
       border-radius: 50%;
       background: var(--brand-dim);
       border: 1px solid var(--brand-borda);
@@ -92,16 +125,52 @@
       font-size: 1.5rem;
       font-weight: 300;
       line-height: 1;
+      transition: transform 180ms;
+    }
+    .cp-slot:hover .cp-slot-add-icon { transform: scale(1.1); }
+    .cp-slot-add-ring {
+      position: absolute; inset: -1px;
+      border-radius: 50%;
+      border: 1px solid var(--brand);
+      animation: cpRing 2.6s ease-out infinite;
+      pointer-events: none;
     }
     .cp-slot-add-text { font-size: 0.87rem; color: var(--txt-2); font-weight: 600; }
     .cp-slot-add-hint { font-family: var(--mono); font-size: 0.7rem; color: var(--txt-2); opacity: 0.75; margin-top: 5px; }
 
-    .cp-slot-color-bar { height: 3px; position: absolute; top: 0; left: 0; right: 0; border-radius: var(--radius) var(--radius) 0 0; }
-    .cp-slot[data-slot="0"] .cp-slot-color-bar { background: #5BC8EE; }
-    .cp-slot[data-slot="1"] .cp-slot-color-bar { background: #F6C453; }
-    .cp-slot[data-slot="2"] .cp-slot-color-bar { background: #B07AFF; }
+    /* thumb do review no topo do slot preenchido */
+    .cp-slot-media { position: relative; height: 120px; overflow: hidden; flex-shrink: 0; background: var(--card-2); }
+    .cp-slot-media img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      filter: saturate(0.92);
+      transform: scale(1.02);
+      transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .cp-slot.filled:hover .cp-slot-media img { transform: scale(1.07); }
+    .cp-slot-media::after {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--sc), transparent 85%);
+      z-index: 2;
+    }
+    .cp-slot-media-veil {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(17,23,34,0.94) 97%), linear-gradient(90deg, var(--sc-dim), transparent 55%);
+      pointer-events: none;
+    }
+    .cp-slot-media.sem-video { display: flex; align-items: center; justify-content: center; }
+    .cp-slot-media-ini {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--txt-2);
+      opacity: 0.45;
+    }
 
-    .cp-slot-inner { padding-top: 10px; flex: 1; display: flex; flex-direction: column; }
+    .cp-slot-inner { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; }
     .cp-slot-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 14px; }
     .cp-slot-brand {
       font-family: var(--mono);
@@ -157,164 +226,186 @@
       color: var(--txt-2);
       font-size: 1rem;
       flex-shrink: 0;
-      transition: color 150ms, border-color 150ms, background 150ms;
+      transition: color 150ms, border-color 150ms, background 150ms, transform 150ms;
     }
     .cp-slot-remove:hover {
       background: rgba(255,155,122,0.12);
       border-color: rgba(255,155,122,0.4);
       color: var(--alerta);
+      transform: rotate(90deg);
     }
     .cp-slot-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: auto; padding-top: 8px; }
 
-    /* ── MODAL ────────────────────────────────── */
-    .cp-modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.72);
-      z-index: 2000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      backdrop-filter: blur(5px);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 200ms;
-    }
-    .cp-modal-overlay.open { opacity: 1; pointer-events: all; }
-    .cp-modal {
-      background: var(--card-2);
+    /* badge VS entre slots preenchidos */
+    .cp-vs {
+      position: absolute;
+      top: 50%;
+      z-index: 3;
+      width: 34px; height: 34px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      background: var(--bg-2);
       border: 1px solid var(--brand-borda);
+      color: var(--brand);
+      font-family: var(--mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      animation: cpPop 320ms 240ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards, cpVsGlow 3s 700ms ease-in-out infinite;
+    }
+    .cp-vs.v1 { left: calc(33.333% - 3px); }
+    .cp-vs.v2 { left: calc(66.666% + 3px); }
+
+    /* ── PLACAR ───────────────────────────────── */
+    .cp-score {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+    .cp-score-item {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--sc);
+      border-radius: 10px;
+      padding: 16px 18px 18px;
+      animation: cpIn 420ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    }
+    .cp-score-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .cp-score-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--sc); box-shadow: 0 0 10px var(--sc-soft); flex-shrink: 0; }
+    .cp-score-name {
+      flex: 1; min-width: 0;
+      display: flex; flex-direction: column; gap: 1px;
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--txt);
+      line-height: 1.2;
+    }
+    .cp-score-brand { font-family: var(--mono); font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--txt-2); }
+    .cp-score-count { display: flex; align-items: baseline; gap: 6px; flex-shrink: 0; }
+    .cp-score-num { font-family: var(--mono); font-size: 1.55rem; font-weight: 700; color: var(--num); line-height: 1; }
+    .cp-score-cap { font-family: var(--mono); font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--txt-2); }
+    .cp-score-track { display: block; height: 7px; border-radius: 999px; background: var(--card-2); overflow: hidden; position: relative; }
+    .cp-score-fill {
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 0; border-radius: 999px;
+      transition: width 900ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .cp-score-fill::after { content: ''; position: absolute; inset: 0; border-radius: 999px; background: linear-gradient(180deg, rgba(255,255,255,0.22), transparent 55%); }
+
+    /* ── DUELOS DAS MEDIÇÕES ──────────────────── */
+    .cp-duel-wrap { margin-bottom: 40px; }
+    .cp-duel-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .cp-duel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 16px 18px;
+      animation: cpIn 420ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    }
+    .cp-duel-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 13px; }
+    .cp-duel-label { font-family: var(--display); font-weight: 700; font-size: 0.95rem; color: var(--txt); }
+    .cp-duel-note { font-family: var(--mono); font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--txt-2); white-space: nowrap; }
+    .cp-duel-rows { display: flex; flex-direction: column; gap: 9px; }
+    .cp-duel-row {
+      display: grid;
+      grid-template-columns: minmax(84px, 118px) 1fr auto;
+      align-items: center;
+      gap: 10px;
+    }
+    .cp-duel-name { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--txt-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .cp-duel-row.win .cp-duel-name { color: var(--txt); }
+    .cp-duel-bar { display: block; height: 8px; border-radius: 999px; background: var(--card-2); overflow: hidden; position: relative; }
+    .cp-duel-fill {
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 0; border-radius: 999px;
+      transition: width 800ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .cp-duel-fill::after { content: ''; position: absolute; inset: 0; border-radius: 999px; background: linear-gradient(180deg, rgba(255,255,255,0.22), transparent 55%); }
+    .cp-duel-val { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--txt-2); white-space: nowrap; text-align: right; display: inline-flex; align-items: center; gap: 7px; justify-content: flex-end; }
+    .cp-duel-melhor {
+      font-family: var(--mono);
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 4px;
+      border: 1px solid;
+      animation: cpPop 300ms 650ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+    }
+
+    /* ── RADAR ────────────────────────────────── */
+    .cp-radar-card {
+      background: var(--card);
+      border: 1px solid var(--line);
       border-radius: 14px;
-      width: 100%;
-      max-width: 560px;
-      max-height: 82vh;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 24px 80px rgba(0,0,0,0.65);
-      transform: translateY(8px);
-      transition: transform 200ms;
-    }
-    .cp-modal-overlay.open .cp-modal { transform: translateY(0); }
-    .cp-modal-top {
-      padding: 20px 20px 14px;
-      border-bottom: 1px solid var(--line);
-      flex-shrink: 0;
-    }
-    .cp-modal-top-row {
+      padding: 28px 32px;
+      margin-bottom: 40px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin-bottom: 12px;
+      gap: 36px;
+      position: relative;
+      overflow: hidden;
     }
-    .cp-modal-title {
+    .cp-radar-card::before {
+      content: '';
+      position: absolute;
+      left: -60px; top: 50%;
+      width: 380px; height: 380px;
+      transform: translateY(-50%);
+      background: radial-gradient(circle, rgba(91,200,238,0.07), transparent 65%);
+      pointer-events: none;
+    }
+    .cp-radar-svg-wrap { flex-shrink: 0; width: 260px; height: 260px; position: relative; z-index: 1; }
+    .cp-radar-svg-wrap svg { width: 100%; height: 100%; display: block; }
+    .cp-radar-poly {
+      transform-box: view-box;
+      transform-origin: 50% 50%;
+      animation: cpRadarGrow 720ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+      transition: opacity 220ms;
+    }
+    .cp-radar-poly.dim { opacity: 0.12; }
+    .cp-radar-info { flex: 1; min-width: 0; position: relative; z-index: 1; }
+    .cp-radar-info-title {
       font-family: var(--mono);
       font-size: 11px;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       color: var(--txt-2);
+      margin-bottom: 14px;
     }
-    .cp-modal-close {
-      background: none;
-      border: 1px solid transparent;
+    .cp-radar-legend { display: flex; flex-direction: column; gap: 4px; margin-bottom: 16px; }
+    .cp-radar-legend-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 7px 10px;
+      border-radius: 8px;
+      transition: background 150ms;
+      animation: cpIn 400ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    }
+    .cp-radar-legend-item:hover { background: var(--brand-dim); }
+    .cp-radar-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+    .cp-radar-model { font-family: var(--display); font-size: 0.95rem; font-weight: 700; color: var(--txt); }
+    .cp-radar-brand { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--txt-2); }
+    .cp-radar-axes-note {
+      font-size: 0.72rem;
       color: var(--txt-2);
-      font-size: 1.25rem;
-      cursor: pointer;
-      padding: 2px 8px;
-      border-radius: 6px;
-      line-height: 1;
-      transition: color 150ms, background 150ms, border-color 150ms;
-      font-family: inherit;
-      flex-shrink: 0;
+      line-height: 1.6;
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
     }
-    .cp-modal-close:hover {
-      color: var(--txt);
-      background: var(--card);
-      border-color: var(--line);
-    }
-    .cp-search-input {
-      width: 100%;
-      height: 44px;
-      background: var(--bg);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 0 14px;
-      color: var(--txt);
-      font-family: var(--mono);
-      font-size: 13px;
-      outline: none;
-      transition: border-color 150ms;
-    }
-    .cp-search-input:focus { border-color: var(--brand); }
-    .cp-search-input::placeholder { color: var(--txt-2); }
-    .cp-modal-brands {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      padding: 12px 20px 4px;
-      flex-shrink: 0;
-    }
-    .cp-brand-pill {
-      padding: 5px 12px;
-      border-radius: 999px;
-      font-family: var(--mono);
-      font-size: 10.5px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      background: var(--card);
-      border: 1px solid var(--line);
-      color: var(--txt-2);
-      cursor: pointer;
-      transition: color 150ms, border-color 150ms, background 150ms;
-    }
-    .cp-brand-pill:hover { color: var(--txt); border-color: var(--brand); }
-    .cp-brand-pill.active { color: #08222E; background: var(--brand); border-color: var(--brand); }
-    .cp-modal-list {
-      overflow-y: auto;
-      flex: 1;
-      padding: 6px 10px 14px;
-    }
-    .cp-modal-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 11px 12px;
-      border-radius: var(--radius);
-      cursor: pointer;
-      transition: background 150ms, border-color 150ms;
-      border: 1px solid transparent;
-      gap: 12px;
-    }
-    .cp-modal-item:hover { background: var(--brand-dim); border-color: var(--line); }
-    .cp-modal-item.already-selected { opacity: 0.35; cursor: not-allowed; pointer-events: none; }
-    .cp-modal-item-name { font-size: 0.9rem; font-weight: 600; color: var(--txt); }
-    .cp-modal-item-sub { font-family: var(--mono); font-size: 11px; color: var(--txt-2); margin-top: 2px; }
-    .cp-modal-item-price { font-family: var(--mono); font-size: 12.5px; font-weight: 700; color: var(--num); white-space: nowrap; flex-shrink: 0; }
-    .cp-modal-empty { text-align: center; padding: 36px 24px; color: var(--txt-2); font-family: var(--mono); font-size: 12px; }
-    .cp-modal-clear-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 7px 18px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: none;
-      color: var(--brand);
-      font-family: var(--mono);
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      cursor: pointer;
-      transition: border-color 150ms, background 150ms;
-    }
-    .cp-modal-clear-btn:hover { border-color: var(--brand); background: var(--brand-dim); }
+    .cp-radar-axes-note strong { color: var(--txt); }
 
     /* ── CONTROLES ────────────────────────────── */
     .cp-controls {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 32px;
+      margin-bottom: 18px;
       flex-wrap: wrap;
       gap: 12px;
     }
@@ -341,43 +432,6 @@
     .cp-ctrl-btn.active { color: #08222E; background: var(--brand); border-color: var(--brand); }
     .cp-share-btn { color: var(--brand); border-color: var(--brand-borda); }
     .cp-share-btn:hover { background: var(--brand-dim); border-color: var(--brand); }
-
-    /* ── RADAR ────────────────────────────────── */
-    .cp-radar-card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 28px 32px;
-      margin-bottom: 28px;
-      display: flex;
-      align-items: center;
-      gap: 36px;
-    }
-    .cp-radar-svg-wrap { flex-shrink: 0; width: 260px; height: 260px; }
-    .cp-radar-svg-wrap svg { width: 100%; height: 100%; display: block; }
-    .cp-radar-info { flex: 1; min-width: 0; }
-    .cp-radar-info-title {
-      font-family: var(--mono);
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--txt-2);
-      margin-bottom: 18px;
-    }
-    .cp-radar-legend { display: flex; flex-direction: column; gap: 11px; margin-bottom: 20px; }
-    .cp-radar-legend-item { display: flex; align-items: flex-start; gap: 10px; }
-    .cp-radar-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
-    .cp-radar-model { font-family: var(--display); font-size: 0.95rem; font-weight: 700; color: var(--txt); }
-    .cp-radar-brand { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--txt-2); }
-    .cp-radar-axes-note {
-      font-size: 0.72rem;
-      color: var(--txt-2);
-      line-height: 1.6;
-      border-top: 1px solid var(--line);
-      padding-top: 14px;
-    }
-    .cp-radar-axes-note strong { color: var(--txt); }
 
     /* ── TABELA ───────────────────────────────── */
     .cp-table-wrap {
@@ -429,19 +483,15 @@
     .cp-th-top-bar { height: 3px; margin: -10px -18px 6px; }
     .cp-th-brand { font-family: var(--mono); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--txt-2); }
     .cp-th-model { font-family: var(--display); font-size: 0.98rem; font-weight: 700; color: var(--txt); margin-top: 3px; line-height: 1.2; letter-spacing: -0.01em; }
-    .cp-th-wins-badge {
-      display: inline-block;
-      margin-top: 5px;
-      font-family: var(--mono);
-      font-size: 10px;
-      font-weight: 700;
-      padding: 3px 9px;
-      border-radius: 999px;
-    }
 
-    /* Linhas de seção: sticky abaixo do thead dos projetores */
+    /* cascata: linhas entram em sequência a cada render */
+    .cp-table tbody tr { animation: cpRowIn 440ms cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+    .cp-table tbody tr.cp-tr-section { animation-name: cpFadeIn; }
+
+    /* Linhas de seção: sticky abaixo do thead + numeração corrida */
+    .cp-table tbody { counter-reset: cpsec; }
     .cp-tr-section td {
-      padding: 8px 16px;
+      padding: 9px 16px;
       font-family: var(--mono);
       font-size: 10.5px;
       font-weight: 700;
@@ -453,6 +503,13 @@
       position: sticky;
       top: calc(var(--cp-header-h, 64px) + var(--cp-thead-h, 70px));
       z-index: 9;
+    }
+    .cp-tr-section td::before {
+      counter-increment: cpsec;
+      content: counter(cpsec, decimal-leading-zero);
+      color: var(--brand);
+      opacity: 0.5;
+      margin-right: 10px;
     }
 
     /* Linhas de dados: borda nos <td>. Com border-collapse:separate, borda em <tr> não pinta */
@@ -526,6 +583,7 @@
       padding: 1px 6px;
       margin-left: 6px;
       vertical-align: middle;
+      animation: cpPop 280ms 300ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
     }
     .cp-bool-yes { color: var(--brand); font-weight: 700; }
     .cp-bool-no { color: var(--txt-2); opacity: 0.6; }
@@ -574,20 +632,7 @@
     .cp-calc-unit { font-family: var(--mono); font-size: 10.5px; color: var(--txt-2); }
 
     /* ── ONDE COMPRAR ─────────────────────────── */
-    .cp-purchase-wrap { margin-top: 36px; }
-    .cp-purchase-title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: var(--mono);
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--brand);
-      margin-bottom: 16px;
-    }
-    .cp-purchase-title::after { content: ''; height: 1px; flex: 1; background: var(--line); }
+    .cp-purchase-wrap { margin-top: 44px; }
     .cp-purchase-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -599,7 +644,10 @@
       border-radius: var(--radius);
       padding: 22px 22px 20px;
       border-top-width: 3px;
+      animation: cpIn 460ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+      transition: transform 180ms, border-color 180ms, box-shadow 180ms;
     }
+    .cp-pcard:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0,0,0,0.35); }
     .cp-pcard[data-slot="0"] { border-top-color: #5BC8EE; }
     .cp-pcard[data-slot="1"] { border-top-color: #F6C453; }
     .cp-pcard[data-slot="2"] { border-top-color: #B07AFF; }
@@ -726,7 +774,8 @@
     .cp-store-btn:hover { filter: brightness(1.08); }
     .cp-store-btn:active { transform: translateY(2px); }
     .cp-store-name { display: inline-flex; align-items: center; justify-content: center; gap: 6px; flex: 1; }
-    .cp-ext-icon { flex-shrink: 0; opacity: 0.65; }
+    .cp-ext-icon { flex-shrink: 0; opacity: 0.65; transition: transform 150ms, opacity 150ms; }
+    .cp-store-btn:hover .cp-ext-icon { transform: translate(2px, -2px); opacity: 1; }
     /* cupom (Ali-only): chip tracejado ciano do v2 */
     .cp-cupom {
       display: flex;
@@ -777,6 +826,158 @@
     }
     .cp-review-btn:hover { border-color: var(--brand); color: var(--brand); }
     .cp-no-links { font-family: var(--mono); font-size: 11.5px; color: var(--txt-2); }
+
+    /* ── MODAL ────────────────────────────────── */
+    .cp-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.72);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(5px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 200ms;
+    }
+    .cp-modal-overlay.open { opacity: 1; pointer-events: all; }
+    .cp-modal {
+      background: var(--card-2);
+      border: 1px solid var(--brand-borda);
+      border-radius: 14px;
+      width: 100%;
+      max-width: 560px;
+      max-height: 82vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.65);
+      transform: translateY(16px) scale(0.97);
+      transition: transform 280ms cubic-bezier(0.34, 1.4, 0.64, 1);
+    }
+    .cp-modal-overlay.open .cp-modal { transform: translateY(0) scale(1); }
+    .cp-modal-top {
+      padding: 20px 20px 14px;
+      border-bottom: 1px solid var(--line);
+      flex-shrink: 0;
+    }
+    .cp-modal-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .cp-modal-title {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--txt-2);
+    }
+    .cp-modal-close {
+      background: none;
+      border: 1px solid transparent;
+      color: var(--txt-2);
+      font-size: 1.25rem;
+      cursor: pointer;
+      padding: 2px 8px;
+      border-radius: 6px;
+      line-height: 1;
+      transition: color 150ms, background 150ms, border-color 150ms;
+      font-family: inherit;
+      flex-shrink: 0;
+    }
+    .cp-modal-close:hover {
+      color: var(--txt);
+      background: var(--card);
+      border-color: var(--line);
+    }
+    .cp-search-input {
+      width: 100%;
+      height: 44px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 0 14px;
+      color: var(--txt);
+      font-family: var(--mono);
+      font-size: 13px;
+      outline: none;
+      transition: border-color 150ms;
+    }
+    .cp-search-input:focus { border-color: var(--brand); }
+    .cp-search-input::placeholder { color: var(--txt-2); }
+    .cp-modal-brands {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 12px 20px 4px;
+      flex-shrink: 0;
+    }
+    .cp-brand-pill {
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      background: var(--card);
+      border: 1px solid var(--line);
+      color: var(--txt-2);
+      cursor: pointer;
+      transition: color 150ms, border-color 150ms, background 150ms;
+    }
+    .cp-brand-pill:hover { color: var(--txt); border-color: var(--brand); }
+    .cp-brand-pill.active { color: #08222E; background: var(--brand); border-color: var(--brand); }
+    .cp-modal-list {
+      overflow-y: auto;
+      flex: 1;
+      padding: 6px 10px 14px;
+    }
+    .cp-modal-item {
+      display: flex;
+      align-items: center;
+      padding: 9px 12px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 150ms, border-color 150ms, transform 150ms;
+      border: 1px solid transparent;
+      gap: 12px;
+    }
+    .cp-modal-item:hover { background: var(--brand-dim); border-color: var(--line); transform: translateX(3px); }
+    .cp-modal-item.already-selected { opacity: 0.35; cursor: not-allowed; pointer-events: none; }
+    .cp-modal-thumb {
+      width: 56px; height: 42px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+      background: var(--card);
+      border: 1px solid var(--line);
+    }
+    span.cp-modal-thumb { display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 700; font-size: 0.95rem; color: var(--txt-2); opacity: 0.7; }
+    .cp-modal-item-info { flex: 1; min-width: 0; }
+    .cp-modal-item-name { font-size: 0.9rem; font-weight: 600; color: var(--txt); }
+    .cp-modal-item-sub { font-family: var(--mono); font-size: 11px; color: var(--txt-2); margin-top: 2px; }
+    .cp-modal-item-price { font-family: var(--mono); font-size: 12.5px; font-weight: 700; color: var(--num); white-space: nowrap; flex-shrink: 0; }
+    .cp-modal-empty { text-align: center; padding: 36px 24px; color: var(--txt-2); font-family: var(--mono); font-size: 12px; }
+    .cp-modal-clear-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 7px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: none;
+      color: var(--brand);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: border-color 150ms, background 150ms;
+    }
+    .cp-modal-clear-btn:hover { border-color: var(--brand); background: var(--brand-dim); }
 
     /* ── cue de scroll horizontal da tabela ───── */
     .cp-scroll-hint { display: none; }
@@ -837,11 +1038,14 @@
     /* ── RESPONSIVO ───────────────────────────── */
     @media (max-width: 900px) {
       .cp-slots { grid-template-columns: repeat(2, 1fr); }
+      .cp-vs { display: none; }
+      .cp-duel-grid { grid-template-columns: 1fr; }
       .cp-radar-card { flex-direction: column; gap: 20px; padding: 24px 20px; }
       .cp-radar-svg-wrap { width: 100%; max-width: 220px; height: auto; aspect-ratio: 1; margin: 0 auto; }
     }
     @media (max-width: 640px) {
       .cp-slots { grid-template-columns: 1fr; }
+      .cp-slot { min-height: 176px; }
       .cp-controls { flex-direction: column; align-items: stretch; }
       .cp-ctrl-btn, .cp-share-btn { justify-content: center; width: 100%; }
       .cp-radar-svg-wrap { max-width: 200px; }
@@ -865,19 +1069,24 @@
       .cp-th-top-bar { margin: -10px -8px 6px; }
       .cp-th-brand { font-size: 9px; }
       .cp-th-model { font-size: 0.86rem; }
-      .cp-th-wins-badge {
-        font-size: 9px;
-        padding: 2px 6px;
-        line-height: 1.35;
-        white-space: normal;
-      }
       .cp-td-val {
         padding: 11px 7px;
         font-size: 12px;
         word-break: break-word;
         overflow-wrap: break-word;
       }
+      .cp-duel-row { grid-template-columns: minmax(70px, 92px) 1fr auto; gap: 8px; }
       .cp-modal { max-width: 100%; }
+    }
+
+    /* ── movimento reduzido: tudo estático ────── */
+    @media (prefers-reduced-motion: reduce) {
+      .cp-slot, .cp-score-item, .cp-duel, .cp-pcard,
+      .cp-table tbody tr, .cp-radar-poly, .cp-radar-legend-item,
+      .cp-vs, .win-badge, .cp-duel-melhor { animation: none !important; }
+      .cp-slot-add-ring { display: none; }
+      .cp-minibar-fill, .cp-duel-fill, .cp-score-fill { transition: none; }
+      .cp-slot-media img, .cp-modal-item, .cp-slot-remove { transition: none; transform: none; }
     }
   </style>
 </head>
@@ -940,17 +1149,14 @@
   <section class="cp-comparison sem-borda" id="compSection" style="display:none">
     <div class="wrap">
 
-      <div class="cp-controls">
-        <div class="cp-controls-left">
-          <button class="cp-ctrl-btn" id="toggleDiffBtn" onclick="toggleDiff()">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
-            Mostrar só diferenças
-          </button>
-        </div>
-        <button class="cp-share-btn" onclick="shareUrl()">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-          Copiar link
-        </button>
+      <!-- Placar (specs em que cada um vence) -->
+      <div class="cp-sec-title">Placar</div>
+      <div class="cp-score" id="scoreBoard"></div>
+
+      <!-- Duelos das medições da bancada -->
+      <div class="cp-duel-wrap" id="duelWrap">
+        <div class="cp-sec-title">Medições da bancada</div>
+        <div class="cp-duel-grid" id="duelGrid"></div>
       </div>
 
       <!-- Radar chart -->
@@ -969,6 +1175,19 @@
       </div>
 
       <!-- Comparison table -->
+      <div class="cp-sec-title">Ficha técnica completa</div>
+      <div class="cp-controls">
+        <div class="cp-controls-left">
+          <button class="cp-ctrl-btn" id="toggleDiffBtn" onclick="toggleDiff()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+            Mostrar só diferenças
+          </button>
+        </div>
+        <button class="cp-share-btn" onclick="shareUrl()">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Copiar link
+        </button>
+      </div>
       <div class="cp-scroll-hint" id="cpScrollHint" aria-hidden="true">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3L4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4"/></svg>
         Arraste a tabela para o lado
@@ -981,7 +1200,7 @@
 
       <!-- Purchase section -->
       <div class="cp-purchase-wrap">
-        <div class="cp-purchase-title">Onde comprar</div>
+        <div class="cp-sec-title">Onde comprar</div>
         <div class="cp-purchase-grid" id="purchaseGrid"></div>
       </div>
 
@@ -1051,7 +1270,7 @@
   <script src="prices-overlay.js" defer></script>
   <script src="ui-interacoes.js" defer></script>
   <script>
-  /* Comparador (reskin v2, Etapa B1). Tudo dentro do DOMContentLoaded: os
+  /* Comparador (redesign "arena", 14/07). Tudo dentro do DOMContentLoaded: os
      <script defer> acima (dados + overlay + UI2) já executaram quando ele
      dispara; o que depende de preço espera window.PRICES_OVERLAY_READY.
      Header/menu/busca/barra de quedas são do ui-interacoes.js. */
@@ -1068,6 +1287,7 @@
     let calcDist     = null;
 
     const DATA = window.PROJETORES_DATA || [];
+    const MOTION_OK = !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
 
     /* ═══════════════════════════════════════════
        HELPERS
@@ -1216,10 +1436,6 @@
       return faixa ? `<div class="cp-pcard-price">Faixa: <strong>${faixa}</strong></div>` : '';
     }
 
-    function hexRgb(h) {
-      return [parseInt(h.slice(1,3),16), parseInt(h.slice(3,5),16), parseInt(h.slice(5,7),16)].join(',');
-    }
-
     function escAttr(s) {
       return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
     }
@@ -1227,6 +1443,26 @@
     function safeUrl(url) {
       if (!url || typeof url !== 'string') return null;
       return /^https?:\/\//i.test(url.trim()) ? url.trim() : null;
+    }
+
+    /* vars de cor do slot: --sc sólida + variantes com alpha (hex de 8 dígitos) */
+    function accentVars(c) {
+      return `--sc:${c};--sc-soft:${c}66;--sc-dim:${c}1f`;
+    }
+
+    /* barras (tabela/duelos/placar) crescem do zero em cascata a cada render */
+    function animateFills(root) {
+      if (!root) return;
+      const fills = root.querySelectorAll('.cp-minibar-fill[data-w], .cp-duel-fill[data-w], .cp-score-fill[data-w]');
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        let k = 0;
+        fills.forEach(f => {
+          if (f.offsetParent === null) { f.style.width = f.getAttribute('data-w') + '%'; return; }
+          f.style.transitionDelay = Math.min(k++, 14) * 45 + 'ms';
+          f.style.width = f.getAttribute('data-w') + '%';
+        });
+        setTimeout(() => fills.forEach(f => { f.style.transitionDelay = ''; }), 14 * 45 + 950);
+      }));
     }
 
     /* ═══════════════════════════════════════════
@@ -1281,7 +1517,7 @@
         svg += `<text x="${x.toFixed(2)}" y="${y.toFixed(2)}" text-anchor="middle" dominant-baseline="middle" fill="#8D9CB2" font-size="11" font-family="Inter,sans-serif" font-weight="600">${LABELS[i]}</text>`;
       }
 
-      /* projector polygons */
+      /* projector polygons: cada um num <g> que cresce do centro em cascata */
       projs.forEach((p, pi) => {
         const scores = radarScores(p);
         const pts = scores.map((s,i) => {
@@ -1289,18 +1525,21 @@
           return `${x.toFixed(2)},${y.toFixed(2)}`;
         }).join(' ');
         const c = COLORS[pi];
-        svg += `<polygon points="${pts}" fill="${c}" fill-opacity="0.13" stroke="${c}" stroke-width="2" stroke-linejoin="round"/>`;
+        let g = `<g class="cp-radar-poly" data-pi="${pi}" style="animation-delay:${120 + pi*130}ms">`;
+        g += `<polygon points="${pts}" fill="${c}" fill-opacity="0.13" stroke="${c}" stroke-width="2" stroke-linejoin="round"/>`;
         scores.forEach((s,i) => {
           const [x,y] = pt(i, Math.max(s,0.04)*R);
-          svg += `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="3.5" fill="${c}"/>`;
+          g += `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="3.5" fill="${c}"/>`;
         });
+        g += '</g>';
+        svg += g;
       });
 
       document.getElementById('radarSvg').innerHTML = svg;
 
       document.getElementById('radarLegend').innerHTML = projs.map((p,pi) => `
-        <div class="cp-radar-legend-item">
-          <div class="cp-radar-dot" style="background:${COLORS[pi]}"></div>
+        <div class="cp-radar-legend-item" data-pi="${pi}" style="animation-delay:${180 + pi*130}ms">
+          <div class="cp-radar-dot" style="background:${COLORS[pi]};box-shadow:0 0 10px ${COLORS[pi]}66"></div>
           <div>
             <div class="cp-radar-model">${p.modelo}</div>
             <div class="cp-radar-brand">${p.marca}</div>
@@ -1327,6 +1566,15 @@
       if (valid.every(n => n === valid[0])) return vals.map(() => false);
       const best = dir === 'low' ? Math.min(...valid) : Math.max(...valid);
       return nums.map(n => n !== null && !isNaN(n) && n === best);
+    }
+
+    function computeWins(projs, rows) {
+      const wins = new Array(projs.length).fill(0);
+      rows.forEach(r => {
+        if (r.type || r.dir === 'none') return;
+        getWinners(r.vals, r.dir).forEach((w,i) => { if(w) wins[i]++; });
+      });
+      return wins;
     }
 
     /* ═══════════════════════════════════════════
@@ -1517,33 +1765,88 @@
     addEventListener('resize', syncStickyOffsets);
 
     /* ═══════════════════════════════════════════
+       PLACAR (specs em que cada um vence)
+    ═══════════════════════════════════════════ */
+    function renderScore(projs, rows) {
+      const wins = computeWins(projs, rows);
+      const mx = Math.max.apply(null, wins.concat([1]));
+      document.getElementById('scoreBoard').innerHTML = projs.map((p,i) => {
+        const c = COLORS[i];
+        const w = wins[i] ? Math.max(6, Math.round(wins[i] / mx * 100)) : 0;
+        return `<div class="cp-score-item" style="${accentVars(c)};animation-delay:${i*90}ms">
+          <div class="cp-score-head">
+            <span class="cp-score-dot"></span>
+            <span class="cp-score-name"><span class="cp-score-brand">${escAttr(p.marca)}</span>${escAttr(p.modelo)}</span>
+            <span class="cp-score-count"><span class="cp-score-num" data-alvo="${wins[i]}">0</span><span class="cp-score-cap">specs vencidas</span></span>
+          </div>
+          <span class="cp-score-track"><span class="cp-score-fill" data-w="${w}" style="background:linear-gradient(90deg,${c}55,${c});box-shadow:0 0 12px ${c}40"></span></span>
+        </div>`;
+      }).join('');
+      const board = document.getElementById('scoreBoard');
+      if (window.UI2 && UI2.animaContadores) UI2.animaContadores(board);
+      animateFills(board);
+    }
+
+    /* ═══════════════════════════════════════════
+       DUELOS DAS MEDIÇÕES (barras lado a lado)
+    ═══════════════════════════════════════════ */
+    const DUEL_DEFS = [
+      { label:'Brilho ANSI',       note:'maior vence', dir:'high', val:p=>p.brilho_ansi||null,           fmt:v=>`${v} ANSI` },
+      { label:'Input lag',         note:'menor vence', dir:'low',  val:p=>p.input_lag_ms||null,          fmt:v=>`${v} ms` },
+      { label:'Potência de áudio', note:'maior vence', dir:'high', val:p=>parseAudioTotal(p.audio_w)||null, fmt:v=>`${Number.isInteger(v)?v:v.toFixed(1)} W` },
+      { label:'Consumo',           note:'menor vence', dir:'low',  val:p=>p.consumo_w||null,             fmt:v=>`${v} W` },
+    ];
+
+    function renderDuels(projs) {
+      let idx = 0;
+      const cards = [];
+      DUEL_DEFS.forEach(d => {
+        const nums = projs.map(p => {
+          const v = d.val(p);
+          return (typeof v === 'number' && isFinite(v) && v > 0) ? v : null;
+        });
+        const valid = nums.filter(v => v !== null);
+        if (valid.length < 2) return;
+        const mx = Math.max(...valid);
+        const best = d.dir === 'low' ? Math.min(...valid) : mx;
+        const empate = valid.every(n => n === valid[0]);
+        const rowsHtml = projs.map((p, i) => {
+          const v = nums[i], c = COLORS[i];
+          if (v === null) return `<div class="cp-duel-row"><span class="cp-duel-name">${escAttr(p.modelo)}</span><span class="cp-duel-bar"></span><span class="cp-duel-val val-dash">sem dado</span></div>`;
+          const w = Math.max(6, Math.round(v / mx * 100));
+          const win = !empate && v === best;
+          const chip = win ? `<span class="cp-duel-melhor" style="color:${c};border-color:${c}55;background:${c}14">melhor</span>` : '';
+          return `<div class="cp-duel-row${win ? ' win' : ''}">
+            <span class="cp-duel-name">${escAttr(p.modelo)}</span>
+            <span class="cp-duel-bar"><span class="cp-duel-fill" data-w="${w}" style="background:linear-gradient(90deg,${c}55,${c});box-shadow:0 0 12px ${c}40"></span></span>
+            <span class="cp-duel-val"${win ? ` style="color:${c}"` : ''}>${chip}${d.fmt(v)}</span>
+          </div>`;
+        }).join('');
+        cards.push(`<div class="cp-duel" style="animation-delay:${idx++ * 80}ms">
+          <div class="cp-duel-head"><span class="cp-duel-label">${d.label}</span><span class="cp-duel-note">${d.note}</span></div>
+          <div class="cp-duel-rows">${rowsHtml}</div>
+        </div>`);
+      });
+      const wrapEl = document.getElementById('duelWrap');
+      wrapEl.style.display = cards.length ? '' : 'none';
+      document.getElementById('duelGrid').innerHTML = cards.join('');
+      animateFills(document.getElementById('duelGrid'));
+    }
+
+    /* ═══════════════════════════════════════════
        TABLE RENDER
     ═══════════════════════════════════════════ */
-    function renderTable() {
-      const projs = selected.filter(Boolean);
+    function renderTable(projs, rows) {
       const n = projs.length;
-      const rows = buildRows(projs);
 
-      /* count wins */
-      const wins = new Array(n).fill(0);
-      rows.forEach(r => {
-        if (r.type || r.dir === 'none') return;
-        getWinners(r.vals, r.dir).forEach((w,i) => { if(w) wins[i]++; });
-      });
-
-      /* header */
+      /* header (o placar de vitórias vive no bloco Placar) */
       let html = `<caption>Comparação técnica entre ${n} ${n>1?'projetores':'projetor'} selecionado${n>1?'s':''}</caption><thead class="cp-thead"><tr>
         <th class="cp-th-corner" scope="col"><span class="sr-only">Especificação</span></th>
-        ${projs.map((p,i) => {
-          const c = COLORS[i];
-          const rgb = hexRgb(c);
-          return `<th class="cp-th-col" scope="col">
-            <div class="cp-th-top-bar" style="background:${c}"></div>
+        ${projs.map((p,i) => `<th class="cp-th-col" scope="col">
+            <div class="cp-th-top-bar" style="background:${COLORS[i]}"></div>
             <div class="cp-th-brand">${escAttr(p.marca)}</div>
             <div class="cp-th-model">${escAttr(p.modelo)}</div>
-            ${wins[i]>0 ? `<span class="cp-th-wins-badge" style="background:rgba(${rgb},0.12);color:${c};border:1px solid rgba(${rgb},0.3)">Melhor em ${wins[i]} spec${wins[i]>1?'s':''}</span>` : ''}
-          </th>`;
-        }).join('')}
+          </th>`).join('')}
       </tr></thead>`;
 
       /* body */
@@ -1624,17 +1927,20 @@
       });
 
       html += '</tbody>';
-      document.getElementById('compTable').innerHTML = html;
+      const tableEl = document.getElementById('compTable');
+      tableEl.innerHTML = html;
 
-      /* minibarras crescem do zero a cada render (2 frames pra transição pegar) */
-      const fills = document.querySelectorAll('#compTable .cp-minibar-fill[data-w]');
-      requestAnimationFrame(() => requestAnimationFrame(() => {
-        fills.forEach((f, i) => {
-          f.style.transitionDelay = Math.min(i, 12) * 40 + 'ms';
-          f.style.width = f.getAttribute('data-w') + '%';
+      /* cascata: cada linha visível entra com um pequeno atraso */
+      if (MOTION_OK) {
+        let d = 0;
+        tableEl.querySelectorAll('tbody tr').forEach(tr => {
+          if (tr.classList.contains('diff-hidden')) return;
+          tr.style.animationDelay = Math.min(d++ * 24, 500) + 'ms';
         });
-        setTimeout(() => fills.forEach(f => { f.style.transitionDelay = ''; }), 12 * 40 + 900);
-      }));
+      }
+
+      /* minibarras crescem do zero a cada render */
+      animateFills(tableEl);
 
       /* offsets sticky com medidas REAIS: o header muda de altura conforme o
          viewport, e o thead muda com fonte/badges — medir uma vez em 64px
@@ -1666,7 +1972,7 @@
     /* ═══════════════════════════════════════════
        DIFF MODE TOGGLE
     ═══════════════════════════════════════════ */
-    function applyDiff() {
+    function applyDiff(reanima) {
       const btn = document.getElementById('toggleDiffBtn');
       btn.classList.toggle('active', showOnlyDiff);
       btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
@@ -1683,11 +1989,21 @@
         const same = nonNull.length>1 && nonNull.every(t=>t===nonNull[0]);
         tr.classList.toggle('diff-hidden', showOnlyDiff && same);
       });
+
+      /* regra de gosto: interação re-anima as barras do zero */
+      if (reanima) {
+        const tbl = document.getElementById('compTable');
+        const fills = tbl.querySelectorAll('.cp-minibar-fill[data-w]');
+        fills.forEach(f => { f.style.transition = 'none'; f.style.width = '0'; });
+        void tbl.offsetWidth;
+        fills.forEach(f => { f.style.transition = ''; });
+        animateFills(tbl);
+      }
     }
 
     function toggleDiff() {
       showOnlyDiff = !showOnlyDiff;
-      applyDiff();
+      applyDiff(true);
     }
 
     /* ═══════════════════════════════════════════
@@ -1721,7 +2037,7 @@
           : `<div class="cp-pcard-brand">${escAttr(p.marca)}</div>
              <div class="cp-pcard-model">${escAttr(p.modelo)}</div>`;
 
-        return `<div class="cp-pcard" data-slot="${i}">
+        return `<div class="cp-pcard" data-slot="${i}" style="animation-delay:${i*90}ms">
           ${nameBlock}
           ${priceBlock}
           <div class="cp-store-btns">
@@ -1748,17 +2064,21 @@
     ═══════════════════════════════════════════ */
     function renderSlots() {
       const hints = ['Comece aqui', 'Segundo modelo', 'Terceiro (opcional)'];
-      document.getElementById('slotsContainer').innerHTML = selected.map((p,i) => {
+      const cards = selected.map((p,i) => {
+        const c = COLORS[i];
         if (!p) return `
-          <button type="button" class="cp-slot" data-slot="${i}" onclick="openModal(${i})">
-            <span class="cp-slot-add-icon">+</span>
+          <button type="button" class="cp-slot" data-slot="${i}" style="${accentVars(c)};animation-delay:${i*70}ms" onclick="openModal(${i})">
+            <span class="cp-slot-add-icon"><span class="cp-slot-add-ring"></span>+</span>
             <span class="cp-slot-add-text">Adicionar projetor</span>
             <span class="cp-slot-add-hint">${hints[i]}</span>
           </button>`;
-        const price = fmtPrice(p.preco_atual || p.preco_min, null);
+        const yid = (window.UI2 && UI2.ytId) ? UI2.ytId(p.video_url) : null;
+        const media = yid
+          ? `<div class="cp-slot-media"><img loading="lazy" src="https://i.ytimg.com/vi/${yid}/hqdefault.jpg" alt="${escAttr(p.marca)} ${escAttr(p.modelo)} testado no canal SchardTech"><span class="cp-slot-media-veil"></span></div>`
+          : `<div class="cp-slot-media sem-video"><span class="cp-slot-media-ini">${escAttr(p.marca)}</span><span class="cp-slot-media-veil"></span></div>`;
         return `
-          <div class="cp-slot filled" data-slot="${i}">
-            <div class="cp-slot-color-bar"></div>
+          <div class="cp-slot filled" data-slot="${i}" style="${accentVars(c)};animation-delay:${i*70}ms">
+            ${media}
             <div class="cp-slot-inner">
               <div class="cp-slot-top">
                 ${p.slug
@@ -1772,17 +2092,20 @@
                       <div class="cp-slot-model">${p.modelo}</div>
                     </div>`
                 }
-                <button class="cp-slot-remove" onclick="event.stopPropagation();removeProj(${i})" title="Remover">×</button>
+                <button class="cp-slot-remove" onclick="event.stopPropagation();removeProj(${i})" title="Remover" aria-label="Remover ${escAttr(p.modelo)} da comparação">×</button>
               </div>
               <div class="cp-slot-tags">
                 <span class="spec-tag tag-type">${p.tecnologia}</span>
                 <span class="spec-tag">${p.resolucao_nativa}</span>
                 ${p.brilho_ansi ? `<span class="spec-tag">${p.brilho_ansi} ANSI</span>` : ''}
-                ${price ? `<span class="spec-tag" style="color:var(--num)">${price}</span>` : ''}
               </div>
             </div>
           </div>`;
       }).join('');
+      /* badge VS entre slots adjacentes preenchidos */
+      const vs = (selected[0] && selected[1] ? '<span class="cp-vs v1" aria-hidden="true">VS</span>' : '') +
+                 (selected[1] && selected[2] ? '<span class="cp-vs v2" aria-hidden="true">VS</span>' : '');
+      document.getElementById('slotsContainer').innerHTML = cards + vs;
     }
 
     function removeProj(slot) {
@@ -1854,8 +2177,13 @@
       list.innerHTML = filtered.map(p => {
         const already = taken.includes(p.modelo);
         const price   = fmtPrice(p.preco_atual || p.preco_min, null);
+        const yid     = (window.UI2 && UI2.ytId) ? UI2.ytId(p.video_url) : null;
+        const thumb   = yid
+          ? `<img class="cp-modal-thumb" loading="lazy" src="https://i.ytimg.com/vi/${yid}/default.jpg" alt="" aria-hidden="true">`
+          : `<span class="cp-modal-thumb" aria-hidden="true">${escAttr(String(p.marca||'?').charAt(0))}</span>`;
         return `<div class="cp-modal-item${already?' already-selected':''}" data-modelo="${escAttr(p.modelo)}"${already ? '' : ' role="button" tabindex="0"'}>
-          <div>
+          ${thumb}
+          <div class="cp-modal-item-info">
             <div class="cp-modal-item-name">${escAttr(p.marca)} ${escAttr(p.modelo)}</div>
             <div class="cp-modal-item-sub">${escAttr(p.tecnologia)} · ${escAttr(p.resolucao_nativa)}${p.brilho_ansi?' · '+p.brilho_ansi+' ANSI':''}</div>
           </div>
@@ -1930,10 +2258,13 @@
       if (active.length >= 2) {
         const wasHidden = section.style.display !== 'block';
         section.style.display = 'block';
+        const rows = buildRows(active);
+        renderScore(active, rows);
+        renderDuels(active);
         renderRadar();
-        renderTable();
+        renderTable(active, rows);
         renderPurchase();
-        applyDiff();
+        applyDiff(false);
         history.replaceState(null,'',`?c=${active.map(p=>encodeURIComponent(p.modelo)).join(',')}`);
         if (wasHidden) {
           setTimeout(() => section.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 80);
@@ -1976,6 +2307,19 @@
     document.getElementById('purchaseGrid').addEventListener('click', e => {
       const btn = e.target.closest('.cp-cupom-copy');
       if (btn) copyText(btn.dataset.code, 'Cupom copiado!');
+    });
+
+    /* hover na legenda do radar isola o polígono do projetor */
+    const legendEl = document.getElementById('radarLegend');
+    legendEl.addEventListener('mouseover', e => {
+      const it = e.target.closest('.cp-radar-legend-item');
+      if (!it) return;
+      document.querySelectorAll('#radarSvg .cp-radar-poly').forEach(g => {
+        g.classList.toggle('dim', g.getAttribute('data-pi') !== it.getAttribute('data-pi'));
+      });
+    });
+    legendEl.addEventListener('mouseout', () => {
+      document.querySelectorAll('#radarSvg .cp-radar-poly').forEach(g => g.classList.remove('dim'));
     });
 
     /* handlers chamados por atributos onclick/oninput do HTML (estático e gerado) */
