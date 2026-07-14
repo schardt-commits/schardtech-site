@@ -347,7 +347,7 @@
     var pitch = isMenorHistorico(live)
       ? 'Menor preço do nosso histórico, no ' + loja + '. Testado no canal.'
       : 'Melhor preço de hoje no ' + loja + ', testado no canal.';
-    a.innerHTML = '<h4 style="color:var(--accent)">Comprar agora — ' + preco + '</h4>' +
+    a.innerHTML = '<h4 style="color:var(--accent)">Comprar agora · ' + preco + '</h4>' +
       '<p>' + pitch + '</p>';
     ctaFinal.insertBefore(a, ctaFinal.firstChild);
   }
