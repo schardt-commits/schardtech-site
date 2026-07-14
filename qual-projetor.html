@@ -97,6 +97,7 @@
 
     .qp-sub-options { margin-top: 12px; padding: 14px 16px; border-left: 2px solid var(--brand-borda); background: var(--brand-dim); border-radius: 0 var(--radius) var(--radius) 0; }
     .qp-sub-label { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--txt-2); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.1em; }
+    .qp-sub-hint { font-size: 12.5px; color: var(--txt-2); line-height: 1.55; margin: -4px 0 12px; }
 
     .qp-dist-input-row { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
     .qp-dist-label { font-size: 13px; color: var(--txt-2); white-space: nowrap; }
@@ -119,8 +120,6 @@
     .qp-adv-title { font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--txt); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 7px; }
     .qp-adv-hint { font-size: 13px; color: var(--txt-2); margin-bottom: 12px; line-height: 1.55; }
     .qp-adv-sep { border: none; border-top: 1px solid var(--line); margin: 22px 0; }
-    .qp-embreve { font-family: var(--mono); font-size: 9.5px; font-weight: 600; color: var(--brand); background: var(--brand-dim); border: 1px solid var(--brand-borda); border-radius: 4px; padding: 2px 7px; margin-left: 6px; vertical-align: middle; letter-spacing: 0.06em; text-transform: uppercase; }
-    .qp-lux-row { display: flex; align-items: center; gap: 12px; margin-top: 14px; }
 
     /* CTA */
     .qp-cta { text-align: center; padding: 44px 0 90px; }
@@ -179,13 +178,6 @@
     .qp-card .qp-stats { margin: 2px 0 18px; max-width: 470px; gap: 8px; }
 
     .qp-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
-    .qp-card-badge-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
-    .qp-card-badge { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 4px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-    .qp-card-badge.featured { background: var(--win-dim); color: var(--win); border: 1px solid rgba(47, 224, 138, 0.35); }
-    .qp-card-badge.alt { background: var(--card-2); color: var(--txt-2); border: 1px solid var(--line); }
-    .qp-match-pill { display: inline-flex; align-items: center; padding: 3px 9px; border-radius: 999px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.04em; background: var(--card-2); color: var(--txt-2); border: 1px solid var(--line); }
-    .qp-match-pill.hi  { color: var(--win); border-color: rgba(47, 224, 138, 0.35); background: var(--win-dim); }
-    .qp-match-pill.mid { color: var(--num); border-color: var(--brand-borda); background: var(--brand-dim); }
 
     .qp-card-name { font-family: var(--display); font-size: 21px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; color: var(--txt); }
     .qp-card-name .marca { color: var(--txt-2); font-weight: 500; }
@@ -200,7 +192,6 @@
     .qp-price-current { font-family: var(--mono); font-size: 22px; font-weight: 700; color: var(--txt); line-height: 1.2; word-break: break-word; }
     .qp-price-marketplace { font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--txt-2); margin-left: 4px; }
     .qp-price-meta { font-family: var(--mono); font-size: 11px; color: var(--txt-2); margin-top: 4px; }
-    .qp-price-meta strong { color: var(--num); font-weight: 600; padding: 1px 5px; background: var(--brand-dim); border-radius: 3px; }
     .qp-card-price .regua-blk { width: 210px; margin: 12px 0 0 auto; gap: 6px; }
     .qp-card-price-range { font-family: var(--mono); font-size: 17px; font-weight: 700; color: var(--txt); white-space: nowrap; }
     .qp-card-price-note { font-family: var(--mono); font-size: 10.5px; color: var(--txt-2); margin-top: 3px; }
@@ -210,15 +201,6 @@
       .qp-price-marketplace { display: block; margin-left: 0; margin-top: 2px; }
     }
     .qp-tag-importado { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 4px; background: rgba(255, 155, 122, 0.12); border: 1px solid rgba(255, 155, 122, 0.4); color: var(--alerta); font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.05em; vertical-align: middle; margin-left: 7px; text-transform: uppercase; }
-
-    /* Mini sparkline + indicador "vs preço médio" */
-    .qp-spark { display: flex; align-items: center; gap: 8px; margin-top: 8px; justify-content: flex-end; }
-    .qp-spark svg { display: block; flex-shrink: 0; }
-    .qp-spark-label { display: inline-flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: 10.5px; font-weight: 600; white-space: nowrap; }
-    .qp-spark-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-    .qp-spark-label.good { color: var(--win); }   .qp-spark-label.good .qp-spark-dot { background: var(--win); }
-    .qp-spark-label.mid  { color: var(--txt-2); } .qp-spark-label.mid .qp-spark-dot  { background: var(--txt-2); }
-    .qp-spark-label.bad  { color: var(--alerta); } .qp-spark-label.bad .qp-spark-dot { background: var(--alerta); }
 
     .qp-card-specs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
     .qp-spec { display: flex; align-items: center; gap: 6px; padding: 4px 10px; background: var(--card-2); border: 1px solid var(--line); border-radius: 5px; font-family: var(--mono); font-size: 11.5px; }
@@ -262,7 +244,6 @@
       .qp-card-top { flex-direction: column; }
       .qp-card-price { text-align: left; }
       .qp-card-price .regua-blk { margin-left: 0; }
-      .qp-spark { justify-content: flex-start; }
     }
 
     /* movimento reduzido: tudo estático */
@@ -391,6 +372,15 @@
           <button class="qp-option" onclick="pickApps('quero',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> Quero Netflix e afins em qualidade máxima</button>
           <button class="qp-option" onclick="pickApps('nao_quero',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M17 2l-5 5-5-5"/></svg> YouTube resolve / Já tenho stick ou box</button>
         </div>
+        <div id="soSub" style="display:none;" class="qp-sub-options">
+          <div class="qp-sub-label">Qual sistema prefere? (opcional)</div>
+          <p class="qp-sub-hint">Google TV tem a melhor compatibilidade e suporta 4K quando o projetor tem suporte. Android TV é excelente para HD. WhaleOS é um sistema próprio com boa compatibilidade, muito melhor que Android não homologado.</p>
+          <div class="qp-options" id="advSoOptions">
+            <button class="qp-option" onclick="pickSOAdv('google_tv',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> Google TV</button>
+            <button class="qp-option" onclick="pickSOAdv('android_tv',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg> Android TV</button>
+            <button class="qp-option" onclick="pickSOAdv('whaleos',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg> WhaleOS</button>
+          </div>
+        </div>
       </div>
 
       <!-- 5. Mobilidade -->
@@ -483,27 +473,13 @@
 
           <hr class="qp-adv-sep">
 
-          <!-- Ótica selada -->
+          <!-- Ótica -->
           <div class="qp-adv-section">
-            <div class="qp-adv-title">Ótica selada</div>
-            <div class="qp-adv-hint">Ótica selada protege as lentes de poeira interna e preserva a qualidade da imagem a longo prazo. Quanto mais uso contínuo, mais importa. Os níveis são classificados pelo canal com base nos testes.</div>
+            <div class="qp-adv-title">Ótica</div>
+            <div class="qp-adv-hint">Ótica selada protege as lentes de poeira interna e preserva a qualidade da imagem a longo prazo. Sem selagem, a poeira que entra com o tempo aparece como manchas na projeção e a limpeza exige abrir o aparelho.</div>
             <div class="qp-options">
-              <button class="qp-option" onclick="pickOtica('boa',this)">Boa</button>
-              <button class="qp-option" onclick="pickOtica('otima',this)">Ótima</button>
-              <button class="qp-option" onclick="pickOtica('maxima',this)">Máxima</button>
-            </div>
-          </div>
-
-          <hr class="qp-adv-sep">
-
-          <!-- SO detalhado — só aparece quando "quero apps" foi selecionado -->
-          <div class="qp-adv-section" id="advSoSection" style="display:none;">
-            <div class="qp-adv-title">Qual sistema prefere?</div>
-            <div class="qp-adv-hint">Google TV tem a melhor compatibilidade e suporta 4K quando o projetor tem suporte. Android TV é excelente para HD. WhaleOS é um sistema próprio com boa compatibilidade, muito melhor que Android não homologado.</div>
-            <div class="qp-options" id="advSoOptions">
-              <button class="qp-option" onclick="pickSOAdv('google_tv',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> Google TV</button>
-              <button class="qp-option" onclick="pickSOAdv('android_tv',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg> Android TV</button>
-              <button class="qp-option" onclick="pickSOAdv('whaleos',this)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg> WhaleOS</button>
+              <button class="qp-option" onclick="pickOtica('sem',this)">Sem ótica selada</button>
+              <button class="qp-option" onclick="pickOtica('com',this)">Com ótica selada</button>
             </div>
           </div>
 
@@ -529,18 +505,6 @@
               <button class="qp-option active" onclick="pick('custo_beneficio',null,this)">Não priorizar</button>
               <button class="qp-option" onclick="pick('custo_beneficio','moderado',this)">Moderado</button>
               <button class="qp-option" onclick="pick('custo_beneficio','bastante',this)">Priorizar bastante</button>
-            </div>
-          </div>
-
-          <hr class="qp-adv-sep">
-
-          <!-- Lux -->
-          <div class="qp-adv-section" style="opacity:0.45;pointer-events:none;user-select:none;">
-            <div class="qp-adv-title">Luminosidade medida do ambiente (lux) <span class="qp-embreve">Em breve</span></div>
-            <div class="qp-adv-hint">Medição por lux para afinar a recomendação de brilho, disponível em breve.</div>
-            <div class="qp-lux-row">
-              <input type="number" class="qp-lux-input" id="luxInput" placeholder="Ex: 150" min="0" max="9999" disabled>
-              <span class="qp-lux-unit">lux</span>
             </div>
           </div>
 
@@ -638,60 +602,6 @@
       if (!u) return '';
       const t = String(u).trim();
       return /^https?:\/\//i.test(t) ? t : '';
-    }
-
-    // ============ Sparkline + indicador "vs preço médio" ============
-    // Carrega prices-history.json em window.PRICES_HISTORY (assíncrono, não bloqueia o render).
-    window.PRICES_HISTORY = null;
-    fetch((window.SITE_BASE_PATH || '') + 'data/prices-history.json', { cache: 'no-store' })
-      .then(r => r.ok ? r.json() : null)
-      .then(j => { window.PRICES_HISTORY = j; })
-      .catch(() => {});
-
-    function renderSparkBlock(marca, modelo, precoAtual) {
-      const j = window.PRICES_HISTORY;
-      if (!j || !j.modelos || !precoAtual) return '';
-      const norm = s => String(s||'').trim().toLowerCase();
-      const key = norm(marca) + '|' + norm(modelo);
-      let hist = null;
-      for (const k in j.modelos) {
-        if (norm(k) === key) { hist = j.modelos[k]; break; }
-      }
-      if (!hist || !hist.pontos || hist.pontos.length < 2) return '';
-
-      const precos = hist.pontos.map(p => p.preco);
-      const min = Math.min(...precos), max = Math.max(...precos);
-      const __porDia = {}; hist.pontos.forEach(p => { const k = p.data.slice(0,10); if (__porDia[k] == null || p.preco < __porDia[k]) __porDia[k] = p.preco; });
-      const __mins = Object.keys(__porDia).map(k => __porDia[k]);
-      const media = __mins.reduce((a,b) => a+b, 0) / __mins.length;  // media-minimos-diarios-2026-05-31
-
-      // SVG sparkline
-      const w = 90, h = 22, pad = 2;
-      const range = max - min || 1;
-      const coords = hist.pontos.map((p, i) => {
-        const x = (i / (hist.pontos.length - 1 || 1)) * (w - pad*2) + pad;
-        const y = h - pad - ((p.preco - min) / range) * (h - pad*2);
-        return x.toFixed(1) + ',' + y.toFixed(1);
-      });
-      const firstX = coords[0].split(',')[0];
-      const lastX = coords[coords.length-1].split(',')[0];
-      const lastY = coords[coords.length-1].split(',')[1];
-      const fillPts = coords.join(' ') + ' ' + lastX + ',' + (h - pad) + ' ' + firstX + ',' + (h - pad);
-      const svg = '<svg width="'+w+'" height="'+h+'" viewBox="0 0 '+w+' '+h+'">' +
-        '<polygon points="'+fillPts+'" fill="rgba(91,200,238,0.10)" stroke="none"/>' +
-        '<polyline points="'+coords.join(' ')+'" fill="none" stroke="rgba(91,200,238,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-        '<circle cx="'+lastX+'" cy="'+lastY+'" r="2.5" fill="#5BC8EE"/>' +
-        '</svg>';
-
-      // Status vs média
-      const dist = ((precoAtual - media) / media) * 100;
-      let classe, label;
-      if (dist <= -3)    { classe = 'good'; label = Math.abs(Math.round(dist)) + '% abaixo da média'; }
-      else if (dist < 3) { classe = 'mid';  label = 'no preço médio'; }
-      else               { classe = 'bad';  label = '+' + Math.round(dist) + '% acima da média'; }
-
-      const status = '<span class="qp-spark-label '+classe+'"><span class="qp-spark-dot"></span>'+label+'</span>';
-      return '<div class="qp-spark">'+svg+status+'</div>';
     }
 
     function fmtMarketplaceLabelQp(slug) {
@@ -833,20 +743,20 @@
       if (el.classList.contains('active')) {
         answers.sistema = null;
         el.classList.remove('active');
-        document.getElementById('advSoSection').style.display = 'none';
+        document.getElementById('soSub').style.display = 'none';
         updateCount();
         return;
       }
       document.querySelectorAll('#appsMain .qp-option').forEach(o => o.classList.remove('active'));
       el.classList.add('active');
-      const soSection = document.getElementById('advSoSection');
+      const soSub = document.getElementById('soSub');
       if (val === 'quero') {
         answers.sistema = 'homologado_tantofaz';
-        soSection.style.display = 'block';
+        soSub.style.display = 'block';
         document.querySelectorAll('#advSoOptions .qp-option').forEach(o => o.classList.remove('active'));
       } else {
         answers.sistema = 'nao_homologado';
-        soSection.style.display = 'none';
+        soSub.style.display = 'none';
       }
       updateCount();
     }
@@ -975,10 +885,10 @@
         if (a.entrada === '1080p_120hz'   && !rm.includes('120hz') && !rm.includes('240hz')) return false;
       }
       if (a.otica) {
+        // 'com' = classificação começa em Selada- (tier 3); 'sem' = família Não Selada
         const tier = OTICA_TIER[p.otica_selada] ?? 0;
-        if (a.otica === 'boa'    && tier < 1) return false;
-        if (a.otica === 'otima'  && tier < 4) return false;
-        if (a.otica === 'maxima' && tier < 6) return false;
+        if (a.otica === 'com' && tier < 3)  return false;
+        if (a.otica === 'sem' && tier >= 3) return false;
       }
       if (a.sistema) {
         const so = (p.sistema_operacional || '').toLowerCase();
@@ -1184,29 +1094,6 @@
       return s;
     }
 
-    function getBadge(p, idx, top) {
-      if (idx === 0) {
-        if (answers.uso === 'jogos') return { text: 'Ideal para jogos', cls: 'featured' };
-        if (answers.mobilidade === 'bateria' || answers.mobilidade === 'ambos') return { text: 'Melhor portátil', cls: 'featured' };
-        if (answers.iluminacao === 'luz_intensa') return { text: 'Máximo brilho', cls: 'featured' };
-        if (answers.resolucao === '4k_nativa') return { text: 'Melhor em 4K', cls: 'featured' };
-        if (answers.tec_sub === 'dlp_laser') return { text: 'Melhor DLP Laser', cls: 'featured' };
-        return { text: 'Recomendado para você', cls: 'featured' };
-      }
-      const t = top[0];
-      // Preço efetivo pro consumidor BR: importado custa 2x (ICMS + frete), mesma regra do score.
-      const pP = (p.preco_atual || p.preco_min) * (p.status === 'importado' ? 2 : 1);
-      const tP = (t.preco_atual || t.preco_min) * (t.status === 'importado' ? 2 : 1);
-      if (pP && tP && pP < tP * 0.85) return { text: 'Mais econômico', cls: 'alt' };
-      if (p.brilho_ansi && t.brilho_ansi && p.brilho_ansi > t.brilho_ansi * 1.2) return { text: 'Mais brilhante', cls: 'alt' };
-      if (answers.uso === 'jogos' && p.input_lag_ms != null && t.input_lag_ms != null && p.input_lag_ms < t.input_lag_ms * 0.8) return { text: 'Menor input lag', cls: 'alt' };
-      if (p.bateria && !t.bateria) return { text: 'Opção com bateria', cls: 'alt' };
-      const selada = v => v && v.startsWith('Selada');
-      if (selada(p.otica_selada) && !selada(t.otica_selada)) return { text: 'Ótica selada', cls: 'alt' };
-      if (p.tecnologia === 'DLP Laser' && t.tecnologia !== 'DLP Laser') return { text: 'DLP Laser', cls: 'alt' };
-      return { text: 'Boa alternativa', cls: 'alt' };
-    }
-
     function lagClass(lag) {
       if (lag == null) return '';
       if (lag <= 25) return 'hi';
@@ -1246,7 +1133,7 @@
       return `verificado há ${diff} dias`;
     }
 
-    function renderCard(p, badge, featured, matchPct, idx) {
+    function renderCard(p, featured, idx) {
       const hasPrice = p.preco_atual || p.preco_min || p.preco_max;
       const r = n => 'R$ ' + Math.round(Number(n)).toLocaleString('pt-BR');
       const isImportado = p.status === 'importado';
@@ -1262,20 +1149,13 @@
           histLine = `<div class="regua-blk"><div class="regua"><div class="r-fill" style="width:${pos}%"></div><div class="r-dot" style="left:${pos}%"></div></div><div class="regua-labels"><span class="min">mín ${r(min)}</span><span>máx ${r(max)}</span></div></div>`;
         }
         const mkSpan = mk ? ` <span class="qp-price-marketplace">${mk.prep} ${mk.label}</span>` : '';
-        // Linha extra: "verificado há X" + indicação se preço já tem cupom aplicado
-        const venc = (p.marketplaces && p.marketplaces[p.marketplace_vencedor]) || {};
-        const cupomNoVencedor = venc.cupom || null;
+        // Linha extra: só "verificado há X" (o cupom já aparece no chip da seção de compra)
         const verif = verifLabel(p.data_verificacao);
-        const extras = [];
-        if (verif) extras.push(verif);
-        if (cupomNoVencedor) extras.push(`com cupom <strong>${cupomNoVencedor}</strong>`);
-        const extraLine = extras.length ? `<div class="qp-price-meta">${extras.join(' · ')}</div>` : '';
-        const sparkLine = (typeof renderSparkBlock === 'function') ? renderSparkBlock(p.marca, p.modelo, p.preco_atual) : '';
+        const extraLine = verif ? `<div class="qp-price-meta">${verif}</div>` : '';
         priceHtml = `<div class="qp-card-price">
           <div class="qp-price-current">${r(p.preco_atual)}${mkSpan}${importadoTag}</div>
           ${extraLine}
           ${histLine}
-          ${sparkLine}
         </div>`;
       } else if (hasPrice) {
         const fmt = n => n ? n.toLocaleString('pt-BR') : '?';
@@ -1284,12 +1164,6 @@
       } else {
         priceHtml = `<div class="qp-card-price"><div class="qp-card-price-na">sem estimativa</div></div>`;
       }
-
-      // contador animado (UI2.animaContadores lê data-alvo/data-sufixo); o texto
-      // final já vem no markup pro caso do ui-interacoes.js não carregar
-      const matchPill = (matchPct !== null)
-        ? `<span class="qp-match-pill${matchPct >= 90 ? ' hi' : matchPct >= 70 ? ' mid' : ''}"><span data-alvo="${matchPct}" data-sufixo="% de match">${matchPct}% de match</span></span>`
-        : '';
 
       // Brilho e Lag saem dos chips e viram barras vivas (régua da home:
       // ANSI /1800; lag invertido /200, menor = barra maior)
@@ -1378,10 +1252,6 @@
           <div class="qp-card-body">
           <div class="qp-card-top">
             <div>
-              <div class="qp-card-badge-row">
-                <span class="qp-card-badge ${badge.cls}">${badge.text}</span>
-                ${matchPill}
-              </div>
               ${p.slug
                 ? `<a class="qp-card-name" href="${(window.SITE_BASE_PATH || '')}projetor/${escAttr(p.slug)}.html" aria-label="Ver página completa do ${escAttr(p.marca)} ${escAttr(p.modelo)}"><span><span class="marca">${escAttr(p.marca)}</span> ${escAttr(p.modelo)}</span><svg class="qp-card-name-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>`
                 : `<div class="qp-card-name"><span class="marca">${escAttr(p.marca)}</span> ${escAttr(p.modelo)}</div>`
@@ -1421,7 +1291,7 @@
     }
 
     function _showResultsInner() {
-      const lux = parseFloat(document.getElementById('luxInput').value) || 0;
+      const lux = 0; // entrada de lux removida do formulário (14/07); o ramo de lux do scoring fica dormente
       const data = window.PROJETORES_DATA || [];
       const filtered = data.filter(p => passesFilter(p, answers));
 
@@ -1439,17 +1309,9 @@
         .sort((a, b) => b._score - a._score || (b.brilho_ansi || 0) - (a.brilho_ansi || 0))
         .slice(0, 10);
 
-      const topScore = scored[0]._score;
-
       document.getElementById('cardsContainer').innerHTML = scored
-        .map((p, i) => {
-          const pct = i === 0 ? null : Math.round(p._score / topScore * 100);
-          return renderCard(p, getBadge(p, i, scored), i === 0, pct, i);
-        })
+        .map((p, i) => renderCard(p, i === 0, i))
         .join('');
-
-      // contadores de % de match sobem junto com a cascata (helper do placar do comparativo)
-      if (window.UI2 && UI2.animaContadores) UI2.animaContadores(document.getElementById('cardsContainer'));
 
       // cascata: cada card sobe em sequência e as barras crescem junto
       const cards = document.querySelectorAll('#cardsContainer .qp-card.nasce');
