@@ -296,46 +296,14 @@
     }
     .cp-score-fill::after { content: ''; position: absolute; inset: 0; border-radius: 999px; background: linear-gradient(180deg, rgba(255,255,255,0.22), transparent 55%); }
 
-    /* ── DUELOS DAS MEDIÇÕES ──────────────────── */
-    .cp-duel-wrap { margin-bottom: 40px; }
-    .cp-duel-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .cp-duel {
-      background: var(--card);
+    /* ── PAINEL DO CONFRONTO ──────────────────── */
+    /* pedido do dono 14/07: os resultados sentam numa "bandeja" um tom mais
+       clara que o fundo da página, na mesma paleta */
+    .cp-arena {
+      background: #0F1520;
       border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 16px 18px;
-      animation: cpIn 420ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
-    }
-    .cp-duel-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 13px; }
-    .cp-duel-label { font-family: var(--display); font-weight: 700; font-size: 0.95rem; color: var(--txt); }
-    .cp-duel-note { font-family: var(--mono); font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--txt-2); white-space: nowrap; }
-    .cp-duel-rows { display: flex; flex-direction: column; gap: 9px; }
-    .cp-duel-row {
-      display: grid;
-      grid-template-columns: minmax(84px, 118px) 1fr auto;
-      align-items: center;
-      gap: 10px;
-    }
-    .cp-duel-name { font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--txt-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .cp-duel-row.win .cp-duel-name { color: var(--txt); }
-    .cp-duel-bar { display: block; height: 8px; border-radius: 999px; background: var(--card-2); overflow: hidden; position: relative; }
-    .cp-duel-fill {
-      position: absolute; left: 0; top: 0; bottom: 0;
-      width: 0; border-radius: 999px;
-      transition: width 800ms cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .cp-duel-fill::after { content: ''; position: absolute; inset: 0; border-radius: 999px; background: linear-gradient(180deg, rgba(255,255,255,0.22), transparent 55%); }
-    .cp-duel-val { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--txt-2); white-space: nowrap; text-align: right; display: inline-flex; align-items: center; gap: 7px; justify-content: flex-end; }
-    .cp-duel-melhor {
-      font-family: var(--mono);
-      font-size: 8.5px;
-      font-weight: 700;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      padding: 2px 7px;
-      border-radius: 4px;
-      border: 1px solid;
-      animation: cpPop 300ms 650ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+      border-radius: 18px;
+      padding: 30px clamp(16px, 3vw, 34px) 38px;
     }
 
     /* ── RADAR ────────────────────────────────── */
@@ -369,6 +337,22 @@
       transition: opacity 220ms;
     }
     .cp-radar-poly.dim { opacity: 0.12; }
+    /* rótulo com o valor real de cada ponta (aparece no hover) */
+    .cp-radar-vlab {
+      font-family: var(--mono);
+      font-size: 9.5px;
+      font-weight: 700;
+      opacity: 0;
+      transition: opacity 180ms;
+      pointer-events: none;
+      paint-order: stroke;
+      stroke: var(--card);
+      stroke-width: 3px;
+    }
+    .cp-radar-vlab.show { opacity: 1; }
+    .cp-radar-hit { cursor: pointer; }
+    .cp-radar-ax { cursor: pointer; transition: fill 150ms; }
+    .cp-radar-ax:hover { fill: var(--txt); }
     .cp-radar-info { flex: 1; min-width: 0; position: relative; z-index: 1; }
     .cp-radar-info-title {
       font-family: var(--mono);
@@ -434,13 +418,20 @@
     .cp-share-btn:hover { background: var(--brand-dim); border-color: var(--brand); }
 
     /* ── TABELA ───────────────────────────────── */
+    /* overflow-x SÓ liga quando a tabela não cabe (o script do cue marca
+       .has-overflow no shell). Sticky dentro de contêiner com overflow-x não
+       gruda no viewport: só desloca o thead pra baixo e ele come as linhas
+       (bug do print do dono, 14/07). Então: desktop = overflow visível +
+       sticky funcionando; estreito = rolagem horizontal + sticky desligado. */
     .cp-table-wrap {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+      overflow-x: visible;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--bg);
     }
+    .cp-scroll-shell.has-overflow .cp-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .cp-scroll-shell.has-overflow .cp-thead { position: static; }
+    .cp-scroll-shell.has-overflow .cp-tr-section td { position: static; }
     .cp-table {
       width: 100%;
       /* separate (não collapse): com collapse o Chrome não pinta direito o
@@ -555,7 +546,7 @@
       border-left: 1px solid var(--line);
     }
     .cp-td-val.winner {
-      background: var(--brand-dim);
+      background: rgba(47,224,138,0.07);
       color: var(--txt);
       font-weight: 600;
     }
@@ -576,9 +567,9 @@
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      background: var(--brand-dim);
-      color: var(--brand);
-      border: 1px solid var(--brand-borda);
+      background: rgba(47,224,138,0.12);
+      color: var(--win);
+      border: 1px solid rgba(47,224,138,0.35);
       border-radius: 4px;
       padding: 1px 6px;
       margin-left: 6px;
@@ -1039,13 +1030,13 @@
     @media (max-width: 900px) {
       .cp-slots { grid-template-columns: repeat(2, 1fr); }
       .cp-vs { display: none; }
-      .cp-duel-grid { grid-template-columns: 1fr; }
       .cp-radar-card { flex-direction: column; gap: 20px; padding: 24px 20px; }
       .cp-radar-svg-wrap { width: 100%; max-width: 220px; height: auto; aspect-ratio: 1; margin: 0 auto; }
     }
     @media (max-width: 640px) {
       .cp-slots { grid-template-columns: 1fr; }
       .cp-slot { min-height: 176px; }
+      .cp-arena { padding: 18px 12px 26px; border-radius: 14px; }
       .cp-controls { flex-direction: column; align-items: stretch; }
       .cp-ctrl-btn, .cp-share-btn { justify-content: center; width: 100%; }
       .cp-radar-svg-wrap { max-width: 200px; }
@@ -1075,17 +1066,16 @@
         word-break: break-word;
         overflow-wrap: break-word;
       }
-      .cp-duel-row { grid-template-columns: minmax(70px, 92px) 1fr auto; gap: 8px; }
       .cp-modal { max-width: 100%; }
     }
 
     /* ── movimento reduzido: tudo estático ────── */
     @media (prefers-reduced-motion: reduce) {
-      .cp-slot, .cp-score-item, .cp-duel, .cp-pcard,
+      .cp-slot, .cp-score-item, .cp-pcard,
       .cp-table tbody tr, .cp-radar-poly, .cp-radar-legend-item,
-      .cp-vs, .win-badge, .cp-duel-melhor { animation: none !important; }
+      .cp-vs, .win-badge { animation: none !important; }
       .cp-slot-add-ring { display: none; }
-      .cp-minibar-fill, .cp-duel-fill, .cp-score-fill { transition: none; }
+      .cp-minibar-fill, .cp-score-fill { transition: none; }
       .cp-slot-media img, .cp-modal-item, .cp-slot-remove { transition: none; transform: none; }
     }
   </style>
@@ -1148,16 +1138,11 @@
 
   <section class="cp-comparison sem-borda" id="compSection" style="display:none">
     <div class="wrap">
+    <div class="cp-arena">
 
       <!-- Placar (specs em que cada um vence) -->
       <div class="cp-sec-title">Placar</div>
       <div class="cp-score" id="scoreBoard"></div>
-
-      <!-- Duelos das medições da bancada -->
-      <div class="cp-duel-wrap" id="duelWrap">
-        <div class="cp-sec-title">Medições da bancada</div>
-        <div class="cp-duel-grid" id="duelGrid"></div>
-      </div>
 
       <!-- Radar chart -->
       <div class="cp-radar-card" id="radarCard">
@@ -1204,6 +1189,7 @@
         <div class="cp-purchase-grid" id="purchaseGrid"></div>
       </div>
 
+    </div>
     </div>
   </section>
 
@@ -1450,10 +1436,10 @@
       return `--sc:${c};--sc-soft:${c}66;--sc-dim:${c}1f`;
     }
 
-    /* barras (tabela/duelos/placar) crescem do zero em cascata a cada render */
+    /* barras (tabela/placar) crescem do zero em cascata a cada render */
     function animateFills(root) {
       if (!root) return;
-      const fills = root.querySelectorAll('.cp-minibar-fill[data-w], .cp-duel-fill[data-w], .cp-score-fill[data-w]');
+      const fills = root.querySelectorAll('.cp-minibar-fill[data-w], .cp-score-fill[data-w]');
       requestAnimationFrame(() => requestAnimationFrame(() => {
         let k = 0;
         fills.forEach(f => {
@@ -1486,9 +1472,18 @@
       ];
     }
 
+    /* valor REAL de cada eixo, pro rótulo que aparece no hover */
+    const RADAR_VAL = [
+      p => p.brilho_ansi ? `${p.brilho_ansi} ANSI` : 'sem dado',
+      p => p.input_lag_ms ? `${p.input_lag_ms} ms` : 'sem dado',
+      p => { const a = parseAudioTotal(p.audio_w); return a ? `${Number.isInteger(a)?a:a.toFixed(1)} W` : 'sem dado'; },
+      p => p.otica_selada || 'sem dado',
+      p => p.uso_continuo || 'sem dado',
+    ];
+
     function renderRadar() {
       const projs = selected.filter(Boolean);
-      const N = 5, SIZE = 300, CX = 150, CY = 150, R = 108;
+      const N = 5, CX = 150, CY = 150, R = 108;
       const LABELS = ['Brilho','Input Lag','Áudio','Ótica','Duração'];
 
       function pt(i, r) {
@@ -1496,7 +1491,18 @@
         return [CX + r * Math.cos(a), CY + r * Math.sin(a)];
       }
 
-      let svg = '';
+      /* defs: gradiente radial por cor + glow suave nos traços */
+      let svg = '<defs>';
+      COLORS.forEach((c, i) => {
+        svg += `<radialGradient id="cpGrad${i}" cx="50%" cy="50%" r="65%">` +
+          `<stop offset="0%" stop-color="${c}" stop-opacity="0.30"/>` +
+          `<stop offset="100%" stop-color="${c}" stop-opacity="0.05"/>` +
+          `</radialGradient>`;
+      });
+      svg += '<filter id="cpGlow" x="-40%" y="-40%" width="180%" height="180%">' +
+        '<feGaussianBlur stdDeviation="2.4" result="blur"/>' +
+        '<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>' +
+        '</filter></defs>';
 
       /* grid rings */
       for (let lvl = 1; lvl <= 5; lvl++) {
@@ -1511,29 +1517,38 @@
         svg += `<line x1="${CX}" y1="${CY}" x2="${x.toFixed(2)}" y2="${y.toFixed(2)}" stroke="rgba(91,200,238,0.18)" stroke-width="1"/>`;
       }
 
-      /* labels */
+      /* nomes dos eixos (hover mostra o valor de todos naquele eixo) */
       for (let i = 0; i < N; i++) {
         const [x,y] = pt(i, R + 22);
-        svg += `<text x="${x.toFixed(2)}" y="${y.toFixed(2)}" text-anchor="middle" dominant-baseline="middle" fill="#8D9CB2" font-size="11" font-family="Inter,sans-serif" font-weight="600">${LABELS[i]}</text>`;
+        svg += `<text class="cp-radar-ax" data-ax="${i}" x="${x.toFixed(2)}" y="${y.toFixed(2)}" text-anchor="middle" dominant-baseline="middle" fill="#8D9CB2" font-size="11" font-family="Inter,sans-serif" font-weight="600">${LABELS[i]}</text>`;
       }
 
       /* projector polygons: cada um num <g> que cresce do centro em cascata */
+      const vlabs = [], hits = [];
       projs.forEach((p, pi) => {
         const scores = radarScores(p);
-        const pts = scores.map((s,i) => {
-          const [x,y] = pt(i, Math.max(s,0.04)*R);
-          return `${x.toFixed(2)},${y.toFixed(2)}`;
-        }).join(' ');
+        const ptsArr = scores.map((s,i) => pt(i, Math.max(s,0.04)*R));
+        const pts = ptsArr.map(([x,y]) => `${x.toFixed(2)},${y.toFixed(2)}`).join(' ');
         const c = COLORS[pi];
         let g = `<g class="cp-radar-poly" data-pi="${pi}" style="animation-delay:${120 + pi*130}ms">`;
-        g += `<polygon points="${pts}" fill="${c}" fill-opacity="0.13" stroke="${c}" stroke-width="2" stroke-linejoin="round"/>`;
-        scores.forEach((s,i) => {
-          const [x,y] = pt(i, Math.max(s,0.04)*R);
-          g += `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="3.5" fill="${c}"/>`;
+        g += `<polygon points="${pts}" fill="url(#cpGrad${pi})" stroke="${c}" stroke-width="2" stroke-linejoin="round" filter="url(#cpGlow)"/>`;
+        ptsArr.forEach(([x,y]) => {
+          g += `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="3.6" fill="${c}"/>`;
+          g += `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="1.3" fill="#EAF6FF" fill-opacity="0.9"/>`;
         });
         g += '</g>';
         svg += g;
+        /* rótulos de valor + áreas de hover ficam FORA do <g> pro dim não apagá-los */
+        scores.forEach((s, i) => {
+          const [vx, vy] = ptsArr[i];
+          /* nota alta = rótulo pra DENTRO do gráfico (senão cobre o nome do eixo) */
+          const off = s > 0.82 ? -16 : 15;
+          const [ox, oy] = pt(i, Math.max(Math.max(s,0.04)*R + off, 10));
+          vlabs.push(`<text class="cp-radar-vlab" data-pi="${pi}" data-ax="${i}" x="${ox.toFixed(2)}" y="${oy.toFixed(2)}" text-anchor="middle" dominant-baseline="middle" fill="${c}">${RADAR_VAL[i](p)}</text>`);
+          hits.push(`<circle class="cp-radar-hit" data-pi="${pi}" data-ax="${i}" cx="${vx.toFixed(2)}" cy="${vy.toFixed(2)}" r="11" fill="transparent"/>`);
+        });
       });
+      svg += vlabs.join('') + hits.join('');
 
       document.getElementById('radarSvg').innerHTML = svg;
 
@@ -1785,52 +1800,6 @@
       const board = document.getElementById('scoreBoard');
       if (window.UI2 && UI2.animaContadores) UI2.animaContadores(board);
       animateFills(board);
-    }
-
-    /* ═══════════════════════════════════════════
-       DUELOS DAS MEDIÇÕES (barras lado a lado)
-    ═══════════════════════════════════════════ */
-    const DUEL_DEFS = [
-      { label:'Brilho ANSI',       note:'maior vence', dir:'high', val:p=>p.brilho_ansi||null,           fmt:v=>`${v} ANSI` },
-      { label:'Input lag',         note:'menor vence', dir:'low',  val:p=>p.input_lag_ms||null,          fmt:v=>`${v} ms` },
-      { label:'Potência de áudio', note:'maior vence', dir:'high', val:p=>parseAudioTotal(p.audio_w)||null, fmt:v=>`${Number.isInteger(v)?v:v.toFixed(1)} W` },
-      { label:'Consumo',           note:'menor vence', dir:'low',  val:p=>p.consumo_w||null,             fmt:v=>`${v} W` },
-    ];
-
-    function renderDuels(projs) {
-      let idx = 0;
-      const cards = [];
-      DUEL_DEFS.forEach(d => {
-        const nums = projs.map(p => {
-          const v = d.val(p);
-          return (typeof v === 'number' && isFinite(v) && v > 0) ? v : null;
-        });
-        const valid = nums.filter(v => v !== null);
-        if (valid.length < 2) return;
-        const mx = Math.max(...valid);
-        const best = d.dir === 'low' ? Math.min(...valid) : mx;
-        const empate = valid.every(n => n === valid[0]);
-        const rowsHtml = projs.map((p, i) => {
-          const v = nums[i], c = COLORS[i];
-          if (v === null) return `<div class="cp-duel-row"><span class="cp-duel-name">${escAttr(p.modelo)}</span><span class="cp-duel-bar"></span><span class="cp-duel-val val-dash">sem dado</span></div>`;
-          const w = Math.max(6, Math.round(v / mx * 100));
-          const win = !empate && v === best;
-          const chip = win ? `<span class="cp-duel-melhor" style="color:${c};border-color:${c}55;background:${c}14">melhor</span>` : '';
-          return `<div class="cp-duel-row${win ? ' win' : ''}">
-            <span class="cp-duel-name">${escAttr(p.modelo)}</span>
-            <span class="cp-duel-bar"><span class="cp-duel-fill" data-w="${w}" style="background:linear-gradient(90deg,${c}55,${c});box-shadow:0 0 12px ${c}40"></span></span>
-            <span class="cp-duel-val"${win ? ` style="color:${c}"` : ''}>${chip}${d.fmt(v)}</span>
-          </div>`;
-        }).join('');
-        cards.push(`<div class="cp-duel" style="animation-delay:${idx++ * 80}ms">
-          <div class="cp-duel-head"><span class="cp-duel-label">${d.label}</span><span class="cp-duel-note">${d.note}</span></div>
-          <div class="cp-duel-rows">${rowsHtml}</div>
-        </div>`);
-      });
-      const wrapEl = document.getElementById('duelWrap');
-      wrapEl.style.display = cards.length ? '' : 'none';
-      document.getElementById('duelGrid').innerHTML = cards.join('');
-      animateFills(document.getElementById('duelGrid'));
     }
 
     /* ═══════════════════════════════════════════
@@ -2260,7 +2229,6 @@
         section.style.display = 'block';
         const rows = buildRows(active);
         renderScore(active, rows);
-        renderDuels(active);
         renderRadar();
         renderTable(active, rows);
         renderPurchase();
@@ -2309,17 +2277,38 @@
       if (btn) copyText(btn.dataset.code, 'Cupom copiado!');
     });
 
-    /* hover na legenda do radar isola o polígono do projetor */
+    /* radar interativo: legenda isola o polígono e mostra os valores dele;
+       hover numa ponta mostra o valor real; hover no nome do eixo mostra o
+       valor de todos os projetores naquele eixo */
+    const radarSvgEl = document.getElementById('radarSvg');
+    function radarShowLabs(fn) {
+      radarSvgEl.querySelectorAll('.cp-radar-vlab').forEach(t => t.classList.toggle('show', fn(t)));
+    }
     const legendEl = document.getElementById('radarLegend');
     legendEl.addEventListener('mouseover', e => {
       const it = e.target.closest('.cp-radar-legend-item');
       if (!it) return;
-      document.querySelectorAll('#radarSvg .cp-radar-poly').forEach(g => {
-        g.classList.toggle('dim', g.getAttribute('data-pi') !== it.getAttribute('data-pi'));
+      const pi = it.getAttribute('data-pi');
+      radarSvgEl.querySelectorAll('.cp-radar-poly').forEach(g => {
+        g.classList.toggle('dim', g.getAttribute('data-pi') !== pi);
       });
+      radarShowLabs(t => t.getAttribute('data-pi') === pi);
     });
     legendEl.addEventListener('mouseout', () => {
-      document.querySelectorAll('#radarSvg .cp-radar-poly').forEach(g => g.classList.remove('dim'));
+      radarSvgEl.querySelectorAll('.cp-radar-poly').forEach(g => g.classList.remove('dim'));
+      radarShowLabs(() => false);
+    });
+    radarSvgEl.addEventListener('mouseover', e => {
+      const hit = e.target.closest('.cp-radar-hit');
+      if (hit) {
+        radarShowLabs(t => t.getAttribute('data-pi') === hit.getAttribute('data-pi') && t.getAttribute('data-ax') === hit.getAttribute('data-ax'));
+        return;
+      }
+      const ax = e.target.closest('.cp-radar-ax');
+      if (ax) radarShowLabs(t => t.getAttribute('data-ax') === ax.getAttribute('data-ax'));
+    });
+    radarSvgEl.addEventListener('mouseout', e => {
+      if (e.target.closest('.cp-radar-hit') || e.target.closest('.cp-radar-ax')) radarShowLabs(() => false);
     });
 
     /* handlers chamados por atributos onclick/oninput do HTML (estático e gerado) */
