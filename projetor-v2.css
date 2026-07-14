@@ -1,0 +1,283 @@
+/* ============================================================
+   projetor-v2.css — corpo das páginas /projetor/ no design v2
+   (design mãe: byintek-u90-max.html, 14/07/2026).
+   Carregar DEPOIS do v2.css (usa os tokens de lá). Substitui o
+   par projetor.css + compat-v2.css SÓ nas páginas migradas.
+
+   Contratos de DOM que este arquivo veste mas NÃO pode exigir
+   mudança (markup é do runtime/sync):
+   - .proj-price-card[data-marca][data-modelo] + ids projPriceValue/
+     projPriceMeta/projStoreBtns/projCupomSlot (projetor-page.js +
+     _sync_card_estatico_2026_06_10.py)
+   - .proj-store-btn.store-ali|shopee|ml > .store-name/.store-logo/
+     .store-price + .winner-badge (reescrito pelo projetor-page.js)
+   - .proj-coupon/.copy-btn/.proj-coupon-val (cupom vivo)
+   - .proj-lowest-flag (prices-overlay.js)
+   - .proj-badges/.proj-badge/.proj-status-badge (prices-overlay.js)
+   - #priceStatus/.ps-icon/.ps-sub/.ps-stale, .price-filters/
+     .filter-chip, .chart-canvas-wrap, .price-stats-grid/.price-stat
+   - .proj-cta-final/.proj-cta-card/.proj-cta-buy (patchBuyCtaDOM)
+   - .yt-facade (facade do player, projetor-page.js)
+   ============================================================ */
+
+/* ---------- hero ---------- */
+.proj-hero {
+  border-top: 0; padding: 40px 0 64px;
+  background:
+    radial-gradient(ellipse 700px 380px at 18% -60px, rgba(91, 200, 238, 0.12), transparent),
+    radial-gradient(circle, rgba(141, 156, 178, 0.10) 1px, transparent 1px);
+  background-size: auto, 26px 26px;
+}
+.proj-hero .migalha { margin-bottom: 26px; }
+.proj-title-row { display: flex; flex-direction: column; gap: 2px; margin-bottom: 14px; }
+.proj-brand { font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brand); }
+.proj-model { font-family: var(--display); font-size: clamp(34px, 4.6vw, 56px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.04; }
+.proj-byline { font-family: var(--mono); font-size: 11.5px; color: var(--txt-2); margin-bottom: 18px; }
+.proj-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+.proj-badge { display: inline-flex; align-items: center; font-family: var(--mono); font-size: 11px; font-weight: 600; border-radius: 5px; padding: 4px 10px; color: var(--txt-2); background: var(--card-2); border: 1px solid var(--line); }
+.proj-badge.proj-status-badge { color: var(--alerta); border-color: rgba(255, 155, 122, 0.4); background: rgba(255, 155, 122, 0.10); }
+
+.proj-hero-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 28px; align-items: start; }
+
+/* vídeo do review = capa da página (linha de acento ciano no topo, padrão qp-card) */
+.proj-video-wrap { position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: #0C121B; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4); }
+.proj-video-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--brand), transparent 85%); z-index: 2; pointer-events: none; }
+.proj-video-wrap iframe { width: 100%; height: 100%; border: 0; }
+
+/* ---------- card de preço (contrato do Card-Semanal: não renomear nada aqui) ---------- */
+.proj-price-card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 0; overflow: hidden; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4); }
+.pj-price-topo { display: flex; align-items: center; justify-content: space-between; padding: 13px 20px; border-bottom: 1px solid var(--line); }
+.proj-price-label { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--txt-2); }
+/* pulso "ao vivo" (mesma assinatura do painel da home; @keyframes pulso vem do v2.css) */
+.pj-price-topo .p-live { display: inline-flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--win); }
+.pj-price-topo .p-live::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--win); animation: pulso 2s ease-out infinite; }
+.pj-price-body { padding: 18px 20px 20px; }
+.proj-price-value { font-family: var(--mono); font-size: 38px; font-weight: 700; line-height: 1.05; color: var(--txt); letter-spacing: -0.01em; }
+.proj-price-cents { font-size: 20px; font-weight: 600; color: var(--txt-2); margin-left: 2px; }
+.proj-price-meta { font-family: var(--mono); font-size: 11.5px; color: var(--txt-2); margin-top: 8px; }
+/* selo injetado pelo prices-overlay quando preço atual <= mínimo histórico */
+.proj-lowest-flag { margin-top: 10px; font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--win); }
+.proj-lowest-flag span { font-weight: 400; color: var(--txt-2); font-size: 10.5px; }
+.proj-price-card .regua-blk { margin: 18px 0 16px; gap: 7px; }
+.proj-price-card .regua .r-fill { opacity: 0.75; }
+
+.proj-store-btns { display: flex; flex-direction: column; gap: 8px; min-height: 46px; }
+.proj-store-btn {
+  position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  min-height: 46px; padding: 10px 16px; border-radius: var(--radius); text-decoration: none;
+  background: var(--card-2); border: 1px solid var(--line); color: var(--txt);
+  transition: transform 100ms, filter 100ms, border-color 150ms;
+}
+.proj-store-btn:hover { border-color: var(--brand); }
+.proj-store-btn:active { transform: translateY(2px); }
+.proj-store-btn .store-logo { display: none; }
+.proj-store-btn .store-name { font-family: var(--display); font-weight: 700; font-size: 14.5px; }
+.proj-store-btn.store-ali .store-name::before { content: 'AliExpress'; }
+.proj-store-btn.store-shopee .store-name::before { content: 'Shopee'; }
+.proj-store-btn .store-price { font-family: var(--mono); font-weight: 700; font-size: 14.5px; white-space: nowrap; }
+/* vencedor (ou loja única) = O botão de compra: amarelo --cta, regra do v2 */
+.proj-store-btn.store-winner, .proj-store-btn:only-child { background: var(--cta); border-color: var(--cta); color: #14100A; }
+.proj-store-btn.store-winner:hover, .proj-store-btn:only-child:hover { border-color: var(--cta); filter: brightness(1.08); }
+.proj-store-btn .winner-badge {
+  position: absolute; top: -9px; right: 12px; padding: 2px 9px; border-radius: 999px;
+  font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  background: var(--win); color: #08120C; line-height: 1.5;
+}
+
+/* cupom vivo (renderizado pelo projetor-page.js, Ali-only) */
+#projCupomSlot { margin-top: 12px; }
+#projCupomSlot:empty { margin-top: 0; }
+.proj-coupon { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; background: rgba(91, 200, 238, 0.10); border: 1px dashed rgba(91, 200, 238, 0.55); border-radius: 6px; font-size: 12.5px; color: var(--txt-2); }
+.proj-coupon code { font-family: var(--mono); font-weight: 700; font-size: 13px; color: var(--num); letter-spacing: 0.06em; text-transform: uppercase; }
+.proj-coupon-val { display: block; font-family: var(--mono); font-size: 10.5px; color: var(--txt-2); margin-top: 2px; }
+.proj-coupon-val.hoje { color: var(--alerta); font-weight: 600; }
+.copy-btn { flex-shrink: 0; padding: 6px 12px; border-radius: 4px; border: 1px solid var(--brand-borda); background: transparent; color: var(--brand); font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; transition: background 150ms; }
+.copy-btn:hover { background: var(--brand-dim); }
+
+/* aviso de estoque/importado (último <p> do card, reescrito pelo prices-overlay) */
+.proj-price-card p { font-size: 12.5px; color: var(--txt-2); line-height: 1.55; margin-top: 12px; }
+.proj-price-card p strong { color: var(--alerta); }
+.proj-price-card p a { color: var(--brand); }
+
+/* ---------- veredito ---------- */
+.proj-verdict {
+  margin-top: 28px; padding: 26px 30px; border-radius: 14px;
+  background: linear-gradient(135deg, var(--brand-dim), transparent 55%), var(--card);
+  border: 1px solid var(--line); border-left: 3px solid var(--brand);
+  font-size: 17px; line-height: 1.75; color: var(--txt); max-width: 900px;
+}
+.proj-verdict strong { color: var(--brand); font-weight: 700; }
+
+/* ---------- prós e contras ---------- */
+.proj-pc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; align-items: start; }
+.proj-pc-col { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 24px 26px; }
+.proj-pc-col h3 { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px; }
+.proj-pc-col.pros h3 { color: var(--brand); }
+.proj-pc-col.cons h3 { color: var(--alerta); }
+.proj-pc-col h3::after { content: ''; height: 1px; flex: 1; background: var(--line); }
+.proj-pc-col ul { list-style: none; }
+.proj-pc-col li { position: relative; padding: 10px 0 10px 24px; border-bottom: 1px solid var(--line); }
+.proj-pc-col li:last-child { border-bottom: 0; }
+.proj-pc-col li::before { position: absolute; left: 0; top: 10px; font-family: var(--mono); font-weight: 700; }
+.proj-pc-col.pros li::before { content: '+'; color: var(--brand); }
+.proj-pc-col.cons li::before { content: '-'; color: var(--alerta); }
+.proj-pc-col li strong { display: block; font-size: 14px; font-weight: 600; color: var(--txt); }
+.proj-pc-col li span { display: block; font-size: 13px; color: var(--txt-2); line-height: 1.55; margin-top: 1px; }
+
+/* ---------- bancada: medições com posição no catálogo ---------- */
+.pj-medidas { display: flex; flex-direction: column; gap: 22px; margin-top: 30px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px 28px; }
+.pj-medida { display: grid; grid-template-columns: 210px 1fr; gap: 8px 28px; align-items: center; }
+.pj-medida .m-rotulo { font-family: var(--mono); font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--txt-2); }
+.pj-medida .m-valor { font-family: var(--mono); font-size: 24px; font-weight: 700; color: var(--num); line-height: 1.15; white-space: nowrap; }
+.pj-medida .m-valor .m-tag { font-size: 9px; vertical-align: 3px; }
+.pj-medida .regua-blk { margin: 0; gap: 7px; }
+.pj-medida .regua .r-fill { background: linear-gradient(90deg, rgba(91, 200, 238, 0.25), var(--brand)); opacity: 0.65; }
+.pj-medida .regua-labels { color: var(--txt-2); }
+.pj-medida .regua-labels .min { color: var(--txt-2); }
+.pj-medida .m-escala { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--txt-2); opacity: 0.8; }
+
+/* tiles de medição editorial (decibelímetro, câmera térmica) */
+.pj-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+.pj-tile { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.pj-tile .t-num { font-family: var(--mono); font-size: 26px; font-weight: 700; color: var(--num); line-height: 1.15; }
+.pj-tile .t-num .m-tag { font-size: 9px; vertical-align: 4px; }
+.pj-tile .t-label { font-family: var(--mono); font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--txt-2); margin-top: 6px; }
+.pj-tile .t-fonte { font-size: 12px; color: var(--txt-2); margin-top: 4px; }
+
+/* ficha técnica completa */
+.specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 12px; margin-top: 30px; }
+.spec-card { padding: 14px 18px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); transition: border-color 150ms; }
+.spec-card:hover { border-color: var(--brand-borda); }
+.spec-card .label { font-family: var(--mono); font-size: 9.5px; font-weight: 600; color: var(--txt-2); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 5px; }
+.spec-card .val { font-family: var(--mono); font-size: 13.5px; font-weight: 600; color: var(--txt); }
+
+/* ---------- histórico de preço (arena; DOM interno é contrato) ---------- */
+.price-chart-wrap { background: #0F1520; border: 1px solid var(--line); border-radius: 18px; padding: 26px clamp(16px, 2.6vw, 30px) 24px; margin-top: 30px; }
+.price-status { display: flex; align-items: flex-start; gap: 12px; padding: 15px 18px; border-radius: var(--radius); margin-bottom: 18px; font-size: 14.5px; line-height: 1.5; border: 1px solid var(--line); background: var(--card); color: var(--txt); }
+.price-status .ps-icon { flex-shrink: 0; width: 9px; height: 9px; border-radius: 50%; margin-top: 7px; background: var(--txt-2); }
+.price-status.good { border-color: rgba(47, 224, 138, 0.35); background: linear-gradient(135deg, var(--win-dim), transparent 60%), var(--card); }
+.price-status.good .ps-icon { background: var(--win); box-shadow: 0 0 10px rgba(47, 224, 138, 0.5); }
+.price-status.good strong { color: var(--win); }
+.price-status.bad { border-color: rgba(255, 155, 122, 0.35); background: linear-gradient(135deg, rgba(255, 155, 122, 0.10), transparent 60%), var(--card); }
+.price-status.bad .ps-icon { background: var(--alerta); }
+.price-status.bad strong { color: var(--alerta); }
+.price-status strong { display: block; font-family: var(--display); font-weight: 700; font-size: 15.5px; }
+.price-status .ps-sub { display: block; font-family: var(--mono); font-size: 11.5px; color: var(--txt-2); margin-top: 3px; }
+.price-status .ps-stale { display: block; font-family: var(--mono); font-size: 10.5px; color: var(--alerta); opacity: 0.85; }
+
+.price-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.filter-chip {
+  font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--txt-2); background: var(--card-2); border: 1px solid var(--line); border-radius: 999px;
+  padding: 7px 14px; cursor: pointer; transition: color 150ms, border-color 150ms, opacity 150ms;
+}
+.filter-chip:hover { border-color: var(--brand); }
+/* o runtime pinta chip por loja via style.color inline: a borda acompanha */
+.filter-chip.active { border-color: currentColor; color: var(--txt); }
+.filter-chip:not(.active) { opacity: 0.5; }
+
+.chart-canvas-wrap { position: relative; width: 100%; height: 300px; }
+
+.price-stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; }
+.price-stat { padding: 13px 16px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
+.price-stat .label { font-family: var(--mono); font-size: 9.5px; font-weight: 600; color: var(--txt-2); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+.price-stat .val { font-family: var(--mono); font-size: 16px; font-weight: 700; color: var(--txt); }
+.price-stat.min .val { color: var(--win); }
+.price-stat.max .val { color: var(--alerta); }
+
+/* ---------- vídeos do canal ---------- */
+.proj-videos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 14px; margin-top: 30px; }
+.video-card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; transition: border-color 150ms, transform 150ms, box-shadow 150ms; }
+.video-card:hover { border-color: var(--brand); transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45); }
+.video-card iframe { width: 100%; aspect-ratio: 16/9; border: 0; display: block; }
+.video-card-body { padding: 16px 18px 18px; }
+.video-card .video-type { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--brand); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+.video-card h4 { font-family: var(--display); font-size: 15.5px; font-weight: 700; margin-bottom: 6px; line-height: 1.35; }
+.video-card p { font-size: 12.5px; color: var(--txt-2); line-height: 1.55; margin: 0; }
+
+/* ---------- perguntas dos espectadores ---------- */
+.qa-list { counter-reset: qa; display: flex; flex-direction: column; gap: 12px; margin-top: 30px; max-width: 900px; }
+.qa-item { counter-increment: qa; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; transition: border-color 150ms; }
+.qa-item:hover { border-color: var(--brand-borda); }
+.qa-q { display: flex; align-items: baseline; gap: 12px; font-family: var(--display); font-size: 15.5px; font-weight: 700; color: var(--txt); line-height: 1.4; }
+.qa-q::before { content: counter(qa, decimal-leading-zero); flex-shrink: 0; font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--brand); opacity: 0.75; }
+.qa-a { font-size: 14px; color: var(--txt-2); line-height: 1.65; margin-top: 8px; padding-left: 31px; }
+.qa-author { font-family: var(--mono); font-size: 10.5px; color: var(--txt-2); opacity: 0.7; margin-top: 8px; padding-left: 31px; }
+
+/* ---------- acessórios indicados ---------- */
+.acc-cat { margin-top: 26px; }
+.acc-cat:first-of-type { margin-top: 30px; }
+.acc-cat-label { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 10.5px; font-weight: 600; color: var(--brand); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px; }
+.acc-cat-label::after { content: ''; height: 1px; flex: 1; background: var(--line); }
+.acc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.acc-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: border-color 150ms, transform 150ms; color: var(--txt); text-decoration: none; }
+.acc-card:hover { border-color: var(--brand); transform: translateY(-3px); }
+.acc-card-img { aspect-ratio: 1 / 1; overflow: hidden; background: #0C121B; }
+.acc-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 400ms ease; }
+.acc-card:hover .acc-card-img img { transform: scale(1.05); }
+.acc-card-body { padding: 12px 14px 14px; }
+.acc-card h4 { font-family: var(--display); font-size: 13.5px; font-weight: 700; margin: 0 0 4px; line-height: 1.3; }
+.acc-card p { font-size: 11.5px; color: var(--txt-2); line-height: 1.5; margin: 0; }
+
+/* ---------- próximos passos ---------- */
+.proj-cta-final { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
+.proj-cta-card { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px; text-decoration: none; transition: border-color 150ms, transform 150ms; }
+.proj-cta-card:hover { border-color: var(--brand); transform: translateY(-3px); }
+.proj-cta-card h4 { font-family: var(--display); font-size: 16.5px; font-weight: 700; color: var(--txt); margin-bottom: 6px; }
+.proj-cta-card p { font-size: 13.5px; color: var(--txt-2); line-height: 1.55; }
+/* card "Comprar agora" injetado pelo prices-overlay (vem com style inline antigo) */
+.proj-cta-card.proj-cta-buy { background: linear-gradient(135deg, rgba(255, 185, 46, 0.12), transparent 60%), var(--card) !important; border-color: rgba(255, 185, 46, 0.45) !important; }
+.proj-cta-card.proj-cta-buy:hover { border-color: var(--cta) !important; }
+/* !important: o runtime injeta style inline com token antigo (var(--accent)) */
+.proj-cta-card.proj-cta-buy h4 { color: var(--cta) !important; }
+
+/* ---------- facade do YouTube (o player só carrega no clique) ---------- */
+.yt-facade { position: relative; display: block; width: 100%; height: 100%; padding: 0; border: 0; background: #000; cursor: pointer; overflow: hidden; }
+.video-card .yt-facade { aspect-ratio: 16 / 9; height: auto; }
+.yt-facade img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s ease; }
+.yt-facade:hover img { transform: scale(1.03); }
+.yt-facade .yt-facade-play {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 64px; height: 44px; border-radius: 12px;
+  background: rgba(9, 12, 17, 0.8); border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex; align-items: center; justify-content: center; pointer-events: none;
+  transition: background 0.2s ease, transform 0.2s ease; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+.yt-facade:hover .yt-facade-play { background: #f00; border-color: #f00; transform: translate(-50%, -50%) scale(1.06); }
+.yt-facade .yt-facade-play svg { display: block; margin-left: 2px; }
+@supports not (aspect-ratio: 16 / 9) {
+  .proj-video-wrap { padding-top: 56.25%; height: 0; }
+  .proj-video-wrap .yt-facade, .proj-video-wrap iframe { position: absolute; top: 0; left: 0; }
+  .video-card .yt-facade { height: 0; padding-bottom: 56.25%; }
+  .video-card iframe { height: 0; padding-bottom: 56.25%; }
+}
+
+/* ---------- responsivo ---------- */
+@media (max-width: 980px) {
+  .proj-hero-grid { grid-template-columns: 1fr; }
+  /* monetização mobile: card de preço antes do vídeo (etapa 2.1) */
+  .proj-hero-grid > .proj-price-card { order: -1; }
+  .proj-pc-grid { grid-template-columns: 1fr; }
+  .pj-tiles { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 700px) {
+  .proj-hero { padding: 28px 0 48px; }
+  .pj-medida { grid-template-columns: 1fr; gap: 10px; }
+  .pj-medidas { padding: 20px 18px; }
+  .pj-tiles { grid-template-columns: 1fr; }
+  .chart-canvas-wrap { height: 240px; }
+  .proj-cta-final { grid-template-columns: 1fr; }
+  .proj-videos-grid { grid-template-columns: 1fr; }
+  .qa-a, .qa-author { padding-left: 0; }
+  .proj-coupon { flex-direction: column; align-items: stretch; }
+  .proj-coupon .copy-btn { width: 100%; min-height: 40px; }
+}
+@media (max-width: 480px) {
+  .price-stats-grid { grid-template-columns: 1fr; gap: 8px; }
+  .specs-grid { grid-template-columns: 1fr 1fr; }
+  .proj-price-value { font-size: 32px; }
+}
+@media (max-width: 360px) {
+  .specs-grid { grid-template-columns: 1fr; }
+  .chart-canvas-wrap { height: 190px; }
+}
