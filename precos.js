@@ -11,16 +11,26 @@
 
    ⚙️  JANELAS: editar APENAS o array WINDOWS abaixo controla TUDO
        (botões, cabeçalhos da tabela, chips do mobile e o cálculo).
-       Hoje a 3ª janela é 20 dias porque o histórico ainda não tem
-       30 dias completos. Quando passar de 30 dias (a partir de
-       ~06/06/2026), troque 20 por 30 e adicione '30d' em WIN_LABEL.
+       20d virou 30d em 14/07/2026 (Fase E) — o histórico passou de
+       30 dias completos. Espelhar mudança no prerender_precos.py.
+
+   Fase E (14/07/2026, junto com o chrome v2 do precos.html):
+     - sparkline novo: menor preço POR DIA (sem o zigue-zague das
+       4 checagens/dia), janela 30d, curva suave, gradiente, cores
+       v2; série estável centralizada (antes colava no rodapé)
+     - FLIP no re-sort: trocar janela DESLIZA as linhas (data-k)
+     - cascata de entrada (body.pt-anim + .pt-in; busca digitada
+       não re-anima; prefers-reduced-motion respeitado)
+     - estado vazio da busca
    ============================================================ */
 (function () {
   'use strict';
 
   // ⚙️ ÚNICO lugar pra mexer nas janelas (em dias). A 1ª é o sort padrão.
-  var WINDOWS = [1, 7, 20];
+  var WINDOWS = [1, 7, 30];
   var WIN_LABEL = { 1: '24h', 7: '7d', 20: '20d', 30: '30d' };
+
+  var MOTION_OK = !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 
   // ---------- helpers de escape/format ----------
   function escHtml(s) {
@@ -114,31 +124,57 @@
     return ((hoje - media) / media) * 100;
   }
 
-  // ---------- sparkline (SVG inline, mesmo estilo de qual-projetor) ----------
+  // ---------- sparkline v2 (Fase E; espelhado no prerender_precos.py) ----------
+  // Menor preço POR DIA nos últimos 30 dias, curva Catmull-Rom suavizada,
+  // gradiente sob a linha, cores do v2. Série estável fica no MEIO do svg.
+  var sparkSeq = 0;
+  function smoothPath(pts, h) {
+    if (pts.length < 3) {
+      var out = 'M' + pts[0][0] + ' ' + pts[0][1];
+      for (var j = 1; j < pts.length; j++) out += 'L' + pts[j][0] + ' ' + pts[j][1];
+      return out;
+    }
+    function cl(y) { return Math.max(1, Math.min(h - 1, y)); }
+    var d = 'M' + pts[0][0] + ' ' + pts[0][1];
+    for (var i = 0; i < pts.length - 1; i++) {
+      var p0 = i > 0 ? pts[i - 1] : pts[i];
+      var p1 = pts[i], p2 = pts[i + 1];
+      var p3 = (i + 2 < pts.length) ? pts[i + 2] : p2;
+      var c1x = p1[0] + (p2[0] - p0[0]) / 6, c1y = cl(p1[1] + (p2[1] - p0[1]) / 6);
+      var c2x = p2[0] - (p3[0] - p1[0]) / 6, c2y = cl(p2[1] - (p3[1] - p1[1]) / 6);
+      d += 'C' + c1x.toFixed(1) + ' ' + c1y.toFixed(1) + ',' + c2x.toFixed(1) + ' ' + c2y.toFixed(1) + ',' + p2[0] + ' ' + p2[1];
+    }
+    return d;
+  }
   function sparkSvg(pontos) {
-    if (!pontos || pontos.length < 2) return '';
-    var lim = dateMinusDays(7);
-    var janela = pontos.filter(function (p) { return String(p.data).slice(0, 10) >= lim; });
-    if (janela.length < 2) janela = pontos;
-    var precos = janela.map(function (p) { return p.preco; });
+    if (!pontos || !pontos.length) return '';
+    var porDia = porDiaMins(pontos);
+    var dias = Object.keys(porDia).sort();
+    var lim = dateMinusDays(30);
+    var janela = dias.filter(function (d) { return d >= lim; });
+    if (janela.length < 2) janela = dias;
+    if (janela.length < 2) return '';
+    var precos = janela.map(function (d) { return porDia[d]; });
     var min = Math.min.apply(null, precos), max = Math.max.apply(null, precos);
-    var w = 88, h = 24, pad = 2, range = (max - min) || 1;
-    var coords = janela.map(function (p, i) {
-      var x = (i / (janela.length - 1 || 1)) * (w - pad * 2) + pad;
-      var y = h - pad - ((p.preco - min) / range) * (h - pad * 2);
-      return x.toFixed(1) + ',' + y.toFixed(1);
+    var w = 100, h = 28, pad = 3, range = max - min;
+    var pts = janela.map(function (d, i) {
+      var x = (i / (janela.length - 1)) * (w - pad * 2) + pad;
+      var y = range ? (h - pad - ((porDia[d] - min) / range) * (h - pad * 2)) : h / 2;
+      return [Number(x.toFixed(1)), Number(y.toFixed(1))];
     });
-    var first = coords[0].split(',');
-    var last = coords[coords.length - 1].split(',');
     var queda = precos[precos.length - 1] <= precos[0];
-    var stroke = queda ? 'rgba(91,217,160,0.75)' : 'rgba(255,155,122,0.75)';
-    var fillCor = queda ? 'rgba(91,217,160,0.12)' : 'rgba(255,155,122,0.12)';
-    // área preenchida sob a linha (fecha pelo rodapé do SVG)
-    var fillPts = coords.join(' ') + ' ' + last[0] + ',' + (h - pad) + ' ' + first[0] + ',' + (h - pad);
+    var cor = queda ? '#2FE08A' : '#FF9B7A';
+    var gid = 'ptg' + (++sparkSeq);
+    var line = smoothPath(pts, h);
+    var first = pts[0], last = pts[pts.length - 1];
+    var fill = line + 'L' + last[0] + ' ' + (h - 1) + 'L' + first[0] + ' ' + (h - 1) + 'Z';
     return '<svg class="pt-spark" width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + ' ' + h + '" aria-hidden="true">' +
-      '<polygon points="' + fillPts + '" fill="' + fillCor + '" stroke="none"/>' +
-      '<polyline points="' + coords.join(' ') + '" fill="none" stroke="' + stroke + '" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-      '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="2.4" fill="' + stroke + '"/></svg>';
+      '<defs><linearGradient id="' + gid + '" x1="0" y1="0" x2="0" y2="1">' +
+      '<stop offset="0" stop-color="' + cor + '" stop-opacity="0.28"/>' +
+      '<stop offset="1" stop-color="' + cor + '" stop-opacity="0"/></linearGradient></defs>' +
+      '<path class="sp-fill" d="' + fill + '" fill="url(#' + gid + ')"/>' +
+      '<path class="sp-line" d="' + line + '" fill="none" stroke="' + cor + '" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/>' +
+      '<circle class="sp-dot" cx="' + last[0] + '" cy="' + last[1] + '" r="2.5" fill="' + cor + '"/></svg>';
   }
 
   // ---------- montagem das linhas ----------
@@ -258,7 +294,7 @@
         return '<td class="pt-c-var' + (win === n ? ' pt-active' : '') + '">' + varCell(r.v[n]) + '</td>';
       }).join('');
       out.push(
-        '<tr>' +
+        '<tr data-k="' + escHtml(r.buscaKey) + '">' +
         '<td class="pt-rank">' + (i + 1) + '</td>' +
         '<td class="pt-c-name">' + nameCell(r) + '</td>' +
         '<td class="pt-c-price">' + fmtBRL(r.preco) + '</td>' +
@@ -280,7 +316,7 @@
           '<span class="pt-chip-lbl">' + winLabel(n) + '</span>' + varCell(r.v[n]) + '</div>';
       }).join('');
       out.push(
-        '<div class="pt-card">' +
+        '<div class="pt-card" data-k="' + escHtml(r.buscaKey) + '">' +
         '<div class="pt-card-top">' +
         '<div class="pt-card-rank">' + (i + 1) + '</div>' +
         nameCell(r) +
@@ -319,7 +355,7 @@
         '<th>Projetor</th>' +
         '<th>Preço</th>' +
         vth +
-        '<th>Últimos 7 dias</th>' +
+        '<th>Últimos 30 dias</th>' +
         '<th class="pt-th-var">Oferta</th>' +
         '</tr>';
     }
@@ -329,7 +365,60 @@
   var ALL = [];
   var state = { win: WINDOWS[0], dir: 'queda', q: '' }; // dir: 'queda' = maior queda primeiro
 
-  function applyView() {
+  // Cascata de entrada (Fase E): --i vira delay no CSS; body.pt-anim liga o
+  // conjunto (linhas + traço do sparkline). Busca digitada passa anim=false
+  // pra não re-animar a cada tecla.
+  function cascade(raiz, sel) {
+    var els = raiz.querySelectorAll(sel);
+    for (var i = 0; i < els.length; i++) {
+      els[i].style.setProperty('--i', Math.min(i, 22));
+      els[i].classList.add('pt-in');
+    }
+  }
+
+  // FLIP (Fase E): posição antiga − nova = translateY inicial; soltando o
+  // transform, a linha DESLIZA pro novo lugar. Linha sem posição antiga
+  // (voltou do filtro / 1ª carga) entra por fade (.pt-in).
+  function capturaPos(raiz, sel) {
+    var m = {}, els = raiz.querySelectorAll(sel), n = 0;
+    for (var i = 0; i < els.length; i++) {
+      var k = els[i].getAttribute('data-k');
+      if (k) { m[k] = els[i].getBoundingClientRect().top; n++; }
+    }
+    return n ? m : null;
+  }
+  function flipOuCascata(raiz, sel, oldPos) {
+    var els = raiz.querySelectorAll(sel);
+    if (!oldPos) { cascade(raiz, sel); return; }
+    var moves = [];
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i], k = el.getAttribute('data-k');
+      if (k && oldPos[k] != null) {
+        var delta = oldPos[k] - el.getBoundingClientRect().top;
+        if (delta) { el.style.transform = 'translateY(' + delta + 'px)'; moves.push(el); }
+      } else {
+        el.style.setProperty('--i', 0);
+        el.classList.add('pt-in');
+      }
+    }
+    if (!moves.length) return;
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        for (var j = 0; j < moves.length; j++) {
+          moves[j].style.transition = 'transform 550ms cubic-bezier(0.22, 1, 0.36, 1)';
+          moves[j].style.transform = '';
+        }
+        setTimeout(function () {
+          for (var j = 0; j < moves.length; j++) { moves[j].style.transition = ''; }
+        }, 620);
+      });
+    });
+  }
+
+  function applyView(anim) {
+    var animar = MOTION_OK && anim !== false;
+    document.body.classList.toggle('pt-anim', animar);
+
     var rows = state.q ? ALL.filter(function (r) { return r.buscaKey.indexOf(state.q) !== -1; }) : ALL.slice();
     var win = state.win, dir = state.dir;
     rows.sort(function (a, b) {
@@ -344,8 +433,17 @@
 
     var tbody = document.getElementById('ptBody');
     var cards = document.getElementById('ptCards');
-    if (tbody) tbody.innerHTML = renderTable(rows, win);
-    if (cards) cards.innerHTML = renderCards(rows, win);
+
+    if (!rows.length) {
+      var msg = 'Nenhum projetor bate com essa busca — tenta só a marca (ex.: "wanbo").';
+      if (tbody) tbody.innerHTML = '<tr><td class="pt-vazio" colspan="' + (5 + WINDOWS.length) + '">' + msg + '</td></tr>';
+      if (cards) cards.innerHTML = '<div class="pt-vazio">' + msg + '</div>';
+    } else {
+      var posT = animar && tbody ? capturaPos(tbody, 'tr[data-k]') : null;
+      var posC = animar && cards ? capturaPos(cards, '.pt-card[data-k]') : null;
+      if (tbody) { tbody.innerHTML = renderTable(rows, win); if (animar) flipOuCascata(tbody, 'tr', posT); }
+      if (cards) { cards.innerHTML = renderCards(rows, win); if (animar) flipOuCascata(cards, '.pt-card', posC); }
+    }
 
     var count = document.getElementById('ptCount');
     if (count) count.textContent = rows.length + ' projetores';
@@ -366,9 +464,9 @@
     });
   }
 
-  // Estilo do indicador de sort injetado via JS — o <style> do precos.html é
-  // arquivo da VM (marcadores pt*), não editar lá. Mesmo motivo pro estilo do
-  // cupom copiável/expira hoje (etapa 2.1).
+  // Estilo do indicador de sort injetado via JS — mantido aqui (e não só no
+  // template) pra cobrir o período em que o precos.html publicado ainda é o
+  // chrome antigo; duplicar com o CSS do template é inofensivo.
   (function injectSortCss() {
     var st = document.createElement('style');
     st.textContent = '[data-win] .pt-sort-ind{font-size:0.85em}' +
@@ -416,7 +514,7 @@
       state.win = w;
       state.dir = 'queda'; // nova janela começa por maior queda
     }
-    applyView();
+    applyView(true);
   }
 
   function bindControls() {
@@ -433,7 +531,7 @@
     });
     var search = document.getElementById('ptSearch');
     if (search) {
-      search.addEventListener('input', function () { state.q = norm(this.value); applyView(); });
+      search.addEventListener('input', function () { state.q = norm(this.value); applyView(false); });
     }
   }
 
@@ -461,7 +559,7 @@
     Promise.all([overlay, histFetch]).then(function () {
       ALL = buildRows();
       setMeta();
-      applyView();
+      applyView(true);
       var loading = document.getElementById('ptLoading');
       if (loading) loading.style.display = 'none';
     });
