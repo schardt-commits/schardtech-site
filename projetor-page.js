@@ -131,15 +131,24 @@
           return partes.length ? {txt: partes.join(' · '), hoje: hoje} : null;
         }
 
+        // Cupom com validade vencida não renderiza (antes só perdia o texto e
+        // deixava o código morto no ar — aud. raio-X). Sem validade = fica.
+        function cupomVencido(validade) {
+          if (!(validade && /^\d{4}-\d{2}-\d{2}$/.test(String(validade)))) return false;
+          var d = new Date();
+          var hojeIso = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+          return validade < hojeIso;
+        }
+
         // Cupons: loja + plataforma (os dois que aparecem no anúncio)
         var venc = mkts[p.marketplace_vencedor] || {};
         var cupons = [];
         // Sem fallback estático (p.ali_cupom_loja): cupom exibido vem SÓ do dado
         // vivo do checker. Fallback antigo ressuscitava código morto (aud. 11/06).
         var cupomLoja = venc.cupom;
-        if (cupomLoja) cupons.push({rotulo: 'Cupom da loja', cod: cupomLoja,
+        if (cupomLoja && !cupomVencido(venc.cupom_validade)) cupons.push({rotulo: 'Cupom da loja', cod: cupomLoja,
           meta: cupomMeta(venc.cupom_validade, venc.cupom_minimo)});
-        if (venc.cupom_plataforma) cupons.push({rotulo: 'Cupom AliExpress', cod: venc.cupom_plataforma,
+        if (venc.cupom_plataforma && !cupomVencido(venc.cupom_plataforma_validade)) cupons.push({rotulo: 'Cupom ' + mkLabel(p.marketplace_vencedor), cod: venc.cupom_plataforma,
           meta: cupomMeta(venc.cupom_plataforma_validade, venc.cupom_plataforma_minimo)});
         if (cupons.length) {
           var slot = document.getElementById('projCupomSlot');
@@ -166,11 +175,14 @@
         }
       }
 
+      var _waitTries = 0;
       function waitAndRun() {
         if (window.PRICES_OVERLAY_READY && typeof window.PRICES_OVERLAY_READY.then === 'function') {
           window.PRICES_OVERLAY_READY.then(run).catch(function(){ run(); });
-        } else {
+        } else if (++_waitTries < 60) {
           setTimeout(waitAndRun, 50);
+        } else {
+          run();  // teto ~3s: se o overlay nunca ficou pronto, degrada pro SSR/estático
         }
       }
       if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', waitAndRun);
@@ -255,7 +267,7 @@
         }
 
         var lojasMeta = {
-          aliexpress: { label: 'AliExpress', color: '#8FD3FF' },
+          aliexpress: { label: 'AliExpress', color: '#5BC8EE' },
           shopee:     { label: 'Shopee',     color: '#FF7A45' },
           ml:         { label: 'Mercado Livre', color: '#FFD93D' }
         };
@@ -376,13 +388,13 @@
             plugins: {
               legend: { display: false },
               tooltip: {
-                backgroundColor: 'rgba(20,24,43,0.95)',
-                titleColor: '#EAEAEA',
+                backgroundColor: 'rgba(17,23,34,0.96)',
+                titleColor: '#EEF3FA',
                 titleFont: { weight: '600', size: 12 },
-                bodyColor: '#EAEAEA',
+                bodyColor: '#EEF3FA',
                 bodyFont: { size: 12 },
                 padding: 12,
-                borderColor: 'rgba(79,163,199,0.42)',
+                borderColor: 'rgba(91,200,238,0.30)',
                 borderWidth: 1,
                 displayColors: true,
                 boxPadding: 4,
@@ -393,7 +405,7 @@
                     var loja = item.dataset.label;
                     var valor = fmtBRL(item.parsed.y);
                     var diff = item.parsed.y - menor;
-                    if (diff <= 0.5) return loja + ': ' + valor + '  · 🟢 menor preço';
+                    if (diff <= 0.5) return loja + ': ' + valor + '  · menor preço';
                     return loja + ': ' + valor + '  · ' + fmtBRL(diff) + ' acima do menor';
                   }
                 }
@@ -475,15 +487,15 @@
           var distMedia = ((atual - media) / media) * 100;
           var icon, classe, titulo, sub;
           if (distMedia <= -3) {
-            icon = '🟢'; classe = 'good';
+            icon = ''; classe = 'good';
             titulo = Math.abs(Math.round(distMedia)) + '% abaixo da média histórica';
             sub = 'Atualmente em ' + fmtBRL(atual) + '. Média histórica: ' + fmtBRL(media) + '.';
           } else if (distMedia < 3) {
-            icon = '🔵'; classe = 'neutral';
+            icon = ''; classe = 'neutral';
             titulo = 'Preço no patamar médio';
             sub = 'Atualmente em ' + fmtBRL(atual) + '. Média histórica: ' + fmtBRL(media) + '.';
           } else {
-            icon = '🔴'; classe = 'bad';
+            icon = ''; classe = 'bad';
             titulo = '+' + Math.round(distMedia) + '% acima da média histórica';
             sub = 'Atualmente em ' + fmtBRL(atual) + '. Média histórica: ' + fmtBRL(media) + '.';
           }

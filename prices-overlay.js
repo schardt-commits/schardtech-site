@@ -312,7 +312,7 @@
       var d = live.historico_desde;
       var flag = document.createElement('div');
       flag.className = 'proj-lowest-flag';
-      flag.innerHTML = '🔥 Menor preço do nosso histórico <span>(monitorado desde ' +
+      flag.innerHTML = 'Menor preço do nosso histórico <span>(monitorado desde ' +
         d.slice(8, 10) + '/' + d.slice(5, 7) + ')</span>';
       var metaEl = card.querySelector('#projPriceMeta, .proj-price-meta');
       if (metaEl) metaEl.insertAdjacentElement('afterend', flag);
