@@ -271,51 +271,68 @@
           shopee:     { label: 'Shopee',     color: '#FF7A45' },
           ml:         { label: 'Mercado Livre', color: '#FFD93D' }
         };
+        var lojasAtivas = Object.keys(lojasMeta).filter(function(l) { return lojasDisponiveis[l]; });
+        var seriesCompletas = {};
+        lojasAtivas.forEach(function(l) { seriesCompletas[l] = serieDeLoja(l); });
 
-        // Redesign 10/06/2026: com 120 dias de janela, bolinha em todo ponto
-        // virava "lagarta" — pontos somem em série longa (hover continua via
-        // pointHitRadius). Buraco de coleta vira trecho TRACEJADO em vez de
-        // linha quebrada (tracejado = sem dado naquele dia, honesto e legível).
-        var muitosPontos = labels.length > 35;
-        var datasets = [];
-        Object.keys(lojasMeta).forEach(function(loja) {
-          if (!lojasDisponiveis[loja]) return;
-          var meta = lojasMeta[loja];
-          datasets.push({
-            label: meta.label,
-            data: serieDeLoja(loja),
-            borderColor: meta.color,
-            backgroundColor: meta.color + '22',
-            pointBackgroundColor: meta.color,
-            pointBorderColor: 'rgba(11,11,11,0.6)',
-            pointBorderWidth: 2,
-            pointRadius: muitosPontos ? 0 : 4,
-            pointHoverRadius: 7,
-            pointHitRadius: 16,
-            borderWidth: 2.5,
-            tension: 0.25,
-            spanGaps: true,
-            segment: {
-              borderDash: function(s) { return (s.p0.skip || s.p1.skip) ? [5, 5] : undefined; }
-            }
+        // Janela de período (refino 14/07): série longa espremida inteira vira
+        // eletrocardiograma. Com 35+ dias de histórico o default é 30 dias e o
+        // usuário troca por chips (30/90/tudo). 0 = série inteira.
+        var diasJanela = labels.length > 35 ? 30 : 0;
+        function fatia(arr, dias) { return dias > 0 ? arr.slice(-dias) : arr; }
+
+        // Sem bolinha na linha (lagarta) — o hover acha o ponto via hitRadius
+        // e o crosshair. Buraco de coleta segue TRACEJADO (sem dado no dia).
+        function montaDatasets() {
+          var ds = lojasAtivas.map(function(loja) {
+            var meta = lojasMeta[loja];
+            return {
+              label: meta.label,
+              data: fatia(seriesCompletas[loja], diasJanela),
+              borderColor: meta.color,
+              pointBackgroundColor: meta.color,
+              pointBorderColor: 'rgba(9,12,17,0.6)',
+              pointBorderWidth: 2,
+              pointRadius: 0,
+              pointHoverRadius: 7,
+              pointHitRadius: 16,
+              borderWidth: 2.5,
+              tension: 0.25,
+              spanGaps: true,
+              segment: {
+                borderDash: function(s) { return (s.p0.skip || s.p1.skip) ? [5, 5] : undefined; }
+              }
+            };
           });
-        });
+          // Degradê sob as linhas (estilo CoinGecko). Loja única = mais
+          // presente; com 2+ lojas o topo cai pra sobreposição não virar lama.
+          var alphaTopo = ds.length === 1 ? '30' : '12';
+          ds.forEach(function(d0) {
+            var corFill = d0.borderColor;
+            d0.fill = 'origin';
+            d0.backgroundColor = function(c) {
+              var area = c.chart.chartArea;
+              if (!area) return corFill + '14';
+              var g = c.chart.ctx.createLinearGradient(0, area.top, 0, area.bottom);
+              g.addColorStop(0, corFill + alphaTopo);
+              g.addColorStop(1, corFill + '00');
+              return g;
+            };
+          });
+          return ds;
+        }
+        var datasets = montaDatasets();
 
-        // Degradê sob as linhas (estilo CoinGecko). Loja única = mais presente;
-        // com 2+ lojas o topo cai pra 7% pra sobreposição não virar lama.
-        var alphaTopo = datasets.length === 1 ? '30' : '12';
-        datasets.forEach(function(ds) {
-          var corFill = ds.borderColor;
-          ds.fill = 'origin';
-          ds.backgroundColor = function(c) {
-            var area = c.chart.chartArea;
-            if (!area) return corFill + '14';
-            var g = c.chart.ctx.createLinearGradient(0, area.top, 0, area.bottom);
-            g.addColorStop(0, corFill + alphaTopo);
-            g.addColorStop(1, corFill + '00');
-            return g;
-          };
-        });
+        // Eixo y acompanha a JANELA visível (a série inteira comprimia os
+        // últimos 30 dias numa faixa de pixels)
+        function limitesY() {
+          var vals = [];
+          lojasAtivas.forEach(function(l) {
+            fatia(seriesCompletas[l], diasJanela).forEach(function(v) { if (v != null) vals.push(v); });
+          });
+          if (!vals.length) return {};
+          return { min: Math.min.apply(null, vals) * 0.96, max: Math.max.apply(null, vals) * 1.04 };
+        }
 
         var menor = historico.min;
         var maior = historico.max;
@@ -396,9 +413,35 @@
           }
         };
 
+        // Ponto final com halo: marca o "agora" de cada série visível
+        var ultimoPontoPlugin = {
+          id: 'ultimoPonto',
+          afterDatasetsDraw: function(chart) {
+            chart.data.datasets.forEach(function(ds, i) {
+              if (!chart.isDatasetVisible(i)) return;
+              var idx = -1;
+              for (var k = ds.data.length - 1; k >= 0; k--) {
+                if (ds.data[k] != null) { idx = k; break; }
+              }
+              if (idx < 0) return;
+              var el = chart.getDatasetMeta(i).data[idx];
+              if (!el) return;
+              var ctx = chart.ctx;
+              ctx.save();
+              ctx.fillStyle = ds.borderColor + '2E';
+              ctx.beginPath(); ctx.arc(el.x, el.y, 9, 0, Math.PI * 2); ctx.fill();
+              ctx.fillStyle = ds.borderColor;
+              ctx.strokeStyle = 'rgba(9,12,17,0.8)';
+              ctx.lineWidth = 2;
+              ctx.beginPath(); ctx.arc(el.x, el.y, 4, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+              ctx.restore();
+            });
+          }
+        };
+
         var chart = new Chart(canvas.getContext('2d'), {
           type: 'line',
-          data: { labels: labels, datasets: datasets },
+          data: { labels: fatia(labels, diasJanela), datasets: datasets },
           options: {
             responsive: true,
             maintainAspectRatio: false,
@@ -442,12 +485,12 @@
               y: {
                 grid: { color: 'rgba(234,234,234,0.05)' },
                 ticks: { color: 'rgba(234,234,234,0.45)', maxTicksLimit: 6, font: { family: '"IBM Plex Mono", monospace', size: 10 }, callback: function(v) { return 'R$ ' + v.toLocaleString('pt-BR'); } },
-                suggestedMin: menor * 0.92,
-                suggestedMax: maior * 1.08
+                suggestedMin: limitesY().min,
+                suggestedMax: limitesY().max
               }
             }
           },
-          plugins: [minLinePlugin, mediaLinePlugin, crosshairPlugin]
+          plugins: [minLinePlugin, mediaLinePlugin, crosshairPlugin, ultimoPontoPlugin]
         });
 
         // Atualiza chips de filtro: cria um chip por loja disponível
@@ -485,12 +528,47 @@
           if (todosChip) {
             todosChip.onclick = function() {
               var allActive = todosChip.classList.toggle('active');
-              filtersWrap.querySelectorAll('.filter-chip').forEach(function(c) {
+              filtersWrap.querySelectorAll('.filter-chip:not([data-periodo])').forEach(function(c) {
                 c.classList.toggle('active', allActive);
               });
               datasets.forEach(function(_, i) { chart.setDatasetVisibility(i, allActive); });
               chart.update();
             };
+          }
+
+          // Chips de período (30/90/tudo) na mesma linha, encostados à direita.
+          // Só aparecem quando o histórico passa de 35 dias.
+          if (labels.length > 35) {
+            var periodos = [[30, '30 dias'], [90, '90 dias'], [0, 'tudo']].filter(function(par) {
+              return par[0] === 0 || labels.length > par[0];
+            });
+            periodos.forEach(function(par, i) {
+              var chip = document.createElement('button');
+              chip.type = 'button';
+              chip.className = 'filter-chip' + (par[0] === diasJanela ? ' active' : '');
+              chip.dataset.periodo = String(par[0]);
+              chip.setAttribute('aria-pressed', String(par[0] === diasJanela));
+              chip.textContent = par[1];
+              if (i === 0) chip.style.marginLeft = 'auto';
+              chip.addEventListener('click', function() {
+                if (par[0] === diasJanela) return;
+                diasJanela = par[0];
+                filtersWrap.querySelectorAll('[data-periodo]').forEach(function(c) {
+                  var ativa = c === chip;
+                  c.classList.toggle('active', ativa);
+                  c.setAttribute('aria-pressed', String(ativa));
+                });
+                chart.data.labels = fatia(labels, diasJanela);
+                chart.data.datasets.forEach(function(d0, di) {
+                  d0.data = fatia(seriesCompletas[lojasAtivas[di]], diasJanela);
+                });
+                var lim = limitesY();
+                chart.options.scales.y.suggestedMin = lim.min;
+                chart.options.scales.y.suggestedMax = lim.max;
+                chart.update();
+              });
+              filtersWrap.appendChild(chip);
+            });
           }
         }
 

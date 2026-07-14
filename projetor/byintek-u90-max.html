@@ -536,8 +536,8 @@
         pointBackgroundColor: color,
         pointBorderColor: 'rgba(9,12,17,0.6)',
         pointBorderWidth: 2,
-        pointRadius: 4,
-        pointHoverRadius: 8,
+        pointRadius: 0,
+        pointHoverRadius: 7,
         pointHoverBorderWidth: 2,
         borderWidth: 2.5,
         tension: 0.25,
@@ -588,6 +588,32 @@
         ctx.lineTo(x, chartArea.bottom);
         ctx.stroke();
         ctx.restore();
+      }
+    };
+
+    // Ponto final com halo: marca o "agora" de cada série visível
+    const ultimoPontoPlugin = {
+      id: 'ultimoPonto',
+      afterDatasetsDraw(chart) {
+        chart.data.datasets.forEach((ds, i) => {
+          if (!chart.isDatasetVisible(i)) return;
+          let idx = -1;
+          for (let k = ds.data.length - 1; k >= 0; k--) {
+            if (ds.data[k] != null) { idx = k; break; }
+          }
+          if (idx < 0) return;
+          const el = chart.getDatasetMeta(i).data[idx];
+          if (!el) return;
+          const ctx = chart.ctx;
+          ctx.save();
+          ctx.fillStyle = ds.borderColor + '2E';
+          ctx.beginPath(); ctx.arc(el.x, el.y, 9, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = ds.borderColor;
+          ctx.strokeStyle = 'rgba(9,12,17,0.8)';
+          ctx.lineWidth = 2;
+          ctx.beginPath(); ctx.arc(el.x, el.y, 4, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+          ctx.restore();
+        });
       }
     };
 
@@ -681,7 +707,7 @@
             }
           }
         },
-        plugins: [minLinePlugin, crosshairPlugin]
+        plugins: [minLinePlugin, crosshairPlugin, ultimoPontoPlugin]
       });
 
       // Filtros de marketplace
