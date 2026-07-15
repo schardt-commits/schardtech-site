@@ -1,59 +1,59 @@
 {
-  "data_coleta": "14/07",
-  "hora_coleta": "21:39",
-  "data_ontem": "13/07",
-  "data_hoje": "14/07",
-  "total_quedas": 22,
+  "data_coleta": "15/07",
+  "hora_coleta": "00:34",
+  "data_ontem": "14/07",
+  "data_hoje": "15/07",
+  "total_quedas": 7,
   "quedas": [
     {
-      "marca": "Byintek",
-      "modelo": "Love U4",
-      "slug": "byintek-love-u4",
-      "preco_atual": 508.13,
-      "preco_ontem": 558.83,
-      "delta": -50.7,
-      "delta_pct": -9.07,
-      "data_checagem": "2026-07-14 21:39"
+      "marca": "Vevshao",
+      "modelo": "V60",
+      "slug": "vevshao-v60",
+      "preco_atual": 1984.28,
+      "preco_ontem": 2465.47,
+      "delta": -481.19,
+      "delta_pct": -19.52,
+      "data_checagem": "2026-07-15 00:34"
     },
     {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 878.3,
-      "preco_ontem": 962.0,
-      "delta": -83.7,
-      "delta_pct": -8.7,
-      "data_checagem": "2026-07-14 21:39"
+      "marca": "Progaga",
+      "modelo": "PG610W",
+      "slug": "progaga-pg610w",
+      "preco_atual": 839.72,
+      "preco_ontem": 936.24,
+      "delta": -96.52,
+      "delta_pct": -10.31,
+      "data_checagem": "2026-07-15 00:20"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 929.7,
-      "preco_ontem": 1008.81,
-      "delta": -79.11,
-      "delta_pct": -7.84,
-      "data_checagem": "2026-07-14 21:26"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1279.94,
-      "preco_ontem": 1383.17,
-      "delta": -103.23,
-      "delta_pct": -7.46,
-      "data_checagem": "2026-07-14 21:22"
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 224.03,
+      "preco_ontem": 247.21,
+      "delta": -23.18,
+      "delta_pct": -9.38,
+      "data_checagem": "2026-07-15 00:19"
     },
     {
       "marca": "Thundeal",
-      "modelo": "TD98PRO ATV",
-      "slug": "thundeal-td98pro-atv",
-      "preco_atual": 1404.25,
-      "preco_ontem": 1514.61,
-      "delta": -110.36,
-      "delta_pct": -7.29,
-      "data_checagem": "2026-07-14 21:22"
+      "modelo": "TD92 Pro",
+      "slug": "thundeal-td92-pro",
+      "preco_atual": 616.28,
+      "preco_ontem": 671.31,
+      "delta": -55.03,
+      "delta_pct": -8.2,
+      "data_checagem": "2026-07-15 00:20"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 678.18,
+      "preco_ontem": 736.24,
+      "delta": -58.06,
+      "delta_pct": -7.89,
+      "data_checagem": "2026-07-15 00:22"
     }
   ]
 }
