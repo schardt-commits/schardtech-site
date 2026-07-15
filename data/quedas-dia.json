@@ -1,9 +1,9 @@
 {
   "data_coleta": "15/07",
-  "hora_coleta": "00:34",
+  "hora_coleta": "09:33",
   "data_ontem": "14/07",
   "data_hoje": "15/07",
-  "total_quedas": 7,
+  "total_quedas": 8,
   "quedas": [
     {
       "marca": "Vevshao",
@@ -13,7 +13,27 @@
       "preco_ontem": 2465.47,
       "delta": -481.19,
       "delta_pct": -19.52,
-      "data_checagem": "2026-07-15 00:34"
+      "data_checagem": "2026-07-15 09:33"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD92 Pro",
+      "slug": "thundeal-td92-pro",
+      "preco_atual": 564.28,
+      "preco_ontem": 671.31,
+      "delta": -107.03,
+      "delta_pct": -15.94,
+      "data_checagem": "2026-07-15 09:20"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 626.18,
+      "preco_ontem": 736.24,
+      "delta": -110.06,
+      "delta_pct": -14.95,
+      "data_checagem": "2026-07-15 09:21"
     },
     {
       "marca": "Progaga",
@@ -23,7 +43,7 @@
       "preco_ontem": 936.24,
       "delta": -96.52,
       "delta_pct": -10.31,
-      "data_checagem": "2026-07-15 00:20"
+      "data_checagem": "2026-07-15 09:19"
     },
     {
       "marca": "Progaga",
@@ -33,27 +53,7 @@
       "preco_ontem": 247.21,
       "delta": -23.18,
       "delta_pct": -9.38,
-      "data_checagem": "2026-07-15 00:19"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD92 Pro",
-      "slug": "thundeal-td92-pro",
-      "preco_atual": 616.28,
-      "preco_ontem": 671.31,
-      "delta": -55.03,
-      "delta_pct": -8.2,
-      "data_checagem": "2026-07-15 00:20"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 678.18,
-      "preco_ontem": 736.24,
-      "delta": -58.06,
-      "delta_pct": -7.89,
-      "data_checagem": "2026-07-15 00:22"
+      "data_checagem": "2026-07-15 09:19"
     }
   ]
 }
