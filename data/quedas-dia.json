@@ -1,40 +1,10 @@
 {
   "data_coleta": "16/07",
-  "hora_coleta": "10:34",
+  "hora_coleta": "15:23",
   "data_ontem": "15/07",
   "data_hoje": "16/07",
-  "total_quedas": 7,
+  "total_quedas": 2,
   "quedas": [
-    {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 835.18,
-      "preco_ontem": 931.23,
-      "delta": -96.05,
-      "delta_pct": -10.31,
-      "data_checagem": "2026-07-16 10:20"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 222.81,
-      "preco_ontem": 245.61,
-      "delta": -22.8,
-      "delta_pct": -9.28,
-      "data_checagem": "2026-07-16 10:20"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 622.73,
-      "preco_ontem": 680.52,
-      "delta": -57.79,
-      "delta_pct": -8.49,
-      "data_checagem": "2026-07-16 10:22"
-    },
     {
       "marca": "Bettdow",
       "modelo": "AC1071",
@@ -43,17 +13,17 @@
       "preco_ontem": 1527.88,
       "delta": -115.84,
       "delta_pct": -7.58,
-      "data_checagem": "2026-07-16 10:34"
+      "data_checagem": "2026-07-16 15:23"
     },
     {
       "marca": "Byintek",
       "modelo": "U14 PRO",
       "slug": "byintek-u14-pro",
-      "preco_atual": 1720.52,
+      "preco_atual": 1733.77,
       "preco_ontem": 1822.43,
-      "delta": -101.91,
-      "delta_pct": -5.59,
-      "data_checagem": "2026-07-16 10:34"
+      "delta": -88.66,
+      "delta_pct": -4.86,
+      "data_checagem": "2026-07-16 15:23"
     }
   ]
 }
