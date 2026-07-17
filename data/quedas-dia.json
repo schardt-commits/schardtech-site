@@ -1,59 +1,29 @@
 {
   "data_coleta": "17/07",
-  "hora_coleta": "09:24",
+  "hora_coleta": "15:24",
   "data_ontem": "16/07",
   "data_hoje": "17/07",
-  "total_quedas": 8,
+  "total_quedas": 2,
   "quedas": [
-    {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 240.52,
-      "preco_ontem": 273.42,
-      "delta": -32.9,
-      "delta_pct": -12.03,
-      "data_checagem": "2026-07-17 09:19"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 841.58,
-      "preco_ontem": 938.29,
-      "delta": -96.71,
-      "delta_pct": -10.31,
-      "data_checagem": "2026-07-17 09:19"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 627.75,
-      "preco_ontem": 685.95,
-      "delta": -58.2,
-      "delta_pct": -8.48,
-      "data_checagem": "2026-07-17 09:21"
-    },
     {
       "marca": "Vevshao",
       "modelo": "A24 MAX",
       "slug": "vevshao-a24-max",
-      "preco_atual": 1389.35,
+      "preco_atual": 1396.28,
       "preco_ontem": 1441.67,
-      "delta": -52.32,
-      "delta_pct": -3.63,
-      "data_checagem": "2026-07-17 09:24"
+      "delta": -45.39,
+      "delta_pct": -3.15,
+      "data_checagem": "2026-07-17 15:14"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 988.11,
-      "preco_ontem": 1024.28,
-      "delta": -36.17,
-      "delta_pct": -3.53,
-      "data_checagem": "2026-07-17 09:24"
+      "marca": "Bettdow",
+      "modelo": "AC1095",
+      "slug": "bettdow-ac1095",
+      "preco_atual": 2640.16,
+      "preco_ontem": 2641.08,
+      "delta": -0.92,
+      "delta_pct": -0.03,
+      "data_checagem": "2026-07-17 15:24"
     }
   ]
 }
