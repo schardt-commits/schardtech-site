@@ -1,29 +1,59 @@
 {
   "data_coleta": "17/07",
-  "hora_coleta": "15:24",
+  "hora_coleta": "22:20",
   "data_ontem": "16/07",
   "data_hoje": "17/07",
-  "total_quedas": 2,
+  "total_quedas": 12,
   "quedas": [
     {
+      "marca": "Bettdow",
+      "modelo": "AC1061",
+      "slug": "bettdow-ac1061",
+      "preco_atual": 1623.63,
+      "preco_ontem": 1692.08,
+      "delta": -68.45,
+      "delta_pct": -4.05,
+      "data_checagem": "2026-07-17 22:20"
+    },
+    {
       "marca": "Vevshao",
-      "modelo": "A24 MAX",
-      "slug": "vevshao-a24-max",
-      "preco_atual": 1396.28,
-      "preco_ontem": 1441.67,
-      "delta": -45.39,
-      "delta_pct": -3.15,
-      "data_checagem": "2026-07-17 15:14"
+      "modelo": "V60",
+      "slug": "vevshao-v60",
+      "preco_atual": 1909.28,
+      "preco_ontem": 1984.28,
+      "delta": -75.0,
+      "delta_pct": -3.78,
+      "data_checagem": "2026-07-17 22:20"
     },
     {
       "marca": "Bettdow",
-      "modelo": "AC1095",
-      "slug": "bettdow-ac1095",
-      "preco_atual": 2640.16,
-      "preco_ontem": 2641.08,
-      "delta": -0.92,
-      "delta_pct": -0.03,
-      "data_checagem": "2026-07-17 15:24"
+      "modelo": "AC1071",
+      "slug": "bettdow-ac1071",
+      "preco_atual": 1358.93,
+      "preco_ontem": 1412.04,
+      "delta": -53.11,
+      "delta_pct": -3.76,
+      "data_checagem": "2026-07-17 22:20"
+    },
+    {
+      "marca": "Everycom",
+      "modelo": "Cubelite MAX",
+      "slug": "everycom-cubelite-max",
+      "preco_atual": 1993.0,
+      "preco_ontem": 2068.0,
+      "delta": -75.0,
+      "delta_pct": -3.63,
+      "data_checagem": "2026-07-17 22:20"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1996.68,
+      "preco_ontem": 2071.68,
+      "delta": -75.0,
+      "delta_pct": -3.62,
+      "data_checagem": "2026-07-17 22:20"
     }
   ]
 }
