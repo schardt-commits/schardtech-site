@@ -1,50 +1,10 @@
 {
   "data_coleta": "18/07",
-  "hora_coleta": "09:33",
+  "hora_coleta": "21:33",
   "data_ontem": "17/07",
   "data_hoje": "18/07",
-  "total_quedas": 7,
+  "total_quedas": 3,
   "quedas": [
-    {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 241.67,
-      "preco_ontem": 275.07,
-      "delta": -33.4,
-      "delta_pct": -12.14,
-      "data_checagem": "2026-07-18 09:19"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 845.83,
-      "preco_ontem": 942.98,
-      "delta": -97.15,
-      "delta_pct": -10.3,
-      "data_checagem": "2026-07-18 09:19"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 629.87,
-      "preco_ontem": 688.23,
-      "delta": -58.36,
-      "delta_pct": -8.48,
-      "data_checagem": "2026-07-18 09:21"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 993.23,
-      "preco_ontem": 1029.9,
-      "delta": -36.67,
-      "delta_pct": -3.56,
-      "data_checagem": "2026-07-18 09:24"
-    },
     {
       "marca": "Magcubic",
       "modelo": "HY450",
@@ -53,7 +13,27 @@
       "preco_ontem": 701.8,
       "delta": -12.83,
       "delta_pct": -1.83,
-      "data_checagem": "2026-07-18 09:33"
+      "data_checagem": "2026-07-18 21:33"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 532.9,
+      "preco_ontem": 540.48,
+      "delta": -7.58,
+      "delta_pct": -1.4,
+      "data_checagem": "2026-07-18 21:33"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1061",
+      "slug": "bettdow-ac1061",
+      "preco_atual": 1618.04,
+      "preco_ontem": 1623.63,
+      "delta": -5.59,
+      "delta_pct": -0.34,
+      "data_checagem": "2026-07-18 21:33"
     }
   ]
 }
