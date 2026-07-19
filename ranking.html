@@ -597,8 +597,10 @@
       }
 
       function boot() {
+        // so_ranking: medido e no ranking, mas ainda sem pagina/video no site.
+        // Entra aqui mesmo com listar:false (que segue valendo pros banidos).
         BASE = (window.PROJETORES_DATA || []).filter(function (p) {
-          return p && p.listar !== false;
+          return p && (p.listar !== false || p.so_ranking === true);
         });
         if (!BASE.length) { elFallback.style.display = 'block'; return; }
 
