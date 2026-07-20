@@ -147,7 +147,7 @@
 
               <div class="regua-blk">
                 <div class="regua"><div class="r-fill" style="width:0%"></div><div class="r-dot" style="left:0%"></div></div>
-                <div class="regua-labels"><span class="min" id="pjReguaMin">mín R$ 609</span><span id="pjReguaMax">máx R$ 609</span></div>
+                <div class="regua-labels"><span class="min" id="pjReguaMin">mín R$ 609</span><span id="pjReguaMax">máx R$ 617</span></div>
               </div>
               <div class="proj-store-btns" id="projStoreBtns">
                 <a href="https://meli.la/31PQs6x" target="_blank" rel="noopener nofollow sponsored" class="proj-store-btn store-ml store-winner"><span class="winner-badge">Melhor preço</span><span class="store-name"><img src="../logo ml2.png" alt="" class="store-logo">Mercado Livre</span><span class="store-price">R$ 609,04</span></a>
@@ -183,8 +183,8 @@
 
           <div class="price-stats-grid">
             <div class="price-stat min"><div class="label">Mínimo histórico</div><div class="val">R$ 609,04</div></div>
-            <div class="price-stat"><div class="label">Preço médio</div><div class="val"></div></div>
-            <div class="price-stat max"><div class="label">Máximo histórico</div><div class="val">R$ 609,04</div></div>
+            <div class="price-stat"><div class="label">Preço médio</div><div class="val">R$ 613,06</div></div>
+            <div class="price-stat max"><div class="label">Máximo histórico</div><div class="val">R$ 617,08</div></div>
           </div>
         </div>
       </div>
@@ -387,8 +387,8 @@
 
   <script>
     const PRICE_HISTORY = {
-      labels: ["20/07"],
-      ml: [609.04],
+      labels: ["19/07", "20/07"],
+      ml: [609.04, 617.08],
       menor: 609.04
     };
 
@@ -507,7 +507,7 @@
                  ticks: { color: 'rgba(238,243,250,0.45)', maxTicksLimit: 8, maxRotation: 0, font: { family: '"IBM Plex Mono", monospace', size: 10 } } },
             y: { grid: { color: 'rgba(238,243,250,0.05)', drawBorder: false },
                  ticks: { color: 'rgba(238,243,250,0.45)', maxTicksLimit: 6, font: { family: '"IBM Plex Mono", monospace', size: 10 }, callback: (v) => 'R$ ' + v.toLocaleString('pt-BR') },
-                 suggestedMin: PRICE_HISTORY.menor - 80, suggestedMax: 679 }
+                 suggestedMin: PRICE_HISTORY.menor - 80, suggestedMax: 687 }
           }
         },
         plugins: [minLinePlugin, crosshairPlugin, ultimoPontoPlugin]

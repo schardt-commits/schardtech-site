@@ -2909,7 +2909,7 @@ window.PROJETORES_DATA = [
     "tecnologias": "",
     "bateria": false,
     "cap_bateria": "",
-    "video_url": "",
+    "video_url": "https://youtu.be/vHvMVtiSxqw",
     "suporte_giratorio": true,
     "audio_qualidade": "",
     "uso_continuo": "4h",
