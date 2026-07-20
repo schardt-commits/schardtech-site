@@ -1,10 +1,20 @@
 {
   "data_coleta": "20/07",
-  "hora_coleta": "12:48",
+  "hora_coleta": "15:24",
   "data_ontem": "19/07",
   "data_hoje": "20/07",
-  "total_quedas": 3,
+  "total_quedas": 4,
   "quedas": [
+    {
+      "marca": "Magcubic",
+      "modelo": "HY310X",
+      "slug": "magcubic-hy310x",
+      "preco_atual": 417.6,
+      "preco_ontem": 440.1,
+      "delta": -22.5,
+      "delta_pct": -5.11,
+      "data_checagem": "2026-07-20 15:24"
+    },
     {
       "marca": "Progaga",
       "modelo": "PG310",
@@ -13,7 +23,7 @@
       "preco_ontem": 275.07,
       "delta": -7.52,
       "delta_pct": -2.73,
-      "data_checagem": "2026-07-20 12:34"
+      "data_checagem": "2026-07-20 15:10"
     },
     {
       "marca": "Progaga",
@@ -23,7 +33,7 @@
       "preco_ontem": 942.98,
       "delta": -6.99,
       "delta_pct": -0.74,
-      "data_checagem": "2026-07-20 12:34"
+      "data_checagem": "2026-07-20 15:10"
     },
     {
       "marca": "Bettdow",
@@ -33,7 +43,7 @@
       "preco_ontem": 1623.63,
       "delta": -5.59,
       "delta_pct": -0.34,
-      "data_checagem": "2026-07-20 12:48"
+      "data_checagem": "2026-07-20 15:24"
     }
   ]
 }
