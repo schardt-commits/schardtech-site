@@ -2892,8 +2892,6 @@ window.PROJETORES_DATA = [
   {
     "marca": "Bettdow",
     "modelo": "AC1093 PRO",
-    "listar": false,
-    "so_ranking": true,
     "tecnologia": "LCD LED",
     "resolucao_nativa": "1280x720",
     "resolucao_max": "1080p 60hz",
