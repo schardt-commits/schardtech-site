@@ -1,9 +1,9 @@
 {
   "data_coleta": "22/07",
-  "hora_coleta": "00:35",
+  "hora_coleta": "09:35",
   "data_ontem": "21/07",
   "data_hoje": "22/07",
-  "total_quedas": 10,
+  "total_quedas": 13,
   "quedas": [
     {
       "marca": "Progaga",
@@ -13,7 +13,7 @@
       "preco_ontem": 305.23,
       "delta": -38.75,
       "delta_pct": -12.7,
-      "data_checagem": "2026-07-22 00:19"
+      "data_checagem": "2026-07-22 09:20"
     },
     {
       "marca": "Progaga",
@@ -23,17 +23,17 @@
       "preco_ontem": 1058.55,
       "delta": -126.29,
       "delta_pct": -11.93,
-      "data_checagem": "2026-07-22 00:20"
+      "data_checagem": "2026-07-22 09:21"
     },
     {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 748.17,
-      "preco_ontem": 795.93,
-      "delta": -47.76,
-      "delta_pct": -6.0,
-      "data_checagem": "2026-07-22 00:22"
+      "marca": "FlixTone",
+      "modelo": "D10S",
+      "slug": "flixtone-d10s",
+      "preco_atual": 2383.31,
+      "preco_ontem": 2547.97,
+      "delta": -164.66,
+      "delta_pct": -6.46,
+      "data_checagem": "2026-07-22 09:26"
     },
     {
       "marca": "Thundeal",
@@ -43,7 +43,7 @@
       "preco_ontem": 2278.47,
       "delta": -130.8,
       "delta_pct": -5.74,
-      "data_checagem": "2026-07-22 00:22"
+      "data_checagem": "2026-07-22 09:22"
     },
     {
       "marca": "Wanbo",
@@ -53,7 +53,7 @@
       "preco_ontem": 2465.84,
       "delta": -130.04,
       "delta_pct": -5.27,
-      "data_checagem": "2026-07-22 00:35"
+      "data_checagem": "2026-07-22 09:35"
     }
   ]
 }
