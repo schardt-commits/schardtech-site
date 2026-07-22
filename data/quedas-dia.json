@@ -1,9 +1,9 @@
 {
   "data_coleta": "21/07",
-  "hora_coleta": "15:12",
+  "hora_coleta": "21:34",
   "data_ontem": "20/07",
   "data_hoje": "21/07",
-  "total_quedas": 28,
+  "total_quedas": 29,
   "quedas": [
     {
       "marca": "Everycom",
@@ -13,7 +13,7 @@
       "preco_ontem": 884.27,
       "delta": -169.36,
       "delta_pct": -19.15,
-      "data_checagem": "2026-07-21 15:03"
+      "data_checagem": "2026-07-21 21:14"
     },
     {
       "marca": "Thundeal",
@@ -23,17 +23,17 @@
       "preco_ontem": 667.18,
       "delta": -85.0,
       "delta_pct": -12.74,
-      "data_checagem": "2026-07-21 15:11"
+      "data_checagem": "2026-07-21 21:21"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO ATV",
-      "slug": "thundeal-td98pro-atv",
-      "preco_atual": 2147.67,
-      "preco_ontem": 2312.12,
-      "delta": -164.45,
-      "delta_pct": -7.11,
-      "data_checagem": "2026-07-21 15:12"
+      "marca": "Jenovox",
+      "modelo": "M5000 Mini",
+      "slug": "jenovox-m5000-mini",
+      "preco_atual": 2537.01,
+      "preco_ontem": 2769.18,
+      "delta": -232.17,
+      "delta_pct": -8.38,
+      "data_checagem": "2026-07-21 21:16"
     },
     {
       "marca": "Thundeal",
@@ -43,17 +43,17 @@
       "preco_ontem": 925.42,
       "delta": -58.58,
       "delta_pct": -6.33,
-      "data_checagem": "2026-07-21 15:12"
+      "data_checagem": "2026-07-21 21:21"
     },
     {
-      "marca": "Jenovox",
-      "modelo": "M5000 Mini",
-      "slug": "jenovox-m5000-mini",
-      "preco_atual": 2617.1,
-      "preco_ontem": 2769.18,
-      "delta": -152.08,
-      "delta_pct": -5.49,
-      "data_checagem": "2026-07-21 15:06"
+      "marca": "Bettdow",
+      "modelo": "AC1093 PRO",
+      "slug": "bettdow-ac1093-pro",
+      "preco_atual": 580.28,
+      "preco_ontem": 609.04,
+      "delta": -28.76,
+      "delta_pct": -4.72,
+      "data_checagem": "2026-07-21 21:34"
     }
   ]
 }
