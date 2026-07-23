@@ -1,20 +1,10 @@
 {
   "data_coleta": "22/07",
-  "hora_coleta": "15:25",
+  "hora_coleta": "21:34",
   "data_ontem": "21/07",
   "data_hoje": "22/07",
-  "total_quedas": 10,
+  "total_quedas": 9,
   "quedas": [
-    {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 748.17,
-      "preco_ontem": 795.93,
-      "delta": -47.76,
-      "delta_pct": -6.0,
-      "data_checagem": "2026-07-22 15:12"
-    },
     {
       "marca": "Thundeal",
       "modelo": "TD98PRO ATV",
@@ -23,7 +13,7 @@
       "preco_ontem": 2278.47,
       "delta": -129.02,
       "delta_pct": -5.66,
-      "data_checagem": "2026-07-22 15:12"
+      "data_checagem": "2026-07-22 21:21"
     },
     {
       "marca": "Wanbo",
@@ -33,7 +23,7 @@
       "preco_ontem": 2465.84,
       "delta": -130.04,
       "delta_pct": -5.27,
-      "data_checagem": "2026-07-22 15:25"
+      "data_checagem": "2026-07-22 21:34"
     },
     {
       "marca": "Bettdow",
@@ -43,17 +33,27 @@
       "preco_ontem": 848.0,
       "delta": -18.4,
       "delta_pct": -2.17,
-      "data_checagem": "2026-07-22 15:25"
+      "data_checagem": "2026-07-22 21:34"
     },
     {
       "marca": "Bettdow",
       "modelo": "AC1073",
       "slug": "bettdow-ac1073",
-      "preco_atual": 1198.78,
+      "preco_atual": 1193.38,
       "preco_ontem": 1216.18,
-      "delta": -17.4,
-      "delta_pct": -1.43,
-      "data_checagem": "2026-07-22 15:25"
+      "delta": -22.8,
+      "delta_pct": -1.87,
+      "data_checagem": "2026-07-22 21:34"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 526.0,
+      "preco_ontem": 532.9,
+      "delta": -6.9,
+      "delta_pct": -1.29,
+      "data_checagem": "2026-07-22 21:34"
     }
   ]
 }
