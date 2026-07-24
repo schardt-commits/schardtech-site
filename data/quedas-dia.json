@@ -1,39 +1,29 @@
 {
   "data_coleta": "24/07",
-  "hora_coleta": "09:33",
+  "hora_coleta": "15:27",
   "data_ontem": "23/07",
   "data_hoje": "24/07",
-  "total_quedas": 6,
+  "total_quedas": 11,
   "quedas": [
     {
       "marca": "Progaga",
       "modelo": "PG310",
       "slug": "progaga-pg310",
-      "preco_atual": 266.66,
+      "preco_atual": 266.55,
       "preco_ontem": 305.44,
-      "delta": -38.78,
-      "delta_pct": -12.7,
-      "data_checagem": "2026-07-24 09:19"
+      "delta": -38.89,
+      "delta_pct": -12.73,
+      "data_checagem": "2026-07-24 15:11"
     },
     {
       "marca": "Progaga",
       "modelo": "PG610W",
       "slug": "progaga-pg610w",
-      "preco_atual": 932.9,
+      "preco_atual": 932.49,
       "preco_ontem": 1059.53,
-      "delta": -126.63,
-      "delta_pct": -11.95,
-      "data_checagem": "2026-07-24 09:19"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 747.81,
-      "preco_ontem": 795.55,
-      "delta": -47.74,
-      "delta_pct": -6.0,
-      "data_checagem": "2026-07-24 09:21"
+      "delta": -127.04,
+      "delta_pct": -11.99,
+      "data_checagem": "2026-07-24 15:11"
     },
     {
       "marca": "Byintek",
@@ -43,17 +33,27 @@
       "preco_ontem": 2107.08,
       "delta": -48.55,
       "delta_pct": -2.3,
-      "data_checagem": "2026-07-24 09:33"
+      "data_checagem": "2026-07-24 15:27"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1061",
+      "slug": "bettdow-ac1061",
+      "preco_atual": 1616.38,
+      "preco_ontem": 1618.04,
+      "delta": -1.66,
+      "delta_pct": -0.1,
+      "data_checagem": "2026-07-24 15:27"
     },
     {
       "marca": "Progaga",
       "modelo": "PG610 ATV",
       "slug": "progaga-pg610-atv",
-      "preco_atual": 1200.49,
+      "preco_atual": 1212.55,
       "preco_ontem": 1213.07,
-      "delta": -12.58,
-      "delta_pct": -1.04,
-      "data_checagem": "2026-07-24 09:24"
+      "delta": -0.52,
+      "delta_pct": -0.04,
+      "data_checagem": "2026-07-24 15:17"
     }
   ]
 }
