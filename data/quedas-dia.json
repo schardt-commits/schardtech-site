@@ -1,59 +1,59 @@
 {
-  "data_coleta": "23/07",
-  "hora_coleta": "21:35",
-  "data_ontem": "22/07",
-  "data_hoje": "23/07",
-  "total_quedas": 13,
+  "data_coleta": "24/07",
+  "hora_coleta": "00:34",
+  "data_ontem": "23/07",
+  "data_hoje": "24/07",
+  "total_quedas": 5,
   "quedas": [
     {
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 266.66,
+      "preco_ontem": 305.44,
+      "delta": -38.78,
+      "delta_pct": -12.7,
+      "data_checagem": "2026-07-24 00:19"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG610W",
+      "slug": "progaga-pg610w",
+      "preco_atual": 932.9,
+      "preco_ontem": 1059.53,
+      "delta": -126.63,
+      "delta_pct": -11.95,
+      "data_checagem": "2026-07-24 00:20"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 747.81,
+      "preco_ontem": 795.55,
+      "delta": -47.74,
+      "delta_pct": -6.0,
+      "data_checagem": "2026-07-24 00:22"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 1200.49,
+      "preco_ontem": 1213.07,
+      "delta": -12.58,
+      "delta_pct": -1.04,
+      "data_checagem": "2026-07-24 00:25"
+    },
+    {
       "marca": "Bettdow",
-      "modelo": "AC1093 PRO",
-      "slug": "bettdow-ac1093-pro",
-      "preco_atual": 448.15,
-      "preco_ontem": 609.04,
-      "delta": -160.89,
-      "delta_pct": -26.42,
-      "data_checagem": "2026-07-23 21:35"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1923.99,
-      "preco_ontem": 2003.15,
-      "delta": -79.16,
-      "delta_pct": -3.95,
-      "data_checagem": "2026-07-23 21:35"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 714.55,
-      "preco_ontem": 714.91,
-      "delta": -0.36,
-      "delta_pct": -0.05,
-      "data_checagem": "2026-07-23 21:14"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D10S",
-      "slug": "flixtone-d10s",
-      "preco_atual": 2546.72,
-      "preco_ontem": 2547.97,
-      "delta": -1.25,
-      "delta_pct": -0.05,
-      "data_checagem": "2026-07-23 21:26"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D9W Ultra",
-      "slug": "flixtone-d9w-ultra",
-      "preco_atual": 2003.2,
-      "preco_ontem": 2004.19,
-      "delta": -0.99,
-      "delta_pct": -0.05,
-      "data_checagem": "2026-07-23 21:16"
+      "modelo": "AC1061",
+      "slug": "bettdow-ac1061",
+      "preco_atual": 1616.38,
+      "preco_ontem": 1618.04,
+      "delta": -1.66,
+      "delta_pct": -0.1,
+      "data_checagem": "2026-07-24 00:34"
     }
   ]
 }
