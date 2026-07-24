@@ -1,9 +1,9 @@
 {
   "data_coleta": "24/07",
-  "hora_coleta": "00:34",
+  "hora_coleta": "09:33",
   "data_ontem": "23/07",
   "data_hoje": "24/07",
-  "total_quedas": 5,
+  "total_quedas": 6,
   "quedas": [
     {
       "marca": "Progaga",
@@ -13,7 +13,7 @@
       "preco_ontem": 305.44,
       "delta": -38.78,
       "delta_pct": -12.7,
-      "data_checagem": "2026-07-24 00:19"
+      "data_checagem": "2026-07-24 09:19"
     },
     {
       "marca": "Progaga",
@@ -23,7 +23,7 @@
       "preco_ontem": 1059.53,
       "delta": -126.63,
       "delta_pct": -11.95,
-      "data_checagem": "2026-07-24 00:20"
+      "data_checagem": "2026-07-24 09:19"
     },
     {
       "marca": "Touyinger",
@@ -33,7 +33,17 @@
       "preco_ontem": 795.55,
       "delta": -47.74,
       "delta_pct": -6.0,
-      "data_checagem": "2026-07-24 00:22"
+      "data_checagem": "2026-07-24 09:21"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 2058.53,
+      "preco_ontem": 2107.08,
+      "delta": -48.55,
+      "delta_pct": -2.3,
+      "data_checagem": "2026-07-24 09:33"
     },
     {
       "marca": "Progaga",
@@ -43,17 +53,7 @@
       "preco_ontem": 1213.07,
       "delta": -12.58,
       "delta_pct": -1.04,
-      "data_checagem": "2026-07-24 00:25"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1061",
-      "slug": "bettdow-ac1061",
-      "preco_atual": 1616.38,
-      "preco_ontem": 1618.04,
-      "delta": -1.66,
-      "delta_pct": -0.1,
-      "data_checagem": "2026-07-24 00:34"
+      "data_checagem": "2026-07-24 09:24"
     }
   ]
 }
