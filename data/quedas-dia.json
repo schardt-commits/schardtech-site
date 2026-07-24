@@ -1,9 +1,9 @@
 {
   "data_coleta": "23/07",
-  "hora_coleta": "09:34",
+  "hora_coleta": "21:35",
   "data_ontem": "22/07",
   "data_hoje": "23/07",
-  "total_quedas": 5,
+  "total_quedas": 13,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,37 +13,7 @@
       "preco_ontem": 609.04,
       "delta": -160.89,
       "delta_pct": -26.42,
-      "data_checagem": "2026-07-23 09:34"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 266.65,
-      "preco_ontem": 305.43,
-      "delta": -38.78,
-      "delta_pct": -12.7,
-      "data_checagem": "2026-07-23 09:19"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 932.88,
-      "preco_ontem": 1059.53,
-      "delta": -126.65,
-      "delta_pct": -11.95,
-      "data_checagem": "2026-07-23 09:20"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 748.17,
-      "preco_ontem": 795.93,
-      "delta": -47.76,
-      "delta_pct": -6.0,
-      "data_checagem": "2026-07-23 09:22"
+      "data_checagem": "2026-07-23 21:35"
     },
     {
       "marca": "Byintek",
@@ -53,7 +23,37 @@
       "preco_ontem": 2003.15,
       "delta": -79.16,
       "delta_pct": -3.95,
-      "data_checagem": "2026-07-23 09:34"
+      "data_checagem": "2026-07-23 21:35"
+    },
+    {
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 714.55,
+      "preco_ontem": 714.91,
+      "delta": -0.36,
+      "delta_pct": -0.05,
+      "data_checagem": "2026-07-23 21:14"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D10S",
+      "slug": "flixtone-d10s",
+      "preco_atual": 2546.72,
+      "preco_ontem": 2547.97,
+      "delta": -1.25,
+      "delta_pct": -0.05,
+      "data_checagem": "2026-07-23 21:26"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D9W Ultra",
+      "slug": "flixtone-d9w-ultra",
+      "preco_atual": 2003.2,
+      "preco_ontem": 2004.19,
+      "delta": -0.99,
+      "delta_pct": -0.05,
+      "data_checagem": "2026-07-23 21:16"
     }
   ]
 }
