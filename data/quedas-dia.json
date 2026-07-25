@@ -1,20 +1,10 @@
 {
   "data_coleta": "25/07",
-  "hora_coleta": "09:34",
+  "hora_coleta": "15:25",
   "data_ontem": "24/07",
   "data_hoje": "25/07",
-  "total_quedas": 4,
+  "total_quedas": 3,
   "quedas": [
-    {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 266.55,
-      "preco_ontem": 305.31,
-      "delta": -38.76,
-      "delta_pct": -12.7,
-      "data_checagem": "2026-07-25 09:19"
-    },
     {
       "marca": "Progaga",
       "modelo": "PG610W",
@@ -33,7 +23,7 @@
       "preco_ontem": 2211.0,
       "delta": -172.0,
       "delta_pct": -7.78,
-      "data_checagem": "2026-07-25 09:34"
+      "data_checagem": "2026-07-25 15:25"
     },
     {
       "marca": "Bettdow",
@@ -43,7 +33,7 @@
       "preco_ontem": 1198.78,
       "delta": -7.04,
       "delta_pct": -0.59,
-      "data_checagem": "2026-07-25 09:34"
+      "data_checagem": "2026-07-25 15:25"
     }
   ]
 }
