@@ -1,39 +1,29 @@
 {
   "data_coleta": "24/07",
-  "hora_coleta": "15:27",
+  "hora_coleta": "21:34",
   "data_ontem": "23/07",
   "data_hoje": "24/07",
-  "total_quedas": 11,
+  "total_quedas": 18,
   "quedas": [
     {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 266.55,
-      "preco_ontem": 305.44,
-      "delta": -38.89,
-      "delta_pct": -12.73,
-      "data_checagem": "2026-07-24 15:11"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 932.49,
-      "preco_ontem": 1059.53,
-      "delta": -127.04,
-      "delta_pct": -11.99,
-      "data_checagem": "2026-07-24 15:11"
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 771.66,
+      "preco_ontem": 795.55,
+      "delta": -23.89,
+      "delta_pct": -3.0,
+      "data_checagem": "2026-07-24 21:21"
     },
     {
       "marca": "Byintek",
       "modelo": "U80 MAX",
       "slug": "byintek-u80-max",
-      "preco_atual": 2058.53,
+      "preco_atual": 2057.63,
       "preco_ontem": 2107.08,
-      "delta": -48.55,
-      "delta_pct": -2.3,
-      "data_checagem": "2026-07-24 15:27"
+      "delta": -49.45,
+      "delta_pct": -2.35,
+      "data_checagem": "2026-07-24 21:34"
     },
     {
       "marca": "Bettdow",
@@ -43,17 +33,27 @@
       "preco_ontem": 1618.04,
       "delta": -1.66,
       "delta_pct": -0.1,
-      "data_checagem": "2026-07-24 15:27"
+      "data_checagem": "2026-07-24 21:34"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 1212.55,
-      "preco_ontem": 1213.07,
-      "delta": -0.52,
-      "delta_pct": -0.04,
-      "data_checagem": "2026-07-24 15:17"
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 582.28,
+      "preco_ontem": 582.58,
+      "delta": -0.3,
+      "delta_pct": -0.05,
+      "data_checagem": "2026-07-24 21:19"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1683.58,
+      "preco_ontem": 1684.44,
+      "delta": -0.86,
+      "delta_pct": -0.05,
+      "data_checagem": "2026-07-24 21:20"
     }
   ]
 }
