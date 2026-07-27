@@ -1,59 +1,59 @@
 {
   "data_coleta": "27/07",
-  "hora_coleta": "00:33",
+  "hora_coleta": "15:23",
   "data_ontem": "26/07",
   "data_hoje": "27/07",
-  "total_quedas": 17,
+  "total_quedas": 14,
   "quedas": [
-    {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 266.55,
-      "preco_ontem": 305.31,
-      "delta": -38.76,
-      "delta_pct": -12.7,
-      "data_checagem": "2026-07-27 00:16"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 932.49,
-      "preco_ontem": 1059.09,
-      "delta": -126.6,
-      "delta_pct": -11.95,
-      "data_checagem": "2026-07-27 00:17"
-    },
     {
       "marca": "Thundeal",
       "modelo": "TD98 MINI",
       "slug": "thundeal-td98-mini",
-      "preco_atual": 1224.18,
+      "preco_atual": 1226.46,
       "preco_ontem": 1305.93,
-      "delta": -81.75,
-      "delta_pct": -6.26,
-      "data_checagem": "2026-07-27 00:23"
+      "delta": -79.47,
+      "delta_pct": -6.09,
+      "data_checagem": "2026-07-27 15:14"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD98PRO",
       "slug": "thundeal-td98pro",
-      "preco_atual": 1683.58,
+      "preco_atual": 1686.93,
       "preco_ontem": 1789.58,
-      "delta": -106.0,
-      "delta_pct": -5.92,
-      "data_checagem": "2026-07-27 00:19"
+      "delta": -102.65,
+      "delta_pct": -5.74,
+      "data_checagem": "2026-07-27 15:10"
     },
     {
       "marca": "Byintek",
       "modelo": "Love U12",
       "slug": "byintek-u12",
-      "preco_atual": 1020.56,
+      "preco_atual": 1022.45,
       "preco_ontem": 1084.41,
-      "delta": -63.85,
-      "delta_pct": -5.89,
-      "data_checagem": "2026-07-27 00:33"
+      "delta": -61.96,
+      "delta_pct": -5.71,
+      "data_checagem": "2026-07-27 15:23"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 1003.88,
+      "preco_ontem": 1063.46,
+      "delta": -59.58,
+      "delta_pct": -5.6,
+      "data_checagem": "2026-07-27 15:23"
+    },
+    {
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 716.51,
+      "preco_ontem": 758.85,
+      "delta": -42.34,
+      "delta_pct": -5.58,
+      "data_checagem": "2026-07-27 15:04"
     }
   ]
 }
