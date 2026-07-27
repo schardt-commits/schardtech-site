@@ -1,19 +1,8 @@
 {
   "data_coleta": "26/07",
-  "hora_coleta": "15:09",
+  "hora_coleta": "",
   "data_ontem": "25/07",
   "data_hoje": "26/07",
-  "total_quedas": 1,
-  "quedas": [
-    {
-      "marca": "Thundeal",
-      "modelo": "TD92 Pro",
-      "slug": "thundeal-td92-pro",
-      "preco_atual": 652.77,
-      "preco_ontem": 656.07,
-      "delta": -3.3,
-      "delta_pct": -0.5,
-      "data_checagem": "2026-07-26 15:09"
-    }
-  ]
+  "total_quedas": 0,
+  "quedas": []
 }
