@@ -1,10 +1,20 @@
 {
   "data_coleta": "27/07",
-  "hora_coleta": "15:23",
+  "hora_coleta": "21:34",
   "data_ontem": "26/07",
   "data_hoje": "27/07",
   "total_quedas": 14,
   "quedas": [
+    {
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 976.38,
+      "preco_ontem": 1063.46,
+      "delta": -87.08,
+      "delta_pct": -8.19,
+      "data_checagem": "2026-07-27 21:34"
+    },
     {
       "marca": "Thundeal",
       "modelo": "TD98 MINI",
@@ -13,7 +23,7 @@
       "preco_ontem": 1305.93,
       "delta": -79.47,
       "delta_pct": -6.09,
-      "data_checagem": "2026-07-27 15:14"
+      "data_checagem": "2026-07-27 21:25"
     },
     {
       "marca": "Thundeal",
@@ -23,7 +33,7 @@
       "preco_ontem": 1789.58,
       "delta": -102.65,
       "delta_pct": -5.74,
-      "data_checagem": "2026-07-27 15:10"
+      "data_checagem": "2026-07-27 21:21"
     },
     {
       "marca": "Byintek",
@@ -33,17 +43,7 @@
       "preco_ontem": 1084.41,
       "delta": -61.96,
       "delta_pct": -5.71,
-      "data_checagem": "2026-07-27 15:23"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "A22",
-      "slug": "vevshao-a22",
-      "preco_atual": 1003.88,
-      "preco_ontem": 1063.46,
-      "delta": -59.58,
-      "delta_pct": -5.6,
-      "data_checagem": "2026-07-27 15:23"
+      "data_checagem": "2026-07-27 21:34"
     },
     {
       "marca": "Everycom",
@@ -53,7 +53,7 @@
       "preco_ontem": 758.85,
       "delta": -42.34,
       "delta_pct": -5.58,
-      "data_checagem": "2026-07-27 15:04"
+      "data_checagem": "2026-07-27 21:15"
     }
   ]
 }
