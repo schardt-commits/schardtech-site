@@ -1,9 +1,9 @@
 {
   "data_coleta": "30/07",
-  "hora_coleta": "00:24",
+  "hora_coleta": "09:24",
   "data_ontem": "29/07",
   "data_hoje": "30/07",
-  "total_quedas": 3,
+  "total_quedas": 4,
   "quedas": [
     {
       "marca": "Progaga",
@@ -13,7 +13,7 @@
       "preco_ontem": 307.87,
       "delta": -39.09,
       "delta_pct": -12.7,
-      "data_checagem": "2026-07-30 00:16"
+      "data_checagem": "2026-07-30 09:16"
     },
     {
       "marca": "Progaga",
@@ -23,7 +23,17 @@
       "preco_ontem": 1068.01,
       "delta": -127.67,
       "delta_pct": -11.95,
-      "data_checagem": "2026-07-30 00:18"
+      "data_checagem": "2026-07-30 09:18"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80W",
+      "slug": "thundeal-td80w",
+      "preco_atual": 447.73,
+      "preco_ontem": 461.31,
+      "delta": -13.58,
+      "delta_pct": -2.94,
+      "data_checagem": "2026-07-30 09:19"
     },
     {
       "marca": "Progaga",
@@ -33,7 +43,7 @@
       "preco_ontem": 1222.76,
       "delta": -12.68,
       "delta_pct": -1.04,
-      "data_checagem": "2026-07-30 00:24"
+      "data_checagem": "2026-07-30 09:24"
     }
   ]
 }
