@@ -1,9 +1,9 @@
 {
   "data_coleta": "29/07",
-  "hora_coleta": "15:25",
+  "hora_coleta": "21:33",
   "data_ontem": "28/07",
   "data_hoje": "29/07",
-  "total_quedas": 15,
+  "total_quedas": 16,
   "quedas": [
     {
       "marca": "Magcubic",
@@ -13,17 +13,7 @@
       "preco_ontem": 260.1,
       "delta": -47.6,
       "delta_pct": -18.3,
-      "data_checagem": "2026-07-29 15:25"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY350 MAX",
-      "slug": "magcubic-hy350-max",
-      "preco_atual": 685.08,
-      "preco_ontem": 710.08,
-      "delta": -25.0,
-      "delta_pct": -3.52,
-      "data_checagem": "2026-07-29 15:25"
+      "data_checagem": "2026-07-29 21:33"
     },
     {
       "marca": "Vevshao",
@@ -33,7 +23,7 @@
       "preco_ontem": 1113.67,
       "delta": -0.45,
       "delta_pct": -0.04,
-      "data_checagem": "2026-07-29 15:25"
+      "data_checagem": "2026-07-29 21:33"
     },
     {
       "marca": "Byintek",
@@ -43,7 +33,7 @@
       "preco_ontem": 719.17,
       "delta": -0.12,
       "delta_pct": -0.02,
-      "data_checagem": "2026-07-29 15:25"
+      "data_checagem": "2026-07-29 21:33"
     },
     {
       "marca": "Thundeal",
@@ -53,7 +43,17 @@
       "preco_ontem": 1698.22,
       "delta": -0.41,
       "delta_pct": -0.02,
-      "data_checagem": "2026-07-29 15:12"
+      "data_checagem": "2026-07-29 21:20"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 1165.0,
+      "preco_ontem": 1165.17,
+      "delta": -0.17,
+      "delta_pct": -0.01,
+      "data_checagem": "2026-07-29 21:33"
     }
   ]
 }
