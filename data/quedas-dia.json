@@ -1,6 +1,6 @@
 {
   "data_coleta": "30/07",
-  "hora_coleta": "15:14",
+  "hora_coleta": "21:24",
   "data_ontem": "29/07",
   "data_hoje": "30/07",
   "total_quedas": 13,
@@ -13,7 +13,7 @@
       "preco_ontem": 307.87,
       "delta": -40.35,
       "delta_pct": -13.11,
-      "data_checagem": "2026-07-30 15:08"
+      "data_checagem": "2026-07-30 21:17"
     },
     {
       "marca": "Progaga",
@@ -23,7 +23,7 @@
       "preco_ontem": 1068.01,
       "delta": -132.11,
       "delta_pct": -12.37,
-      "data_checagem": "2026-07-30 15:09"
+      "data_checagem": "2026-07-30 21:17"
     },
     {
       "marca": "Thundeal",
@@ -33,27 +33,27 @@
       "preco_ontem": 461.31,
       "delta": -15.87,
       "delta_pct": -3.44,
-      "data_checagem": "2026-07-30 15:10"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 1204.34,
-      "preco_ontem": 1222.76,
-      "delta": -18.42,
-      "delta_pct": -1.51,
-      "data_checagem": "2026-07-30 15:14"
+      "data_checagem": "2026-07-30 21:19"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD80PRO",
       "slug": "thundeal-td80pro",
-      "preco_atual": 667.11,
+      "preco_atual": 667.05,
       "preco_ontem": 670.27,
-      "delta": -3.16,
+      "delta": -3.22,
+      "delta_pct": -0.48,
+      "data_checagem": "2026-07-30 21:19"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 1216.96,
+      "preco_ontem": 1222.76,
+      "delta": -5.8,
       "delta_pct": -0.47,
-      "data_checagem": "2026-07-30 15:09"
+      "data_checagem": "2026-07-30 21:24"
     }
   ]
 }
