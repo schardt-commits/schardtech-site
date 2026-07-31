@@ -1,8 +1,59 @@
 {
   "data_coleta": "31/07",
-  "hora_coleta": "",
+  "hora_coleta": "09:33",
   "data_ontem": "30/07",
   "data_hoje": "31/07",
-  "total_quedas": 0,
-  "quedas": []
+  "total_quedas": 11,
+  "quedas": [
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 1307.16,
+      "preco_ontem": 1393.34,
+      "delta": -86.18,
+      "delta_pct": -6.19,
+      "data_checagem": "2026-07-31 09:24"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1689.95,
+      "preco_ontem": 1796.29,
+      "delta": -106.34,
+      "delta_pct": -5.92,
+      "data_checagem": "2026-07-31 09:20"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO ATV",
+      "slug": "thundeal-td98pro-atv",
+      "preco_atual": 2156.38,
+      "preco_ontem": 2287.35,
+      "delta": -130.97,
+      "delta_pct": -5.73,
+      "data_checagem": "2026-07-31 09:20"
+    },
+    {
+      "marca": "Jenovox",
+      "modelo": "M5000 Mini",
+      "slug": "jenovox-m5000-mini",
+      "preco_atual": 2554.21,
+      "preco_ontem": 2691.44,
+      "delta": -137.23,
+      "delta_pct": -5.1,
+      "data_checagem": "2026-07-31 09:16"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 715.65,
+      "preco_ontem": 753.34,
+      "delta": -37.69,
+      "delta_pct": -5.0,
+      "data_checagem": "2026-07-31 09:33"
+    }
+  ]
 }
