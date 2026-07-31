@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "gerado_em": "2026-07-31 16:03:16",
-    "total_modelos": 70,
-    "total_pontos": 5337,
+    "gerado_em": "2026-07-31 18:09:43",
+    "total_modelos": 69,
+    "total_pontos": 5321,
     "fonte": "precos.db (tabela precos, preco_final)"
   },
   "modelos": {
@@ -3535,96 +3535,6 @@
       "atual": 838.8,
       "data_min": "2026-07-03",
       "data_max": "2026-06-22"
-    },
-    "Bettdow|AC1085": {
-      "pontos": [
-        {
-          "data": "2026-07-24 21:26",
-          "loja": "ml",
-          "preco": 730.0
-        },
-        {
-          "data": "2026-07-24 21:34",
-          "loja": "shopee",
-          "preco": 485.28
-        },
-        {
-          "data": "2026-07-25 21:26",
-          "loja": "ml",
-          "preco": 730.0
-        },
-        {
-          "data": "2026-07-25 21:34",
-          "loja": "shopee",
-          "preco": 485.28
-        },
-        {
-          "data": "2026-07-26 21:24",
-          "loja": "ml",
-          "preco": 730.0
-        },
-        {
-          "data": "2026-07-26 21:32",
-          "loja": "shopee",
-          "preco": 485.28
-        },
-        {
-          "data": "2026-07-27 21:26",
-          "loja": "ml",
-          "preco": 730.0
-        },
-        {
-          "data": "2026-07-27 21:34",
-          "loja": "shopee",
-          "preco": 485.28
-        },
-        {
-          "data": "2026-07-28 21:25",
-          "loja": "ml",
-          "preco": 730.0
-        },
-        {
-          "data": "2026-07-28 21:33",
-          "loja": "shopee",
-          "preco": 485.28
-        },
-        {
-          "data": "2026-07-29 21:25",
-          "loja": "ml",
-          "preco": 730.0
-        },
-        {
-          "data": "2026-07-29 21:33",
-          "loja": "shopee",
-          "preco": 485.28
-        },
-        {
-          "data": "2026-07-30 21:25",
-          "loja": "ml",
-          "preco": 730.0
-        },
-        {
-          "data": "2026-07-30 21:33",
-          "loja": "shopee",
-          "preco": 485.28
-        },
-        {
-          "data": "2026-07-31 15:51",
-          "loja": "ml",
-          "preco": 730.0
-        },
-        {
-          "data": "2026-07-31 15:59",
-          "loja": "shopee",
-          "preco": 485.28
-        }
-      ],
-      "n": 16,
-      "min": 485.28,
-      "max": 730.0,
-      "atual": 485.28,
-      "data_min": "2026-07-24",
-      "data_max": "2026-07-24"
     },
     "Bettdow|AC1093 PRO": {
       "pontos": [
