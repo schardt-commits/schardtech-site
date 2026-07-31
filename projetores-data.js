@@ -390,7 +390,7 @@ window.PROJETORES_DATA = [
     "distancia_100pol": "2.4m",
     "distancia_100pol_m": 2.4,
     "otica_selada": "Não Selada",
-    "input_lag_ms": 100.0,
+    "input_lag_ms": 75.0,
     "ajuste_brilho": "Não",
     "autofoco": "Não",
     "sistema_operacional": "Android TV",
