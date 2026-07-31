@@ -1,10 +1,40 @@
 {
   "data_coleta": "31/07",
-  "hora_coleta": "15:49",
+  "hora_coleta": "19:37",
   "data_ontem": "30/07",
   "data_hoje": "31/07",
   "total_quedas": 21,
   "quedas": [
+    {
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 950.28,
+      "preco_ontem": 1103.64,
+      "delta": -153.36,
+      "delta_pct": -13.9,
+      "data_checagem": "2026-07-31 19:29"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 1366.53,
+      "preco_ontem": 1526.17,
+      "delta": -159.64,
+      "delta_pct": -10.46,
+      "data_checagem": "2026-07-31 19:27"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D10S",
+      "slug": "flixtone-d10s",
+      "preco_atual": 2387.55,
+      "preco_ontem": 2564.99,
+      "delta": -177.44,
+      "delta_pct": -6.92,
+      "data_checagem": "2026-07-31 19:37"
+    },
     {
       "marca": "Thundeal",
       "modelo": "TD98 MINI",
@@ -13,7 +43,7 @@
       "preco_ontem": 1393.34,
       "delta": -92.44,
       "delta_pct": -6.63,
-      "data_checagem": "2026-07-31 15:49"
+      "data_checagem": "2026-07-31 19:37"
     },
     {
       "marca": "Thundeal",
@@ -23,37 +53,7 @@
       "preco_ontem": 1796.29,
       "delta": -114.44,
       "delta_pct": -6.37,
-      "data_checagem": "2026-07-31 15:45"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO ATV",
-      "slug": "thundeal-td98pro-atv",
-      "preco_atual": 2145.97,
-      "preco_ontem": 2287.35,
-      "delta": -141.38,
-      "delta_pct": -6.18,
-      "data_checagem": "2026-07-31 15:46"
-    },
-    {
-      "marca": "Jenovox",
-      "modelo": "M5000 Mini",
-      "slug": "jenovox-m5000-mini",
-      "preco_atual": 2541.07,
-      "preco_ontem": 2691.44,
-      "delta": -150.37,
-      "delta_pct": -5.59,
-      "data_checagem": "2026-07-31 15:41"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 837.89,
-      "preco_ontem": 886.54,
-      "delta": -48.65,
-      "delta_pct": -5.49,
-      "data_checagem": "2026-07-31 15:40"
+      "data_checagem": "2026-07-31 19:33"
     }
   ]
 }
