@@ -399,7 +399,7 @@ window.PROJETORES_DATA = [
     "tecnologias": "",
     "bateria": false,
     "cap_bateria": "",
-    "video_url": "",
+    "video_url": "https://youtu.be/w5XFtD22ek8",
     "suporte_giratorio": true,
     "audio_qualidade": "",
     "uso_continuo": "4h",
@@ -415,10 +415,9 @@ window.PROJETORES_DATA = [
     "armazenamento_gb": 8,
     "status": "nacional",
     "link_importado": "",
-    "bolsa": "",
-    "listar": false,
-    "so_ranking": true
-  },  {
+    "bolsa": ""
+  },
+  {
     "marca": "Byintek",
     "modelo": "Love U4",
     "tecnologia": "LCD LED",
