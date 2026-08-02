@@ -12,12 +12,12 @@ const projectors = [];
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
 // ============================================================
 const featuredVideos = [
+  { id: "9Y3JefY-9MM", title: "Compensa!? Bettdow AC1085 Com Android Tv" },
   { id: "vHvMVtiSxqw", title: "AC1093 PRO BETTDOW: Projetor Mais Barato Com Android TV Certificado!" },
   { id: "KQH2fRqt5eU", title: "Queria Ter Comprado Antes: Magcubic X7" },
   { id: "FUBao00uR3g", title: "Vale A Pena!? ThundeaL TD98 MINI - Análise Completa!" },
   { id: "sU_IlBvAbAo", title: "Magcubic X7: Unboxing e Primeiras Impreções!" },
   { id: "-jDGpRWrybw", title: "Projetores e Eletrônicos no Paraguai: Vale a pena em 2026?" },
-  { id: "TahKwwg71ts", title: "O Projetor Led MAIS POTENTE! D10S Flixtone!" },
 ];
 
 // ============================================================
