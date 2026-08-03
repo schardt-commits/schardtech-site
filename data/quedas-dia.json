@@ -1,9 +1,9 @@
 {
   "data_coleta": "02/08",
-  "hora_coleta": "15:25",
+  "hora_coleta": "21:34",
   "data_ontem": "01/08",
   "data_hoje": "02/08",
-  "total_quedas": 8,
+  "total_quedas": 5,
   "quedas": [
     {
       "marca": "Everycom",
@@ -13,17 +13,7 @@
       "preco_ontem": 589.44,
       "delta": -77.34,
       "delta_pct": -13.12,
-      "data_checagem": "2026-08-02 10:18"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 221.15,
-      "preco_ontem": 250.57,
-      "delta": -29.42,
-      "delta_pct": -11.74,
-      "data_checagem": "2026-08-02 15:08"
+      "data_checagem": "2026-08-02 21:14"
     },
     {
       "marca": "Byintek",
@@ -33,27 +23,37 @@
       "preco_ontem": 1053.88,
       "delta": -107.59,
       "delta_pct": -10.21,
-      "data_checagem": "2026-08-02 15:25"
+      "data_checagem": "2026-08-02 21:34"
     },
     {
       "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 836.46,
-      "preco_ontem": 927.16,
-      "delta": -90.7,
-      "delta_pct": -9.78,
-      "data_checagem": "2026-08-02 15:09"
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 1098.74,
+      "preco_ontem": 1110.58,
+      "delta": -11.84,
+      "delta_pct": -1.07,
+      "data_checagem": "2026-08-02 21:24"
     },
     {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 670.7,
-      "preco_ontem": 718.67,
-      "delta": -47.97,
-      "delta_pct": -6.67,
-      "data_checagem": "2026-08-02 15:12"
+      "marca": "Vevshao",
+      "modelo": "V60",
+      "slug": "vevshao-v60",
+      "preco_atual": 2237.74,
+      "preco_ontem": 2250.3,
+      "delta": -12.56,
+      "delta_pct": -0.56,
+      "data_checagem": "2026-08-02 21:34"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1925.36,
+      "preco_ontem": 1934.0,
+      "delta": -8.64,
+      "delta_pct": -0.45,
+      "data_checagem": "2026-08-02 21:34"
     }
   ]
 }
