@@ -379,6 +379,18 @@
       .pa-compra-card { grid-template-columns: 1fr; }
       .pa-compra-cta { justify-content: center; }
     }
+    /* cor de identidade da loja (nome + faixa lateral). Ciano/amarelo/verde do v2
+       continuam com o significado de sempre: preco, botao de compra e queda. */
+    .pa-compra-card { --loja-cor: var(--text); }
+    .pa-compra-card.loja-aliexpress { --loja-cor: #FF6B6B; }
+    .pa-compra-card.loja-mercadolivre { --loja-cor: #FFD84D; }
+    .pa-compra-card.loja-shopee { --loja-cor: #FF9A3D; }
+    .pa-compra-card.loja-globalstock { --loja-cor: #B0BCFF; }
+    .pa-compra-card:not(.destaque) { border-left: 3px solid var(--loja-cor); }
+    .pa-compra-loja { color: var(--loja-cor); }
+    /* com marca_compra o titulo e a MARCA: ela fica branca e so o "no <loja>" recebe a cor */
+    .pa-compra-loja:has(.pa-compra-loja-sub) { color: var(--text); }
+    .pa-compra-loja-sub { color: var(--loja-cor); }
 
     .pa-secao { margin-bottom: 28px; }
     .pa-secao h2 {
@@ -514,7 +526,7 @@
             <div class="pa-compras">
             <h2>Onde comprar — 3 opções</h2>
             <div class="pa-compras-list">
-      <div class="pa-compra-card destaque">
+      <div class="pa-compra-card destaque loja-aliexpress">
         <div class="pa-compra-info">
           <div class="pa-compra-topo">
             <span class="pa-compra-loja">AliExpress</span>
@@ -529,7 +541,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
         </a>
       </div>
-      <div class="pa-compra-card">
+      <div class="pa-compra-card loja-mercadolivre">
         <div class="pa-compra-info">
           <div class="pa-compra-topo">
             <span class="pa-compra-loja">Mercado Livre</span>
@@ -544,7 +556,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
         </a>
       </div>
-      <div class="pa-compra-card">
+      <div class="pa-compra-card loja-mercadolivre">
         <div class="pa-compra-info">
           <div class="pa-compra-topo">
             <span class="pa-compra-loja">Mercado Livre</span>

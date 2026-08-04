@@ -4,7 +4,7 @@
    Carregado SÓ nas páginas GERADAS (projetor/ , marca/ , acessorios/),
    DEPOIS de v2.css e do CSS do corpo (projetor.css ou o <style> inline
    dos hubs/acessórios). Essas páginas mantêm o CORPO antigo (.proj-* ,
-   .mk-* , .ac-*/.pa-*), que referencia tokens do style.css (--primary,
+   .mk-* , .ac-* e .pa-*), que referencia tokens do style.css (--primary,
    --card-bg, --border...). O style.css saiu do <head> dessas páginas;
    esta ponte:
      1. re-aponta cada token antigo pro valor v2 (re-tema, sem tocar no
