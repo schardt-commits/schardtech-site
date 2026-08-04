@@ -1,29 +1,59 @@
 {
   "data_coleta": "04/08",
-  "hora_coleta": "00:32",
+  "hora_coleta": "09:33",
   "data_ontem": "03/08",
   "data_hoje": "04/08",
-  "total_quedas": 2,
+  "total_quedas": 5,
   "quedas": [
+    {
+      "marca": "Magcubic",
+      "modelo": "X7",
+      "slug": "magcubic-x7",
+      "preco_atual": 1057.0,
+      "preco_ontem": 1090.0,
+      "delta": -33.0,
+      "delta_pct": -3.03,
+      "data_checagem": "2026-08-04 09:25"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1534.69,
+      "preco_ontem": 1558.98,
+      "delta": -24.29,
+      "delta_pct": -1.56,
+      "data_checagem": "2026-08-04 09:19"
+    },
     {
       "marca": "Byintek",
       "modelo": "U80 MAX",
       "slug": "byintek-u80-max",
-      "preco_atual": 1910.74,
+      "preco_atual": 1903.76,
       "preco_ontem": 1913.77,
-      "delta": -3.03,
-      "delta_pct": -0.16,
-      "data_checagem": "2026-08-04 00:32"
+      "delta": -10.01,
+      "delta_pct": -0.52,
+      "data_checagem": "2026-08-04 09:33"
     },
     {
       "marca": "Vevshao",
       "modelo": "V60",
       "slug": "vevshao-v60",
-      "preco_atual": 2216.48,
+      "preco_atual": 2212.1,
       "preco_ontem": 2218.45,
-      "delta": -1.97,
-      "delta_pct": -0.09,
-      "data_checagem": "2026-08-04 00:32"
+      "delta": -6.35,
+      "delta_pct": -0.29,
+      "data_checagem": "2026-08-04 09:33"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 1017.97,
+      "preco_ontem": 1018.19,
+      "delta": -0.22,
+      "delta_pct": -0.02,
+      "data_checagem": "2026-08-04 09:14"
     }
   ]
 }
