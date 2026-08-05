@@ -13,11 +13,11 @@ const projectors = [];
 // ============================================================
 const featuredVideos = [
   { id: "9Y3JefY-9MM", title: "Compensa!? Bettdow AC1085 Com Android Tv" },
-  { id: "_xe393q7BpA", title: "Seu Novo Projetor Para Copa!? Testei o U14 PRO Da Byintek" },
-  { id: "s7gfCpdJCVw", title: "Tela 100&quot; Portátil Byintek: DÁ PARA VER DOS DOIS LADOS?" },
-  { id: "y40NWkwjuYg", title: "Qual Melhor Projetor Custo Beneficio!" },
-  { id: "rrlQhQFhGgs", title: "Live especial: perguntas + sorteio do Bettdow AC1073 🎁" },
-  { id: "uJlFbDdvNJE", title: "[2026] Melhor Custo Beneficio de 2026: Projetor Bettdow AC1079! Análise Completa!!" },
+  { id: "vHvMVtiSxqw", title: "AC1093 PRO BETTDOW: Projetor Mais Barato Com Android TV Certificado!" },
+  { id: "KQH2fRqt5eU", title: "Queria Ter Comprado Antes: Magcubic X7" },
+  { id: "FUBao00uR3g", title: "Vale A Pena!? ThundeaL TD98 MINI - Análise Completa!" },
+  { id: "sU_IlBvAbAo", title: "Magcubic X7: Unboxing e Primeiras Impreções!" },
+  { id: "-jDGpRWrybw", title: "Projetores e Eletrônicos no Paraguai: Vale a pena em 2026?" },
 ];
 
 // ============================================================
