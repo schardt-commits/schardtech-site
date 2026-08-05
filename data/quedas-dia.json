@@ -1,39 +1,59 @@
 {
-  "data_coleta": "04/08",
-  "hora_coleta": "15:15",
-  "data_ontem": "03/08",
-  "data_hoje": "04/08",
-  "total_quedas": 3,
+  "data_coleta": "05/08",
+  "hora_coleta": "09:33",
+  "data_ontem": "04/08",
+  "data_hoje": "05/08",
+  "total_quedas": 12,
   "quedas": [
     {
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1364.65,
+      "preco_ontem": 1583.9,
+      "delta": -219.25,
+      "delta_pct": -13.84,
+      "data_checagem": "2026-08-05 09:33"
+    },
+    {
       "marca": "Thundeal",
-      "modelo": "TD95W",
-      "slug": "thundeal-td95w",
-      "preco_atual": 678.9,
-      "preco_ontem": 717.59,
-      "delta": -38.69,
-      "delta_pct": -5.39,
-      "data_checagem": "2026-08-04 15:09"
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 990.8,
+      "preco_ontem": 1065.59,
+      "delta": -74.79,
+      "delta_pct": -7.02,
+      "data_checagem": "2026-08-05 09:23"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 1648.38,
+      "preco_ontem": 1764.12,
+      "delta": -115.74,
+      "delta_pct": -6.56,
+      "data_checagem": "2026-08-05 09:33"
     },
     {
       "marca": "Magcubic",
       "modelo": "X7",
       "slug": "magcubic-x7",
-      "preco_atual": 1057.0,
-      "preco_ontem": 1090.0,
-      "delta": -33.0,
-      "delta_pct": -3.03,
-      "data_checagem": "2026-08-04 15:15"
+      "preco_atual": 988.08,
+      "preco_ontem": 1057.0,
+      "delta": -68.92,
+      "delta_pct": -6.52,
+      "data_checagem": "2026-08-05 09:33"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1548.64,
-      "preco_ontem": 1558.98,
-      "delta": -10.34,
-      "delta_pct": -0.66,
-      "data_checagem": "2026-08-04 15:09"
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 515.33,
+      "preco_ontem": 545.34,
+      "delta": -30.01,
+      "delta_pct": -5.5,
+      "data_checagem": "2026-08-05 09:15"
     }
   ]
 }
