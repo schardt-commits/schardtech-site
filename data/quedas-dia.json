@@ -1,39 +1,19 @@
 {
   "data_coleta": "05/08",
-  "hora_coleta": "09:33",
+  "hora_coleta": "15:22",
   "data_ontem": "04/08",
   "data_hoje": "05/08",
-  "total_quedas": 12,
+  "total_quedas": 14,
   "quedas": [
     {
       "marca": "Byintek",
       "modelo": "U14 PRO",
       "slug": "byintek-u14-pro",
-      "preco_atual": 1364.65,
+      "preco_atual": 1380.09,
       "preco_ontem": 1583.9,
-      "delta": -219.25,
-      "delta_pct": -13.84,
-      "data_checagem": "2026-08-05 09:33"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 990.8,
-      "preco_ontem": 1065.59,
-      "delta": -74.79,
-      "delta_pct": -7.02,
-      "data_checagem": "2026-08-05 09:23"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 1648.38,
-      "preco_ontem": 1764.12,
-      "delta": -115.74,
-      "delta_pct": -6.56,
-      "data_checagem": "2026-08-05 09:33"
+      "delta": -203.81,
+      "delta_pct": -12.87,
+      "data_checagem": "2026-08-05 15:22"
     },
     {
       "marca": "Magcubic",
@@ -43,17 +23,37 @@
       "preco_ontem": 1057.0,
       "delta": -68.92,
       "delta_pct": -6.52,
-      "data_checagem": "2026-08-05 09:33"
+      "data_checagem": "2026-08-05 15:22"
     },
     {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 515.33,
-      "preco_ontem": 545.34,
-      "delta": -30.01,
-      "delta_pct": -5.5,
-      "data_checagem": "2026-08-05 09:15"
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 996.24,
+      "preco_ontem": 1065.59,
+      "delta": -69.35,
+      "delta_pct": -6.51,
+      "data_checagem": "2026-08-05 15:12"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 1657.7,
+      "preco_ontem": 1764.12,
+      "delta": -106.42,
+      "delta_pct": -6.03,
+      "data_checagem": "2026-08-05 15:22"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 970.49,
+      "preco_ontem": 1031.36,
+      "delta": -60.87,
+      "delta_pct": -5.9,
+      "data_checagem": "2026-08-05 15:22"
     }
   ]
 }
