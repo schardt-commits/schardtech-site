@@ -1707,7 +1707,7 @@ window.PROJETORES_DATA = [
     "amazon_url": "",
     "ram_gb": 1,
     "armazenamento_gb": 8,
-    "status": "nacional",
+    "status": "sem_estoque_br",
     "link_importado": "",
     "bolsa": ""
   },
