@@ -1,59 +1,49 @@
 {
-  "data_coleta": "05/08",
-  "hora_coleta": "15:22",
-  "data_ontem": "04/08",
-  "data_hoje": "05/08",
-  "total_quedas": 14,
+  "data_coleta": "06/08",
+  "hora_coleta": "00:31",
+  "data_ontem": "05/08",
+  "data_hoje": "06/08",
+  "total_quedas": 4,
   "quedas": [
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1053",
+      "slug": "bettdow-ac1053",
+      "preco_atual": 1134.36,
+      "preco_ontem": 1149.08,
+      "delta": -14.72,
+      "delta_pct": -1.28,
+      "data_checagem": "2026-08-06 00:31"
+    },
     {
       "marca": "Byintek",
       "modelo": "U14 PRO",
       "slug": "byintek-u14-pro",
-      "preco_atual": 1380.09,
-      "preco_ontem": 1583.9,
-      "delta": -203.81,
-      "delta_pct": -12.87,
-      "data_checagem": "2026-08-05 15:22"
+      "preco_atual": 1378.14,
+      "preco_ontem": 1382.04,
+      "delta": -3.9,
+      "delta_pct": -0.28,
+      "data_checagem": "2026-08-06 00:31"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "X7",
-      "slug": "magcubic-x7",
-      "preco_atual": 988.08,
-      "preco_ontem": 1057.0,
-      "delta": -68.92,
-      "delta_pct": -6.52,
-      "data_checagem": "2026-08-05 15:22"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 996.24,
-      "preco_ontem": 1065.59,
-      "delta": -69.35,
-      "delta_pct": -6.51,
-      "data_checagem": "2026-08-05 15:12"
+      "marca": "Vevshao",
+      "modelo": "V60",
+      "slug": "vevshao-v60",
+      "preco_atual": 2271.65,
+      "preco_ontem": 2274.87,
+      "delta": -3.22,
+      "delta_pct": -0.14,
+      "data_checagem": "2026-08-06 00:31"
     },
     {
       "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 1657.7,
-      "preco_ontem": 1764.12,
-      "delta": -106.42,
-      "delta_pct": -6.03,
-      "data_checagem": "2026-08-05 15:22"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 970.49,
-      "preco_ontem": 1031.36,
-      "delta": -60.87,
-      "delta_pct": -5.9,
-      "data_checagem": "2026-08-05 15:22"
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1960.74,
+      "preco_ontem": 1961.96,
+      "delta": -1.22,
+      "delta_pct": -0.06,
+      "data_checagem": "2026-08-06 00:31"
     }
   ]
 }
