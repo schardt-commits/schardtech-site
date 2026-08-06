@@ -1,10 +1,20 @@
 {
   "data_coleta": "06/08",
-  "hora_coleta": "09:31",
+  "hora_coleta": "15:26",
   "data_ontem": "05/08",
   "data_hoje": "06/08",
-  "total_quedas": 2,
+  "total_quedas": 16,
   "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 926.98,
+      "preco_ontem": 970.49,
+      "delta": -43.51,
+      "delta_pct": -4.48,
+      "data_checagem": "2026-08-06 15:26"
+    },
     {
       "marca": "Thundeal",
       "modelo": "TD80PRO",
@@ -23,7 +33,27 @@
       "preco_ontem": 1149.08,
       "delta": -14.72,
       "delta_pct": -1.28,
-      "data_checagem": "2026-08-06 09:31"
+      "data_checagem": "2026-08-06 15:26"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1950.06,
+      "preco_ontem": 1961.96,
+      "delta": -11.9,
+      "delta_pct": -0.61,
+      "data_checagem": "2026-08-06 15:26"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 1652.78,
+      "preco_ontem": 1657.7,
+      "delta": -4.92,
+      "delta_pct": -0.3,
+      "data_checagem": "2026-08-06 15:26"
     }
   ]
 }
