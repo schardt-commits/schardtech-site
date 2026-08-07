@@ -1,19 +1,19 @@
 {
   "data_coleta": "07/08",
-  "hora_coleta": "09:33",
+  "hora_coleta": "15:22",
   "data_ontem": "06/08",
   "data_hoje": "07/08",
-  "total_quedas": 2,
+  "total_quedas": 11,
   "quedas": [
     {
       "marca": "Byintek",
       "modelo": "U90 MAX",
       "slug": "byintek-u90-max",
-      "preco_atual": 1652.78,
+      "preco_atual": 1759.79,
       "preco_ontem": 2892.48,
-      "delta": -1239.7,
-      "delta_pct": -42.86,
-      "data_checagem": "2026-08-07 09:33"
+      "delta": -1132.69,
+      "delta_pct": -39.16,
+      "data_checagem": "2026-08-07 15:22"
     },
     {
       "marca": "Wanbo",
@@ -23,7 +23,37 @@
       "preco_ontem": 2598.0,
       "delta": -52.36,
       "delta_pct": -2.02,
-      "data_checagem": "2026-08-07 09:33"
+      "data_checagem": "2026-08-07 15:22"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 383.76,
+      "preco_ontem": 385.75,
+      "delta": -1.99,
+      "delta_pct": -0.52,
+      "data_checagem": "2026-08-07 15:08"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD95W",
+      "slug": "thundeal-td95w",
+      "preco_atual": 703.16,
+      "preco_ontem": 706.81,
+      "delta": -3.65,
+      "delta_pct": -0.52,
+      "data_checagem": "2026-08-07 15:08"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 221.89,
+      "preco_ontem": 223.03,
+      "delta": -1.14,
+      "delta_pct": -0.51,
+      "data_checagem": "2026-08-07 15:05"
     }
   ]
 }
