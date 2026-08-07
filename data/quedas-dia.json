@@ -1,59 +1,29 @@
 {
-  "data_coleta": "06/08",
-  "hora_coleta": "15:26",
-  "data_ontem": "05/08",
-  "data_hoje": "06/08",
-  "total_quedas": 16,
+  "data_coleta": "07/08",
+  "hora_coleta": "00:32",
+  "data_ontem": "06/08",
+  "data_hoje": "07/08",
+  "total_quedas": 2,
   "quedas": [
-    {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 926.98,
-      "preco_ontem": 970.49,
-      "delta": -43.51,
-      "delta_pct": -4.48,
-      "data_checagem": "2026-08-06 15:26"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 386.92,
-      "preco_ontem": 404.75,
-      "delta": -17.83,
-      "delta_pct": -4.41,
-      "data_checagem": "2026-08-06 09:18"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1053",
-      "slug": "bettdow-ac1053",
-      "preco_atual": 1134.36,
-      "preco_ontem": 1149.08,
-      "delta": -14.72,
-      "delta_pct": -1.28,
-      "data_checagem": "2026-08-06 15:26"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U80 MAX",
-      "slug": "byintek-u80-max",
-      "preco_atual": 1950.06,
-      "preco_ontem": 1961.96,
-      "delta": -11.9,
-      "delta_pct": -0.61,
-      "data_checagem": "2026-08-06 15:26"
-    },
     {
       "marca": "Byintek",
       "modelo": "U90 MAX",
       "slug": "byintek-u90-max",
       "preco_atual": 1652.78,
-      "preco_ontem": 1657.7,
-      "delta": -4.92,
-      "delta_pct": -0.3,
-      "data_checagem": "2026-08-06 15:26"
+      "preco_ontem": 2892.48,
+      "delta": -1239.7,
+      "delta_pct": -42.86,
+      "data_checagem": "2026-08-07 00:32"
+    },
+    {
+      "marca": "Wanbo",
+      "modelo": "X5 Pro",
+      "slug": "wanbo-x5-pro",
+      "preco_atual": 2545.64,
+      "preco_ontem": 2598.0,
+      "delta": -52.36,
+      "delta_pct": -2.02,
+      "data_checagem": "2026-08-07 00:32"
     }
   ]
 }
