@@ -12,7 +12,7 @@ const projectors = [];
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
 // ============================================================
 const featuredVideos = [
-  { id: "oNcyM90hg7g", title: "Magcubic HY$450GT : Unboxing e Primeiras Impreções!" },
+  { id: "oNcyM90hg7g", title: "Magcubic HY450GT : Unboxing e Primeiras Impreções!" },
   { id: "9Y3JefY-9MM", title: "Compensa!? Bettdow AC1085 Com Android Tv" },
   { id: "vHvMVtiSxqw", title: "AC1093 PRO BETTDOW: Projetor Mais Barato Com Android TV Certificado!" },
   { id: "KQH2fRqt5eU", title: "Queria Ter Comprado Antes: Magcubic X7" },
