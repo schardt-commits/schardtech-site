@@ -1,59 +1,59 @@
 {
   "data_coleta": "09/08",
-  "hora_coleta": "00:35",
+  "hora_coleta": "09:35",
   "data_ontem": "08/08",
   "data_hoje": "09/08",
-  "total_quedas": 6,
+  "total_quedas": 14,
   "quedas": [
     {
-      "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 2483.08,
-      "preco_ontem": 2598.0,
-      "delta": -114.92,
-      "delta_pct": -4.42,
-      "data_checagem": "2026-08-09 00:35"
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 1202.43,
+      "preco_ontem": 1283.11,
+      "delta": -80.68,
+      "delta_pct": -6.29,
+      "data_checagem": "2026-08-09 09:25"
+    },
+    {
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 719.05,
+      "preco_ontem": 763.33,
+      "delta": -44.28,
+      "delta_pct": -5.8,
+      "data_checagem": "2026-08-09 09:14"
     },
     {
       "marca": "Byintek",
-      "modelo": "Love U4",
-      "slug": "byintek-love-u4",
-      "preco_atual": 684.48,
-      "preco_ontem": 714.29,
-      "delta": -29.81,
-      "delta_pct": -4.17,
-      "data_checagem": "2026-08-09 00:35"
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 2138.62,
+      "preco_ontem": 2268.52,
+      "delta": -129.9,
+      "delta_pct": -5.73,
+      "data_checagem": "2026-08-09 09:35"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1041",
-      "slug": "bettdow-ac1041",
-      "preco_atual": 831.68,
-      "preco_ontem": 859.0,
-      "delta": -27.32,
-      "delta_pct": -3.18,
-      "data_checagem": "2026-08-09 00:35"
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1650.55,
+      "preco_ontem": 1749.91,
+      "delta": -99.36,
+      "delta_pct": -5.68,
+      "data_checagem": "2026-08-09 09:35"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1066",
-      "slug": "bettdow-ac1066",
-      "preco_atual": 528.08,
-      "preco_ontem": 542.8,
-      "delta": -14.72,
-      "delta_pct": -2.71,
-      "data_checagem": "2026-08-09 00:35"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1053",
-      "slug": "bettdow-ac1053",
-      "preco_atual": 1134.36,
-      "preco_ontem": 1149.08,
-      "delta": -14.72,
-      "delta_pct": -1.28,
-      "data_checagem": "2026-08-09 00:35"
+      "marca": "Jenovox",
+      "modelo": "M5000 Mini",
+      "slug": "jenovox-m5000-mini",
+      "preco_atual": 2551.73,
+      "preco_ontem": 2688.81,
+      "delta": -137.08,
+      "delta_pct": -5.1,
+      "data_checagem": "2026-08-09 09:16"
     }
   ]
 }
