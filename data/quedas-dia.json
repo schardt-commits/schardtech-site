@@ -1,59 +1,59 @@
 {
-  "data_coleta": "09/08",
-  "hora_coleta": "21:36",
-  "data_ontem": "08/08",
-  "data_hoje": "09/08",
-  "total_quedas": 15,
+  "data_coleta": "10/08",
+  "hora_coleta": "00:36",
+  "data_ontem": "09/08",
+  "data_hoje": "10/08",
+  "total_quedas": 7,
   "quedas": [
     {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 1283.5,
-      "preco_ontem": 1839.18,
-      "delta": -555.68,
-      "delta_pct": -30.21,
-      "data_checagem": "2026-08-09 21:25"
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 1029.77,
+      "preco_ontem": 1194.76,
+      "delta": -164.99,
+      "delta_pct": -13.81,
+      "data_checagem": "2026-08-10 00:36"
+    },
+    {
+      "marca": "Voxflix",
+      "modelo": "VF71",
+      "slug": "voxflix-vf71",
+      "preco_atual": 1167.61,
+      "preco_ontem": 1265.48,
+      "delta": -97.87,
+      "delta_pct": -7.73,
+      "data_checagem": "2026-08-10 00:23"
     },
     {
       "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 1202.43,
-      "preco_ontem": 1283.11,
-      "delta": -80.68,
-      "delta_pct": -6.29,
-      "data_checagem": "2026-08-09 21:26"
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1851.72,
+      "preco_ontem": 1957.86,
+      "delta": -106.14,
+      "delta_pct": -5.42,
+      "data_checagem": "2026-08-10 00:21"
     },
     {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 719.05,
-      "preco_ontem": 763.33,
-      "delta": -44.28,
-      "delta_pct": -5.8,
-      "data_checagem": "2026-08-09 21:14"
+      "marca": "FlixTone",
+      "modelo": "D9W Ultra",
+      "slug": "flixtone-d9w-ultra",
+      "preco_atual": 2171.99,
+      "preco_ontem": 2286.53,
+      "delta": -114.54,
+      "delta_pct": -5.01,
+      "data_checagem": "2026-08-10 00:15"
     },
     {
-      "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 2138.62,
-      "preco_ontem": 2268.52,
-      "delta": -129.9,
-      "delta_pct": -5.73,
-      "data_checagem": "2026-08-09 21:36"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1652.05,
-      "preco_ontem": 1749.91,
-      "delta": -97.86,
-      "delta_pct": -5.59,
-      "data_checagem": "2026-08-09 21:36"
+      "marca": "Bettdow",
+      "modelo": "AC1041",
+      "slug": "bettdow-ac1041",
+      "preco_atual": 831.68,
+      "preco_ontem": 850.08,
+      "delta": -18.4,
+      "delta_pct": -2.16,
+      "data_checagem": "2026-08-10 00:36"
     }
   ]
 }
