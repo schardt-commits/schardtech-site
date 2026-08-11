@@ -1,10 +1,20 @@
 {
   "data_coleta": "11/08",
-  "hora_coleta": "00:36",
+  "hora_coleta": "09:37",
   "data_ontem": "10/08",
   "data_hoje": "11/08",
-  "total_quedas": 5,
+  "total_quedas": 8,
   "quedas": [
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80W",
+      "slug": "thundeal-td80w",
+      "preco_atual": 635.9,
+      "preco_ontem": 709.46,
+      "delta": -73.56,
+      "delta_pct": -10.37,
+      "data_checagem": "2026-08-11 09:20"
+    },
     {
       "marca": "Magcubic",
       "modelo": "HY300",
@@ -13,7 +23,17 @@
       "preco_ontem": 260.83,
       "delta": -18.05,
       "delta_pct": -6.92,
-      "data_checagem": "2026-08-11 00:36"
+      "data_checagem": "2026-08-11 09:37"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1041",
+      "slug": "bettdow-ac1041",
+      "preco_atual": 808.68,
+      "preco_ontem": 850.08,
+      "delta": -41.4,
+      "delta_pct": -4.87,
+      "data_checagem": "2026-08-11 09:37"
     },
     {
       "marca": "Byintek",
@@ -23,37 +43,17 @@
       "preco_ontem": 712.08,
       "delta": -27.6,
       "delta_pct": -3.88,
-      "data_checagem": "2026-08-11 00:36"
+      "data_checagem": "2026-08-11 09:37"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1041",
-      "slug": "bettdow-ac1041",
-      "preco_atual": 831.68,
-      "preco_ontem": 850.08,
-      "delta": -18.4,
-      "delta_pct": -2.16,
-      "data_checagem": "2026-08-11 00:36"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U80 MAX",
-      "slug": "byintek-u80-max",
-      "preco_atual": 2087.48,
-      "preco_ontem": 2115.08,
-      "delta": -27.6,
-      "delta_pct": -1.3,
-      "data_checagem": "2026-08-11 00:36"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "V60",
-      "slug": "vevshao-v60",
-      "preco_atual": 2271.48,
-      "preco_ontem": 2299.08,
-      "delta": -27.6,
-      "delta_pct": -1.2,
-      "data_checagem": "2026-08-11 00:36"
+      "marca": "Magcubic",
+      "modelo": "HY450",
+      "slug": "magcubic-hy450",
+      "preco_atual": 781.08,
+      "preco_ontem": 804.08,
+      "delta": -23.0,
+      "delta_pct": -2.86,
+      "data_checagem": "2026-08-11 09:37"
     }
   ]
 }
