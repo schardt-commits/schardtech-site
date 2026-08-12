@@ -1,19 +1,59 @@
 {
   "data_coleta": "12/08",
-  "hora_coleta": "00:37",
+  "hora_coleta": "15:27",
   "data_ontem": "11/08",
   "data_hoje": "12/08",
-  "total_quedas": 1,
+  "total_quedas": 12,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1061",
-      "slug": "bettdow-ac1061",
-      "preco_atual": 1623.9,
-      "preco_ontem": 1633.51,
-      "delta": -9.61,
-      "delta_pct": -0.59,
-      "data_checagem": "2026-08-12 00:37"
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 718.76,
+      "preco_ontem": 765.87,
+      "delta": -47.11,
+      "delta_pct": -6.15,
+      "data_checagem": "2026-08-12 15:04"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 1162.92,
+      "preco_ontem": 1232.87,
+      "delta": -69.95,
+      "delta_pct": -5.67,
+      "data_checagem": "2026-08-12 15:27"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 1234.78,
+      "preco_ontem": 1304.63,
+      "delta": -69.85,
+      "delta_pct": -5.35,
+      "data_checagem": "2026-08-12 15:17"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1772.08,
+      "preco_ontem": 1870.8,
+      "delta": -98.72,
+      "delta_pct": -5.28,
+      "data_checagem": "2026-08-12 15:27"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 1043.68,
+      "preco_ontem": 1096.67,
+      "delta": -52.99,
+      "delta_pct": -4.83,
+      "data_checagem": "2026-08-12 15:27"
     }
   ]
 }
