@@ -1,10 +1,20 @@
 {
   "data_coleta": "12/08",
-  "hora_coleta": "15:27",
+  "hora_coleta": "21:37",
   "data_ontem": "11/08",
   "data_hoje": "12/08",
   "total_quedas": 12,
   "quedas": [
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80W",
+      "slug": "thundeal-td80w",
+      "preco_atual": 578.52,
+      "preco_ontem": 637.39,
+      "delta": -58.87,
+      "delta_pct": -9.24,
+      "data_checagem": "2026-08-12 21:20"
+    },
     {
       "marca": "Everycom",
       "modelo": "R16",
@@ -13,7 +23,17 @@
       "preco_ontem": 765.87,
       "delta": -47.11,
       "delta_pct": -6.15,
-      "data_checagem": "2026-08-12 15:04"
+      "data_checagem": "2026-08-12 21:14"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1761.8,
+      "preco_ontem": 1870.8,
+      "delta": -109.0,
+      "delta_pct": -5.83,
+      "data_checagem": "2026-08-12 21:37"
     },
     {
       "marca": "Byintek",
@@ -23,7 +43,7 @@
       "preco_ontem": 1232.87,
       "delta": -69.95,
       "delta_pct": -5.67,
-      "data_checagem": "2026-08-12 15:27"
+      "data_checagem": "2026-08-12 21:37"
     },
     {
       "marca": "Thundeal",
@@ -33,27 +53,7 @@
       "preco_ontem": 1304.63,
       "delta": -69.85,
       "delta_pct": -5.35,
-      "data_checagem": "2026-08-12 15:17"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1772.08,
-      "preco_ontem": 1870.8,
-      "delta": -98.72,
-      "delta_pct": -5.28,
-      "data_checagem": "2026-08-12 15:27"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "A22",
-      "slug": "vevshao-a22",
-      "preco_atual": 1043.68,
-      "preco_ontem": 1096.67,
-      "delta": -52.99,
-      "delta_pct": -4.83,
-      "data_checagem": "2026-08-12 15:27"
+      "data_checagem": "2026-08-12 21:27"
     }
   ]
 }
