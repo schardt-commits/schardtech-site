@@ -1,59 +1,59 @@
 {
-  "data_coleta": "13/08",
-  "hora_coleta": "21:34",
-  "data_ontem": "12/08",
-  "data_hoje": "13/08",
-  "total_quedas": 10,
+  "data_coleta": "14/08",
+  "hora_coleta": "00:34",
+  "data_ontem": "13/08",
+  "data_hoje": "14/08",
+  "total_quedas": 20,
   "quedas": [
     {
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 1050.5,
+      "preco_ontem": 1216.19,
+      "delta": -165.69,
+      "delta_pct": -13.62,
+      "data_checagem": "2026-08-14 00:34"
+    },
+    {
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 959.57,
+      "preco_ontem": 1093.58,
+      "delta": -134.01,
+      "delta_pct": -12.25,
+      "data_checagem": "2026-08-14 00:16"
+    },
+    {
       "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1762.86,
-      "preco_ontem": 1866.72,
-      "delta": -103.86,
-      "delta_pct": -5.56,
-      "data_checagem": "2026-08-13 21:19"
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 698.54,
+      "preco_ontem": 775.72,
+      "delta": -77.18,
+      "delta_pct": -9.95,
+      "data_checagem": "2026-08-14 00:17"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1041",
-      "slug": "bettdow-ac1041",
-      "preco_atual": 830.6,
-      "preco_ontem": 859.0,
-      "delta": -28.4,
-      "delta_pct": -3.31,
-      "data_checagem": "2026-08-13 21:34"
+      "marca": "Thundeal",
+      "modelo": "TD92 Pro",
+      "slug": "thundeal-td92-pro",
+      "preco_atual": 695.11,
+      "preco_ontem": 765.89,
+      "delta": -70.78,
+      "delta_pct": -9.24,
+      "data_checagem": "2026-08-14 00:19"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1061",
-      "slug": "bettdow-ac1061",
-      "preco_atual": 1617.33,
-      "preco_ontem": 1623.9,
-      "delta": -6.57,
-      "delta_pct": -0.4,
-      "data_checagem": "2026-08-13 21:34"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1071",
-      "slug": "bettdow-ac1071",
-      "preco_atual": 1443.33,
-      "preco_ontem": 1449.1,
-      "delta": -5.77,
-      "delta_pct": -0.4,
-      "data_checagem": "2026-08-13 21:34"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "Cubelite MAX",
-      "slug": "everycom-cubelite-max",
-      "preco_atual": 2039.0,
-      "preco_ontem": 2047.0,
-      "delta": -8.0,
-      "delta_pct": -0.39,
-      "data_checagem": "2026-08-13 21:34"
+      "marca": "Thundeal",
+      "modelo": "TD80W",
+      "slug": "thundeal-td80w",
+      "preco_atual": 582.29,
+      "preco_ontem": 637.93,
+      "delta": -55.64,
+      "delta_pct": -8.72,
+      "data_checagem": "2026-08-14 00:18"
     }
   ]
 }
