@@ -1,9 +1,9 @@
 {
   "data_coleta": "14/08",
-  "hora_coleta": "00:34",
+  "hora_coleta": "09:34",
   "data_ontem": "13/08",
   "data_hoje": "14/08",
-  "total_quedas": 20,
+  "total_quedas": 29,
   "quedas": [
     {
       "marca": "Vevshao",
@@ -13,7 +13,7 @@
       "preco_ontem": 1216.19,
       "delta": -165.69,
       "delta_pct": -13.62,
-      "data_checagem": "2026-08-14 00:34"
+      "data_checagem": "2026-08-14 09:34"
     },
     {
       "marca": "Horlat",
@@ -23,7 +23,7 @@
       "preco_ontem": 1093.58,
       "delta": -134.01,
       "delta_pct": -12.25,
-      "data_checagem": "2026-08-14 00:16"
+      "data_checagem": "2026-08-14 09:15"
     },
     {
       "marca": "Thundeal",
@@ -33,7 +33,17 @@
       "preco_ontem": 775.72,
       "delta": -77.18,
       "delta_pct": -9.95,
-      "data_checagem": "2026-08-14 00:17"
+      "data_checagem": "2026-08-14 09:17"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY450 MAX",
+      "slug": "magcubic-hy450-max",
+      "preco_atual": 1021.79,
+      "preco_ontem": 1130.13,
+      "delta": -108.34,
+      "delta_pct": -9.59,
+      "data_checagem": "2026-08-14 09:34"
     },
     {
       "marca": "Thundeal",
@@ -43,17 +53,7 @@
       "preco_ontem": 765.89,
       "delta": -70.78,
       "delta_pct": -9.24,
-      "data_checagem": "2026-08-14 00:19"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80W",
-      "slug": "thundeal-td80w",
-      "preco_atual": 582.29,
-      "preco_ontem": 637.93,
-      "delta": -55.64,
-      "delta_pct": -8.72,
-      "data_checagem": "2026-08-14 00:18"
+      "data_checagem": "2026-08-14 09:18"
     }
   ]
 }
