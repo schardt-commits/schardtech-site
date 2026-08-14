@@ -864,7 +864,7 @@ window.PROJETORES_DATA = [
     "ali_url": "",
     "ali_cupom_loja": "",
     "ali_cupom_promo": "",
-    "ml_url": "https://meli.la/1faS5r2",
+    "ml_url": "",
     "shopee_url": "https://s.shopee.com.br/W3fOICDAL",
     "amazon_url": "",
     "ram_gb": 3,
@@ -2543,7 +2543,7 @@ window.PROJETORES_DATA = [
     "amazon_url": "",
     "ram_gb": 1,
     "armazenamento_gb": 8,
-    "status": "nacional",
+    "status": "sem_estoque_br",
     "link_importado": "",
     "bolsa": ""
   },
