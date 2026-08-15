@@ -1,59 +1,59 @@
 {
-  "data_coleta": "14/08",
-  "hora_coleta": "21:33",
-  "data_ontem": "13/08",
-  "data_hoje": "14/08",
-  "total_quedas": 22,
+  "data_coleta": "15/08",
+  "hora_coleta": "00:31",
+  "data_ontem": "14/08",
+  "data_hoje": "15/08",
+  "total_quedas": 7,
   "quedas": [
     {
-      "marca": "Magcubic",
-      "modelo": "HY450",
-      "slug": "magcubic-hy450",
-      "preco_atual": 690.98,
-      "preco_ontem": 802.08,
-      "delta": -111.1,
-      "delta_pct": -13.85,
-      "data_checagem": "2026-08-14 21:33"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY450 MAX",
-      "slug": "magcubic-hy450-max",
-      "preco_atual": 1021.79,
-      "preco_ontem": 1130.13,
-      "delta": -108.34,
-      "delta_pct": -9.59,
-      "data_checagem": "2026-08-14 21:33"
-    },
-    {
-      "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 2309.2,
-      "preco_ontem": 2511.88,
-      "delta": -202.68,
-      "delta_pct": -8.07,
-      "data_checagem": "2026-08-14 21:33"
+      "marca": "Touyinger",
+      "modelo": "Q13W",
+      "slug": "touyinger-q13w",
+      "preco_atual": 1957.57,
+      "preco_ontem": 2053.59,
+      "delta": -96.02,
+      "delta_pct": -4.68,
+      "data_checagem": "2026-08-15 00:28"
     },
     {
       "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 1234.98,
-      "preco_ontem": 1325.99,
-      "delta": -91.01,
-      "delta_pct": -6.86,
-      "data_checagem": "2026-08-14 21:23"
+      "modelo": "TD80W",
+      "slug": "thundeal-td80w",
+      "preco_atual": 612.96,
+      "preco_ontem": 638.89,
+      "delta": -25.93,
+      "delta_pct": -4.06,
+      "data_checagem": "2026-08-15 00:25"
     },
     {
-      "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 2175.41,
-      "preco_ontem": 2314.19,
-      "delta": -138.78,
-      "delta_pct": -6.0,
-      "data_checagem": "2026-08-14 21:33"
+      "marca": "Thundeal",
+      "modelo": "TD92 Pro",
+      "slug": "thundeal-td92-pro",
+      "preco_atual": 758.46,
+      "preco_ontem": 767.23,
+      "delta": -8.77,
+      "delta_pct": -1.14,
+      "data_checagem": "2026-08-15 00:26"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D10S",
+      "slug": "flixtone-d10s",
+      "preco_atual": 2593.42,
+      "preco_ontem": 2608.99,
+      "delta": -15.57,
+      "delta_pct": -0.6,
+      "data_checagem": "2026-08-15 00:31"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A24 MAX",
+      "slug": "vevshao-a24-max",
+      "preco_atual": 1935.67,
+      "preco_ontem": 1944.99,
+      "delta": -9.32,
+      "delta_pct": -0.48,
+      "data_checagem": "2026-08-15 00:30"
     }
   ]
 }
