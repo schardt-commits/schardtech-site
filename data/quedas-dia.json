@@ -1,9 +1,9 @@
 {
   "data_coleta": "15/08",
-  "hora_coleta": "00:31",
+  "hora_coleta": "09:23",
   "data_ontem": "14/08",
   "data_hoje": "15/08",
-  "total_quedas": 7,
+  "total_quedas": 6,
   "quedas": [
     {
       "marca": "Touyinger",
@@ -13,17 +13,7 @@
       "preco_ontem": 2053.59,
       "delta": -96.02,
       "delta_pct": -4.68,
-      "data_checagem": "2026-08-15 00:28"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80W",
-      "slug": "thundeal-td80w",
-      "preco_atual": 612.96,
-      "preco_ontem": 638.89,
-      "delta": -25.93,
-      "delta_pct": -4.06,
-      "data_checagem": "2026-08-15 00:25"
+      "data_checagem": "2026-08-15 09:21"
     },
     {
       "marca": "Thundeal",
@@ -33,7 +23,7 @@
       "preco_ontem": 767.23,
       "delta": -8.77,
       "delta_pct": -1.14,
-      "data_checagem": "2026-08-15 00:26"
+      "data_checagem": "2026-08-15 09:19"
     },
     {
       "marca": "FlixTone",
@@ -43,7 +33,7 @@
       "preco_ontem": 2608.99,
       "delta": -15.57,
       "delta_pct": -0.6,
-      "data_checagem": "2026-08-15 00:31"
+      "data_checagem": "2026-08-15 09:23"
     },
     {
       "marca": "Vevshao",
@@ -53,7 +43,17 @@
       "preco_ontem": 1944.99,
       "delta": -9.32,
       "delta_pct": -0.48,
-      "data_checagem": "2026-08-15 00:30"
+      "data_checagem": "2026-08-15 09:22"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 1501.01,
+      "preco_ontem": 1506.63,
+      "delta": -5.62,
+      "delta_pct": -0.37,
+      "data_checagem": "2026-08-15 09:14"
     }
   ]
 }
