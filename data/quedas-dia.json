@@ -1,9 +1,9 @@
 {
   "data_coleta": "14/08",
-  "hora_coleta": "15:23",
+  "hora_coleta": "21:33",
   "data_ontem": "13/08",
   "data_hoje": "14/08",
-  "total_quedas": 25,
+  "total_quedas": 22,
   "quedas": [
     {
       "marca": "Magcubic",
@@ -13,27 +13,7 @@
       "preco_ontem": 802.08,
       "delta": -111.1,
       "delta_pct": -13.85,
-      "data_checagem": "2026-08-14 15:23"
-    },
-    {
-      "marca": "Horlat",
-      "modelo": "T9N",
-      "slug": "horlat-t9n",
-      "preco_atual": 961.31,
-      "preco_ontem": 1093.58,
-      "delta": -132.27,
-      "delta_pct": -12.1,
-      "data_checagem": "2026-08-14 15:06"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 699.73,
-      "preco_ontem": 775.72,
-      "delta": -75.99,
-      "delta_pct": -9.8,
-      "data_checagem": "2026-08-14 15:07"
+      "data_checagem": "2026-08-14 21:33"
     },
     {
       "marca": "Magcubic",
@@ -43,17 +23,37 @@
       "preco_ontem": 1130.13,
       "delta": -108.34,
       "delta_pct": -9.59,
-      "data_checagem": "2026-08-14 15:23"
+      "data_checagem": "2026-08-14 21:33"
+    },
+    {
+      "marca": "Wanbo",
+      "modelo": "X5 Pro",
+      "slug": "wanbo-x5-pro",
+      "preco_atual": 2309.2,
+      "preco_ontem": 2511.88,
+      "delta": -202.68,
+      "delta_pct": -8.07,
+      "data_checagem": "2026-08-14 21:33"
     },
     {
       "marca": "Thundeal",
-      "modelo": "TD80W",
-      "slug": "thundeal-td80w",
-      "preco_atual": 583.29,
-      "preco_ontem": 637.93,
-      "delta": -54.64,
-      "delta_pct": -8.57,
-      "data_checagem": "2026-08-14 15:07"
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 1234.98,
+      "preco_ontem": 1325.99,
+      "delta": -91.01,
+      "delta_pct": -6.86,
+      "data_checagem": "2026-08-14 21:23"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 2175.41,
+      "preco_ontem": 2314.19,
+      "delta": -138.78,
+      "delta_pct": -6.0,
+      "data_checagem": "2026-08-14 21:33"
     }
   ]
 }
