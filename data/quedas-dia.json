@@ -1,9 +1,9 @@
 {
   "data_coleta": "17/08",
-  "hora_coleta": "15:14",
+  "hora_coleta": "21:23",
   "data_ontem": "16/08",
   "data_hoje": "17/08",
-  "total_quedas": 27,
+  "total_quedas": 28,
   "quedas": [
     {
       "marca": "Thundeal",
@@ -13,37 +13,27 @@
       "preco_ontem": 834.55,
       "delta": -402.65,
       "delta_pct": -48.25,
-      "data_checagem": "2026-08-17 15:07"
-    },
-    {
-      "marca": "Voxflix",
-      "modelo": "VF71",
-      "slug": "voxflix-vf71",
-      "preco_atual": 716.25,
-      "preco_ontem": 1182.95,
-      "delta": -466.7,
-      "delta_pct": -39.45,
-      "data_checagem": "2026-08-17 15:12"
+      "data_checagem": "2026-08-17 21:17"
     },
     {
       "marca": "Everycom",
       "modelo": "R16",
       "slug": "everycom-r16",
-      "preco_atual": 481.48,
+      "preco_atual": 417.1,
       "preco_ontem": 769.9,
-      "delta": -288.42,
-      "delta_pct": -37.46,
-      "data_checagem": "2026-08-17 15:04"
+      "delta": -352.8,
+      "delta_pct": -45.82,
+      "data_checagem": "2026-08-17 21:14"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 851.17,
-      "preco_ontem": 1318.33,
-      "delta": -467.16,
-      "delta_pct": -35.44,
-      "data_checagem": "2026-08-17 15:14"
+      "marca": "Voxflix",
+      "modelo": "VF71",
+      "slug": "voxflix-vf71",
+      "preco_atual": 718.0,
+      "preco_ontem": 1182.95,
+      "delta": -464.95,
+      "delta_pct": -39.3,
+      "data_checagem": "2026-08-17 21:22"
     },
     {
       "marca": "Thundeal",
@@ -53,7 +43,17 @@
       "preco_ontem": 1007.21,
       "delta": -355.17,
       "delta_pct": -35.26,
-      "data_checagem": "2026-08-17 15:09"
+      "data_checagem": "2026-08-17 21:18"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 854.38,
+      "preco_ontem": 1318.33,
+      "delta": -463.95,
+      "delta_pct": -35.19,
+      "data_checagem": "2026-08-17 21:23"
     }
   ]
 }
