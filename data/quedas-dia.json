@@ -1,59 +1,59 @@
 {
-  "data_coleta": "18/08",
-  "hora_coleta": "21:33",
-  "data_ontem": "17/08",
-  "data_hoje": "18/08",
-  "total_quedas": 24,
+  "data_coleta": "19/08",
+  "hora_coleta": "00:34",
+  "data_ontem": "18/08",
+  "data_hoje": "19/08",
+  "total_quedas": 5,
   "quedas": [
     {
-      "marca": "Voxflix",
-      "modelo": "VF71",
-      "slug": "voxflix-vf71",
-      "preco_atual": 664.23,
-      "preco_ontem": 718.0,
-      "delta": -53.77,
-      "delta_pct": -7.49,
-      "data_checagem": "2026-08-18 21:22"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1233.18,
-      "preco_ontem": 1315.82,
-      "delta": -82.64,
-      "delta_pct": -6.28,
-      "data_checagem": "2026-08-18 21:33"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U80 MAX",
-      "slug": "byintek-u80-max",
-      "preco_atual": 1895.2,
-      "preco_ontem": 2005.62,
-      "delta": -110.42,
-      "delta_pct": -5.51,
-      "data_checagem": "2026-08-18 21:33"
+      "marca": "Vevshao",
+      "modelo": "A24 MAX",
+      "slug": "vevshao-a24-max",
+      "preco_atual": 1111.98,
+      "preco_ontem": 1393.6,
+      "delta": -281.62,
+      "delta_pct": -20.21,
+      "data_checagem": "2026-08-19 00:23"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD98 MINI",
       "slug": "thundeal-td98-mini",
-      "preco_atual": 809.79,
-      "preco_ontem": 854.38,
-      "delta": -44.59,
-      "delta_pct": -5.22,
-      "data_checagem": "2026-08-18 21:23"
+      "preco_atual": 753.47,
+      "preco_ontem": 809.79,
+      "delta": -56.32,
+      "delta_pct": -6.95,
+      "data_checagem": "2026-08-19 00:24"
     },
     {
-      "marca": "Vevshao",
-      "modelo": "V60",
-      "slug": "vevshao-v60",
-      "preco_atual": 1964.21,
-      "preco_ontem": 2043.87,
-      "delta": -79.66,
-      "delta_pct": -3.9,
-      "data_checagem": "2026-08-18 21:33"
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 1001.18,
+      "preco_ontem": 1029.35,
+      "delta": -28.17,
+      "delta_pct": -2.74,
+      "data_checagem": "2026-08-19 00:24"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1071",
+      "slug": "bettdow-ac1071",
+      "preco_atual": 1449.1,
+      "preco_ontem": 1475.32,
+      "delta": -26.22,
+      "delta_pct": -1.78,
+      "data_checagem": "2026-08-19 00:34"
+    },
+    {
+      "marca": "Wanbo",
+      "modelo": "T2 Ultra",
+      "slug": "wanbo-t2-ultra",
+      "preco_atual": 1255.94,
+      "preco_ontem": 1262.06,
+      "delta": -6.12,
+      "delta_pct": -0.48,
+      "data_checagem": "2026-08-19 00:34"
     }
   ]
 }
