@@ -1845,7 +1845,7 @@ window.PROJETORES_DATA = [
     "tecnologias": "",
     "bateria": false,
     "cap_bateria": "",
-    "video_url": "https://youtu.be/CYLyKc3ZSdU",
+    "video_url": "https://youtu.be/h_g2V0d6bn8",
     "suporte_giratorio": true,
     "audio_qualidade": "",
     "uso_continuo": "4h",
