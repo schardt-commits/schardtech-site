@@ -1,10 +1,20 @@
 {
   "data_coleta": "19/08",
-  "hora_coleta": "00:34",
+  "hora_coleta": "01:58",
   "data_ontem": "18/08",
   "data_hoje": "19/08",
   "total_quedas": 5,
   "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 1569.25,
+      "preco_ontem": 2639.48,
+      "delta": -1070.23,
+      "delta_pct": -40.55,
+      "data_checagem": "2026-08-19 01:58"
+    },
     {
       "marca": "Vevshao",
       "modelo": "A24 MAX",
@@ -13,7 +23,7 @@
       "preco_ontem": 1393.6,
       "delta": -281.62,
       "delta_pct": -20.21,
-      "data_checagem": "2026-08-19 00:23"
+      "data_checagem": "2026-08-19 01:47"
     },
     {
       "marca": "Thundeal",
@@ -23,17 +33,7 @@
       "preco_ontem": 809.79,
       "delta": -56.32,
       "delta_pct": -6.95,
-      "data_checagem": "2026-08-19 00:24"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 1001.18,
-      "preco_ontem": 1029.35,
-      "delta": -28.17,
-      "delta_pct": -2.74,
-      "data_checagem": "2026-08-19 00:24"
+      "data_checagem": "2026-08-19 01:48"
     },
     {
       "marca": "Bettdow",
@@ -43,7 +43,7 @@
       "preco_ontem": 1475.32,
       "delta": -26.22,
       "delta_pct": -1.78,
-      "data_checagem": "2026-08-19 00:34"
+      "data_checagem": "2026-08-19 01:58"
     },
     {
       "marca": "Wanbo",
@@ -53,7 +53,7 @@
       "preco_ontem": 1262.06,
       "delta": -6.12,
       "delta_pct": -0.48,
-      "data_checagem": "2026-08-19 00:34"
+      "data_checagem": "2026-08-19 01:58"
     }
   ]
 }
