@@ -225,9 +225,12 @@
       } else {
         drop.innerHTML = res.map(function (p) {
           var href = p.slug ? bp + 'projetor/' + p.slug + '.html' : bp + 'precos.html';
+          // Sem preço publicado nem sempre é falta de estoque: 'coletando' (projetor
+          // que ainda não estreou) e diagnóstico do checker também zeram o preço.
+          // O prices-overlay marca sem_estoque_real só nos motivos de esgotamento.
           var sub = p.preco_atual != null
             ? nomeLoja(p.marketplace_vencedor) + (emMenorHistorico(p) ? ' &middot; menor hist&oacute;rico' : '')
-            : 'sem estoque no momento';
+            : (p.sem_estoque_real ? 'sem estoque no momento' : 'verificando pre&ccedil;o');
           var preco = p.preco_atual != null ? fmtBRL(p.preco_atual) : '&mdash;';
           return '<a href="' + esc(href) + '">' +
             '<span class="bd-nome"><b>' + esc(p.marca + ' ' + p.modelo) + '</b><span>' + sub + '</span></span>' +

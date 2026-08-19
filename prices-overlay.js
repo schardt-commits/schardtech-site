@@ -16,6 +16,19 @@
      window.PRICES_OVERLAY_READY.then(() => { renderTudo(); });
    ============================================================ */
 (function () {
+  /* Motivos de metadata.indisponiveis que sao esgotamento DE VERDADE.
+     Qualquer outro motivo (ex.: 'coletando' de projetor que ainda nao tem video,
+     ou diagnostico do checker como 'sem preco final ou sem vencedor') significa
+     "nao tenho preco publicado", NAO "acabou o estoque". Tratar os dois como a
+     mesma coisa fazia a busca global anunciar "sem estoque no momento" pra
+     produto que estava vendendo normalmente (19/08/2026: Progaga PG370 MAX,
+     Byintek X30 e 3 Wanbo). Esta lista e a fonte unica da distincao. */
+  var MOTIVOS_ESGOTADO = ['sem_estoque_br', 'sem_estoque_importado', 'indisponivel'];
+
+  function esgotadoDeVerdade(motivo) {
+    return MOTIVOS_ESGOTADO.indexOf(norm(motivo)) !== -1;
+  }
+
   function norm(s) {
     return String(s || '').trim().toLowerCase();
   }
@@ -38,9 +51,11 @@
     for (const p of produtos) {
       indexOverlay.set(norm(p.marca) + '|' + norm(p.modelo), p);
     }
-    const indexIndisp = new Set();
+    // Map (nao Set): o MOTIVO precisa sobreviver ao merge pra busca/cards
+    // distinguirem esgotado de "sem preco publicado ainda".
+    const indexIndisp = new Map();
     for (const x of indisponiveis || []) {
-      indexIndisp.add(norm(x.marca) + '|' + norm(x.modelo));
+      indexIndisp.set(norm(x.marca) + '|' + norm(x.modelo), norm(x.motivo));
     }
     // Index dos slugs também por chave normalizada (case-insensitive)
     const indexSlug = new Map();
@@ -102,6 +117,9 @@
         proj.preco_min   = null;
         proj.preco_max   = null;
         proj.preco_atual = null;
+        // Motivo + veredito, pra quem renderiza rótulo não ter que repetir o enum.
+        proj.indisponivel_motivo = indexIndisp.get(k);
+        proj.sem_estoque_real    = esgotadoDeVerdade(proj.indisponivel_motivo);
         zerados++;
       }
 
@@ -158,7 +176,7 @@
     // (M7 auditoria 02/06) Ex.: "sem preço final ou sem vencedor". Antes caía no
     // ramo "Sem estoque" e escondia a compra de produto que ainda vende. Aqui o
     // badge já virou "Verificando preço"; preço, botões e aviso ficam intactos.
-    if (motivo !== 'sem_estoque_br' && motivo !== 'sem_estoque_importado' && motivo !== 'indisponivel') return;
+    if (!esgotadoDeVerdade(motivo)) return;
 
     // ─── 2. Aviso ao final do card (último <p style> dentro do .proj-price-card) ─
     // Substitui o texto hardcoded de cada página por um aviso padronizado por motivo.
@@ -232,7 +250,7 @@
     for (const x of indisponiveis || []) {
       if (norm(x.marca) + '|' + norm(x.modelo) === key) {
         // Motivo fora do enum = diagnóstico do checker (M7): não vira OutOfStock
-        isOut = (x.motivo === 'sem_estoque_br' || x.motivo === 'sem_estoque_importado' || x.motivo === 'indisponivel');
+        isOut = esgotadoDeVerdade(x.motivo);
         break;
       }
     }
