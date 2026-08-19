@@ -1,6 +1,6 @@
 {
   "data_coleta": "19/08",
-  "hora_coleta": "16:16",
+  "hora_coleta": "16:40",
   "data_ontem": "18/08",
   "data_hoje": "19/08",
   "total_quedas": 24,
@@ -37,6 +37,16 @@
     },
     {
       "marca": "Progaga",
+      "modelo": "PG370 MAX",
+      "slug": "progaga-pg370-max",
+      "preco_atual": 417.08,
+      "preco_ontem": 432.44,
+      "delta": -15.36,
+      "delta_pct": -3.55,
+      "data_checagem": "2026-08-19 16:40"
+    },
+    {
+      "marca": "Progaga",
       "modelo": "PG610 ATV",
       "slug": "progaga-pg610-atv",
       "preco_atual": 994.53,
@@ -44,16 +54,6 @@
       "delta": -34.82,
       "delta_pct": -3.38,
       "data_checagem": "2026-08-19 15:15"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1071",
-      "slug": "bettdow-ac1071",
-      "preco_atual": 1449.1,
-      "preco_ontem": 1475.32,
-      "delta": -26.22,
-      "delta_pct": -1.78,
-      "data_checagem": "2026-08-19 16:16"
     }
   ]
 }
