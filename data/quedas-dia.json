@@ -1,59 +1,59 @@
 {
-  "data_coleta": "17/08",
-  "hora_coleta": "21:23",
-  "data_ontem": "16/08",
-  "data_hoje": "17/08",
-  "total_quedas": 28,
+  "data_coleta": "18/08",
+  "hora_coleta": "21:33",
+  "data_ontem": "17/08",
+  "data_hoje": "18/08",
+  "total_quedas": 24,
   "quedas": [
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 431.9,
-      "preco_ontem": 834.55,
-      "delta": -402.65,
-      "delta_pct": -48.25,
-      "data_checagem": "2026-08-17 21:17"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 417.1,
-      "preco_ontem": 769.9,
-      "delta": -352.8,
-      "delta_pct": -45.82,
-      "data_checagem": "2026-08-17 21:14"
-    },
     {
       "marca": "Voxflix",
       "modelo": "VF71",
       "slug": "voxflix-vf71",
-      "preco_atual": 718.0,
-      "preco_ontem": 1182.95,
-      "delta": -464.95,
-      "delta_pct": -39.3,
-      "data_checagem": "2026-08-17 21:22"
+      "preco_atual": 664.23,
+      "preco_ontem": 718.0,
+      "delta": -53.77,
+      "delta_pct": -7.49,
+      "data_checagem": "2026-08-18 21:22"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD95W",
-      "slug": "thundeal-td95w",
-      "preco_atual": 652.04,
-      "preco_ontem": 1007.21,
-      "delta": -355.17,
-      "delta_pct": -35.26,
-      "data_checagem": "2026-08-17 21:18"
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1233.18,
+      "preco_ontem": 1315.82,
+      "delta": -82.64,
+      "delta_pct": -6.28,
+      "data_checagem": "2026-08-18 21:33"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1895.2,
+      "preco_ontem": 2005.62,
+      "delta": -110.42,
+      "delta_pct": -5.51,
+      "data_checagem": "2026-08-18 21:33"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD98 MINI",
       "slug": "thundeal-td98-mini",
-      "preco_atual": 854.38,
-      "preco_ontem": 1318.33,
-      "delta": -463.95,
-      "delta_pct": -35.19,
-      "data_checagem": "2026-08-17 21:23"
+      "preco_atual": 809.79,
+      "preco_ontem": 854.38,
+      "delta": -44.59,
+      "delta_pct": -5.22,
+      "data_checagem": "2026-08-18 21:23"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "V60",
+      "slug": "vevshao-v60",
+      "preco_atual": 1964.21,
+      "preco_ontem": 2043.87,
+      "delta": -79.66,
+      "delta_pct": -3.9,
+      "data_checagem": "2026-08-18 21:33"
     }
   ]
 }
