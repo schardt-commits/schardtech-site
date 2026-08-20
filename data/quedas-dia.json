@@ -1,9 +1,9 @@
 {
   "data_coleta": "20/08",
-  "hora_coleta": "09:36",
+  "hora_coleta": "11:23",
   "data_ontem": "19/08",
   "data_hoje": "20/08",
-  "total_quedas": 6,
+  "total_quedas": 5,
   "quedas": [
     {
       "marca": "Vevshao",
@@ -13,47 +13,47 @@
       "preco_ontem": 638.48,
       "delta": -188.13,
       "delta_pct": -29.47,
-      "data_checagem": "2026-08-20 09:36"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1224.66,
-      "preco_ontem": 1383.48,
-      "delta": -158.82,
-      "delta_pct": -11.48,
-      "data_checagem": "2026-08-20 09:36"
+      "data_checagem": "2026-08-20 11:23"
     },
     {
       "marca": "Touyinger",
       "modelo": "ET32",
       "slug": "touyinger-et32",
-      "preco_atual": 579.01,
+      "preco_atual": 580.23,
       "preco_ontem": 641.71,
-      "delta": -62.7,
-      "delta_pct": -9.77,
-      "data_checagem": "2026-08-20 09:23"
+      "delta": -61.48,
+      "delta_pct": -9.58,
+      "data_checagem": "2026-08-20 11:09"
     },
     {
       "marca": "Vevshao",
       "modelo": "V60",
       "slug": "vevshao-v60",
-      "preco_atual": 1782.71,
+      "preco_atual": 1785.12,
       "preco_ontem": 1950.67,
-      "delta": -167.96,
-      "delta_pct": -8.61,
-      "data_checagem": "2026-08-20 09:36"
+      "delta": -165.55,
+      "delta_pct": -8.49,
+      "data_checagem": "2026-08-20 11:23"
     },
     {
       "marca": "Formovie",
       "modelo": "Cinema Edge",
       "slug": "formovie-cinema-edge",
-      "preco_atual": 9011.05,
+      "preco_atual": 9029.75,
       "preco_ontem": 9361.05,
-      "delta": -350.0,
-      "delta_pct": -3.74,
-      "data_checagem": "2026-08-20 09:16"
+      "delta": -331.3,
+      "delta_pct": -3.54,
+      "data_checagem": "2026-08-20 11:03"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 977.09,
+      "preco_ontem": 994.53,
+      "delta": -17.44,
+      "delta_pct": -1.75,
+      "data_checagem": "2026-08-20 11:13"
     }
   ]
 }
