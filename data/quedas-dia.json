@@ -1,59 +1,49 @@
 {
-  "data_coleta": "20/08",
-  "hora_coleta": "21:52",
-  "data_ontem": "19/08",
-  "data_hoje": "20/08",
-  "total_quedas": 5,
+  "data_coleta": "21/08",
+  "hora_coleta": "09:52",
+  "data_ontem": "20/08",
+  "data_hoje": "21/08",
+  "total_quedas": 4,
   "quedas": [
     {
-      "marca": "Vevshao",
-      "modelo": "A10",
-      "slug": "vevshao-a10",
-      "preco_atual": 450.35,
-      "preco_ontem": 638.48,
-      "delta": -188.13,
-      "delta_pct": -29.47,
-      "data_checagem": "2026-08-20 21:52"
+      "marca": "Bettdow",
+      "modelo": "AC1093 PRO",
+      "slug": "bettdow-ac1093-pro",
+      "preco_atual": 525.0,
+      "preco_ontem": 619.16,
+      "delta": -94.16,
+      "delta_pct": -15.21,
+      "data_checagem": "2026-08-21 09:52"
     },
     {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 580.23,
-      "preco_ontem": 641.71,
-      "delta": -61.48,
-      "delta_pct": -9.58,
-      "data_checagem": "2026-08-20 15:11"
+      "marca": "Bettdow",
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 523.21,
+      "preco_ontem": 528.08,
+      "delta": -4.87,
+      "delta_pct": -0.92,
+      "data_checagem": "2026-08-21 09:52"
     },
     {
-      "marca": "Vevshao",
-      "modelo": "V60",
-      "slug": "vevshao-v60",
-      "preco_atual": 1785.12,
-      "preco_ontem": 1950.67,
-      "delta": -165.55,
-      "delta_pct": -8.49,
-      "data_checagem": "2026-08-20 21:52"
+      "marca": "Magcubic",
+      "modelo": "HY300",
+      "slug": "magcubic-hy300",
+      "preco_atual": 224.73,
+      "preco_ontem": 225.62,
+      "delta": -0.89,
+      "delta_pct": -0.39,
+      "data_checagem": "2026-08-21 09:52"
     },
     {
-      "marca": "Formovie",
-      "modelo": "Cinema Edge",
-      "slug": "formovie-cinema-edge",
-      "preco_atual": 9029.75,
-      "preco_ontem": 9361.05,
-      "delta": -331.3,
-      "delta_pct": -3.54,
-      "data_checagem": "2026-08-20 15:05"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 977.09,
-      "preco_ontem": 994.53,
-      "delta": -17.44,
-      "delta_pct": -1.75,
-      "data_checagem": "2026-08-20 15:15"
+      "marca": "Bettdow",
+      "modelo": "AC1071",
+      "slug": "bettdow-ac1071",
+      "preco_atual": 1448.83,
+      "preco_ontem": 1449.1,
+      "delta": -0.27,
+      "delta_pct": -0.02,
+      "data_checagem": "2026-08-21 09:52"
     }
   ]
 }
