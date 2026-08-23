@@ -1,29 +1,29 @@
 {
-  "data_coleta": "22/08",
-  "hora_coleta": "21:59",
-  "data_ontem": "21/08",
-  "data_hoje": "22/08",
+  "data_coleta": "23/08",
+  "hora_coleta": "01:04",
+  "data_ontem": "22/08",
+  "data_hoje": "23/08",
   "total_quedas": 2,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1093 PRO",
-      "slug": "bettdow-ac1093-pro",
-      "preco_atual": 499.0,
-      "preco_ontem": 525.0,
-      "delta": -26.0,
-      "delta_pct": -4.95,
-      "data_checagem": "2026-08-22 21:59"
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 1667.64,
+      "preco_ontem": 2666.16,
+      "delta": -998.52,
+      "delta_pct": -37.45,
+      "data_checagem": "2026-08-23 01:04"
     },
     {
       "marca": "XGODY",
       "modelo": "Gimbal 7",
       "slug": "xgody-gimbal-7",
-      "preco_atual": 750.72,
-      "preco_ontem": 781.08,
-      "delta": -30.36,
-      "delta_pct": -3.89,
-      "data_checagem": "2026-08-22 21:59"
+      "preco_atual": 628.9,
+      "preco_ontem": 656.89,
+      "delta": -27.99,
+      "delta_pct": -4.26,
+      "data_checagem": "2026-08-23 01:04"
     }
   ]
 }
