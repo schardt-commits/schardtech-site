@@ -1,9 +1,9 @@
 {
   "data_coleta": "23/08",
-  "hora_coleta": "15:22",
+  "hora_coleta": "16:30",
   "data_ontem": "22/08",
   "data_hoje": "23/08",
-  "total_quedas": 3,
+  "total_quedas": 4,
   "quedas": [
     {
       "marca": "Byintek",
@@ -13,7 +13,17 @@
       "preco_ontem": 2666.16,
       "delta": -998.52,
       "delta_pct": -37.45,
-      "data_checagem": "2026-08-23 15:22"
+      "data_checagem": "2026-08-23 16:30"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY450GT",
+      "slug": "magcubic-hy450gt",
+      "preco_atual": 1179.11,
+      "preco_ontem": 1336.0,
+      "delta": -156.89,
+      "delta_pct": -11.74,
+      "data_checagem": "2026-08-23 16:30"
     },
     {
       "marca": "XGODY",
@@ -23,7 +33,7 @@
       "preco_ontem": 656.89,
       "delta": -27.99,
       "delta_pct": -4.26,
-      "data_checagem": "2026-08-23 15:22"
+      "data_checagem": "2026-08-23 16:30"
     },
     {
       "marca": "Thundeal",
@@ -33,7 +43,7 @@
       "preco_ontem": 768.52,
       "delta": -19.64,
       "delta_pct": -2.56,
-      "data_checagem": "2026-08-23 15:12"
+      "data_checagem": "2026-08-23 16:20"
     }
   ]
 }
