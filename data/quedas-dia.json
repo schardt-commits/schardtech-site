@@ -1,9 +1,9 @@
 {
   "data_coleta": "23/08",
-  "hora_coleta": "01:04",
+  "hora_coleta": "15:22",
   "data_ontem": "22/08",
   "data_hoje": "23/08",
-  "total_quedas": 2,
+  "total_quedas": 3,
   "quedas": [
     {
       "marca": "Byintek",
@@ -13,7 +13,7 @@
       "preco_ontem": 2666.16,
       "delta": -998.52,
       "delta_pct": -37.45,
-      "data_checagem": "2026-08-23 01:04"
+      "data_checagem": "2026-08-23 15:22"
     },
     {
       "marca": "XGODY",
@@ -23,7 +23,17 @@
       "preco_ontem": 656.89,
       "delta": -27.99,
       "delta_pct": -4.26,
-      "data_checagem": "2026-08-23 01:04"
+      "data_checagem": "2026-08-23 15:22"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 748.88,
+      "preco_ontem": 768.52,
+      "delta": -19.64,
+      "delta_pct": -2.56,
+      "data_checagem": "2026-08-23 15:12"
     }
   ]
 }
