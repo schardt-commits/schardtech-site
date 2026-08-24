@@ -71,7 +71,7 @@ window.PROJETORES_DATA = [
     "amazon_url": "",
     "ram_gb": 2,
     "armazenamento_gb": 8,
-    "status": "nacional",
+    "status": "descontinuado",
     "link_importado": "",
     "bolsa": ""
   },
@@ -109,7 +109,7 @@ window.PROJETORES_DATA = [
     "amazon_url": "",
     "ram_gb": 1,
     "armazenamento_gb": 8,
-    "status": "sem_estoque_br",
+    "status": "descontinuado",
     "link_importado": "",
     "bolsa": ""
   },
@@ -337,7 +337,7 @@ window.PROJETORES_DATA = [
     "amazon_url": "",
     "ram_gb": 1,
     "armazenamento_gb": 8,
-    "status": "nacional",
+    "status": "descontinuado",
     "link_importado": "",
     "bolsa": ""
   },
@@ -1365,7 +1365,7 @@ window.PROJETORES_DATA = [
     "amazon_url": "",
     "ram_gb": 1,
     "armazenamento_gb": 8,
-    "status": "sem_estoque_importado",
+    "status": "nacional",
     "link_importado": "https://s.click.aliexpress.com/e/_okS8x0W",
     "bolsa": ""
   },
@@ -1631,7 +1631,7 @@ window.PROJETORES_DATA = [
     "amazon_url": "",
     "ram_gb": 2,
     "armazenamento_gb": 32,
-    "status": "",
+    "status": "nacional",
     "link_importado": "",
     "bolsa": ""
   },
@@ -1745,7 +1745,7 @@ window.PROJETORES_DATA = [
     "amazon_url": "",
     "ram_gb": 1,
     "armazenamento_gb": 8,
-    "status": "sem_estoque_br",
+    "status": "nacional",
     "link_importado": "",
     "bolsa": ""
   },
