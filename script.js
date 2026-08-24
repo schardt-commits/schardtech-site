@@ -12,12 +12,12 @@ const projectors = [];
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
 // ============================================================
 const featuredVideos = [
+  { id: "T9210odfrlY", title: "TUDO que Você Precisa Saber Antes de Comprar o MAGCUBIC HY450GT!" },
   { id: "h_g2V0d6bn8", title: "Projetor Por Menos de 500 reais Análise Completa do Progaga PG370 MAX" },
   { id: "1Bw2KdmgWGM", title: "XGODY GIMBAL 7: Vale a Pena? Análise Completa Com Varios Testes!" },
   { id: "oNcyM90hg7g", title: "Magcubic HY450GT : Unboxing e Primeiras Impreções!" },
   { id: "9Y3JefY-9MM", title: "Compensa!? Bettdow AC1085 Com Android Tv" },
   { id: "vHvMVtiSxqw", title: "AC1093 PRO BETTDOW: Projetor Mais Barato Com Android TV Certificado!" },
-  { id: "KQH2fRqt5eU", title: "Queria Ter Comprado Antes: Magcubic X7" },
 ];
 
 // ============================================================
