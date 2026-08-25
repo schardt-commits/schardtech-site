@@ -1,59 +1,29 @@
 {
-  "data_coleta": "24/08",
-  "hora_coleta": "21:37",
-  "data_ontem": "23/08",
-  "data_hoje": "24/08",
-  "total_quedas": 28,
+  "data_coleta": "25/08",
+  "hora_coleta": "00:37",
+  "data_ontem": "24/08",
+  "data_hoje": "25/08",
+  "total_quedas": 2,
   "quedas": [
     {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 744.98,
-      "preco_ontem": 808.83,
-      "delta": -63.85,
-      "delta_pct": -7.89,
-      "data_checagem": "2026-08-24 21:25"
+      "marca": "Bettdow",
+      "modelo": "AC1095",
+      "slug": "bettdow-ac1095",
+      "preco_atual": 2389.24,
+      "preco_ontem": 2574.16,
+      "delta": -184.92,
+      "delta_pct": -7.18,
+      "data_checagem": "2026-08-25 00:37"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1210.16,
-      "preco_ontem": 1311.21,
-      "delta": -101.05,
-      "delta_pct": -7.71,
-      "data_checagem": "2026-08-24 21:21"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 408.02,
-      "preco_ontem": 439.87,
-      "delta": -31.85,
-      "delta_pct": -7.24,
-      "data_checagem": "2026-08-24 21:15"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1217.92,
-      "preco_ontem": 1312.05,
-      "delta": -94.13,
-      "delta_pct": -7.17,
-      "data_checagem": "2026-08-24 21:37"
-    },
-    {
-      "marca": "Jenovox",
-      "modelo": "M5000 Mini",
-      "slug": "jenovox-m5000-mini",
-      "preco_atual": 1855.82,
-      "preco_ontem": 1983.03,
-      "delta": -127.21,
-      "delta_pct": -6.41,
-      "data_checagem": "2026-08-24 21:17"
+      "marca": "Wanbo",
+      "modelo": "Vali 1",
+      "slug": "wanbo-vali-1",
+      "preco_atual": 2069.0,
+      "preco_ontem": 2169.0,
+      "delta": -100.0,
+      "delta_pct": -4.61,
+      "data_checagem": "2026-08-25 00:27"
     }
   ]
 }
