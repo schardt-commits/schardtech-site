@@ -1,6 +1,6 @@
 {
   "data_coleta": "26/08",
-  "hora_coleta": "09:45",
+  "hora_coleta": "21:36",
   "data_ontem": "25/08",
   "data_hoje": "26/08",
   "total_quedas": 5,
@@ -13,17 +13,7 @@
       "preco_ontem": 1179.11,
       "delta": -133.72,
       "delta_pct": -11.34,
-      "data_checagem": "2026-08-26 09:45"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "A22",
-      "slug": "vevshao-a22",
-      "preco_atual": 865.92,
-      "preco_ontem": 976.01,
-      "delta": -110.09,
-      "delta_pct": -11.28,
-      "data_checagem": "2026-08-26 09:45"
+      "data_checagem": "2026-08-26 21:36"
     },
     {
       "marca": "Magcubic",
@@ -33,7 +23,7 @@
       "preco_ontem": 212.9,
       "delta": -17.1,
       "delta_pct": -8.03,
-      "data_checagem": "2026-08-26 09:45"
+      "data_checagem": "2026-08-26 21:36"
     },
     {
       "marca": "Bettdow",
@@ -43,7 +33,17 @@
       "preco_ontem": 2389.24,
       "delta": -184.0,
       "delta_pct": -7.7,
-      "data_checagem": "2026-08-26 09:45"
+      "data_checagem": "2026-08-26 21:36"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 500.48,
+      "preco_ontem": 523.21,
+      "delta": -22.73,
+      "delta_pct": -4.34,
+      "data_checagem": "2026-08-26 21:36"
     },
     {
       "marca": "Bettdow",
@@ -53,7 +53,7 @@
       "preco_ontem": 1213.12,
       "delta": -12.24,
       "delta_pct": -1.01,
-      "data_checagem": "2026-08-26 09:45"
+      "data_checagem": "2026-08-26 21:36"
     }
   ]
 }
