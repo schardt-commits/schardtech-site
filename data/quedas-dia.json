@@ -1,29 +1,39 @@
 {
-  "data_coleta": "27/08",
-  "hora_coleta": "19:13",
-  "data_ontem": "26/08",
-  "data_hoje": "27/08",
-  "total_quedas": 2,
+  "data_coleta": "28/08",
+  "hora_coleta": "00:35",
+  "data_ontem": "27/08",
+  "data_hoje": "28/08",
+  "total_quedas": 3,
   "quedas": [
     {
-      "marca": "Magcubic",
-      "modelo": "HY450 MAX",
-      "slug": "magcubic-hy450-max",
-      "preco_atual": 1021.79,
-      "preco_ontem": 1117.85,
-      "delta": -96.06,
-      "delta_pct": -8.59,
-      "data_checagem": "2026-08-27 19:13"
+      "marca": "Bettdow",
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 506.71,
+      "preco_ontem": 523.21,
+      "delta": -16.5,
+      "delta_pct": -3.15,
+      "data_checagem": "2026-08-28 00:35"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1093 PRO",
-      "slug": "bettdow-ac1093-pro",
-      "preco_atual": 471.96,
-      "preco_ontem": 499.0,
-      "delta": -27.04,
-      "delta_pct": -5.42,
-      "data_checagem": "2026-08-27 19:13"
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1695.54,
+      "preco_ontem": 1732.27,
+      "delta": -36.73,
+      "delta_pct": -2.12,
+      "data_checagem": "2026-08-28 00:35"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1866.73,
+      "preco_ontem": 1906.25,
+      "delta": -39.52,
+      "delta_pct": -2.07,
+      "data_checagem": "2026-08-28 00:35"
     }
   ]
 }
