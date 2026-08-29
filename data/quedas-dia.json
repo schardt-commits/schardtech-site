@@ -1,8 +1,49 @@
 {
   "data_coleta": "29/08",
-  "hora_coleta": "",
+  "hora_coleta": "09:37",
   "data_ontem": "28/08",
   "data_hoje": "29/08",
-  "total_quedas": 0,
-  "quedas": []
+  "total_quedas": 4,
+  "quedas": [
+    {
+      "marca": "FlixTone",
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 1374.35,
+      "preco_ontem": 1457.39,
+      "delta": -83.04,
+      "delta_pct": -5.7,
+      "data_checagem": "2026-08-29 09:15"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D9W Ultra",
+      "slug": "flixtone-d9w-ultra",
+      "preco_atual": 2082.94,
+      "preco_ontem": 2205.88,
+      "delta": -122.94,
+      "delta_pct": -5.57,
+      "data_checagem": "2026-08-29 09:16"
+    },
+    {
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 1013.08,
+      "preco_ontem": 1028.04,
+      "delta": -14.96,
+      "delta_pct": -1.46,
+      "data_checagem": "2026-08-29 09:17"
+    },
+    {
+      "marca": "XGODY",
+      "modelo": "Gimbal 7",
+      "slug": "xgody-gimbal-7",
+      "preco_atual": 635.01,
+      "preco_ontem": 641.83,
+      "delta": -6.82,
+      "delta_pct": -1.06,
+      "data_checagem": "2026-08-29 09:37"
+    }
+  ]
 }
