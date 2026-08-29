@@ -12,12 +12,12 @@ const projectors = [];
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
 // ============================================================
 const featuredVideos = [
-  { id: "h_g2V0d6bn8", title: "Projetor Por Menos de 500 reais Análise Completa do Progaga PG370 MAX" },
   { id: "_xe393q7BpA", title: "Seu Novo Projetor Para Copa!? Testei o U14 PRO Da Byintek" },
   { id: "s7gfCpdJCVw", title: "Tela 100&quot; Portátil Byintek: DÁ PARA VER DOS DOIS LADOS?" },
   { id: "y40NWkwjuYg", title: "Qual Melhor Projetor Custo Beneficio!" },
   { id: "rrlQhQFhGgs", title: "Live especial: perguntas + sorteio do Bettdow AC1073 🎁" },
   { id: "uJlFbDdvNJE", title: "[2026] Melhor Custo Beneficio de 2026: Projetor Bettdow AC1079! Análise Completa!!" },
+  { id: "ytkdvF1rmQw", title: "[2026]Novidade Da Thundeal TD80PRO! Análise Completíssima!!!!" },
 ];
 
 // ============================================================
