@@ -1,59 +1,8 @@
 {
-  "data_coleta": "29/08",
-  "hora_coleta": "21:36",
-  "data_ontem": "28/08",
-  "data_hoje": "29/08",
-  "total_quedas": 15,
-  "quedas": [
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1499.86,
-      "preco_ontem": 1649.24,
-      "delta": -149.38,
-      "delta_pct": -9.06,
-      "data_checagem": "2026-08-29 21:21"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D9W Ultra",
-      "slug": "flixtone-d9w-ultra",
-      "preco_atual": 2064.94,
-      "preco_ontem": 2205.88,
-      "delta": -140.94,
-      "delta_pct": -6.39,
-      "data_checagem": "2026-08-29 21:15"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D9W Mini",
-      "slug": "flixtone-d9w-mini",
-      "preco_atual": 1372.71,
-      "preco_ontem": 1457.39,
-      "delta": -84.68,
-      "delta_pct": -5.81,
-      "data_checagem": "2026-08-29 21:15"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1628.89,
-      "preco_ontem": 1695.54,
-      "delta": -66.65,
-      "delta_pct": -3.93,
-      "data_checagem": "2026-08-29 21:36"
-    },
-    {
-      "marca": "Wupro",
-      "modelo": "G2",
-      "slug": "wupro-g2",
-      "preco_atual": 998.78,
-      "preco_ontem": 1030.69,
-      "delta": -31.91,
-      "delta_pct": -3.1,
-      "data_checagem": "2026-08-29 21:24"
-    }
-  ]
+  "data_coleta": "30/08",
+  "hora_coleta": "",
+  "data_ontem": "29/08",
+  "data_hoje": "30/08",
+  "total_quedas": 0,
+  "quedas": []
 }
