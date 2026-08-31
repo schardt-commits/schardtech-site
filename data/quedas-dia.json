@@ -1,8 +1,59 @@
 {
-  "data_coleta": "30/08",
-  "hora_coleta": "",
-  "data_ontem": "29/08",
-  "data_hoje": "30/08",
-  "total_quedas": 0,
-  "quedas": []
+  "data_coleta": "31/08",
+  "hora_coleta": "09:36",
+  "data_ontem": "30/08",
+  "data_hoje": "31/08",
+  "total_quedas": 6,
+  "quedas": [
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 663.32,
+      "preco_ontem": 1311.0,
+      "delta": -647.68,
+      "delta_pct": -49.4,
+      "data_checagem": "2026-08-31 09:36"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1095",
+      "slug": "bettdow-ac1095",
+      "preco_atual": 2205.24,
+      "preco_ontem": 2574.16,
+      "delta": -368.92,
+      "delta_pct": -14.33,
+      "data_checagem": "2026-08-31 09:36"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1093 PRO",
+      "slug": "bettdow-ac1093-pro",
+      "preco_atual": 471.96,
+      "preco_ontem": 519.7,
+      "delta": -47.74,
+      "delta_pct": -9.19,
+      "data_checagem": "2026-08-31 09:36"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 620.08,
+      "preco_ontem": 628.36,
+      "delta": -8.28,
+      "delta_pct": -1.32,
+      "data_checagem": "2026-08-31 09:36"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1061",
+      "slug": "bettdow-ac1061",
+      "preco_atual": 1639.63,
+      "preco_ontem": 1650.12,
+      "delta": -10.49,
+      "delta_pct": -0.64,
+      "data_checagem": "2026-08-31 09:36"
+    }
+  ]
 }
