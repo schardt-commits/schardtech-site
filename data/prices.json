@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "atualizado_em": "2026-08-31 13:41:30",
+    "atualizado_em": "2026-08-31 13:46:00",
     "total_produtos": 54,
     "fonte": "revisar.xlsx + precos.db (historico)",
     "obs": "Gerado por exportador.py a partir de revisar.xlsx + precos.db",
@@ -152,13 +152,14 @@
         },
         "mercado_livre": {
           "preco": 807.0,
-          "link": "https://meli.la/1vrDgrV"
+          "link": "https://meli.la/1vrDgrV",
+          "data_checagem": "2026-08-31 11:43"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:45"
     },
     {
       "marca": "Bettdow",
@@ -180,7 +181,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:45"
     },
     {
       "marca": "Bettdow",
@@ -202,7 +203,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:45"
     },
     {
       "marca": "Bettdow",
@@ -224,7 +225,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:45"
     },
     {
       "marca": "Bettdow",
@@ -246,7 +247,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:45"
     },
     {
       "marca": "Bettdow",
@@ -268,7 +269,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:45"
     },
     {
       "marca": "Byintek",
@@ -303,7 +304,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Byintek",
@@ -338,7 +339,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Byintek",
@@ -373,7 +374,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Byintek",
@@ -408,7 +409,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Byintek",
@@ -443,7 +444,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Everycom",
@@ -472,7 +473,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "FlixTone",
@@ -501,7 +502,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "FlixTone",
@@ -530,7 +531,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Formovie",
@@ -559,7 +560,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Formovie",
@@ -588,7 +589,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Horlat",
@@ -617,7 +618,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Jenovox",
@@ -646,7 +647,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Magcubic",
@@ -668,7 +669,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Magcubic",
@@ -690,7 +691,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Magcubic",
@@ -700,17 +701,18 @@
       "preco_max_historico": 763.88,
       "historico_desde": "2026-07-03",
       "marketplace_vencedor": "mercado_livre",
-      "data_verificacao": "2026-05-10 17:06",
+      "data_verificacao": "2026-08-31 11:43",
       "marketplaces": {
         "mercado_livre": {
           "preco": 763.88,
-          "link": "https://meli.la/25hfTc9"
+          "link": "https://meli.la/25hfTc9",
+          "data_checagem": "2026-08-31 11:43"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Magcubic",
@@ -732,7 +734,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Magcubic",
@@ -754,7 +756,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Magcubic",
@@ -776,7 +778,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Magcubic",
@@ -798,7 +800,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Progaga",
@@ -827,7 +829,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Progaga",
@@ -856,7 +858,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Thundeal",
@@ -885,7 +887,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Thundeal",
@@ -914,7 +916,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Thundeal",
@@ -943,7 +945,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Touyinger",
@@ -972,7 +974,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Touyinger",
@@ -1001,7 +1003,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Touyinger",
@@ -1030,7 +1032,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Vevshao",
@@ -1065,7 +1067,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Vevshao",
@@ -1100,7 +1102,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Vevshao",
@@ -1135,7 +1137,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Voxflix",
@@ -1164,7 +1166,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Wanbo",
@@ -1184,13 +1186,14 @@
         },
         "mercado_livre": {
           "preco": 1399.9,
-          "link": "https://meli.la/1v3Rrbj"
+          "link": "https://meli.la/1v3Rrbj",
+          "data_checagem": "2026-08-31 11:43"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Wanbo",
@@ -1200,17 +1203,18 @@
       "preco_max_historico": 2199.0,
       "historico_desde": "2026-05-09",
       "marketplace_vencedor": "mercado_livre",
-      "data_verificacao": "2026-08-31 13:41",
+      "data_verificacao": "2026-08-31 11:43",
       "marketplaces": {
         "mercado_livre": {
           "preco": 2169.0,
-          "link": "https://meli.la/1AAe5HZ"
+          "link": "https://meli.la/1AAe5HZ",
+          "data_checagem": "2026-08-31 11:43"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Wanbo",
@@ -1230,13 +1234,14 @@
         },
         "mercado_livre": {
           "preco": 2639.0,
-          "link": "https://meli.la/1ywAF3b"
+          "link": "https://meli.la/1ywAF3b",
+          "data_checagem": "2026-08-31 11:43"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Wupro",
@@ -1265,7 +1270,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Everycom",
@@ -1287,7 +1292,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Vevshao",
@@ -1316,7 +1321,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Bettdow",
@@ -1338,7 +1343,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Byintek",
@@ -1373,7 +1378,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Progaga",
@@ -1402,7 +1407,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "FlixTone",
@@ -1431,7 +1436,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Thundeal",
@@ -1460,7 +1465,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Magcubic",
@@ -1480,13 +1485,14 @@
         },
         "mercado_livre": {
           "preco": 1090.59,
-          "link": "https://meli.la/2MwEpT5"
+          "link": "https://meli.la/2MwEpT5",
+          "data_checagem": "2026-08-31 11:43"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Bettdow",
@@ -1506,13 +1512,14 @@
         },
         "mercado_livre": {
           "preco": 499.0,
-          "link": "https://meli.la/31PQs6x"
+          "link": "https://meli.la/31PQs6x",
+          "data_checagem": "2026-08-31 11:43"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Bettdow",
@@ -1532,13 +1539,14 @@
         },
         "mercado_livre": {
           "preco": 1699.0,
-          "link": "https://meli.la/2rEVy2k"
+          "link": "https://meli.la/2rEVy2k",
+          "data_checagem": "2026-08-31 11:43"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Magcubic",
@@ -1558,13 +1566,14 @@
         },
         "mercado_livre": {
           "preco": 1336.0,
-          "link": "https://meli.la/1GnKusK"
+          "link": "https://meli.la/1GnKusK",
+          "data_checagem": "2026-08-31 11:43"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "Progaga",
@@ -1593,7 +1602,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     },
     {
       "marca": "XGODY",
@@ -1628,7 +1637,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-08-31 13:41"
+      "ultima_atualizacao": "2026-08-31 13:46"
     }
   ]
 }
