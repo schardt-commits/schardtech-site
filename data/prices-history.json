@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "gerado_em": "2026-08-31 11:55:11",
+    "gerado_em": "2026-08-31 13:41:30",
     "total_modelos": 74,
-    "total_pontos": 7377,
+    "total_pontos": 7376,
     "fonte": "precos.db (tabela precos, preco_final)"
   },
   "modelos": {
@@ -19779,17 +19779,12 @@
           "preco": 667.0
         },
         {
-          "data": "2026-08-27 21:35",
-          "loja": "shopee",
-          "preco": 693.68
-        },
-        {
           "data": "2026-08-31 11:43",
           "loja": "ml",
           "preco": 763.88
         }
       ],
-      "n": 42,
+      "n": 41,
       "min": 646.6,
       "max": 763.88,
       "atual": 763.88,
