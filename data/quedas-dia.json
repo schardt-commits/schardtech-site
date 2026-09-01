@@ -1,59 +1,59 @@
 {
   "data_coleta": "01/09",
-  "hora_coleta": "09:36",
+  "hora_coleta": "16:09",
   "data_ontem": "31/08",
   "data_hoje": "01/09",
-  "total_quedas": 31,
+  "total_quedas": 35,
   "quedas": [
     {
       "marca": "Touyinger",
       "modelo": "L9W Ultra",
       "slug": "touyinger-l9w-ultra",
-      "preco_atual": 489.24,
+      "preco_atual": 472.75,
       "preco_ontem": 806.26,
-      "delta": -317.02,
-      "delta_pct": -39.32,
-      "data_checagem": "2026-09-01 09:21"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 734.17,
-      "preco_ontem": 1168.95,
-      "delta": -434.78,
-      "delta_pct": -37.19,
-      "data_checagem": "2026-09-01 09:36"
+      "delta": -333.51,
+      "delta_pct": -41.37,
+      "data_checagem": "2026-09-01 15:54"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD98 MINI",
       "slug": "thundeal-td98-mini",
-      "preco_atual": 874.56,
+      "preco_atual": 842.83,
       "preco_ontem": 1374.86,
-      "delta": -500.3,
-      "delta_pct": -36.39,
-      "data_checagem": "2026-09-01 09:25"
+      "delta": -532.03,
+      "delta_pct": -38.7,
+      "data_checagem": "2026-09-01 15:58"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 734.88,
+      "preco_ontem": 1168.95,
+      "delta": -434.07,
+      "delta_pct": -37.13,
+      "data_checagem": "2026-09-01 16:09"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD80PRO",
       "slug": "thundeal-td80pro",
-      "preco_atual": 406.97,
+      "preco_atual": 407.37,
       "preco_ontem": 624.94,
-      "delta": -217.97,
-      "delta_pct": -34.88,
-      "data_checagem": "2026-09-01 09:20"
+      "delta": -217.57,
+      "delta_pct": -34.81,
+      "data_checagem": "2026-09-01 15:53"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "HY310X",
-      "slug": "magcubic-hy310x",
-      "preco_atual": 310.0,
-      "preco_ontem": 441.33,
-      "delta": -131.33,
-      "delta_pct": -29.76,
-      "data_checagem": "2026-09-01 09:36"
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 947.57,
+      "preco_ontem": 1297.87,
+      "delta": -350.3,
+      "delta_pct": -26.99,
+      "data_checagem": "2026-09-01 15:57"
     }
   ]
 }
