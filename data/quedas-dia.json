@@ -1,59 +1,59 @@
 {
   "data_coleta": "03/09",
-  "hora_coleta": "09:37",
+  "hora_coleta": "15:25",
   "data_ontem": "02/09",
   "data_hoje": "03/09",
-  "total_quedas": 6,
+  "total_quedas": 30,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1095",
-      "slug": "bettdow-ac1095",
-      "preco_atual": 2275.16,
-      "preco_ontem": 2620.16,
-      "delta": -345.0,
-      "delta_pct": -13.17,
-      "data_checagem": "2026-09-03 09:37"
-    },
-    {
       "marca": "Magcubic",
-      "modelo": "L018",
-      "slug": "magcubic-l018",
-      "preco_atual": 575.0,
-      "preco_ontem": 620.08,
-      "delta": -45.08,
-      "delta_pct": -7.27,
-      "data_checagem": "2026-09-03 09:37"
+      "modelo": "HY310X",
+      "slug": "magcubic-hy310x",
+      "preco_atual": 310.0,
+      "preco_ontem": 441.33,
+      "delta": -131.33,
+      "delta_pct": -29.76,
+      "data_checagem": "2026-09-03 15:25"
     },
     {
       "marca": "Byintek",
       "modelo": "Plato T5 MAX",
       "slug": "byintek-plato-t5-max",
-      "preco_atual": 1533.43,
+      "preco_atual": 1234.68,
       "preco_ontem": 1621.53,
-      "delta": -88.1,
-      "delta_pct": -5.43,
-      "data_checagem": "2026-09-03 09:15"
+      "delta": -386.85,
+      "delta_pct": -23.86,
+      "data_checagem": "2026-09-03 15:04"
     },
     {
-      "marca": "Wanbo",
-      "modelo": "Vali 1",
-      "slug": "wanbo-vali-1",
-      "preco_atual": 2139.0,
-      "preco_ontem": 2169.0,
-      "delta": -30.0,
-      "delta_pct": -1.38,
-      "data_checagem": "2026-09-03 09:28"
+      "marca": "Bettdow",
+      "modelo": "AC1095",
+      "slug": "bettdow-ac1095",
+      "preco_atual": 2252.16,
+      "preco_ontem": 2620.16,
+      "delta": -368.0,
+      "delta_pct": -14.04,
+      "data_checagem": "2026-09-03 15:25"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D10S",
+      "slug": "flixtone-d10s",
+      "preco_atual": 1980.73,
+      "preco_ontem": 2053.57,
+      "delta": -72.84,
+      "delta_pct": -3.55,
+      "data_checagem": "2026-09-03 15:15"
     },
     {
       "marca": "Vevshao",
       "modelo": "V60",
       "slug": "vevshao-v60",
-      "preco_atual": 1596.32,
+      "preco_atual": 1571.71,
       "preco_ontem": 1613.06,
-      "delta": -16.74,
-      "delta_pct": -1.04,
-      "data_checagem": "2026-09-03 09:37"
+      "delta": -41.35,
+      "delta_pct": -2.56,
+      "data_checagem": "2026-09-03 15:25"
     }
   ]
 }
