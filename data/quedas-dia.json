@@ -1,9 +1,9 @@
 {
   "data_coleta": "04/09",
-  "hora_coleta": "09:35",
+  "hora_coleta": "15:25",
   "data_ontem": "03/09",
   "data_hoje": "04/09",
-  "total_quedas": 17,
+  "total_quedas": 21,
   "quedas": [
     {
       "marca": "Wanbo",
@@ -13,7 +13,17 @@
       "preco_ontem": 2355.2,
       "delta": -226.32,
       "delta_pct": -9.61,
-      "data_checagem": "2026-09-04 09:35"
+      "data_checagem": "2026-09-04 15:25"
+    },
+    {
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 746.41,
+      "preco_ontem": 816.6,
+      "delta": -70.19,
+      "delta_pct": -8.6,
+      "data_checagem": "2026-09-04 15:06"
     },
     {
       "marca": "Bettdow",
@@ -23,7 +33,17 @@
       "preco_ontem": 827.08,
       "delta": -46.0,
       "delta_pct": -5.56,
-      "data_checagem": "2026-09-04 09:35"
+      "data_checagem": "2026-09-04 15:25"
+    },
+    {
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 597.84,
+      "preco_ontem": 631.6,
+      "delta": -33.76,
+      "delta_pct": -5.35,
+      "data_checagem": "2026-09-04 15:04"
     },
     {
       "marca": "Magcubic",
@@ -33,27 +53,7 @@
       "preco_ontem": 873.08,
       "delta": -46.0,
       "delta_pct": -5.27,
-      "data_checagem": "2026-09-04 09:35"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "X7",
-      "slug": "magcubic-x7",
-      "preco_atual": 859.28,
-      "preco_ontem": 905.28,
-      "delta": -46.0,
-      "delta_pct": -5.08,
-      "data_checagem": "2026-09-04 09:35"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 408.13,
-      "preco_ontem": 426.33,
-      "delta": -18.2,
-      "delta_pct": -4.27,
-      "data_checagem": "2026-09-04 09:20"
+      "data_checagem": "2026-09-04 15:25"
     }
   ]
 }
