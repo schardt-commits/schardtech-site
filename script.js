@@ -12,12 +12,12 @@ const projectors = [];
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
 // ============================================================
 const featuredVideos = [
-  { id: "5GGUt_qzUes", title: "QUAL O MELHOR? 10 PROJETORES EM UM COMPARATIVO! HY300, HY320 Mini, HY350, HY450 Max, HY450GT e X7" },
   { id: "_xe393q7BpA", title: "Seu Novo Projetor Para Copa!? Testei o U14 PRO Da Byintek" },
   { id: "s7gfCpdJCVw", title: "Tela 100&quot; Portátil Byintek: DÁ PARA VER DOS DOIS LADOS?" },
   { id: "y40NWkwjuYg", title: "Qual Melhor Projetor Custo Beneficio!" },
   { id: "rrlQhQFhGgs", title: "Live especial: perguntas + sorteio do Bettdow AC1073 🎁" },
   { id: "uJlFbDdvNJE", title: "[2026] Melhor Custo Beneficio de 2026: Projetor Bettdow AC1079! Análise Completa!!" },
+  { id: "ytkdvF1rmQw", title: "[2026]Novidade Da Thundeal TD80PRO! Análise Completíssima!!!!" },
 ];
 
 // ============================================================
