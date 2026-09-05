@@ -15,154 +15,280 @@
   <link rel="icon" type="image/png" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <title>Política de Privacidade | SchardTech</title>
-  <meta name="description" content="Como o schardtech.com.br coleta e usa dados: Google Analytics, cookies de redes de afiliados e seus direitos pela LGPD.">
+  <meta name="description" content="O que o schardtech.com.br coleta, por quanto tempo guarda e como você apaga: Google Analytics e cookies de afiliado.">
   <link rel="canonical" href="https://schardtech.com.br/politica-privacidade.html">
   <meta property="og:title" content="Política de Privacidade | SchardTech">
-  <meta property="og:description" content="Como o schardtech.com.br coleta e usa dados, e seus direitos pela LGPD.">
+  <meta property="og:description" content="O que o schardtech.com.br coleta, por quanto tempo guarda e como você apaga seus dados.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://schardtech.com.br/politica-privacidade.html">
   <meta property="og:site_name" content="SchardTech">
+  <meta property="og:image" content="https://schardtech.com.br/og-image.jpg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Política de Privacidade — SchardTech",
+    "name": "Política de Privacidade do SchardTech",
     "url": "https://schardtech.com.br/politica-privacidade.html",
+    "description": "O que o schardtech.com.br coleta, com quem compartilha, por quanto tempo guarda e como o titular exerce os direitos da LGPD.",
     "isPartOf": { "@type": "WebSite", "name": "SchardTech", "url": "https://schardtech.com.br" }
   }
   </script>
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="v2.css">
   <style>
-    .page-hero { padding: 140px 0 24px; position: relative; text-align: center; }
-    .page-hero::before { content:''; position:absolute; inset:0; background: radial-gradient(60% 70% at 50% 0%, rgba(79,163,199,0.16), transparent 70%); pointer-events:none; }
-    .page-hero .container { position: relative; }
-    .page-hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; }
-    .page-hero p { color: var(--text-muted); max-width: 640px; margin: 16px auto 0; line-height: 1.6; }
-    .page-body { padding: 28px 0 90px; }
-    .page-body .container { max-width: 760px; }
-    .page-body h2 { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; margin: 38px 0 14px; }
-    .page-body p, .page-body li { color: var(--text-muted); line-height: 1.75; margin-bottom: 14px; font-size: 0.95rem; }
+    .page-body { border-top: 0; padding: 12px 0 90px; }
+    .page-body .wrap { max-width: 780px; }
+    .page-body h2 { font-size: 24px; margin: 40px 0 14px; }
+    .page-body h3 { font-size: 17px; margin: 26px 0 10px; color: var(--txt); }
+    .page-body p, .page-body li { color: var(--txt-2); line-height: 1.75; margin-bottom: 14px; font-size: 15.5px; }
     .page-body ul { padding-left: 22px; margin-bottom: 14px; }
     .page-body li { margin-bottom: 8px; }
-    .page-body a { color: var(--accent); }
-    .page-body strong { color: var(--text); }
+    .page-body a { color: var(--brand); }
+    .page-body strong { color: var(--txt); }
+    .doc-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: var(--txt-2); margin-top: 14px; }
+    .doc-meta span { white-space: nowrap; }
+    .contact-card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px 28px; margin-top: 28px; }
+    .contact-card h2 { margin-top: 0; }
+    .contact-card p:last-child { margin-bottom: 0; }
+    .tldr { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; margin: 4px 0 8px; }
+    .tldr ul { margin-bottom: 0; }
+    .tldr li:last-child { margin-bottom: 0; }
+    .doc-index { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px 26px; margin: 22px 0 8px; }
+    .doc-index p { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--txt-2); margin: 0 0 12px; font-weight: 600; }
+    .doc-index ol { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 7px 26px; counter-reset: idx; }
+    .doc-index li { margin: 0; counter-increment: idx; font-size: 14.5px; line-height: 1.45; }
+    .doc-index li::before { content: counter(idx) "."; color: var(--txt-2); font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; margin-right: 7px; }
+    .doc-index a { color: var(--txt); text-decoration: none; border-bottom: 1px solid transparent; }
+    .doc-index a:hover { color: var(--brand); border-bottom-color: currentColor; }
+    .page-body h2 { scroll-margin-top: 96px; }
+    @media (max-width: 620px) { .doc-index ol { grid-template-columns: 1fr; } }
+    .page-body code { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.92em; background: var(--card); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px; }
   </style>
 </head>
 <body>
   <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
-  <header id="header">
-    <div class="container header-inner">
-      <a href="/" class="logo-link">
-        <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="logo-img" width="402" height="216">
-      </a>
-      <nav id="mainNav">
-        <a href="comparar.html" class="nav-link">Comparativo</a>
-        <a href="qual-projetor.html" class="nav-link">Encontre seu projetor</a>
-        <a href="precos.html" class="nav-link">Preços ao Vivo</a>
-        <a href="ranking.html" class="nav-link">Ranking</a>
-        <a href="projetores.html" class="nav-link">Projetores</a>
-        <a href="acessorios-projetores.html" class="nav-link">Acessórios</a>
-        <a href="calculadora-ansi.html" class="nav-link">Calculadora</a>
-        <a href="sobre.html" class="nav-link">Sobre</a>
+
+  <div class="quedas" id="barra-quedas"></div>
+
+  <header class="topo">
+    <div class="wrap header-in">
+      <a class="logo" href="/"><img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216"></a>
+      <div class="busca">
+        <span class="lupa" aria-hidden="true"></span>
+        <input id="busca-input" type="search" placeholder="Buscar projetor..." autocomplete="off" aria-label="Buscar projetor">
+        <div class="busca-drop" id="busca-drop" role="listbox"></div>
+      </div>
+      <nav class="principal" aria-label="Navegação principal">
+        <a href="comparar.html">Comparativo</a>
+        <a href="qual-projetor.html">Encontre seu projetor</a>
+        <a class="destaque" href="precos.html">Preços ao Vivo</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="projetores.html">Projetores</a>
+        <a href="acessorios-projetores.html">Acessórios</a>
+        <a href="calculadora-ansi.html">Calculadora</a>
+        <a href="sobre.html">Sobre</a>
       </nav>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainNav">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
+  <div class="menu-mobile" id="menu-mobile">
+    <button class="fechar" id="menu-fechar">Fechar X</button>
+    <a href="comparar.html">Comparativo</a>
+    <a href="qual-projetor.html">Encontre seu projetor</a>
+    <a href="precos.html">Preços ao Vivo</a>
+    <a href="ranking.html">Ranking</a>
+    <a href="projetores.html">Projetores</a>
+    <a href="acessorios-projetores.html">Acessórios</a>
+    <a href="calculadora-ansi.html">Calculadora</a>
+    <a href="sobre.html">Sobre</a>
+  </div>
+
   <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <div class="section-tag">Transparência</div>
-        <h1>Política de Privacidade</h1>
-        <p>Última atualização: 10 de junho de 2026. Esta página explica, sem juridiquês, o que o schardtech.com.br coleta e por quê.</p>
+    <section class="page-head sem-borda">
+      <div class="wrap">
+        <div class="migalha"><a href="/">Home</a> <span class="sep">/</span> <span>Política de Privacidade</span></div>
+        <div class="eyebrow">Transparência</div>
+        <h1>Política de <span class="grad">Privacidade</span></h1>
+        <p class="sub">O que a gente coleta, com quem divide, por quanto tempo guarda e como você apaga.</p>
+        <div class="doc-meta">
+          <span>Versão 2.0</span>
+          <span>Em vigor desde 05/09/2026</span>
+          <span>Substitui a versão 1.0, de 10/06/2026</span>
+        </div>
       </div>
     </section>
 
     <section class="page-body">
-      <div class="container">
-        <h2>1. Quem somos</h2>
-        <p>O schardtech.com.br é o site da SchardTech, canal brasileiro de análises de projetores. Não exigimos cadastro, não temos formulários de login e não vendemos dados. Saiba mais na página <a href="sobre.html">Sobre</a>.</p>
+      <div class="wrap">
 
-        <h2>2. O que coletamos (e o que não coletamos)</h2>
-        <p><strong>Google Analytics 4 (GA4):</strong> usamos o GA4 pra entender o uso do site de forma agregada: páginas visitadas, origem do acesso, tipo de dispositivo e cliques em botões de loja (qual produto e qual loja, nunca quem clicou). O GA4 usa cookies próprios (<code>_ga</code> e similares) e o IP é tratado de forma anonimizada pelo Google. Esses dados não nos permitem identificar você.</p>
-        <p><strong>O que NÃO coletamos:</strong> nome, e-mail, CPF, endereço ou qualquer dado de cadastro. O site não tem formulários. Compras acontecem nas lojas parceiras (AliExpress, Shopee, Mercado Livre), sob as políticas de privacidade delas.</p>
+        <div class="tldr">
+          <p style="margin-bottom:12px;"><strong>O essencial, antes do resto:</strong></p>
+          <ul>
+            <li>Navegar aqui não exige cadastro nenhum, e a gente não sabe quem você é.</li>
+            <li>O que roda pra todo mundo é a estatística de uso do site, pelo Google Analytics, com os cookies dele. O item 7 mostra como desligar.</li>
+            <li>O site não pede seu e-mail em lugar nenhum, então não existe lista de contatos aqui.</li>
+            <li>Os botões de compra levam pra lojas de terceiros, que gravam cookies próprios pra atribuir a comissão. O item 6 explica.</li>
+          </ul>
+        </div>
 
-        <h2>3. Links de afiliado</h2>
-        <p>Os botões de compra do site usam links de afiliado (AliExpress, Shopee, Mercado Livre e rede Awin). Ao clicar, a loja de destino pode gravar cookies próprios pra atribuir a comissão da venda. Isso <strong>não altera o preço</strong> que você paga e é regido pela política de privacidade de cada loja:</p>
+        <nav class="doc-index" aria-label="Índice do documento">
+          <p>Pular direto pra</p>
+          <ol>
+            <li><a href="#s1">Quem é responsável</a></li>
+            <li><a href="#s2">O que a gente coleta</a></li>
+            <li><a href="#s3">Por que podemos tratar esses dados</a></li>
+            <li><a href="#s4">Quem mais encosta nos seus dados</a></li>
+            <li><a href="#s5">O que sai do Brasil</a></li>
+            <li><a href="#s6">Links de afiliado</a></li>
+            <li><a href="#s7">Cookies e como desligar</a></li>
+            <li><a href="#s8">Por quanto tempo guardamos</a></li>
+            <li><a href="#s9">Seus direitos</a></li>
+            <li><a href="#s10">Segurança</a></li>
+            <li><a href="#s11">Mudanças nesta política</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="s1">1. Quem é responsável</h2>
+        <p>O <strong>schardtech.com.br</strong> é o site do <strong>SchardTech</strong>, o mesmo projeto do canal de análises de projetores no YouTube. Quem decide o que é coletado aqui e por quê somos nós, então o SchardTech é o controlador desses dados na linguagem da Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+        <p>Qualquer assunto de privacidade, incluindo pedido de acesso ou de exclusão, vai por um canal só: <a href="mailto:contato@schardtech.com.br">contato@schardtech.com.br</a>. É uma caixa lida por pessoa, não por robô.</p>
+        <p><strong>Encarregado, o "DPO" da lei:</strong> quem responde por privacidade aqui é o próprio SchardTech, por esse mesmo e-mail. Somos um agente de tratamento de pequeno porte, e a Resolução CD/ANPD nº 2/2022 permite publicar o canal de atendimento no lugar do nome de uma pessoa. Escreveu pra lá, chegou em quem decide.</p>
+
+        <h2 id="s2">2. O que a gente coleta</h2>
+
+        <h3>2.1. Quando você só navega</h3>
+        <p>Usamos o <strong>Google Analytics 4</strong> pra enxergar o uso do site de forma agregada: quais páginas foram vistas, de onde veio o acesso, tipo de dispositivo e cliques nos botões de loja (qual produto e qual loja, nunca quem clicou). O GA4 grava cookies próprios no seu navegador, do tipo <code>_ga</code>. O seu endereço IP é usado para deduzir a região aproximada e descartado, sem ser gravado nos relatórios.</p>
+        <p>Sozinho, esse conjunto não identifica você. Mas ele é comportamental, então tratamos como dado pessoal do mesmo jeito, porque é assim que a LGPD enxerga.</p>
+
+        <h3>2.2. O que a gente não faz</h3>
         <ul>
-          <li><a href="https://www.aliexpress.com/p/privacy-policy/index.html" target="_blank" rel="noopener noreferrer">AliExpress</a> · <a href="https://www.awin.com/br/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Awin</a></li>
-          <li><a href="https://shopee.com.br/docs/3603" target="_blank" rel="noopener noreferrer">Shopee</a></li>
-          <li><a href="https://www.mercadolivre.com.br/privacidade" target="_blank" rel="noopener noreferrer">Mercado Livre</a></li>
+          <li>Não pedimos e-mail, cadastro nem login em lugar nenhum do site. Não existe lista de contatos aqui, e por isso não há o que vender, alugar ou trocar.</li>
+          <li>Nome, sobrenome, telefone e CPF não são pedidos em momento nenhum.</li>
+          <li>Não pedimos nem armazenamos dado de pagamento. A compra acontece na loja, não aqui.</li>
+          <li>Não cruzamos a estatística de uso com outra base, não montamos perfil pra anúncio e não vendemos dado pra ninguém.</li>
         </ul>
 
-        <h2>4. Como gerenciar cookies</h2>
-        <p>Você pode bloquear ou apagar cookies nas configurações do navegador, ou usar extensões de bloqueio. O site continua funcionando normalmente (inclusive os preços ao vivo). Pra desativar especificamente o Google Analytics, existe a <a href="https://tools.google.com/dlpage/gaoptout?hl=pt-BR" target="_blank" rel="noopener noreferrer">extensão oficial de opt-out do Google</a>.</p>
+        <h2 id="s3">3. Por que podemos tratar esses dados</h2>
+        <p>A LGPD pede que cada tratamento tenha uma base legal declarada. Como o site não pede nada seu, hoje é uma só:</p>
+        <ul>
+          <li><strong>Legítimo interesse</strong> (art. 7º, IX) para as estatísticas de uso do site, que servem pra entender qual conteúdo ajuda e corrigir o que não funciona. É um uso limitado: nada de perfil pra anúncio, nada de cruzar com outra base, nada de venda de dado. Se você não quiser participar, o item 7 explica como sair e o item 9 explica como se opor.</li>
+        </ul>
+        <p>O registro de acesso que a hospedagem guarda sozinha, como qualquer servidor da internet, se apoia na mesma base, com a finalidade de manter o site no ar e em segurança.</p>
 
-        <h2>5. Seus direitos (LGPD)</h2>
-        <p>Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você pode solicitar confirmação de tratamento, acesso, correção ou eliminação de dados. Como não mantemos base de dados pessoais própria, na prática a maior parte das solicitações se resolve limpando os cookies do navegador, mas respondemos qualquer dúvida:</p>
-        <p><strong>Contato:</strong> <a href="mailto:contato@schardtech.com.br">contato@schardtech.com.br</a></p>
+        <h2 id="s4">4. Quem mais encosta nos seus dados</h2>
+        <p>A gente não tem servidor próprio, então usa serviços de terceiros. Os dois têm regras próprias, e a gente escolheu usá-los sabendo disso.</p>
+        <ul>
+          <li><strong>GitHub</strong>, que hospeda as páginas do site. Como qualquer servidor, ele registra os acessos.</li>
+          <li><strong>Google (Analytics)</strong>, para as estatísticas do item 2.1. Aqui o Google trata os dados com finalidades próprias dele, descritas na política dele.</li>
+        </ul>
+        <p>Fora esses, dados só saem daqui em duas situações: se você autorizar, ou se a lei ou uma ordem judicial obrigar.</p>
 
-        <h2>6. Alterações</h2>
-        <p>Se esta política mudar, a data de "última atualização" no topo será revisada. Mudanças relevantes serão destacadas aqui.</p>
+        <h2 id="s5">5. O que sai do Brasil</h2>
+        <p>O site é entregue por infraestrutura internacional, e parte do que ele carrega vem de fora do país:</p>
+        <ul>
+          <li>O <strong>Google Analytics</strong> processa em infraestrutura global do Google.</li>
+          <li>As <strong>fontes do site</strong> vêm do Google Fonts, as <strong>miniaturas dos vídeos</strong> vêm do YouTube, e o <strong>GitHub Pages</strong> entrega as páginas por rede internacional.</li>
+        </ul>
+        <p>Essas transferências se apoiam nas cláusulas contratuais padrão desses fornecedores, que é o mecanismo previsto no art. 33 da LGPD.</p>
+
+        <h2 id="s6">6. Links de afiliado</h2>
+        <p>Os botões de compra levam pra AliExpress, Shopee, Mercado Livre e Global Stock por links de afiliado, e alguns passam por redirecionadores da rede Awin ou das próprias lojas antes de chegar no destino. Esses intermediários gravam cookies pra atribuir a comissão, e conseguem ver de qual página você veio.</p>
+        <p>Isso <strong>não muda o preço</strong> que você paga. E, a partir do clique, quem manda é a política de cada loja:</p>
+        <ul>
+          <li><a href="https://shopee.com.br/docs/3603" target="_blank" rel="noopener noreferrer">Shopee</a></li>
+          <li><a href="https://www.mercadolivre.com.br/privacidade" target="_blank" rel="noopener noreferrer">Mercado Livre</a></li>
+          <li><a href="https://www.awin.com/br/privacy" target="_blank" rel="noopener noreferrer">Awin</a></li>
+          <li>AliExpress e Global Stock: a política de cada uma fica no rodapé do site delas.</li>
+        </ul>
+
+        <h2 id="s7">7. Cookies e como desligar</h2>
+        <p>Você pode bloquear ou apagar cookies nas configurações do navegador, ou usar uma extensão de bloqueio. <strong>O site continua funcionando inteiro</strong>, incluindo os preços ao vivo, o comparativo e a busca.</p>
+        <p>Pra sair só do Google Analytics, no computador existe a <a href="https://tools.google.com/dlpage/gaoptout?hl=pt-BR" target="_blank" rel="noopener noreferrer">extensão oficial de opt-out do Google</a>. No celular ela não existe, e vale um aviso: como o cookie do GA4 é gravado pelo próprio schardtech.com.br, bloquear apenas cookies de terceiros <strong>não</strong> resolve. O que funciona é um navegador com bloqueio de rastreadores embutido, um bloqueador de conteúdo, ou navegar em aba anônima e limpar os dados do site ao sair.</p>
+
+        <h2 id="s8">8. Por quanto tempo guardamos</h2>
+        <ul>
+          <li><strong>Estatísticas do GA4:</strong> são dois prazos, definidos por nós na ferramenta. O detalhe de cada evento, como a página vista e o clique no botão de loja, fica <strong>2 meses</strong>. O dado ligado ao identificador do seu navegador fica <strong>14 meses</strong>, e é justo dizer que esse relógio de 14 meses <strong>reinicia a cada visita nova sua</strong>: enquanto você continuar voltando aqui, ele não vence. Passado o prazo sem você voltar, sobra só o total agregado, que não se liga a ninguém. O item 7 mostra como ficar de fora disso.</li>
+          <li><strong>Registro de acesso da hospedagem:</strong> pelo prazo do próprio GitHub, descrito na política dele. A gente não consulta nem exporta esse registro.</li>
+        </ul>
+
+        <h2 id="s9">9. Seus direitos</h2>
+        <p>O art. 18 da LGPD te dá, sobre os dados que estão com a gente, o direito de:</p>
+        <ul>
+          <li>confirmar se existe algum tratamento e acessar o que existe;</li>
+          <li>corrigir dado incompleto ou errado;</li>
+          <li>pedir anonimização, bloqueio ou eliminação de dado desnecessário ou excessivo;</li>
+          <li>pedir a portabilidade para outro fornecedor;</li>
+          <li>saber com quem compartilhamos;</li>
+          <li>se opor a tratamento feito com base no legítimo interesse, como o das estatísticas do item 2.1.</li>
+        </ul>
+        <p>Os direitos ligados a consentimento, como retirar o consentimento ou pedir a eliminação do que foi tratado com base nele, não têm o que exercer hoje: o site não trata nada seu com base em consentimento. Se isso mudar, esta política muda <strong>antes</strong>, na forma do item 11.</p>
+        <p>Pra qualquer pedido, escreva pra <a href="mailto:contato@schardtech.com.br">contato@schardtech.com.br</a>. Pedido de confirmação de tratamento ou de acesso é respondido <strong>em até 15 dias</strong>, que é o prazo da lei. Os outros a gente responde o mais rápido que der, e se algum precisar de mais tempo, avisamos dentro desses mesmos 15 dias dizendo o porquê.</p>
+        <p>Se a resposta não te satisfizer, você pode reclamar à <a href="https://www.gov.br/anpd/pt-br" target="_blank" rel="noopener noreferrer">Autoridade Nacional de Proteção de Dados</a>.</p>
+
+        <h2 id="s10">10. Segurança</h2>
+        <p>O que dá pra prometer: o site é entregue só por conexão criptografada e o código dele é público, então nenhuma chave administrativa mora nele. Como não existe banco de dados de visitante aqui, também não existe uma base sua pra vazar.</p>
+        <p>O que não dá pra prometer: segurança absoluta, porque isso não existe na internet. Se acontecer um incidente que possa te trazer risco relevante, avisamos aqui no site e comunicamos a ANPD, como manda o art. 48 da LGPD.</p>
+
+        <h2 id="s11">11. Mudanças nesta política</h2>
+        <p>Se algo aqui mudar, a versão sobe e a data no topo acompanha. Quando a mudança for relevante, e principalmente se o site passar a coletar algo seu de propósito, o texto novo entra <strong>antes</strong> de a coleta começar, e não depois.</p>
+        <p>O uso do site também é regido pelos <a href="termos-de-uso.html">Termos de Uso</a>.</p>
+
+        <div class="contact-card">
+          <h2>Fale com a gente</h2>
+          <p>Privacidade, exclusão de dados, correção de informação ou qualquer outra coisa:</p>
+          <p style="margin-bottom:0;"><strong>E-mail:</strong> <a href="mailto:contato@schardtech.com.br">contato@schardtech.com.br</a><br>
+          <strong>Quem somos e como testamos:</strong> <a href="sobre.html">página Sobre</a></p>
+        </div>
+
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="/" class="logo-link">
-          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="footer-logo" width="402" height="216">
-        </a>
-        <div class="footer-social">
-          <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
-          </a>
-          <span class="social-link social-disabled" aria-label="Instagram (em breve)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          </span>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" width="402" height="216">
+          <p>Projetores testados de verdade no canal SchardTech.</p>
+          <div class="social">
+            <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg class="ico" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.24 8.24 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg></a>
+            <span class="off" aria-label="Instagram em breve"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.51"/></svg></span>
+          </div>
         </div>
-      </div>
-      <div class="footer-nav">
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Navegação</h4>
           <a href="projetores.html">Projetores</a>
-          <a href="/sobre.html">Sobre</a>
-          <a href="/politica-privacidade.html">Privacidade</a><a href="mailto:contato@schardtech.com.br">Contato</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="politica-privacidade.html">Privacidade</a>
+          <a href="mailto:contato@schardtech.com.br">Contato</a>
         </div>
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Ferramentas</h4>
-          <a href="ranking.html">Ranking dos testes</a><a href="qual-projetor.html">Encontre seu projetor</a>
+          <a href="ranking.html">Ranking dos testes</a>
+          <a href="qual-projetor.html">Encontre seu projetor</a>
           <a href="comparar.html">Comparar projetores</a>
           <a href="acessorios-projetores.html">Acessórios</a>
         </div>
-        <div class="footer-col">
+        <div class="foot-col">
           <h4>Conteúdo</h4>
           <a href="https://www.youtube.com/@SchardTech" target="_blank" rel="noopener noreferrer">YouTube</a>
           <a href="https://www.tiktok.com/@schardtech" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <span class="footer-disabled">Instagram (em breve)</span>
+          <span class="off">Instagram (em breve)</span>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© 2026 SchardTech — Todos os direitos reservados</p>
-        <p style="margin-top:8px;font-size:0.78rem;color:var(--text-dim);">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
+      <div class="foot-bottom">
+        <p>&copy; 2026 SchardTech. Todos os direitos reservados.</p>
+        <p style="margin-top: 6px;">Este site contém links de afiliado. Ao comprar por nossos links podemos receber uma comissão sem custo adicional para você.</p>
       </div>
     </div>
   </footer>
 
   <script src="script.js" defer></script>
-  <script src="projetores-data.js"></script>
-  <script src="prices-overlay.js"></script>
-  <script src="search-global.js" defer></script>
+  <script src="projetores-data.js" defer></script>
+  <script src="prices-overlay.js" defer></script>
+  <script src="ui-interacoes.js" defer></script>
 </body>
 </html>
