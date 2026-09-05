@@ -12,13 +12,15 @@ jobs:
       contents: write
 
     steps:
-      # Pinado por SHA (M4): o job tem contents:write + secret — tag móvel comprometida
-      # poderia exfiltrar o secret ou push malicioso no repo que publica o site
+      # Pinado por SHA (M4): o job tem contents:write — tag móvel comprometida
+      # poderia virar push malicioso no repo que publica o site
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4.3.1
 
+      # Desde 04/09/2026 lê o feed RSS público do canal, não a YouTube Data API.
+      # Motivo: search.list com order=date devolvia ordem errada (nenhum dos 6
+      # vídeos publicados estava entre os 12 uploads mais recentes). Sem chave,
+      # sem cota. O secret YOUTUBE_API_KEY pode ser apagado das Settings do repo.
       - name: Buscar últimos vídeos e atualizar script.js
-        env:
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python update_videos.py
 
       # Falha o job ANTES do commit se o script.js ficou inválido (M1):
