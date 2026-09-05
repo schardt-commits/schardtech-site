@@ -1,59 +1,29 @@
 {
-  "data_coleta": "04/09",
-  "hora_coleta": "15:25",
-  "data_ontem": "03/09",
-  "data_hoje": "04/09",
-  "total_quedas": 21,
+  "data_coleta": "05/09",
+  "hora_coleta": "00:35",
+  "data_ontem": "04/09",
+  "data_hoje": "05/09",
+  "total_quedas": 2,
   "quedas": [
     {
-      "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 2128.88,
-      "preco_ontem": 2355.2,
-      "delta": -226.32,
-      "delta_pct": -9.61,
-      "data_checagem": "2026-09-04 15:25"
-    },
-    {
-      "marca": "Horlat",
-      "modelo": "T9N",
-      "slug": "horlat-t9n",
-      "preco_atual": 746.41,
-      "preco_ontem": 816.6,
-      "delta": -70.19,
-      "delta_pct": -8.6,
-      "data_checagem": "2026-09-04 15:06"
+      "marca": "Magcubic",
+      "modelo": "HY310X",
+      "slug": "magcubic-hy310x",
+      "preco_atual": 310.0,
+      "preco_ontem": 441.33,
+      "delta": -131.33,
+      "delta_pct": -29.76,
+      "data_checagem": "2026-09-05 00:35"
     },
     {
       "marca": "Bettdow",
-      "modelo": "AC1082",
-      "slug": "bettdow-ac1082",
-      "preco_atual": 781.08,
-      "preco_ontem": 827.08,
-      "delta": -46.0,
-      "delta_pct": -5.56,
-      "data_checagem": "2026-09-04 15:25"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 597.84,
-      "preco_ontem": 631.6,
-      "delta": -33.76,
-      "delta_pct": -5.35,
-      "data_checagem": "2026-09-04 15:04"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY450C",
-      "slug": "magcubic-hy450c",
-      "preco_atual": 827.08,
-      "preco_ontem": 873.08,
-      "delta": -46.0,
-      "delta_pct": -5.27,
-      "data_checagem": "2026-09-04 15:25"
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 509.47,
+      "preco_ontem": 543.72,
+      "delta": -34.25,
+      "delta_pct": -6.3,
+      "data_checagem": "2026-09-05 00:35"
     }
   ]
 }
