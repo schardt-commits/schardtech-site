@@ -1,29 +1,19 @@
 {
   "data_coleta": "06/09",
-  "hora_coleta": "00:36",
+  "hora_coleta": "09:35",
   "data_ontem": "05/09",
   "data_hoje": "06/09",
-  "total_quedas": 18,
+  "total_quedas": 31,
   "quedas": [
     {
       "marca": "Wanbo",
       "modelo": "X5 Pro",
       "slug": "wanbo-x5-pro",
-      "preco_atual": 2188.68,
+      "preco_atual": 2119.68,
       "preco_ontem": 2499.0,
-      "delta": -310.32,
-      "delta_pct": -12.42,
-      "data_checagem": "2026-09-06 00:36"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 231.02,
-      "preco_ontem": 261.28,
-      "delta": -30.26,
-      "delta_pct": -11.58,
-      "data_checagem": "2026-09-06 00:18"
+      "delta": -379.32,
+      "delta_pct": -15.18,
+      "data_checagem": "2026-09-06 09:35"
     },
     {
       "marca": "Thundeal",
@@ -33,17 +23,7 @@
       "preco_ontem": 465.04,
       "delta": -53.48,
       "delta_pct": -11.5,
-      "data_checagem": "2026-09-06 00:21"
-    },
-    {
-      "marca": "Horlat",
-      "modelo": "T9N",
-      "slug": "horlat-t9n",
-      "preco_atual": 746.11,
-      "preco_ontem": 837.64,
-      "delta": -91.53,
-      "delta_pct": -10.93,
-      "data_checagem": "2026-09-06 00:17"
+      "data_checagem": "2026-09-06 09:19"
     },
     {
       "marca": "FlixTone",
@@ -53,7 +33,27 @@
       "preco_ontem": 1191.47,
       "delta": -128.56,
       "delta_pct": -10.79,
-      "data_checagem": "2026-09-06 00:16"
+      "data_checagem": "2026-09-06 09:15"
+    },
+    {
+      "marca": "Wupro",
+      "modelo": "G2",
+      "slug": "wupro-g2",
+      "preco_atual": 854.57,
+      "preco_ontem": 943.47,
+      "delta": -88.9,
+      "delta_pct": -9.42,
+      "data_checagem": "2026-09-06 09:23"
+    },
+    {
+      "marca": "XGODY",
+      "modelo": "Gimbal 7",
+      "slug": "xgody-gimbal-7",
+      "preco_atual": 567.74,
+      "preco_ontem": 626.77,
+      "delta": -59.03,
+      "delta_pct": -9.42,
+      "data_checagem": "2026-09-06 09:35"
     }
   ]
 }
