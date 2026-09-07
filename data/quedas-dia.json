@@ -1,9 +1,9 @@
 {
   "data_coleta": "07/09",
-  "hora_coleta": "14:12",
+  "hora_coleta": "15:26",
   "data_ontem": "06/09",
   "data_hoje": "07/09",
-  "total_quedas": 12,
+  "total_quedas": 13,
   "quedas": [
     {
       "marca": "Byintek",
@@ -13,7 +13,7 @@
       "preco_ontem": 1743.43,
       "delta": -132.75,
       "delta_pct": -7.61,
-      "data_checagem": "2026-09-07 14:12"
+      "data_checagem": "2026-09-07 15:26"
     },
     {
       "marca": "Byintek",
@@ -23,7 +23,7 @@
       "preco_ontem": 813.11,
       "delta": -52.99,
       "delta_pct": -6.52,
-      "data_checagem": "2026-09-07 14:12"
+      "data_checagem": "2026-09-07 15:26"
     },
     {
       "marca": "Byintek",
@@ -33,7 +33,7 @@
       "preco_ontem": 1364.84,
       "delta": -86.8,
       "delta_pct": -6.36,
-      "data_checagem": "2026-09-07 13:48"
+      "data_checagem": "2026-09-07 15:04"
     },
     {
       "marca": "Vevshao",
@@ -43,17 +43,17 @@
       "preco_ontem": 383.44,
       "delta": -23.35,
       "delta_pct": -6.09,
-      "data_checagem": "2026-09-07 14:12"
+      "data_checagem": "2026-09-07 15:26"
     },
     {
-      "marca": "Jenovox",
-      "modelo": "M5000 Mini",
-      "slug": "jenovox-m5000-mini",
-      "preco_atual": 2295.49,
-      "preco_ontem": 2430.6,
-      "delta": -135.11,
-      "delta_pct": -5.56,
-      "data_checagem": "2026-09-07 13:52"
+      "marca": "Byintek",
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 548.79,
+      "preco_ontem": 581.71,
+      "delta": -32.92,
+      "delta_pct": -5.66,
+      "data_checagem": "2026-09-07 15:26"
     }
   ]
 }
