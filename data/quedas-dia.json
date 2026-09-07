@@ -1,6 +1,6 @@
 {
   "data_coleta": "06/09",
-  "hora_coleta": "15:25",
+  "hora_coleta": "21:35",
   "data_ontem": "05/09",
   "data_hoje": "06/09",
   "total_quedas": 31,
@@ -13,47 +13,47 @@
       "preco_ontem": 2499.0,
       "delta": -379.32,
       "delta_pct": -15.18,
-      "data_checagem": "2026-09-06 15:25"
+      "data_checagem": "2026-09-06 21:35"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD80PRO",
       "slug": "thundeal-td80pro",
-      "preco_atual": 411.56,
+      "preco_atual": 429.38,
       "preco_ontem": 465.04,
-      "delta": -53.48,
-      "delta_pct": -11.5,
-      "data_checagem": "2026-09-06 15:10"
+      "delta": -35.66,
+      "delta_pct": -7.67,
+      "data_checagem": "2026-09-06 21:19"
     },
     {
       "marca": "FlixTone",
       "modelo": "D9W Mini",
       "slug": "flixtone-d9w-mini",
-      "preco_atual": 1062.91,
+      "preco_atual": 1105.76,
       "preco_ontem": 1191.47,
-      "delta": -128.56,
-      "delta_pct": -10.79,
-      "data_checagem": "2026-09-06 15:05"
-    },
-    {
-      "marca": "Wupro",
-      "modelo": "G2",
-      "slug": "wupro-g2",
-      "preco_atual": 854.57,
-      "preco_ontem": 943.47,
-      "delta": -88.9,
-      "delta_pct": -9.42,
-      "data_checagem": "2026-09-06 15:13"
+      "delta": -85.71,
+      "delta_pct": -7.19,
+      "data_checagem": "2026-09-06 21:15"
     },
     {
       "marca": "XGODY",
       "modelo": "Gimbal 7",
       "slug": "xgody-gimbal-7",
-      "preco_atual": 567.74,
+      "preco_atual": 581.87,
       "preco_ontem": 626.77,
-      "delta": -59.03,
-      "delta_pct": -9.42,
-      "data_checagem": "2026-09-06 15:25"
+      "delta": -44.9,
+      "delta_pct": -7.16,
+      "data_checagem": "2026-09-06 21:35"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "L9W Ultra",
+      "slug": "touyinger-l9w-ultra",
+      "preco_atual": 473.86,
+      "preco_ontem": 508.87,
+      "delta": -35.01,
+      "delta_pct": -6.88,
+      "data_checagem": "2026-09-06 21:21"
     }
   ]
 }
