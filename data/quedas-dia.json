@@ -1,9 +1,9 @@
 {
   "data_coleta": "07/09",
-  "hora_coleta": "00:34",
+  "hora_coleta": "09:35",
   "data_ontem": "06/09",
   "data_hoje": "07/09",
-  "total_quedas": 1,
+  "total_quedas": 2,
   "quedas": [
     {
       "marca": "Vevshao",
@@ -13,7 +13,17 @@
       "preco_ontem": 383.44,
       "delta": -23.35,
       "delta_pct": -6.09,
-      "data_checagem": "2026-09-07 00:34"
+      "data_checagem": "2026-09-07 09:35"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 245.04,
+      "preco_ontem": 248.09,
+      "delta": -3.05,
+      "delta_pct": -1.23,
+      "data_checagem": "2026-09-07 09:17"
     }
   ]
 }
