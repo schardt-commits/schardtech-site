@@ -1,59 +1,59 @@
 {
-  "data_coleta": "08/09",
-  "hora_coleta": "21:36",
-  "data_ontem": "07/09",
-  "data_hoje": "08/09",
-  "total_quedas": 14,
+  "data_coleta": "09/09",
+  "hora_coleta": "00:36",
+  "data_ontem": "08/09",
+  "data_hoje": "09/09",
+  "total_quedas": 7,
   "quedas": [
     {
-      "marca": "Wanbo",
-      "modelo": "T2 Ultra",
-      "slug": "wanbo-t2-ultra",
-      "preco_atual": 1242.0,
-      "preco_ontem": 1305.48,
-      "delta": -63.48,
-      "delta_pct": -4.86,
-      "data_checagem": "2026-09-08 21:36"
-    },
-    {
-      "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 2110.48,
-      "preco_ontem": 2197.88,
-      "delta": -87.4,
-      "delta_pct": -3.98,
-      "data_checagem": "2026-09-08 21:36"
+      "marca": "Bettdow",
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 466.44,
+      "preco_ontem": 528.08,
+      "delta": -61.64,
+      "delta_pct": -11.67,
+      "data_checagem": "2026-09-09 00:36"
     },
     {
       "marca": "Bettdow",
-      "modelo": "AC1082",
-      "slug": "bettdow-ac1082",
-      "preco_atual": 827.08,
-      "preco_ontem": 850.08,
-      "delta": -23.0,
-      "delta_pct": -2.71,
-      "data_checagem": "2026-09-08 21:36"
+      "modelo": "AC1071",
+      "slug": "bettdow-ac1071",
+      "preco_atual": 1426.92,
+      "preco_ontem": 1516.16,
+      "delta": -89.24,
+      "delta_pct": -5.89,
+      "data_checagem": "2026-09-09 00:36"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "HY450C",
-      "slug": "magcubic-hy450c",
-      "preco_atual": 873.08,
-      "preco_ontem": 896.08,
-      "delta": -23.0,
-      "delta_pct": -2.57,
-      "data_checagem": "2026-09-08 21:36"
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 626.52,
+      "preco_ontem": 663.32,
+      "delta": -36.8,
+      "delta_pct": -5.55,
+      "data_checagem": "2026-09-09 00:36"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "X7",
-      "slug": "magcubic-x7",
-      "preco_atual": 905.28,
-      "preco_ontem": 928.28,
-      "delta": -23.0,
-      "delta_pct": -2.48,
-      "data_checagem": "2026-09-08 21:36"
+      "marca": "Bettdow",
+      "modelo": "AC1041",
+      "slug": "bettdow-ac1041",
+      "preco_atual": 789.36,
+      "preco_ontem": 819.0,
+      "delta": -29.64,
+      "delta_pct": -3.62,
+      "data_checagem": "2026-09-09 00:36"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1880.62,
+      "preco_ontem": 1898.02,
+      "delta": -17.4,
+      "delta_pct": -0.92,
+      "data_checagem": "2026-09-09 00:36"
     }
   ]
 }
