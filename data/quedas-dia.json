@@ -1,10 +1,30 @@
 {
   "data_coleta": "09/09",
-  "hora_coleta": "00:36",
+  "hora_coleta": "09:35",
   "data_ontem": "08/09",
   "data_hoje": "09/09",
-  "total_quedas": 7,
+  "total_quedas": 13,
   "quedas": [
+    {
+      "marca": "Touyinger",
+      "modelo": "L9W Ultra",
+      "slug": "touyinger-l9w-ultra",
+      "preco_atual": 805.19,
+      "preco_ontem": 2052.71,
+      "delta": -1247.52,
+      "delta_pct": -60.77,
+      "data_checagem": "2026-09-09 09:21"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 509.68,
+      "preco_ontem": 592.48,
+      "delta": -82.8,
+      "delta_pct": -13.98,
+      "data_checagem": "2026-09-09 09:35"
+    },
     {
       "marca": "Bettdow",
       "modelo": "AC1066",
@@ -13,47 +33,27 @@
       "preco_ontem": 528.08,
       "delta": -61.64,
       "delta_pct": -11.67,
-      "data_checagem": "2026-09-09 00:36"
+      "data_checagem": "2026-09-09 09:35"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1071",
-      "slug": "bettdow-ac1071",
-      "preco_atual": 1426.92,
-      "preco_ontem": 1516.16,
-      "delta": -89.24,
-      "delta_pct": -5.89,
-      "data_checagem": "2026-09-09 00:36"
+      "marca": "Magcubic",
+      "modelo": "L018",
+      "slug": "magcubic-l018",
+      "preco_atual": 575.07,
+      "preco_ontem": 620.08,
+      "delta": -45.01,
+      "delta_pct": -7.26,
+      "data_checagem": "2026-09-09 09:35"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 626.52,
-      "preco_ontem": 663.32,
-      "delta": -36.8,
-      "delta_pct": -5.55,
-      "data_checagem": "2026-09-09 00:36"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1041",
-      "slug": "bettdow-ac1041",
-      "preco_atual": 789.36,
-      "preco_ontem": 819.0,
-      "delta": -29.64,
-      "delta_pct": -3.62,
-      "data_checagem": "2026-09-09 00:36"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U80 MAX",
-      "slug": "byintek-u80-max",
-      "preco_atual": 1880.62,
-      "preco_ontem": 1898.02,
-      "delta": -17.4,
-      "delta_pct": -0.92,
-      "data_checagem": "2026-09-09 00:36"
+      "marca": "Magcubic",
+      "modelo": "HY310X",
+      "slug": "magcubic-hy310x",
+      "preco_atual": 410.43,
+      "preco_ontem": 441.33,
+      "delta": -30.9,
+      "delta_pct": -7.0,
+      "data_checagem": "2026-09-09 09:35"
     }
   ]
 }
