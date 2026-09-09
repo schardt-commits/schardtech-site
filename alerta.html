@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Aviso de estoque | SchardTech</title>
+
+<!-- Página do fluxo de aviso de re-estoque (09/09/2026).
+     POR QUE ELA EXISTE, e não a Edge Function servindo HTML:
+     no domínio compartilhado *.supabase.co o Supabase reescreve o Content-Type
+     de toda resposta pra text/plain e ainda manda "CSP: default-src 'none';
+     sandbox" + nosniff. É proteção anti-phishing deles, e só sai disso com
+     domínio próprio (recurso pago). Medido em 09/09: a página vinha como texto
+     cru e com acento quebrado.
+     Agora a Function só REDIRECIONA pra cá, e quem desenha é o site. De quebra
+     a pessoa vê schardtech.com.br do começo ao fim, em vez de uma URL estranha.
+
+     NÃO define form-action na CSP de propósito: é o que deixa o formulário
+     postar na Edge Function. connect-src continua 'self' porque esta página
+     não faz fetch nenhum. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self'">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="v2.css">
+
+<style>
+  body { background: var(--bg, #090C11); }
+  .al-wrap { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+  .al-cx {
+    max-width: 540px; width: 100%;
+    background: var(--card, #111722);
+    border: 1px solid var(--line, #1F2A3C);
+    border-radius: calc(var(--radius, 8px) * 1.5);
+    padding: 34px 30px;
+  }
+  .al-logo { display: block; height: 34px; width: auto; margin-bottom: 22px; opacity: .9; }
+  .al-cx h1 {
+    font-family: var(--display, sans-serif);
+    font-size: 25px; line-height: 1.25; margin: 0 0 14px; color: var(--txt, #EEF3FA);
+  }
+  .al-cx p { margin: 0 0 13px; color: var(--txt-2, #8D9CB2); line-height: 1.6; }
+  .al-cx p strong { color: var(--txt, #EEF3FA); }
+  .al-cx a { color: var(--brand, #5BC8EE); }
+  .al-cx button {
+    font: inherit; font-weight: 600; cursor: pointer; border: 0;
+    border-radius: var(--radius, 8px); padding: 13px 24px; margin-top: 6px;
+    background: var(--brand, #5BC8EE); color: #08131A;
+  }
+  .al-cx button:hover { filter: brightness(1.08); }
+  .al-rodape {
+    margin: 24px 0 0; padding-top: 17px;
+    border-top: 1px solid var(--line, #1F2A3C);
+    font-size: 13px; color: var(--txt-2, #8D9CB2);
+  }
+  .al-ok h1 { color: var(--win, #2FE08A); }
+  .al-erro h1 { color: var(--alerta, #FF9B7A); }
+</style>
+</head>
+<body>
+<main class="al-wrap">
+  <div class="al-cx" id="cx">
+    <img src="LOGOMARCA SCHARDTECH SEM FUNDO COM SOMBRA.webp" alt="SchardTech" class="al-logo" width="402" height="216">
+    <div id="conteudo">
+      <h1>Carregando…</h1>
+    </div>
+    <p class="al-rodape">
+      <a href="/">schardtech.com.br</a> &middot;
+      <a href="politica-privacidade.html">Política de Privacidade</a> &middot;
+      <a href="termos-de-uso.html">Termos de Uso</a>
+    </p>
+  </div>
+</main>
+
+<script>
+(function () {
+  var FN = 'https://wdjypplowggtbduslpuc.supabase.co/functions/v1/alertas';
+  var q = new URLSearchParams(location.search);
+  var cx = document.getElementById('cx');
+  var alvo = document.getElementById('conteudo');
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  // Botão que POSTa de volta na Edge Function. É POST, e não o link direto do
+  // e-mail, porque scanner de antivírus e o Safe Links do Outlook pré-abrem
+  // todo GET: confirmariam a inscrição sozinhos e cancelariam alerta de quem
+  // nunca pediu.
+  function form(rota, campo, valor, rotulo) {
+    return '<form method="POST" action="' + FN + '/' + rota + '">' +
+           '<input type="hidden" name="' + campo + '" value="' + esc(valor) + '">' +
+           '<button type="submit">' + rotulo + '</button></form>';
+  }
+
+  var LINK_RUIM = {
+    tom: 'erro',
+    h: 'Esse link não vale mais',
+    p: ['Ou ele já foi usado, ou passou do prazo, ou veio cortado porque o programa de e-mail quebrou a linha no meio.',
+        'É só pedir o aviso de novo na página do produto.']
+  };
+
+  var telas = {
+    inscrito: { h: 'Falta um clique', p: [
+      'Mandamos um e-mail de confirmação. <strong>Abra e clique no botão</strong> pra ativar o aviso.',
+      'Enquanto você não confirmar, nada é criado e nenhum outro e-mail sai. O link vale 7 dias.',
+      'Não chegou? Olha no spam. Se não estiver lá, o endereço pode ter sido digitado errado.'] },
+
+    ativado: { tom: 'ok', h: 'Aviso ativado', p: [
+      'Quando o produto voltar ao estoque, você recebe um e-mail.',
+      'Não é instantâneo: a volta precisa se confirmar em rodadas seguidas de coleta, o que costuma levar até 24 horas. O pedido expira sozinho em 6 meses.'] },
+
+    cancelado: { h: 'Cancelado', p: [
+      'Esse aviso foi removido. Você não recebe mais e-mail sobre ele.',
+      'A prova de que você pediu o aviso fica guardada, embaralhada, porque a lei exige. Ela não serve pra mandar mensagem, e está explicada no item 9 da <a href="politica-privacidade.html">Política de Privacidade</a>.'] },
+
+    rearmado: { tom: 'ok', h: 'Aviso reativado', p: [
+      'Se o produto esgotar e voltar de novo, você recebe outro e-mail.',
+      'Vale por mais 6 meses.'] },
+
+    jaativo: { h: 'Já está ativo', p: [
+      'Você já tem um aviso vivo pra esse produto. Não precisa fazer nada.'] },
+
+    jadisponivel: { h: 'Boa notícia: já voltou', p: [
+      'Esse produto está com preço no site agora, então não faz sentido esperar aviso.',
+      '<a href="precos.html">Ver os preços de hoje</a>'] },
+
+    naoelegivel: { h: 'Esse aqui a gente não consegue avisar', p: [
+      'Ou o anúncio saiu do ar de vez, ou a nossa última leitura de preço falhou. Nos dois casos, prometer um aviso seria mentira.',
+      '<a href="projetores.html">Ver os outros projetores</a>'] },
+
+    emailinvalido: { tom: 'erro', h: 'Esse e-mail não parece certo', p: [
+      'Confere e tenta de novo na página do produto.'] },
+
+    muitastentativas: { tom: 'erro', h: 'Muitos pedidos seguidos', p: [
+      'Espera uma hora e tenta de novo.',
+      'Esse limite existe pra impedir que alguém cadastre o e-mail de outra pessoa em massa.'] },
+
+    linkinvalido: LINK_RUIM,
+
+    erro: { tom: 'erro', h: 'Deu erro do nosso lado', p: [
+      'Tenta de novo daqui a pouco. Se insistir, escreve pra <a href="mailto:contato@schardtech.com.br">contato@schardtech.com.br</a>.'] }
+  };
+
+  function pinta(tela, extra) {
+    if (tela.tom === 'ok') cx.classList.add('al-ok');
+    if (tela.tom === 'erro') cx.classList.add('al-erro');
+    var html = '<h1>' + tela.h + '</h1>';
+    for (var i = 0; i < tela.p.length; i++) html += '<p>' + tela.p[i] + '</p>';
+    alvo.innerHTML = html + (extra || '');
+    document.title = tela.h + ' | SchardTech';
+  }
+
+  var acao = q.get('acao');
+  var s = q.get('s');
+
+  if (acao === 'confirmar') {
+    var t = q.get('t');
+    if (!t) return pinta(LINK_RUIM);
+    return pinta(
+      { h: 'Confirmar o aviso de estoque', p: ['Clica no botão pra ativar. É o último passo.'] },
+      form('confirmar', 't', t, 'Confirmar'));
+  }
+
+  if (acao === 'cancelar') {
+    var c = q.get('c');
+    if (!c) return pinta(LINK_RUIM);
+    return pinta(
+      { h: 'Cancelar o aviso', p: ['Clica no botão e a gente para de te avisar sobre esse produto.'] },
+      form('cancelar', 'c', c, 'Cancelar o aviso'));
+  }
+
+  if (acao === 'rearmar') {
+    var r = q.get('c');
+    if (!r) return pinta(LINK_RUIM);
+    return pinta(
+      { h: 'Continuar acompanhando', p: ['Vamos te avisar de novo se esse produto esgotar e voltar outra vez.'] },
+      form('rearmar', 'c', r, 'Continuar me avisando'));
+  }
+
+  var tela = telas[s];
+  if (!tela) return pinta(LINK_RUIM);
+
+  // Depois de confirmar, a Function manda junto o token de cancelamento, pra
+  // pessoa ter como sair mesmo antes de receber o primeiro e-mail.
+  var extra = '';
+  if (s === 'ativado' && q.get('c')) {
+    extra = '<p class="al-rodape">Mudou de ideia? ' +
+      '<a href="alerta.html?acao=cancelar&c=' + encodeURIComponent(q.get('c')) + '">Cancelar este aviso</a>. ' +
+      'Esse link também vai no e-mail que você receber.</p>';
+  }
+  pinta(tela, extra);
+})();
+</script>
+</body>
+</html>
