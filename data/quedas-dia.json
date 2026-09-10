@@ -1,59 +1,19 @@
 {
-  "data_coleta": "09/09",
-  "hora_coleta": "21:35",
-  "data_ontem": "08/09",
-  "data_hoje": "09/09",
-  "total_quedas": 15,
+  "data_coleta": "10/09",
+  "hora_coleta": "00:35",
+  "data_ontem": "09/09",
+  "data_hoje": "10/09",
+  "total_quedas": 1,
   "quedas": [
     {
-      "marca": "Touyinger",
-      "modelo": "L9W Ultra",
-      "slug": "touyinger-l9w-ultra",
-      "preco_atual": 805.79,
-      "preco_ontem": 2052.71,
-      "delta": -1246.92,
-      "delta_pct": -60.75,
-      "data_checagem": "2026-09-09 21:21"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U4",
-      "slug": "byintek-love-u4",
-      "preco_atual": 509.68,
-      "preco_ontem": 592.48,
-      "delta": -82.8,
-      "delta_pct": -13.98,
-      "data_checagem": "2026-09-09 21:35"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "L018",
-      "slug": "magcubic-l018",
-      "preco_atual": 575.07,
-      "preco_ontem": 620.08,
-      "delta": -45.01,
-      "delta_pct": -7.26,
-      "data_checagem": "2026-09-09 21:35"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY310X",
-      "slug": "magcubic-hy310x",
-      "preco_atual": 410.43,
-      "preco_ontem": 441.33,
-      "delta": -30.9,
-      "delta_pct": -7.0,
-      "data_checagem": "2026-09-09 21:35"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1066",
-      "slug": "bettdow-ac1066",
-      "preco_atual": 492.2,
-      "preco_ontem": 528.08,
-      "delta": -35.88,
-      "delta_pct": -6.79,
-      "data_checagem": "2026-09-09 21:35"
+      "marca": "Vevshao",
+      "modelo": "V60",
+      "slug": "vevshao-v60",
+      "preco_atual": 2098.26,
+      "preco_ontem": 2104.97,
+      "delta": -6.71,
+      "delta_pct": -0.32,
+      "data_checagem": "2026-09-10 00:35"
     }
   ]
 }
