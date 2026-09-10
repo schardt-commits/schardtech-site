@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Aviso de estoque | SchardTech</title>
+<title>Aviso de preço | SchardTech</title>
 
 <!-- Página do fluxo de aviso de re-estoque (09/09/2026).
      POR QUE ELA EXISTE, e não a Edge Function servindo HTML:
@@ -16,9 +16,15 @@
      Agora a Function só REDIRECIONA pra cá, e quem desenha é o site. De quebra
      a pessoa vê schardtech.com.br do começo ao fim, em vez de uma URL estranha.
 
+     Cobre os DOIS avisos, o de re-estoque e o de preço (10/09/2026).
+
      NÃO define form-action na CSP de propósito: é o que deixa o formulário
-     postar na Edge Function. connect-src continua 'self' porque esta página
-     não faz fetch nenhum. -->
+     postar na Edge Function. connect-src continua 'self', e é o que basta: o
+     único fetch desta página é o data/prices.json do PRÓPRIO site, que a tela
+     `jaabaixo` usa pra montar o link da loja. Nenhuma URL vem da query
+     string — só a chave "Marca|Modelo", que a Function já validou. Receber a
+     URL da loja por parâmetro transformaria esta página num redirect aberto
+     assinado pelo domínio do site. -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self'">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,16 +117,15 @@
       'Não chegou? Olha no spam. Se não estiver lá, o endereço pode ter sido digitado errado.'] },
 
     ativado: { tom: 'ok', h: 'Aviso ativado', p: [
-      'Quando o produto voltar ao estoque, você recebe um e-mail.',
-      'Não é instantâneo: a volta precisa se confirmar em rodadas seguidas de coleta, o que costuma levar até 24 horas. O pedido expira sozinho em 6 meses.'] },
+      'Assim que acontecer o que você pediu, seja a volta ao estoque ou o preço chegar no seu valor, você recebe um e-mail.',
+      'Não é instantâneo: precisa se confirmar em rodadas seguidas de coleta, o que costuma levar até 24 horas. O pedido expira sozinho em 6 meses.'] },
 
     cancelado: { h: 'Cancelado', p: [
       'Esse aviso foi removido. Você não recebe mais e-mail sobre ele.',
       'A prova de que você pediu o aviso fica guardada, embaralhada, porque a lei exige. Ela não serve pra mandar mensagem, e está explicada no item 9 da <a href="politica-privacidade.html">Política de Privacidade</a>.'] },
 
     rearmado: { tom: 'ok', h: 'Aviso reativado', p: [
-      'Se o produto esgotar e voltar de novo, você recebe outro e-mail.',
-      'Vale por mais 6 meses.'] },
+      'Da próxima vez que acontecer, você recebe outro e-mail. Vale por mais 6 meses.'] },
 
     jaativo: { h: 'Já está ativo', p: [
       'Você já tem um aviso vivo pra esse produto. Não precisa fazer nada.'] },
@@ -128,6 +133,15 @@
     jadisponivel: { h: 'Boa notícia: já voltou', p: [
       'Esse produto está com preço no site agora, então não faz sentido esperar aviso.',
       '<a href="precos.html">Ver os preços de hoje</a>'] },
+
+    // Alerta de PREÇO: o alvo digitado já é maior ou igual ao preço de hoje.
+    // O link da loja é resolvido depois, pelo prices.json (ver resolveLoja).
+    jaabaixo: { tom: 'ok', h: 'Já está nesse preço', p: [
+      'O preço de hoje já é esse valor ou menos, então não tem o que esperar.',
+      '<span id="jaabaixo-loja"><a href="precos.html">Ver os preços de hoje</a></span>'] },
+
+    alvoinvalido: { tom: 'erro', h: 'Esse valor não deu pra entender', p: [
+      'Volta na página do produto e digita de novo, tipo 1.100 ou 1.100,00.'] },
 
     naoelegivel: { h: 'Esse aqui a gente não consegue avisar', p: [
       'Ou o anúncio saiu do ar de vez, ou a nossa última leitura de preço falhou. Nos dois casos, prometer um aviso seria mentira.',
@@ -162,7 +176,7 @@
     var t = q.get('t');
     if (!t) return pinta(LINK_RUIM);
     return pinta(
-      { h: 'Confirmar o aviso de estoque', p: ['Clica no botão pra ativar. É o último passo.'] },
+      { h: 'Confirmar o aviso', p: ['Clica no botão pra ativar. É o último passo.'] },
       form('confirmar', 't', t, 'Confirmar'));
   }
 
@@ -178,12 +192,41 @@
     var r = q.get('c');
     if (!r) return pinta(LINK_RUIM);
     return pinta(
-      { h: 'Continuar acompanhando', p: ['Vamos te avisar de novo se esse produto esgotar e voltar outra vez.'] },
+      { h: 'Continuar acompanhando', p: ['Vamos te avisar de novo da próxima vez que acontecer: o produto voltar ao estoque, ou o preço chegar no valor que você pediu.'] },
       form('rearmar', 'c', r, 'Continuar me avisando'));
   }
 
   var tela = telas[s];
   if (!tela) return pinta(LINK_RUIM);
+
+  // A tela "já está nesse preço" fica mais útil com o link da loja, mas a URL
+  // NÃO pode vir por query string: seria um redirect aberto assinado pelo
+  // domínio do site. A Function manda só `p=Marca|Modelo`, chave que ela já
+  // validou contra o prices.json, e a página resolve o preço e o link lendo o
+  // MESMO data/prices.json — mesma origem, dentro do connect-src 'self'.
+  // Fetch falhou, produto sumiu, sem link: fica o "Ver os preços de hoje" que
+  // já está pintado. Isto é enfeite, nunca requisito.
+  function resolveLoja(chave) {
+    var alvoEl = document.getElementById('jaabaixo-loja');
+    if (!alvoEl || !chave || chave.indexOf('|') === -1) return;
+    fetch('data/prices.json', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) {
+        var lista = (j && j.produtos) || [];
+        for (var i = 0; i < lista.length; i++) {
+          var it = lista[i] || {};
+          if (String(it.marca).trim() + '|' + String(it.modelo).trim() !== chave) continue;
+          var mk = (it.marketplaces || {})[it.marketplace_vencedor] || {};
+          if (!mk.link || !it.preco_atual) return;
+          alvoEl.innerHTML = 'Está R$ ' +
+            Math.round(it.preco_atual).toLocaleString('pt-BR') + '. ' +
+            '<a href="' + esc(mk.link) + '" target="_blank" rel="noopener nofollow sponsored">' +
+            'Ver na loja</a>';
+          return;
+        }
+      })
+      .catch(function () { /* fica o link genérico */ });
+  }
 
   // Depois de confirmar, a Function manda junto o token de cancelamento, pra
   // pessoa ter como sair mesmo antes de receber o primeiro e-mail.
@@ -194,6 +237,7 @@
       'Esse link também vai no e-mail que você receber.</p>';
   }
   pinta(tela, extra);
+  if (s === 'jaabaixo') resolveLoja(q.get('p'));
 })();
 </script>
 </body>

@@ -1,0 +1,78 @@
+name: Disparar alertas (preço e re-estoque)
+
+# O GATILHO É O PUSH DA RODADA, não um cron.
+#
+# Assim o alerta nunca dispara sobre preço que não foi publicado: rodada travada
+# em [REVISAR] não gera commit no data/prices.json, logo não gera e-mail. De
+# quebra, herda de graça o cupons_bloqueados.json, o despike e o gate de
+# publicação, que já rodaram antes do push.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/prices.json'   # só a rodada de preços interessa
+  workflow_dispatch:         # e um botão pra rodar na mão quando precisar
+
+# Sem permissão nenhuma: este job não escreve no repo, só chama uma URL.
+permissions: {}
+
+# Duas rodadas não podem disparar em paralelo pelo mesmo produto. O
+# cancel-in-progress fica FALSE de propósito: cancelar uma execução no meio
+# deixaria alertas reservados sem e-mail enviado.
+concurrency:
+  group: alertas-estoque
+  cancel-in-progress: false
+
+jobs:
+  disparar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chamar a Edge Function
+        env:
+          URL: ${{ secrets.ALERTAS_DISPARO_URL }}
+          CHAVE: ${{ secrets.ALERTAS_DISPARO_CHAVE }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${URL:-}" ] || [ -z "${CHAVE:-}" ]; then
+            echo "::notice::Segredos ALERTAS_DISPARO_URL/CHAVE ausentes. Nada a fazer."
+            exit 0
+          fi
+
+          # Manda só o SHA. A Function lê o data/prices.json NESSE commit, via
+          # raw.githubusercontent, em vez do site publicado: o deploy do Pages é
+          # assíncrono e ainda poderia estar servindo a rodada anterior.
+          #
+          # --fail-with-body pra que erro 4xx/5xx quebre o job E mostre o motivo;
+          # sem ele o curl sai 0 e a falha passa despercebida.
+          #
+          # O --retry FICA, e isso é uma decisão, não descuido (10/09/2026).
+          # Ele reexecuta o /disparar em erro transiente, e o /disparar
+          # INCREMENTAVA o streak de novo a cada passe: uma rodada que foi 0->1
+          # virava 2 na reinvocação e disparava com UMA leitura só, que é o caso
+          # AC1053 entrando por outra porta. O conserto foi no outro lado — a
+          # Function guarda o SHA da rodada em produto_estado.ultima_rodada e em
+          # alertas.ultima_rodada_preco, e NÃO reconta o streak quando o estado
+          # já foi escrito por este mesmo SHA. Com esse guard o retry passou a
+          # ser só o que ele deveria ser: uma segunda chance na mesma rodada.
+          # O guard também cobre o que retry nenhum cobriria — o "Run workflow"
+          # apertado duas vezes e o "Re-run all jobs", que reenviam o MESMO
+          # GITHUB_SHA. Tirar o guard obriga a tirar o --retry junto.
+          curl --fail-with-body --silent --show-error \
+               --retry 3 --retry-delay 5 --retry-connrefused \
+               --max-time 120 \
+               -X POST "$URL" \
+               -H "content-type: application/json" \
+               -H "x-disparo-chave: $CHAVE" \
+               -d "{\"sha\":\"${GITHUB_SHA}\"}" \
+            | tee resposta.json
+
+          echo
+
+      # Falhou = ninguém foi avisado nesta rodada, e isso não pode passar em
+      # silêncio. Regra de ouro do projeto: heartbeat que não chega = quebrou.
+      - name: Avisar que falhou
+        if: failure()
+        run: |
+          echo "::error::Disparo de alertas falhou na rodada ${GITHUB_SHA}. \
+          Ninguém foi avisado. Ver os logs da Edge Function no painel do Supabase."
