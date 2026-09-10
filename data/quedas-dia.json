@@ -1,10 +1,20 @@
 {
   "data_coleta": "10/09",
-  "hora_coleta": "09:36",
+  "hora_coleta": "15:26",
   "data_ontem": "09/09",
   "data_hoje": "10/09",
   "total_quedas": 2,
   "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1616.77,
+      "preco_ontem": 1704.31,
+      "delta": -87.54,
+      "delta_pct": -5.14,
+      "data_checagem": "2026-09-10 15:26"
+    },
     {
       "marca": "Vevshao",
       "modelo": "V60",
@@ -13,17 +23,7 @@
       "preco_ontem": 2104.97,
       "delta": -6.71,
       "delta_pct": -0.32,
-      "data_checagem": "2026-09-10 09:36"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 261.46,
-      "preco_ontem": 261.78,
-      "delta": -0.32,
-      "delta_pct": -0.12,
-      "data_checagem": "2026-09-10 09:17"
+      "data_checagem": "2026-09-10 15:26"
     }
   ]
 }
