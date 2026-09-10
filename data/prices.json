@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "atualizado_em": "2026-09-10 15:26:23",
-    "total_produtos": 51,
+    "atualizado_em": "2026-09-10 20:18:39",
+    "total_produtos": 50,
     "fonte": "revisar.xlsx + precos.db (historico)",
     "obs": "Gerado por exportador.py a partir de revisar.xlsx + precos.db",
     "indisponiveis": [
@@ -64,6 +64,11 @@
         "marca": "Everycom",
         "modelo": "YG710W",
         "motivo": "sem_estoque_importado"
+      },
+      {
+        "marca": "Magcubic",
+        "modelo": "HY300",
+        "motivo": "sem_estoque_br"
       },
       {
         "marca": "Magcubic",
@@ -174,7 +179,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Bettdow",
@@ -196,7 +201,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Bettdow",
@@ -218,7 +223,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Bettdow",
@@ -240,7 +245,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Bettdow",
@@ -262,7 +267,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Bettdow",
@@ -284,7 +289,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Byintek",
@@ -319,7 +324,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Byintek",
@@ -354,7 +359,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Byintek",
@@ -389,7 +394,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Byintek",
@@ -424,7 +429,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Everycom",
@@ -453,7 +458,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "FlixTone",
@@ -482,7 +487,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "FlixTone",
@@ -511,7 +516,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Formovie",
@@ -540,7 +545,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Formovie",
@@ -569,7 +574,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Horlat",
@@ -598,7 +603,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Jenovox",
@@ -627,29 +632,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY300",
-      "preco_atual": 224.73,
-      "preco_min_historico": 190.4,
-      "preco_max_historico": 332.1,
-      "historico_desde": "2026-05-07",
-      "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-09-08 21:36",
-      "marketplaces": {
-        "shopee": {
-          "preco": 224.73,
-          "link": "https://s.shopee.com.br/7VDPj9pcQF",
-          "obs": null,
-          "data_checagem": "2026-09-08 21:36"
-        }
-      },
-      "frete_br": "sim",
-      "icms": "?",
-      "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Magcubic",
@@ -671,7 +654,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Magcubic",
@@ -693,7 +676,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Magcubic",
@@ -715,7 +698,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Magcubic",
@@ -737,7 +720,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Progaga",
@@ -766,7 +749,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Progaga",
@@ -795,7 +778,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Thundeal",
@@ -824,7 +807,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Thundeal",
@@ -853,7 +836,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Thundeal",
@@ -882,7 +865,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Touyinger",
@@ -911,7 +894,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Touyinger",
@@ -940,7 +923,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Touyinger",
@@ -969,17 +952,17 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Vevshao",
       "modelo": "A10",
-      "preco_atual": 360.09,
+      "preco_atual": 1009.58,
       "preco_min_historico": 360.09,
       "preco_max_historico": 1101.71,
       "historico_desde": "2026-05-07",
-      "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-09-07 21:36",
+      "marketplace_vencedor": "aliexpress",
+      "data_verificacao": "2026-09-10 15:12",
       "marketplaces": {
         "aliexpress": {
           "preco": 1009.58,
@@ -993,18 +976,12 @@
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
-        },
-        "shopee": {
-          "preco": 360.09,
-          "link": "https://s.shopee.com.br/7AaZKYPSzx",
-          "obs": null,
-          "data_checagem": "2026-09-07 21:36"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Vevshao",
@@ -1039,7 +1016,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Vevshao",
@@ -1074,7 +1051,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Voxflix",
@@ -1103,7 +1080,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Wanbo",
@@ -1130,7 +1107,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Wanbo",
@@ -1151,7 +1128,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Wanbo",
@@ -1178,7 +1155,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Wupro",
@@ -1207,7 +1184,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Everycom",
@@ -1229,7 +1206,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Vevshao",
@@ -1258,7 +1235,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Bettdow",
@@ -1280,7 +1257,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Byintek",
@@ -1315,7 +1292,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Progaga",
@@ -1344,7 +1321,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "FlixTone",
@@ -1373,7 +1350,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Thundeal",
@@ -1402,7 +1379,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Magcubic",
@@ -1429,7 +1406,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Bettdow",
@@ -1456,7 +1433,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Bettdow",
@@ -1478,7 +1455,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Magcubic",
@@ -1505,7 +1482,7 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "Progaga",
@@ -1534,7 +1511,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     },
     {
       "marca": "XGODY",
@@ -1569,7 +1546,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-09-10 15:26"
+      "ultima_atualizacao": "2026-09-10 20:18"
     }
   ]
 }
