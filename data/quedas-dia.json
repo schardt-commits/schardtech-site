@@ -1,10 +1,40 @@
 {
   "data_coleta": "11/09",
-  "hora_coleta": "00:35",
+  "hora_coleta": "09:35",
   "data_ontem": "10/09",
   "data_hoje": "11/09",
-  "total_quedas": 3,
+  "total_quedas": 6,
   "quedas": [
+    {
+      "marca": "Vevshao",
+      "modelo": "A10",
+      "slug": "vevshao-a10",
+      "preco_atual": 360.09,
+      "preco_ontem": 1009.58,
+      "delta": -649.49,
+      "delta_pct": -64.33,
+      "data_checagem": "2026-09-11 09:35"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 1013.08,
+      "preco_ontem": 1075.19,
+      "delta": -62.11,
+      "delta_pct": -5.78,
+      "data_checagem": "2026-09-11 09:35"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 795.14,
+      "preco_ontem": 836.99,
+      "delta": -41.85,
+      "delta_pct": -5.0,
+      "data_checagem": "2026-09-11 09:20"
+    },
     {
       "marca": "Bettdow",
       "modelo": "AC1066",
@@ -13,7 +43,7 @@
       "preco_ontem": 528.08,
       "delta": -20.14,
       "delta_pct": -3.81,
-      "data_checagem": "2026-09-11 00:35"
+      "data_checagem": "2026-09-11 09:35"
     },
     {
       "marca": "Vevshao",
@@ -23,17 +53,7 @@
       "preco_ontem": 2104.97,
       "delta": -6.71,
       "delta_pct": -0.32,
-      "data_checagem": "2026-09-11 00:35"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1061",
-      "slug": "bettdow-ac1061",
-      "preco_atual": 1684.52,
-      "preco_ontem": 1686.36,
-      "delta": -1.84,
-      "delta_pct": -0.11,
-      "data_checagem": "2026-09-11 00:35"
+      "data_checagem": "2026-09-11 09:35"
     }
   ]
 }
