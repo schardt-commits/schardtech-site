@@ -1,10 +1,20 @@
 {
   "data_coleta": "10/09",
-  "hora_coleta": "15:26",
+  "hora_coleta": "21:35",
   "data_ontem": "09/09",
   "data_hoje": "10/09",
   "total_quedas": 2,
   "quedas": [
+    {
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 630.99,
+      "preco_ontem": 710.38,
+      "delta": -79.39,
+      "delta_pct": -11.18,
+      "data_checagem": "2026-09-10 21:14"
+    },
     {
       "marca": "Byintek",
       "modelo": "U14 PRO",
@@ -13,17 +23,7 @@
       "preco_ontem": 1704.31,
       "delta": -87.54,
       "delta_pct": -5.14,
-      "data_checagem": "2026-09-10 15:26"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "V60",
-      "slug": "vevshao-v60",
-      "preco_atual": 2098.26,
-      "preco_ontem": 2104.97,
-      "delta": -6.71,
-      "delta_pct": -0.32,
-      "data_checagem": "2026-09-10 15:26"
+      "data_checagem": "2026-09-10 21:35"
     }
   ]
 }
