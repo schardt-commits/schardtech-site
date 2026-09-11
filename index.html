@@ -314,6 +314,17 @@
       var meta = window.PRICES_METADATA || {};
       var painel = document.getElementById('painel-vivo');
       if (!painel || !monitorados.length) return;
+      /* select do alerta: só quem tem preço vivo E página própria (mesma regra
+         da busca do header); o mergeOverlay já zera preco_atual de indisponível */
+      var comAlerta = monitorados.filter(function (p) { return p.slug && p.listar !== false; });
+      var porMarca = {};
+      comAlerta.forEach(function (p) { (porMarca[p.marca] = porMarca[p.marca] || []).push(p); });
+      var opcoes = Object.keys(porMarca).sort().map(function (marca) {
+        var lista = porMarca[marca].sort(function (a, b) { return String(a.modelo).localeCompare(String(b.modelo)); });
+        return '<optgroup label="' + U.esc(marca) + '">' + lista.map(function (p) {
+          return '<option value="' + U.esc(p.slug) + '">' + U.esc(p.modelo) + ' &middot; ' + U.fmtBRL(p.preco_atual) + '</option>';
+        }).join('') + '</optgroup>';
+      }).join('');
       painel.innerHTML =
         '<div class="painel-topo"><span class="p-titulo">Monitor de preços</span><span class="p-live">ao vivo</span></div>' +
         '<div class="painel-grid">' +
@@ -322,8 +333,64 @@
         '<div class="painel-cel"><span class="p-num verde" data-alvo="' + nQuedas + '">0</span><span class="p-label">quedas nas últimas 24h</span></div>' +
         '<div class="painel-cel"><span class="p-num ciano" data-alvo="4" data-sufixo="x">0</span><span class="p-label">verificações por dia</span></div>' +
         '</div>' +
+        (comAlerta.length ?
+        '<div class="painel-alerta" id="painel-alerta">' +
+        '<div class="pa-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>Alerta de preço <span class="pa-novo" id="pa-novo" hidden>Novo</span></div>' +
+        '<p class="pa-texto">Escolha um projetor e um valor. Se chegar a esse preço ou menos, você recebe um e-mail. Preços conferidos <span class="mono">4x</span> ao dia.</p>' +
+        '<div class="pa-linha">' +
+        '<select class="sel" id="pa-sel" aria-label="Projetor pra receber o alerta de preço"><option value="">Escolha o projetor</option>' + opcoes + '</select>' +
+        '<button type="button" class="pa-btn" id="pa-btn">Me avisa</button>' +
+        '</div></div>' : '') +
         '<div class="painel-foot">última rodada ' + U.esc(U.fmtData(meta.atualizado_em || '')) + ' &middot; <a href="precos.html">ver a tabela completa</a></div>';
       U.animaContadores(painel);
+
+      /* alerta de preço: o botão ganha o MESMO palpite que o form da página
+         preenche (regra mora no prices-overlay, window.PRICES_ALERTA). Clique
+         sem escolha só abre o select; com escolha vai pra página com #alerta,
+         onde o ui-interacoes abre o form (computador) ou destaca o botão (celular). */
+      var sel = document.getElementById('pa-sel');
+      var paBtn = document.getElementById('pa-btn');
+      if (sel && paBtn) {
+        var PA = window.PRICES_ALERTA;
+        var escolhido = function () {
+          var s = sel.value;
+          return s ? comAlerta.filter(function (p) { return p.slug === s; })[0] : null;
+        };
+        var ga = function (nome, params) {
+          try { if (typeof gtag === 'function') gtag('event', nome, params); } catch (e) { /* nunca quebra */ }
+        };
+        sel.addEventListener('change', function () {
+          var p = escolhido();
+          var alvo = p && PA ? PA.alvoPadraoCentavos(p.preco_atual) : null;
+          if (alvo) {
+            paBtn.textContent = 'Me avisa se chegar a ';
+            var v = document.createElement('span');
+            v.className = 'mono';
+            v.textContent = 'R$ ' + PA.precoBrCentavosAlerta(alvo).replace(/,00$/, '');
+            paBtn.appendChild(v);
+          } else {
+            paBtn.textContent = 'Me avisa';
+          }
+          if (p) ga('anuncio_alerta_escolher', { source: 'painel_vivo', product_slug: p.slug });
+        });
+        paBtn.addEventListener('click', function () {
+          var p = escolhido();
+          if (!p) {
+            sel.focus();
+            try { if (sel.showPicker) sel.showPicker(); } catch (e) { /* sem gesto válido: só o foco */ }
+            return;
+          }
+          ga('anuncio_alerta_click', { source: 'painel_vivo', novidade_id: 'alerta-preco', product_slug: p.slug, destino: 'form', transport_type: 'beacon' });
+          location.href = 'projetor/' + p.slug + '.html#alerta';
+        });
+        if (U.getNovidades) {
+          U.getNovidades().then(function (itens) {
+            var n = itens.filter(function (x) { return x.id === 'alerta-preco'; })[0];
+            var tag = document.getElementById('pa-novo');
+            if (tag && U.novidadeAtiva(n)) { tag.textContent = n.tag || 'Novo'; tag.hidden = false; }
+          });
+        }
+      }
     });
 
     pronto.then(function () {

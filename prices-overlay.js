@@ -520,7 +520,10 @@
         // pro Google. A métrica D da Fase 4 (alvo ÷ preço na inscrição) lê
         // alertas.preco_alvo_centavos no banco, então o campo aqui não servia
         // pra nada e só criava dever de declaração no item 2.1 da política.
-        gtag('event', 'alerta_preco_enviar', { product_slug: slug });
+        // origem: 'direto' ou o que o ui-interacoes carimbou ao trazer a pessoa
+        // do anúncio (hash/rodapé). Sem isso o click() sintético da chegada
+        // inflaria o histórico de alerta_preco_abrir da régua da Fase 4.
+        gtag('event', 'alerta_preco_enviar', { product_slug: slug, origem: window.ALERTA_ORIGEM || 'direto' });
       }
     });
 
@@ -530,7 +533,7 @@
       btn.hidden = true;
       alvo.focus();
       if (typeof gtag === 'function') {
-        gtag('event', 'alerta_preco_abrir', { product_slug: slug });
+        gtag('event', 'alerta_preco_abrir', { product_slug: slug, origem: window.ALERTA_ORIGEM || 'direto' });
       }
     });
 
@@ -1149,5 +1152,8 @@
 
   // Exporto basePath pra outros scripts (busca global usa pra montar URLs)
   window.SITE_BASE_PATH = basePath();
+  // O painel da home mostra "Me avisa se chegar a R$ X" com o MESMO palpite que
+  // o form da página preenche; a regra mora aqui e só aqui (nunca portar).
+  window.PRICES_ALERTA = { alvoPadraoCentavos: alvoPadraoCentavos, precoBrCentavosAlerta: precoBrCentavosAlerta };
   window.PRICES_OVERLAY_READY = applyOverlay();
 })();

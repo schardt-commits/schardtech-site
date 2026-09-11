@@ -14,11 +14,15 @@
        já fundido com preços (espera PRICES_OVERLAY_READY); atalhos "/" e Ctrl+K
      - observer de .reveal (cascata + preenche .seg-fill/.r-fill/.r-dot/.badge-hist)
      - copiar cupom (delegado, .cupom-chip[data-cod]) + evento GA4 copy_coupon
+     - novidades do site (data/novidades.json): linha "Novidades" no
+       footer .foot-bottom, etiqueta "novo" no botão de alerta de preço e a
+       chegada por #alerta em /projetor/ (11/09/2026)
 
    O que expõe pras páginas (window.UI2) — fonte única dos helpers que o
    raio-X 13/07 achou duplicados (norm/fmtBRL/esc/nomeLoja/ytId):
      norm, esc, fmtBRL, fmtData, chaveNome, nomeLoja, ytId,
      emMenorHistorico, posRegua, cupomVivo, hojeIso,
+     getNovidades, novidadeAtiva, aterrissarAlerta,
      ligaAgora(el), observaReveals(raiz), animaContadores(raiz),
      MOTION_OK, basePath.
 
@@ -34,9 +38,11 @@
   'use strict';
 
   var MOTION_OK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var bp = typeof window.SITE_BASE_PATH === 'string'
-    ? window.SITE_BASE_PATH
-    : (/\/(projetor|marca|acessorios)\//i.test(location.pathname) ? '../' : '');
+  /* Regex própria, sem herdar window.SITE_BASE_PATH: o basePath() do overlay
+     não conhece /acessorios/ e devolve '' lá, o que mandava a barra de quedas
+     (e agora as novidades) buscar acessorios/data/*.json = 404 silencioso nas
+     23 páginas de acessório. Achado da revisão de 11/09/2026. */
+  var bp = /\/(projetor|marca|acessorios)\//i.test(location.pathname) ? '../' : '';
 
   /* ---------- helpers (fonte única) ---------- */
   function norm(s) {
@@ -297,12 +303,191 @@
     });
   }
 
+  /* ---------- novidades do site (data/novidades.json, editado no PC) ----------
+     Uma fonte, três saídas: a linha "Novidades" no .foot-bottom de toda página,
+     a etiqueta "novo" no botão de alerta de preço (/projetor/ com preço) e a tag
+     "Novo" do painel da home (o inline do index.html lê UI2.getNovidades).
+     Arquivo ausente, 404 ou quebrado = site idêntico ao de antes. A copy passa
+     pelo test_novidades_json.py antes do push. Cache padrão do GH Pages
+     (max-age 600): novidade nova leva até 10 min pra aparecer, aceitável. */
+  var _novidades = null;
+  function getNovidades() {
+    if (!_novidades) {
+      _novidades = fetch(bp + 'data/novidades.json')
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (j) {
+          var itens = j && Array.isArray(j.itens) ? j.itens : [];
+          return itens
+            .filter(function (n) { return n && n.id && n.titulo && n.data; })
+            .sort(function (a, b) { return a.data < b.data ? 1 : (a.data > b.data ? -1 : 0); });
+        })
+        .catch(function () { return []; });
+    }
+    return _novidades;
+  }
+  /* destaque vivo = data <= hoje <= ate (strings ISO, sem Date/UTC) */
+  function novidadeAtiva(n) {
+    if (!n || !n.destaque || !n.ate) return false;
+    var hj = hojeIso();
+    return n.data <= hj && hj <= n.ate;
+  }
+  function slugDaPagina() {
+    return (String(location.pathname).match(/\/projetor\/([^\/]+)\.html/i) || [])[1] || '';
+  }
+  function ga(nome, params) {
+    try {
+      if (typeof gtag === 'function') gtag('event', nome, params);
+    } catch (e) { /* tracking nunca quebra a navegação */ }
+  }
+  function overlayPronto() {
+    return window.PRICES_OVERLAY_READY && typeof window.PRICES_OVERLAY_READY.then === 'function'
+      ? window.PRICES_OVERLAY_READY : Promise.resolve();
+  }
+  /* querySelector que não lança: o seletor vem do JSON (dado, não código), e um
+     seletor inválido derrubaria o .then inteiro, inclusive o que vem depois. */
+  function q(sel) {
+    if (!sel || typeof sel !== 'string') return null;
+    try { return document.querySelector(sel); } catch (e) { return null; }
+  }
+  /* chama cb quando o seletor existir (agora, ou quando aparecer no DOM). Usado
+     pro texto "criar aqui" do rodapé na home, onde o painel é pintado depois
+     de prices.json + quedas-dia.json e a ordem com novidades.json é corrida. */
+  function quandoExistir(sel, cb) {
+    if (q(sel)) { cb(); return; }
+    if (!('MutationObserver' in window)) return;
+    var mo = new MutationObserver(function () {
+      if (q(sel)) { mo.disconnect(); cb(); }
+    });
+    mo.observe(document.body, { childList: true, subtree: true });
+    setTimeout(function () { mo.disconnect(); }, 20000);
+  }
+
+  /* Chegada no botão de alerta de preço (vindo da home por #alerta ou do link
+     do rodapé na própria página). Tudo é decidido NA HORA, nunca no init: o
+     botão só existe depois do prices.json. O escopo .alerta-preco é obrigatório
+     porque o botão de ESTOQUE das páginas esgotadas também é .ae-abrir.
+     - O halo vai no WRAPPER, não no botão: o handler do overlay esconde o botão
+       no clique (btn.hidden = true) e o halo sumiria junto.
+     - Só clica no computador (pointer fino). No celular o handler do overlay
+       foca o campo sem guarda e o teclado sobe antes de a pessoa ler; ali só
+       destaca, e o toque dela abre.
+     - Guard de reentrância: form já aberto = só rola e destaca, sem segundo
+       alerta_preco_abrir. */
+  function aterrissarAlerta(source) {
+    var wrap = document.querySelector('.proj-price-card .alerta-preco');
+    var btn = wrap && wrap.querySelector('.ae-abrir');
+    if (!wrap || !btn) return false;
+    window.ALERTA_ORIGEM = source;   // o overlay carimba origem nos eventos dele
+    var jaAberto = btn.hidden || btn.getAttribute('aria-expanded') === 'true';
+    var fino = !window.matchMedia('(pointer: coarse)').matches;
+    var abriu = false;
+    if (!jaAberto && fino) { btn.click(); abriu = true; }
+    var foco = (jaAberto || abriu) ? (wrap.querySelector('.ae-form') || wrap) : wrap;
+    foco.scrollIntoView({ block: 'center' });
+    wrap.classList.add('ap-destaque');
+    setTimeout(function () { wrap.classList.remove('ap-destaque'); }, 1600);
+    ga('anuncio_alerta_aterrissar', { source: source, product_slug: slugDaPagina(), abriu: abriu });
+    return true;
+  }
+  /* elemento local de uma novidade: dentro do bloco de alerta usa a chegada
+     completa; fora dele (ex.: o select do painel da home) só rola e foca */
+  function irAte(el, source) {
+    if (el.closest && el.closest('.alerta-preco')) return aterrissarAlerta(source);
+    el.scrollIntoView({ block: 'center' });
+    try { el.focus({ preventScroll: true }); } catch (e) { /* elemento sem foco */ }
+    return true;
+  }
+
+  function initNovidadesRodape(itens) {
+    var alvo = document.querySelector('footer .foot-bottom');
+    if (!alvo || !itens.length || document.querySelector('.foot-novidades')) return;
+    var p = document.createElement('p');
+    p.className = 'foot-novidades';   // sem .reveal: o observer já rodou no init
+    var rot = document.createElement('span');
+    rot.className = 'fn-label';
+    rot.textContent = 'Novidades';
+    p.appendChild(rot);
+    itens.slice(0, 3).forEach(function (n, i) {
+      if (i) {
+        var sep = document.createElement('span');
+        sep.className = 'fn-sep';
+        sep.setAttribute('aria-hidden', 'true');
+        sep.textContent = '·';
+        p.appendChild(sep);
+      }
+      var a = document.createElement('a');
+      a.href = bp + String(n.link || '');
+      a.setAttribute('data-novidade', n.id);
+      var data = document.createElement('span');
+      data.className = 'fn-data';
+      data.textContent = fmtData(n.data);
+      var txt = document.createTextNode(n.titulo);
+      a.appendChild(data);
+      a.appendChild(txt);
+      if (novidadeAtiva(n)) {
+        var tag = document.createElement('span');
+        tag.className = 'fn-novo';
+        tag.textContent = n.tag || 'Novo';
+        a.appendChild(tag);
+      }
+      a.appendChild(document.createTextNode(' →'));
+      // O texto "criar nesta página" só depois do overlay: é ele que injeta o botão.
+      if (n.local_seletor && n.link_local_txt) {
+        overlayPronto().then(function () {
+          if (q(n.local_seletor)) txt.textContent = n.link_local_txt;
+        });
+      }
+      // só na home: fora dela o seletor nunca aparece e o observer vigiaria à toa
+      if (n.home_seletor && n.home_txt && /\/(index\.html)?$/.test(location.pathname)) {
+        quandoExistir(n.home_seletor, function () { txt.textContent = n.home_txt; });
+      }
+      a.addEventListener('click', function (ev) {
+        var destino = 'link';
+        var local = q(n.local_seletor);
+        var home = !local ? q(n.home_seletor) : null;
+        if (local) { ev.preventDefault(); destino = 'form'; irAte(local, 'rodape_local'); }
+        else if (home) { ev.preventDefault(); destino = 'painel'; irAte(home, 'rodape_home'); }
+        ga('anuncio_alerta_click', {
+          source: 'rodape', novidade_id: n.id, product_slug: slugDaPagina(),
+          destino: destino, transport_type: 'beacon'
+        });
+      });
+      p.appendChild(a);
+    });
+    alvo.insertBefore(p, alvo.firstChild);
+  }
+
+  /* etiqueta "novo" no botão de PREÇO enquanto o item estiver ativo */
+  function initNovidadesAlerta(itens) {
+    var n = itens.filter(function (x) { return x.id === 'alerta-preco'; })[0];
+    if (!novidadeAtiva(n)) return;
+    overlayPronto().then(function () {
+      var btn = document.querySelector('.proj-price-card .alerta-preco .ae-abrir');
+      if (btn) btn.classList.add('ae-novo');
+    });
+  }
+  /* chegada por #alerta: NÃO depende do novidades.json (sem JSON o link da
+     home continua funcionando; só a etiqueta some) */
+  function initChegadaAlerta() {
+    if (location.hash !== '#alerta') return;
+    overlayPronto().then(function () { aterrissarAlerta('hash'); });
+  }
+
+  function initNovidades() {
+    initChegadaAlerta();
+    getNovidades().then(function (itens) {
+      initNovidadesRodape(itens);
+      initNovidadesAlerta(itens);
+    });
+  }
+
   /* ---------- init ---------- */
   function init() {
     initBarraQuedas();
     initMenuMobile();
     initBusca();
     initCupons();
+    initNovidades();
     observaReveals(document);
   }
   if (document.readyState === 'loading') {
@@ -316,6 +501,7 @@
     chaveNome: chaveNome, nomeLoja: nomeLoja, ytId: ytId,
     emMenorHistorico: emMenorHistorico, posRegua: posRegua,
     cupomVivo: cupomVivo, hojeIso: hojeIso, getQuedas: getQuedas,
+    getNovidades: getNovidades, novidadeAtiva: novidadeAtiva, aterrissarAlerta: aterrissarAlerta,
     ligaAgora: ligaAgora, observaReveals: observaReveals, animaContadores: animaContadores,
     MOTION_OK: MOTION_OK, basePath: bp
   };

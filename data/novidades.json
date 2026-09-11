@@ -1,0 +1,26 @@
+{
+  "_obs": "Novidades do site. Editado no PC e commitado; a VM nunca escreve aqui. Só entra o que a pessoa passa a poder FAZER no site: projetor novo não entra (tem hub e barra de quedas), rodada de preço não entra. No máximo 1 item com destaque ativo por vez; `ate` é obrigatório em item com destaque e fica no máximo 21 dias depois de `data`. Copy sem travessão, sem emoji, sem palavra proibida (ver test_novidades_json.py). Nunca prometer prazo de aviso: o disparo confirma em rodadas seguidas, até 24h. Rodar `python test_novidades_json.py` antes do push. Campos: id (kebab-case, vai pro GA4), data (ISO), ate (ISO, opcional sem destaque), tag, titulo, texto (opcional), link (relativo à raiz do site), link_local_txt + local_seletor (texto e elemento quando a novidade existe na página atual), home_txt + home_seletor (idem na home), destaque (liga a tag Novo enquanto data <= hoje <= ate).",
+  "itens": [
+    {
+      "id": "alerta-preco",
+      "data": "2026-09-10",
+      "ate": "2026-10-01",
+      "tag": "Novo",
+      "titulo": "Alerta de preço por e-mail",
+      "texto": "Escolha um projetor e um valor. Se chegar a esse preço ou menos, você recebe um e-mail. Preços conferidos 4x ao dia.",
+      "link": "projetores.html",
+      "link_local_txt": "Alerta de preço por e-mail: criar nesta página",
+      "local_seletor": ".alerta-preco .ae-abrir",
+      "home_txt": "Alerta de preço por e-mail: criar aqui",
+      "home_seletor": "#pa-sel",
+      "destaque": true
+    },
+    {
+      "id": "site-v2",
+      "data": "2026-07-14",
+      "titulo": "Site novo, com preços ao vivo",
+      "link": "precos.html",
+      "destaque": false
+    }
+  ]
+}
