@@ -1,39 +1,49 @@
 {
   "data_coleta": "11/09",
-  "hora_coleta": "09:35",
+  "hora_coleta": "15:25",
   "data_ontem": "10/09",
   "data_hoje": "11/09",
-  "total_quedas": 6,
+  "total_quedas": 38,
   "quedas": [
     {
       "marca": "Vevshao",
       "modelo": "A10",
       "slug": "vevshao-a10",
-      "preco_atual": 360.09,
+      "preco_atual": 356.49,
       "preco_ontem": 1009.58,
-      "delta": -649.49,
-      "delta_pct": -64.33,
-      "data_checagem": "2026-09-11 09:35"
+      "delta": -653.09,
+      "delta_pct": -64.69,
+      "data_checagem": "2026-09-11 15:25"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "Q13W",
+      "slug": "touyinger-q13w",
+      "preco_atual": 2294.9,
+      "preco_ontem": 2565.44,
+      "delta": -270.54,
+      "delta_pct": -10.55,
+      "data_checagem": "2026-09-11 15:11"
     },
     {
       "marca": "Vevshao",
       "modelo": "A22",
       "slug": "vevshao-a22",
-      "preco_atual": 1013.08,
+      "preco_atual": 1001.97,
       "preco_ontem": 1075.19,
-      "delta": -62.11,
-      "delta_pct": -5.78,
-      "data_checagem": "2026-09-11 09:35"
+      "delta": -73.22,
+      "delta_pct": -6.81,
+      "data_checagem": "2026-09-11 15:25"
     },
     {
       "marca": "Touyinger",
       "modelo": "ET32",
       "slug": "touyinger-et32",
-      "preco_atual": 795.14,
+      "preco_atual": 787.36,
       "preco_ontem": 836.99,
-      "delta": -41.85,
-      "delta_pct": -5.0,
-      "data_checagem": "2026-09-11 09:20"
+      "delta": -49.63,
+      "delta_pct": -5.93,
+      "data_checagem": "2026-09-11 15:10"
     },
     {
       "marca": "Bettdow",
@@ -43,17 +53,7 @@
       "preco_ontem": 528.08,
       "delta": -20.14,
       "delta_pct": -3.81,
-      "data_checagem": "2026-09-11 09:35"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "V60",
-      "slug": "vevshao-v60",
-      "preco_atual": 2098.26,
-      "preco_ontem": 2104.97,
-      "delta": -6.71,
-      "delta_pct": -0.32,
-      "data_checagem": "2026-09-11 09:35"
+      "data_checagem": "2026-09-11 15:25"
     }
   ]
 }
