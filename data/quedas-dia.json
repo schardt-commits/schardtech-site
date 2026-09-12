@@ -1,6 +1,6 @@
 {
   "data_coleta": "11/09",
-  "hora_coleta": "15:25",
+  "hora_coleta": "21:35",
   "data_ontem": "10/09",
   "data_hoje": "11/09",
   "total_quedas": 38,
@@ -9,11 +9,31 @@
       "marca": "Vevshao",
       "modelo": "A10",
       "slug": "vevshao-a10",
-      "preco_atual": 356.49,
+      "preco_atual": 360.09,
       "preco_ontem": 1009.58,
-      "delta": -653.09,
-      "delta_pct": -64.69,
-      "data_checagem": "2026-09-11 15:25"
+      "delta": -649.49,
+      "delta_pct": -64.33,
+      "data_checagem": "2026-09-11 21:35"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1041",
+      "slug": "bettdow-ac1041",
+      "preco_atual": 726.0,
+      "preco_ontem": 819.0,
+      "delta": -93.0,
+      "delta_pct": -11.36,
+      "data_checagem": "2026-09-11 21:35"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 746.77,
+      "preco_ontem": 836.99,
+      "delta": -90.22,
+      "delta_pct": -10.78,
+      "data_checagem": "2026-09-11 21:20"
     },
     {
       "marca": "Touyinger",
@@ -23,7 +43,7 @@
       "preco_ontem": 2565.44,
       "delta": -270.54,
       "delta_pct": -10.55,
-      "data_checagem": "2026-09-11 15:11"
+      "data_checagem": "2026-09-11 21:21"
     },
     {
       "marca": "Vevshao",
@@ -33,27 +53,7 @@
       "preco_ontem": 1075.19,
       "delta": -73.22,
       "delta_pct": -6.81,
-      "data_checagem": "2026-09-11 15:25"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 787.36,
-      "preco_ontem": 836.99,
-      "delta": -49.63,
-      "delta_pct": -5.93,
-      "data_checagem": "2026-09-11 15:10"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1066",
-      "slug": "bettdow-ac1066",
-      "preco_atual": 507.94,
-      "preco_ontem": 528.08,
-      "delta": -20.14,
-      "delta_pct": -3.81,
-      "data_checagem": "2026-09-11 15:25"
+      "data_checagem": "2026-09-11 21:35"
     }
   ]
 }
