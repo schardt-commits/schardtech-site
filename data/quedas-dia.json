@@ -1,49 +1,29 @@
 {
   "data_coleta": "12/09",
-  "hora_coleta": "09:35",
+  "hora_coleta": "15:27",
   "data_ontem": "11/09",
   "data_hoje": "12/09",
-  "total_quedas": 7,
+  "total_quedas": 15,
   "quedas": [
     {
       "marca": "Wanbo",
       "modelo": "X5 Pro",
       "slug": "wanbo-x5-pro",
-      "preco_atual": 2197.88,
+      "preco_atual": 2174.88,
       "preco_ontem": 2499.0,
-      "delta": -301.12,
-      "delta_pct": -12.05,
-      "data_checagem": "2026-09-12 09:35"
+      "delta": -324.12,
+      "delta_pct": -12.97,
+      "data_checagem": "2026-09-12 15:27"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 529.65,
-      "preco_ontem": 593.37,
-      "delta": -63.72,
-      "delta_pct": -10.74,
-      "data_checagem": "2026-09-12 09:19"
-    },
-    {
-      "marca": "Horlat",
-      "modelo": "T9N",
-      "slug": "horlat-t9n",
-      "preco_atual": 880.09,
-      "preco_ontem": 977.63,
-      "delta": -97.54,
-      "delta_pct": -9.98,
-      "data_checagem": "2026-09-12 09:17"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D9W Mini",
-      "slug": "flixtone-d9w-mini",
-      "preco_atual": 1291.35,
-      "preco_ontem": 1428.67,
-      "delta": -137.32,
-      "delta_pct": -9.61,
-      "data_checagem": "2026-09-12 09:15"
+      "marca": "Magcubic",
+      "modelo": "X7",
+      "slug": "magcubic-x7",
+      "preco_atual": 873.08,
+      "preco_ontem": 994.48,
+      "delta": -121.4,
+      "delta_pct": -12.21,
+      "data_checagem": "2026-09-12 15:27"
     },
     {
       "marca": "Byintek",
@@ -53,7 +33,27 @@
       "preco_ontem": 1134.42,
       "delta": -89.68,
       "delta_pct": -7.91,
-      "data_checagem": "2026-09-12 09:35"
+      "data_checagem": "2026-09-12 15:27"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "L9W Ultra",
+      "slug": "touyinger-l9w-ultra",
+      "preco_atual": 785.01,
+      "preco_ontem": 813.85,
+      "delta": -28.84,
+      "delta_pct": -3.54,
+      "data_checagem": "2026-09-12 15:13"
+    },
+    {
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 977.06,
+      "preco_ontem": 977.63,
+      "delta": -0.57,
+      "delta_pct": -0.06,
+      "data_checagem": "2026-09-12 15:08"
     }
   ]
 }
