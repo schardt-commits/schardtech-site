@@ -1,59 +1,59 @@
 {
-  "data_coleta": "11/09",
-  "hora_coleta": "21:35",
-  "data_ontem": "10/09",
-  "data_hoje": "11/09",
-  "total_quedas": 38,
+  "data_coleta": "12/09",
+  "hora_coleta": "00:37",
+  "data_ontem": "11/09",
+  "data_hoje": "12/09",
+  "total_quedas": 8,
   "quedas": [
     {
-      "marca": "Vevshao",
-      "modelo": "A10",
-      "slug": "vevshao-a10",
-      "preco_atual": 360.09,
-      "preco_ontem": 1009.58,
-      "delta": -649.49,
-      "delta_pct": -64.33,
-      "data_checagem": "2026-09-11 21:35"
+      "marca": "Wanbo",
+      "modelo": "X5 Pro",
+      "slug": "wanbo-x5-pro",
+      "preco_atual": 2197.88,
+      "preco_ontem": 2499.0,
+      "delta": -301.12,
+      "delta_pct": -12.05,
+      "data_checagem": "2026-09-12 00:37"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1041",
-      "slug": "bettdow-ac1041",
-      "preco_atual": 726.0,
-      "preco_ontem": 819.0,
-      "delta": -93.0,
-      "delta_pct": -11.36,
-      "data_checagem": "2026-09-11 21:35"
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 529.65,
+      "preco_ontem": 593.37,
+      "delta": -63.72,
+      "delta_pct": -10.74,
+      "data_checagem": "2026-09-12 00:20"
     },
     {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 746.77,
-      "preco_ontem": 836.99,
-      "delta": -90.22,
-      "delta_pct": -10.78,
-      "data_checagem": "2026-09-11 21:20"
+      "marca": "XGODY",
+      "modelo": "Gimbal 7",
+      "slug": "xgody-gimbal-7",
+      "preco_atual": 593.72,
+      "preco_ontem": 660.42,
+      "delta": -66.7,
+      "delta_pct": -10.1,
+      "data_checagem": "2026-09-12 00:37"
     },
     {
-      "marca": "Touyinger",
-      "modelo": "Q13W",
-      "slug": "touyinger-q13w",
-      "preco_atual": 2294.9,
-      "preco_ontem": 2565.44,
-      "delta": -270.54,
-      "delta_pct": -10.55,
-      "data_checagem": "2026-09-11 21:21"
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 880.09,
+      "preco_ontem": 977.63,
+      "delta": -97.54,
+      "delta_pct": -9.98,
+      "data_checagem": "2026-09-12 00:18"
     },
     {
-      "marca": "Vevshao",
-      "modelo": "A22",
-      "slug": "vevshao-a22",
-      "preco_atual": 1001.97,
-      "preco_ontem": 1075.19,
-      "delta": -73.22,
-      "delta_pct": -6.81,
-      "data_checagem": "2026-09-11 21:35"
+      "marca": "FlixTone",
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 1291.35,
+      "preco_ontem": 1428.67,
+      "delta": -137.32,
+      "delta_pct": -9.61,
+      "data_checagem": "2026-09-12 00:17"
     }
   ]
 }
