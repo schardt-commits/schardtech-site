@@ -1,9 +1,9 @@
 {
   "data_coleta": "12/09",
-  "hora_coleta": "00:37",
+  "hora_coleta": "09:35",
   "data_ontem": "11/09",
   "data_hoje": "12/09",
-  "total_quedas": 8,
+  "total_quedas": 7,
   "quedas": [
     {
       "marca": "Wanbo",
@@ -13,7 +13,7 @@
       "preco_ontem": 2499.0,
       "delta": -301.12,
       "delta_pct": -12.05,
-      "data_checagem": "2026-09-12 00:37"
+      "data_checagem": "2026-09-12 09:35"
     },
     {
       "marca": "Thundeal",
@@ -23,17 +23,7 @@
       "preco_ontem": 593.37,
       "delta": -63.72,
       "delta_pct": -10.74,
-      "data_checagem": "2026-09-12 00:20"
-    },
-    {
-      "marca": "XGODY",
-      "modelo": "Gimbal 7",
-      "slug": "xgody-gimbal-7",
-      "preco_atual": 593.72,
-      "preco_ontem": 660.42,
-      "delta": -66.7,
-      "delta_pct": -10.1,
-      "data_checagem": "2026-09-12 00:37"
+      "data_checagem": "2026-09-12 09:19"
     },
     {
       "marca": "Horlat",
@@ -43,7 +33,7 @@
       "preco_ontem": 977.63,
       "delta": -97.54,
       "delta_pct": -9.98,
-      "data_checagem": "2026-09-12 00:18"
+      "data_checagem": "2026-09-12 09:17"
     },
     {
       "marca": "FlixTone",
@@ -53,7 +43,17 @@
       "preco_ontem": 1428.67,
       "delta": -137.32,
       "delta_pct": -9.61,
-      "data_checagem": "2026-09-12 00:17"
+      "data_checagem": "2026-09-12 09:15"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 1044.74,
+      "preco_ontem": 1134.42,
+      "delta": -89.68,
+      "delta_pct": -7.91,
+      "data_checagem": "2026-09-12 09:35"
     }
   ]
 }
