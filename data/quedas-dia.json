@@ -1,9 +1,9 @@
 {
   "data_coleta": "12/09",
-  "hora_coleta": "15:27",
+  "hora_coleta": "21:35",
   "data_ontem": "11/09",
   "data_hoje": "12/09",
-  "total_quedas": 15,
+  "total_quedas": 16,
   "quedas": [
     {
       "marca": "Wanbo",
@@ -13,7 +13,7 @@
       "preco_ontem": 2499.0,
       "delta": -324.12,
       "delta_pct": -12.97,
-      "data_checagem": "2026-09-12 15:27"
+      "data_checagem": "2026-09-12 21:35"
     },
     {
       "marca": "Magcubic",
@@ -23,37 +23,37 @@
       "preco_ontem": 994.48,
       "delta": -121.4,
       "delta_pct": -12.21,
-      "data_checagem": "2026-09-12 15:27"
+      "data_checagem": "2026-09-12 21:35"
     },
     {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 1044.74,
-      "preco_ontem": 1134.42,
-      "delta": -89.68,
-      "delta_pct": -7.91,
-      "data_checagem": "2026-09-12 15:27"
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 529.44,
+      "preco_ontem": 593.37,
+      "delta": -63.93,
+      "delta_pct": -10.77,
+      "data_checagem": "2026-09-12 21:18"
     },
     {
-      "marca": "Touyinger",
-      "modelo": "L9W Ultra",
-      "slug": "touyinger-l9w-ultra",
-      "preco_atual": 785.01,
-      "preco_ontem": 813.85,
-      "delta": -28.84,
-      "delta_pct": -3.54,
-      "data_checagem": "2026-09-12 15:13"
+      "marca": "FlixTone",
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 1291.04,
+      "preco_ontem": 1428.67,
+      "delta": -137.63,
+      "delta_pct": -9.63,
+      "data_checagem": "2026-09-12 21:14"
     },
     {
-      "marca": "Horlat",
-      "modelo": "T9N",
-      "slug": "horlat-t9n",
-      "preco_atual": 977.06,
-      "preco_ontem": 977.63,
-      "delta": -0.57,
-      "delta_pct": -0.06,
-      "data_checagem": "2026-09-12 15:08"
+      "marca": "Progaga",
+      "modelo": "PG610W",
+      "slug": "progaga-pg610w",
+      "preco_atual": 932.45,
+      "preco_ontem": 1027.42,
+      "delta": -94.97,
+      "delta_pct": -9.24,
+      "data_checagem": "2026-09-12 21:17"
     }
   ]
 }
