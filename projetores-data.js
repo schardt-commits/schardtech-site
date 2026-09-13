@@ -1323,7 +1323,7 @@ window.PROJETORES_DATA = [
     "ali_cupom_loja": "",
     "ali_cupom_promo": "",
     "ml_url": "",
-    "shopee_url": "https://s.shopee.com.br/9pbKVRkW7h",
+    "shopee_url": "https://s.shopee.com.br/1Vz9qncUUc",
     "amazon_url": "",
     "ram_gb": 1,
     "armazenamento_gb": 8,
