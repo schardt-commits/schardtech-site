@@ -1,10 +1,20 @@
 {
   "data_coleta": "13/09",
-  "hora_coleta": "09:35",
+  "hora_coleta": "10:58",
   "data_ontem": "12/09",
   "data_hoje": "13/09",
-  "total_quedas": 10,
+  "total_quedas": 11,
   "quedas": [
+    {
+      "marca": "Vevshao",
+      "modelo": "A24 MAX",
+      "slug": "vevshao-a24-max",
+      "preco_atual": 1553.55,
+      "preco_ontem": 1701.77,
+      "delta": -148.22,
+      "delta_pct": -8.71,
+      "data_checagem": "2026-09-13 10:58"
+    },
     {
       "marca": "Byintek",
       "modelo": "Love U12",
@@ -13,7 +23,7 @@
       "preco_ontem": 1084.35,
       "delta": -63.85,
       "delta_pct": -5.89,
-      "data_checagem": "2026-09-13 09:35"
+      "data_checagem": "2026-09-13 10:58"
     },
     {
       "marca": "Byintek",
@@ -23,7 +33,7 @@
       "preco_ontem": 2264.49,
       "delta": -129.67,
       "delta_pct": -5.73,
-      "data_checagem": "2026-09-13 09:35"
+      "data_checagem": "2026-09-13 10:58"
     },
     {
       "marca": "Jenovox",
@@ -33,7 +43,7 @@
       "preco_ontem": 2714.72,
       "delta": -137.56,
       "delta_pct": -5.07,
-      "data_checagem": "2026-09-13 09:16"
+      "data_checagem": "2026-09-13 10:40"
     },
     {
       "marca": "Byintek",
@@ -43,17 +53,7 @@
       "preco_ontem": 1683.67,
       "delta": -84.63,
       "delta_pct": -5.03,
-      "data_checagem": "2026-09-13 09:35"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D9W Ultra",
-      "slug": "flixtone-d9w-ultra",
-      "preco_atual": 2023.47,
-      "preco_ontem": 2129.97,
-      "delta": -106.5,
-      "delta_pct": -5.0,
-      "data_checagem": "2026-09-13 09:15"
+      "data_checagem": "2026-09-13 10:58"
     }
   ]
 }
