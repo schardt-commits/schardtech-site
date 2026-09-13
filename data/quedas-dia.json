@@ -1,9 +1,9 @@
 {
   "data_coleta": "13/09",
-  "hora_coleta": "00:35",
+  "hora_coleta": "09:35",
   "data_ontem": "12/09",
   "data_hoje": "13/09",
-  "total_quedas": 7,
+  "total_quedas": 10,
   "quedas": [
     {
       "marca": "Byintek",
@@ -13,7 +13,7 @@
       "preco_ontem": 1084.35,
       "delta": -63.85,
       "delta_pct": -5.89,
-      "data_checagem": "2026-09-13 00:35"
+      "data_checagem": "2026-09-13 09:35"
     },
     {
       "marca": "Byintek",
@@ -23,7 +23,7 @@
       "preco_ontem": 2264.49,
       "delta": -129.67,
       "delta_pct": -5.73,
-      "data_checagem": "2026-09-13 00:35"
+      "data_checagem": "2026-09-13 09:35"
     },
     {
       "marca": "Jenovox",
@@ -33,7 +33,7 @@
       "preco_ontem": 2714.72,
       "delta": -137.56,
       "delta_pct": -5.07,
-      "data_checagem": "2026-09-13 00:16"
+      "data_checagem": "2026-09-13 09:16"
     },
     {
       "marca": "Byintek",
@@ -43,7 +43,7 @@
       "preco_ontem": 1683.67,
       "delta": -84.63,
       "delta_pct": -5.03,
-      "data_checagem": "2026-09-13 00:35"
+      "data_checagem": "2026-09-13 09:35"
     },
     {
       "marca": "FlixTone",
@@ -53,7 +53,7 @@
       "preco_ontem": 2129.97,
       "delta": -106.5,
       "delta_pct": -5.0,
-      "data_checagem": "2026-09-13 00:15"
+      "data_checagem": "2026-09-13 09:15"
     }
   ]
 }
