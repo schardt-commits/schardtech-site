@@ -1,59 +1,59 @@
 {
-  "data_coleta": "13/09",
-  "hora_coleta": "17:26",
-  "data_ontem": "12/09",
-  "data_hoje": "13/09",
-  "total_quedas": 11,
+  "data_coleta": "14/09",
+  "hora_coleta": "00:36",
+  "data_ontem": "13/09",
+  "data_hoje": "14/09",
+  "total_quedas": 28,
   "quedas": [
+    {
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 953.62,
+      "preco_ontem": 2029.19,
+      "delta": -1075.57,
+      "delta_pct": -53.0,
+      "data_checagem": "2026-09-14 00:24"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A10",
+      "slug": "vevshao-a10",
+      "preco_atual": 566.04,
+      "preco_ontem": 998.54,
+      "delta": -432.5,
+      "delta_pct": -43.31,
+      "data_checagem": "2026-09-14 00:22"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "L9W Ultra",
+      "slug": "touyinger-l9w-ultra",
+      "preco_atual": 449.76,
+      "preco_ontem": 785.01,
+      "delta": -335.25,
+      "delta_pct": -42.71,
+      "data_checagem": "2026-09-14 00:21"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 840.57,
+      "preco_ontem": 1381.12,
+      "delta": -540.55,
+      "delta_pct": -39.14,
+      "data_checagem": "2026-09-14 00:25"
+    },
     {
       "marca": "Vevshao",
       "modelo": "A24 MAX",
       "slug": "vevshao-a24-max",
-      "preco_atual": 1553.55,
-      "preco_ontem": 1701.77,
-      "delta": -148.22,
-      "delta_pct": -8.71,
-      "data_checagem": "2026-09-13 17:26"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 1020.5,
-      "preco_ontem": 1084.35,
-      "delta": -63.85,
-      "delta_pct": -5.89,
-      "data_checagem": "2026-09-13 17:26"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 2134.82,
-      "preco_ontem": 2264.49,
-      "delta": -129.67,
-      "delta_pct": -5.73,
-      "data_checagem": "2026-09-13 17:26"
-    },
-    {
-      "marca": "Jenovox",
-      "modelo": "M5000 Mini",
-      "slug": "jenovox-m5000-mini",
-      "preco_atual": 2577.16,
-      "preco_ontem": 2714.72,
-      "delta": -137.56,
-      "delta_pct": -5.07,
-      "data_checagem": "2026-09-13 17:07"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1599.04,
-      "preco_ontem": 1683.67,
-      "delta": -84.63,
-      "delta_pct": -5.03,
-      "data_checagem": "2026-09-13 17:26"
+      "preco_atual": 1040.28,
+      "preco_ontem": 1553.55,
+      "delta": -513.27,
+      "delta_pct": -33.04,
+      "data_checagem": "2026-09-14 00:36"
     }
   ]
 }
