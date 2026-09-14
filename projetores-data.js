@@ -1319,7 +1319,7 @@ window.PROJETORES_DATA = [
     "uso_continuo": "4h",
     "preco_min": 417,
     "preco_max": 500,
-    "ali_url": "https://s.click.aliexpress.com/e/_c3rVxOaX",
+    "ali_url": "",
     "ali_cupom_loja": "",
     "ali_cupom_promo": "",
     "ml_url": "",
