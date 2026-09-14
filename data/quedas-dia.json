@@ -1,59 +1,59 @@
 {
   "data_coleta": "14/09",
-  "hora_coleta": "00:36",
+  "hora_coleta": "11:42",
   "data_ontem": "13/09",
   "data_hoje": "14/09",
-  "total_quedas": 28,
+  "total_quedas": 29,
   "quedas": [
     {
       "marca": "Progaga",
       "modelo": "PG610 ATV",
       "slug": "progaga-pg610-atv",
-      "preco_atual": 953.62,
+      "preco_atual": 974.73,
       "preco_ontem": 2029.19,
-      "delta": -1075.57,
-      "delta_pct": -53.0,
-      "data_checagem": "2026-09-14 00:24"
+      "delta": -1054.46,
+      "delta_pct": -51.96,
+      "data_checagem": "2026-09-14 11:30"
     },
     {
       "marca": "Vevshao",
       "modelo": "A10",
       "slug": "vevshao-a10",
-      "preco_atual": 566.04,
+      "preco_atual": 578.22,
       "preco_ontem": 998.54,
-      "delta": -432.5,
-      "delta_pct": -43.31,
-      "data_checagem": "2026-09-14 00:22"
+      "delta": -420.32,
+      "delta_pct": -42.09,
+      "data_checagem": "2026-09-14 11:28"
     },
     {
       "marca": "Touyinger",
       "modelo": "L9W Ultra",
       "slug": "touyinger-l9w-ultra",
-      "preco_atual": 449.76,
+      "preco_atual": 459.04,
       "preco_ontem": 785.01,
-      "delta": -335.25,
-      "delta_pct": -42.71,
-      "data_checagem": "2026-09-14 00:21"
+      "delta": -325.97,
+      "delta_pct": -41.52,
+      "data_checagem": "2026-09-14 11:27"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD98 MINI",
       "slug": "thundeal-td98-mini",
-      "preco_atual": 840.57,
+      "preco_atual": 858.44,
       "preco_ontem": 1381.12,
-      "delta": -540.55,
-      "delta_pct": -39.14,
-      "data_checagem": "2026-09-14 00:25"
+      "delta": -522.68,
+      "delta_pct": -37.84,
+      "data_checagem": "2026-09-14 11:31"
     },
     {
       "marca": "Vevshao",
       "modelo": "A24 MAX",
       "slug": "vevshao-a24-max",
-      "preco_atual": 1040.28,
+      "preco_atual": 1063.07,
       "preco_ontem": 1553.55,
-      "delta": -513.27,
-      "delta_pct": -33.04,
-      "data_checagem": "2026-09-14 00:36"
+      "delta": -490.48,
+      "delta_pct": -31.57,
+      "data_checagem": "2026-09-14 11:42"
     }
   ]
 }
