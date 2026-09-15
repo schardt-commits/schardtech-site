@@ -1,10 +1,20 @@
 {
   "data_coleta": "15/09",
-  "hora_coleta": "09:37",
+  "hora_coleta": "15:27",
   "data_ontem": "14/09",
   "data_hoje": "15/09",
-  "total_quedas": 4,
+  "total_quedas": 33,
   "quedas": [
+    {
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 225.12,
+      "preco_ontem": 233.19,
+      "delta": -8.07,
+      "delta_pct": -3.46,
+      "data_checagem": "2026-09-15 15:07"
+    },
     {
       "marca": "Bettdow",
       "modelo": "AC1061",
@@ -13,37 +23,37 @@
       "preco_ontem": 1685.28,
       "delta": -55.2,
       "delta_pct": -3.28,
-      "data_checagem": "2026-09-15 09:37"
+      "data_checagem": "2026-09-15 15:27"
     },
     {
-      "marca": "Progaga",
-      "modelo": "PG310",
-      "slug": "progaga-pg310",
-      "preco_atual": 227.04,
-      "preco_ontem": 233.19,
-      "delta": -6.15,
-      "delta_pct": -2.64,
-      "data_checagem": "2026-09-15 09:17"
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1569.49,
+      "preco_ontem": 1583.87,
+      "delta": -14.38,
+      "delta_pct": -0.91,
+      "data_checagem": "2026-09-15 15:27"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1073",
-      "slug": "bettdow-ac1073",
-      "preco_atual": 1243.68,
-      "preco_ontem": 1252.88,
-      "delta": -9.2,
-      "delta_pct": -0.73,
-      "data_checagem": "2026-09-15 09:37"
+      "marca": "Byintek",
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 498.75,
+      "preco_ontem": 503.22,
+      "delta": -4.47,
+      "delta_pct": -0.89,
+      "data_checagem": "2026-09-15 15:27"
     },
     {
-      "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 2218.88,
-      "preco_ontem": 2228.08,
-      "delta": -9.2,
-      "delta_pct": -0.41,
-      "data_checagem": "2026-09-15 09:37"
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1335.89,
+      "preco_ontem": 1347.84,
+      "delta": -11.95,
+      "delta_pct": -0.89,
+      "data_checagem": "2026-09-15 15:27"
     }
   ]
 }
