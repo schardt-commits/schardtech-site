@@ -818,6 +818,15 @@
       if (live && live.marketplace_vencedor && off.seller && sellerMap[live.marketplace_vencedor]) {
         off.seller.name = sellerMap[live.marketplace_vencedor];
       }
+      // url = link do vencedor. Sem isto a Offer ficava com o link de geração da página,
+      // que pode ser de canal que já saiu (Wanbo X5 Pro, 15/09: seller Shopee e url do
+      // Ali morto). mercado_livre/ml são o mesmo canal (mergeOverlay cria o alias).
+      if (live && live.marketplace_vencedor) {
+        var mks = live.marketplaces || {};
+        var v = live.marketplace_vencedor;
+        var wl = mks[v] || (v === 'ml' ? mks.mercado_livre : (v === 'mercado_livre' ? mks.ml : null)) || {};
+        if (wl.link) off.url = wl.link;
+      }
       sc.textContent = JSON.stringify(obj, null, 2);
       break;
     }
