@@ -1,19 +1,19 @@
 {
   "data_coleta": "15/09",
-  "hora_coleta": "00:36",
+  "hora_coleta": "09:37",
   "data_ontem": "14/09",
   "data_hoje": "15/09",
   "total_quedas": 4,
   "quedas": [
     {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 551.25,
-      "preco_ontem": 598.65,
-      "delta": -47.4,
-      "delta_pct": -7.92,
-      "data_checagem": "2026-09-15 00:14"
+      "marca": "Bettdow",
+      "modelo": "AC1061",
+      "slug": "bettdow-ac1061",
+      "preco_atual": 1630.08,
+      "preco_ontem": 1685.28,
+      "delta": -55.2,
+      "delta_pct": -3.28,
+      "data_checagem": "2026-09-15 09:37"
     },
     {
       "marca": "Progaga",
@@ -23,7 +23,7 @@
       "preco_ontem": 233.19,
       "delta": -6.15,
       "delta_pct": -2.64,
-      "data_checagem": "2026-09-15 00:17"
+      "data_checagem": "2026-09-15 09:17"
     },
     {
       "marca": "Bettdow",
@@ -33,7 +33,7 @@
       "preco_ontem": 1252.88,
       "delta": -9.2,
       "delta_pct": -0.73,
-      "data_checagem": "2026-09-15 00:36"
+      "data_checagem": "2026-09-15 09:37"
     },
     {
       "marca": "Wanbo",
@@ -43,7 +43,7 @@
       "preco_ontem": 2228.08,
       "delta": -9.2,
       "delta_pct": -0.41,
-      "data_checagem": "2026-09-15 00:36"
+      "data_checagem": "2026-09-15 09:37"
     }
   ]
 }
