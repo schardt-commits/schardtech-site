@@ -1,10 +1,30 @@
 {
   "data_coleta": "16/09",
-  "hora_coleta": "00:38",
+  "hora_coleta": "09:38",
   "data_ontem": "15/09",
   "data_hoje": "16/09",
-  "total_quedas": 2,
+  "total_quedas": 5,
   "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1064.54,
+      "preco_ontem": 1335.89,
+      "delta": -271.35,
+      "delta_pct": -20.31,
+      "data_checagem": "2026-09-16 09:38"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1633.92,
+      "preco_ontem": 1810.76,
+      "delta": -176.84,
+      "delta_pct": -9.77,
+      "data_checagem": "2026-09-16 09:38"
+    },
     {
       "marca": "Wanbo",
       "modelo": "Vali 1",
@@ -13,7 +33,7 @@
       "preco_ontem": 2199.0,
       "delta": -188.0,
       "delta_pct": -8.55,
-      "data_checagem": "2026-09-16 00:28"
+      "data_checagem": "2026-09-16 09:28"
     },
     {
       "marca": "Vevshao",
@@ -23,7 +43,17 @@
       "preco_ontem": 755.86,
       "delta": -51.76,
       "delta_pct": -6.85,
-      "data_checagem": "2026-09-16 00:38"
+      "data_checagem": "2026-09-16 09:38"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "V60",
+      "slug": "vevshao-v60",
+      "preco_atual": 1514.77,
+      "preco_ontem": 1548.09,
+      "delta": -33.32,
+      "delta_pct": -2.15,
+      "data_checagem": "2026-09-16 09:38"
     }
   ]
 }
