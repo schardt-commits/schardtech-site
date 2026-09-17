@@ -1,59 +1,19 @@
 {
-  "data_coleta": "16/09",
-  "hora_coleta": "21:38",
-  "data_ontem": "15/09",
-  "data_hoje": "16/09",
-  "total_quedas": 6,
+  "data_coleta": "17/09",
+  "hora_coleta": "00:22",
+  "data_ontem": "16/09",
+  "data_hoje": "17/09",
+  "total_quedas": 1,
   "quedas": [
     {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1068.91,
-      "preco_ontem": 1335.89,
-      "delta": -266.98,
-      "delta_pct": -19.99,
-      "data_checagem": "2026-09-16 21:38"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U80 MAX",
-      "slug": "byintek-u80-max",
-      "preco_atual": 1640.97,
-      "preco_ontem": 1810.76,
-      "delta": -169.79,
-      "delta_pct": -9.38,
-      "data_checagem": "2026-09-16 21:38"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "A22",
-      "slug": "vevshao-a22",
-      "preco_atual": 706.98,
-      "preco_ontem": 755.86,
-      "delta": -48.88,
-      "delta_pct": -6.47,
-      "data_checagem": "2026-09-16 21:38"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1041",
-      "slug": "bettdow-ac1041",
-      "preco_atual": 799.0,
-      "preco_ontem": 819.0,
-      "delta": -20.0,
-      "delta_pct": -2.44,
-      "data_checagem": "2026-09-16 21:38"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "V60",
-      "slug": "vevshao-v60",
-      "preco_atual": 1521.07,
-      "preco_ontem": 1548.09,
-      "delta": -27.02,
-      "delta_pct": -1.75,
-      "data_checagem": "2026-09-16 21:38"
+      "marca": "Touyinger",
+      "modelo": "Q13W",
+      "slug": "touyinger-q13w",
+      "preco_atual": 1748.27,
+      "preco_ontem": 1832.19,
+      "delta": -83.92,
+      "delta_pct": -4.58,
+      "data_checagem": "2026-09-17 00:22"
     }
   ]
 }
