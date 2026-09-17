@@ -1,59 +1,59 @@
 {
   "data_coleta": "17/09",
-  "hora_coleta": "09:38",
+  "hora_coleta": "15:28",
   "data_ontem": "16/09",
   "data_hoje": "17/09",
-  "total_quedas": 12,
+  "total_quedas": 34,
   "quedas": [
     {
       "marca": "FlixTone",
       "modelo": "D9W Mini",
       "slug": "flixtone-d9w-mini",
-      "preco_atual": 1004.56,
+      "preco_atual": 1000.84,
       "preco_ontem": 1170.76,
-      "delta": -166.2,
-      "delta_pct": -14.2,
-      "data_checagem": "2026-09-17 09:16"
+      "delta": -169.92,
+      "delta_pct": -14.51,
+      "data_checagem": "2026-09-17 15:06"
     },
     {
       "marca": "Byintek",
       "modelo": "Love U4",
       "slug": "byintek-love-u4",
-      "preco_atual": 500.88,
+      "preco_atual": 498.75,
       "preco_ontem": 538.17,
-      "delta": -37.29,
-      "delta_pct": -6.93,
-      "data_checagem": "2026-09-17 09:38"
+      "delta": -39.42,
+      "delta_pct": -7.32,
+      "data_checagem": "2026-09-17 15:28"
     },
     {
       "marca": "Byintek",
       "modelo": "Love U12",
       "slug": "byintek-u12",
-      "preco_atual": 724.93,
+      "preco_atual": 721.99,
       "preco_ontem": 777.82,
-      "delta": -52.89,
-      "delta_pct": -6.8,
-      "data_checagem": "2026-09-17 09:38"
+      "delta": -55.83,
+      "delta_pct": -7.18,
+      "data_checagem": "2026-09-17 15:28"
     },
     {
       "marca": "Byintek",
       "modelo": "Plato T5 MAX",
       "slug": "byintek-plato-t5-max",
-      "preco_atual": 1252.91,
+      "preco_atual": 1247.85,
       "preco_ontem": 1340.91,
-      "delta": -88.0,
-      "delta_pct": -6.56,
-      "data_checagem": "2026-09-17 09:14"
+      "delta": -93.06,
+      "delta_pct": -6.94,
+      "data_checagem": "2026-09-17 15:04"
     },
     {
       "marca": "Byintek",
       "modelo": "U90 MAX",
       "slug": "byintek-u90-max",
-      "preco_atual": 1669.34,
+      "preco_atual": 1662.48,
       "preco_ontem": 1786.38,
-      "delta": -117.04,
-      "delta_pct": -6.55,
-      "data_checagem": "2026-09-17 09:38"
+      "delta": -123.9,
+      "delta_pct": -6.94,
+      "data_checagem": "2026-09-17 15:28"
     }
   ]
 }
