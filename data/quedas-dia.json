@@ -1,9 +1,9 @@
 {
   "data_coleta": "18/09",
-  "hora_coleta": "09:40",
+  "hora_coleta": "15:33",
   "data_ontem": "17/09",
   "data_hoje": "18/09",
-  "total_quedas": 14,
+  "total_quedas": 15,
   "quedas": [
     {
       "marca": "Magcubic",
@@ -13,7 +13,7 @@
       "preco_ontem": 464.55,
       "delta": -63.55,
       "delta_pct": -13.68,
-      "data_checagem": "2026-09-18 09:40"
+      "data_checagem": "2026-09-18 15:33"
     },
     {
       "marca": "Magcubic",
@@ -23,7 +23,7 @@
       "preco_ontem": 379.05,
       "delta": -38.0,
       "delta_pct": -10.03,
-      "data_checagem": "2026-09-18 09:40"
+      "data_checagem": "2026-09-18 15:33"
     },
     {
       "marca": "Magcubic",
@@ -33,17 +33,17 @@
       "preco_ontem": 919.08,
       "delta": -91.9,
       "delta_pct": -10.0,
-      "data_checagem": "2026-09-18 09:40"
+      "data_checagem": "2026-09-18 15:33"
     },
     {
       "marca": "Byintek",
       "modelo": "U80 MAX",
       "slug": "byintek-u80-max",
-      "preco_atual": 1633.92,
+      "preco_atual": 1637.73,
       "preco_ontem": 1810.76,
-      "delta": -176.84,
-      "delta_pct": -9.77,
-      "data_checagem": "2026-09-18 09:40"
+      "delta": -173.03,
+      "delta_pct": -9.56,
+      "data_checagem": "2026-09-18 15:33"
     },
     {
       "marca": "Magcubic",
@@ -53,7 +53,7 @@
       "preco_ontem": 973.98,
       "delta": -54.9,
       "delta_pct": -5.64,
-      "data_checagem": "2026-09-18 09:40"
+      "data_checagem": "2026-09-18 15:33"
     }
   ]
 }
