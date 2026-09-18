@@ -1,59 +1,19 @@
 {
-  "data_coleta": "17/09",
-  "hora_coleta": "21:39",
-  "data_ontem": "16/09",
-  "data_hoje": "17/09",
-  "total_quedas": 34,
+  "data_coleta": "18/09",
+  "hora_coleta": "00:39",
+  "data_ontem": "17/09",
+  "data_hoje": "18/09",
+  "total_quedas": 1,
   "quedas": [
     {
-      "marca": "FlixTone",
-      "modelo": "D9W Mini",
-      "slug": "flixtone-d9w-mini",
-      "preco_atual": 1000.84,
-      "preco_ontem": 1170.76,
-      "delta": -169.92,
-      "delta_pct": -14.51,
-      "data_checagem": "2026-09-17 21:16"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U4",
-      "slug": "byintek-love-u4",
-      "preco_atual": 498.75,
-      "preco_ontem": 538.17,
-      "delta": -39.42,
-      "delta_pct": -7.32,
-      "data_checagem": "2026-09-17 21:39"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 721.99,
-      "preco_ontem": 777.82,
-      "delta": -55.83,
-      "delta_pct": -7.18,
-      "data_checagem": "2026-09-17 21:39"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Plato T5 MAX",
-      "slug": "byintek-plato-t5-max",
-      "preco_atual": 1247.85,
-      "preco_ontem": 1340.91,
-      "delta": -93.06,
-      "delta_pct": -6.94,
-      "data_checagem": "2026-09-17 21:14"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 1662.48,
-      "preco_ontem": 1786.38,
-      "delta": -123.9,
-      "delta_pct": -6.94,
-      "data_checagem": "2026-09-17 21:39"
+      "marca": "Bettdow",
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 531.86,
+      "preco_ontem": 552.0,
+      "delta": -20.14,
+      "delta_pct": -3.65,
+      "data_checagem": "2026-09-18 00:39"
     }
   ]
 }
