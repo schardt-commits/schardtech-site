@@ -1,59 +1,19 @@
 {
-  "data_coleta": "18/09",
-  "hora_coleta": "21:41",
-  "data_ontem": "17/09",
-  "data_hoje": "18/09",
-  "total_quedas": 13,
+  "data_coleta": "19/09",
+  "hora_coleta": "00:41",
+  "data_ontem": "18/09",
+  "data_hoje": "19/09",
+  "total_quedas": 1,
   "quedas": [
     {
-      "marca": "Magcubic",
-      "modelo": "HY310",
-      "slug": "magcubic-hy310",
-      "preco_atual": 341.05,
-      "preco_ontem": 379.05,
-      "delta": -38.0,
-      "delta_pct": -10.03,
-      "data_checagem": "2026-09-18 21:41"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U80 MAX",
-      "slug": "byintek-u80-max",
-      "preco_atual": 1637.73,
-      "preco_ontem": 1810.76,
-      "delta": -173.03,
-      "delta_pct": -9.56,
-      "data_checagem": "2026-09-18 21:41"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY310X",
-      "slug": "magcubic-hy310x",
-      "preco_atual": 445.55,
-      "preco_ontem": 464.55,
-      "delta": -19.0,
-      "delta_pct": -4.09,
-      "data_checagem": "2026-09-18 21:41"
-    },
-    {
       "marca": "Bettdow",
-      "modelo": "AC1066",
-      "slug": "bettdow-ac1066",
-      "preco_atual": 530.94,
-      "preco_ontem": 552.0,
-      "delta": -21.06,
-      "delta_pct": -3.82,
-      "data_checagem": "2026-09-18 21:41"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610W",
-      "slug": "progaga-pg610w",
-      "preco_atual": 820.78,
-      "preco_ontem": 835.66,
-      "delta": -14.88,
+      "modelo": "AC1071",
+      "slug": "bettdow-ac1071",
+      "preco_atual": 1525.36,
+      "preco_ontem": 1552.96,
+      "delta": -27.6,
       "delta_pct": -1.78,
-      "data_checagem": "2026-09-18 21:18"
+      "data_checagem": "2026-09-19 00:41"
     }
   ]
 }
