@@ -1,9 +1,9 @@
 {
   "data_coleta": "19/09",
-  "hora_coleta": "09:41",
+  "hora_coleta": "14:21",
   "data_ontem": "18/09",
   "data_hoje": "19/09",
-  "total_quedas": 1,
+  "total_quedas": 3,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,7 +13,27 @@
       "preco_ontem": 1552.96,
       "delta": -27.6,
       "delta_pct": -1.78,
-      "data_checagem": "2026-09-19 09:41"
+      "data_checagem": "2026-09-19 14:21"
+    },
+    {
+      "marca": "Dangbei",
+      "modelo": "Mars Pro 2",
+      "slug": "dangbei-mars-pro-2",
+      "preco_atual": 7441.83,
+      "preco_ontem": 7487.93,
+      "delta": -46.1,
+      "delta_pct": -0.62,
+      "data_checagem": "2026-09-19 13:55"
+    },
+    {
+      "marca": "Formovie",
+      "modelo": "Cinema Edge",
+      "slug": "formovie-cinema-edge",
+      "preco_atual": 9160.31,
+      "preco_ontem": 9205.67,
+      "delta": -45.36,
+      "delta_pct": -0.49,
+      "data_checagem": "2026-09-19 13:56"
     }
   ]
 }
