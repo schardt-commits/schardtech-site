@@ -12,12 +12,12 @@ const projectors = [];
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
 // ============================================================
 const featuredVideos = [
+  { id: "MSZw6b0yzww", title: "Menos de 1 Kg e 3 Horas de Bateria! Testei o novo Byintek MAGIC 1" },
   { id: "QnA2wgo5RBE", title: "3 PROJETORES POTENTES! TD98 Pro vs Q13W vs D10S — QUAL O MELHOR?" },
   { id: "5GGUt_qzUes", title: "QUAL O MELHOR? 10 PROJETORES EM UM COMPARATIVO! HY300, HY320 Mini, HY350, HY450 Max, HY450GT e X7" },
   { id: "T9210odfrlY", title: "TUDO que Você Precisa Saber Antes de Comprar o MAGCUBIC HY450GT!" },
   { id: "h_g2V0d6bn8", title: "Projetor Por Menos de 500 reais Análise Completa do Progaga PG370 MAX" },
   { id: "1Bw2KdmgWGM", title: "XGODY GIMBAL 7: Vale a Pena? Análise Completa Com Varios Testes!" },
-  { id: "oNcyM90hg7g", title: "Magcubic HY450GT : Unboxing e Primeiras Impreções!" },
 ];
 
 // ============================================================
