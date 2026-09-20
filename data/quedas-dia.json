@@ -1,49 +1,19 @@
 {
-  "data_coleta": "19/09",
-  "hora_coleta": "21:41",
-  "data_ontem": "18/09",
-  "data_hoje": "19/09",
-  "total_quedas": 4,
+  "data_coleta": "20/09",
+  "hora_coleta": "00:41",
+  "data_ontem": "19/09",
+  "data_hoje": "20/09",
+  "total_quedas": 1,
   "quedas": [
     {
-      "marca": "Byintek",
-      "modelo": "Love U4",
-      "slug": "byintek-love-u4",
-      "preco_atual": 520.43,
-      "preco_ontem": 537.12,
-      "delta": -16.69,
-      "delta_pct": -3.11,
-      "data_checagem": "2026-09-19 21:41"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1071",
-      "slug": "bettdow-ac1071",
-      "preco_atual": 1525.36,
-      "preco_ontem": 1552.96,
-      "delta": -27.6,
-      "delta_pct": -1.78,
-      "data_checagem": "2026-09-19 21:41"
-    },
-    {
-      "marca": "Dangbei",
-      "modelo": "Mars Pro 2",
-      "slug": "dangbei-mars-pro-2",
-      "preco_atual": 7441.83,
-      "preco_ontem": 7487.93,
-      "delta": -46.1,
-      "delta_pct": -0.62,
-      "data_checagem": "2026-09-19 21:15"
-    },
-    {
-      "marca": "Formovie",
-      "modelo": "Cinema Edge",
-      "slug": "formovie-cinema-edge",
-      "preco_atual": 9160.31,
-      "preco_ontem": 9205.67,
-      "delta": -45.36,
-      "delta_pct": -0.49,
-      "data_checagem": "2026-09-19 21:17"
+      "marca": "Magcubic",
+      "modelo": "HY310X",
+      "slug": "magcubic-hy310x",
+      "preco_atual": 445.55,
+      "preco_ontem": 469.0,
+      "delta": -23.45,
+      "delta_pct": -5.0,
+      "data_checagem": "2026-09-20 00:41"
     }
   ]
 }
