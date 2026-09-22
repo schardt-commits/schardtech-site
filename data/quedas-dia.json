@@ -1,59 +1,59 @@
 {
-  "data_coleta": "21/09",
-  "hora_coleta": "21:41",
-  "data_ontem": "20/09",
-  "data_hoje": "21/09",
-  "total_quedas": 15,
+  "data_coleta": "22/09",
+  "hora_coleta": "00:41",
+  "data_ontem": "21/09",
+  "data_hoje": "22/09",
+  "total_quedas": 6,
   "quedas": [
     {
-      "marca": "Magcubic",
-      "modelo": "HY450C",
-      "slug": "magcubic-hy450c",
-      "preco_atual": 827.08,
-      "preco_ontem": 919.08,
-      "delta": -92.0,
-      "delta_pct": -10.01,
-      "data_checagem": "2026-09-21 21:41"
+      "marca": "Touyinger",
+      "modelo": "L9W Ultra",
+      "slug": "touyinger-l9w-ultra",
+      "preco_atual": 792.59,
+      "preco_ontem": 2132.94,
+      "delta": -1340.35,
+      "delta_pct": -62.84,
+      "data_checagem": "2026-09-22 00:23"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1082",
-      "slug": "bettdow-ac1082",
-      "preco_atual": 781.08,
-      "preco_ontem": 863.88,
-      "delta": -82.8,
-      "delta_pct": -9.58,
-      "data_checagem": "2026-09-21 21:41"
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 982.86,
+      "preco_ontem": 1044.79,
+      "delta": -61.93,
+      "delta_pct": -5.93,
+      "data_checagem": "2026-09-22 00:41"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "X7",
-      "slug": "magcubic-x7",
-      "preco_atual": 919.08,
-      "preco_ontem": 1011.08,
-      "delta": -92.0,
-      "delta_pct": -9.1,
-      "data_checagem": "2026-09-21 21:41"
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1345.08,
+      "preco_ontem": 1428.96,
+      "delta": -83.88,
+      "delta_pct": -5.87,
+      "data_checagem": "2026-09-22 00:41"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "HY450 MAX",
-      "slug": "magcubic-hy450-max",
-      "preco_atual": 1084.68,
-      "preco_ontem": 1176.68,
-      "delta": -92.0,
-      "delta_pct": -7.82,
-      "data_checagem": "2026-09-21 21:41"
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 753.78,
+      "preco_ontem": 793.46,
+      "delta": -39.68,
+      "delta_pct": -5.0,
+      "data_checagem": "2026-09-22 00:23"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "HY450GT",
-      "slug": "magcubic-hy450gt",
-      "preco_atual": 1130.68,
-      "preco_ontem": 1222.68,
-      "delta": -92.0,
-      "delta_pct": -7.52,
-      "data_checagem": "2026-09-21 21:41"
+      "marca": "Wanbo",
+      "modelo": "X5 Pro",
+      "slug": "wanbo-x5-pro",
+      "preco_atual": 2211.68,
+      "preco_ontem": 2290.8,
+      "delta": -79.12,
+      "delta_pct": -3.45,
+      "data_checagem": "2026-09-22 00:41"
     }
   ]
 }
