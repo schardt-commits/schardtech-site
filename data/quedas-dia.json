@@ -1,9 +1,9 @@
 {
   "data_coleta": "22/09",
-  "hora_coleta": "15:30",
+  "hora_coleta": "21:41",
   "data_ontem": "21/09",
   "data_hoje": "22/09",
-  "total_quedas": 29,
+  "total_quedas": 30,
   "quedas": [
     {
       "marca": "Touyinger",
@@ -13,7 +13,7 @@
       "preco_ontem": 2132.94,
       "delta": -1339.02,
       "delta_pct": -62.78,
-      "data_checagem": "2026-09-22 15:12"
+      "data_checagem": "2026-09-22 21:23"
     },
     {
       "marca": "Jenovox",
@@ -23,7 +23,17 @@
       "preco_ontem": 2740.93,
       "delta": -747.56,
       "delta_pct": -27.27,
-      "data_checagem": "2026-09-22 15:08"
+      "data_checagem": "2026-09-22 21:18"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Magic 1",
+      "slug": "byintek-magic-1",
+      "preco_atual": 1271.25,
+      "preco_ontem": 1542.98,
+      "delta": -271.73,
+      "delta_pct": -17.61,
+      "data_checagem": "2026-09-22 21:28"
     },
     {
       "marca": "Byintek",
@@ -33,7 +43,7 @@
       "preco_ontem": 1428.96,
       "delta": -244.98,
       "delta_pct": -17.14,
-      "data_checagem": "2026-09-22 15:30"
+      "data_checagem": "2026-09-22 21:41"
     },
     {
       "marca": "Bettdow",
@@ -43,17 +53,7 @@
       "preco_ontem": 479.18,
       "delta": -80.18,
       "delta_pct": -16.73,
-      "data_checagem": "2026-09-22 15:30"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 479.8,
-      "preco_ontem": 560.91,
-      "delta": -81.11,
-      "delta_pct": -14.46,
-      "data_checagem": "2026-09-22 15:09"
+      "data_checagem": "2026-09-22 21:41"
     }
   ]
 }
