@@ -1,8 +1,59 @@
 {
   "data_coleta": "23/09",
-  "hora_coleta": "",
+  "hora_coleta": "09:41",
   "data_ontem": "22/09",
   "data_hoje": "23/09",
-  "total_quedas": 0,
-  "quedas": []
+  "total_quedas": 6,
+  "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "Plato T5 MAX",
+      "slug": "byintek-plato-t5-max",
+      "preco_atual": 1500.85,
+      "preco_ontem": 1665.85,
+      "delta": -165.0,
+      "delta_pct": -9.9,
+      "data_checagem": "2026-09-23 09:14"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 798.88,
+      "preco_ontem": 881.88,
+      "delta": -83.0,
+      "delta_pct": -9.41,
+      "data_checagem": "2026-09-23 09:41"
+    },
+    {
+      "marca": "Wupro",
+      "modelo": "G2",
+      "slug": "wupro-g2",
+      "preco_atual": 871.53,
+      "preco_ontem": 954.53,
+      "delta": -83.0,
+      "delta_pct": -8.7,
+      "data_checagem": "2026-09-23 09:25"
+    },
+    {
+      "marca": "XGODY",
+      "modelo": "Gimbal 7",
+      "slug": "xgody-gimbal-7",
+      "preco_atual": 606.73,
+      "preco_ontem": 661.73,
+      "delta": -55.0,
+      "delta_pct": -8.31,
+      "data_checagem": "2026-09-23 09:41"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D10S",
+      "slug": "flixtone-d10s",
+      "preco_atual": 1857.68,
+      "preco_ontem": 2022.68,
+      "delta": -165.0,
+      "delta_pct": -8.16,
+      "data_checagem": "2026-09-23 09:27"
+    }
+  ]
 }
