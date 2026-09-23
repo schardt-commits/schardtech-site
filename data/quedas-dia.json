@@ -1,59 +1,8 @@
 {
-  "data_coleta": "22/09",
-  "hora_coleta": "21:41",
-  "data_ontem": "21/09",
-  "data_hoje": "22/09",
-  "total_quedas": 30,
-  "quedas": [
-    {
-      "marca": "Touyinger",
-      "modelo": "L9W Ultra",
-      "slug": "touyinger-l9w-ultra",
-      "preco_atual": 793.92,
-      "preco_ontem": 2132.94,
-      "delta": -1339.02,
-      "delta_pct": -62.78,
-      "data_checagem": "2026-09-22 21:23"
-    },
-    {
-      "marca": "Jenovox",
-      "modelo": "M5000 Mini",
-      "slug": "jenovox-m5000-mini",
-      "preco_atual": 1993.37,
-      "preco_ontem": 2740.93,
-      "delta": -747.56,
-      "delta_pct": -27.27,
-      "data_checagem": "2026-09-22 21:18"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Magic 1",
-      "slug": "byintek-magic-1",
-      "preco_atual": 1271.25,
-      "preco_ontem": 1542.98,
-      "delta": -271.73,
-      "delta_pct": -17.61,
-      "data_checagem": "2026-09-22 21:28"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1183.98,
-      "preco_ontem": 1428.96,
-      "delta": -244.98,
-      "delta_pct": -17.14,
-      "data_checagem": "2026-09-22 21:41"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1093 PRO",
-      "slug": "bettdow-ac1093-pro",
-      "preco_atual": 399.0,
-      "preco_ontem": 479.18,
-      "delta": -80.18,
-      "delta_pct": -16.73,
-      "data_checagem": "2026-09-22 21:41"
-    }
-  ]
+  "data_coleta": "23/09",
+  "hora_coleta": "",
+  "data_ontem": "22/09",
+  "data_hoje": "23/09",
+  "total_quedas": 0,
+  "quedas": []
 }
