@@ -1,59 +1,59 @@
 {
   "data_coleta": "23/09",
-  "hora_coleta": "09:41",
+  "hora_coleta": "15:31",
   "data_ontem": "22/09",
   "data_hoje": "23/09",
-  "total_quedas": 6,
+  "total_quedas": 7,
   "quedas": [
+    {
+      "marca": "Wanbo",
+      "modelo": "Vali 1",
+      "slug": "wanbo-vali-1",
+      "preco_atual": 1799.0,
+      "preco_ontem": 2079.0,
+      "delta": -280.0,
+      "delta_pct": -13.47,
+      "data_checagem": "2026-09-23 15:20"
+    },
     {
       "marca": "Byintek",
       "modelo": "Plato T5 MAX",
       "slug": "byintek-plato-t5-max",
-      "preco_atual": 1500.85,
+      "preco_atual": 1503.21,
       "preco_ontem": 1665.85,
-      "delta": -165.0,
-      "delta_pct": -9.9,
-      "data_checagem": "2026-09-23 09:14"
+      "delta": -162.64,
+      "delta_pct": -9.76,
+      "data_checagem": "2026-09-23 15:04"
     },
     {
       "marca": "Byintek",
       "modelo": "Love U12",
       "slug": "byintek-u12",
-      "preco_atual": 798.88,
+      "preco_atual": 800.14,
       "preco_ontem": 881.88,
-      "delta": -83.0,
-      "delta_pct": -9.41,
-      "data_checagem": "2026-09-23 09:41"
+      "delta": -81.74,
+      "delta_pct": -9.27,
+      "data_checagem": "2026-09-23 15:31"
     },
     {
       "marca": "Wupro",
       "modelo": "G2",
       "slug": "wupro-g2",
-      "preco_atual": 871.53,
+      "preco_atual": 871.67,
       "preco_ontem": 954.53,
-      "delta": -83.0,
-      "delta_pct": -8.7,
-      "data_checagem": "2026-09-23 09:25"
+      "delta": -82.86,
+      "delta_pct": -8.68,
+      "data_checagem": "2026-09-23 15:15"
     },
     {
       "marca": "XGODY",
       "modelo": "Gimbal 7",
       "slug": "xgody-gimbal-7",
-      "preco_atual": 606.73,
+      "preco_atual": 607.66,
       "preco_ontem": 661.73,
-      "delta": -55.0,
-      "delta_pct": -8.31,
-      "data_checagem": "2026-09-23 09:41"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D10S",
-      "slug": "flixtone-d10s",
-      "preco_atual": 1857.68,
-      "preco_ontem": 2022.68,
-      "delta": -165.0,
-      "delta_pct": -8.16,
-      "data_checagem": "2026-09-23 09:27"
+      "delta": -54.07,
+      "delta_pct": -8.17,
+      "data_checagem": "2026-09-23 15:31"
     }
   ]
 }
