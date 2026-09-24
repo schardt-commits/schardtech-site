@@ -1,59 +1,29 @@
 {
-  "data_coleta": "23/09",
-  "hora_coleta": "21:41",
-  "data_ontem": "22/09",
-  "data_hoje": "23/09",
-  "total_quedas": 9,
+  "data_coleta": "24/09",
+  "hora_coleta": "09:41",
+  "data_ontem": "23/09",
+  "data_hoje": "24/09",
+  "total_quedas": 2,
   "quedas": [
     {
-      "marca": "Wanbo",
-      "modelo": "Vali 1",
-      "slug": "wanbo-vali-1",
-      "preco_atual": 1799.0,
-      "preco_ontem": 2079.0,
-      "delta": -280.0,
-      "delta_pct": -13.47,
-      "data_checagem": "2026-09-23 21:29"
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 987.11,
+      "preco_ontem": 1049.31,
+      "delta": -62.2,
+      "delta_pct": -5.93,
+      "data_checagem": "2026-09-24 09:41"
     },
     {
-      "marca": "Byintek",
-      "modelo": "Plato T5 MAX",
-      "slug": "byintek-plato-t5-max",
-      "preco_atual": 1503.21,
-      "preco_ontem": 1665.85,
-      "delta": -162.64,
-      "delta_pct": -9.76,
-      "data_checagem": "2026-09-23 21:14"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 800.14,
-      "preco_ontem": 881.88,
-      "delta": -81.74,
-      "delta_pct": -9.27,
-      "data_checagem": "2026-09-23 21:41"
-    },
-    {
-      "marca": "Wupro",
-      "modelo": "G2",
-      "slug": "wupro-g2",
-      "preco_atual": 871.78,
-      "preco_ontem": 954.53,
-      "delta": -82.75,
-      "delta_pct": -8.67,
-      "data_checagem": "2026-09-23 21:25"
-    },
-    {
-      "marca": "XGODY",
-      "modelo": "Gimbal 7",
-      "slug": "xgody-gimbal-7",
-      "preco_atual": 607.66,
-      "preco_ontem": 661.73,
-      "delta": -54.07,
-      "delta_pct": -8.17,
-      "data_checagem": "2026-09-23 21:41"
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 755.25,
+      "preco_ontem": 795.0,
+      "delta": -39.75,
+      "delta_pct": -5.0,
+      "data_checagem": "2026-09-24 09:22"
     }
   ]
 }
