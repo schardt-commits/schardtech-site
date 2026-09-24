@@ -1,29 +1,59 @@
 {
   "data_coleta": "24/09",
-  "hora_coleta": "09:41",
+  "hora_coleta": "15:30",
   "data_ontem": "23/09",
   "data_hoje": "24/09",
-  "total_quedas": 2,
+  "total_quedas": 22,
   "quedas": [
     {
-      "marca": "Vevshao",
-      "modelo": "A22",
-      "slug": "vevshao-a22",
-      "preco_atual": 987.11,
-      "preco_ontem": 1049.31,
-      "delta": -62.2,
-      "delta_pct": -5.93,
-      "data_checagem": "2026-09-24 09:41"
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 1183.31,
+      "preco_ontem": 1397.09,
+      "delta": -213.78,
+      "delta_pct": -15.3,
+      "data_checagem": "2026-09-24 15:17"
     },
     {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 755.25,
-      "preco_ontem": 795.0,
-      "delta": -39.75,
-      "delta_pct": -5.0,
-      "data_checagem": "2026-09-24 09:22"
+      "marca": "Magcubic",
+      "modelo": "HY350 MAX",
+      "slug": "magcubic-hy350-max",
+      "preco_atual": 643.08,
+      "preco_ontem": 735.08,
+      "delta": -92.0,
+      "delta_pct": -12.52,
+      "data_checagem": "2026-09-24 15:30"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY450",
+      "slug": "magcubic-hy450",
+      "preco_atual": 735.08,
+      "preco_ontem": 827.08,
+      "delta": -92.0,
+      "delta_pct": -11.12,
+      "data_checagem": "2026-09-24 15:30"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1082",
+      "slug": "bettdow-ac1082",
+      "preco_atual": 771.88,
+      "preco_ontem": 863.88,
+      "delta": -92.0,
+      "delta_pct": -10.65,
+      "data_checagem": "2026-09-24 15:30"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY450C",
+      "slug": "magcubic-hy450c",
+      "preco_atual": 827.08,
+      "preco_ontem": 919.08,
+      "delta": -92.0,
+      "delta_pct": -10.01,
+      "data_checagem": "2026-09-24 15:30"
     }
   ]
 }
