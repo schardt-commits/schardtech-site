@@ -1,9 +1,9 @@
 {
   "data_coleta": "23/09",
-  "hora_coleta": "15:31",
+  "hora_coleta": "21:41",
   "data_ontem": "22/09",
   "data_hoje": "23/09",
-  "total_quedas": 7,
+  "total_quedas": 9,
   "quedas": [
     {
       "marca": "Wanbo",
@@ -13,7 +13,7 @@
       "preco_ontem": 2079.0,
       "delta": -280.0,
       "delta_pct": -13.47,
-      "data_checagem": "2026-09-23 15:20"
+      "data_checagem": "2026-09-23 21:29"
     },
     {
       "marca": "Byintek",
@@ -23,7 +23,7 @@
       "preco_ontem": 1665.85,
       "delta": -162.64,
       "delta_pct": -9.76,
-      "data_checagem": "2026-09-23 15:04"
+      "data_checagem": "2026-09-23 21:14"
     },
     {
       "marca": "Byintek",
@@ -33,17 +33,17 @@
       "preco_ontem": 881.88,
       "delta": -81.74,
       "delta_pct": -9.27,
-      "data_checagem": "2026-09-23 15:31"
+      "data_checagem": "2026-09-23 21:41"
     },
     {
       "marca": "Wupro",
       "modelo": "G2",
       "slug": "wupro-g2",
-      "preco_atual": 871.67,
+      "preco_atual": 871.78,
       "preco_ontem": 954.53,
-      "delta": -82.86,
-      "delta_pct": -8.68,
-      "data_checagem": "2026-09-23 15:15"
+      "delta": -82.75,
+      "delta_pct": -8.67,
+      "data_checagem": "2026-09-23 21:25"
     },
     {
       "marca": "XGODY",
@@ -53,7 +53,7 @@
       "preco_ontem": 661.73,
       "delta": -54.07,
       "delta_pct": -8.17,
-      "data_checagem": "2026-09-23 15:31"
+      "data_checagem": "2026-09-23 21:41"
     }
   ]
 }
