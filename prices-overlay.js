@@ -946,12 +946,19 @@
       if (!mk.link) return;
       const lojaMap = { aliexpress: 'AliExpress', shopee: 'Shopee', mercado_livre: 'Mercado Livre', ml: 'Mercado Livre' };
 
+      // Tokens do v2 COM fallback: /projetor/ carrega v2.css + projetor-v2.css e não
+      // o compat-v2.css, então --primary/--accent/--border/--text-dim não existiam lá,
+      // o var() inválido virava unset e o botão saía como link sublinhado sem fundo
+      // (auditoria 24/09/2026, js-compartilhado-01). Botão de compra = --cta, mesma
+      // regra do .proj-store-btn.store-winner do projetor-v2.css.
       const style = document.createElement('style');
       style.textContent =
-        '.proj-mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:rgba(11,11,11,0.96);backdrop-filter:blur(16px);border-top:1px solid var(--border);padding:12px 16px;align-items:center;justify-content:space-between;gap:12px}' +
-        '.proj-mobile-bar .preco-min{font-size:0.7rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.05em}' +
-        '.proj-mobile-bar .preco-val{font-size:1.15rem;font-weight:800;color:var(--accent);line-height:1;margin-top:2px}' +
-        '.proj-mobile-bar a.proj-mobile-cta{flex:1;max-width:220px;text-align:center;padding:12px 16px;background:linear-gradient(135deg,var(--primary),var(--gradient-secondary));color:#fff;font-weight:700;font-size:0.92rem;border-radius:var(--radius)}' +
+        '.proj-mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:rgba(9,12,17,0.96);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid var(--line,#1F2A3C);padding:12px 16px;align-items:center;justify-content:space-between;gap:12px}' +
+        '.proj-mobile-bar .preco-min{font-family:var(--mono,monospace);font-size:10px;font-weight:600;color:var(--txt-2,#8D9CB2);text-transform:uppercase;letter-spacing:0.08em;line-height:1.3}' +
+        '.proj-mobile-bar .preco-val{font-family:var(--mono,monospace);font-size:19px;font-weight:700;color:var(--brand,#5BC8EE);line-height:1.1;margin-top:3px;white-space:nowrap}' +
+        '.proj-mobile-bar a.proj-mobile-cta{flex:1;max-width:220px;display:flex;align-items:center;justify-content:center;min-height:46px;padding:10px 16px;text-align:center;text-decoration:none;line-height:1.2;background:var(--cta,#FFB92E);color:#14100A;font-family:var(--display,sans-serif);font-weight:700;font-size:14.5px;border-radius:var(--radius,8px);transition:transform 100ms,filter 100ms}' +
+        '.proj-mobile-bar a.proj-mobile-cta:hover{filter:brightness(1.08)}' +
+        '.proj-mobile-bar a.proj-mobile-cta:active{transform:translateY(2px)}' +
         '@media (max-width:880px){.proj-mobile-bar{display:flex}body{padding-bottom:74px}}';
       document.head.appendChild(style);
 
