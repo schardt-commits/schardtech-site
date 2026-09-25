@@ -93,7 +93,16 @@
         }
 
         // Botões de loja: ordena por preço
+        // Com dado vivo (p.marketplaces, que o mergeOverlay só preenche pra produto
+        // presente em produtos do prices.json) sai botão SÓ de canal com link lá,
+        // igual ao montar_botoes() do _sync_card_estatico_2026_06_10.py. Antes saía
+        // de qualquer ali_url/shopee_url/ml_url do projetores-data.js e canal que o
+        // pipeline cortou voltava como "Ver preço" (aud. 24/09/2026: ML do AC1085
+        // tirado pelo dono em 31/08, Ali morto do HY450C e mais 5 páginas).
+        // mercado_livre e ml são o mesmo canal (alias do mergeOverlay): 1 botão só.
+        // Sem dado vivo, segue o caminho antigo pelas URLs do data.js.
         var mkts = p.marketplaces || {};
+        var vivo = !!p.marketplaces && typeof p.marketplaces === 'object';
         var btns = [];
         function btn(href, klass, inner, preco) {
           var precoStr = preco ? 'R$ ' + Math.round(preco).toLocaleString('pt-BR') : 'Ver preço';
@@ -101,9 +110,16 @@
                  '<span class="store-name">' + inner + '</span>' +
                  '<span class="store-price">' + precoStr + '</span></a>';
         }
-        if (p.ali_url)    btns.push({preco: (mkts.aliexpress && mkts.aliexpress.preco) || Infinity, html: btn(p.ali_url,    'store-ali',    '<img src="../logo ali.svg" alt="AliExpress" class="store-logo">', mkts.aliexpress && mkts.aliexpress.preco)});
-        if (p.shopee_url) btns.push({preco: (mkts.shopee     && mkts.shopee.preco)     || Infinity, html: btn(p.shopee_url, 'store-shopee', '<img src="../logo shopee.png" alt="Shopee" class="store-logo">', mkts.shopee     && mkts.shopee.preco)});
-        if (p.ml_url)     btns.push({preco: (mkts.ml         && mkts.ml.preco)         || Infinity, html: btn(p.ml_url,     'store-ml',     '<img src="../logo ml2.png" alt="" class="store-logo">Mercado Livre', mkts.ml         && mkts.ml.preco)});
+        function canal(url, mk) {
+          if (!vivo) return url ? {url: url, preco: mk && mk.preco} : null;
+          return (mk && mk.link) ? {url: mk.link, preco: mk.preco} : null;
+        }
+        var cAli = canal(p.ali_url,    mkts.aliexpress);
+        var cShp = canal(p.shopee_url, mkts.shopee);
+        var cMl  = canal(p.ml_url,     mkts.ml || mkts.mercado_livre);
+        if (cAli) btns.push({preco: cAli.preco || Infinity, html: btn(cAli.url, 'store-ali',    '<img src="../logo ali.svg" alt="AliExpress" class="store-logo">', cAli.preco)});
+        if (cShp) btns.push({preco: cShp.preco || Infinity, html: btn(cShp.url, 'store-shopee', '<img src="../logo shopee.png" alt="Shopee" class="store-logo">', cShp.preco)});
+        if (cMl)  btns.push({preco: cMl.preco  || Infinity, html: btn(cMl.url,  'store-ml',     '<img src="../logo ml2.png" alt="" class="store-logo">Mercado Livre', cMl.preco)});
         if (btns.length) {
           btns.sort(function(a,b) { return a.preco - b.preco; });
           if (btns.length > 1 && btns[0] && isFinite(btns[0].preco)) {
@@ -197,6 +213,17 @@
         var m = String(s||'').match(/^\d{4}-(\d{2})-(\d{2})/);
         return m ? (m[2] + '/' + m[1]) : s;
       }
+      // Produto do card em window.PROJETORES_DATA, já mesclado pelo overlay
+      function produtoDoCard() {
+        var card = document.querySelector('.proj-price-card');
+        var data = window.PROJETORES_DATA;
+        if (!card || !Array.isArray(data)) return null;
+        var key = norm(card.dataset.marca) + '|' + norm(card.dataset.modelo);
+        for (var i = 0; i < data.length; i++) {
+          if (norm(data[i].marca) + '|' + norm(data[i].modelo) === key) return data[i];
+        }
+        return null;
+      }
 
       function run() {
         var card = document.querySelector('.proj-price-card');
@@ -226,7 +253,7 @@
               var sub = st.querySelector('.ps-sub');
               var sp = document.createElement('span');
               sp.className = 'ps-stale';
-              sp.textContent = ' (sem conexao com os precos ao vivo — dados de quando a pagina foi gerada)';
+              sp.textContent = ' (sem conexão com os preços ao vivo, dados de quando a página foi gerada)';
               (sub || st).appendChild(sp);
             }
           });
@@ -280,6 +307,16 @@
         // usuário troca por chips (30/90/tudo). 0 = série inteira.
         var diasJanela = labels.length > 35 ? 30 : 0;
         function fatia(arr, dias) { return dias > 0 ? arr.slice(-dias) : arr; }
+        function lojaTemPonto(loja, dias) {
+          return fatia(seriesCompletas[loja], dias).some(function(v) { return v != null; });
+        }
+        function janelaTemPonto(dias) {
+          return lojasAtivas.some(function(l) { return lojaTemPonto(l, dias); });
+        }
+        // Esgotado sem leitura nos últimos 30 dias (aud. 24/09/2026): a janela
+        // padrão saía vazia, com eixo R$ 0 a R$ 1. Abre na série inteira; o chip
+        // "tudo" nasce ativo porque os chips leem esta mesma variável.
+        if (diasJanela > 0 && !janelaTemPonto(diasJanela)) diasJanela = 0;
 
         // Sem bolinha na linha (lagarta) — o hover acha o ponto via hitRadius
         // e o crosshair. Buraco de coleta segue TRACEJADO (sem dado no dia).
@@ -499,8 +536,15 @@
           // Limpa todos exceto o "Todos"
           var todos = filtersWrap.querySelector('[data-filter="todos"]');
           filtersWrap.innerHTML = '';
-          if (todos) filtersWrap.appendChild(todos);
-          else {
+          // Clone, não o próprio: o "Todos" do HTML carrega o handler do gráfico
+          // estático (destruído acima), que desmarcava os chips de período e
+          // chamava update() num chart morto
+          if (todos) {
+            todos = todos.cloneNode(true);
+            todos.classList.add('active');
+            todos.setAttribute('aria-pressed', 'true');
+            filtersWrap.appendChild(todos);
+          } else {
             var btn = document.createElement('button');
             btn.type = 'button';
             btn.className = 'filter-chip active';
@@ -509,6 +553,12 @@
             btn.textContent = 'Todos';
             filtersWrap.appendChild(btn);
           }
+          var chipsLoja = [];
+          var syncChipsLoja = function() {
+            chipsLoja.forEach(function(c, i) {
+              c.style.display = lojaTemPonto(lojasAtivas[i], diasJanela) ? '' : 'none';
+            });
+          };
           datasets.forEach(function(ds, idx) {
             var chip = document.createElement('button');
             chip.type = 'button';
@@ -523,7 +573,11 @@
               chart.update();
             });
             filtersWrap.appendChild(chip);
+            chipsLoja.push(chip);
           });
+          // Loja sem nenhum ponto no recorte visível não ganha chip (só volta
+          // quando o período escolhido alcança as leituras dela)
+          syncChipsLoja();
           var todosChip = filtersWrap.querySelector('[data-filter="todos"]');
           if (todosChip) {
             todosChip.onclick = function() {
@@ -537,10 +591,12 @@
           }
 
           // Chips de período (30/90/tudo) na mesma linha, encostados à direita.
-          // Só aparecem quando o histórico passa de 35 dias.
+          // Só aparecem quando o histórico passa de 35 dias. Recorte sem nenhum
+          // ponto (esgotado há mais de 30/90 dias) não vira chip: clicar nele
+          // desenhava o gráfico vazio com eixo R$ 0 a R$ 1.
           if (labels.length > 35) {
             var periodos = [[30, '30 dias'], [90, '90 dias'], [0, 'tudo']].filter(function(par) {
-              return par[0] === 0 || labels.length > par[0];
+              return par[0] === 0 || (labels.length > par[0] && janelaTemPonto(par[0]));
             });
             periodos.forEach(function(par, i) {
               var chip = document.createElement('button');
@@ -565,6 +621,7 @@
                 var lim = limitesY();
                 chart.options.scales.y.suggestedMin = lim.min;
                 chart.options.scales.y.suggestedMax = lim.max;
+                syncChipsLoja();
                 chart.update();
               });
               filtersWrap.appendChild(chip);
@@ -590,7 +647,33 @@
           var atual = precosHoje.length ? Math.min.apply(null, precosHoje) : pontos[pontos.length - 1].preco;
           var distMedia = ((atual - media) / media) * 100;
           var icon, classe, titulo, sub;
-          if (distMedia <= -3) {
+          // Sem preço publicado (esgotado, retirado, preço em verificação) ou
+          // último ponto com mais de 2 dias: o "atual" do histórico é leitura
+          // velha. Texto neutro, sem "Atualmente" e sem comparar com a média
+          // (aud. 24/09/2026: HY320 esgotado saía "40% abaixo da média").
+          // O mergeOverlay do prices-overlay.js zera preco_atual e grava
+          // indisponivel_motivo; aqui só se lê.
+          var prod = produtoDoCard();
+          var motivo = (prod && !prod.preco_atual) ? norm(prod.indisponivel_motivo) : '';
+          var mUlt = dataMaisRecente.match(/^(\d{4})-(\d{2})-(\d{2})/);
+          var diasDesde = mUlt ? Math.round((today - new Date(+mUlt[1], +mUlt[2] - 1, +mUlt[3])) / 86400000) : 0;
+          var diaUlt = fmtDataChart(dataMaisRecente);
+          if (motivo || diasDesde > 2) {
+            icon = ''; classe = 'neutral';
+            if (motivo === 'indisponivel') {
+              titulo = 'Anúncio retirado';
+              sub = 'Último preço visto: ' + fmtBRL(atual) + ' em ' + diaUlt + '.';
+            } else if (motivo === 'sem_estoque_br') {
+              titulo = 'Sem estoque desde ' + diaUlt;
+              sub = 'Último preço visto: ' + fmtBRL(atual) + '.';
+            } else if (motivo === 'sem_estoque_importado') {
+              titulo = 'Sem estoque nacional desde ' + diaUlt;
+              sub = 'Último preço visto: ' + fmtBRL(atual) + '.';
+            } else {
+              titulo = 'Último preço visto: ' + fmtBRL(atual) + ' em ' + diaUlt;
+              sub = '';
+            }
+          } else if (distMedia <= -3) {
             icon = ''; classe = 'good';
             titulo = Math.abs(Math.round(distMedia)) + '% abaixo da média histórica';
             sub = 'Atualmente em ' + fmtBRL(atual) + '. Média histórica: ' + fmtBRL(media) + '.';
@@ -604,19 +687,24 @@
             sub = 'Atualmente em ' + fmtBRL(atual) + '. Média histórica: ' + fmtBRL(media) + '.';
           }
           statusEl.className = 'price-status ' + classe;
-          statusEl.innerHTML = '<span class="ps-icon">' + icon + '</span><div><strong>' + titulo + '</strong><span class="ps-sub">' + sub + '</span></div>';
+          statusEl.innerHTML = '<span class="ps-icon">' + icon + '</span><div><strong>' + titulo + '</strong>' + (sub ? '<span class="ps-sub">' + sub + '</span>' : '') + '</div>';
         }
         // <!-- banner-vs-media-fix-2026-05-14 -->
       }
 
       // Espera o overlay de prices.json terminar (carrega na mesma rodada) ou roda direto
       function start() {
+        // O banner lê o motivo de indisponível que o overlay grava: sem o
+        // READY ainda, espera até ~3s (mesmo teto do applyHeroOverlay)
         if (window.PRICES_OVERLAY_READY && typeof window.PRICES_OVERLAY_READY.then === 'function') {
           window.PRICES_OVERLAY_READY.then(run).catch(function() { run(); });
+        } else if (++start.tries < 60) {
+          setTimeout(start, 50);
         } else {
           run();
         }
       }
+      start.tries = 0;
 
       // Lazy (10/06/2026): Chart.js (~70KB) + prices-history.json (~45KB) so
       // baixam quando a secao do grafico se aproxima da viewport (600px antes).
