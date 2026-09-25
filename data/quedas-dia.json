@@ -1,59 +1,29 @@
 {
-  "data_coleta": "24/09",
-  "hora_coleta": "21:41",
-  "data_ontem": "23/09",
-  "data_hoje": "24/09",
-  "total_quedas": 24,
+  "data_coleta": "25/09",
+  "hora_coleta": "00:40",
+  "data_ontem": "24/09",
+  "data_hoje": "25/09",
+  "total_quedas": 2,
   "quedas": [
     {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 1183.31,
-      "preco_ontem": 1397.09,
-      "delta": -213.78,
-      "delta_pct": -15.3,
-      "data_checagem": "2026-09-24 21:27"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY350 MAX",
-      "slug": "magcubic-hy350-max",
-      "preco_atual": 643.08,
-      "preco_ontem": 735.08,
-      "delta": -92.0,
-      "delta_pct": -12.52,
-      "data_checagem": "2026-09-24 21:41"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY450",
-      "slug": "magcubic-hy450",
-      "preco_atual": 735.08,
-      "preco_ontem": 827.08,
-      "delta": -92.0,
-      "delta_pct": -11.12,
-      "data_checagem": "2026-09-24 21:41"
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 522.56,
+      "preco_ontem": 678.96,
+      "delta": -156.4,
+      "delta_pct": -23.04,
+      "data_checagem": "2026-09-25 00:40"
     },
     {
       "marca": "Bettdow",
-      "modelo": "AC1082",
-      "slug": "bettdow-ac1082",
-      "preco_atual": 771.88,
-      "preco_ontem": 863.88,
-      "delta": -92.0,
-      "delta_pct": -10.65,
-      "data_checagem": "2026-09-24 21:41"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY450C",
-      "slug": "magcubic-hy450c",
-      "preco_atual": 827.08,
-      "preco_ontem": 919.08,
-      "delta": -92.0,
-      "delta_pct": -10.01,
-      "data_checagem": "2026-09-24 21:41"
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 535.44,
+      "preco_ontem": 551.08,
+      "delta": -15.64,
+      "delta_pct": -2.84,
+      "data_checagem": "2026-09-25 00:40"
     }
   ]
 }
