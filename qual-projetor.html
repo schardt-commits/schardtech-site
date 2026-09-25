@@ -103,7 +103,10 @@
     .qp-dist-label { font-size: 13px; color: var(--txt-2); white-space: nowrap; }
     .qp-lux-input { width: 110px; height: 44px; padding: 0 14px; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); color: var(--txt); font-family: var(--mono); font-size: 14px; outline: none; transition: border-color 150ms; }
     .qp-lux-input:hover, .qp-lux-input:focus { border-color: var(--brand); }
+    .qp-lux-input[aria-invalid="true"] { border-color: var(--alerta); }
     .qp-lux-unit { color: var(--txt-2); font-family: var(--mono); font-size: 13px; }
+    .qp-num-aviso { margin-top: 8px; font-family: var(--mono); font-size: 12.5px; color: var(--alerta); }
+    .qp-num-aviso:empty { margin: 0; }
 
     /* PAINEL AVANÇADO */
     .qp-advanced { margin: 12px 0 28px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--card); }
@@ -347,10 +350,11 @@
         </div>
         <div class="qp-dist-input-row" style="margin-top:14px;">
           <label for="orcMinInput" class="qp-dist-label">De R$</label>
-          <input type="number" id="orcMinInput" class="qp-lux-input" placeholder="mín" min="0" step="50" style="width:120px;" aria-label="Orçamento mínimo em reais">
+          <input type="text" inputmode="decimal" autocomplete="off" id="orcMinInput" class="qp-lux-input" placeholder="mín" style="width:120px;" aria-label="Orçamento mínimo em reais" aria-describedby="orcAviso">
           <label for="orcMaxInput" class="qp-dist-label">Até R$</label>
-          <input type="number" id="orcMaxInput" class="qp-lux-input" placeholder="máx" min="0" step="50" style="width:120px;" aria-label="Orçamento máximo em reais">
+          <input type="text" inputmode="decimal" autocomplete="off" id="orcMaxInput" class="qp-lux-input" placeholder="máx" style="width:120px;" aria-label="Orçamento máximo em reais" aria-describedby="orcAviso">
         </div>
+        <p class="qp-num-aviso" id="orcAviso" aria-live="polite"></p>
       </div>
 
       <!-- 3. Uso principal -->
@@ -411,9 +415,10 @@
         <p class="q-hint">O tamanho estimado da imagem para a sua distância aparece em cada resultado.</p>
         <div class="qp-dist-input-row">
           <label for="distInput" class="visually-hidden">Distância em metros até a parede</label>
-          <input type="number" id="distInput" class="qp-lux-input" placeholder="ex: 2.5" min="0.1" max="15" step="0.1" aria-label="Distância em metros até a parede">
+          <input type="text" inputmode="decimal" autocomplete="off" id="distInput" class="qp-lux-input" placeholder="ex: 2,5" aria-label="Distância em metros até a parede" aria-describedby="distAviso">
           <span class="qp-lux-unit">metros</span>
         </div>
+        <p class="qp-num-aviso" id="distAviso" aria-live="polite"></p>
       </div>
 
       <!-- Painel avançado -->
@@ -633,21 +638,47 @@
       custo_beneficio: null,
     };
 
+    /* Orçamento e distância são type=text + parseNumeroBR (script.js): "1.500"
+       é mil e quinhentos, "1.299,90", "R$ 800" e "2,5" também valem. Antes era
+       type=number + parseFloat: "1.500" virava 1,5 (zero projetores) e o
+       Firefox esvaziava "1.299,90", tirando o filtro sem avisar ninguém.
+       Texto que não vira número marca o campo e avisa embaixo dele. */
+    function lerCampoNum(inp, opts) {
+      const txt = inp.value.trim();
+      let v;
+      if (typeof parseNumeroBR === 'function') v = parseNumeroBR(txt, opts);
+      else { const f = parseFloat(txt.replace(',', '.')); v = isFinite(f) ? f : null; } // script.js velho no cache
+      const invalido = txt !== '' && v === null;
+      if (invalido) inp.setAttribute('aria-invalid', 'true');
+      else inp.removeAttribute('aria-invalid');
+      return { v, invalido };
+    }
+    function avisoOrc() {
+      const ruim = ['orcMinInput', 'orcMaxInput'].some(id =>
+        document.getElementById(id).getAttribute('aria-invalid') === 'true');
+      document.getElementById('orcAviso').textContent = ruim
+        ? 'Digite só o valor, tipo 1.500 ou 1.299,90.' : '';
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('distInput').addEventListener('input', function() {
-        const v = parseFloat(this.value);
-        answers.distancia_metros = v > 0 ? v : null;
+        const c = lerCampoNum(this);
+        answers.distancia_metros = c.v > 0 ? c.v : null;
+        document.getElementById('distAviso').textContent = c.invalido
+          ? 'Digite só o número, tipo 2,5.' : '';
         updateCount();
       });
       document.getElementById('orcMinInput').addEventListener('input', function() {
-        const v = parseFloat(this.value);
-        answers.orcamento_min = v >= 0 ? v : null;
+        const c = lerCampoNum(this, { maxDecimais: 2 });
+        answers.orcamento_min = c.v !== null && c.v >= 0 ? c.v : null;   // null >= 0 é true em JS
+        avisoOrc();
         document.querySelectorAll('#orcPills .qp-option').forEach(o => o.classList.remove('active'));
         updateCount();
       });
       document.getElementById('orcMaxInput').addEventListener('input', function() {
-        const v = parseFloat(this.value);
-        answers.orcamento_max = v > 0 ? v : null;
+        const c = lerCampoNum(this, { maxDecimais: 2 });
+        answers.orcamento_max = c.v > 0 ? c.v : null;
+        avisoOrc();
         document.querySelectorAll('#orcPills .qp-option').forEach(o => o.classList.remove('active'));
         updateCount();
       });
@@ -664,6 +695,8 @@
       answers.orcamento_max = max;
       document.getElementById('orcMinInput').value = min != null ? min : '';
       document.getElementById('orcMaxInput').value = max != null ? max : '';
+      ['orcMinInput', 'orcMaxInput'].forEach(id => document.getElementById(id).removeAttribute('aria-invalid'));
+      avisoOrc();
       updateCount();
     }
 

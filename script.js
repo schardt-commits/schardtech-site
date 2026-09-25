@@ -227,19 +227,83 @@ function initMobileMenu() {
 }
 
 // ============================================================
+// NÚMERO DIGITADO EM PT-BR (quiz, calculadora ANSI, comparar)
+// ============================================================
+/* Texto -> Number, ou null quando não dá pra ler (vazio também volta null:
+   quem chama separa "vazio" de "inválido" olhando o texto).
+   Mesma regra do parseAlvoCentavos do prices-overlay.js (alerta de preço):
+   - tira "R$" e espaços;
+   - separador ÚNICO seguido de exatamente 3 dígitos é MILHAR: "1.500" e
+     "1,500" = 1500, que é como se escreve mil e quinhentos em português;
+   - ponto e vírgula juntos: o ÚLTIMO é o decimal ("1.299,90", "1,299.90");
+   - fora isso, vírgula ou ponto é decimal ("2,5", "2.5", "129,78").
+   Esses campos eram type=number + parseFloat: "1.500" virava 1,5 (o quiz
+   dizia "Nenhum projetor") e o Firefox esvaziava "1.299,90", sumindo com o
+   filtro sem aviso. opts.maxDecimais limita as casas (2 pra dinheiro). */
+function parseNumeroBR(txt, opts) {
+  const s = String(txt == null ? '' : txt).replace(/^\s*R\$?/i, '').replace(/[\s ]/g, '');
+  if (!s || !/^[0-9.,]+$/.test(s)) return null;
+  // milhar bem formado: 1 a 3 dígitos e depois grupos de exatamente 3
+  const milharOk = (str, sep) => str.split(sep).every((g, i) => i === 0 ? /^[0-9]{1,3}$/.test(g) : /^[0-9]{3}$/.test(g));
+  const p = s.lastIndexOf('.');
+  const v = s.lastIndexOf(',');
+  let inteiro = s;
+  let frac = '';
+  if (p !== -1 && v !== -1) {
+    const d = Math.max(p, v);
+    const mil = s.charAt(d) === ',' ? '.' : ',';
+    inteiro = s.slice(0, d);
+    frac = s.slice(d + 1);
+    if (inteiro.indexOf(s.charAt(d)) !== -1 || !milharOk(inteiro, mil)) return null;
+    inteiro = inteiro.split(mil).join('');
+  } else if (p !== -1 || v !== -1) {
+    const sep = p !== -1 ? '.' : ',';
+    const partes = s.split(sep);
+    if (partes.length > 2 || (partes[0] && partes[1].length === 3)) {
+      if (!milharOk(s, sep)) return null;             // "1.500.000" sim, "1.50.0" não
+      inteiro = partes.join('');
+    } else {
+      inteiro = partes[0];
+      frac = partes[1];
+    }
+  }
+  if (!inteiro && !frac) return null;
+  if (opts && opts.maxDecimais != null && frac.length > opts.maxDecimais) return null;
+  const n = Number((inteiro || '0') + (frac ? '.' + frac : ''));
+  return isFinite(n) ? n : null;
+}
+
+// ============================================================
 // CALCULADORA ANSI LUMENS
 // ============================================================
+/* Campos type=text + parseNumeroBR: "129,78" e "1.234,5" valem em qualquer
+   navegador. Texto que não vira número avisa no resultado e marca o campo. */
 function calcAnsiLumens() {
+  const ids = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'ansiW', 'ansiH'];
+  ids.forEach(id => document.getElementById(id)?.removeAttribute('aria-invalid'));
+  const ler = (id) => {
+    const el = document.getElementById(id);
+    const txt = el ? el.value.trim() : '';
+    return { el, txt, v: parseNumeroBR(txt) };
+  };
+  const erro = (c, msg) => { c.el?.setAttribute('aria-invalid', 'true'); showAnsiError(msg); };
+
   const vals = [];
   for (let i = 1; i <= 9; i++) {
-    const v = parseFloat(document.getElementById(`p${i}`)?.value);
-    if (isNaN(v) || v < 0 || v > 10000 || !isFinite(v)) { showAnsiError(`Ponto ${i}: valor deve estar entre 0 e 10000.`); return; }
+    const c = ler(`p${i}`);
+    if (c.txt && c.v === null) { erro(c, `Ponto ${i}: digite só o número, tipo 129,78.`); return; }
+    const v = c.v;
+    if (v === null || v < 0 || v > 10000 || !isFinite(v)) { erro(c, `Ponto ${i}: valor deve estar entre 0 e 10000.`); return; }
     vals.push(v);
   }
-  const w = parseFloat(document.getElementById('ansiW')?.value);
-  const h = parseFloat(document.getElementById('ansiH')?.value);
-  if (!w || w <= 0) { showAnsiError('Informe a largura da imagem.'); return; }
-  if (!h || h <= 0) { showAnsiError('Informe a altura da imagem.'); return; }
+  const cw = ler('ansiW');
+  const ch = ler('ansiH');
+  if (cw.txt && cw.v === null) { erro(cw, 'Largura: digite só o número, tipo 2,50.'); return; }
+  if (ch.txt && ch.v === null) { erro(ch, 'Altura: digite só o número, tipo 1,40.'); return; }
+  const w = cw.v;
+  const h = ch.v;
+  if (!w || w <= 0) { erro(cw, 'Informe a largura da imagem.'); return; }
+  if (!h || h <= 0) { erro(ch, 'Informe a altura da imagem.'); return; }
 
   const avg = vals.reduce((a, b) => a + b, 0) / 9;
   const result = Math.round(avg * w * h);

@@ -620,7 +620,15 @@
     .cp-calc-input::-webkit-outer-spin-button,
     .cp-calc-input::-webkit-inner-spin-button { -webkit-appearance: none; }
     .cp-calc-input:focus { border-color: var(--brand); }
+    .cp-calc-input[aria-invalid="true"] { border-color: var(--alerta); }
     .cp-calc-unit { font-family: var(--mono); font-size: 10.5px; color: var(--txt-2); }
+    /* até 480px a coluna de rótulo é fixa em ~90px e "Com [campo] metros" não
+       cabe numa linha: sem quebrar, o "metros" ficava por cima da 1ª coluna
+       de valores. Acima disso a tabela alarga a coluna e cabe numa linha só. */
+    @media (max-width: 480px) {
+      .cp-calc-cell { flex-wrap: wrap; }
+      .cp-calc-input { max-width: 100%; }
+    }
 
     /* ── ONDE COMPRAR ─────────────────────────── */
     .cp-purchase-wrap { margin-top: 44px; }
@@ -1832,7 +1840,7 @@
             <td class="cp-td-label" style="padding:0;border-right:1px solid var(--line)">
               <div class="cp-calc-cell">
                 <span class="cp-calc-label">Com</span>
-                <input type="number" class="cp-calc-input" id="calcDist" placeholder="2.5" min="0.3" max="20" step="0.1" oninput="updateCalc()" aria-label="Distância em metros para cálculo do tamanho da imagem">
+                <input type="text" inputmode="decimal" autocomplete="off" class="cp-calc-input" id="calcDist" placeholder="2,5" oninput="updateCalc()" aria-label="Distância em metros para cálculo do tamanho da imagem">
                 <span class="cp-calc-unit">metros &rarr;</span>
               </div>
             </td>
@@ -1919,17 +1927,28 @@
       /* restore calc distance */
       if (calcDist) {
         const inp = document.getElementById('calcDist');
-        if (inp) { inp.value = calcDist; updateCalc(); }
+        if (inp) { inp.value = String(calcDist).replace('.', ','); updateCalc(); }
       }
     }
 
+    /* #calcDist é type=text + parseNumeroBR (script.js): "2,5" e "2.5" dão
+       2,5 m em qualquer navegador (o type=number descartava a vírgula conforme
+       o idioma do aparelho). Texto que não vira número avisa na própria linha. */
     function updateCalc() {
       const inp = document.getElementById('calcDist');
       if (!inp) return;
-      calcDist = parseFloat(inp.value) || null;
+      const txt = inp.value.trim();
+      let v;
+      if (typeof parseNumeroBR === 'function') v = parseNumeroBR(txt);
+      else { const f = parseFloat(txt.replace(',', '.')); v = isFinite(f) ? f : null; } // script.js velho no cache
+      const invalido = txt !== '' && v === null;
+      if (invalido) inp.setAttribute('aria-invalid', 'true');
+      else inp.removeAttribute('aria-invalid');
+      calcDist = v || null;
       selected.filter(Boolean).forEach((p, i) => {
         const cell = document.getElementById(`calcV${i}`);
         if (!cell) return;
+        if (invalido) { cell.textContent='Número inválido'; cell.style.color='var(--alerta)'; return; }
         if (!calcDist || !p.distancia_100pol_m) { cell.textContent='—'; cell.style.color='var(--txt-2)'; return; }
         const pol = Math.round((calcDist / p.distancia_100pol_m) * 100);
         if (pol < 20) { cell.textContent='< 20pol'; cell.style.color='var(--alerta)'; }

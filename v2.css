@@ -425,3 +425,21 @@ footer { border-top: 1px solid var(--line); background: var(--bg-2); padding: 48
   .foot-novidades { flex-direction: column; gap: 0; align-items: flex-start; }
   .fn-sep { display: none; }
 }
+
+/* ---------- campos no toque: fonte de 16px ----------
+   Abaixo de 16px o Safari do iPhone dá zoom sozinho ao focar o campo, e a
+   página continua ampliada depois (busca do topo em 12.5px, calculadora,
+   quiz, comparar, filtros de catálogo e ranking). A regra antiga ficou no
+   style.css, que nenhuma página v2 carrega. Media de toque e não de largura:
+   cobre também o iPhone deitado e o iPad. !important porque cada página tem
+   seu próprio font-size com seletor de id. No desktop nada muda. Não trocar
+   por maximum-scale=1 no viewport: isso tira o zoom de pinça de todo mundo.
+   .ae-alvo fica de fora: o valor do alerta de preço já é 17px de propósito
+   (prices-overlay.js) e o !important o puxaria pra 16.
+   O placeholder da busca do topo volta ao tamanho antigo: o zoom só olha a
+   fonte do campo, e em 16px o "Buscar projetor..." cortava no celular. */
+@media (hover: none) and (pointer: coarse) {
+  input:not([type=checkbox]):not([type=radio]):not([type=range]):not(.ae-alvo),
+  select, textarea { font-size: 16px !important; }
+  .busca input::placeholder { font-size: 12.5px; }
+}
