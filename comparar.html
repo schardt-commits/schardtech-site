@@ -825,6 +825,16 @@
     }
     .cp-review-btn:hover { border-color: var(--brand); color: var(--brand); }
     .cp-no-links { font-family: var(--mono); font-size: 11.5px; color: var(--txt-2); }
+    /* Estado de metadata.indisponiveis (renderPurchase): retirado, sem estoque,
+       importado ou verificando, no lugar do preço que o overlay zerou */
+    .cp-price-status { font-family: var(--display); font-size: 18px; font-weight: 700; color: var(--alerta); }
+    .cp-price-status.verificando { color: var(--txt-2); }
+    /* Sem estoque: o botão fica (cookie de afiliado, igual à página do produto)
+       mas perde a cara de compra, porque o amarelo é exclusivo de compra */
+    .cp-store-btn.cp-store-ver { background: var(--card-2); border: 1px solid var(--line); color: var(--txt); }
+    .cp-store-btn.cp-store-ver:hover { filter: none; border-color: var(--brand); }
+    .cp-store-ver .cp-store-name { justify-content: flex-start; }
+    .cp-store-ver-txt { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--txt-2); white-space: nowrap; }
 
     /* ── MODAL ────────────────────────────────── */
     .cp-modal-overlay {
@@ -1399,6 +1409,21 @@
       // com dados do prices-overlay.js. Fallback pro display antigo quando o
       // overlay não trouxe dados (produto fora do prices.json mas com preço estático).
       const r = n => 'R$ ' + Math.round(Number(n)).toLocaleString('pt-BR');
+      // Produto em metadata.indisponiveis: o overlay zerou o preço, então o card
+      // diz o porquê (textos do patchIndisponiveisDOM da página do produto).
+      const estado = estadoIndisp(p);
+      if (estado && !p.preco_atual) {
+        const st = {
+          indisponivel:          ['Anúncio retirado', 'A loja retirou esse anúncio'],
+          sem_estoque_br:        ['Sem estoque', 'Anúncio sem estoque agora, costuma voltar'],
+          sem_estoque_importado: ['Importado', 'Sem estoque nacional agora, sujeito a taxa de importação'],
+          verificando:           ['Verificando preço', '']
+        }[estado];
+        return `<div class="cp-price-block">
+          <div class="cp-price-status${estado === 'verificando' ? ' verificando' : ''}">${st[0]}</div>
+          ${st[1] ? `<div class="cp-price-meta">${st[1]}</div>` : ''}
+        </div>`;
+      }
       if (p.preco_atual) {
         const mk   = fmtMarketplaceLabel(p.marketplace_vencedor);
         const min  = p.preco_min_historico;
@@ -1414,7 +1439,7 @@
           : '';
         const mkSpan = mk ? ` <span class="cp-price-marketplace">${mk.prep} ${mk.label}</span>` : '';
         const venc = (p.marketplaces && p.marketplaces[p.marketplace_vencedor]) || {};
-        const cupomNoVencedor = venc.cupom || null;
+        const cupomNoVencedor = cupomVivo(venc.cupom, venc.cupom_validade) ? venc.cupom : null;
         const verif = verifLabel(p.data_verificacao);
         const extras = [];
         if (verif) extras.push(verif);
@@ -1437,6 +1462,40 @@
     function safeUrl(url) {
       if (!url || typeof url !== 'string') return null;
       return /^https?:\/\//i.test(url.trim()) ? url.trim() : null;
+    }
+
+    /* Cupom com validade vencida não aparece: mesma regra da home e da página
+       do produto (UI2.cupomVivo do ui-interacoes.js). Validade vazia = vivo.
+       O fallback local só cobre ui-interacoes.js velho no cache. */
+    function cupomVivo(cod, validade) {
+      if (window.UI2 && typeof UI2.cupomVivo === 'function') return UI2.cupomVivo(cod, validade);
+      const d = new Date();
+      const hoje = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+      return !!cod && !(validade && validade < hoje);
+    }
+
+    /* Estado de metadata.indisponiveis (o mergeOverlay grava p.indisponivel_motivo
+       e zera o preço). Mesma regra do patchIndisponiveisDOM (prices-overlay.js):
+       'indisponivel' = anúncio retirado, sem botão de loja; 'sem_estoque_br' =
+       "Sem estoque" e botões "Ver na loja"; 'sem_estoque_importado' = "Importado"
+       e botões normais; qualquer outro motivo (diagnóstico do checker, coletando)
+       = "Verificando preço" e botões intactos. p.sem_estoque_real sozinho não
+       serve: ele inclui o importado. */
+    function estadoIndisp(p) {
+      const m = String(p.indisponivel_motivo || '').trim().toLowerCase();
+      if (!m) return null;
+      return (m === 'indisponivel' || m === 'sem_estoque_br' || m === 'sem_estoque_importado') ? m : 'verificando';
+    }
+
+    /* Canal de loja do card de compra. Com dado vivo (p.marketplaces, que o
+       mergeOverlay só preenche pra produto presente no prices.json) sai botão SÓ
+       de canal com link lá, igual ao applyHeroOverlay do projetor-page.js: canal
+       que o pipeline cortou (ML do AC1085, Ali morto do HY450C) não volta pelas
+       URLs do projetores-data.js. Sem dado vivo, segue pelas URLs do data.js. */
+    function canalLoja(p, url, mk) {
+      const vivo = !!p.marketplaces && typeof p.marketplaces === 'object';
+      const u = safeUrl(vivo ? (mk && mk.link) : url);
+      return u ? { url: u, preco: (mk && mk.preco) ?? Infinity } : null;
     }
 
     /* vars de cor do slot: --sc sólida + variantes com alpha (hex de 8 dígitos) */
@@ -1760,7 +1819,10 @@
             return '<span class="val-dash" title="Sem ANSI medido">—</span>';
           if(p.status === 'importado')
             return '<span class="val-dash" title="Internacional: ICMS e importação distorcem o custo, então o cálculo não se aplica">internacional</span>';
-          if(String(p.status||'').startsWith('sem_estoque') || p.status === 'indisponivel')
+          // status do data.js OU motivo do prices.json (esgotado de hoje, que o
+          // data.js não sabe; aud. 24/09 js-inline-04)
+          if(String(p.status||'').startsWith('sem_estoque') || p.status === 'indisponivel'
+             || estadoIndisp(p) === 'sem_estoque_br' || estadoIndisp(p) === 'indisponivel')
             return '<span class="val-dash" title="Sem estoque: sem preço do dia, então o cálculo não se aplica">sem estoque</span>';
           if(!p.preco_atual)
             return '<span class="val-dash" title="Sem preço checado do dia, então o cálculo não se aplica">sem preço do dia</span>';
@@ -2004,17 +2066,32 @@
       document.getElementById('purchaseGrid').innerHTML = projs.map((p,i) => {
         const priceBlock = priceHtmlRich(p);
         const mk = p.marketplaces || {};
-        const storesData = [];
-        if (safeUrl(p.amazon_url)) storesData.push({ preco: mk.amazon?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="sponsored noopener" class="cp-store-btn cp-store-amazon" aria-label="Comprar na Amazon"><span class="cp-store-name">Amazon</span>${EXT}</a>` });
-        if (safeUrl(p.ml_url))     storesData.push({ preco: mk.ml?.preco         ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="sponsored noopener" class="cp-store-btn cp-store-ml" aria-label="Comprar no Mercado Livre"><span class="cp-store-name">Mercado Livre</span>${EXT}</a>` });
-        if (safeUrl(p.shopee_url)) storesData.push({ preco: mk.shopee?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="sponsored noopener" class="cp-store-btn cp-store-shopee" aria-label="Comprar na Shopee"><span class="cp-store-name">Shopee</span>${EXT}</a>` });
-        if (safeUrl(p.ali_url))    storesData.push({ preco: mk.aliexpress?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="sponsored noopener" class="cp-store-btn cp-store-ali" aria-label="Comprar no AliExpress"><span class="cp-store-name">AliExpress</span>${EXT}</a>` });
+        const estado = estadoIndisp(p);
+        // 'indisponivel' = anúncio retirado, link morto: nenhum botão de loja.
+        // 'sem_estoque_br' = mantém o link, rotulado "Ver na loja".
+        const lojas = estado === 'indisponivel' ? [] : [
+          ['amazon', 'Amazon',        'na', canalLoja(p, p.amazon_url, mk.amazon)],
+          ['ml',     'Mercado Livre', 'no', canalLoja(p, p.ml_url,     mk.ml || mk.mercado_livre)],
+          ['shopee', 'Shopee',        'na', canalLoja(p, p.shopee_url, mk.shopee)],
+          ['ali',    'AliExpress',    'no', canalLoja(p, p.ali_url,    mk.aliexpress)]
+        ];
+        const storesData = lojas.filter(l => l[3]).map(([cls, nome, prep, c]) => ({
+          preco: c.preco,
+          html: estado === 'sem_estoque_br'
+            ? `<a href="${escAttr(c.url)}" target="_blank" rel="sponsored noopener" class="cp-store-btn cp-store-${cls} cp-store-ver" aria-label="Ver ${prep} ${nome}, sem estoque agora"><span class="cp-store-name">${nome}</span><span class="cp-store-ver-txt">Ver na loja</span>${EXT}</a>`
+            : `<a href="${escAttr(c.url)}" target="_blank" rel="sponsored noopener" class="cp-store-btn cp-store-${cls}" aria-label="Comprar ${prep} ${nome}"><span class="cp-store-name">${nome}</span>${EXT}</a>`
+        }));
         storesData.sort((a, b) => a.preco - b.preco);
         const stores = storesData.map(s => s.html);
 
+        // Cupom só vivo (validade) e nunca em anúncio retirado ou sem estoque,
+        // igual ao #projCupomSlot da página do produto.
         const cupons = [];
-        if (p.ali_cupom_loja)  cupons.push({label:'Cupom loja AliExpress', code:p.ali_cupom_loja});
-        if (p.ali_cupom_promo) cupons.push({label:'Cupom promoção',        code:p.ali_cupom_promo});
+        if (estado !== 'indisponivel' && estado !== 'sem_estoque_br') {
+          const ali = mk.aliexpress || {};
+          if (cupomVivo(p.ali_cupom_loja,  ali.cupom_validade))            cupons.push({label:'Cupom loja AliExpress', code:p.ali_cupom_loja});
+          if (cupomVivo(p.ali_cupom_promo, ali.cupom_plataforma_validade)) cupons.push({label:'Cupom promoção',        code:p.ali_cupom_promo});
+        }
 
         const nameBlock = p.slug
           ? `<a class="cp-pcard-name-link" href="${(window.SITE_BASE_PATH || '')}projetor/${escAttr(p.slug)}.html" aria-label="Ver página completa do ${escAttr(p.marca)} ${escAttr(p.modelo)}">
@@ -2028,9 +2105,9 @@
         return `<div class="cp-pcard" data-slot="${i}" style="animation-delay:${i*90}ms">
           ${nameBlock}
           ${priceBlock}
-          <div class="cp-store-btns">
+          ${estado === 'indisponivel' ? '' : `<div class="cp-store-btns">
             ${stores.length ? stores.join('') : '<span class="cp-no-links">Sem links disponíveis ainda</span>'}
-          </div>
+          </div>`}
           ${cupons.map(c=>`
             <div class="cp-cupom">
               <div>
@@ -2218,9 +2295,14 @@
     function loadFromUrl() {
       const c = new URLSearchParams(location.search).get('c');
       if (!c) return;
-      c.split(',').slice(0,3).forEach((m,i) => {
-        const p = DATA.find(d => d.modelo === decodeURIComponent(m));
-        if (p) selected[i] = p;
+      // listar:false = produto banido: fora da ?c= também, igual ao modal
+      // (aud. 24/09 js-inline-05). Slots preenchidos em ordem, sem buraco, pra
+      // cor do slot bater com a da tabela e do radar.
+      let k = 0;
+      c.split(',').forEach(m => {
+        if (k >= 3) return;
+        const p = DATA.find(d => d.modelo === decodeURIComponent(m) && d.listar !== false);
+        if (p) selected[k++] = p;
       });
     }
 

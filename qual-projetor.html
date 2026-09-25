@@ -609,6 +609,16 @@
       return /^https?:\/\//i.test(t) ? t : '';
     }
 
+    /* Cupom com validade vencida não aparece: mesma regra da home e da página
+       do produto (UI2.cupomVivo do ui-interacoes.js). Validade vazia = vivo.
+       O fallback local só cobre ui-interacoes.js velho no cache. */
+    function cupomVivoQp(cod, validade) {
+      if (window.UI2 && typeof UI2.cupomVivo === 'function') return UI2.cupomVivo(cod, validade);
+      const d = new Date();
+      const hoje = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+      return !!cod && !(validade && validade < hoje);
+    }
+
     function fmtMarketplaceLabelQp(slug) {
       return ({
         'aliexpress':    { label: 'AliExpress',    prep: 'no' },
@@ -876,6 +886,10 @@
 
     function passesFilter(p, a) {
       if (p.listar === false) return false; // produto banido: fora das recomendações
+      // Produto em metadata.indisponiveis (anúncio retirado, sem estoque, sem preço
+      // do dia) nunca é recomendado. Hoje o preço zerado pelo mergeOverlay já tira
+      // ele logo abaixo; a checagem explícita segura isso se a regra de preço mudar.
+      if (p.indisponivel_motivo) return false;
       // Projetor sem preço cadastrado nunca aparece
       // Preço base = atual (overlay) com fallback pro min estático da planilha mãe.
       const precoBase = p.preco_atual || p.preco_min;
@@ -1239,17 +1253,32 @@
 
       const mkts = p.marketplaces || {};
       const btnPreco = v => (v != null && isFinite(v) && v > 0) ? ' &middot; ' + r(v) : '';
+      // Com dado vivo (p.marketplaces, que o mergeOverlay só preenche pra produto
+      // presente no prices.json) sai botão SÓ de canal com link lá, igual ao
+      // applyHeroOverlay do projetor-page.js: canal que o pipeline cortou não volta
+      // pelas URLs do projetores-data.js. Sem dado vivo, segue pelas URLs do data.js.
+      const vivo = !!p.marketplaces && typeof p.marketplaces === 'object';
+      const canal = (url, m) => {
+        const u = safeUrl(vivo ? (m && m.link) : url);
+        return u ? { url: u, preco: (m && m.preco) ?? Infinity } : null;
+      };
       const storesData = [];
-      if (safeUrl(p.ali_url))    storesData.push({ preco: mkts.aliexpress?.preco ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ali_url))}"    target="_blank" rel="sponsored noopener" class="qp-store-btn ali">AliExpress${btnPreco(mkts.aliexpress?.preco)}</a>` });
-      if (safeUrl(p.ml_url))     storesData.push({ preco: mkts.ml?.preco         ?? Infinity, html: `<a href="${escAttr(safeUrl(p.ml_url))}"     target="_blank" rel="sponsored noopener" class="qp-store-btn ml">Mercado Livre${btnPreco(mkts.ml?.preco)}</a>` });
-      if (safeUrl(p.shopee_url)) storesData.push({ preco: mkts.shopee?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.shopee_url))}" target="_blank" rel="sponsored noopener" class="qp-store-btn shopee">Shopee${btnPreco(mkts.shopee?.preco)}</a>` });
-      if (safeUrl(p.amazon_url)) storesData.push({ preco: mkts.amazon?.preco     ?? Infinity, html: `<a href="${escAttr(safeUrl(p.amazon_url))}" target="_blank" rel="sponsored noopener" class="qp-store-btn amazon">Amazon${btnPreco(mkts.amazon?.preco)}</a>` });
+      [
+        ['ali',    'AliExpress',    canal(p.ali_url,    mkts.aliexpress)],
+        ['ml',     'Mercado Livre', canal(p.ml_url,     mkts.ml || mkts.mercado_livre)],
+        ['shopee', 'Shopee',        canal(p.shopee_url, mkts.shopee)],
+        ['amazon', 'Amazon',        canal(p.amazon_url, mkts.amazon)]
+      ].forEach(([cls, nome, c]) => {
+        if (c) storesData.push({ preco: c.preco, html: `<a href="${escAttr(c.url)}" target="_blank" rel="sponsored noopener" class="qp-store-btn ${cls}">${nome}${btnPreco(c.preco)}</a>` });
+      });
       storesData.sort((a, b) => a.preco - b.preco);
       const stores = storesData.map(s => s.html);
 
+      // Cupom só vivo (validade do prices.json); o mergeOverlay já garante Ali-only
+      const ali = mkts.aliexpress || {};
       const coupons = [];
-      if (p.ali_cupom_loja)  coupons.push({ label: 'Cupom loja AliExpress',      code: p.ali_cupom_loja });
-      if (p.ali_cupom_promo) coupons.push({ label: 'Cupom promoção AliExpress',  code: p.ali_cupom_promo });
+      if (cupomVivoQp(p.ali_cupom_loja,  ali.cupom_validade))            coupons.push({ label: 'Cupom loja AliExpress',      code: p.ali_cupom_loja });
+      if (cupomVivoQp(p.ali_cupom_promo, ali.cupom_plataforma_validade)) coupons.push({ label: 'Cupom promoção AliExpress',  code: p.ali_cupom_promo });
       const couponsHtml = coupons.length
         ? `<div class="qp-coupons">${coupons.map(c =>
             `<div class="qp-coupon">
