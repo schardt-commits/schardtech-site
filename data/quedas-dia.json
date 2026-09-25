@@ -1,9 +1,9 @@
 {
   "data_coleta": "25/09",
-  "hora_coleta": "10:21",
+  "hora_coleta": "10:47",
   "data_ontem": "24/09",
   "data_hoje": "25/09",
-  "total_quedas": 2,
+  "total_quedas": 3,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,7 +13,7 @@
       "preco_ontem": 678.96,
       "delta": -234.36,
       "delta_pct": -34.52,
-      "data_checagem": "2026-09-25 10:21"
+      "data_checagem": "2026-09-25 10:47"
     },
     {
       "marca": "Bettdow",
@@ -23,7 +23,17 @@
       "preco_ontem": 551.08,
       "delta": -15.64,
       "delta_pct": -2.84,
-      "data_checagem": "2026-09-25 10:21"
+      "data_checagem": "2026-09-25 10:47"
+    },
+    {
+      "marca": "Voxflix",
+      "modelo": "VF71",
+      "slug": "voxflix-vf71",
+      "preco_atual": 1093.81,
+      "preco_ontem": 1094.38,
+      "delta": -0.57,
+      "delta_pct": -0.05,
+      "data_checagem": "2026-09-25 10:34"
     }
   ]
 }
