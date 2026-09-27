@@ -1,8 +1,19 @@
 {
   "data_coleta": "27/09",
-  "hora_coleta": "",
+  "hora_coleta": "15:18",
   "data_ontem": "26/09",
   "data_hoje": "27/09",
-  "total_quedas": 0,
-  "quedas": []
+  "total_quedas": 1,
+  "quedas": [
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1041",
+      "slug": "bettdow-ac1041",
+      "preco_atual": 749.0,
+      "preco_ontem": 819.0,
+      "delta": -70.0,
+      "delta_pct": -8.55,
+      "data_checagem": "2026-09-27 15:18"
+    }
+  ]
 }
