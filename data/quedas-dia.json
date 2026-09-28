@@ -1,59 +1,59 @@
 {
   "data_coleta": "28/09",
-  "hora_coleta": "09:28",
+  "hora_coleta": "15:14",
   "data_ontem": "27/09",
   "data_hoje": "28/09",
-  "total_quedas": 8,
+  "total_quedas": 9,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 522.56,
-      "preco_ontem": 678.96,
-      "delta": -156.4,
-      "delta_pct": -23.04,
-      "data_checagem": "2026-09-28 09:28"
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 661.74,
+      "preco_ontem": 797.76,
+      "delta": -136.02,
+      "delta_pct": -17.05,
+      "data_checagem": "2026-09-28 15:10"
     },
     {
       "marca": "Horlat",
       "modelo": "T9N",
       "slug": "horlat-t9n",
-      "preco_atual": 775.23,
+      "preco_atual": 776.34,
       "preco_ontem": 858.91,
-      "delta": -83.68,
-      "delta_pct": -9.74,
-      "data_checagem": "2026-09-28 09:21"
+      "delta": -82.57,
+      "delta_pct": -9.61,
+      "data_checagem": "2026-09-28 15:11"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Magic 1",
+      "slug": "byintek-magic-1",
+      "preco_atual": 1402.85,
+      "preco_ontem": 1517.86,
+      "delta": -115.01,
+      "delta_pct": -7.58,
+      "data_checagem": "2026-09-28 15:14"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD80PRO",
       "slug": "thundeal-td80pro",
-      "preco_atual": 542.51,
+      "preco_atual": 542.71,
       "preco_ontem": 570.64,
-      "delta": -28.13,
-      "delta_pct": -4.93,
-      "data_checagem": "2026-09-28 09:22"
+      "delta": -27.93,
+      "delta_pct": -4.89,
+      "data_checagem": "2026-09-28 15:12"
     },
     {
       "marca": "FlixTone",
       "modelo": "D10S",
       "slug": "flixtone-d10s",
-      "preco_atual": 2053.35,
+      "preco_atual": 2056.31,
       "preco_ontem": 2133.25,
-      "delta": -79.9,
-      "delta_pct": -3.75,
-      "data_checagem": "2026-09-28 09:24"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D9W Mini",
-      "slug": "flixtone-d9w-mini",
-      "preco_atual": 1110.43,
-      "preco_ontem": 1152.55,
-      "delta": -42.12,
-      "delta_pct": -3.65,
-      "data_checagem": "2026-09-28 09:20"
+      "delta": -76.94,
+      "delta_pct": -3.61,
+      "data_checagem": "2026-09-28 15:14"
     }
   ]
 }
