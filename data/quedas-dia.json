@@ -1,8 +1,39 @@
 {
-  "data_coleta": "27/09",
-  "hora_coleta": "",
-  "data_ontem": "26/09",
-  "data_hoje": "27/09",
-  "total_quedas": 0,
-  "quedas": []
+  "data_coleta": "28/09",
+  "hora_coleta": "00:28",
+  "data_ontem": "27/09",
+  "data_hoje": "28/09",
+  "total_quedas": 3,
+  "quedas": [
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 522.56,
+      "preco_ontem": 678.96,
+      "delta": -156.4,
+      "delta_pct": -23.04,
+      "data_checagem": "2026-09-28 00:28"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1885.08,
+      "preco_ontem": 1931.99,
+      "delta": -46.91,
+      "delta_pct": -2.43,
+      "data_checagem": "2026-09-28 00:28"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 530.63,
+      "preco_ontem": 535.44,
+      "delta": -4.81,
+      "delta_pct": -0.9,
+      "data_checagem": "2026-09-28 00:28"
+    }
+  ]
 }
