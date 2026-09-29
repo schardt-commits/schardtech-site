@@ -1,59 +1,19 @@
 {
-  "data_coleta": "28/09",
-  "hora_coleta": "21:25",
-  "data_ontem": "27/09",
-  "data_hoje": "28/09",
-  "total_quedas": 10,
+  "data_coleta": "29/09",
+  "hora_coleta": "00:28",
+  "data_ontem": "28/09",
+  "data_hoje": "29/09",
+  "total_quedas": 1,
   "quedas": [
     {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 646.01,
-      "preco_ontem": 797.76,
-      "delta": -151.75,
-      "delta_pct": -19.02,
-      "data_checagem": "2026-09-28 21:20"
-    },
-    {
-      "marca": "Horlat",
-      "modelo": "T9N",
-      "slug": "horlat-t9n",
-      "preco_atual": 776.34,
-      "preco_ontem": 858.91,
-      "delta": -82.57,
-      "delta_pct": -9.61,
-      "data_checagem": "2026-09-28 21:21"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Magic 1",
-      "slug": "byintek-magic-1",
-      "preco_atual": 1402.85,
-      "preco_ontem": 1517.86,
-      "delta": -115.01,
-      "delta_pct": -7.58,
-      "data_checagem": "2026-09-28 21:25"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 542.71,
-      "preco_ontem": 570.64,
-      "delta": -27.93,
-      "delta_pct": -4.89,
-      "data_checagem": "2026-09-28 21:22"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D10S",
-      "slug": "flixtone-d10s",
-      "preco_atual": 2056.31,
-      "preco_ontem": 2133.25,
-      "delta": -76.94,
-      "delta_pct": -3.61,
-      "data_checagem": "2026-09-28 21:24"
+      "marca": "Magcubic",
+      "modelo": "L018",
+      "slug": "magcubic-l018",
+      "preco_atual": 598.0,
+      "preco_ontem": 643.08,
+      "delta": -45.08,
+      "delta_pct": -7.01,
+      "data_checagem": "2026-09-29 00:28"
     }
   ]
 }
