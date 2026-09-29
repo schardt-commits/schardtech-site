@@ -1,19 +1,19 @@
 {
   "data_coleta": "28/09",
-  "hora_coleta": "15:14",
+  "hora_coleta": "21:25",
   "data_ontem": "27/09",
   "data_hoje": "28/09",
-  "total_quedas": 9,
+  "total_quedas": 10,
   "quedas": [
     {
       "marca": "Everycom",
       "modelo": "R16",
       "slug": "everycom-r16",
-      "preco_atual": 661.74,
+      "preco_atual": 646.01,
       "preco_ontem": 797.76,
-      "delta": -136.02,
-      "delta_pct": -17.05,
-      "data_checagem": "2026-09-28 15:10"
+      "delta": -151.75,
+      "delta_pct": -19.02,
+      "data_checagem": "2026-09-28 21:20"
     },
     {
       "marca": "Horlat",
@@ -23,7 +23,7 @@
       "preco_ontem": 858.91,
       "delta": -82.57,
       "delta_pct": -9.61,
-      "data_checagem": "2026-09-28 15:11"
+      "data_checagem": "2026-09-28 21:21"
     },
     {
       "marca": "Byintek",
@@ -33,7 +33,7 @@
       "preco_ontem": 1517.86,
       "delta": -115.01,
       "delta_pct": -7.58,
-      "data_checagem": "2026-09-28 15:14"
+      "data_checagem": "2026-09-28 21:25"
     },
     {
       "marca": "Thundeal",
@@ -43,7 +43,7 @@
       "preco_ontem": 570.64,
       "delta": -27.93,
       "delta_pct": -4.89,
-      "data_checagem": "2026-09-28 15:12"
+      "data_checagem": "2026-09-28 21:22"
     },
     {
       "marca": "FlixTone",
@@ -53,7 +53,7 @@
       "preco_ontem": 2133.25,
       "delta": -76.94,
       "delta_pct": -3.61,
-      "data_checagem": "2026-09-28 15:14"
+      "data_checagem": "2026-09-28 21:24"
     }
   ]
 }
