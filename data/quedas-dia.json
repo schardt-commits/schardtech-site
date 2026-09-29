@@ -1,10 +1,20 @@
 {
   "data_coleta": "29/09",
-  "hora_coleta": "00:28",
+  "hora_coleta": "09:28",
   "data_ontem": "28/09",
   "data_hoje": "29/09",
-  "total_quedas": 1,
+  "total_quedas": 2,
   "quedas": [
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 522.56,
+      "preco_ontem": 678.96,
+      "delta": -156.4,
+      "delta_pct": -23.04,
+      "data_checagem": "2026-09-29 09:28"
+    },
     {
       "marca": "Magcubic",
       "modelo": "L018",
@@ -13,7 +23,7 @@
       "preco_ontem": 643.08,
       "delta": -45.08,
       "delta_pct": -7.01,
-      "data_checagem": "2026-09-29 00:28"
+      "data_checagem": "2026-09-29 09:28"
     }
   ]
 }
