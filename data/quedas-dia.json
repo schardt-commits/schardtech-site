@@ -1,10 +1,20 @@
 {
   "data_coleta": "30/09",
-  "hora_coleta": "00:28",
+  "hora_coleta": "09:28",
   "data_ontem": "29/09",
   "data_hoje": "30/09",
-  "total_quedas": 2,
+  "total_quedas": 8,
   "quedas": [
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 522.56,
+      "preco_ontem": 678.96,
+      "delta": -156.4,
+      "delta_pct": -23.04,
+      "data_checagem": "2026-09-30 09:28"
+    },
     {
       "marca": "Thundeal",
       "modelo": "TD98 MINI",
@@ -13,7 +23,7 @@
       "preco_ontem": 1192.98,
       "delta": -27.51,
       "delta_pct": -2.31,
-      "data_checagem": "2026-09-30 00:24"
+      "data_checagem": "2026-09-30 09:24"
     },
     {
       "marca": "Bettdow",
@@ -23,7 +33,27 @@
       "preco_ontem": 873.08,
       "delta": -9.2,
       "delta_pct": -1.05,
-      "data_checagem": "2026-09-30 00:28"
+      "data_checagem": "2026-09-30 09:28"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A10",
+      "slug": "vevshao-a10",
+      "preco_atual": 978.33,
+      "preco_ontem": 979.68,
+      "delta": -1.35,
+      "delta_pct": -0.14,
+      "data_checagem": "2026-09-30 09:23"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Magic 1",
+      "slug": "byintek-magic-1",
+      "preco_atual": 1520.08,
+      "preco_ontem": 1521.43,
+      "delta": -1.35,
+      "delta_pct": -0.09,
+      "data_checagem": "2026-09-30 09:25"
     }
   ]
 }
