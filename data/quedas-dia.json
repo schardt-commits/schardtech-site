@@ -1,20 +1,10 @@
 {
   "data_coleta": "29/09",
-  "hora_coleta": "15:18",
+  "hora_coleta": "21:29",
   "data_ontem": "28/09",
   "data_hoje": "29/09",
-  "total_quedas": 2,
+  "total_quedas": 4,
   "quedas": [
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 522.56,
-      "preco_ontem": 678.96,
-      "delta": -156.4,
-      "delta_pct": -23.04,
-      "data_checagem": "2026-09-29 15:18"
-    },
     {
       "marca": "Magcubic",
       "modelo": "L018",
@@ -23,7 +13,37 @@
       "preco_ontem": 643.08,
       "delta": -45.08,
       "delta_pct": -7.01,
-      "data_checagem": "2026-09-29 15:18"
+      "data_checagem": "2026-09-29 21:29"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 766.75,
+      "preco_ontem": 804.6,
+      "delta": -37.85,
+      "delta_pct": -4.7,
+      "data_checagem": "2026-09-29 21:23"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1669.55,
+      "preco_ontem": 1720.39,
+      "delta": -50.84,
+      "delta_pct": -2.96,
+      "data_checagem": "2026-09-29 21:29"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1672.94,
+      "preco_ontem": 1713.07,
+      "delta": -40.13,
+      "delta_pct": -2.34,
+      "data_checagem": "2026-09-29 21:25"
     }
   ]
 }
