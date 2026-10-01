@@ -1005,16 +1005,36 @@
     } catch (e) { /* nunca derrubar os outros patches */ }
   }
 
-  function applyOverlay() {
-    const bp = basePath();
-    const fetchPrices = fetch(bp + 'data/prices.json', { cache: 'no-store' })
+  /* Busca JSON com prazo (01/10/2026). Sem prazo, uma resposta que nunca chega
+     deixava o PRICES_OVERLAY_READY pendurado pra sempre: na /projetor/ o preço
+     assado no HTML ficava na tela sem aviso, e comparar/qual-projetor (que
+     esperam o overlay antes do 1º render) nem renderizavam. Estourado o prazo,
+     cai no caminho de falha que já existia (site com o dado estático).
+     O timer cobre também a leitura do corpo (r.json()). Sem AbortController
+     (Safari < 11.1) fica como antes, sem prazo. */
+  var PRAZO_FETCH_MS = 15000;
+  function buscarJson(url) {
+    var opts = { cache: 'no-store' };
+    var timer = null;
+    if (typeof AbortController === 'function') {
+      var ctrl = new AbortController();
+      opts.signal = ctrl.signal;
+      timer = setTimeout(function () { ctrl.abort(); }, PRAZO_FETCH_MS);
+    }
+    function limpa() { if (timer) { clearTimeout(timer); timer = null; } }
+    return fetch(url, opts)
       .then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
         return r.json();
-      });
+      })
+      .then(function (j) { limpa(); return j; }, function (e) { limpa(); throw e; });
+  }
+
+  function applyOverlay() {
+    const bp = basePath();
+    const fetchPrices = buscarJson(bp + 'data/prices.json');
     // slugs.json é opcional — se falhar, site funciona sem links clicáveis nas ferramentas
-    const fetchSlugs = fetch(bp + 'data/slugs.json', { cache: 'no-store' })
-      .then(function (r) { return r.ok ? r.json() : null; })
+    const fetchSlugs = buscarJson(bp + 'data/slugs.json')
       .catch(function () { return null; });
 
     return Promise.all([fetchPrices, fetchSlugs])
@@ -1172,4 +1192,71 @@
   // o form da página preenche; a regra mora aqui e só aqui (nunca portar).
   window.PRICES_ALERTA = { alvoPadraoCentavos: alvoPadraoCentavos, precoBrCentavosAlerta: precoBrCentavosAlerta };
   window.PRICES_OVERLAY_READY = applyOverlay();
+
+  /* ── Preço novo ao VOLTAR pra página (01/10/2026) ──────────────────────────
+     Sintoma do dono: "entro na página do projetor e o preço está velho, só
+     atualiza no F5". Na maioria das vezes a página não foi aberta de novo, foi
+     RESTAURADA: aba que ficou aberta, botão voltar (bfcache), Chrome do celular
+     ao voltar pro app. Nada roda de novo e o preço é o da hora em que ela abriu.
+     Aqui, ao voltar, confere o metadata.atualizado_em do prices.json e, se
+     mudou, recarrega a página.
+     - Recarrega em vez de re-rodar os patches no lugar: eles reconstroem os
+       botões de compra, e dois passes sobre o mesmo DOM é onde os patches
+       brigam (ver test_botao_navegador.mjs). O reload é o caminho já testado.
+     - Só em /projetor/: home, tabela, ranking, comparar, qual-projetor e a
+       calculadora guardam filtro/escolha na memória, e recarregar apagaria.
+     - Nunca com form de alerta aberto nem depois que a pessoa digitou algo
+       (e-mail, valor-alvo, busca). O valor-alvo vem preenchido por JS, então
+       "campo diferente do padrão" não serve: vale o evento de input real.
+     - Uma recarga por versão por aba (sessionStorage): se a borda do GitHub
+       Pages servir versões diferentes em POPs diferentes, não entra em laço. */
+  var INTERVALO_CHECAGEM_MS = 5 * 60 * 1000;
+  var CHAVE_RECARGA = 'schard_preco_recarregado_para';
+
+  function iniciarPrecoAoVoltar() {
+    if (!/\/projetor\/[^\/]+$/i.test(location.pathname)) return;
+    var ultimaChecagem = Date.now();
+    var checando = false;
+    var digitou = false;
+    document.addEventListener('input', function () { digitou = true; }, true);
+
+    function lerSessao(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
+    function gravarSessao(k, v) { try { sessionStorage.setItem(k, v); } catch (e) { /* aba privada antiga */ } }
+    function emUso() {
+      if (digitou) return true;
+      try { return !!document.querySelector('form.ae-form:not([hidden])'); } catch (e) { return true; }
+    }
+    function logVolta(msg) {
+      if (location.search.indexOf('debug=1') !== -1) console.log('[prices-overlay] ao voltar: ' + msg);
+    }
+
+    function checar(motivo) {
+      if (checando) return;
+      checando = true;
+      ultimaChecagem = Date.now();
+      buscarJson(basePath() + 'data/prices.json')
+        .then(function (j) {
+          var novo = j && j.metadata && j.metadata.atualizado_em;
+          var atual = window.PRICES_METADATA && window.PRICES_METADATA.atualizado_em;
+          if (!novo || novo === atual) { logVolta(motivo + ', sem preço novo'); return; }
+          if (lerSessao(CHAVE_RECARGA) === novo) { logVolta('já recarreguei pra ' + novo); return; }
+          if (emUso()) { logVolta('preço novo, mas formulário em uso: não recarrego'); return; }
+          gravarSessao(CHAVE_RECARGA, novo);
+          logVolta(motivo + ', ' + atual + ' -> ' + novo + ': recarregando');
+          location.reload();
+        })
+        .catch(function () { /* rede ruim: fica como está, tenta na próxima volta */ })
+        .then(function () { checando = false; });
+    }
+
+    window.addEventListener('pageshow', function (ev) {
+      if (ev.persisted) checar('bfcache');
+    });
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState !== 'visible') return;
+      if (Date.now() - ultimaChecagem < INTERVALO_CHECAGEM_MS) return;
+      checar('aba');
+    });
+  }
+  iniciarPrecoAoVoltar();
 })();
