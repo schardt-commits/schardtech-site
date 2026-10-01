@@ -1,19 +1,19 @@
 {
   "data_coleta": "30/09",
-  "hora_coleta": "15:19",
+  "hora_coleta": "21:28",
   "data_ontem": "29/09",
   "data_hoje": "30/09",
-  "total_quedas": 20,
+  "total_quedas": 16,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 522.56,
-      "preco_ontem": 678.96,
-      "delta": -156.4,
-      "delta_pct": -23.04,
-      "data_checagem": "2026-09-30 15:19"
+      "marca": "Byintek",
+      "modelo": "Magic 1",
+      "slug": "byintek-magic-1",
+      "preco_atual": 1395.72,
+      "preco_ontem": 1521.43,
+      "delta": -125.71,
+      "delta_pct": -8.26,
+      "data_checagem": "2026-09-30 21:25"
     },
     {
       "marca": "Bettdow",
@@ -23,7 +23,7 @@
       "preco_ontem": 873.08,
       "delta": -9.2,
       "delta_pct": -1.05,
-      "data_checagem": "2026-09-30 15:19"
+      "data_checagem": "2026-09-30 21:28"
     },
     {
       "marca": "Vevshao",
@@ -33,17 +33,7 @@
       "preco_ontem": 979.68,
       "delta": -7.3,
       "delta_pct": -0.75,
-      "data_checagem": "2026-09-30 15:13"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Magic 1",
-      "slug": "byintek-magic-1",
-      "preco_atual": 1510.83,
-      "preco_ontem": 1521.43,
-      "delta": -10.6,
-      "delta_pct": -0.7,
-      "data_checagem": "2026-09-30 15:15"
+      "data_checagem": "2026-09-30 21:23"
     },
     {
       "marca": "Vevshao",
@@ -53,7 +43,17 @@
       "preco_ontem": 1511.06,
       "delta": -10.54,
       "delta_pct": -0.7,
-      "data_checagem": "2026-09-30 15:19"
+      "data_checagem": "2026-09-30 21:28"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 2310.33,
+      "preco_ontem": 2325.82,
+      "delta": -15.49,
+      "delta_pct": -0.67,
+      "data_checagem": "2026-09-30 21:19"
     }
   ]
 }
