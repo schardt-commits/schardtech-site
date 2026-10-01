@@ -1,59 +1,59 @@
 {
-  "data_coleta": "30/09",
-  "hora_coleta": "21:28",
-  "data_ontem": "29/09",
-  "data_hoje": "30/09",
-  "total_quedas": 16,
+  "data_coleta": "01/10",
+  "hora_coleta": "00:28",
+  "data_ontem": "30/09",
+  "data_hoje": "01/10",
+  "total_quedas": 45,
   "quedas": [
     {
-      "marca": "Byintek",
-      "modelo": "Magic 1",
-      "slug": "byintek-magic-1",
-      "preco_atual": 1395.72,
-      "preco_ontem": 1521.43,
-      "delta": -125.71,
-      "delta_pct": -8.26,
-      "data_checagem": "2026-09-30 21:25"
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 1020.2,
+      "preco_ontem": 2060.66,
+      "delta": -1040.46,
+      "delta_pct": -50.49,
+      "data_checagem": "2026-10-01 00:25"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1082",
-      "slug": "bettdow-ac1082",
-      "preco_atual": 863.88,
-      "preco_ontem": 873.08,
-      "delta": -9.2,
-      "delta_pct": -1.05,
-      "data_checagem": "2026-09-30 21:28"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "A10",
-      "slug": "vevshao-a10",
-      "preco_atual": 972.38,
-      "preco_ontem": 979.68,
-      "delta": -7.3,
-      "delta_pct": -0.75,
-      "data_checagem": "2026-09-30 21:23"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "A24 MAX",
-      "slug": "vevshao-a24-max",
-      "preco_atual": 1500.52,
-      "preco_ontem": 1511.06,
-      "delta": -10.54,
-      "delta_pct": -0.7,
-      "data_checagem": "2026-09-30 21:28"
+      "marca": "Touyinger",
+      "modelo": "L9W Ultra",
+      "slug": "touyinger-l9w-ultra",
+      "preco_atual": 458.58,
+      "preco_ontem": 801.6,
+      "delta": -343.02,
+      "delta_pct": -42.79,
+      "data_checagem": "2026-10-01 00:24"
     },
     {
       "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 2310.33,
-      "preco_ontem": 2325.82,
-      "delta": -15.49,
-      "delta_pct": -0.67,
-      "data_checagem": "2026-09-30 21:19"
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1126.47,
+      "preco_ontem": 1747.99,
+      "delta": -621.52,
+      "delta_pct": -35.56,
+      "data_checagem": "2026-10-01 00:28"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 977.53,
+      "preco_ontem": 1461.24,
+      "delta": -483.71,
+      "delta_pct": -33.1,
+      "data_checagem": "2026-10-01 00:25"
+    },
+    {
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 602.3,
+      "preco_ontem": 856.49,
+      "delta": -254.19,
+      "delta_pct": -29.68,
+      "data_checagem": "2026-10-01 00:21"
     }
   ]
 }
