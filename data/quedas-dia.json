@@ -1,10 +1,20 @@
 {
   "data_coleta": "02/10",
-  "hora_coleta": "09:28",
+  "hora_coleta": "15:20",
   "data_ontem": "01/10",
   "data_hoje": "02/10",
-  "total_quedas": 2,
+  "total_quedas": 4,
   "quedas": [
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 499.56,
+      "preco_ontem": 655.96,
+      "delta": -156.4,
+      "delta_pct": -23.84,
+      "data_checagem": "2026-10-02 15:20"
+    },
     {
       "marca": "Bettdow",
       "modelo": "AC1093 PRO",
@@ -13,17 +23,27 @@
       "preco_ontem": 462.76,
       "delta": -63.76,
       "delta_pct": -13.78,
-      "data_checagem": "2026-10-02 09:28"
+      "data_checagem": "2026-10-02 15:20"
     },
     {
       "marca": "Vevshao",
       "modelo": "A24 MAX",
       "slug": "vevshao-a24-max",
-      "preco_atual": 1185.31,
+      "preco_atual": 1191.09,
       "preco_ontem": 1350.31,
-      "delta": -165.0,
-      "delta_pct": -12.22,
-      "data_checagem": "2026-10-02 09:28"
+      "delta": -159.22,
+      "delta_pct": -11.79,
+      "data_checagem": "2026-10-02 15:20"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1270.17,
+      "preco_ontem": 1338.85,
+      "delta": -68.68,
+      "delta_pct": -5.13,
+      "data_checagem": "2026-10-02 15:14"
     }
   ]
 }
