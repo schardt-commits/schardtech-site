@@ -1,9 +1,9 @@
 {
   "data_coleta": "03/10",
-  "hora_coleta": "09:28",
+  "hora_coleta": "15:18",
   "data_ontem": "02/10",
   "data_hoje": "03/10",
-  "total_quedas": 3,
+  "total_quedas": 15,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,27 +13,47 @@
       "preco_ontem": 655.96,
       "delta": -156.4,
       "delta_pct": -23.84,
-      "data_checagem": "2026-10-03 09:28"
+      "data_checagem": "2026-10-03 15:18"
     },
     {
       "marca": "Magcubic",
-      "modelo": "L018",
-      "slug": "magcubic-l018",
-      "preco_atual": 575.0,
-      "preco_ontem": 620.08,
-      "delta": -45.08,
-      "delta_pct": -7.27,
-      "data_checagem": "2026-10-03 09:28"
+      "modelo": "HY450GT",
+      "slug": "magcubic-hy450gt",
+      "preco_atual": 1222.73,
+      "preco_ontem": 1320.0,
+      "delta": -97.27,
+      "delta_pct": -7.37,
+      "data_checagem": "2026-10-03 15:18"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 843.07,
-      "preco_ontem": 851.0,
-      "delta": -7.93,
-      "delta_pct": -0.93,
-      "data_checagem": "2026-10-03 09:25"
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 879.06,
+      "preco_ontem": 923.46,
+      "delta": -44.4,
+      "delta_pct": -4.81,
+      "data_checagem": "2026-10-03 15:15"
+    },
+    {
+      "marca": "Voxflix",
+      "modelo": "VF71",
+      "slug": "voxflix-vf71",
+      "preco_atual": 980.57,
+      "preco_ontem": 1025.12,
+      "delta": -44.55,
+      "delta_pct": -4.35,
+      "data_checagem": "2026-10-03 15:14"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 259.91,
+      "preco_ontem": 266.91,
+      "delta": -7.0,
+      "delta_pct": -2.62,
+      "data_checagem": "2026-10-03 15:11"
     }
   ]
 }
