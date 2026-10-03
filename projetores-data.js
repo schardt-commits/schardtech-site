@@ -747,7 +747,7 @@ window.PROJETORES_DATA = [
     "uso_continuo": "6h",
     "preco_min": 1000,
     "preco_max": 1200,
-    "ali_url": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=byintek-x30&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005007251573239.html&platform=pl",
+    "ali_url": "",
     "ali_cupom_loja": "",
     "ali_cupom_promo": "",
     "ml_url": "",
