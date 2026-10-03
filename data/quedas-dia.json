@@ -1,9 +1,9 @@
 {
-  "data_coleta": "02/10",
-  "hora_coleta": "15:20",
-  "data_ontem": "01/10",
-  "data_hoje": "02/10",
-  "total_quedas": 4,
+  "data_coleta": "03/10",
+  "hora_coleta": "09:28",
+  "data_ontem": "02/10",
+  "data_hoje": "03/10",
+  "total_quedas": 3,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,37 +13,27 @@
       "preco_ontem": 655.96,
       "delta": -156.4,
       "delta_pct": -23.84,
-      "data_checagem": "2026-10-02 15:20"
+      "data_checagem": "2026-10-03 09:28"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1093 PRO",
-      "slug": "bettdow-ac1093-pro",
-      "preco_atual": 399.0,
-      "preco_ontem": 462.76,
-      "delta": -63.76,
-      "delta_pct": -13.78,
-      "data_checagem": "2026-10-02 15:20"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "A24 MAX",
-      "slug": "vevshao-a24-max",
-      "preco_atual": 1191.09,
-      "preco_ontem": 1350.31,
-      "delta": -159.22,
-      "delta_pct": -11.79,
-      "data_checagem": "2026-10-02 15:20"
+      "marca": "Magcubic",
+      "modelo": "L018",
+      "slug": "magcubic-l018",
+      "preco_atual": 575.0,
+      "preco_ontem": 620.08,
+      "delta": -45.08,
+      "delta_pct": -7.27,
+      "data_checagem": "2026-10-03 09:28"
     },
     {
       "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1270.17,
-      "preco_ontem": 1338.85,
-      "delta": -68.68,
-      "delta_pct": -5.13,
-      "data_checagem": "2026-10-02 15:14"
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 843.07,
+      "preco_ontem": 851.0,
+      "delta": -7.93,
+      "delta_pct": -0.93,
+      "data_checagem": "2026-10-03 09:25"
     }
   ]
 }
