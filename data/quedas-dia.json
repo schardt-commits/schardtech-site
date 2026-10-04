@@ -1,59 +1,59 @@
 {
-  "data_coleta": "03/10",
-  "hora_coleta": "21:28",
-  "data_ontem": "02/10",
-  "data_hoje": "03/10",
-  "total_quedas": 17,
+  "data_coleta": "04/10",
+  "hora_coleta": "09:29",
+  "data_ontem": "03/10",
+  "data_hoje": "04/10",
+  "total_quedas": 6,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 499.56,
-      "preco_ontem": 655.96,
-      "delta": -156.4,
-      "delta_pct": -23.84,
-      "data_checagem": "2026-10-03 21:28"
+      "marca": "Byintek",
+      "modelo": "Magic 1",
+      "slug": "byintek-magic-1",
+      "preco_atual": 1287.85,
+      "preco_ontem": 1397.95,
+      "delta": -110.1,
+      "delta_pct": -7.88,
+      "data_checagem": "2026-10-04 09:26"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "L018",
+      "slug": "magcubic-l018",
+      "preco_atual": 575.0,
+      "preco_ontem": 620.08,
+      "delta": -45.08,
+      "delta_pct": -7.27,
+      "data_checagem": "2026-10-04 09:29"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1053.97,
+      "preco_ontem": 1131.5,
+      "delta": -77.53,
+      "delta_pct": -6.85,
+      "data_checagem": "2026-10-04 09:29"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 843.07,
+      "preco_ontem": 897.87,
+      "delta": -54.8,
+      "delta_pct": -6.1,
+      "data_checagem": "2026-10-04 09:25"
     },
     {
       "marca": "Magcubic",
       "modelo": "HY450GT",
       "slug": "magcubic-hy450gt",
-      "preco_atual": 1222.73,
-      "preco_ontem": 1320.0,
-      "delta": -97.27,
-      "delta_pct": -7.37,
-      "data_checagem": "2026-10-03 21:28"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 875.85,
-      "preco_ontem": 923.46,
-      "delta": -47.61,
-      "delta_pct": -5.16,
-      "data_checagem": "2026-10-03 21:25"
-    },
-    {
-      "marca": "Voxflix",
-      "modelo": "VF71",
-      "slug": "voxflix-vf71",
-      "preco_atual": 980.57,
-      "preco_ontem": 1025.12,
-      "delta": -44.55,
-      "delta_pct": -4.35,
-      "data_checagem": "2026-10-03 21:24"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD95W",
-      "slug": "thundeal-td95w",
-      "preco_atual": 700.5,
-      "preco_ontem": 728.63,
-      "delta": -28.13,
-      "delta_pct": -3.86,
-      "data_checagem": "2026-10-03 21:22"
+      "preco_atual": 1161.55,
+      "preco_ontem": 1222.73,
+      "delta": -61.18,
+      "delta_pct": -5.0,
+      "data_checagem": "2026-10-04 09:29"
     }
   ]
 }
