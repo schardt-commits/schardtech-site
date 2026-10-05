@@ -1,49 +1,59 @@
 {
   "data_coleta": "05/10",
-  "hora_coleta": "00:28",
+  "hora_coleta": "15:18",
   "data_ontem": "04/10",
   "data_hoje": "05/10",
-  "total_quedas": 4,
+  "total_quedas": 36,
   "quedas": [
-    {
-      "marca": "Magcubic",
-      "modelo": "L018",
-      "slug": "magcubic-l018",
-      "preco_atual": 575.0,
-      "preco_ontem": 620.08,
-      "delta": -45.08,
-      "delta_pct": -7.27,
-      "data_checagem": "2026-10-05 00:28"
-    },
     {
       "marca": "Magcubic",
       "modelo": "HY450 MAX",
       "slug": "magcubic-hy450-max",
-      "preco_atual": 1055.79,
+      "preco_atual": 1019.36,
       "preco_ontem": 1135.33,
-      "delta": -79.54,
-      "delta_pct": -7.01,
-      "data_checagem": "2026-10-05 00:28"
+      "delta": -115.97,
+      "delta_pct": -10.21,
+      "data_checagem": "2026-10-05 15:18"
     },
     {
       "marca": "Magcubic",
       "modelo": "HY450GT",
       "slug": "magcubic-hy450gt",
-      "preco_atual": 1083.76,
+      "preco_atual": 1048.8,
       "preco_ontem": 1161.55,
-      "delta": -77.79,
-      "delta_pct": -6.7,
-      "data_checagem": "2026-10-05 00:28"
+      "delta": -112.75,
+      "delta_pct": -9.71,
+      "data_checagem": "2026-10-05 15:18"
     },
     {
       "marca": "Magcubic",
-      "modelo": "HY310",
-      "slug": "magcubic-hy310",
-      "preco_atual": 342.95,
-      "preco_ontem": 360.1,
-      "delta": -17.15,
-      "delta_pct": -4.76,
-      "data_checagem": "2026-10-05 00:28"
+      "modelo": "HY350 MAX",
+      "slug": "magcubic-hy350-max",
+      "preco_atual": 643.08,
+      "preco_ontem": 712.08,
+      "delta": -69.0,
+      "delta_pct": -9.69,
+      "data_checagem": "2026-10-05 15:18"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY450",
+      "slug": "magcubic-hy450",
+      "preco_atual": 735.08,
+      "preco_ontem": 804.08,
+      "delta": -69.0,
+      "delta_pct": -8.58,
+      "data_checagem": "2026-10-05 15:18"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1082",
+      "slug": "bettdow-ac1082",
+      "preco_atual": 771.88,
+      "preco_ontem": 840.88,
+      "delta": -69.0,
+      "delta_pct": -8.21,
+      "data_checagem": "2026-10-05 15:18"
     }
   ]
 }
