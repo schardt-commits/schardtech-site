@@ -1,59 +1,49 @@
 {
-  "data_coleta": "04/10",
-  "hora_coleta": "21:28",
-  "data_ontem": "03/10",
-  "data_hoje": "04/10",
-  "total_quedas": 7,
+  "data_coleta": "05/10",
+  "hora_coleta": "00:28",
+  "data_ontem": "04/10",
+  "data_hoje": "05/10",
+  "total_quedas": 4,
   "quedas": [
     {
-      "marca": "Byintek",
-      "modelo": "Magic 1",
-      "slug": "byintek-magic-1",
-      "preco_atual": 1287.85,
-      "preco_ontem": 1397.95,
-      "delta": -110.1,
-      "delta_pct": -7.88,
-      "data_checagem": "2026-10-04 21:25"
+      "marca": "Magcubic",
+      "modelo": "L018",
+      "slug": "magcubic-l018",
+      "preco_atual": 575.0,
+      "preco_ontem": 620.08,
+      "delta": -45.08,
+      "delta_pct": -7.27,
+      "data_checagem": "2026-10-05 00:28"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1270.17,
-      "preco_ontem": 1370.78,
-      "delta": -100.61,
-      "delta_pct": -7.34,
-      "data_checagem": "2026-10-04 21:23"
+      "marca": "Magcubic",
+      "modelo": "HY450 MAX",
+      "slug": "magcubic-hy450-max",
+      "preco_atual": 1055.79,
+      "preco_ontem": 1135.33,
+      "delta": -79.54,
+      "delta_pct": -7.01,
+      "data_checagem": "2026-10-05 00:28"
     },
     {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1053.97,
-      "preco_ontem": 1131.5,
-      "delta": -77.53,
-      "delta_pct": -6.85,
-      "data_checagem": "2026-10-04 21:28"
+      "marca": "Magcubic",
+      "modelo": "HY450GT",
+      "slug": "magcubic-hy450gt",
+      "preco_atual": 1083.76,
+      "preco_ontem": 1161.55,
+      "delta": -77.79,
+      "delta_pct": -6.7,
+      "data_checagem": "2026-10-05 00:28"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 843.07,
-      "preco_ontem": 897.87,
-      "delta": -54.8,
-      "delta_pct": -6.1,
-      "data_checagem": "2026-10-04 21:25"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 661.81,
-      "preco_ontem": 698.7,
-      "delta": -36.89,
-      "delta_pct": -5.28,
-      "data_checagem": "2026-10-04 21:23"
+      "marca": "Magcubic",
+      "modelo": "HY310",
+      "slug": "magcubic-hy310",
+      "preco_atual": 342.95,
+      "preco_ontem": 360.1,
+      "delta": -17.15,
+      "delta_pct": -4.76,
+      "data_checagem": "2026-10-05 00:28"
     }
   ]
 }
