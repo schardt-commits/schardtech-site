@@ -1,9 +1,9 @@
 {
   "data_coleta": "06/10",
-  "hora_coleta": "15:18",
+  "hora_coleta": "21:28",
   "data_ontem": "05/10",
   "data_hoje": "06/10",
-  "total_quedas": 32,
+  "total_quedas": 16,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,37 +13,7 @@
       "preco_ontem": 655.96,
       "delta": -233.59,
       "delta_pct": -35.61,
-      "data_checagem": "2026-10-06 15:18"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Magic 1",
-      "slug": "byintek-magic-1",
-      "preco_atual": 1269.85,
-      "preco_ontem": 1388.96,
-      "delta": -119.11,
-      "delta_pct": -8.58,
-      "data_checagem": "2026-10-06 15:15"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1122.07,
-      "preco_ontem": 1219.26,
-      "delta": -97.19,
-      "delta_pct": -7.97,
-      "data_checagem": "2026-10-06 15:13"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 996.97,
-      "preco_ontem": 1079.57,
-      "delta": -82.6,
-      "delta_pct": -7.65,
-      "data_checagem": "2026-10-06 15:18"
+      "data_checagem": "2026-10-06 21:28"
     },
     {
       "marca": "Magcubic",
@@ -53,7 +23,37 @@
       "preco_ontem": 620.08,
       "delta": -45.08,
       "delta_pct": -7.27,
-      "data_checagem": "2026-10-06 15:18"
+      "data_checagem": "2026-10-06 21:28"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY310X",
+      "slug": "magcubic-hy310x",
+      "preco_atual": 397.1,
+      "preco_ontem": 423.28,
+      "delta": -26.18,
+      "delta_pct": -6.19,
+      "data_checagem": "2026-10-06 21:28"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 619.49,
+      "preco_ontem": 657.95,
+      "delta": -38.46,
+      "delta_pct": -5.85,
+      "data_checagem": "2026-10-06 21:23"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "X7",
+      "slug": "magcubic-x7",
+      "preco_atual": 866.64,
+      "preco_ontem": 919.08,
+      "delta": -52.44,
+      "delta_pct": -5.71,
+      "data_checagem": "2026-10-06 21:28"
     }
   ]
 }
