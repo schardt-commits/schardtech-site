@@ -1,9 +1,9 @@
 {
   "data_coleta": "08/10",
-  "hora_coleta": "09:27",
+  "hora_coleta": "15:17",
   "data_ontem": "07/10",
   "data_hoje": "08/10",
-  "total_quedas": 9,
+  "total_quedas": 7,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,7 +13,7 @@
       "preco_ontem": 655.96,
       "delta": -156.4,
       "delta_pct": -23.84,
-      "data_checagem": "2026-10-08 09:27"
+      "data_checagem": "2026-10-08 15:17"
     },
     {
       "marca": "Magcubic",
@@ -23,7 +23,7 @@
       "preco_ontem": 804.08,
       "delta": -82.8,
       "delta_pct": -10.3,
-      "data_checagem": "2026-10-08 09:27"
+      "data_checagem": "2026-10-08 15:17"
     },
     {
       "marca": "Bettdow",
@@ -33,7 +33,7 @@
       "preco_ontem": 1571.46,
       "delta": -87.4,
       "delta_pct": -5.56,
-      "data_checagem": "2026-10-08 09:27"
+      "data_checagem": "2026-10-08 15:17"
     },
     {
       "marca": "Bettdow",
@@ -43,17 +43,17 @@
       "preco_ontem": 1204.38,
       "delta": -43.7,
       "delta_pct": -3.63,
-      "data_checagem": "2026-10-08 09:27"
+      "data_checagem": "2026-10-08 15:17"
     },
     {
       "marca": "Progaga",
       "modelo": "PG310",
       "slug": "progaga-pg310",
-      "preco_atual": 272.55,
+      "preco_atual": 274.34,
       "preco_ontem": 278.99,
-      "delta": -6.44,
-      "delta_pct": -2.31,
-      "data_checagem": "2026-10-08 09:21"
+      "delta": -4.65,
+      "delta_pct": -1.67,
+      "data_checagem": "2026-10-08 15:11"
     }
   ]
 }
