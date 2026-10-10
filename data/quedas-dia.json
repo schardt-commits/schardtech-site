@@ -1,29 +1,29 @@
 {
   "data_coleta": "09/10",
-  "hora_coleta": "15:17",
+  "hora_coleta": "21:27",
   "data_ontem": "08/10",
   "data_hoje": "09/10",
-  "total_quedas": 26,
+  "total_quedas": 33,
   "quedas": [
     {
       "marca": "Progaga",
       "modelo": "PG610 ATV",
       "slug": "progaga-pg610-atv",
-      "preco_atual": 1099.44,
+      "preco_atual": 1157.66,
       "preco_ontem": 2035.5,
-      "delta": -936.06,
-      "delta_pct": -45.99,
-      "data_checagem": "2026-10-09 15:14"
+      "delta": -877.84,
+      "delta_pct": -43.13,
+      "data_checagem": "2026-10-09 21:24"
     },
     {
       "marca": "Touyinger",
       "modelo": "L9W Ultra",
       "slug": "touyinger-l9w-ultra",
-      "preco_atual": 476.82,
+      "preco_atual": 475.12,
       "preco_ontem": 793.35,
-      "delta": -316.53,
-      "delta_pct": -39.9,
-      "data_checagem": "2026-10-09 15:12"
+      "delta": -318.23,
+      "delta_pct": -40.11,
+      "data_checagem": "2026-10-09 21:22"
     },
     {
       "marca": "Bettdow",
@@ -33,27 +33,27 @@
       "preco_ontem": 655.96,
       "delta": -233.59,
       "delta_pct": -35.61,
-      "data_checagem": "2026-10-09 15:17"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1167.18,
-      "preco_ontem": 1607.25,
-      "delta": -440.07,
-      "delta_pct": -27.38,
-      "data_checagem": "2026-10-09 15:17"
+      "data_checagem": "2026-10-09 21:27"
     },
     {
       "marca": "Byintek",
       "modelo": "Love U12",
       "slug": "byintek-u12",
-      "preco_atual": 765.06,
+      "preco_atual": 751.36,
       "preco_ontem": 1048.8,
-      "delta": -283.74,
-      "delta_pct": -27.05,
-      "data_checagem": "2026-10-09 15:17"
+      "delta": -297.44,
+      "delta_pct": -28.36,
+      "data_checagem": "2026-10-09 21:27"
+    },
+    {
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 678.23,
+      "preco_ontem": 911.4,
+      "delta": -233.17,
+      "delta_pct": -25.58,
+      "data_checagem": "2026-10-09 21:21"
     }
   ]
 }
