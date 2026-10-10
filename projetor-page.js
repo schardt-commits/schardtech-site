@@ -375,6 +375,16 @@
         var maior = historico.max;
         // média dos mínimos diários — MESMA régua do banner (media-minimos-diarios-2026-05-31)
         var media = (function(){ var d={}; pontos.forEach(function(p){var k=p.data.slice(0,10); if(d[k]==null||p.preco<d[k])d[k]=p.preco;}); var a=Object.keys(d).map(function(k){return d[k];}); return a.reduce(function(x,y){return x+y;},0)/a.length; })();
+        // Série curta (menos de 7 dias com coleta E coleta em andamento, ex.
+        // pré-lançamento): média e "menor já visto" de 2 ou 3 dias não dizem nada.
+        // Tira as linhas de média e mínimo, e banner/stats viram "monitorado desde".
+        // Volta ao normal sozinho no 7º dia. Série curta ANTIGA (ex. esgotado com
+        // 5 dias em julho) não entra: o último ponto tem que ser de até 2 dias atrás.
+        var diasCom = {}; pontos.forEach(function(p){ diasCom[p.data.slice(0,10)] = 1; });
+        var nDias = Object.keys(diasCom).length;
+        var ultDiaSerie = new Date(pontos[pontos.length - 1].data.slice(0, 10) + 'T00:00:00');
+        var serieCurta = nDias < 7 && (today - ultDiaSerie) / 86400000 <= 2;
+        var plano = (historico.max - historico.min) < 0.5;
 
         // Destrói chart antigo (Chart.js v4)
         var canvas = document.getElementById('priceChart');
@@ -527,7 +537,7 @@
               }
             }
           },
-          plugins: [minLinePlugin, mediaLinePlugin, crosshairPlugin, ultimoPontoPlugin]
+          plugins: (serieCurta ? [] : [minLinePlugin, mediaLinePlugin]).concat([crosshairPlugin, ultimoPontoPlugin])
         });
 
         // Atualiza chips de filtro: cria um chip por loja disponível
@@ -631,7 +641,14 @@
 
         // Atualiza stats grid (media já calculada antes do chart — mesma régua)
         var statsWrap = document.querySelector('.price-stats-grid');
-        if (statsWrap) {
+        var ini = pontos[0].data.slice(0, 10);
+        var iniBr = ini.slice(8, 10) + '/' + ini.slice(5, 7) + '/' + ini.slice(0, 4);
+        if (statsWrap && serieCurta) {
+          statsWrap.innerHTML =
+            '<div class="price-stat"><div class="label">Monitorado desde</div><div class="val">' + iniBr + '</div></div>' +
+            '<div class="price-stat"><div class="label">Dias com coleta</div><div class="val">' + nDias + '</div></div>' +
+            '<div class="price-stat"><div class="label">' + (plano ? 'Preço até agora' : 'Faixa até agora') + '</div><div class="val">' + (plano ? fmtBRL(menor) : fmtBRL(menor) + ' a ' + fmtBRL(maior)) + '</div></div>';
+        } else if (statsWrap) {
           statsWrap.innerHTML =
             '<div class="price-stat min"><div class="label">Mínimo histórico</div><div class="val">' + fmtBRL(menor) + '</div></div>' +
             '<div class="price-stat"><div class="label">Preço médio</div><div class="val">' + fmtBRL(media) + '</div></div>' +
@@ -673,6 +690,12 @@
               titulo = 'Último preço visto: ' + fmtBRL(atual) + ' em ' + diaUlt;
               sub = '';
             }
+          } else if (serieCurta) {
+            icon = ''; classe = 'neutral';
+            titulo = 'Preço monitorado desde ' + iniBr;
+            sub = 'Atualmente em ' + fmtBRL(atual) + '. ' + (plano
+              ? 'Sem variação nos ' + nDias + ' dias de coleta até agora.'
+              : nDias + ' dias de coleta, ainda pouco pra falar em média.');
           } else if (distMedia <= -3) {
             icon = ''; classe = 'good';
             titulo = Math.abs(Math.round(distMedia)) + '% abaixo da média histórica';
