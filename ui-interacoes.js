@@ -202,7 +202,8 @@
   }
 
   /* ---------- busca do header ----------
-     Lista PROJETORES_DATA (listar!==false) já fundido com preços.
+     Lista PROJETORES_DATA (listar!==false, ou pre_lancamento COM preço publicado)
+     já fundido com preços.
      Com página própria (slug do overlay) vai pra ela; sem slug, /precos.html. */
   function initBusca() {
     var input = document.getElementById('busca-input');
@@ -224,8 +225,15 @@
       if (q.length < 2) { fecha(); return; }
       var data = window.PROJETORES_DATA || [];
       var res = data.filter(function (p) {
-        return p.listar !== false && chaveNome(p).indexOf(q) !== -1;
-      }).slice(0, 6);
+        // pre_lancamento (sem vídeo/página ainda) só com preço: coletando ou esgotado
+        // cairia no /precos.html sem a linha dele.
+        var visivel = p.listar !== false || (p.pre_lancamento === true && p.preco_atual != null);
+        return visivel && chaveNome(p).indexOf(q) !== -1;
+      });
+      // Pré-lançamento na frente: "thundeal" casa 8 listáveis e o slice cortaria o novo.
+      res = res.filter(function (p) { return p.pre_lancamento === true; })
+        .concat(res.filter(function (p) { return p.pre_lancamento !== true; }))
+        .slice(0, 6);
       if (!res.length) {
         drop.innerHTML = '<span class="bd-vazio">nenhum projetor encontrado</span>';
       } else {

@@ -2320,6 +2320,12 @@ window.PROJETORES_DATA = [
     "bolsa": ""
   },
   {
+    "marca": "Thundeal",
+    "modelo": "TD99W",
+    "listar": false,
+    "pre_lancamento": true
+  },
+  {
     "marca": "Touyinger",
     "modelo": "ET32",
     "tecnologia": "LCD LED",

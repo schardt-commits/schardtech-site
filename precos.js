@@ -212,6 +212,7 @@
         marca: proj.marca,
         buscaKey: norm(proj.marca + ' ' + proj.modelo),
         slug: proj.slug || '',
+        preLanc: proj.pre_lancamento === true,
         thumb: thumbUrl(proj.video_url),
         preco: proj.preco_atual,
         v: v, spark: spark,
@@ -238,7 +239,10 @@
     var img = r.thumb
       ? '<img class="pt-thumb" src="' + escHtml(r.thumb) + '" alt="" loading="lazy" width="64" height="36">'
       : '<span class="pt-thumb pt-thumb-ph">' + escHtml((r.marca || '?').slice(0, 1)) + '</span>';
-    var inner = img + '<span class="pt-name-txt">' + escHtml(r.nome) + '</span>';
+    // Etiqueta fora da .pt-name-txt: o GA lê o textContent dela (prices-overlay.js).
+    // Espelhado em prerender_precos.py (name_cell).
+    var inner = img + '<span class="pt-name-txt">' + escHtml(r.nome) + '</span>' +
+      (r.preLanc ? '<span class="pa-novo">vídeo em breve</span>' : '');
     if (r.slug) return '<a class="pt-name" href="projetor/' + escHtml(r.slug) + '.html">' + inner + '</a>';
     return '<span class="pt-name">' + inner + '</span>';
   }
