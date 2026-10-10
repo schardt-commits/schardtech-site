@@ -1,59 +1,59 @@
 {
   "data_coleta": "10/10",
-  "hora_coleta": "09:28",
+  "hora_coleta": "13:59",
   "data_ontem": "09/10",
   "data_hoje": "10/10",
-  "total_quedas": 8,
+  "total_quedas": 16,
   "quedas": [
     {
       "marca": "Vevshao",
       "modelo": "A22",
       "slug": "vevshao-a22",
-      "preco_atual": 849.39,
+      "preco_atual": 797.39,
       "preco_ontem": 1038.49,
-      "delta": -189.1,
-      "delta_pct": -18.21,
-      "data_checagem": "2026-10-10 09:28"
+      "delta": -241.1,
+      "delta_pct": -23.22,
+      "data_checagem": "2026-10-10 13:59"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "HY310X",
-      "slug": "magcubic-hy310x",
-      "preco_atual": 397.1,
-      "preco_ontem": 423.28,
-      "delta": -26.18,
-      "delta_pct": -6.19,
-      "data_checagem": "2026-10-10 09:28"
+      "marca": "Bettdow",
+      "modelo": "AC1093 PRO",
+      "slug": "bettdow-ac1093-pro",
+      "preco_atual": 399.0,
+      "preco_ontem": 462.76,
+      "delta": -63.76,
+      "delta_pct": -13.78,
+      "data_checagem": "2026-10-10 13:59"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "X7",
-      "slug": "magcubic-x7",
-      "preco_atual": 866.64,
-      "preco_ontem": 919.08,
-      "delta": -52.44,
-      "delta_pct": -5.71,
-      "data_checagem": "2026-10-10 09:28"
+      "marca": "Progaga",
+      "modelo": "PG310",
+      "slug": "progaga-pg310",
+      "preco_atual": 355.82,
+      "preco_ontem": 409.93,
+      "delta": -54.11,
+      "delta_pct": -13.2,
+      "data_checagem": "2026-10-10 13:52"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "HY310",
-      "slug": "magcubic-hy310",
-      "preco_atual": 342.95,
-      "preco_ontem": 360.1,
-      "delta": -17.15,
-      "delta_pct": -4.76,
-      "data_checagem": "2026-10-10 09:28"
+      "marca": "Byintek",
+      "modelo": "Magic 1",
+      "slug": "byintek-magic-1",
+      "preco_atual": 1195.92,
+      "preco_ontem": 1296.35,
+      "delta": -100.43,
+      "delta_pct": -7.75,
+      "data_checagem": "2026-10-10 13:56"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "HY450 MAX",
-      "slug": "magcubic-hy450-max",
-      "preco_atual": 1055.79,
-      "preco_ontem": 1103.08,
-      "delta": -47.29,
-      "delta_pct": -4.29,
-      "data_checagem": "2026-10-10 09:28"
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1281.2,
+      "preco_ontem": 1377.51,
+      "delta": -96.31,
+      "delta_pct": -6.99,
+      "data_checagem": "2026-10-10 13:53"
     }
   ]
 }
