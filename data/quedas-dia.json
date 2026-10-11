@@ -1,6 +1,6 @@
 {
   "data_coleta": "10/10",
-  "hora_coleta": "15:18",
+  "hora_coleta": "21:28",
   "data_ontem": "09/10",
   "data_hoje": "10/10",
   "total_quedas": 16,
@@ -9,11 +9,11 @@
       "marca": "Vevshao",
       "modelo": "A22",
       "slug": "vevshao-a22",
-      "preco_atual": 797.39,
+      "preco_atual": 767.59,
       "preco_ontem": 1038.49,
-      "delta": -241.1,
-      "delta_pct": -23.22,
-      "data_checagem": "2026-10-10 15:18"
+      "delta": -270.9,
+      "delta_pct": -26.09,
+      "data_checagem": "2026-10-10 21:28"
     },
     {
       "marca": "Bettdow",
@@ -23,7 +23,7 @@
       "preco_ontem": 462.76,
       "delta": -63.76,
       "delta_pct": -13.78,
-      "data_checagem": "2026-10-10 15:18"
+      "data_checagem": "2026-10-10 21:28"
     },
     {
       "marca": "Progaga",
@@ -33,27 +33,27 @@
       "preco_ontem": 409.93,
       "delta": -54.11,
       "delta_pct": -13.2,
-      "data_checagem": "2026-10-10 15:11"
+      "data_checagem": "2026-10-10 21:21"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 1040.4,
+      "preco_ontem": 1157.66,
+      "delta": -117.26,
+      "delta_pct": -10.13,
+      "data_checagem": "2026-10-10 21:25"
     },
     {
       "marca": "Byintek",
       "modelo": "Magic 1",
       "slug": "byintek-magic-1",
-      "preco_atual": 1195.92,
+      "preco_atual": 1199.16,
       "preco_ontem": 1296.35,
-      "delta": -100.43,
-      "delta_pct": -7.75,
-      "data_checagem": "2026-10-10 15:15"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1281.2,
-      "preco_ontem": 1377.51,
-      "delta": -96.31,
-      "delta_pct": -6.99,
-      "data_checagem": "2026-10-10 15:12"
+      "delta": -97.19,
+      "delta_pct": -7.5,
+      "data_checagem": "2026-10-10 21:25"
     }
   ]
 }
