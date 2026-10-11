@@ -1,8 +1,49 @@
 {
   "data_coleta": "11/10",
-  "hora_coleta": "",
+  "hora_coleta": "09:28",
   "data_ontem": "10/10",
   "data_hoje": "11/10",
-  "total_quedas": 0,
-  "quedas": []
+  "total_quedas": 4,
+  "quedas": [
+    {
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 682.59,
+      "preco_ontem": 767.59,
+      "delta": -85.0,
+      "delta_pct": -11.07,
+      "data_checagem": "2026-10-11 09:28"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D9W Mini",
+      "slug": "flixtone-d9w-mini",
+      "preco_atual": 1263.04,
+      "preco_ontem": 1304.26,
+      "delta": -41.22,
+      "delta_pct": -3.16,
+      "data_checagem": "2026-10-11 09:20"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 1022.33,
+      "preco_ontem": 1040.4,
+      "delta": -18.07,
+      "delta_pct": -1.74,
+      "data_checagem": "2026-10-11 09:25"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 722.16,
+      "preco_ontem": 734.07,
+      "delta": -11.91,
+      "delta_pct": -1.62,
+      "data_checagem": "2026-10-11 09:23"
+    }
+  ]
 }
