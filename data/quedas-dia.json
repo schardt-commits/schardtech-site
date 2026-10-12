@@ -1,19 +1,59 @@
 {
   "data_coleta": "12/10",
-  "hora_coleta": "00:23",
+  "hora_coleta": "15:13",
   "data_ontem": "11/10",
   "data_hoje": "12/10",
-  "total_quedas": 1,
+  "total_quedas": 11,
   "quedas": [
     {
       "marca": "Touyinger",
       "modelo": "ET32",
       "slug": "touyinger-et32",
-      "preco_atual": 769.77,
+      "preco_atual": 767.76,
       "preco_ontem": 810.3,
-      "delta": -40.53,
-      "delta_pct": -5.0,
-      "data_checagem": "2026-10-12 00:23"
+      "delta": -42.54,
+      "delta_pct": -5.25,
+      "data_checagem": "2026-10-12 15:13"
+    },
+    {
+      "marca": "Dangbei",
+      "modelo": "Mars Pro 2",
+      "slug": "dangbei-mars-pro-2",
+      "preco_atual": 9377.83,
+      "preco_ontem": 9401.99,
+      "delta": -24.16,
+      "delta_pct": -0.26,
+      "data_checagem": "2026-10-12 15:10"
+    },
+    {
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 595.26,
+      "preco_ontem": 596.82,
+      "delta": -1.56,
+      "delta_pct": -0.26,
+      "data_checagem": "2026-10-12 15:10"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D9W Ultra",
+      "slug": "flixtone-d9w-ultra",
+      "preco_atual": 2511.94,
+      "preco_ontem": 2518.47,
+      "delta": -6.53,
+      "delta_pct": -0.26,
+      "data_checagem": "2026-10-12 15:10"
+    },
+    {
+      "marca": "Formovie",
+      "modelo": "Cinema Edge",
+      "slug": "formovie-cinema-edge",
+      "preco_atual": 11564.99,
+      "preco_ontem": 11594.99,
+      "delta": -30.0,
+      "delta_pct": -0.26,
+      "data_checagem": "2026-10-12 15:10"
     }
   ]
 }
