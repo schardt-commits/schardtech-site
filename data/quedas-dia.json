@@ -1,6 +1,6 @@
 {
   "data_coleta": "11/10",
-  "hora_coleta": "15:18",
+  "hora_coleta": "21:28",
   "data_ontem": "10/10",
   "data_hoje": "11/10",
   "total_quedas": 4,
@@ -9,11 +9,11 @@
       "marca": "Bettdow",
       "modelo": "AC1041",
       "slug": "bettdow-ac1041",
-      "preco_atual": 702.0,
+      "preco_atual": 772.0,
       "preco_ontem": 813.0,
-      "delta": -111.0,
-      "delta_pct": -13.65,
-      "data_checagem": "2026-10-11 15:18"
+      "delta": -41.0,
+      "delta_pct": -5.04,
+      "data_checagem": "2026-10-11 21:28"
     },
     {
       "marca": "Vevshao",
@@ -23,7 +23,7 @@
       "preco_ontem": 767.59,
       "delta": -34.57,
       "delta_pct": -4.5,
-      "data_checagem": "2026-10-11 15:18"
+      "data_checagem": "2026-10-11 21:28"
     },
     {
       "marca": "FlixTone",
@@ -33,7 +33,7 @@
       "preco_ontem": 1304.26,
       "delta": -41.22,
       "delta_pct": -3.16,
-      "data_checagem": "2026-10-11 15:10"
+      "data_checagem": "2026-10-11 21:20"
     },
     {
       "marca": "Progaga",
@@ -43,7 +43,7 @@
       "preco_ontem": 1040.4,
       "delta": -18.07,
       "delta_pct": -1.74,
-      "data_checagem": "2026-10-11 15:15"
+      "data_checagem": "2026-10-11 21:25"
     }
   ]
 }
