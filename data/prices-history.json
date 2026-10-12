@@ -1,23 +1,13 @@
 {
   "metadata": {
-    "gerado_em": "2026-10-11 21:29:19",
+    "gerado_em": "2026-10-12 00:32:37",
     "total_modelos": 70,
-    "total_pontos": 7838,
+    "total_pontos": 7842,
     "fonte": "precos.db (tabela precos, preco_final)"
   },
   "modelos": {
     "Bettdow|AC1041": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:24",
-          "loja": "ml",
-          "preco": 859.0
-        },
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 804.68
-        },
         {
           "data": "2026-06-14 21:23",
           "loja": "ml",
@@ -1217,6 +1207,16 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 831.68
+        },
+        {
+          "data": "2026-10-12 00:19",
+          "loja": "ml",
+          "preco": 813.0
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 831.68
         }
       ],
       "n": 242,
@@ -1228,11 +1228,6 @@
     },
     "Bettdow|AC1053": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 916.0
-        },
         {
           "data": "2026-06-14 21:31",
           "loja": "shopee",
@@ -1584,7 +1579,7 @@
           "preco": 1099.5
         }
       ],
-      "n": 71,
+      "n": 70,
       "min": 897.6,
       "max": 1149.08,
       "atual": 1099.5,
@@ -1593,11 +1588,6 @@
     },
     "Bettdow|AC1061": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 1697.08
-        },
         {
           "data": "2026-06-14 21:31",
           "loja": "shopee",
@@ -2192,6 +2182,11 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 1484.06
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 1484.06
         }
       ],
       "n": 120,
@@ -2199,15 +2194,10 @@
       "max": 1697.08,
       "atual": 1484.06,
       "data_min": "2026-07-01",
-      "data_max": "2026-06-13"
+      "data_max": "2026-06-14"
     },
     "Bettdow|AC1066": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 519.48
-        },
         {
           "data": "2026-06-14 21:31",
           "loja": "shopee",
@@ -2807,6 +2797,11 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 507.63
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 507.63
         }
       ],
       "n": 121,
@@ -2818,11 +2813,6 @@
     },
     "Bettdow|AC1071": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 1310.68
-        },
         {
           "data": "2026-06-14 21:31",
           "loja": "shopee",
@@ -3412,22 +3402,22 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 1449.1
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 1475.32
         }
       ],
       "n": 119,
       "min": 1310.68,
       "max": 1552.96,
-      "atual": 1449.1,
-      "data_min": "2026-06-13",
+      "atual": 1475.32,
+      "data_min": "2026-06-14",
       "data_max": "2026-09-18"
     },
     "Bettdow|AC1073": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 951.88
-        },
         {
           "data": "2026-06-14 21:31",
           "loja": "shopee",
@@ -4027,22 +4017,22 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 1160.68
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 1160.68
         }
       ],
       "n": 121,
       "min": 951.88,
       "max": 1268.68,
       "atual": 1160.68,
-      "data_min": "2026-06-13",
+      "data_min": "2026-06-14",
       "data_max": "2026-09-17"
     },
     "Bettdow|AC1082": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 803.76
-        },
         {
           "data": "2026-06-14 21:31",
           "loja": "shopee",
@@ -4642,6 +4632,11 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 837.2
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 837.2
         }
       ],
       "n": 121,
@@ -5202,9 +5197,14 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 499.56
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 499.56
         }
       ],
-      "n": 110,
+      "n": 111,
       "min": 422.37,
       "max": 1699.0,
       "atual": 499.56,
@@ -6012,9 +6012,19 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 462.76
+        },
+        {
+          "data": "2026-10-12 00:19",
+          "loja": "ml",
+          "preco": 399.0
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 462.76
         }
       ],
-      "n": 160,
+      "n": 162,
       "min": 399.0,
       "max": 998.75,
       "atual": 462.76,
@@ -6023,11 +6033,6 @@
     },
     "Bettdow|AC1095": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 2617.08
-        },
         {
           "data": "2026-06-14 21:31",
           "loja": "shopee",
@@ -6622,6 +6627,11 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 2206.16
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 2206.16
         }
       ],
       "n": 120,
@@ -6648,11 +6658,6 @@
     },
     "Byintek|Love U12": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:14",
-          "loja": "aliexpress",
-          "preco": 1118.92
-        },
         {
           "data": "2026-06-14 21:13",
           "loja": "aliexpress",
@@ -7802,9 +7807,19 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 1048.8
+        },
+        {
+          "data": "2026-10-12 00:19",
+          "loja": "aliexpress",
+          "preco": 1007.51
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 1048.8
         }
       ],
-      "n": 231,
+      "n": 232,
       "min": 719.33,
       "max": 1387.0,
       "atual": 1048.8,
@@ -7813,11 +7828,6 @@
     },
     "Byintek|Love U14": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:13",
-          "loja": "aliexpress",
-          "preco": 1044.54
-        },
         {
           "data": "2026-06-14 21:13",
           "loja": "aliexpress",
@@ -8009,7 +8019,7 @@
           "preco": 1740.98
         }
       ],
-      "n": 39,
+      "n": 38,
       "min": 836.38,
       "max": 3336.68,
       "atual": 1740.98,
@@ -8018,11 +8028,6 @@
     },
     "Byintek|Love U4": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:14",
-          "loja": "aliexpress",
-          "preco": 607.57
-        },
         {
           "data": "2026-06-14 21:13",
           "loja": "aliexpress",
@@ -9032,9 +9037,19 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 537.83
+        },
+        {
+          "data": "2026-10-12 00:19",
+          "loja": "aliexpress",
+          "preco": 650.39
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 537.83
         }
       ],
-      "n": 203,
+      "n": 204,
       "min": 485.72,
       "max": 1606.71,
       "atual": 537.83,
@@ -9162,27 +9177,22 @@
           "data": "2026-10-11 21:26",
           "loja": "aliexpress",
           "preco": 1454.64
+        },
+        {
+          "data": "2026-10-12 00:26",
+          "loja": "aliexpress",
+          "preco": 1850.42
         }
       ],
-      "n": 24,
+      "n": 25,
       "min": 1109.45,
-      "max": 1613.38,
-      "atual": 1454.64,
+      "max": 1850.42,
+      "atual": 1850.42,
       "data_min": "2026-09-18",
-      "data_max": "2026-09-20"
+      "data_max": "2026-10-12"
     },
     "Byintek|Plato T5 MAX": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:14",
-          "loja": "aliexpress",
-          "preco": 1452.44
-        },
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 2181.0
-        },
         {
           "data": "2026-06-14 21:14",
           "loja": "aliexpress",
@@ -9612,27 +9622,22 @@
           "data": "2026-10-11 21:19",
           "loja": "aliexpress",
           "preco": 1436.5
+        },
+        {
+          "data": "2026-10-12 00:19",
+          "loja": "aliexpress",
+          "preco": 2108.91
         }
       ],
-      "n": 88,
+      "n": 87,
       "min": 1090.98,
       "max": 2813.44,
-      "atual": 1436.5,
+      "atual": 2108.91,
       "data_min": "2026-06-24",
       "data_max": "2026-07-08"
     },
     "Byintek|U14 PRO": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:23",
-          "loja": "aliexpress",
-          "preco": 1806.04
-        },
-        {
-          "data": "2026-06-13 21:24",
-          "loja": "ml",
-          "preco": 1910.0
-        },
         {
           "data": "2026-06-14 21:22",
           "loja": "aliexpress",
@@ -10897,6 +10902,16 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 1634.37
+        },
+        {
+          "data": "2026-10-12 00:25",
+          "loja": "aliexpress",
+          "preco": 1314.96
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 1634.37
         }
       ],
       "n": 255,
@@ -10908,11 +10923,6 @@
     },
     "Byintek|U80 MAX": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:14",
-          "loja": "aliexpress",
-          "preco": 3308.32
-        },
         {
           "data": "2026-06-14 21:14",
           "loja": "aliexpress",
@@ -11987,27 +11997,27 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 1839.99
+        },
+        {
+          "data": "2026-10-12 00:19",
+          "loja": "aliexpress",
+          "preco": 1887.94
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 1793.08
         }
       ],
-      "n": 216,
+      "n": 217,
       "min": 1581.73,
       "max": 3517.85,
-      "atual": 1839.99,
+      "atual": 1793.08,
       "data_min": "2026-08-24",
       "data_max": "2026-06-21"
     },
     "Byintek|U90 MAX": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:15",
-          "loja": "aliexpress",
-          "preco": 2720.53
-        },
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 2444.12
-        },
         {
           "data": "2026-06-14 21:14",
           "loja": "aliexpress",
@@ -13057,12 +13067,17 @@
           "data": "2026-10-11 21:19",
           "loja": "aliexpress",
           "preco": 2060.65
+        },
+        {
+          "data": "2026-10-12 00:20",
+          "loja": "aliexpress",
+          "preco": 2230.65
         }
       ],
-      "n": 212,
+      "n": 211,
       "min": 1571.51,
       "max": 2920.08,
-      "atual": 2060.65,
+      "atual": 2230.65,
       "data_min": "2026-08-17",
       "data_max": "2026-08-03"
     },
@@ -13207,9 +13222,14 @@
           "data": "2026-10-11 21:20",
           "loja": "aliexpress",
           "preco": 9401.99
+        },
+        {
+          "data": "2026-10-12 00:20",
+          "loja": "aliexpress",
+          "preco": 9401.99
         }
       ],
-      "n": 28,
+      "n": 29,
       "min": 7239.38,
       "max": 9401.99,
       "atual": 9401.99,
@@ -13218,11 +13238,6 @@
     },
     "Everycom|Cubelite E1": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:24",
-          "loja": "ml",
-          "preco": 2800.0
-        },
         {
           "data": "2026-06-14 21:23",
           "loja": "ml",
@@ -13374,25 +13389,15 @@
           "preco": 2037.0
         }
       ],
-      "n": 31,
+      "n": 30,
       "min": 2009.84,
       "max": 2800.0,
       "atual": 2037.0,
       "data_min": "2026-06-22",
-      "data_max": "2026-06-13"
+      "data_max": "2026-06-14"
     },
     "Everycom|Cubelite MAX": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:24",
-          "loja": "ml",
-          "preco": 2279.0
-        },
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 2043.0
-        },
         {
           "data": "2026-06-14 21:23",
           "loja": "ml",
@@ -14019,20 +14024,15 @@
           "preco": 2047.0
         }
       ],
-      "n": 127,
+      "n": 125,
       "min": 1993.0,
       "max": 2279.0,
       "atual": 2047.0,
       "data_min": "2026-07-17",
-      "data_max": "2026-06-13"
+      "data_max": "2026-06-14"
     },
     "Everycom|HQ9W ULTRA": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 1468.0
-        },
         {
           "data": "2026-06-14 21:31",
           "loja": "shopee",
@@ -14477,6 +14477,11 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 1442.1
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 1442.1
         }
       ],
       "n": 90,
@@ -14488,11 +14493,6 @@
     },
     "Everycom|R16": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:14",
-          "loja": "aliexpress",
-          "preco": 635.74
-        },
         {
           "data": "2026-06-14 21:14",
           "loja": "aliexpress",
@@ -14952,6 +14952,11 @@
           "data": "2026-10-11 21:20",
           "loja": "aliexpress",
           "preco": 596.82
+        },
+        {
+          "data": "2026-10-12 00:20",
+          "loja": "aliexpress",
+          "preco": 596.82
         }
       ],
       "n": 93,
@@ -14963,11 +14968,6 @@
     },
     "FlixTone|D10S": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:23",
-          "loja": "aliexpress",
-          "preco": 1923.44
-        },
         {
           "data": "2026-06-14 21:23",
           "loja": "aliexpress",
@@ -15487,22 +15487,22 @@
           "data": "2026-10-11 21:25",
           "loja": "aliexpress",
           "preco": 1883.47
+        },
+        {
+          "data": "2026-10-12 00:26",
+          "loja": "aliexpress",
+          "preco": 2518.35
         }
       ],
       "n": 105,
       "min": 1785.5,
       "max": 2608.99,
-      "atual": 1883.47,
+      "atual": 2518.35,
       "data_min": "2026-06-18",
       "data_max": "2026-08-14"
     },
     "FlixTone|D9W Mini": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:15",
-          "loja": "aliexpress",
-          "preco": 1866.24
-        },
         {
           "data": "2026-06-14 21:14",
           "loja": "aliexpress",
@@ -16097,22 +16097,22 @@
           "data": "2026-10-11 21:20",
           "loja": "aliexpress",
           "preco": 1263.04
+        },
+        {
+          "data": "2026-10-12 00:20",
+          "loja": "aliexpress",
+          "preco": 1578.81
         }
       ],
       "n": 120,
       "min": 778.92,
-      "max": 1866.24,
-      "atual": 1263.04,
+      "max": 1755.76,
+      "atual": 1578.81,
       "data_min": "2026-06-16",
-      "data_max": "2026-06-13"
+      "data_max": "2026-06-14"
     },
     "FlixTone|D9W Ultra": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:15",
-          "loja": "aliexpress",
-          "preco": 1947.77
-        },
         {
           "data": "2026-06-14 21:15",
           "loja": "aliexpress",
@@ -16597,6 +16597,11 @@
           "data": "2026-10-11 21:20",
           "loja": "aliexpress",
           "preco": 2518.47
+        },
+        {
+          "data": "2026-10-12 00:20",
+          "loja": "aliexpress",
+          "preco": 2518.47
         }
       ],
       "n": 98,
@@ -16608,11 +16613,6 @@
     },
     "Formovie|Cinema Edge": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:15",
-          "loja": "aliexpress",
-          "preco": 9651.85
-        },
         {
           "data": "2026-06-14 21:15",
           "loja": "aliexpress",
@@ -16832,6 +16832,11 @@
           "data": "2026-10-11 21:20",
           "loja": "aliexpress",
           "preco": 11594.99
+        },
+        {
+          "data": "2026-10-12 00:20",
+          "loja": "aliexpress",
+          "preco": 11594.99
         }
       ],
       "n": 45,
@@ -16843,11 +16848,6 @@
     },
     "Formovie|Xming Episode One": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:15",
-          "loja": "aliexpress",
-          "preco": 1457.7
-        },
         {
           "data": "2026-06-14 21:15",
           "loja": "aliexpress",
@@ -17442,6 +17442,11 @@
           "data": "2026-10-11 21:20",
           "loja": "aliexpress",
           "preco": 1498.96
+        },
+        {
+          "data": "2026-10-12 00:21",
+          "loja": "aliexpress",
+          "preco": 1498.96
         }
       ],
       "n": 120,
@@ -17453,11 +17458,6 @@
     },
     "Horlat|T9N": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:16",
-          "loja": "aliexpress",
-          "preco": 963.67
-        },
         {
           "data": "2026-06-14 21:15",
           "loja": "aliexpress",
@@ -18052,22 +18052,22 @@
           "data": "2026-10-11 21:21",
           "loja": "aliexpress",
           "preco": 678.23
+        },
+        {
+          "data": "2026-10-12 00:21",
+          "loja": "aliexpress",
+          "preco": 734.23
         }
       ],
       "n": 120,
       "min": 576.65,
       "max": 1103.64,
-      "atual": 678.23,
+      "atual": 734.23,
       "data_min": "2026-10-07",
       "data_max": "2026-07-30"
     },
     "Jenovox|M5000 Mini": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:16",
-          "loja": "aliexpress",
-          "preco": 2529.52
-        },
         {
           "data": "2026-06-14 21:16",
           "loja": "aliexpress",
@@ -18527,22 +18527,22 @@
           "data": "2026-10-11 21:21",
           "loja": "aliexpress",
           "preco": 1887.46
+        },
+        {
+          "data": "2026-10-12 00:21",
+          "loja": "aliexpress",
+          "preco": 2602.99
         }
       ],
       "n": 93,
       "min": 1661.91,
       "max": 3010.57,
-      "atual": 1887.46,
+      "atual": 2602.99,
       "data_min": "2026-06-20",
       "data_max": "2026-06-21"
     },
     "Magcubic|HY300": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 200.6
-        },
         {
           "data": "2026-06-14 21:31",
           "loja": "shopee",
@@ -18969,7 +18969,7 @@
           "preco": 224.73
         }
       ],
-      "n": 86,
+      "n": 85,
       "min": 195.5,
       "max": 260.83,
       "atual": 224.73,
@@ -18978,11 +18978,6 @@
     },
     "Magcubic|HY310": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 323.0
-        },
         {
           "data": "2026-06-14 21:31",
           "loja": "shopee",
@@ -19255,6 +19250,11 @@
         },
         {
           "data": "2026-10-11 21:28",
+          "loja": "shopee",
+          "preco": 360.1
+        },
+        {
+          "data": "2026-10-12 00:29",
           "loja": "shopee",
           "preco": 360.1
         }
@@ -19667,9 +19667,14 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 423.28
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 423.28
         }
       ],
-      "n": 80,
+      "n": 81,
       "min": 374.0,
       "max": 469.0,
       "atual": 423.28,
@@ -19678,11 +19683,6 @@
     },
     "Magcubic|HY320 Mini": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 289.0
-        },
         {
           "data": "2026-06-14 21:31",
           "loja": "shopee",
@@ -19759,7 +19759,7 @@
           "preco": 333.03
         }
       ],
-      "n": 16,
+      "n": 15,
       "min": 283.9,
       "max": 333.03,
       "atual": 333.03,
@@ -20157,9 +20157,19 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 712.08
+        },
+        {
+          "data": "2026-10-12 00:19",
+          "loja": "ml",
+          "preco": 763.88
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 712.08
         }
       ],
-      "n": 71,
+      "n": 73,
       "min": 643.08,
       "max": 763.88,
       "atual": 712.08,
@@ -20168,11 +20178,6 @@
     },
     "Magcubic|HY450": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 686.0
-        },
         {
           "data": "2026-06-17 21:31",
           "loja": "shopee",
@@ -20664,7 +20669,7 @@
           "preco": 721.28
         }
       ],
-      "n": 99,
+      "n": 98,
       "min": 633.45,
       "max": 827.08,
       "atual": 721.28,
@@ -20997,9 +21002,14 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 1135.33
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 1135.33
         }
       ],
-      "n": 65,
+      "n": 66,
       "min": 983.58,
       "max": 1199.0,
       "atual": 1135.33,
@@ -21377,9 +21387,14 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 896.08
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 896.08
         }
       ],
-      "n": 74,
+      "n": 75,
       "min": 772.8,
       "max": 919.08,
       "atual": 896.08,
@@ -22152,9 +22167,19 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 1161.55
+        },
+        {
+          "data": "2026-10-12 00:19",
+          "loja": "ml",
+          "preco": 1254.0
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 1161.55
         }
       ],
-      "n": 153,
+      "n": 155,
       "min": 1008.42,
       "max": 2347.0,
       "atual": 1161.55,
@@ -22462,9 +22487,14 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 620.08
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 620.08
         }
       ],
-      "n": 60,
+      "n": 61,
       "min": 538.8,
       "max": 643.08,
       "atual": 620.08,
@@ -23217,9 +23247,19 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 960.53
+        },
+        {
+          "data": "2026-10-12 00:19",
+          "loja": "ml",
+          "preco": 1282.02
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 960.53
         }
       ],
-      "n": 149,
+      "n": 151,
       "min": 859.28,
       "max": 1282.02,
       "atual": 960.53,
@@ -23228,11 +23268,6 @@
     },
     "Progaga|PG310": {
       "pontos": [
-        {
-          "data": "2026-06-13 15:08",
-          "loja": "aliexpress",
-          "preco": 307.33
-        },
         {
           "data": "2026-06-14 21:19",
           "loja": "aliexpress",
@@ -23807,6 +23842,11 @@
           "data": "2026-10-11 21:21",
           "loja": "aliexpress",
           "preco": 355.82
+        },
+        {
+          "data": "2026-10-12 00:21",
+          "loja": "aliexpress",
+          "preco": 355.82
         }
       ],
       "n": 116,
@@ -24212,9 +24252,14 @@
           "data": "2026-10-11 21:26",
           "loja": "aliexpress",
           "preco": 534.11
+        },
+        {
+          "data": "2026-10-12 00:26",
+          "loja": "aliexpress",
+          "preco": 534.11
         }
       ],
-      "n": 79,
+      "n": 80,
       "min": 414.83,
       "max": 630.9,
       "atual": 534.11,
@@ -24223,11 +24268,6 @@
     },
     "Progaga|PG610 ATV": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:23",
-          "loja": "aliexpress",
-          "preco": 1903.36
-        },
         {
           "data": "2026-06-14 21:23",
           "loja": "aliexpress",
@@ -24822,6 +24862,11 @@
           "data": "2026-10-11 21:25",
           "loja": "aliexpress",
           "preco": 1022.33
+        },
+        {
+          "data": "2026-10-12 00:25",
+          "loja": "aliexpress",
+          "preco": 1022.33
         }
       ],
       "n": 120,
@@ -24833,11 +24878,6 @@
     },
     "Progaga|PG610W": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:20",
-          "loja": "aliexpress",
-          "preco": 933.35
-        },
         {
           "data": "2026-06-14 21:19",
           "loja": "aliexpress",
@@ -25432,6 +25472,11 @@
           "data": "2026-10-11 21:21",
           "loja": "aliexpress",
           "preco": 919.04
+        },
+        {
+          "data": "2026-10-12 00:22",
+          "loja": "aliexpress",
+          "preco": 919.04
         }
       ],
       "n": 120,
@@ -25443,11 +25488,6 @@
     },
     "Thundeal|TD80PRO": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:20",
-          "loja": "aliexpress",
-          "preco": 667.2
-        },
         {
           "data": "2026-06-14 21:19",
           "loja": "aliexpress",
@@ -26042,6 +26082,11 @@
           "data": "2026-10-11 21:22",
           "loja": "aliexpress",
           "preco": 644.93
+        },
+        {
+          "data": "2026-10-12 00:22",
+          "loja": "aliexpress",
+          "preco": 644.93
         }
       ],
       "n": 120,
@@ -26053,11 +26098,6 @@
     },
     "Thundeal|TD80W": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:20",
-          "loja": "aliexpress",
-          "preco": 435.87
-        },
         {
           "data": "2026-06-14 21:19",
           "loja": "aliexpress",
@@ -26354,7 +26394,7 @@
           "preco": 377.15
         }
       ],
-      "n": 60,
+      "n": 59,
       "min": 348.49,
       "max": 709.46,
       "atual": 377.15,
@@ -26363,11 +26403,6 @@
     },
     "Thundeal|TD92 Pro": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:20",
-          "loja": "aliexpress",
-          "preco": 744.19
-        },
         {
           "data": "2026-06-14 21:20",
           "loja": "aliexpress",
@@ -26837,22 +26872,22 @@
           "data": "2026-10-11 21:22",
           "loja": "aliexpress",
           "preco": 809.79
+        },
+        {
+          "data": "2026-10-12 00:22",
+          "loja": "aliexpress",
+          "preco": 894.79
         }
       ],
       "n": 95,
       "min": 526.41,
-      "max": 809.79,
-      "atual": 809.79,
+      "max": 894.79,
+      "atual": 894.79,
       "data_min": "2026-06-16",
-      "data_max": "2026-10-10"
+      "data_max": "2026-10-12"
     },
     "Thundeal|TD95W": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:20",
-          "loja": "aliexpress",
-          "preco": 775.69
-        },
         {
           "data": "2026-06-14 21:20",
           "loja": "aliexpress",
@@ -27437,12 +27472,17 @@
           "data": "2026-10-11 21:22",
           "loja": "aliexpress",
           "preco": 742.49
+        },
+        {
+          "data": "2026-10-12 00:22",
+          "loja": "aliexpress",
+          "preco": 827.49
         }
       ],
       "n": 118,
       "min": 625.87,
       "max": 1009.79,
-      "atual": 742.49,
+      "atual": 827.49,
       "data_min": "2026-07-13",
       "data_max": "2026-08-14"
     },
@@ -27952,22 +27992,22 @@
           "data": "2026-10-11 21:25",
           "loja": "aliexpress",
           "preco": 1247.27
+        },
+        {
+          "data": "2026-10-12 00:26",
+          "loja": "aliexpress",
+          "preco": 1260.25
         }
       ],
-      "n": 101,
+      "n": 102,
       "min": 744.98,
       "max": 1461.24,
-      "atual": 1247.27,
+      "atual": 1260.25,
       "data_min": "2026-08-24",
       "data_max": "2026-09-30"
     },
     "Thundeal|TD98PRO": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:20",
-          "loja": "aliexpress",
-          "preco": 1748.38
-        },
         {
           "data": "2026-06-14 21:20",
           "loja": "aliexpress",
@@ -28522,22 +28562,22 @@
           "data": "2026-10-11 21:22",
           "loja": "aliexpress",
           "preco": 1377.51
+        },
+        {
+          "data": "2026-10-12 00:22",
+          "loja": "aliexpress",
+          "preco": 1605.23
         }
       ],
       "n": 112,
       "min": 1210.16,
       "max": 1957.86,
-      "atual": 1377.51,
+      "atual": 1605.23,
       "data_min": "2026-08-24",
       "data_max": "2026-08-09"
     },
     "Thundeal|TD98PRO ATV": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:21",
-          "loja": "aliexpress",
-          "preco": 1930.36
-        },
         {
           "data": "2026-06-14 21:20",
           "loja": "aliexpress",
@@ -28834,7 +28874,7 @@
           "preco": 1726.18
         }
       ],
-      "n": 60,
+      "n": 59,
       "min": 1370.42,
       "max": 2312.12,
       "atual": 1726.18,
@@ -28843,11 +28883,6 @@
     },
     "Thundeal|TD98W": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:21",
-          "loja": "aliexpress",
-          "preco": 2249.08
-        },
         {
           "data": "2026-06-14 21:20",
           "loja": "aliexpress",
@@ -29064,7 +29099,7 @@
           "preco": 2646.84
         }
       ],
-      "n": 44,
+      "n": 43,
       "min": 1997.86,
       "max": 2665.1,
       "atual": 2646.84,
@@ -29087,22 +29122,22 @@
           "data": "2026-10-11 21:26",
           "loja": "aliexpress",
           "preco": 2092.29
+        },
+        {
+          "data": "2026-10-12 00:27",
+          "loja": "aliexpress",
+          "preco": 2262.29
         }
       ],
-      "n": 3,
+      "n": 4,
       "min": 2092.29,
-      "max": 2092.29,
-      "atual": 2092.29,
+      "max": 2262.29,
+      "atual": 2262.29,
       "data_min": "2026-10-09",
-      "data_max": "2026-10-09"
+      "data_max": "2026-10-12"
     },
     "Touyinger|ET32": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:21",
-          "loja": "aliexpress",
-          "preco": 923.41
-        },
         {
           "data": "2026-06-14 21:20",
           "loja": "aliexpress",
@@ -29692,22 +29727,22 @@
           "data": "2026-10-11 21:22",
           "loja": "aliexpress",
           "preco": 810.3
+        },
+        {
+          "data": "2026-10-12 00:23",
+          "loja": "aliexpress",
+          "preco": 769.77
         }
       ],
       "n": 119,
       "min": 571.23,
       "max": 953.48,
-      "atual": 810.3,
+      "atual": 769.77,
       "data_min": "2026-06-15",
       "data_max": "2026-06-30"
     },
     "Touyinger|L9W Ultra": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:21",
-          "loja": "aliexpress",
-          "preco": 541.77
-        },
         {
           "data": "2026-06-14 21:21",
           "loja": "aliexpress",
@@ -30012,22 +30047,22 @@
           "data": "2026-10-11 21:22",
           "loja": "aliexpress",
           "preco": 487.25
+        },
+        {
+          "data": "2026-10-12 00:23",
+          "loja": "aliexpress",
+          "preco": 803.72
         }
       ],
       "n": 62,
       "min": 438.72,
       "max": 2132.94,
-      "atual": 487.25,
+      "atual": 803.72,
       "data_min": "2026-08-25",
       "data_max": "2026-09-21"
     },
     "Touyinger|Q13W": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:21",
-          "loja": "aliexpress",
-          "preco": 2200.37
-        },
         {
           "data": "2026-06-14 21:21",
           "loja": "aliexpress",
@@ -30402,27 +30437,22 @@
           "data": "2026-10-11 21:23",
           "loja": "aliexpress",
           "preco": 2035.71
+        },
+        {
+          "data": "2026-10-12 00:23",
+          "loja": "aliexpress",
+          "preco": 2947.13
         }
       ],
       "n": 76,
       "min": 1499.86,
-      "max": 2601.6,
-      "atual": 2035.71,
+      "max": 2947.13,
+      "atual": 2947.13,
       "data_min": "2026-08-18",
-      "data_max": "2026-10-08"
+      "data_max": "2026-10-12"
     },
     "Vevshao|A10": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:22",
-          "loja": "aliexpress",
-          "preco": 1033.37
-        },
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 630.8
-        },
         {
           "data": "2026-06-14 21:21",
           "loja": "aliexpress",
@@ -31434,7 +31464,7 @@
           "preco": 2111.69
         }
       ],
-      "n": 204,
+      "n": 202,
       "min": 360.09,
       "max": 2111.69,
       "atual": 2111.69,
@@ -31443,16 +31473,6 @@
     },
     "Vevshao|A22": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:22",
-          "loja": "aliexpress",
-          "preco": 1096.7
-        },
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 1527.8
-        },
         {
           "data": "2026-06-14 21:21",
           "loja": "aliexpress",
@@ -32647,6 +32667,16 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 1073.97
+        },
+        {
+          "data": "2026-10-12 00:23",
+          "loja": "aliexpress",
+          "preco": 767.59
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 1073.97
         }
       ],
       "n": 241,
@@ -32658,16 +32688,6 @@
     },
     "Vevshao|A24 MAX": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:23",
-          "loja": "aliexpress",
-          "preco": 1468.25
-        },
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 1697.08
-        },
         {
           "data": "2026-06-14 21:22",
           "loja": "aliexpress",
@@ -33537,9 +33557,14 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 1695.56
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 1695.56
         }
       ],
-      "n": 176,
+      "n": 175,
       "min": 1031.39,
       "max": 2955.88,
       "atual": 1695.56,
@@ -33548,16 +33573,6 @@
     },
     "Vevshao|V60": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:22",
-          "loja": "aliexpress",
-          "preco": 2781.04
-        },
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 2065.08
-        },
         {
           "data": "2026-06-14 21:22",
           "loja": "aliexpress",
@@ -34732,6 +34747,16 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 2087.48
+        },
+        {
+          "data": "2026-10-12 00:24",
+          "loja": "aliexpress",
+          "preco": 4164.98
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 2087.48
         }
       ],
       "n": 237,
@@ -34743,11 +34768,6 @@
     },
     "Voxflix|VF71": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:22",
-          "loja": "aliexpress",
-          "preco": 1166.5
-        },
         {
           "data": "2026-06-14 21:22",
           "loja": "aliexpress",
@@ -35112,27 +35132,22 @@
           "data": "2026-10-11 21:24",
           "loja": "aliexpress",
           "preco": 1081.65
+        },
+        {
+          "data": "2026-10-12 00:24",
+          "loja": "aliexpress",
+          "preco": 1411.28
         }
       ],
       "n": 74,
       "min": 645.55,
-      "max": 1265.48,
-      "atual": 1081.65,
+      "max": 1411.28,
+      "atual": 1411.28,
       "data_min": "2026-08-24",
-      "data_max": "2026-08-08"
+      "data_max": "2026-10-12"
     },
     "Wanbo|Dali 1": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:22",
-          "loja": "aliexpress",
-          "preco": 797.14
-        },
-        {
-          "data": "2026-06-13 21:24",
-          "loja": "ml",
-          "preco": 800.0
-        },
         {
           "data": "2026-06-14 21:22",
           "loja": "aliexpress",
@@ -35504,25 +35519,15 @@
           "preco": 968.0
         }
       ],
-      "n": 76,
+      "n": 74,
       "min": 797.14,
       "max": 968.0,
       "atual": 968.0,
-      "data_min": "2026-06-13",
+      "data_min": "2026-06-14",
       "data_max": "2026-07-03"
     },
     "Wanbo|T2 Ultra": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:24",
-          "loja": "ml",
-          "preco": 1490.0
-        },
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 1329.08
-        },
         {
           "data": "2026-06-14 21:23",
           "loja": "ml",
@@ -36717,6 +36722,16 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 1347.72
+        },
+        {
+          "data": "2026-10-12 00:19",
+          "loja": "ml",
+          "preco": 1399.9
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 1347.72
         }
       ],
       "n": 241,
@@ -36728,16 +36743,6 @@
     },
     "Wanbo|Vali 1": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:24",
-          "loja": "ml",
-          "preco": 1842.03
-        },
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 1706.28
-        },
         {
           "data": "2026-06-14 21:23",
           "loja": "ml",
@@ -37447,9 +37452,14 @@
           "data": "2026-10-11 21:19",
           "loja": "ml",
           "preco": 1759.0
+        },
+        {
+          "data": "2026-10-12 00:19",
+          "loja": "ml",
+          "preco": 1759.0
         }
       ],
-      "n": 144,
+      "n": 143,
       "min": 1698.44,
       "max": 2199.0,
       "atual": 1759.0,
@@ -37458,16 +37468,6 @@
     },
     "Wanbo|X5 Pro": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:24",
-          "loja": "ml",
-          "preco": 2304.08
-        },
-        {
-          "data": "2026-06-13 21:31",
-          "loja": "shopee",
-          "preco": 2281.28
-        },
         {
           "data": "2026-06-14 21:23",
           "loja": "ml",
@@ -38662,6 +38662,16 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 2309.22
+        },
+        {
+          "data": "2026-10-12 00:19",
+          "loja": "ml",
+          "preco": 2698.0
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 2309.22
         }
       ],
       "n": 241,
@@ -38673,11 +38683,6 @@
     },
     "Wupro|G2": {
       "pontos": [
-        {
-          "data": "2026-06-13 21:23",
-          "loja": "aliexpress",
-          "preco": 1021.99
-        },
         {
           "data": "2026-06-14 21:22",
           "loja": "aliexpress",
@@ -39100,6 +39105,11 @@
         },
         {
           "data": "2026-10-11 21:24",
+          "loja": "aliexpress",
+          "preco": 1263.99
+        },
+        {
+          "data": "2026-10-12 00:24",
           "loja": "aliexpress",
           "preco": 1263.99
         }
@@ -39887,9 +39897,19 @@
           "data": "2026-10-11 21:28",
           "loja": "shopee",
           "preco": 785.68
+        },
+        {
+          "data": "2026-10-12 00:26",
+          "loja": "aliexpress",
+          "preco": 776.94
+        },
+        {
+          "data": "2026-10-12 00:29",
+          "loja": "shopee",
+          "preco": 785.68
         }
       ],
-      "n": 155,
+      "n": 157,
       "min": 559.01,
       "max": 894.08,
       "atual": 785.68,
