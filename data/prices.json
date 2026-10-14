@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "atualizado_em": "2026-10-13 21:39:50",
+    "atualizado_em": "2026-10-14 00:28:25",
     "total_produtos": 54,
     "fonte": "revisar.xlsx + precos.db (historico)",
     "obs": "Gerado por exportador.py a partir de revisar.xlsx + precos.db",
@@ -160,18 +160,18 @@
     {
       "marca": "Bettdow",
       "modelo": "AC1041",
-      "preco_atual": 762.68,
+      "preco_atual": 819.0,
       "preco_min_historico": 677.26,
       "preco_max_historico": 1149.0,
       "historico_desde": "2026-05-09",
-      "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "marketplace_vencedor": "mercado_livre",
+      "data_verificacao": "2026-10-13 21:19",
       "marketplaces": {
         "shopee": {
-          "preco": 762.68,
+          "preco": 831.68,
           "link": "https://s.shopee.com.br/3LNqlTfUDw",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         },
         "mercado_livre": {
           "preco": 819.0,
@@ -182,29 +182,29 @@
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Bettdow",
       "modelo": "AC1061",
-      "preco_atual": 1470.16,
+      "preco_atual": 1484.06,
       "preco_min_historico": 1078.08,
       "preco_max_historico": 1697.08,
       "historico_desde": "2026-05-09",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
-          "preco": 1470.16,
+          "preco": 1484.06,
           "link": "https://s.shopee.com.br/9AMkZ2GbLo",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Bettdow",
@@ -214,73 +214,73 @@
       "preco_max_historico": 570.4,
       "historico_desde": "2026-05-09",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
           "preco": 507.63,
           "link": "https://s.shopee.com.br/1gGjdGVLMQ",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Bettdow",
       "modelo": "AC1071",
-      "preco_atual": 1460.96,
+      "preco_atual": 1475.32,
       "preco_min_historico": 973.68,
       "preco_max_historico": 1552.96,
       "historico_desde": "2026-05-09",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
-          "preco": 1460.96,
+          "preco": 1475.32,
           "link": "https://s.shopee.com.br/6VKsXIooNP",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Bettdow",
       "modelo": "AC1073",
-      "preco_atual": 1129.76,
+      "preco_atual": 1160.68,
       "preco_min_historico": 767.08,
       "preco_max_historico": 1268.68,
       "historico_desde": "2026-05-09",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
-          "preco": 1129.76,
+          "preco": 1160.68,
           "link": "https://s.shopee.com.br/9ALdiCj3lc",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Byintek",
       "modelo": "Love U4",
-      "preco_atual": 534.42,
+      "preco_atual": 537.83,
       "preco_min_historico": 399.28,
       "preco_max_historico": 1606.71,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "aliexpress": {
           "preco": 653.45,
@@ -290,22 +290,22 @@
           "cupom_validade": "2026-10-30",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=byintek-love-u4&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005007587741414.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:19",
+          "data_checagem": "2026-10-14 00:19",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
         },
         "shopee": {
-          "preco": 534.42,
+          "preco": 537.83,
           "link": "https://s.shopee.com.br/5fllXmMmWJ",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Byintek",
@@ -315,7 +315,7 @@
       "preco_max_historico": 1387.0,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:19",
+      "data_verificacao": "2026-10-14 00:19",
       "marketplaces": {
         "aliexpress": {
           "preco": 1000.33,
@@ -325,22 +325,22 @@
           "cupom_validade": "2026-10-28",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=byintek-love-u12&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005007353455250.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:19",
+          "data_checagem": "2026-10-14 00:19",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
         },
         "shopee": {
-          "preco": 1012.0,
+          "preco": 1048.8,
           "link": "https://s.shopee.com.br/8KmWigIGcQ",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Byintek",
@@ -350,7 +350,7 @@
       "preco_max_historico": 2813.44,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:19",
+      "data_verificacao": "2026-10-14 00:19",
       "marketplaces": {
         "aliexpress": {
           "preco": 2118.8,
@@ -360,7 +360,7 @@
           "cupom_validade": "2026-10-30",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=byintek-plato-t5-max&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005005227286877.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:19",
+          "data_checagem": "2026-10-14 00:19",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -369,7 +369,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Byintek",
@@ -379,7 +379,7 @@
       "preco_max_historico": 3561.13,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "aliexpress": {
           "preco": 1896.8,
@@ -389,7 +389,7 @@
           "cupom_validade": "2026-10-30",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=byintek-u80-max&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005012152212336.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:19",
+          "data_checagem": "2026-10-14 00:19",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -398,33 +398,33 @@
           "preco": 1793.08,
           "link": "https://s.shopee.com.br/7KtzWqYei5",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Byintek",
       "modelo": "U90 MAX",
-      "preco_atual": 2241.12,
+      "preco_atual": 2243.04,
       "preco_min_historico": 1571.51,
       "preco_max_historico": 2920.08,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:20",
+      "data_verificacao": "2026-10-14 00:20",
       "marketplaces": {
         "aliexpress": {
-          "preco": 2241.12,
+          "preco": 2243.04,
           "cupom": "DIADOSPAIS",
           "valor_cupom": 326.18,
           "cupom_minimo": null,
           "cupom_validade": "2026-10-30",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=byintek-u90-max&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005007943489903.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:20",
+          "data_checagem": "2026-10-14 00:20",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -433,7 +433,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Dangbei",
@@ -443,7 +443,7 @@
       "preco_max_historico": 10966.02,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:20",
+      "data_verificacao": "2026-10-14 00:20",
       "marketplaces": {
         "aliexpress": {
           "preco": 9448.78,
@@ -453,7 +453,7 @@
           "cupom_validade": null,
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=dangbei-mars-pro-2&clickref2=site&clickref3=&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005011781296732.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:20",
+          "data_checagem": "2026-10-14 00:20",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -462,7 +462,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Everycom",
@@ -472,7 +472,7 @@
       "preco_max_historico": 886.54,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:20",
+      "data_verificacao": "2026-10-14 00:20",
       "marketplaces": {
         "aliexpress": {
           "preco": 674.85,
@@ -482,7 +482,7 @@
           "cupom_validade": null,
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=everycom-r16&clickref2=site&clickref3=&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005009202429819.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:20",
+          "data_checagem": "2026-10-14 00:20",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -491,7 +491,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "FlixTone",
@@ -501,7 +501,7 @@
       "preco_max_historico": 1881.54,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:20",
+      "data_verificacao": "2026-10-14 00:20",
       "marketplaces": {
         "aliexpress": {
           "preco": 1586.61,
@@ -511,7 +511,7 @@
           "cupom_validade": "2026-10-30",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=flixtone-d9w-mini&clickref2=site&clickref3=&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005009453007798.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:20",
+          "data_checagem": "2026-10-14 00:20",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -520,7 +520,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "FlixTone",
@@ -530,7 +530,7 @@
       "preco_max_historico": 2530.93,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:20",
+      "data_verificacao": "2026-10-14 00:21",
       "marketplaces": {
         "aliexpress": {
           "preco": 2530.93,
@@ -540,7 +540,7 @@
           "cupom_validade": null,
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=flixtone-d9w-ultra&clickref2=site&clickref3=&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005007702801222.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:20",
+          "data_checagem": "2026-10-14 00:21",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -549,7 +549,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Formovie",
@@ -559,7 +559,7 @@
       "preco_max_historico": 17179.7,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:20",
+      "data_verificacao": "2026-10-14 00:20",
       "marketplaces": {
         "aliexpress": {
           "preco": 11652.7,
@@ -569,7 +569,7 @@
           "cupom_validade": null,
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=formovie-cinema-edge&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005008567712760.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:20",
+          "data_checagem": "2026-10-14 00:20",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -578,7 +578,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Formovie",
@@ -588,7 +588,7 @@
       "preco_max_historico": 1558.47,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:21",
+      "data_verificacao": "2026-10-14 00:21",
       "marketplaces": {
         "aliexpress": {
           "preco": 1505.99,
@@ -598,7 +598,7 @@
           "cupom_validade": null,
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=formovie-xming-episode-one&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005009930546681.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:21",
+          "data_checagem": "2026-10-14 00:21",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -607,27 +607,27 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Horlat",
       "modelo": "T9N",
-      "preco_atual": 700.89,
+      "preco_atual": 701.75,
       "preco_min_historico": 576.65,
       "preco_max_historico": 1103.64,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:21",
+      "data_verificacao": "2026-10-14 00:21",
       "marketplaces": {
         "aliexpress": {
-          "preco": 700.89,
+          "preco": 701.75,
           "cupom": null,
           "valor_cupom": null,
           "cupom_minimo": null,
           "cupom_validade": null,
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=horlat-t9n&clickref2=site&clickref3=&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005008955081666.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:21",
+          "data_checagem": "2026-10-14 00:21",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -636,7 +636,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Jenovox",
@@ -646,7 +646,7 @@
       "preco_max_historico": 3010.57,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:21",
+      "data_verificacao": "2026-10-14 00:21",
       "marketplaces": {
         "aliexpress": {
           "preco": 2518.49,
@@ -656,7 +656,7 @@
           "cupom_validade": "2026-11-04",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=jenovox-m5000-mini&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005012249183267.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:21",
+          "data_checagem": "2026-10-14 00:21",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -665,7 +665,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Magcubic",
@@ -675,19 +675,19 @@
       "preco_max_historico": 566.08,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
           "preco": 360.1,
           "link": "https://s.shopee.com.br/1Vz9qncUUc",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Magcubic",
@@ -697,90 +697,90 @@
       "preco_max_historico": 469.0,
       "historico_desde": "2026-06-19",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
           "preco": 423.28,
           "link": "https://s.shopee.com.br/50Z9sCWcul",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Magcubic",
       "modelo": "HY350 MAX",
-      "preco_atual": 643.08,
+      "preco_atual": 712.08,
       "preco_min_historico": 643.08,
       "preco_max_historico": 763.88,
       "historico_desde": "2026-07-03",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
-          "preco": 643.08,
+          "preco": 712.08,
           "link": "https://s.shopee.com.br/3qMHfgndpi",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         },
         "mercado_livre": {
           "preco": 763.88,
           "link": "https://meli.la/25hfTc9",
-          "data_checagem": "2026-10-13 21:19"
+          "data_checagem": "2026-10-14 00:19"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Magcubic",
       "modelo": "HY450C",
-      "preco_atual": 827.08,
+      "preco_atual": 896.08,
       "preco_min_historico": 772.8,
       "preco_max_historico": 1094.7,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
-          "preco": 827.08,
+          "preco": 896.08,
           "link": "https://s.shopee.com.br/9zxgQ38XGU",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Magcubic",
       "modelo": "HY450 MAX",
-      "preco_atual": 1103.08,
+      "preco_atual": 1135.33,
       "preco_min_historico": 983.58,
       "preco_max_historico": 1199.0,
       "historico_desde": "2026-08-05",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
-          "preco": 1103.08,
+          "preco": 1135.33,
           "link": "https://s.shopee.com.br/60QmFfx84m",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Magcubic",
@@ -790,19 +790,19 @@
       "preco_max_historico": 677.37,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
           "preco": 620.08,
           "link": "https://s.shopee.com.br/7ptLFVjkLN",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Progaga",
@@ -812,7 +812,7 @@
       "preco_max_historico": 1231.08,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:21",
+      "data_verificacao": "2026-10-14 00:22",
       "marketplaces": {
         "aliexpress": {
           "preco": 923.36,
@@ -822,7 +822,7 @@
           "cupom_validade": "2026-10-30",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=progaga-pg610w&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005007273199118.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:21",
+          "data_checagem": "2026-10-14 00:22",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -831,7 +831,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Thundeal",
@@ -841,7 +841,7 @@
       "preco_max_historico": 834.55,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:22",
+      "data_verificacao": "2026-10-14 00:22",
       "marketplaces": {
         "aliexpress": {
           "preco": 647.96,
@@ -851,7 +851,7 @@
           "cupom_validade": "2026-10-29",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=thundeal-td80pro&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005005491874894.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:22",
+          "data_checagem": "2026-10-14 00:22",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -860,7 +860,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Thundeal",
@@ -870,7 +870,7 @@
       "preco_max_historico": 899.0,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:22",
+      "data_verificacao": "2026-10-14 00:22",
       "marketplaces": {
         "aliexpress": {
           "preco": 899.0,
@@ -880,7 +880,7 @@
           "cupom_validade": "2026-10-28",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=thundeal-td92-pro&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005006177536235.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:22",
+          "data_checagem": "2026-10-14 00:22",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -889,7 +889,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Thundeal",
@@ -899,7 +899,7 @@
       "preco_max_historico": 1009.79,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:22",
+      "data_verificacao": "2026-10-14 00:22",
       "marketplaces": {
         "aliexpress": {
           "preco": 831.37,
@@ -909,7 +909,7 @@
           "cupom_validade": "2026-10-31",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=thundeal-td95w&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005008515562651.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:22",
+          "data_checagem": "2026-10-14 00:22",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -918,7 +918,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Thundeal",
@@ -928,7 +928,7 @@
       "preco_max_historico": 1957.86,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:22",
+      "data_verificacao": "2026-10-14 00:22",
       "marketplaces": {
         "aliexpress": {
           "preco": 1458.02,
@@ -938,7 +938,7 @@
           "cupom_validade": "2026-10-30",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=thundeal-td98pro&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005007783563482.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:22",
+          "data_checagem": "2026-10-14 00:22",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -947,7 +947,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Touyinger",
@@ -957,7 +957,7 @@
       "preco_max_historico": 953.48,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:22",
+      "data_verificacao": "2026-10-14 00:23",
       "marketplaces": {
         "aliexpress": {
           "preco": 773.56,
@@ -967,7 +967,7 @@
           "cupom_validade": null,
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=touyinger-et32&clickref2=site&clickref3=&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005009242156305.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:22",
+          "data_checagem": "2026-10-14 00:23",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -976,7 +976,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Touyinger",
@@ -986,7 +986,7 @@
       "preco_max_historico": 2132.94,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:22",
+      "data_verificacao": "2026-10-14 00:23",
       "marketplaces": {
         "aliexpress": {
           "preco": 795.5,
@@ -996,7 +996,7 @@
           "cupom_validade": "2026-11-09",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=touyinger-l9w-ultra&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005007217561540.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:22",
+          "data_checagem": "2026-10-14 00:23",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -1005,7 +1005,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Touyinger",
@@ -1015,7 +1015,7 @@
       "preco_max_historico": 2939.48,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:23",
+      "data_verificacao": "2026-10-14 00:23",
       "marketplaces": {
         "aliexpress": {
           "preco": 2908.9,
@@ -1025,7 +1025,7 @@
           "cupom_validade": "2026-11-09",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=touyinger-q13w&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005004068868098.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:23",
+          "data_checagem": "2026-10-14 00:23",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -1034,52 +1034,52 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Vevshao",
       "modelo": "A22",
-      "preco_atual": 771.19,
+      "preco_atual": 772.25,
       "preco_min_historico": 704.1,
       "preco_max_historico": 1880.89,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:23",
+      "data_verificacao": "2026-10-14 00:23",
       "marketplaces": {
         "aliexpress": {
-          "preco": 771.19,
+          "preco": 772.25,
           "cupom": "A2235A",
           "valor_cupom": 190.27,
           "cupom_minimo": null,
           "cupom_validade": "2026-10-27",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=vevshao-a22&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005008465946747.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:23",
+          "data_checagem": "2026-10-14 00:23",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
         },
         "shopee": {
-          "preco": 1038.49,
+          "preco": 1073.97,
           "link": "https://s.shopee.com.br/60ObwPYJAB",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Vevshao",
       "modelo": "V60",
-      "preco_atual": 2087.48,
+      "preco_atual": 2069.08,
       "preco_min_historico": 1438.45,
       "preco_max_historico": 4184.54,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "aliexpress": {
           "preco": 4184.54,
@@ -1089,22 +1089,22 @@
           "cupom_validade": "2026-10-27",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=vevshao-v60&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005010609543604.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:23",
+          "data_checagem": "2026-10-14 00:23",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
         },
         "shopee": {
-          "preco": 2087.48,
+          "preco": 2069.08,
           "link": "https://s.shopee.com.br/qgVmuwNQd",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Voxflix",
@@ -1114,7 +1114,7 @@
       "preco_max_historico": 1407.62,
       "historico_desde": "2026-05-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:23",
+      "data_verificacao": "2026-10-14 00:23",
       "marketplaces": {
         "aliexpress": {
           "preco": 1320.76,
@@ -1124,7 +1124,7 @@
           "cupom_validade": "2026-11-04",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=voxflix-vf71&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005012006207120.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:23",
+          "data_checagem": "2026-10-14 00:23",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -1133,34 +1133,34 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Wanbo",
       "modelo": "T2 Ultra",
-      "preco_atual": 1326.66,
+      "preco_atual": 1347.72,
       "preco_min_historico": 1227.81,
       "preco_max_historico": 1565.0,
       "historico_desde": "2026-05-09",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
-          "preco": 1326.66,
+          "preco": 1347.72,
           "link": "https://s.shopee.com.br/5ApUwslF4z",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         },
         "mercado_livre": {
           "preco": 1399.9,
           "link": "https://meli.la/1v3Rrbj",
-          "data_checagem": "2026-10-13 21:19"
+          "data_checagem": "2026-10-14 00:19"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Wanbo",
@@ -1170,18 +1170,18 @@
       "preco_max_historico": 2199.0,
       "historico_desde": "2026-05-09",
       "marketplace_vencedor": "mercado_livre",
-      "data_verificacao": "2026-10-13 21:19",
+      "data_verificacao": "2026-10-14 00:19",
       "marketplaces": {
         "mercado_livre": {
           "preco": 1759.0,
           "link": "https://meli.la/1AAe5HZ",
-          "data_checagem": "2026-10-13 21:19"
+          "data_checagem": "2026-10-14 00:19"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Wanbo",
@@ -1191,24 +1191,24 @@
       "preco_max_historico": 2699.0,
       "historico_desde": "2026-05-09",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
           "preco": 2309.22,
           "link": "https://s.shopee.com.br/W3fOJGTwH",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         },
         "mercado_livre": {
           "preco": 2699.0,
           "link": "https://meli.la/1ywAF3b",
-          "data_checagem": "2026-10-13 21:19"
+          "data_checagem": "2026-10-14 00:19"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Wupro",
@@ -1218,7 +1218,7 @@
       "preco_max_historico": 1269.99,
       "historico_desde": "2026-05-11",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:23",
+      "data_verificacao": "2026-10-14 00:24",
       "marketplaces": {
         "aliexpress": {
           "preco": 1269.99,
@@ -1228,7 +1228,7 @@
           "cupom_validade": null,
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=wupro-g2&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005008979792643.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:23",
+          "data_checagem": "2026-10-14 00:24",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -1237,51 +1237,51 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Everycom",
       "modelo": "HQ9W ULTRA",
-      "preco_atual": 1426.0,
+      "preco_atual": 1442.1,
       "preco_min_historico": 1426.0,
       "preco_max_historico": 1518.0,
       "historico_desde": "2026-05-17",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
-          "preco": 1426.0,
+          "preco": 1442.1,
           "link": "https://s.shopee.com.br/7fWpvTsyov",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Vevshao",
       "modelo": "A24 MAX",
-      "preco_atual": 1687.55,
+      "preco_atual": 1695.56,
       "preco_min_historico": 1031.39,
       "preco_max_historico": 6748.5,
       "historico_desde": "2026-05-20",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
-          "preco": 1687.55,
+          "preco": 1695.56,
           "link": "https://s.shopee.com.br/2VojlzGQjE",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
-      "icms": "não",
+      "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Bettdow",
@@ -1291,54 +1291,54 @@
       "preco_max_historico": 2795.88,
       "historico_desde": "2026-05-27",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
           "preco": 2206.16,
           "link": "https://s.shopee.com.br/4Vav0Itw65",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Byintek",
       "modelo": "U14 PRO",
-      "preco_atual": 1321.14,
+      "preco_atual": 1322.8,
       "preco_min_historico": 1048.77,
       "preco_max_historico": 3720.83,
       "historico_desde": "2026-06-01",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:24",
+      "data_verificacao": "2026-10-14 00:24",
       "marketplaces": {
         "aliexpress": {
-          "preco": 1321.14,
+          "preco": 1322.8,
           "cupom": "U14PROBR1",
           "valor_cupom": 244.63,
           "cupom_minimo": null,
           "cupom_validade": "2026-10-30",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=byintek-u14-pro&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005011660470892.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:24",
+          "data_checagem": "2026-10-14 00:24",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
         },
         "shopee": {
-          "preco": 1600.8,
+          "preco": 1634.37,
           "link": "https://s.shopee.com.br/9KgAlC9dM4",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Progaga",
@@ -1348,7 +1348,7 @@
       "preco_max_historico": 2072.94,
       "historico_desde": "2026-06-04",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:24",
+      "data_verificacao": "2026-10-14 00:24",
       "marketplaces": {
         "aliexpress": {
           "preco": 1027.13,
@@ -1358,7 +1358,7 @@
           "cupom_validade": "2026-10-30",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=progaga-pg610-atv&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005012298884571.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:24",
+          "data_checagem": "2026-10-14 00:24",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -1367,7 +1367,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "FlixTone",
@@ -1377,7 +1377,7 @@
       "preco_max_historico": 2608.99,
       "historico_desde": "2026-06-07",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:24",
+      "data_verificacao": "2026-10-14 00:24",
       "marketplaces": {
         "aliexpress": {
           "preco": 2531.11,
@@ -1387,7 +1387,7 @@
           "cupom_validade": "2026-10-28",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=flixtone-d10s&clickref2=site&clickref3=&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005006952317727.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:24",
+          "data_checagem": "2026-10-14 00:24",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -1396,7 +1396,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Thundeal",
@@ -1406,7 +1406,7 @@
       "preco_max_historico": 1461.24,
       "historico_desde": "2026-07-02",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:24",
+      "data_verificacao": "2026-10-14 00:24",
       "marketplaces": {
         "aliexpress": {
           "preco": 1266.16,
@@ -1416,7 +1416,7 @@
           "cupom_validade": "2026-10-27",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=thundeal-td98-mini&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005006679894583.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:24",
+          "data_checagem": "2026-10-14 00:24",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -1425,34 +1425,34 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Magcubic",
       "modelo": "X7",
-      "preco_atual": 919.08,
+      "preco_atual": 960.53,
       "preco_min_historico": 859.28,
       "preco_max_historico": 1282.02,
       "historico_desde": "2026-07-13",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
-          "preco": 919.08,
+          "preco": 960.53,
           "link": "https://s.shopee.com.br/2LYFHxkWNM",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         },
         "mercado_livre": {
           "preco": 1282.02,
           "link": "https://meli.la/2MwEpT5",
-          "data_checagem": "2026-10-13 21:19"
+          "data_checagem": "2026-10-14 00:19"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Bettdow",
@@ -1462,24 +1462,24 @@
       "preco_max_historico": 998.75,
       "historico_desde": "2026-07-19",
       "marketplace_vencedor": "mercado_livre",
-      "data_verificacao": "2026-10-13 21:19",
+      "data_verificacao": "2026-10-14 00:19",
       "marketplaces": {
         "shopee": {
           "preco": 462.76,
           "link": "https://s.shopee.com.br/4LHt8Vcwuf",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         },
         "mercado_livre": {
           "preco": 399.0,
           "link": "https://meli.la/31PQs6x",
-          "data_checagem": "2026-10-13 21:19"
+          "data_checagem": "2026-10-14 00:19"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Bettdow",
@@ -1489,46 +1489,46 @@
       "preco_max_historico": 1699.0,
       "historico_desde": "2026-07-24",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
           "preco": 499.56,
           "link": "https://s.shopee.com.br/8fSSvtTgcO",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Magcubic",
       "modelo": "HY450GT",
-      "preco_atual": 1195.08,
+      "preco_atual": 1222.73,
       "preco_min_historico": 1008.42,
       "preco_max_historico": 2347.0,
       "historico_desde": "2026-07-24",
       "marketplace_vencedor": "shopee",
-      "data_verificacao": "2026-10-13 21:28",
+      "data_verificacao": "2026-10-14 00:28",
       "marketplaces": {
         "shopee": {
-          "preco": 1195.08,
+          "preco": 1222.73,
           "link": "https://s.shopee.com.br/6AlVH8ggp8",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         },
         "mercado_livre": {
           "preco": 2347.0,
           "link": "https://meli.la/1GnKusK",
-          "data_checagem": "2026-10-13 21:19"
+          "data_checagem": "2026-10-14 00:19"
         }
       },
       "frete_br": "sim",
       "icms": "?",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Progaga",
@@ -1538,7 +1538,7 @@
       "preco_max_historico": 630.9,
       "historico_desde": "2026-07-24",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:24",
+      "data_verificacao": "2026-10-14 00:24",
       "marketplaces": {
         "aliexpress": {
           "preco": 536.62,
@@ -1548,7 +1548,7 @@
           "cupom_validade": "2026-10-30",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=progaga-pg370-max&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005008164054254.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:24",
+          "data_checagem": "2026-10-14 00:24",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -1557,42 +1557,42 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "XGODY",
       "modelo": "Gimbal 7",
-      "preco_atual": 621.84,
+      "preco_atual": 627.59,
       "preco_min_historico": 559.01,
       "preco_max_historico": 894.08,
       "historico_desde": "2026-07-26",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:24",
+      "data_verificacao": "2026-10-14 00:25",
       "marketplaces": {
         "aliexpress": {
-          "preco": 621.84,
+          "preco": 627.59,
           "cupom": "GUIWDH41YD36",
           "valor_cupom": 27.18,
           "cupom_minimo": null,
           "cupom_validade": "2026-10-30",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=xgody-gimbal-7&clickref2=site&clickref3=&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005011787209401.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:24",
+          "data_checagem": "2026-10-14 00:25",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
         },
         "shopee": {
-          "preco": 679.88,
+          "preco": 748.88,
           "link": "https://s.shopee.com.br/5Ari1Ea9er",
           "obs": null,
-          "data_checagem": "2026-10-13 21:28"
+          "data_checagem": "2026-10-14 00:28"
         }
       },
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Byintek",
@@ -1602,7 +1602,7 @@
       "preco_max_historico": 1845.9,
       "historico_desde": "2026-09-18",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:24",
+      "data_verificacao": "2026-10-14 00:25",
       "marketplaces": {
         "aliexpress": {
           "preco": 1499.22,
@@ -1612,7 +1612,7 @@
           "cupom_validade": "2026-10-30",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=byintek-magic-1&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005001797860104.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:24",
+          "data_checagem": "2026-10-14 00:25",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -1621,7 +1621,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     },
     {
       "marca": "Thundeal",
@@ -1631,7 +1631,7 @@
       "preco_max_historico": 2272.92,
       "historico_desde": "2026-10-09",
       "marketplace_vencedor": "aliexpress",
-      "data_verificacao": "2026-10-13 21:25",
+      "data_verificacao": "2026-10-14 00:25",
       "marketplaces": {
         "aliexpress": {
           "preco": 2272.92,
@@ -1641,7 +1641,7 @@
           "cupom_validade": "2026-10-31",
           "link": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=thundeal-td99w&clickref2=site&clickref3=teste-out26&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005005087069390.html&platform=pl",
           "alerta": null,
-          "data_checagem": "2026-10-13 21:25",
+          "data_checagem": "2026-10-14 00:25",
           "cupom_plataforma": null,
           "cupom_plataforma_minimo": null,
           "cupom_plataforma_validade": null
@@ -1650,7 +1650,7 @@
       "frete_br": "sim",
       "icms": "não",
       "status": "nacional",
-      "ultima_atualizacao": "2026-10-13 21:39"
+      "ultima_atualizacao": "2026-10-14 00:28"
     }
   ]
 }
