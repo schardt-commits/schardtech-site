@@ -1,10 +1,50 @@
 {
   "data_coleta": "14/10",
-  "hora_coleta": "00:28",
+  "hora_coleta": "09:27",
   "data_ontem": "13/10",
   "data_hoje": "14/10",
-  "total_quedas": 1,
+  "total_quedas": 5,
   "quedas": [
+    {
+      "marca": "Touyinger",
+      "modelo": "L9W Ultra",
+      "slug": "touyinger-l9w-ultra",
+      "preco_atual": 531.77,
+      "preco_ontem": 795.5,
+      "delta": -263.73,
+      "delta_pct": -33.15,
+      "data_checagem": "2026-10-14 09:22"
+    },
+    {
+      "marca": "Jenovox",
+      "modelo": "M5000 Mini",
+      "slug": "jenovox-m5000-mini",
+      "preco_atual": 2003.25,
+      "preco_ontem": 2518.49,
+      "delta": -515.24,
+      "delta_pct": -20.46,
+      "data_checagem": "2026-10-14 09:21"
+    },
+    {
+      "marca": "FlixTone",
+      "modelo": "D10S",
+      "slug": "flixtone-d10s",
+      "preco_atual": 2135.05,
+      "preco_ontem": 2531.11,
+      "delta": -396.06,
+      "delta_pct": -15.65,
+      "data_checagem": "2026-10-14 09:24"
+    },
+    {
+      "marca": "Voxflix",
+      "modelo": "VF71",
+      "slug": "voxflix-vf71",
+      "preco_atual": 1163.18,
+      "preco_ontem": 1320.76,
+      "delta": -157.58,
+      "delta_pct": -11.93,
+      "data_checagem": "2026-10-14 09:23"
+    },
     {
       "marca": "Vevshao",
       "modelo": "V60",
@@ -13,7 +53,7 @@
       "preco_ontem": 2087.48,
       "delta": -18.4,
       "delta_pct": -0.88,
-      "data_checagem": "2026-10-14 00:28"
+      "data_checagem": "2026-10-14 09:27"
     }
   ]
 }
