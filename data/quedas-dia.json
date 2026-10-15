@@ -1,59 +1,59 @@
 {
   "data_coleta": "15/10",
-  "hora_coleta": "10:55",
+  "hora_coleta": "15:17",
   "data_ontem": "14/10",
   "data_hoje": "15/10",
-  "total_quedas": 21,
+  "total_quedas": 16,
   "quedas": [
     {
       "marca": "Magcubic",
       "modelo": "HY450GT",
       "slug": "magcubic-hy450gt",
-      "preco_atual": 1268.68,
+      "preco_atual": 1287.08,
       "preco_ontem": 2347.0,
-      "delta": -1078.32,
-      "delta_pct": -45.94,
-      "data_checagem": "2026-10-15 10:55"
+      "delta": -1059.92,
+      "delta_pct": -45.16,
+      "data_checagem": "2026-10-15 15:17"
     },
     {
       "marca": "Magcubic",
       "modelo": "HY350 MAX",
       "slug": "magcubic-hy350-max",
-      "preco_atual": 624.68,
+      "preco_atual": 643.08,
       "preco_ontem": 712.08,
-      "delta": -87.4,
-      "delta_pct": -12.27,
-      "data_checagem": "2026-10-15 10:55"
+      "delta": -69.0,
+      "delta_pct": -9.69,
+      "data_checagem": "2026-10-15 15:17"
     },
     {
       "marca": "Magcubic",
       "modelo": "HY450C",
       "slug": "magcubic-hy450c",
-      "preco_atual": 808.68,
+      "preco_atual": 827.08,
       "preco_ontem": 896.08,
-      "delta": -87.4,
-      "delta_pct": -9.75,
-      "data_checagem": "2026-10-15 10:55"
+      "delta": -69.0,
+      "delta_pct": -7.7,
+      "data_checagem": "2026-10-15 15:17"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1041",
-      "slug": "bettdow-ac1041",
-      "preco_atual": 762.68,
-      "preco_ontem": 819.0,
-      "delta": -56.32,
-      "delta_pct": -6.88,
-      "data_checagem": "2026-10-15 10:55"
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 2129.0,
+      "preco_ontem": 2251.49,
+      "delta": -122.49,
+      "delta_pct": -5.44,
+      "data_checagem": "2026-10-15 15:09"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "X7",
-      "slug": "magcubic-x7",
-      "preco_atual": 900.68,
-      "preco_ontem": 960.53,
-      "delta": -59.85,
-      "delta_pct": -6.23,
-      "data_checagem": "2026-10-15 10:55"
+      "marca": "XGODY",
+      "modelo": "Gimbal 7",
+      "slug": "xgody-gimbal-7",
+      "preco_atual": 631.88,
+      "preco_ontem": 664.55,
+      "delta": -32.67,
+      "delta_pct": -4.92,
+      "data_checagem": "2026-10-15 15:17"
     }
   ]
 }
