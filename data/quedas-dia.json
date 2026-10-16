@@ -1,59 +1,29 @@
 {
-  "data_coleta": "15/10",
-  "hora_coleta": "21:27",
-  "data_ontem": "14/10",
-  "data_hoje": "15/10",
-  "total_quedas": 18,
+  "data_coleta": "16/10",
+  "hora_coleta": "00:27",
+  "data_ontem": "15/10",
+  "data_hoje": "16/10",
+  "total_quedas": 2,
   "quedas": [
     {
       "marca": "Magcubic",
       "modelo": "HY450GT",
       "slug": "magcubic-hy450gt",
-      "preco_atual": 1287.08,
-      "preco_ontem": 2347.0,
-      "delta": -1059.92,
-      "delta_pct": -45.16,
-      "data_checagem": "2026-10-15 21:27"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY350 MAX",
-      "slug": "magcubic-hy350-max",
-      "preco_atual": 643.08,
-      "preco_ontem": 712.08,
-      "delta": -69.0,
-      "delta_pct": -9.69,
-      "data_checagem": "2026-10-15 21:27"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY450C",
-      "slug": "magcubic-hy450c",
-      "preco_atual": 827.08,
-      "preco_ontem": 896.08,
-      "delta": -69.0,
-      "delta_pct": -7.7,
-      "data_checagem": "2026-10-15 21:27"
+      "preco_atual": 1222.73,
+      "preco_ontem": 1287.08,
+      "delta": -64.35,
+      "delta_pct": -5.0,
+      "data_checagem": "2026-10-16 00:27"
     },
     {
       "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 2129.0,
-      "preco_ontem": 2251.49,
-      "delta": -122.49,
-      "delta_pct": -5.44,
-      "data_checagem": "2026-10-15 21:19"
-    },
-    {
-      "marca": "XGODY",
-      "modelo": "Gimbal 7",
-      "slug": "xgody-gimbal-7",
-      "preco_atual": 631.88,
-      "preco_ontem": 664.55,
-      "delta": -32.67,
-      "delta_pct": -4.92,
-      "data_checagem": "2026-10-15 21:27"
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 546.48,
+      "preco_ontem": 547.03,
+      "delta": -0.55,
+      "delta_pct": -0.1,
+      "data_checagem": "2026-10-16 00:27"
     }
   ]
 }
