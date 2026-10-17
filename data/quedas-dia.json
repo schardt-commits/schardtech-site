@@ -1,29 +1,19 @@
 {
-  "data_coleta": "16/10",
-  "hora_coleta": "21:27",
-  "data_ontem": "15/10",
-  "data_hoje": "16/10",
-  "total_quedas": 2,
+  "data_coleta": "17/10",
+  "hora_coleta": "00:27",
+  "data_ontem": "16/10",
+  "data_hoje": "17/10",
+  "total_quedas": 1,
   "quedas": [
     {
-      "marca": "Magcubic",
-      "modelo": "HY450GT",
-      "slug": "magcubic-hy450gt",
-      "preco_atual": 1222.73,
-      "preco_ontem": 1287.08,
-      "delta": -64.35,
-      "delta_pct": -5.0,
-      "data_checagem": "2026-10-16 21:27"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U4",
-      "slug": "byintek-love-u4",
-      "preco_atual": 546.48,
-      "preco_ontem": 547.03,
-      "delta": -0.55,
-      "delta_pct": -0.1,
-      "data_checagem": "2026-10-16 21:27"
+      "marca": "Bettdow",
+      "modelo": "AC1041",
+      "slug": "bettdow-ac1041",
+      "preco_atual": 850.08,
+      "preco_ontem": 914.21,
+      "delta": -64.13,
+      "delta_pct": -7.01,
+      "data_checagem": "2026-10-17 00:27"
     }
   ]
 }
