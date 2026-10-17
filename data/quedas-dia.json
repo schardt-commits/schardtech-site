@@ -1,9 +1,9 @@
 {
   "data_coleta": "17/10",
-  "hora_coleta": "09:28",
+  "hora_coleta": "15:17",
   "data_ontem": "16/10",
   "data_hoje": "17/10",
-  "total_quedas": 1,
+  "total_quedas": 6,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,7 +13,47 @@
       "preco_ontem": 914.21,
       "delta": -64.13,
       "delta_pct": -7.01,
-      "data_checagem": "2026-10-17 09:28"
+      "data_checagem": "2026-10-17 15:17"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 779.61,
+      "preco_ontem": 830.81,
+      "delta": -51.2,
+      "delta_pct": -6.16,
+      "data_checagem": "2026-10-17 15:17"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1335.4,
+      "preco_ontem": 1418.76,
+      "delta": -83.36,
+      "delta_pct": -5.88,
+      "data_checagem": "2026-10-17 15:17"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 1281.26,
+      "preco_ontem": 1354.47,
+      "delta": -73.21,
+      "delta_pct": -5.41,
+      "data_checagem": "2026-10-17 15:14"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 781.66,
+      "preco_ontem": 822.72,
+      "delta": -41.06,
+      "delta_pct": -4.99,
+      "data_checagem": "2026-10-17 15:12"
     }
   ]
 }
