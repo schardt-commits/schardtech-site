@@ -1,19 +1,39 @@
 {
-  "data_coleta": "17/10",
-  "hora_coleta": "21:28",
-  "data_ontem": "16/10",
-  "data_hoje": "17/10",
-  "total_quedas": 6,
+  "data_coleta": "19/10",
+  "hora_coleta": "09:28",
+  "data_ontem": "18/10",
+  "data_hoje": "19/10",
+  "total_quedas": 17,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1041",
-      "slug": "bettdow-ac1041",
-      "preco_atual": 850.08,
-      "preco_ontem": 914.21,
-      "delta": -64.13,
-      "delta_pct": -7.01,
-      "data_checagem": "2026-10-17 21:28"
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1471.96,
+      "preco_ontem": 1734.24,
+      "delta": -262.28,
+      "delta_pct": -15.12,
+      "data_checagem": "2026-10-19 09:25"
+    },
+    {
+      "marca": "Voxflix",
+      "modelo": "VF71",
+      "slug": "voxflix-vf71",
+      "preco_atual": 1077.05,
+      "preco_ontem": 1175.34,
+      "delta": -98.29,
+      "delta_pct": -8.36,
+      "data_checagem": "2026-10-19 09:23"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Magic 1",
+      "slug": "byintek-magic-1",
+      "preco_atual": 1876.82,
+      "preco_ontem": 2004.58,
+      "delta": -127.76,
+      "delta_pct": -6.37,
+      "data_checagem": "2026-10-19 09:25"
     },
     {
       "marca": "Vevshao",
@@ -23,7 +43,7 @@
       "preco_ontem": 830.81,
       "delta": -51.2,
       "delta_pct": -6.16,
-      "data_checagem": "2026-10-17 21:28"
+      "data_checagem": "2026-10-19 09:28"
     },
     {
       "marca": "Byintek",
@@ -33,27 +53,7 @@
       "preco_ontem": 1418.76,
       "delta": -83.36,
       "delta_pct": -5.88,
-      "data_checagem": "2026-10-17 21:28"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 1281.26,
-      "preco_ontem": 1354.47,
-      "delta": -73.21,
-      "delta_pct": -5.41,
-      "data_checagem": "2026-10-17 21:24"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "ET32",
-      "slug": "touyinger-et32",
-      "preco_atual": 781.66,
-      "preco_ontem": 822.72,
-      "delta": -41.06,
-      "delta_pct": -4.99,
-      "data_checagem": "2026-10-17 21:22"
+      "data_checagem": "2026-10-19 09:28"
     }
   ]
 }
