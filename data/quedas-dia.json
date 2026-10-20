@@ -1,9 +1,9 @@
 {
   "data_coleta": "20/10",
-  "hora_coleta": "00:28",
+  "hora_coleta": "09:28",
   "data_ontem": "19/10",
   "data_hoje": "20/10",
-  "total_quedas": 4,
+  "total_quedas": 5,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,7 +13,7 @@
       "preco_ontem": 655.96,
       "delta": -156.4,
       "delta_pct": -23.84,
-      "data_checagem": "2026-10-20 00:28"
+      "data_checagem": "2026-10-20 09:28"
     },
     {
       "marca": "Thundeal",
@@ -23,7 +23,7 @@
       "preco_ontem": 1276.44,
       "delta": -208.42,
       "delta_pct": -16.33,
-      "data_checagem": "2026-10-20 00:25"
+      "data_checagem": "2026-10-20 09:25"
     },
     {
       "marca": "Bettdow",
@@ -33,7 +33,17 @@
       "preco_ontem": 1484.06,
       "delta": -34.96,
       "delta_pct": -2.36,
-      "data_checagem": "2026-10-20 00:28"
+      "data_checagem": "2026-10-20 09:28"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1041",
+      "slug": "bettdow-ac1041",
+      "preco_atual": 813.62,
+      "preco_ontem": 831.68,
+      "delta": -18.06,
+      "delta_pct": -2.17,
+      "data_checagem": "2026-10-20 09:28"
     },
     {
       "marca": "Byintek",
@@ -43,7 +53,7 @@
       "preco_ontem": 1839.99,
       "delta": -28.51,
       "delta_pct": -1.55,
-      "data_checagem": "2026-10-20 00:28"
+      "data_checagem": "2026-10-20 09:28"
     }
   ]
 }
