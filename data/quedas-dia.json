@@ -1,9 +1,9 @@
 {
   "data_coleta": "20/10",
-  "hora_coleta": "09:28",
+  "hora_coleta": "15:18",
   "data_ontem": "19/10",
   "data_hoje": "20/10",
-  "total_quedas": 5,
+  "total_quedas": 33,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,17 +13,17 @@
       "preco_ontem": 655.96,
       "delta": -156.4,
       "delta_pct": -23.84,
-      "data_checagem": "2026-10-20 09:28"
+      "data_checagem": "2026-10-20 15:18"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD98 MINI",
       "slug": "thundeal-td98-mini",
-      "preco_atual": 1068.02,
+      "preco_atual": 1002.43,
       "preco_ontem": 1276.44,
-      "delta": -208.42,
-      "delta_pct": -16.33,
-      "data_checagem": "2026-10-20 09:25"
+      "delta": -274.01,
+      "delta_pct": -21.47,
+      "data_checagem": "2026-10-20 15:15"
     },
     {
       "marca": "Bettdow",
@@ -33,7 +33,7 @@
       "preco_ontem": 1484.06,
       "delta": -34.96,
       "delta_pct": -2.36,
-      "data_checagem": "2026-10-20 09:28"
+      "data_checagem": "2026-10-20 15:18"
     },
     {
       "marca": "Bettdow",
@@ -43,7 +43,7 @@
       "preco_ontem": 831.68,
       "delta": -18.06,
       "delta_pct": -2.17,
-      "data_checagem": "2026-10-20 09:28"
+      "data_checagem": "2026-10-20 15:18"
     },
     {
       "marca": "Byintek",
@@ -53,7 +53,7 @@
       "preco_ontem": 1839.99,
       "delta": -28.51,
       "delta_pct": -1.55,
-      "data_checagem": "2026-10-20 09:28"
+      "data_checagem": "2026-10-20 15:18"
     }
   ]
 }
