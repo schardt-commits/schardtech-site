@@ -1,9 +1,9 @@
 {
   "data_coleta": "21/10",
-  "hora_coleta": "09:28",
+  "hora_coleta": "15:18",
   "data_ontem": "20/10",
   "data_hoje": "21/10",
-  "total_quedas": 5,
+  "total_quedas": 32,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,47 +13,47 @@
       "preco_ontem": 655.96,
       "delta": -156.4,
       "delta_pct": -23.84,
-      "data_checagem": "2026-10-21 09:28"
+      "data_checagem": "2026-10-21 15:18"
     },
     {
       "marca": "Byintek",
       "modelo": "U14 PRO",
       "slug": "byintek-u14-pro",
-      "preco_atual": 1321.55,
+      "preco_atual": 1320.14,
       "preco_ontem": 1634.37,
-      "delta": -312.82,
-      "delta_pct": -19.14,
-      "data_checagem": "2026-10-21 09:28"
+      "delta": -314.23,
+      "delta_pct": -19.23,
+      "data_checagem": "2026-10-21 15:18"
     },
     {
       "marca": "Everycom",
       "modelo": "R16",
       "slug": "everycom-r16",
-      "preco_atual": 640.0,
+      "preco_atual": 639.44,
       "preco_ontem": 675.76,
-      "delta": -35.76,
-      "delta_pct": -5.29,
-      "data_checagem": "2026-10-21 09:20"
+      "delta": -36.32,
+      "delta_pct": -5.37,
+      "data_checagem": "2026-10-21 15:10"
     },
     {
       "marca": "Progaga",
       "modelo": "PG610 ATV",
       "slug": "progaga-pg610-atv",
-      "preco_atual": 990.0,
+      "preco_atual": 988.94,
       "preco_ontem": 1033.12,
-      "delta": -43.12,
-      "delta_pct": -4.17,
-      "data_checagem": "2026-10-21 09:24"
+      "delta": -44.18,
+      "delta_pct": -4.28,
+      "data_checagem": "2026-10-21 15:14"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD98 MINI",
       "slug": "thundeal-td98-mini",
-      "preco_atual": 1002.4,
+      "preco_atual": 1001.31,
       "preco_ontem": 1004.83,
-      "delta": -2.43,
-      "delta_pct": -0.24,
-      "data_checagem": "2026-10-21 09:24"
+      "delta": -3.52,
+      "delta_pct": -0.35,
+      "data_checagem": "2026-10-21 15:14"
     }
   ]
 }
