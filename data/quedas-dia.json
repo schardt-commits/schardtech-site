@@ -1,29 +1,49 @@
 {
   "data_coleta": "21/10",
-  "hora_coleta": "00:28",
+  "hora_coleta": "09:28",
   "data_ontem": "20/10",
   "data_hoje": "21/10",
-  "total_quedas": 3,
+  "total_quedas": 5,
   "quedas": [
     {
       "marca": "Bettdow",
       "modelo": "AC1085",
       "slug": "bettdow-ac1085",
-      "preco_atual": 422.37,
+      "preco_atual": 499.56,
       "preco_ontem": 655.96,
-      "delta": -233.59,
-      "delta_pct": -35.61,
-      "data_checagem": "2026-10-21 00:28"
+      "delta": -156.4,
+      "delta_pct": -23.84,
+      "data_checagem": "2026-10-21 09:28"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1041",
-      "slug": "bettdow-ac1041",
-      "preco_atual": 813.62,
-      "preco_ontem": 850.08,
-      "delta": -36.46,
-      "delta_pct": -4.29,
-      "data_checagem": "2026-10-21 00:28"
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1321.55,
+      "preco_ontem": 1634.37,
+      "delta": -312.82,
+      "delta_pct": -19.14,
+      "data_checagem": "2026-10-21 09:28"
+    },
+    {
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 640.0,
+      "preco_ontem": 675.76,
+      "delta": -35.76,
+      "delta_pct": -5.29,
+      "data_checagem": "2026-10-21 09:20"
+    },
+    {
+      "marca": "Progaga",
+      "modelo": "PG610 ATV",
+      "slug": "progaga-pg610-atv",
+      "preco_atual": 990.0,
+      "preco_ontem": 1033.12,
+      "delta": -43.12,
+      "delta_pct": -4.17,
+      "data_checagem": "2026-10-21 09:24"
     },
     {
       "marca": "Thundeal",
@@ -33,7 +53,7 @@
       "preco_ontem": 1004.83,
       "delta": -2.43,
       "delta_pct": -0.24,
-      "data_checagem": "2026-10-21 00:25"
+      "data_checagem": "2026-10-21 09:24"
     }
   ]
 }
