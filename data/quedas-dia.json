@@ -1,49 +1,39 @@
 {
   "data_coleta": "22/10",
-  "hora_coleta": "09:28",
+  "hora_coleta": "15:18",
   "data_ontem": "21/10",
   "data_hoje": "22/10",
-  "total_quedas": 6,
+  "total_quedas": 5,
   "quedas": [
     {
       "marca": "FlixTone",
       "modelo": "D9W Mini",
       "slug": "flixtone-d9w-mini",
-      "preco_atual": 1223.13,
+      "preco_atual": 1230.37,
       "preco_ontem": 1587.4,
-      "delta": -364.27,
-      "delta_pct": -22.95,
-      "data_checagem": "2026-10-22 09:20"
+      "delta": -357.03,
+      "delta_pct": -22.49,
+      "data_checagem": "2026-10-22 15:10"
     },
     {
       "marca": "Touyinger",
       "modelo": "Q13W",
       "slug": "touyinger-q13w",
-      "preco_atual": 2543.97,
+      "preco_atual": 2559.0,
       "preco_ontem": 2910.33,
-      "delta": -366.36,
-      "delta_pct": -12.59,
-      "data_checagem": "2026-10-22 09:23"
+      "delta": -351.33,
+      "delta_pct": -12.07,
+      "data_checagem": "2026-10-22 15:12"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1071",
-      "slug": "bettdow-ac1071",
-      "preco_atual": 1449.1,
-      "preco_ontem": 1484.06,
-      "delta": -34.96,
-      "delta_pct": -2.36,
-      "data_checagem": "2026-10-22 09:28"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY350 MAX",
-      "slug": "magcubic-hy350-max",
-      "preco_atual": 712.08,
-      "preco_ontem": 724.5,
-      "delta": -12.42,
-      "delta_pct": -1.71,
-      "data_checagem": "2026-10-22 09:28"
+      "marca": "FlixTone",
+      "modelo": "D10S",
+      "slug": "flixtone-d10s",
+      "preco_atual": 1997.11,
+      "preco_ontem": 2066.67,
+      "delta": -69.56,
+      "delta_pct": -3.37,
+      "data_checagem": "2026-10-22 15:14"
     },
     {
       "marca": "Bettdow",
@@ -53,7 +43,17 @@
       "preco_ontem": 846.4,
       "delta": -9.2,
       "delta_pct": -1.09,
-      "data_checagem": "2026-10-22 09:28"
+      "data_checagem": "2026-10-22 15:18"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 543.58,
+      "preco_ontem": 547.03,
+      "delta": -3.45,
+      "delta_pct": -0.63,
+      "data_checagem": "2026-10-22 15:18"
     }
   ]
 }
