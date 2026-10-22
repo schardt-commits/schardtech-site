@@ -1,59 +1,59 @@
 {
-  "data_coleta": "21/10",
-  "hora_coleta": "21:28",
-  "data_ontem": "20/10",
-  "data_hoje": "21/10",
-  "total_quedas": 32,
+  "data_coleta": "22/10",
+  "hora_coleta": "00:28",
+  "data_ontem": "21/10",
+  "data_hoje": "22/10",
+  "total_quedas": 5,
   "quedas": [
     {
       "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 499.56,
-      "preco_ontem": 655.96,
-      "delta": -156.4,
-      "delta_pct": -23.84,
-      "data_checagem": "2026-10-21 21:28"
+      "modelo": "AC1071",
+      "slug": "bettdow-ac1071",
+      "preco_atual": 1449.1,
+      "preco_ontem": 1484.06,
+      "delta": -34.96,
+      "delta_pct": -2.36,
+      "data_checagem": "2026-10-22 00:28"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1041",
+      "slug": "bettdow-ac1041",
+      "preco_atual": 831.68,
+      "preco_ontem": 850.08,
+      "delta": -18.4,
+      "delta_pct": -2.16,
+      "data_checagem": "2026-10-22 00:28"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY350 MAX",
+      "slug": "magcubic-hy350-max",
+      "preco_atual": 712.08,
+      "preco_ontem": 724.5,
+      "delta": -12.42,
+      "delta_pct": -1.71,
+      "data_checagem": "2026-10-22 00:28"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1082",
+      "slug": "bettdow-ac1082",
+      "preco_atual": 837.2,
+      "preco_ontem": 846.4,
+      "delta": -9.2,
+      "delta_pct": -1.09,
+      "data_checagem": "2026-10-22 00:28"
     },
     {
       "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1320.14,
-      "preco_ontem": 1634.37,
-      "delta": -314.23,
-      "delta_pct": -19.23,
-      "data_checagem": "2026-10-21 21:28"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 639.44,
-      "preco_ontem": 675.76,
-      "delta": -36.32,
-      "delta_pct": -5.37,
-      "data_checagem": "2026-10-21 21:20"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG610 ATV",
-      "slug": "progaga-pg610-atv",
-      "preco_atual": 988.94,
-      "preco_ontem": 1033.12,
-      "delta": -44.18,
-      "delta_pct": -4.28,
-      "data_checagem": "2026-10-21 21:24"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 1001.31,
-      "preco_ontem": 1004.83,
-      "delta": -3.52,
-      "delta_pct": -0.35,
-      "data_checagem": "2026-10-21 21:24"
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 543.58,
+      "preco_ontem": 547.03,
+      "delta": -3.45,
+      "delta_pct": -0.63,
+      "data_checagem": "2026-10-22 00:28"
     }
   ]
 }
