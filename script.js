@@ -12,12 +12,12 @@ const projectors = [];
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
 // ============================================================
 const featuredVideos = [
+  { id: "5pKCs0FSooM", title: "Os 5 Melhores Projetores de R$500 a R$ 1.000 Pra Comprar no 11.11/Black Friday 2026!" },
   { id: "GCfBX-7b22w", title: "O Projetor Mais Potente da Thundeal! TD99W Unboxing e Primeiras Impressões" },
   { id: "pgoBcn3l0AA", title: "QUAL O MELHOR? COMPARATIVO! Byintek U90 Max, U14 Pro, Vevshao A24 MAX" },
   { id: "MSZw6b0yzww", title: "Menos de 1 Kg e 3 Horas de Bateria! Testei o novo Byintek MAGIC 1" },
   { id: "QnA2wgo5RBE", title: "3 PROJETORES POTENTES! TD98 Pro vs Q13W vs D10S — QUAL O MELHOR?" },
   { id: "5GGUt_qzUes", title: "QUAL O MELHOR? 10 PROJETORES EM UM COMPARATIVO! HY300, HY320 Mini, HY350, HY450 Max, HY450GT e X7" },
-  { id: "T9210odfrlY", title: "TUDO que Você Precisa Saber Antes de Comprar o MAGCUBIC HY450GT!" },
 ];
 
 // ============================================================
