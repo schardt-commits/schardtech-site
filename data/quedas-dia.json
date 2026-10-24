@@ -1,9 +1,9 @@
 {
-  "data_coleta": "23/10",
-  "hora_coleta": "09:28",
-  "data_ontem": "22/10",
-  "data_hoje": "23/10",
-  "total_quedas": 9,
+  "data_coleta": "24/10",
+  "hora_coleta": "00:28",
+  "data_ontem": "23/10",
+  "data_hoje": "24/10",
+  "total_quedas": 2,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,47 +13,17 @@
       "preco_ontem": 655.96,
       "delta": -156.4,
       "delta_pct": -23.84,
-      "data_checagem": "2026-10-23 09:28"
+      "data_checagem": "2026-10-24 00:28"
     },
     {
-      "marca": "Vevshao",
-      "modelo": "A22",
-      "slug": "vevshao-a22",
-      "preco_atual": 775.11,
-      "preco_ontem": 826.02,
-      "delta": -50.91,
-      "delta_pct": -6.16,
-      "data_checagem": "2026-10-23 09:28"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1618.94,
-      "preco_ontem": 1724.03,
-      "delta": -105.09,
-      "delta_pct": -6.1,
-      "data_checagem": "2026-10-23 09:22"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1327.71,
-      "preco_ontem": 1410.59,
-      "delta": -82.88,
-      "delta_pct": -5.88,
-      "data_checagem": "2026-10-23 09:28"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 1007.05,
-      "preco_ontem": 1065.82,
-      "delta": -58.77,
-      "delta_pct": -5.51,
-      "data_checagem": "2026-10-23 09:24"
+      "marca": "Magcubic",
+      "modelo": "HY350 MAX",
+      "slug": "magcubic-hy350-max",
+      "preco_atual": 712.08,
+      "preco_ontem": 724.5,
+      "delta": -12.42,
+      "delta_pct": -1.71,
+      "data_checagem": "2026-10-24 00:28"
     }
   ]
 }
