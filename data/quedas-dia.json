@@ -1,10 +1,20 @@
 {
   "data_coleta": "26/10",
-  "hora_coleta": "00:28",
+  "hora_coleta": "09:27",
   "data_ontem": "25/10",
   "data_hoje": "26/10",
-  "total_quedas": 2,
+  "total_quedas": 3,
   "quedas": [
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1041",
+      "slug": "bettdow-ac1041",
+      "preco_atual": 819.0,
+      "preco_ontem": 1163.0,
+      "delta": -344.0,
+      "delta_pct": -29.58,
+      "data_checagem": "2026-10-26 09:18"
+    },
     {
       "marca": "Byintek",
       "modelo": "U80 MAX",
@@ -13,7 +23,7 @@
       "preco_ontem": 1839.99,
       "delta": -46.91,
       "delta_pct": -2.55,
-      "data_checagem": "2026-10-26 00:28"
+      "data_checagem": "2026-10-26 09:27"
     },
     {
       "marca": "Byintek",
@@ -23,7 +33,7 @@
       "preco_ontem": 547.03,
       "delta": -1.61,
       "delta_pct": -0.29,
-      "data_checagem": "2026-10-26 00:28"
+      "data_checagem": "2026-10-26 09:27"
     }
   ]
 }
