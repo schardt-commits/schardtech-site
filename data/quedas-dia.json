@@ -1,39 +1,49 @@
 {
-  "data_coleta": "26/10",
-  "hora_coleta": "09:27",
-  "data_ontem": "25/10",
-  "data_hoje": "26/10",
-  "total_quedas": 3,
+  "data_coleta": "27/10",
+  "hora_coleta": "15:17",
+  "data_ontem": "26/10",
+  "data_hoje": "27/10",
+  "total_quedas": 4,
   "quedas": [
     {
+      "marca": "Wanbo",
+      "modelo": "T2 Ultra",
+      "slug": "wanbo-t2-ultra",
+      "preco_atual": 1259.24,
+      "preco_ontem": 1299.0,
+      "delta": -39.76,
+      "delta_pct": -3.06,
+      "data_checagem": "2026-10-27 15:17"
+    },
+    {
       "marca": "Bettdow",
-      "modelo": "AC1041",
-      "slug": "bettdow-ac1041",
-      "preco_atual": 819.0,
-      "preco_ontem": 1163.0,
-      "delta": -344.0,
-      "delta_pct": -29.58,
-      "data_checagem": "2026-10-26 09:18"
+      "modelo": "AC1071",
+      "slug": "bettdow-ac1071",
+      "preco_atual": 1449.1,
+      "preco_ontem": 1484.06,
+      "delta": -34.96,
+      "delta_pct": -2.36,
+      "data_checagem": "2026-10-27 15:17"
     },
     {
-      "marca": "Byintek",
-      "modelo": "U80 MAX",
-      "slug": "byintek-u80-max",
-      "preco_atual": 1793.08,
-      "preco_ontem": 1839.99,
-      "delta": -46.91,
-      "delta_pct": -2.55,
-      "data_checagem": "2026-10-26 09:27"
+      "marca": "Magcubic",
+      "modelo": "HY320 Mini",
+      "slug": "magcubic-hy320-mini",
+      "preco_atual": 331.55,
+      "preco_ontem": 333.03,
+      "delta": -1.48,
+      "delta_pct": -0.44,
+      "data_checagem": "2026-10-27 15:17"
     },
     {
-      "marca": "Byintek",
-      "modelo": "Love U4",
-      "slug": "byintek-love-u4",
-      "preco_atual": 545.42,
-      "preco_ontem": 547.03,
-      "delta": -1.61,
-      "delta_pct": -0.29,
-      "data_checagem": "2026-10-26 09:27"
+      "marca": "Magcubic",
+      "modelo": "HY310",
+      "slug": "magcubic-hy310",
+      "preco_atual": 360.05,
+      "preco_ontem": 360.1,
+      "delta": -0.05,
+      "delta_pct": -0.01,
+      "data_checagem": "2026-10-27 15:17"
     }
   ]
 }
