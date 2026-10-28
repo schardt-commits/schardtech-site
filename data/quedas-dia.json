@@ -1,9 +1,9 @@
 {
   "data_coleta": "28/10",
-  "hora_coleta": "00:28",
+  "hora_coleta": "09:27",
   "data_ontem": "27/10",
   "data_hoje": "28/10",
-  "total_quedas": 3,
+  "total_quedas": 6,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,27 +13,47 @@
       "preco_ontem": 655.96,
       "delta": -156.4,
       "delta_pct": -23.84,
-      "data_checagem": "2026-10-28 00:28"
+      "data_checagem": "2026-10-28 09:27"
     },
     {
       "marca": "Bettdow",
       "modelo": "AC1071",
       "slug": "bettdow-ac1071",
-      "preco_atual": 1376.59,
+      "preco_atual": 1396.66,
       "preco_ontem": 1484.06,
-      "delta": -107.47,
-      "delta_pct": -7.24,
-      "data_checagem": "2026-10-28 00:28"
+      "delta": -87.4,
+      "delta_pct": -5.89,
+      "data_checagem": "2026-10-28 09:27"
     },
     {
-      "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 2309.2,
-      "preco_ontem": 2309.22,
-      "delta": -0.02,
-      "delta_pct": -0.0,
-      "data_checagem": "2026-10-28 00:28"
+      "marca": "Vevshao",
+      "modelo": "V60",
+      "slug": "vevshao-v60",
+      "preco_atual": 1987.2,
+      "preco_ontem": 2069.08,
+      "delta": -81.88,
+      "delta_pct": -3.96,
+      "data_checagem": "2026-10-28 09:27"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1726.15,
+      "preco_ontem": 1793.08,
+      "delta": -66.93,
+      "delta_pct": -3.73,
+      "data_checagem": "2026-10-28 09:27"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1061",
+      "slug": "bettdow-ac1061",
+      "preco_atual": 1447.35,
+      "preco_ontem": 1484.06,
+      "delta": -36.71,
+      "delta_pct": -2.47,
+      "data_checagem": "2026-10-28 09:27"
     }
   ]
 }
