@@ -1,49 +1,39 @@
 {
-  "data_coleta": "27/10",
-  "hora_coleta": "21:28",
-  "data_ontem": "26/10",
-  "data_hoje": "27/10",
-  "total_quedas": 4,
+  "data_coleta": "28/10",
+  "hora_coleta": "00:28",
+  "data_ontem": "27/10",
+  "data_hoje": "28/10",
+  "total_quedas": 3,
   "quedas": [
     {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1549.16,
-      "preco_ontem": 1702.73,
-      "delta": -153.57,
-      "delta_pct": -9.02,
-      "data_checagem": "2026-10-27 21:22"
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 499.56,
+      "preco_ontem": 655.96,
+      "delta": -156.4,
+      "delta_pct": -23.84,
+      "data_checagem": "2026-10-28 00:28"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1071",
+      "slug": "bettdow-ac1071",
+      "preco_atual": 1376.59,
+      "preco_ontem": 1484.06,
+      "delta": -107.47,
+      "delta_pct": -7.24,
+      "data_checagem": "2026-10-28 00:28"
     },
     {
       "marca": "Wanbo",
-      "modelo": "T2 Ultra",
-      "slug": "wanbo-t2-ultra",
-      "preco_atual": 1259.24,
-      "preco_ontem": 1299.0,
-      "delta": -39.76,
-      "delta_pct": -3.06,
-      "data_checagem": "2026-10-27 21:28"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY320 Mini",
-      "slug": "magcubic-hy320-mini",
-      "preco_atual": 331.55,
-      "preco_ontem": 333.03,
-      "delta": -1.48,
-      "delta_pct": -0.44,
-      "data_checagem": "2026-10-27 21:28"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY310",
-      "slug": "magcubic-hy310",
-      "preco_atual": 360.05,
-      "preco_ontem": 360.1,
-      "delta": -0.05,
-      "delta_pct": -0.01,
-      "data_checagem": "2026-10-27 21:28"
+      "modelo": "X5 Pro",
+      "slug": "wanbo-x5-pro",
+      "preco_atual": 2309.2,
+      "preco_ontem": 2309.22,
+      "delta": -0.02,
+      "delta_pct": -0.0,
+      "data_checagem": "2026-10-28 00:28"
     }
   ]
 }
