@@ -1,59 +1,39 @@
 {
-  "data_coleta": "28/10",
-  "hora_coleta": "21:28",
-  "data_ontem": "27/10",
-  "data_hoje": "28/10",
-  "total_quedas": 27,
+  "data_coleta": "29/10",
+  "hora_coleta": "00:27",
+  "data_ontem": "28/10",
+  "data_hoje": "29/10",
+  "total_quedas": 3,
   "quedas": [
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 499.56,
-      "preco_ontem": 655.96,
-      "delta": -156.4,
-      "delta_pct": -23.84,
-      "data_checagem": "2026-10-28 21:28"
-    },
     {
       "marca": "Bettdow",
       "modelo": "AC1071",
       "slug": "bettdow-ac1071",
-      "preco_atual": 1396.66,
-      "preco_ontem": 1484.06,
-      "delta": -87.4,
-      "delta_pct": -5.89,
-      "data_checagem": "2026-10-28 21:28"
-    },
-    {
-      "marca": "Vevshao",
-      "modelo": "V60",
-      "slug": "vevshao-v60",
-      "preco_atual": 1987.2,
-      "preco_ontem": 2069.08,
-      "delta": -81.88,
-      "delta_pct": -3.96,
-      "data_checagem": "2026-10-28 21:28"
+      "preco_atual": 1376.59,
+      "preco_ontem": 1396.66,
+      "delta": -20.07,
+      "delta_pct": -1.44,
+      "data_checagem": "2026-10-29 00:27"
     },
     {
       "marca": "Byintek",
-      "modelo": "U80 MAX",
-      "slug": "byintek-u80-max",
-      "preco_atual": 1726.15,
-      "preco_ontem": 1793.08,
-      "delta": -66.93,
-      "delta_pct": -3.73,
-      "data_checagem": "2026-10-28 21:28"
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 560.18,
+      "preco_ontem": 560.28,
+      "delta": -0.1,
+      "delta_pct": -0.02,
+      "data_checagem": "2026-10-29 00:27"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1061",
-      "slug": "bettdow-ac1061",
-      "preco_atual": 1447.35,
-      "preco_ontem": 1484.06,
-      "delta": -36.71,
-      "delta_pct": -2.47,
-      "data_checagem": "2026-10-28 21:28"
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 1042.68,
+      "preco_ontem": 1042.69,
+      "delta": -0.01,
+      "delta_pct": -0.0,
+      "data_checagem": "2026-10-29 00:27"
     }
   ]
 }
