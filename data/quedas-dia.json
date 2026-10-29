@@ -1,59 +1,59 @@
 {
   "data_coleta": "29/10",
-  "hora_coleta": "09:27",
+  "hora_coleta": "15:18",
   "data_ontem": "28/10",
   "data_hoje": "29/10",
-  "total_quedas": 10,
+  "total_quedas": 11,
   "quedas": [
     {
       "marca": "Thundeal",
       "modelo": "TD98PRO",
       "slug": "thundeal-td98pro",
-      "preco_atual": 1544.43,
+      "preco_atual": 1550.65,
       "preco_ontem": 1646.93,
-      "delta": -102.5,
-      "delta_pct": -6.22,
-      "data_checagem": "2026-10-29 09:22"
+      "delta": -96.28,
+      "delta_pct": -5.85,
+      "data_checagem": "2026-10-29 15:12"
     },
     {
       "marca": "Byintek",
       "modelo": "U14 PRO",
       "slug": "byintek-u14-pro",
-      "preco_atual": 1401.19,
+      "preco_atual": 1406.83,
       "preco_ontem": 1488.66,
-      "delta": -87.47,
-      "delta_pct": -5.88,
-      "data_checagem": "2026-10-29 09:27"
+      "delta": -81.83,
+      "delta_pct": -5.5,
+      "data_checagem": "2026-10-29 15:18"
     },
     {
       "marca": "XGODY",
       "modelo": "Gimbal 7",
       "slug": "xgody-gimbal-7",
-      "preco_atual": 664.79,
+      "preco_atual": 667.45,
       "preco_ontem": 701.3,
-      "delta": -36.51,
-      "delta_pct": -5.21,
-      "data_checagem": "2026-10-29 09:27"
+      "delta": -33.85,
+      "delta_pct": -4.83,
+      "data_checagem": "2026-10-29 15:18"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD98 MINI",
       "slug": "thundeal-td98-mini",
-      "preco_atual": 1151.76,
+      "preco_atual": 1156.4,
       "preco_ontem": 1213.89,
-      "delta": -62.13,
-      "delta_pct": -5.12,
-      "data_checagem": "2026-10-29 09:24"
+      "delta": -57.49,
+      "delta_pct": -4.74,
+      "data_checagem": "2026-10-29 15:14"
     },
     {
       "marca": "Touyinger",
       "modelo": "ET32",
       "slug": "touyinger-et32",
-      "preco_atual": 822.9,
+      "preco_atual": 826.8,
       "preco_ontem": 866.21,
-      "delta": -43.31,
-      "delta_pct": -5.0,
-      "data_checagem": "2026-10-29 09:22"
+      "delta": -39.41,
+      "delta_pct": -4.55,
+      "data_checagem": "2026-10-29 15:12"
     }
   ]
 }
