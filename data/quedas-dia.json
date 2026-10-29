@@ -1,39 +1,59 @@
 {
   "data_coleta": "29/10",
-  "hora_coleta": "00:27",
+  "hora_coleta": "09:27",
   "data_ontem": "28/10",
   "data_hoje": "29/10",
-  "total_quedas": 3,
+  "total_quedas": 10,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1071",
-      "slug": "bettdow-ac1071",
-      "preco_atual": 1376.59,
-      "preco_ontem": 1396.66,
-      "delta": -20.07,
-      "delta_pct": -1.44,
-      "data_checagem": "2026-10-29 00:27"
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1544.43,
+      "preco_ontem": 1646.93,
+      "delta": -102.5,
+      "delta_pct": -6.22,
+      "data_checagem": "2026-10-29 09:22"
     },
     {
       "marca": "Byintek",
-      "modelo": "Love U4",
-      "slug": "byintek-love-u4",
-      "preco_atual": 560.18,
-      "preco_ontem": 560.28,
-      "delta": -0.1,
-      "delta_pct": -0.02,
-      "data_checagem": "2026-10-29 00:27"
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1401.19,
+      "preco_ontem": 1488.66,
+      "delta": -87.47,
+      "delta_pct": -5.88,
+      "data_checagem": "2026-10-29 09:27"
     },
     {
-      "marca": "Vevshao",
-      "modelo": "A22",
-      "slug": "vevshao-a22",
-      "preco_atual": 1042.68,
-      "preco_ontem": 1042.69,
-      "delta": -0.01,
-      "delta_pct": -0.0,
-      "data_checagem": "2026-10-29 00:27"
+      "marca": "XGODY",
+      "modelo": "Gimbal 7",
+      "slug": "xgody-gimbal-7",
+      "preco_atual": 664.79,
+      "preco_ontem": 701.3,
+      "delta": -36.51,
+      "delta_pct": -5.21,
+      "data_checagem": "2026-10-29 09:27"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 1151.76,
+      "preco_ontem": 1213.89,
+      "delta": -62.13,
+      "delta_pct": -5.12,
+      "data_checagem": "2026-10-29 09:24"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 822.9,
+      "preco_ontem": 866.21,
+      "delta": -43.31,
+      "delta_pct": -5.0,
+      "data_checagem": "2026-10-29 09:22"
     }
   ]
 }
