@@ -1,10 +1,20 @@
 {
   "data_coleta": "30/10",
-  "hora_coleta": "09:18",
+  "hora_coleta": "15:17",
   "data_ontem": "29/10",
   "data_hoje": "30/10",
-  "total_quedas": 1,
+  "total_quedas": 3,
   "quedas": [
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 422.37,
+      "preco_ontem": 499.56,
+      "delta": -77.19,
+      "delta_pct": -15.45,
+      "data_checagem": "2026-10-30 15:17"
+    },
     {
       "marca": "Wanbo",
       "modelo": "Vali 1",
@@ -13,7 +23,17 @@
       "preco_ontem": 1934.0,
       "delta": -175.0,
       "delta_pct": -9.05,
-      "data_checagem": "2026-10-30 09:18"
+      "data_checagem": "2026-10-30 15:08"
+    },
+    {
+      "marca": "Wanbo",
+      "modelo": "T2 Ultra",
+      "slug": "wanbo-t2-ultra",
+      "preco_atual": 1246.64,
+      "preco_ontem": 1260.0,
+      "delta": -13.36,
+      "delta_pct": -1.06,
+      "data_checagem": "2026-10-30 15:17"
     }
   ]
 }
