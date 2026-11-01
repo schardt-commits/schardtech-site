@@ -12,7 +12,7 @@ const projectors = [];
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
 // ============================================================
 const featuredVideos = [
-  { id: "CRJNjAvZJEI", title: "NOVO Byintek Love U6: Análise Completa!!! 11.11" },
+  { id: "CRJNjAvZJEI", title: "[R$650] NOVO Byintek Love U6: Análise Completa!!! 11.11" },
   { id: "5pKCs0FSooM", title: "Os 5 Melhores Projetores de R$500 a R$ 1.000 Pra Comprar no 11.11/Black Friday 2026!" },
   { id: "GCfBX-7b22w", title: "O Projetor Mais Potente da Thundeal! TD99W Unboxing e Primeiras Impressões" },
   { id: "pgoBcn3l0AA", title: "QUAL O MELHOR? COMPARATIVO! Byintek U90 Max, U14 Pro, Vevshao A24 MAX" },
