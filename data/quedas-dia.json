@@ -1,6 +1,6 @@
 {
   "data_coleta": "01/11",
-  "hora_coleta": "00:28",
+  "hora_coleta": "00:48",
   "data_ontem": "31/10",
   "data_hoje": "01/11",
   "total_quedas": 45,
@@ -23,7 +23,17 @@
       "preco_ontem": 1310.13,
       "delta": -612.77,
       "delta_pct": -46.77,
-      "data_checagem": "2026-11-01 00:28"
+      "data_checagem": "2026-11-01 00:48"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Plato T5 MAX",
+      "slug": "byintek-plato-t5-max",
+      "preco_atual": 1430.07,
+      "preco_ontem": 2584.94,
+      "delta": -1154.87,
+      "delta_pct": -44.68,
+      "data_checagem": "2026-11-01 00:40"
     },
     {
       "marca": "Touyinger",
@@ -44,16 +54,6 @@
       "delta": -399.01,
       "delta_pct": -40.56,
       "data_checagem": "2026-11-01 00:22"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 455.46,
-      "preco_ontem": 762.7,
-      "delta": -307.24,
-      "delta_pct": -40.28,
-      "data_checagem": "2026-11-01 00:20"
     }
   ]
 }
