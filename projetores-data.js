@@ -3077,7 +3077,7 @@ window.PROJETORES_DATA = [
     "ali_cupom_loja": "",
     "ali_cupom_promo": "",
     "ml_url": "",
-    "shopee_url": "https://s.shopee.com.br/4VZxwIQjcD",
+    "shopee_url": "https://s.shopee.com.br/6AmEs3UHLF",
     "amazon_url": "",
     "ram_gb": 2,
     "armazenamento_gb": 32,
