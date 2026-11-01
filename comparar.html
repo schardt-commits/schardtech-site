@@ -1368,6 +1368,7 @@
       if (!s) return 0;
       if (/google\s*tv/i.test(s))        return 5;
       if (/android\s*tv/i.test(s))       return 4;
+      if (/vidaa/i.test(s))              return 4;   // VIDAA (Hisense): homologado, nível do Android TV
       if (/whaleos|whale\s*os/i.test(s)) return 3;
       if (/android/i.test(s))            return 2;
       if (/linux/i.test(s))              return 1;
@@ -1702,7 +1703,7 @@
       /* SISTEMA */
       sec('Sistema');
       row({
-        label:'Sistema Operacional', hint:'Google TV > Android TV > WhaleOS > Android',
+        label:'Sistema Operacional', hint:'Google TV > Android TV = VIDAA > WhaleOS > Android',
         dir:'high',
         vals:    projs.map(p=>soTier(p.sistema_operacional)||null),
         display: projs.map(p=>p.sistema_operacional||null),

@@ -942,7 +942,8 @@
         const isGTV = so.includes('google tv');
         const isATV = so.includes('android tv');
         const isWOS = so.includes('whaleos');
-        const isHom = isGTV || isATV || isWOS;
+        const isVID = so.includes('vidaa');   // VIDAA (Hisense): homologado, nota do Android TV
+        const isHom = isGTV || isATV || isWOS || isVID;
         if (a.sistema === 'nao_homologado'      &&  isHom) return false;
         if (a.sistema === 'homologado_tantofaz' && !isHom) return false;
         if (a.sistema === 'google_tv'           && !isGTV) return false;
@@ -1003,13 +1004,14 @@
       const isGTV = so.includes('google tv');
       const isATV = so.includes('android tv');
       const isWOS = so.includes('whaleos');
-      const isHom = isGTV || isATV || isWOS;
+      const isVID = so.includes('vidaa');
+      const isHom = isGTV || isATV || isWOS || isVID;
       const ramGb = p.ram_gb || 0;
       const ramBonus = ramGb >= 3 ? 9 : ramGb >= 2 ? 5 : 0;
       if (a.sistema === 'nao_homologado') {
         s += (!isHom) ? (4 + ramBonus) : 0;
       } else if (a.sistema === 'homologado_tantofaz') {
-        s += isGTV ? 40 : isATV ? 35 : isWOS ? 22 : 0;
+        s += isGTV ? 40 : (isATV || isVID) ? 35 : isWOS ? 22 : 0;
       } else if (a.sistema === 'google_tv') {
         s += isGTV ? 40 : 0;
       } else if (a.sistema === 'android_tv') {
@@ -1066,7 +1068,7 @@
         const os_ = p.sistema_operacional || '';
         // Bonus de SO calibrado: Google TV ≈ preço de um Fire Stick (~R$ 300). Antes valia 15
         // (em projetor de R$ 2k equivalia a R$ 1.000-1.500 de desconto fantasma).
-        const osBase = os_.includes('Google TV') ? 8 : os_.includes('Android TV') ? 5 : os_.includes('WhaleOS') ? 2 : 0;
+        const osBase = os_.includes('Google TV') ? 8 : (os_.includes('Android TV') || os_.includes('VIDAA')) ? 5 : os_.includes('WhaleOS') ? 2 : 0;
         // soOverride: marcas com sistema Android não-homologado mas notavelmente bom ganham +1
         // (entre NH=0 e WhaleOS=2, sem passar do WhaleOS).
         let soOverride = 0;

@@ -435,7 +435,7 @@
           var precoCalc = (p.status === 'importado') ? precoRef * 2 : precoRef;
           var ratioPts = (ansiEf / precoCalc) * 50;
           var os_ = p.sistema_operacional || '';
-          var osBase = os_.indexOf('Google TV') !== -1 ? 8 : os_.indexOf('Android TV') !== -1 ? 5 : os_.indexOf('WhaleOS') !== -1 ? 2 : 0;
+          var osBase = os_.indexOf('Google TV') !== -1 ? 8 : (os_.indexOf('Android TV') !== -1 || os_.indexOf('VIDAA') !== -1) ? 5 : os_.indexOf('WhaleOS') !== -1 ? 2 : 0;
           var soOverride = 0;
           if (p.marca === 'Magcubic') soOverride = 1;
           else if (p.marca === 'Progaga' && (p.modelo === 'PG310' || p.modelo === 'PG370')) soOverride = 1;
