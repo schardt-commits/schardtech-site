@@ -1,29 +1,59 @@
 {
-  "data_coleta": "31/10",
-  "hora_coleta": "00:23",
-  "data_ontem": "30/10",
-  "data_hoje": "31/10",
-  "total_quedas": 2,
+  "data_coleta": "01/11",
+  "hora_coleta": "00:28",
+  "data_ontem": "31/10",
+  "data_hoje": "01/11",
+  "total_quedas": 45,
   "quedas": [
     {
-      "marca": "Voxflix",
-      "modelo": "VF71",
-      "slug": "voxflix-vf71",
-      "preco_atual": 1151.42,
-      "preco_ontem": 1152.79,
-      "delta": -1.37,
-      "delta_pct": -0.12,
-      "data_checagem": "2026-10-31 00:23"
+      "marca": "Byintek",
+      "modelo": "Magic 1",
+      "slug": "byintek-magic-1",
+      "preco_atual": 943.95,
+      "preco_ontem": 2617.02,
+      "delta": -1673.07,
+      "delta_pct": -63.93,
+      "data_checagem": "2026-11-01 00:24"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 697.36,
+      "preco_ontem": 1310.13,
+      "delta": -612.77,
+      "delta_pct": -46.77,
+      "data_checagem": "2026-11-01 00:28"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "Q13W",
+      "slug": "touyinger-q13w",
+      "preco_atual": 1662.27,
+      "preco_ontem": 2870.64,
+      "delta": -1208.37,
+      "delta_pct": -42.09,
+      "data_checagem": "2026-11-01 00:22"
     },
     {
       "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 741.76,
-      "preco_ontem": 741.82,
-      "delta": -0.06,
-      "delta_pct": -0.01,
-      "data_checagem": "2026-10-31 00:21"
+      "modelo": "TD92 Pro",
+      "slug": "thundeal-td92-pro",
+      "preco_atual": 584.82,
+      "preco_ontem": 983.83,
+      "delta": -399.01,
+      "delta_pct": -40.56,
+      "data_checagem": "2026-11-01 00:22"
+    },
+    {
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 455.46,
+      "preco_ontem": 762.7,
+      "delta": -307.24,
+      "delta_pct": -40.28,
+      "data_checagem": "2026-11-01 00:20"
     }
   ]
 }
