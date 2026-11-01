@@ -1,19 +1,19 @@
 {
   "data_coleta": "01/11",
-  "hora_coleta": "09:28",
+  "hora_coleta": "12:55",
   "data_ontem": "31/10",
   "data_hoje": "01/11",
-  "total_quedas": 36,
+  "total_quedas": 37,
   "quedas": [
     {
       "marca": "Byintek",
       "modelo": "Magic 1",
       "slug": "byintek-magic-1",
-      "preco_atual": 945.36,
+      "preco_atual": 908.6,
       "preco_ontem": 2617.02,
-      "delta": -1671.66,
-      "delta_pct": -63.88,
-      "data_checagem": "2026-11-01 09:24"
+      "delta": -1708.42,
+      "delta_pct": -65.28,
+      "data_checagem": "2026-11-01 12:52"
     },
     {
       "marca": "Bettdow",
@@ -23,37 +23,37 @@
       "preco_ontem": 1310.13,
       "delta": -612.77,
       "delta_pct": -46.77,
-      "data_checagem": "2026-11-01 09:28"
+      "data_checagem": "2026-11-01 12:55"
     },
     {
       "marca": "Byintek",
       "modelo": "Plato T5 MAX",
       "slug": "byintek-plato-t5-max",
-      "preco_atual": 1431.48,
+      "preco_atual": 1419.72,
       "preco_ontem": 2584.94,
-      "delta": -1153.46,
-      "delta_pct": -44.62,
-      "data_checagem": "2026-11-01 09:19"
+      "delta": -1165.22,
+      "delta_pct": -45.08,
+      "data_checagem": "2026-11-01 12:46"
     },
     {
       "marca": "Touyinger",
       "modelo": "Q13W",
       "slug": "touyinger-q13w",
-      "preco_atual": 1662.27,
+      "preco_atual": 1650.51,
       "preco_ontem": 2870.64,
-      "delta": -1208.37,
-      "delta_pct": -42.09,
-      "data_checagem": "2026-11-01 09:22"
+      "delta": -1220.13,
+      "delta_pct": -42.5,
+      "data_checagem": "2026-11-01 12:50"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD92 Pro",
       "slug": "thundeal-td92-pro",
-      "preco_atual": 586.26,
+      "preco_atual": 569.5,
       "preco_ontem": 983.83,
-      "delta": -397.57,
-      "delta_pct": -40.41,
-      "data_checagem": "2026-11-01 09:22"
+      "delta": -414.33,
+      "delta_pct": -42.11,
+      "data_checagem": "2026-11-01 12:49"
     }
   ]
 }
