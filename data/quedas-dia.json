@@ -1,59 +1,59 @@
 {
-  "data_coleta": "01/11",
-  "hora_coleta": "15:17",
-  "data_ontem": "31/10",
-  "data_hoje": "01/11",
-  "total_quedas": 37,
+  "data_coleta": "02/11",
+  "hora_coleta": "09:28",
+  "data_ontem": "01/11",
+  "data_hoje": "02/11",
+  "total_quedas": 6,
   "quedas": [
-    {
-      "marca": "Byintek",
-      "modelo": "Magic 1",
-      "slug": "byintek-magic-1",
-      "preco_atual": 908.6,
-      "preco_ontem": 2617.02,
-      "delta": -1708.42,
-      "delta_pct": -65.28,
-      "data_checagem": "2026-11-01 15:14"
-    },
     {
       "marca": "Bettdow",
       "modelo": "AC1085",
       "slug": "bettdow-ac1085",
-      "preco_atual": 697.36,
-      "preco_ontem": 1310.13,
-      "delta": -612.77,
-      "delta_pct": -46.77,
-      "data_checagem": "2026-11-01 15:17"
+      "preco_atual": 522.56,
+      "preco_ontem": 678.96,
+      "delta": -156.4,
+      "delta_pct": -23.04,
+      "data_checagem": "2026-11-02 09:28"
+    },
+    {
+      "marca": "Wupro",
+      "modelo": "G2",
+      "slug": "wupro-g2",
+      "preco_atual": 839.24,
+      "preco_ontem": 933.94,
+      "delta": -94.7,
+      "delta_pct": -10.14,
+      "data_checagem": "2026-11-02 09:23"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1061",
+      "slug": "bettdow-ac1061",
+      "preco_atual": 1484.06,
+      "preco_ontem": 1650.12,
+      "delta": -166.06,
+      "delta_pct": -10.06,
+      "data_checagem": "2026-11-02 09:28"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1071",
+      "slug": "bettdow-ac1071",
+      "preco_atual": 1396.66,
+      "preco_ontem": 1475.32,
+      "delta": -78.66,
+      "delta_pct": -5.33,
+      "data_checagem": "2026-11-02 09:28"
     },
     {
       "marca": "Byintek",
-      "modelo": "Plato T5 MAX",
-      "slug": "byintek-plato-t5-max",
-      "preco_atual": 1419.72,
-      "preco_ontem": 2584.94,
-      "delta": -1165.22,
-      "delta_pct": -45.08,
-      "data_checagem": "2026-11-01 15:09"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "Q13W",
-      "slug": "touyinger-q13w",
-      "preco_atual": 1650.51,
-      "preco_ontem": 2870.64,
-      "delta": -1220.13,
-      "delta_pct": -42.5,
-      "data_checagem": "2026-11-01 15:12"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD92 Pro",
-      "slug": "thundeal-td92-pro",
-      "preco_atual": 569.5,
-      "preco_ontem": 983.83,
-      "delta": -414.33,
-      "delta_pct": -42.11,
-      "data_checagem": "2026-11-01 15:11"
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 980.22,
+      "preco_ontem": 1003.78,
+      "delta": -23.56,
+      "delta_pct": -2.35,
+      "data_checagem": "2026-11-02 09:28"
     }
   ]
 }
