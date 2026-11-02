@@ -12,12 +12,12 @@ const projectors = [];
 // DATA — Vídeos em destaque (fonte: YouTube API — canal SchardTech)
 // ============================================================
 const featuredVideos = [
+  { id: "5puWw5m8Zlw", title: "11.11 | O Projetor Mais Potente da Thundeal! TD99W – Análise Completa" },
   { id: "CRJNjAvZJEI", title: "[R$650] NOVO Byintek Love U6: Análise Completa!!! 11.11" },
   { id: "5pKCs0FSooM", title: "Os 5 Melhores Projetores de R$500 a R$ 1.000 Pra Comprar no 11.11/Black Friday 2026!" },
   { id: "GCfBX-7b22w", title: "O Projetor Mais Potente da Thundeal! TD99W Unboxing e Primeiras Impressões" },
   { id: "pgoBcn3l0AA", title: "QUAL O MELHOR? COMPARATIVO! Byintek U90 Max, U14 Pro, Vevshao A24 MAX" },
   { id: "MSZw6b0yzww", title: "Menos de 1 Kg e 3 Horas de Bateria! Testei o novo Byintek MAGIC 1" },
-  { id: "QnA2wgo5RBE", title: "3 PROJETORES POTENTES! TD98 Pro vs Q13W vs D10S — QUAL O MELHOR?" },
 ];
 
 // ============================================================
