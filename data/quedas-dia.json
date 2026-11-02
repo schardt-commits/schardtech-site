@@ -1,9 +1,9 @@
 {
   "data_coleta": "02/11",
-  "hora_coleta": "15:18",
+  "hora_coleta": "18:37",
   "data_ontem": "01/11",
   "data_hoje": "02/11",
-  "total_quedas": 8,
+  "total_quedas": 9,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -46,14 +46,14 @@
       "data_checagem": "2026-11-02 15:18"
     },
     {
-      "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 1529.13,
-      "preco_ontem": 1585.67,
-      "delta": -56.54,
-      "delta_pct": -3.57,
-      "data_checagem": "2026-11-02 15:09"
+      "marca": "Thundeal",
+      "modelo": "TD99W",
+      "slug": "thundeal-td99w",
+      "preco_atual": 1799.52,
+      "preco_ontem": 1890.2,
+      "delta": -90.68,
+      "delta_pct": -4.8,
+      "data_checagem": "2026-11-02 18:37"
     }
   ]
 }
