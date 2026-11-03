@@ -1,59 +1,19 @@
 {
-  "data_coleta": "02/11",
-  "hora_coleta": "21:28",
-  "data_ontem": "01/11",
-  "data_hoje": "02/11",
-  "total_quedas": 8,
+  "data_coleta": "03/11",
+  "hora_coleta": "09:28",
+  "data_ontem": "02/11",
+  "data_hoje": "03/11",
+  "total_quedas": 1,
   "quedas": [
     {
       "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 522.56,
-      "preco_ontem": 678.96,
-      "delta": -156.4,
-      "delta_pct": -23.04,
-      "data_checagem": "2026-11-02 21:28"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1061",
-      "slug": "bettdow-ac1061",
-      "preco_atual": 1484.06,
-      "preco_ontem": 1650.12,
-      "delta": -166.06,
-      "delta_pct": -10.06,
-      "data_checagem": "2026-11-02 21:28"
-    },
-    {
-      "marca": "Wupro",
-      "modelo": "G2",
-      "slug": "wupro-g2",
-      "preco_atual": 841.66,
-      "preco_ontem": 933.94,
-      "delta": -92.28,
-      "delta_pct": -9.88,
-      "data_checagem": "2026-11-02 21:23"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1071",
-      "slug": "bettdow-ac1071",
-      "preco_atual": 1396.66,
-      "preco_ontem": 1475.32,
-      "delta": -78.66,
-      "delta_pct": -5.33,
-      "data_checagem": "2026-11-02 21:28"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 1529.13,
-      "preco_ontem": 1585.67,
-      "delta": -56.54,
-      "delta_pct": -3.57,
-      "data_checagem": "2026-11-02 21:19"
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 551.08,
+      "preco_ontem": 560.28,
+      "delta": -9.2,
+      "delta_pct": -1.64,
+      "data_checagem": "2026-11-03 09:28"
     }
   ]
 }
