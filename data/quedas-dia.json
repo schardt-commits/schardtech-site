@@ -1,19 +1,59 @@
 {
   "data_coleta": "03/11",
-  "hora_coleta": "09:28",
+  "hora_coleta": "15:18",
   "data_ontem": "02/11",
   "data_hoje": "03/11",
-  "total_quedas": 1,
+  "total_quedas": 17,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1066",
-      "slug": "bettdow-ac1066",
-      "preco_atual": 551.08,
-      "preco_ontem": 560.28,
-      "delta": -9.2,
-      "delta_pct": -1.64,
-      "data_checagem": "2026-11-03 09:28"
+      "marca": "Magcubic",
+      "modelo": "HY350 MAX",
+      "slug": "magcubic-hy350-max",
+      "preco_atual": 624.68,
+      "preco_ontem": 735.08,
+      "delta": -110.4,
+      "delta_pct": -15.02,
+      "data_checagem": "2026-11-03 15:18"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 445.43,
+      "preco_ontem": 510.11,
+      "delta": -64.68,
+      "delta_pct": -12.68,
+      "data_checagem": "2026-11-03 15:18"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY450C",
+      "slug": "magcubic-hy450c",
+      "preco_atual": 808.68,
+      "preco_ontem": 919.08,
+      "delta": -110.4,
+      "delta_pct": -12.01,
+      "data_checagem": "2026-11-03 15:18"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "X7",
+      "slug": "magcubic-x7",
+      "preco_atual": 900.68,
+      "preco_ontem": 960.53,
+      "delta": -59.85,
+      "delta_pct": -6.23,
+      "data_checagem": "2026-11-03 15:18"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY320 Mini",
+      "slug": "magcubic-hy320-mini",
+      "preco_atual": 331.55,
+      "preco_ontem": 350.55,
+      "delta": -19.0,
+      "delta_pct": -5.42,
+      "data_checagem": "2026-11-03 15:18"
     }
   ]
 }
