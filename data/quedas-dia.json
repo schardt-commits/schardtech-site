@@ -1,9 +1,9 @@
 {
   "data_coleta": "04/11",
-  "hora_coleta": "00:28",
+  "hora_coleta": "09:28",
   "data_ontem": "03/11",
   "data_hoje": "04/11",
-  "total_quedas": 2,
+  "total_quedas": 3,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,7 +13,7 @@
       "preco_ontem": 660.56,
       "delta": -138.0,
       "delta_pct": -20.89,
-      "data_checagem": "2026-11-04 00:28"
+      "data_checagem": "2026-11-04 09:28"
     },
     {
       "marca": "Thundeal",
@@ -23,7 +23,17 @@
       "preco_ontem": 1938.29,
       "delta": -118.83,
       "delta_pct": -6.13,
-      "data_checagem": "2026-11-04 00:25"
+      "data_checagem": "2026-11-04 09:25"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 876.23,
+      "preco_ontem": 878.54,
+      "delta": -2.31,
+      "delta_pct": -0.26,
+      "data_checagem": "2026-11-04 09:24"
     }
   ]
 }
