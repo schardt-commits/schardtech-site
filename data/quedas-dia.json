@@ -1,20 +1,10 @@
 {
   "data_coleta": "03/11",
-  "hora_coleta": "15:18",
+  "hora_coleta": "21:28",
   "data_ontem": "02/11",
   "data_hoje": "03/11",
-  "total_quedas": 17,
+  "total_quedas": 9,
   "quedas": [
-    {
-      "marca": "Magcubic",
-      "modelo": "HY350 MAX",
-      "slug": "magcubic-hy350-max",
-      "preco_atual": 624.68,
-      "preco_ontem": 735.08,
-      "delta": -110.4,
-      "delta_pct": -15.02,
-      "data_checagem": "2026-11-03 15:18"
-    },
     {
       "marca": "Byintek",
       "modelo": "Love U4",
@@ -23,27 +13,7 @@
       "preco_ontem": 510.11,
       "delta": -64.68,
       "delta_pct": -12.68,
-      "data_checagem": "2026-11-03 15:18"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY450C",
-      "slug": "magcubic-hy450c",
-      "preco_atual": 808.68,
-      "preco_ontem": 919.08,
-      "delta": -110.4,
-      "delta_pct": -12.01,
-      "data_checagem": "2026-11-03 15:18"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "X7",
-      "slug": "magcubic-x7",
-      "preco_atual": 900.68,
-      "preco_ontem": 960.53,
-      "delta": -59.85,
-      "delta_pct": -6.23,
-      "data_checagem": "2026-11-03 15:18"
+      "data_checagem": "2026-11-03 21:28"
     },
     {
       "marca": "Magcubic",
@@ -53,7 +23,37 @@
       "preco_ontem": 350.55,
       "delta": -19.0,
       "delta_pct": -5.42,
-      "data_checagem": "2026-11-03 15:18"
+      "data_checagem": "2026-11-03 21:28"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY310",
+      "slug": "magcubic-hy310",
+      "preco_atual": 360.05,
+      "preco_ontem": 379.05,
+      "delta": -19.0,
+      "delta_pct": -5.01,
+      "data_checagem": "2026-11-03 21:28"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 532.68,
+      "preco_ontem": 560.28,
+      "delta": -27.6,
+      "delta_pct": -4.93,
+      "data_checagem": "2026-11-03 21:28"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY310X",
+      "slug": "magcubic-hy310x",
+      "preco_atual": 426.55,
+      "preco_ontem": 445.55,
+      "delta": -19.0,
+      "delta_pct": -4.26,
+      "data_checagem": "2026-11-03 21:28"
     }
   ]
 }
