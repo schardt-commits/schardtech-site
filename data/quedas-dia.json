@@ -1,59 +1,29 @@
 {
-  "data_coleta": "04/11",
-  "hora_coleta": "21:28",
-  "data_ontem": "03/11",
-  "data_hoje": "04/11",
-  "total_quedas": 32,
+  "data_coleta": "05/11",
+  "hora_coleta": "09:28",
+  "data_ontem": "04/11",
+  "data_hoje": "05/11",
+  "total_quedas": 2,
   "quedas": [
     {
-      "marca": "Thundeal",
-      "modelo": "TD99W",
-      "slug": "thundeal-td99w",
-      "preco_atual": 1811.82,
-      "preco_ontem": 1938.29,
-      "delta": -126.47,
-      "delta_pct": -6.52,
-      "data_checagem": "2026-11-04 21:25"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 872.61,
-      "preco_ontem": 878.54,
-      "delta": -5.93,
-      "delta_pct": -0.67,
-      "data_checagem": "2026-11-04 21:24"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D9W Mini",
-      "slug": "flixtone-d9w-mini",
-      "preco_atual": 943.73,
-      "preco_ontem": 948.28,
-      "delta": -4.55,
-      "delta_pct": -0.48,
-      "data_checagem": "2026-11-04 21:20"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U4",
-      "slug": "byintek-love-u4",
-      "preco_atual": 443.39,
-      "preco_ontem": 445.43,
-      "delta": -2.04,
-      "delta_pct": -0.46,
-      "data_checagem": "2026-11-04 21:28"
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 522.56,
+      "preco_ontem": 678.96,
+      "delta": -156.4,
+      "delta_pct": -23.04,
+      "data_checagem": "2026-11-05 09:28"
     },
     {
       "marca": "FlixTone",
       "modelo": "D10S",
       "slug": "flixtone-d10s",
-      "preco_atual": 1836.91,
-      "preco_ontem": 1845.33,
-      "delta": -8.42,
-      "delta_pct": -0.46,
-      "data_checagem": "2026-11-04 21:24"
+      "preco_atual": 1834.39,
+      "preco_ontem": 1836.91,
+      "delta": -2.52,
+      "delta_pct": -0.14,
+      "data_checagem": "2026-11-05 09:24"
     }
   ]
 }
