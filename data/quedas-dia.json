@@ -1,29 +1,59 @@
 {
   "data_coleta": "05/11",
-  "hora_coleta": "09:28",
+  "hora_coleta": "15:18",
   "data_ontem": "04/11",
   "data_hoje": "05/11",
-  "total_quedas": 2,
+  "total_quedas": 39,
   "quedas": [
     {
       "marca": "Bettdow",
       "modelo": "AC1085",
       "slug": "bettdow-ac1085",
-      "preco_atual": 522.56,
+      "preco_atual": 504.16,
       "preco_ontem": 678.96,
-      "delta": -156.4,
-      "delta_pct": -23.04,
-      "data_checagem": "2026-11-05 09:28"
+      "delta": -174.8,
+      "delta_pct": -25.75,
+      "data_checagem": "2026-11-05 15:18"
     },
     {
-      "marca": "FlixTone",
-      "modelo": "D10S",
-      "slug": "flixtone-d10s",
-      "preco_atual": 1834.39,
-      "preco_ontem": 1836.91,
-      "delta": -2.52,
-      "delta_pct": -0.14,
-      "data_checagem": "2026-11-05 09:24"
+      "marca": "Magcubic",
+      "modelo": "HY320 Mini",
+      "slug": "magcubic-hy320-mini",
+      "preco_atual": 331.55,
+      "preco_ontem": 350.55,
+      "delta": -19.0,
+      "delta_pct": -5.42,
+      "data_checagem": "2026-11-05 15:18"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY310",
+      "slug": "magcubic-hy310",
+      "preco_atual": 360.05,
+      "preco_ontem": 379.05,
+      "delta": -19.0,
+      "delta_pct": -5.01,
+      "data_checagem": "2026-11-05 15:18"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY310X",
+      "slug": "magcubic-hy310x",
+      "preco_atual": 426.55,
+      "preco_ontem": 445.55,
+      "delta": -19.0,
+      "delta_pct": -4.26,
+      "data_checagem": "2026-11-05 15:18"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 532.68,
+      "preco_ontem": 551.08,
+      "delta": -18.4,
+      "delta_pct": -3.34,
+      "data_checagem": "2026-11-05 15:18"
     }
   ]
 }
