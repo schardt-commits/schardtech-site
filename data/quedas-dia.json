@@ -1,20 +1,10 @@
 {
   "data_coleta": "04/11",
-  "hora_coleta": "15:18",
+  "hora_coleta": "21:28",
   "data_ontem": "03/11",
   "data_hoje": "04/11",
-  "total_quedas": 26,
+  "total_quedas": 32,
   "quedas": [
-    {
-      "marca": "Byintek",
-      "modelo": "Magic 1",
-      "slug": "byintek-magic-1",
-      "preco_atual": 984.94,
-      "preco_ontem": 1237.99,
-      "delta": -253.05,
-      "delta_pct": -20.44,
-      "data_checagem": "2026-11-04 15:14"
-    },
     {
       "marca": "Thundeal",
       "modelo": "TD99W",
@@ -23,7 +13,17 @@
       "preco_ontem": 1938.29,
       "delta": -126.47,
       "delta_pct": -6.52,
-      "data_checagem": "2026-11-04 15:15"
+      "data_checagem": "2026-11-04 21:25"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 872.61,
+      "preco_ontem": 878.54,
+      "delta": -5.93,
+      "delta_pct": -0.67,
+      "data_checagem": "2026-11-04 21:24"
     },
     {
       "marca": "FlixTone",
@@ -33,7 +33,7 @@
       "preco_ontem": 948.28,
       "delta": -4.55,
       "delta_pct": -0.48,
-      "data_checagem": "2026-11-04 15:10"
+      "data_checagem": "2026-11-04 21:20"
     },
     {
       "marca": "Byintek",
@@ -43,7 +43,7 @@
       "preco_ontem": 445.43,
       "delta": -2.04,
       "delta_pct": -0.46,
-      "data_checagem": "2026-11-04 15:18"
+      "data_checagem": "2026-11-04 21:28"
     },
     {
       "marca": "FlixTone",
@@ -53,7 +53,7 @@
       "preco_ontem": 1845.33,
       "delta": -8.42,
       "delta_pct": -0.46,
-      "data_checagem": "2026-11-04 15:14"
+      "data_checagem": "2026-11-04 21:24"
     }
   ]
 }
