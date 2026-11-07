@@ -1,19 +1,59 @@
 {
   "data_coleta": "07/11",
-  "hora_coleta": "09:24",
+  "hora_coleta": "15:18",
   "data_ontem": "06/11",
   "data_hoje": "07/11",
-  "total_quedas": 1,
+  "total_quedas": 20,
   "quedas": [
     {
-      "marca": "Wupro",
-      "modelo": "G2",
-      "slug": "wupro-g2",
-      "preco_atual": 849.5,
-      "preco_ontem": 849.79,
-      "delta": -0.29,
-      "delta_pct": -0.03,
-      "data_checagem": "2026-11-07 09:24"
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1096.11,
+      "preco_ontem": 1177.74,
+      "delta": -81.63,
+      "delta_pct": -6.93,
+      "data_checagem": "2026-11-07 15:18"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Magic 1",
+      "slug": "byintek-magic-1",
+      "preco_atual": 923.37,
+      "preco_ontem": 991.98,
+      "delta": -68.61,
+      "delta_pct": -6.92,
+      "data_checagem": "2026-11-07 15:15"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 799.65,
+      "preco_ontem": 855.2,
+      "delta": -55.55,
+      "delta_pct": -6.5,
+      "data_checagem": "2026-11-07 15:18"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 687.58,
+      "preco_ontem": 731.54,
+      "delta": -43.96,
+      "delta_pct": -6.01,
+      "data_checagem": "2026-11-07 15:13"
+    },
+    {
+      "marca": "XGODY",
+      "modelo": "Gimbal 7",
+      "slug": "xgody-gimbal-7",
+      "preco_atual": 591.9,
+      "preco_ontem": 626.91,
+      "delta": -35.01,
+      "delta_pct": -5.58,
+      "data_checagem": "2026-11-07 15:18"
     }
   ]
 }
