@@ -1,59 +1,8 @@
 {
-  "data_coleta": "06/11",
-  "hora_coleta": "21:28",
-  "data_ontem": "05/11",
-  "data_hoje": "06/11",
-  "total_quedas": 6,
-  "quedas": [
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 522.56,
-      "preco_ontem": 660.56,
-      "delta": -138.0,
-      "delta_pct": -20.89,
-      "data_checagem": "2026-11-06 21:28"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Magic 1",
-      "slug": "byintek-magic-1",
-      "preco_atual": 991.98,
-      "preco_ontem": 1229.49,
-      "delta": -237.51,
-      "delta_pct": -19.32,
-      "data_checagem": "2026-11-06 21:25"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1093 PRO",
-      "slug": "bettdow-ac1093-pro",
-      "preco_atual": 399.0,
-      "preco_ontem": 467.36,
-      "delta": -68.36,
-      "delta_pct": -14.63,
-      "data_checagem": "2026-11-06 21:28"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG370 MAX",
-      "slug": "progaga-pg370-max",
-      "preco_atual": 422.57,
-      "preco_ontem": 466.11,
-      "delta": -43.54,
-      "delta_pct": -9.34,
-      "data_checagem": "2026-11-06 21:25"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D10S",
-      "slug": "flixtone-d10s",
-      "preco_atual": 1766.54,
-      "preco_ontem": 1830.79,
-      "delta": -64.25,
-      "delta_pct": -3.51,
-      "data_checagem": "2026-11-06 21:24"
-    }
-  ]
+  "data_coleta": "07/11",
+  "hora_coleta": "",
+  "data_ontem": "06/11",
+  "data_hoje": "07/11",
+  "total_quedas": 0,
+  "quedas": []
 }
