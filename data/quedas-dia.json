@@ -1,8 +1,19 @@
 {
   "data_coleta": "07/11",
-  "hora_coleta": "",
+  "hora_coleta": "09:24",
   "data_ontem": "06/11",
   "data_hoje": "07/11",
-  "total_quedas": 0,
-  "quedas": []
+  "total_quedas": 1,
+  "quedas": [
+    {
+      "marca": "Wupro",
+      "modelo": "G2",
+      "slug": "wupro-g2",
+      "preco_atual": 849.5,
+      "preco_ontem": 849.79,
+      "delta": -0.29,
+      "delta_pct": -0.03,
+      "data_checagem": "2026-11-07 09:24"
+    }
+  ]
 }
