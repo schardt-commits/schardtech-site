@@ -1,9 +1,9 @@
 {
   "data_coleta": "08/11",
-  "hora_coleta": "09:28",
+  "hora_coleta": "15:18",
   "data_ontem": "07/11",
   "data_hoje": "08/11",
-  "total_quedas": 1,
+  "total_quedas": 11,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,7 +13,47 @@
       "preco_ontem": 678.96,
       "delta": -156.4,
       "delta_pct": -23.04,
-      "data_checagem": "2026-11-08 09:28"
+      "data_checagem": "2026-11-08 15:18"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY350 MAX",
+      "slug": "magcubic-hy350-max",
+      "preco_atual": 643.08,
+      "preco_ontem": 735.08,
+      "delta": -92.0,
+      "delta_pct": -12.52,
+      "data_checagem": "2026-11-08 15:18"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY450C",
+      "slug": "magcubic-hy450c",
+      "preco_atual": 827.08,
+      "preco_ontem": 919.08,
+      "delta": -92.0,
+      "delta_pct": -10.01,
+      "data_checagem": "2026-11-08 15:18"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "X7",
+      "slug": "magcubic-x7",
+      "preco_atual": 919.08,
+      "preco_ontem": 960.53,
+      "delta": -41.45,
+      "delta_pct": -4.32,
+      "data_checagem": "2026-11-08 15:18"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1082",
+      "slug": "bettdow-ac1082",
+      "preco_atual": 1001.88,
+      "preco_ontem": 1039.19,
+      "delta": -37.31,
+      "delta_pct": -3.59,
+      "data_checagem": "2026-11-08 15:18"
     }
   ]
 }
