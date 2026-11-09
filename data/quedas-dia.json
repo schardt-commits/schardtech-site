@@ -1,59 +1,59 @@
 {
   "data_coleta": "09/11",
-  "hora_coleta": "09:41",
+  "hora_coleta": "15:18",
   "data_ontem": "08/11",
   "data_hoje": "09/11",
-  "total_quedas": 7,
+  "total_quedas": 21,
   "quedas": [
     {
       "marca": "Byintek",
       "modelo": "Magic 1",
       "slug": "byintek-magic-1",
-      "preco_atual": 935.28,
+      "preco_atual": 934.95,
       "preco_ontem": 1014.11,
-      "delta": -78.83,
-      "delta_pct": -7.77,
-      "data_checagem": "2026-11-09 09:36"
+      "delta": -79.16,
+      "delta_pct": -7.81,
+      "data_checagem": "2026-11-09 15:15"
     },
     {
       "marca": "Byintek",
       "modelo": "U14 PRO",
       "slug": "byintek-u14-pro",
-      "preco_atual": 1108.02,
+      "preco_atual": 1107.65,
       "preco_ontem": 1189.65,
-      "delta": -81.63,
-      "delta_pct": -6.86,
-      "data_checagem": "2026-11-09 09:41"
+      "delta": -82.0,
+      "delta_pct": -6.89,
+      "data_checagem": "2026-11-09 15:18"
+    },
+    {
+      "marca": "Vevshao",
+      "modelo": "A22",
+      "slug": "vevshao-a22",
+      "preco_atual": 811.27,
+      "preco_ontem": 867.11,
+      "delta": -55.84,
+      "delta_pct": -6.44,
+      "data_checagem": "2026-11-09 15:18"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 699.55,
+      "preco_ontem": 742.87,
+      "delta": -43.32,
+      "delta_pct": -5.83,
+      "data_checagem": "2026-11-09 15:13"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD99W",
       "slug": "thundeal-td99w",
-      "preco_atual": 1735.18,
+      "preco_atual": 1734.6,
       "preco_ontem": 1835.92,
-      "delta": -100.74,
-      "delta_pct": -5.49,
-      "data_checagem": "2026-11-09 09:36"
-    },
-    {
-      "marca": "XGODY",
-      "modelo": "Gimbal 7",
-      "slug": "xgody-gimbal-7",
-      "preco_atual": 603.81,
-      "preco_ontem": 637.56,
-      "delta": -33.75,
-      "delta_pct": -5.29,
-      "data_checagem": "2026-11-09 09:41"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 890.29,
-      "preco_ontem": 935.07,
-      "delta": -44.78,
-      "delta_pct": -4.79,
-      "data_checagem": "2026-11-09 09:35"
+      "delta": -101.32,
+      "delta_pct": -5.52,
+      "data_checagem": "2026-11-09 15:15"
     }
   ]
 }
