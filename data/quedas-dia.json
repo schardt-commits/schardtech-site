@@ -1,8 +1,59 @@
 {
   "data_coleta": "09/11",
-  "hora_coleta": "",
+  "hora_coleta": "09:41",
   "data_ontem": "08/11",
   "data_hoje": "09/11",
-  "total_quedas": 0,
-  "quedas": []
+  "total_quedas": 7,
+  "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "Magic 1",
+      "slug": "byintek-magic-1",
+      "preco_atual": 935.28,
+      "preco_ontem": 1014.11,
+      "delta": -78.83,
+      "delta_pct": -7.77,
+      "data_checagem": "2026-11-09 09:36"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1108.02,
+      "preco_ontem": 1189.65,
+      "delta": -81.63,
+      "delta_pct": -6.86,
+      "data_checagem": "2026-11-09 09:41"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD99W",
+      "slug": "thundeal-td99w",
+      "preco_atual": 1735.18,
+      "preco_ontem": 1835.92,
+      "delta": -100.74,
+      "delta_pct": -5.49,
+      "data_checagem": "2026-11-09 09:36"
+    },
+    {
+      "marca": "XGODY",
+      "modelo": "Gimbal 7",
+      "slug": "xgody-gimbal-7",
+      "preco_atual": 603.81,
+      "preco_ontem": 637.56,
+      "delta": -33.75,
+      "delta_pct": -5.29,
+      "data_checagem": "2026-11-09 09:41"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 890.29,
+      "preco_ontem": 935.07,
+      "delta": -44.78,
+      "delta_pct": -4.79,
+      "data_checagem": "2026-11-09 09:35"
+    }
+  ]
 }
