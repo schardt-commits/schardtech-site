@@ -3067,7 +3067,7 @@ window.PROJETORES_DATA = [
     "uso_continuo": "6h",
     "preco_min": null,
     "preco_max": null,
-    "ali_url": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=everycom-hq11w&clickref2=site&clickref3=&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005010629590093.html&platform=pl",
+    "ali_url": "https://www.awin1.com/cread.php?awinmid=18879&awinaffid=1903814&campaign=&clickref=everycom-hq11w&clickref2=site&clickref3=&clickref4=&clickref5=&clickref6=&ued=https%3A%2F%2Fpt.aliexpress.com%2Fitem%2F1005010712366951.html&platform=pl",
     "ali_cupom_loja": "",
     "ali_cupom_promo": "",
     "ml_url": "",
