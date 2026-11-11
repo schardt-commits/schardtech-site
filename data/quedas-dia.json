@@ -1,59 +1,59 @@
 {
   "data_coleta": "11/11",
-  "hora_coleta": "09:29",
+  "hora_coleta": "12:01",
   "data_ontem": "10/11",
   "data_hoje": "11/11",
-  "total_quedas": 34,
+  "total_quedas": 38,
   "quedas": [
     {
       "marca": "Bettdow",
       "modelo": "AC1085",
       "slug": "bettdow-ac1085",
-      "preco_atual": 522.56,
+      "preco_atual": 444.6,
       "preco_ontem": 678.96,
-      "delta": -156.4,
-      "delta_pct": -23.04,
-      "data_checagem": "2026-11-11 09:29"
+      "delta": -234.36,
+      "delta_pct": -34.52,
+      "data_checagem": "2026-11-11 12:01"
     },
     {
       "marca": "Everycom",
       "modelo": "R16",
       "slug": "everycom-r16",
-      "preco_atual": 495.95,
+      "preco_atual": 520.15,
       "preco_ontem": 630.24,
-      "delta": -134.29,
-      "delta_pct": -21.31,
-      "data_checagem": "2026-11-11 09:20"
+      "delta": -110.09,
+      "delta_pct": -17.47,
+      "data_checagem": "2026-11-11 11:52"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 417.09,
+      "preco_ontem": 497.06,
+      "delta": -79.97,
+      "delta_pct": -16.09,
+      "data_checagem": "2026-11-11 12:01"
     },
     {
       "marca": "XGODY",
       "modelo": "Gimbal 7",
       "slug": "xgody-gimbal-7",
-      "preco_atual": 575.02,
+      "preco_atual": 565.05,
       "preco_ontem": 645.02,
-      "delta": -70.0,
-      "delta_pct": -10.85,
-      "data_checagem": "2026-11-11 09:29"
+      "delta": -79.97,
+      "delta_pct": -12.4,
+      "data_checagem": "2026-11-11 12:01"
     },
     {
-      "marca": "Wanbo",
-      "modelo": "X5 Pro",
-      "slug": "wanbo-x5-pro",
-      "preco_atual": 2082.88,
-      "preco_ontem": 2309.22,
-      "delta": -226.34,
-      "delta_pct": -9.8,
-      "data_checagem": "2026-11-11 09:29"
-    },
-    {
-      "marca": "Wanbo",
-      "modelo": "T2 Ultra",
-      "slug": "wanbo-t2-ultra",
-      "preco_atual": 1113.48,
-      "preco_ontem": 1234.0,
-      "delta": -120.52,
-      "delta_pct": -9.77,
-      "data_checagem": "2026-11-11 09:29"
+      "marca": "FlixTone",
+      "modelo": "D10S",
+      "slug": "flixtone-d10s",
+      "preco_atual": 1580.57,
+      "preco_ontem": 1797.3,
+      "delta": -216.73,
+      "delta_pct": -12.06,
+      "data_checagem": "2026-11-11 11:57"
     }
   ]
 }
