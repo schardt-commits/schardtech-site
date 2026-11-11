@@ -1,59 +1,59 @@
 {
-  "data_coleta": "10/11",
-  "hora_coleta": "21:28",
-  "data_ontem": "09/11",
-  "data_hoje": "10/11",
-  "total_quedas": 18,
+  "data_coleta": "11/11",
+  "hora_coleta": "00:24",
+  "data_ontem": "10/11",
+  "data_hoje": "11/11",
+  "total_quedas": 23,
   "quedas": [
     {
-      "marca": "Byintek",
-      "modelo": "Magic 1",
-      "slug": "byintek-magic-1",
-      "preco_atual": 1015.05,
-      "preco_ontem": 1252.65,
-      "delta": -237.6,
-      "delta_pct": -18.97,
-      "data_checagem": "2026-11-10 21:25"
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 444.6,
+      "preco_ontem": 678.96,
+      "delta": -234.36,
+      "delta_pct": -34.52,
+      "data_checagem": "2026-11-11 00:24"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "HY450C",
-      "slug": "magcubic-hy450c",
-      "preco_atual": 824.32,
-      "preco_ontem": 919.08,
-      "delta": -94.76,
-      "delta_pct": -10.31,
-      "data_checagem": "2026-11-10 21:28"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 960.53,
-      "preco_ontem": 1067.59,
-      "delta": -107.06,
-      "delta_pct": -10.03,
-      "data_checagem": "2026-11-10 21:28"
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 540.15,
+      "preco_ontem": 630.24,
+      "delta": -90.09,
+      "delta_pct": -14.29,
+      "data_checagem": "2026-11-11 00:16"
     },
     {
       "marca": "Byintek",
-      "modelo": "U6",
-      "slug": "byintek-u6",
-      "preco_atual": 616.65,
-      "preco_ontem": 669.35,
-      "delta": -52.7,
-      "delta_pct": -7.87,
-      "data_checagem": "2026-11-10 21:28"
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 437.06,
+      "preco_ontem": 497.06,
+      "delta": -60.0,
+      "delta_pct": -12.07,
+      "data_checagem": "2026-11-11 00:24"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "HY310X",
-      "slug": "magcubic-hy310x",
-      "preco_atual": 411.35,
-      "preco_ontem": 445.55,
-      "delta": -34.2,
-      "delta_pct": -7.68,
-      "data_checagem": "2026-11-10 21:28"
+      "marca": "Touyinger",
+      "modelo": "ET32",
+      "slug": "touyinger-et32",
+      "preco_atual": 661.23,
+      "preco_ontem": 751.32,
+      "delta": -90.09,
+      "delta_pct": -11.99,
+      "data_checagem": "2026-11-11 00:18"
+    },
+    {
+      "marca": "Wanbo",
+      "modelo": "X5 Pro",
+      "slug": "wanbo-x5-pro",
+      "preco_atual": 2082.88,
+      "preco_ontem": 2309.22,
+      "delta": -226.34,
+      "delta_pct": -9.8,
+      "data_checagem": "2026-11-11 00:24"
     }
   ]
 }
