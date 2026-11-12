@@ -1,29 +1,19 @@
 {
   "data_coleta": "12/11",
-  "hora_coleta": "00:29",
+  "hora_coleta": "09:28",
   "data_ontem": "11/11",
   "data_hoje": "12/11",
-  "total_quedas": 12,
+  "total_quedas": 13,
   "quedas": [
     {
-      "marca": "Horlat",
-      "modelo": "T9N",
-      "slug": "horlat-t9n",
-      "preco_atual": 506.45,
-      "preco_ontem": 519.96,
-      "delta": -13.51,
-      "delta_pct": -2.6,
-      "data_checagem": "2026-11-12 00:21"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "HQ11W",
-      "slug": "everycom-hq11w",
-      "preco_atual": 1394.09,
-      "preco_ontem": 1429.34,
-      "delta": -35.25,
-      "delta_pct": -2.47,
-      "data_checagem": "2026-11-12 00:26"
+      "marca": "Progaga",
+      "modelo": "PG370 MAX",
+      "slug": "progaga-pg370-max",
+      "preco_atual": 396.85,
+      "preco_ontem": 446.93,
+      "delta": -50.08,
+      "delta_pct": -11.21,
+      "data_checagem": "2026-11-12 09:25"
     },
     {
       "marca": "Magcubic",
@@ -33,7 +23,7 @@
       "preco_ontem": 1161.54,
       "delta": -25.34,
       "delta_pct": -2.18,
-      "data_checagem": "2026-11-12 00:29"
+      "data_checagem": "2026-11-12 09:28"
     },
     {
       "marca": "Magcubic",
@@ -43,7 +33,7 @@
       "preco_ontem": 698.28,
       "delta": -14.72,
       "delta_pct": -2.11,
-      "data_checagem": "2026-11-12 00:29"
+      "data_checagem": "2026-11-12 09:28"
     },
     {
       "marca": "Magcubic",
@@ -53,7 +43,17 @@
       "preco_ontem": 610.88,
       "delta": -12.88,
       "delta_pct": -2.11,
-      "data_checagem": "2026-11-12 00:29"
+      "data_checagem": "2026-11-12 09:28"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY450 MAX",
+      "slug": "magcubic-hy450-max",
+      "preco_atual": 1056.66,
+      "preco_ontem": 1078.51,
+      "delta": -21.85,
+      "delta_pct": -2.03,
+      "data_checagem": "2026-11-12 09:28"
     }
   ]
 }
