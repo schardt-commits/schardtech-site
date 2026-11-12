@@ -1,59 +1,59 @@
 {
-  "data_coleta": "11/11",
-  "hora_coleta": "21:29",
-  "data_ontem": "10/11",
-  "data_hoje": "11/11",
-  "total_quedas": 37,
+  "data_coleta": "12/11",
+  "hora_coleta": "00:29",
+  "data_ontem": "11/11",
+  "data_hoje": "12/11",
+  "total_quedas": 12,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 444.6,
-      "preco_ontem": 678.96,
-      "delta": -234.36,
-      "delta_pct": -34.52,
-      "data_checagem": "2026-11-11 21:29"
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 506.45,
+      "preco_ontem": 519.96,
+      "delta": -13.51,
+      "delta_pct": -2.6,
+      "data_checagem": "2026-11-12 00:21"
     },
     {
       "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 520.15,
-      "preco_ontem": 630.24,
-      "delta": -110.09,
-      "delta_pct": -17.47,
-      "data_checagem": "2026-11-11 21:20"
+      "modelo": "HQ11W",
+      "slug": "everycom-hq11w",
+      "preco_atual": 1394.09,
+      "preco_ontem": 1429.34,
+      "delta": -35.25,
+      "delta_pct": -2.47,
+      "data_checagem": "2026-11-12 00:26"
     },
     {
-      "marca": "Byintek",
-      "modelo": "Love U4",
-      "slug": "byintek-love-u4",
-      "preco_atual": 417.09,
-      "preco_ontem": 497.06,
-      "delta": -79.97,
-      "delta_pct": -16.09,
-      "data_checagem": "2026-11-11 21:29"
+      "marca": "Magcubic",
+      "modelo": "HY450GT",
+      "slug": "magcubic-hy450gt",
+      "preco_atual": 1136.2,
+      "preco_ontem": 1161.54,
+      "delta": -25.34,
+      "delta_pct": -2.18,
+      "data_checagem": "2026-11-12 00:29"
     },
     {
-      "marca": "XGODY",
-      "modelo": "Gimbal 7",
-      "slug": "xgody-gimbal-7",
-      "preco_atual": 565.05,
-      "preco_ontem": 645.02,
-      "delta": -79.97,
-      "delta_pct": -12.4,
-      "data_checagem": "2026-11-11 21:29"
+      "marca": "Magcubic",
+      "modelo": "HY350 MAX",
+      "slug": "magcubic-hy350-max",
+      "preco_atual": 683.56,
+      "preco_ontem": 698.28,
+      "delta": -14.72,
+      "delta_pct": -2.11,
+      "data_checagem": "2026-11-12 00:29"
     },
     {
-      "marca": "FlixTone",
-      "modelo": "D10S",
-      "slug": "flixtone-d10s",
-      "preco_atual": 1580.57,
-      "preco_ontem": 1797.3,
-      "delta": -216.73,
-      "delta_pct": -12.06,
-      "data_checagem": "2026-11-11 21:25"
+      "marca": "Magcubic",
+      "modelo": "L018",
+      "slug": "magcubic-l018",
+      "preco_atual": 598.0,
+      "preco_ontem": 610.88,
+      "delta": -12.88,
+      "delta_pct": -2.11,
+      "data_checagem": "2026-11-12 00:29"
     }
   ]
 }
