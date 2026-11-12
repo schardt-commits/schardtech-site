@@ -1,19 +1,49 @@
 {
   "data_coleta": "12/11",
-  "hora_coleta": "09:28",
+  "hora_coleta": "15:19",
   "data_ontem": "11/11",
   "data_hoje": "12/11",
-  "total_quedas": 13,
+  "total_quedas": 14,
   "quedas": [
     {
       "marca": "Progaga",
       "modelo": "PG370 MAX",
       "slug": "progaga-pg370-max",
-      "preco_atual": 396.85,
+      "preco_atual": 400.72,
       "preco_ontem": 446.93,
-      "delta": -50.08,
-      "delta_pct": -11.21,
-      "data_checagem": "2026-11-12 09:25"
+      "delta": -46.21,
+      "delta_pct": -10.34,
+      "data_checagem": "2026-11-12 15:15"
+    },
+    {
+      "marca": "Voxflix",
+      "modelo": "VF71",
+      "slug": "voxflix-vf71",
+      "preco_atual": 1024.45,
+      "preco_ontem": 1089.44,
+      "delta": -64.99,
+      "delta_pct": -5.97,
+      "data_checagem": "2026-11-12 15:13"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY350 MAX",
+      "slug": "magcubic-hy350-max",
+      "preco_atual": 669.89,
+      "preco_ontem": 698.28,
+      "delta": -28.39,
+      "delta_pct": -4.07,
+      "data_checagem": "2026-11-12 15:19"
+    },
+    {
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 501.01,
+      "preco_ontem": 520.15,
+      "delta": -19.14,
+      "delta_pct": -3.68,
+      "data_checagem": "2026-11-12 15:10"
     },
     {
       "marca": "Magcubic",
@@ -23,37 +53,7 @@
       "preco_ontem": 1161.54,
       "delta": -25.34,
       "delta_pct": -2.18,
-      "data_checagem": "2026-11-12 09:28"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY350 MAX",
-      "slug": "magcubic-hy350-max",
-      "preco_atual": 683.56,
-      "preco_ontem": 698.28,
-      "delta": -14.72,
-      "delta_pct": -2.11,
-      "data_checagem": "2026-11-12 09:28"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "L018",
-      "slug": "magcubic-l018",
-      "preco_atual": 598.0,
-      "preco_ontem": 610.88,
-      "delta": -12.88,
-      "delta_pct": -2.11,
-      "data_checagem": "2026-11-12 09:28"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY450 MAX",
-      "slug": "magcubic-hy450-max",
-      "preco_atual": 1056.66,
-      "preco_ontem": 1078.51,
-      "delta": -21.85,
-      "delta_pct": -2.03,
-      "data_checagem": "2026-11-12 09:28"
+      "data_checagem": "2026-11-12 15:19"
     }
   ]
 }
