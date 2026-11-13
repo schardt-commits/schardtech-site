@@ -1,9 +1,9 @@
 {
   "data_coleta": "12/11",
-  "hora_coleta": "17:36",
+  "hora_coleta": "21:29",
   "data_ontem": "11/11",
   "data_hoje": "12/11",
-  "total_quedas": 16,
+  "total_quedas": 12,
   "quedas": [
     {
       "marca": "Progaga",
@@ -13,7 +13,7 @@
       "preco_ontem": 446.93,
       "delta": -46.21,
       "delta_pct": -10.34,
-      "data_checagem": "2026-11-12 17:31"
+      "data_checagem": "2026-11-12 21:25"
     },
     {
       "marca": "Voxflix",
@@ -23,17 +23,7 @@
       "preco_ontem": 1089.44,
       "delta": -64.99,
       "delta_pct": -5.97,
-      "data_checagem": "2026-11-12 17:29"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY350 MAX",
-      "slug": "magcubic-hy350-max",
-      "preco_atual": 669.89,
-      "preco_ontem": 698.28,
-      "delta": -28.39,
-      "delta_pct": -4.07,
-      "data_checagem": "2026-11-12 17:36"
+      "data_checagem": "2026-11-12 21:23"
     },
     {
       "marca": "Everycom",
@@ -43,7 +33,7 @@
       "preco_ontem": 520.15,
       "delta": -19.14,
       "delta_pct": -3.68,
-      "data_checagem": "2026-11-12 15:10"
+      "data_checagem": "2026-11-12 21:20"
     },
     {
       "marca": "Magcubic",
@@ -53,7 +43,17 @@
       "preco_ontem": 1161.54,
       "delta": -25.34,
       "delta_pct": -2.18,
-      "data_checagem": "2026-11-12 17:36"
+      "data_checagem": "2026-11-12 21:29"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "L018",
+      "slug": "magcubic-l018",
+      "preco_atual": 598.0,
+      "preco_ontem": 610.88,
+      "delta": -12.88,
+      "delta_pct": -2.11,
+      "data_checagem": "2026-11-12 21:29"
     }
   ]
 }
