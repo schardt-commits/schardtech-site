@@ -1,59 +1,49 @@
 {
-  "data_coleta": "13/11",
-  "hora_coleta": "21:29",
-  "data_ontem": "12/11",
-  "data_hoje": "13/11",
-  "total_quedas": 29,
+  "data_coleta": "14/11",
+  "hora_coleta": "00:29",
+  "data_ontem": "13/11",
+  "data_hoje": "14/11",
+  "total_quedas": 4,
   "quedas": [
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1093 PRO",
-      "slug": "bettdow-ac1093-pro",
-      "preco_atual": 399.0,
-      "preco_ontem": 474.0,
-      "delta": -75.0,
-      "delta_pct": -15.82,
-      "data_checagem": "2026-11-13 21:29"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 444.6,
-      "preco_ontem": 504.16,
-      "delta": -59.56,
-      "delta_pct": -11.81,
-      "data_checagem": "2026-11-13 21:29"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY450C",
-      "slug": "magcubic-hy450c",
-      "preco_atual": 732.32,
-      "preco_ontem": 815.12,
-      "delta": -82.8,
-      "delta_pct": -10.16,
-      "data_checagem": "2026-11-13 21:29"
-    },
     {
       "marca": "Bettdow",
       "modelo": "AC1066",
       "slug": "bettdow-ac1066",
-      "preco_atual": 524.4,
-      "preco_ontem": 560.28,
-      "delta": -35.88,
-      "delta_pct": -6.4,
-      "data_checagem": "2026-11-13 21:29"
+      "preco_atual": 523.02,
+      "preco_ontem": 524.4,
+      "delta": -1.38,
+      "delta_pct": -0.26,
+      "data_checagem": "2026-11-14 00:29"
     },
     {
-      "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 1486.87,
-      "preco_ontem": 1584.45,
-      "delta": -97.58,
-      "delta_pct": -6.16,
-      "data_checagem": "2026-11-13 21:20"
+      "marca": "Jenovox",
+      "modelo": "M5000 Mini",
+      "slug": "jenovox-m5000-mini",
+      "preco_atual": 1792.69,
+      "preco_ontem": 1795.02,
+      "delta": -2.33,
+      "delta_pct": -0.13,
+      "data_checagem": "2026-11-14 00:21"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1095",
+      "slug": "bettdow-ac1095",
+      "preco_atual": 2573.7,
+      "preco_ontem": 2575.08,
+      "delta": -1.38,
+      "delta_pct": -0.05,
+      "data_checagem": "2026-11-14 00:29"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "L9W Ultra",
+      "slug": "touyinger-l9w-ultra",
+      "preco_atual": 488.21,
+      "preco_ontem": 488.27,
+      "delta": -0.06,
+      "delta_pct": -0.01,
+      "data_checagem": "2026-11-14 00:23"
     }
   ]
 }
