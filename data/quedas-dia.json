@@ -1,9 +1,9 @@
 {
   "data_coleta": "14/11",
-  "hora_coleta": "09:29",
+  "hora_coleta": "15:19",
   "data_ontem": "13/11",
   "data_hoje": "14/11",
-  "total_quedas": 9,
+  "total_quedas": 11,
   "quedas": [
     {
       "marca": "Byintek",
@@ -13,27 +13,37 @@
       "preco_ontem": 1219.14,
       "delta": -83.89,
       "delta_pct": -6.88,
-      "data_checagem": "2026-11-14 09:29"
+      "data_checagem": "2026-11-14 15:19"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD98 MINI",
       "slug": "thundeal-td98-mini",
-      "preco_atual": 863.43,
+      "preco_atual": 873.43,
       "preco_ontem": 909.45,
-      "delta": -46.02,
-      "delta_pct": -5.06,
-      "data_checagem": "2026-11-14 09:25"
+      "delta": -36.02,
+      "delta_pct": -3.96,
+      "data_checagem": "2026-11-14 15:15"
     },
     {
       "marca": "XGODY",
       "modelo": "Gimbal 7",
       "slug": "xgody-gimbal-7",
-      "preco_atual": 551.93,
+      "preco_atual": 561.93,
       "preco_ontem": 577.91,
-      "delta": -25.98,
-      "delta_pct": -4.5,
-      "data_checagem": "2026-11-14 09:29"
+      "delta": -15.98,
+      "delta_pct": -2.77,
+      "data_checagem": "2026-11-14 15:19"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY350 MAX",
+      "slug": "magcubic-hy350-max",
+      "preco_atual": 664.88,
+      "preco_ontem": 681.54,
+      "delta": -16.66,
+      "delta_pct": -2.44,
+      "data_checagem": "2026-11-14 15:19"
     },
     {
       "marca": "Thundeal",
@@ -43,17 +53,7 @@
       "preco_ontem": 1785.11,
       "delta": -27.91,
       "delta_pct": -1.56,
-      "data_checagem": "2026-11-14 09:26"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98PRO",
-      "slug": "thundeal-td98pro",
-      "preco_atual": 1215.7,
-      "preco_ontem": 1231.46,
-      "delta": -15.76,
-      "delta_pct": -1.28,
-      "data_checagem": "2026-11-14 09:26"
+      "data_checagem": "2026-11-14 15:16"
     }
   ]
 }
