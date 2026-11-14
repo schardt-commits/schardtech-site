@@ -1,49 +1,59 @@
 {
   "data_coleta": "14/11",
-  "hora_coleta": "00:29",
+  "hora_coleta": "09:29",
   "data_ontem": "13/11",
   "data_hoje": "14/11",
-  "total_quedas": 4,
+  "total_quedas": 9,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1066",
-      "slug": "bettdow-ac1066",
-      "preco_atual": 523.02,
-      "preco_ontem": 524.4,
-      "delta": -1.38,
-      "delta_pct": -0.26,
-      "data_checagem": "2026-11-14 00:29"
+      "marca": "Byintek",
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1135.25,
+      "preco_ontem": 1219.14,
+      "delta": -83.89,
+      "delta_pct": -6.88,
+      "data_checagem": "2026-11-14 09:29"
     },
     {
-      "marca": "Jenovox",
-      "modelo": "M5000 Mini",
-      "slug": "jenovox-m5000-mini",
-      "preco_atual": 1792.69,
-      "preco_ontem": 1795.02,
-      "delta": -2.33,
-      "delta_pct": -0.13,
-      "data_checagem": "2026-11-14 00:21"
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 863.43,
+      "preco_ontem": 909.45,
+      "delta": -46.02,
+      "delta_pct": -5.06,
+      "data_checagem": "2026-11-14 09:25"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1095",
-      "slug": "bettdow-ac1095",
-      "preco_atual": 2573.7,
-      "preco_ontem": 2575.08,
-      "delta": -1.38,
-      "delta_pct": -0.05,
-      "data_checagem": "2026-11-14 00:29"
+      "marca": "XGODY",
+      "modelo": "Gimbal 7",
+      "slug": "xgody-gimbal-7",
+      "preco_atual": 551.93,
+      "preco_ontem": 577.91,
+      "delta": -25.98,
+      "delta_pct": -4.5,
+      "data_checagem": "2026-11-14 09:29"
     },
     {
-      "marca": "Touyinger",
-      "modelo": "L9W Ultra",
-      "slug": "touyinger-l9w-ultra",
-      "preco_atual": 488.21,
-      "preco_ontem": 488.27,
-      "delta": -0.06,
-      "delta_pct": -0.01,
-      "data_checagem": "2026-11-14 00:23"
+      "marca": "Thundeal",
+      "modelo": "TD99W",
+      "slug": "thundeal-td99w",
+      "preco_atual": 1757.2,
+      "preco_ontem": 1785.11,
+      "delta": -27.91,
+      "delta_pct": -1.56,
+      "data_checagem": "2026-11-14 09:26"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98PRO",
+      "slug": "thundeal-td98pro",
+      "preco_atual": 1215.7,
+      "preco_ontem": 1231.46,
+      "delta": -15.76,
+      "delta_pct": -1.28,
+      "data_checagem": "2026-11-14 09:26"
     }
   ]
 }
