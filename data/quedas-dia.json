@@ -1,59 +1,19 @@
 {
-  "data_coleta": "14/11",
-  "hora_coleta": "21:29",
-  "data_ontem": "13/11",
-  "data_hoje": "14/11",
-  "total_quedas": 11,
+  "data_coleta": "15/11",
+  "hora_coleta": "15:10",
+  "data_ontem": "14/11",
+  "data_hoje": "15/11",
+  "total_quedas": 1,
   "quedas": [
     {
-      "marca": "Byintek",
-      "modelo": "U14 PRO",
-      "slug": "byintek-u14-pro",
-      "preco_atual": 1135.25,
-      "preco_ontem": 1219.14,
-      "delta": -83.89,
-      "delta_pct": -6.88,
-      "data_checagem": "2026-11-14 21:29"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 873.43,
-      "preco_ontem": 909.45,
-      "delta": -36.02,
-      "delta_pct": -3.96,
-      "data_checagem": "2026-11-14 21:25"
-    },
-    {
-      "marca": "XGODY",
-      "modelo": "Gimbal 7",
-      "slug": "xgody-gimbal-7",
-      "preco_atual": 561.93,
-      "preco_ontem": 577.91,
-      "delta": -15.98,
-      "delta_pct": -2.77,
-      "data_checagem": "2026-11-14 21:29"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY350 MAX",
-      "slug": "magcubic-hy350-max",
-      "preco_atual": 664.88,
-      "preco_ontem": 681.54,
-      "delta": -16.66,
-      "delta_pct": -2.44,
-      "data_checagem": "2026-11-14 21:29"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1095",
-      "slug": "bettdow-ac1095",
-      "preco_atual": 2532.42,
-      "preco_ontem": 2575.08,
-      "delta": -42.66,
-      "delta_pct": -1.66,
-      "data_checagem": "2026-11-14 21:29"
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 516.99,
+      "preco_ontem": 550.55,
+      "delta": -33.56,
+      "delta_pct": -6.1,
+      "data_checagem": "2026-11-15 15:10"
     }
   ]
 }
