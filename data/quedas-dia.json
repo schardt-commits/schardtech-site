@@ -1,29 +1,59 @@
 {
-  "data_coleta": "15/11",
-  "hora_coleta": "21:24",
-  "data_ontem": "14/11",
-  "data_hoje": "15/11",
-  "total_quedas": 2,
+  "data_coleta": "16/11",
+  "hora_coleta": "00:29",
+  "data_ontem": "15/11",
+  "data_hoje": "16/11",
+  "total_quedas": 5,
   "quedas": [
     {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 800.0,
-      "preco_ontem": 873.43,
-      "delta": -73.43,
-      "delta_pct": -8.41,
-      "data_checagem": "2026-11-15 21:24"
+      "marca": "Magcubic",
+      "modelo": "HY450",
+      "slug": "magcubic-hy450",
+      "preco_atual": 744.28,
+      "preco_ontem": 827.08,
+      "delta": -82.8,
+      "delta_pct": -10.01,
+      "data_checagem": "2026-11-16 00:29"
     },
     {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 516.99,
-      "preco_ontem": 550.55,
-      "delta": -33.56,
-      "delta_pct": -6.1,
-      "data_checagem": "2026-11-15 21:20"
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 1020.83,
+      "preco_ontem": 1055.79,
+      "delta": -34.96,
+      "delta_pct": -3.31,
+      "data_checagem": "2026-11-16 00:29"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY310X",
+      "slug": "magcubic-hy310x",
+      "preco_atual": 401.85,
+      "preco_ontem": 411.35,
+      "delta": -9.5,
+      "delta_pct": -2.31,
+      "data_checagem": "2026-11-16 00:29"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1082",
+      "slug": "bettdow-ac1082",
+      "preco_atual": 1017.31,
+      "preco_ontem": 1039.19,
+      "delta": -21.88,
+      "delta_pct": -2.11,
+      "data_checagem": "2026-11-16 00:29"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY310",
+      "slug": "magcubic-hy310",
+      "preco_atual": 361.0,
+      "preco_ontem": 367.65,
+      "delta": -6.65,
+      "delta_pct": -1.81,
+      "data_checagem": "2026-11-16 00:29"
     }
   ]
 }
