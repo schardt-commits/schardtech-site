@@ -1,10 +1,20 @@
 {
   "data_coleta": "15/11",
-  "hora_coleta": "18:43",
+  "hora_coleta": "21:24",
   "data_ontem": "14/11",
   "data_hoje": "15/11",
-  "total_quedas": 1,
+  "total_quedas": 2,
   "quedas": [
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 800.0,
+      "preco_ontem": 873.43,
+      "delta": -73.43,
+      "delta_pct": -8.41,
+      "data_checagem": "2026-11-15 21:24"
+    },
     {
       "marca": "Everycom",
       "modelo": "R16",
@@ -13,7 +23,7 @@
       "preco_ontem": 550.55,
       "delta": -33.56,
       "delta_pct": -6.1,
-      "data_checagem": "2026-11-15 18:43"
+      "data_checagem": "2026-11-15 21:20"
     }
   ]
 }
