@@ -1,10 +1,20 @@
 {
   "data_coleta": "16/11",
-  "hora_coleta": "09:29",
+  "hora_coleta": "15:19",
   "data_ontem": "15/11",
   "data_hoje": "16/11",
-  "total_quedas": 7,
+  "total_quedas": 10,
   "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "Magic 1",
+      "slug": "byintek-magic-1",
+      "preco_atual": 1044.09,
+      "preco_ontem": 1294.31,
+      "delta": -250.22,
+      "delta_pct": -19.33,
+      "data_checagem": "2026-11-16 15:15"
+    },
     {
       "marca": "Magcubic",
       "modelo": "HY450",
@@ -13,7 +23,17 @@
       "preco_ontem": 827.08,
       "delta": -82.8,
       "delta_pct": -10.01,
-      "data_checagem": "2026-11-16 09:29"
+      "data_checagem": "2026-11-16 15:19"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY350 MAX",
+      "slug": "magcubic-hy350-max",
+      "preco_atual": 621.0,
+      "preco_ontem": 683.56,
+      "delta": -62.56,
+      "delta_pct": -9.15,
+      "data_checagem": "2026-11-16 15:19"
     },
     {
       "marca": "Byintek",
@@ -23,7 +43,7 @@
       "preco_ontem": 1055.79,
       "delta": -34.96,
       "delta_pct": -3.31,
-      "data_checagem": "2026-11-16 09:29"
+      "data_checagem": "2026-11-16 15:19"
     },
     {
       "marca": "Magcubic",
@@ -33,27 +53,7 @@
       "preco_ontem": 411.35,
       "delta": -9.5,
       "delta_pct": -2.31,
-      "data_checagem": "2026-11-16 09:29"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1082",
-      "slug": "bettdow-ac1082",
-      "preco_atual": 1017.31,
-      "preco_ontem": 1039.19,
-      "delta": -21.88,
-      "delta_pct": -2.11,
-      "data_checagem": "2026-11-16 09:29"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY310",
-      "slug": "magcubic-hy310",
-      "preco_atual": 361.0,
-      "preco_ontem": 367.65,
-      "delta": -6.65,
-      "delta_pct": -1.81,
-      "data_checagem": "2026-11-16 09:29"
+      "data_checagem": "2026-11-16 15:19"
     }
   ]
 }
