@@ -1,8 +1,39 @@
 {
   "data_coleta": "17/11",
-  "hora_coleta": "",
+  "hora_coleta": "15:19",
   "data_ontem": "16/11",
   "data_hoje": "17/11",
-  "total_quedas": 0,
-  "quedas": []
+  "total_quedas": 3,
+  "quedas": [
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 445.55,
+      "preco_ontem": 522.56,
+      "delta": -77.01,
+      "delta_pct": -14.74,
+      "data_checagem": "2026-11-17 15:19"
+    },
+    {
+      "marca": "Horlat",
+      "modelo": "T9N",
+      "slug": "horlat-t9n",
+      "preco_atual": 530.66,
+      "preco_ontem": 560.21,
+      "delta": -29.55,
+      "delta_pct": -5.27,
+      "data_checagem": "2026-11-17 15:11"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U90 MAX",
+      "slug": "byintek-u90-max",
+      "preco_atual": 1604.35,
+      "preco_ontem": 1622.82,
+      "delta": -18.47,
+      "delta_pct": -1.14,
+      "data_checagem": "2026-11-17 15:10"
+    }
+  ]
 }
