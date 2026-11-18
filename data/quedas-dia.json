@@ -1,39 +1,59 @@
 {
-  "data_coleta": "17/11",
-  "hora_coleta": "21:29",
-  "data_ontem": "16/11",
-  "data_hoje": "17/11",
-  "total_quedas": 3,
+  "data_coleta": "18/11",
+  "hora_coleta": "09:29",
+  "data_ontem": "17/11",
+  "data_hoje": "18/11",
+  "total_quedas": 15,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 445.55,
-      "preco_ontem": 522.56,
-      "delta": -77.01,
-      "delta_pct": -14.74,
-      "data_checagem": "2026-11-17 21:29"
-    },
-    {
-      "marca": "Horlat",
-      "modelo": "T9N",
-      "slug": "horlat-t9n",
-      "preco_atual": 530.66,
-      "preco_ontem": 560.21,
-      "delta": -29.55,
-      "delta_pct": -5.27,
-      "data_checagem": "2026-11-17 21:21"
+      "marca": "Magcubic",
+      "modelo": "HY450",
+      "slug": "magcubic-hy450",
+      "preco_atual": 744.28,
+      "preco_ontem": 827.08,
+      "delta": -82.8,
+      "delta_pct": -10.01,
+      "data_checagem": "2026-11-18 09:29"
     },
     {
       "marca": "Byintek",
-      "modelo": "U90 MAX",
-      "slug": "byintek-u90-max",
-      "preco_atual": 1604.35,
-      "preco_ontem": 1622.82,
-      "delta": -18.47,
-      "delta_pct": -1.14,
-      "data_checagem": "2026-11-17 21:20"
+      "modelo": "U6",
+      "slug": "byintek-u6",
+      "preco_atual": 580.11,
+      "preco_ontem": 636.65,
+      "delta": -56.54,
+      "delta_pct": -8.88,
+      "data_checagem": "2026-11-18 09:29"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 463.47,
+      "preco_ontem": 495.46,
+      "delta": -31.99,
+      "delta_pct": -6.46,
+      "data_checagem": "2026-11-18 09:22"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY320 Mini",
+      "slug": "magcubic-hy320-mini",
+      "preco_atual": 320.27,
+      "preco_ontem": 332.5,
+      "delta": -12.23,
+      "delta_pct": -3.68,
+      "data_checagem": "2026-11-18 09:29"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1099",
+      "slug": "bettdow-ac1099",
+      "preco_atual": 1528.63,
+      "preco_ontem": 1572.33,
+      "delta": -43.7,
+      "delta_pct": -2.78,
+      "data_checagem": "2026-11-18 09:29"
     }
   ]
 }
