@@ -1,6 +1,6 @@
 {
   "data_coleta": "18/11",
-  "hora_coleta": "09:29",
+  "hora_coleta": "15:19",
   "data_ontem": "17/11",
   "data_hoje": "18/11",
   "total_quedas": 15,
@@ -13,37 +13,27 @@
       "preco_ontem": 827.08,
       "delta": -82.8,
       "delta_pct": -10.01,
-      "data_checagem": "2026-11-18 09:29"
+      "data_checagem": "2026-11-18 15:19"
     },
     {
       "marca": "Byintek",
       "modelo": "U6",
       "slug": "byintek-u6",
-      "preco_atual": 580.11,
+      "preco_atual": 586.06,
       "preco_ontem": 636.65,
-      "delta": -56.54,
-      "delta_pct": -8.88,
-      "data_checagem": "2026-11-18 09:29"
+      "delta": -50.59,
+      "delta_pct": -7.95,
+      "data_checagem": "2026-11-18 15:19"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD80PRO",
       "slug": "thundeal-td80pro",
-      "preco_atual": 463.47,
+      "preco_atual": 467.7,
       "preco_ontem": 495.46,
-      "delta": -31.99,
-      "delta_pct": -6.46,
-      "data_checagem": "2026-11-18 09:22"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY320 Mini",
-      "slug": "magcubic-hy320-mini",
-      "preco_atual": 320.27,
-      "preco_ontem": 332.5,
-      "delta": -12.23,
-      "delta_pct": -3.68,
-      "data_checagem": "2026-11-18 09:29"
+      "delta": -27.76,
+      "delta_pct": -5.6,
+      "data_checagem": "2026-11-18 15:12"
     },
     {
       "marca": "Bettdow",
@@ -53,7 +43,17 @@
       "preco_ontem": 1572.33,
       "delta": -43.7,
       "delta_pct": -2.78,
-      "data_checagem": "2026-11-18 09:29"
+      "data_checagem": "2026-11-18 15:19"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY310",
+      "slug": "magcubic-hy310",
+      "preco_atual": 361.0,
+      "preco_ontem": 367.65,
+      "delta": -6.65,
+      "delta_pct": -1.81,
+      "data_checagem": "2026-11-18 15:19"
     }
   ]
 }
