@@ -1,9 +1,9 @@
 {
   "data_coleta": "19/11",
-  "hora_coleta": "00:29",
+  "hora_coleta": "06:21",
   "data_ontem": "18/11",
   "data_hoje": "19/11",
-  "total_quedas": 2,
+  "total_quedas": 10,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,17 +13,47 @@
       "preco_ontem": 678.96,
       "delta": -156.4,
       "delta_pct": -23.04,
-      "data_checagem": "2026-11-19 00:29"
+      "data_checagem": "2026-11-19 06:21"
     },
     {
-      "marca": "Magcubic",
-      "modelo": "X7",
-      "slug": "magcubic-x7",
-      "preco_atual": 891.48,
-      "preco_ontem": 908.96,
-      "delta": -17.48,
-      "delta_pct": -1.92,
-      "data_checagem": "2026-11-19 00:29"
+      "marca": "Progaga",
+      "modelo": "PG370 MAX",
+      "slug": "progaga-pg370-max",
+      "preco_atual": 444.22,
+      "preco_ontem": 492.82,
+      "delta": -48.6,
+      "delta_pct": -9.86,
+      "data_checagem": "2026-11-19 06:17"
+    },
+    {
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 483.81,
+      "preco_ontem": 531.38,
+      "delta": -47.57,
+      "delta_pct": -8.95,
+      "data_checagem": "2026-11-19 06:12"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U4",
+      "slug": "byintek-love-u4",
+      "preco_atual": 447.04,
+      "preco_ontem": 486.95,
+      "delta": -39.91,
+      "delta_pct": -8.2,
+      "data_checagem": "2026-11-19 06:21"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD80PRO",
+      "slug": "thundeal-td80pro",
+      "preco_atual": 443.75,
+      "preco_ontem": 467.7,
+      "delta": -23.95,
+      "delta_pct": -5.12,
+      "data_checagem": "2026-11-19 06:14"
     }
   ]
 }
