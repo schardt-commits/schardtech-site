@@ -1,10 +1,20 @@
 {
   "data_coleta": "18/11",
-  "hora_coleta": "15:19",
+  "hora_coleta": "21:29",
   "data_ontem": "17/11",
   "data_hoje": "18/11",
-  "total_quedas": 15,
+  "total_quedas": 17,
   "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "Magic 1",
+      "slug": "byintek-magic-1",
+      "preco_atual": 1075.39,
+      "preco_ontem": 1326.56,
+      "delta": -251.17,
+      "delta_pct": -18.93,
+      "data_checagem": "2026-11-18 21:25"
+    },
     {
       "marca": "Magcubic",
       "modelo": "HY450",
@@ -13,7 +23,7 @@
       "preco_ontem": 827.08,
       "delta": -82.8,
       "delta_pct": -10.01,
-      "data_checagem": "2026-11-18 15:19"
+      "data_checagem": "2026-11-18 21:29"
     },
     {
       "marca": "Byintek",
@@ -23,7 +33,7 @@
       "preco_ontem": 636.65,
       "delta": -50.59,
       "delta_pct": -7.95,
-      "data_checagem": "2026-11-18 15:19"
+      "data_checagem": "2026-11-18 21:29"
     },
     {
       "marca": "Thundeal",
@@ -33,27 +43,17 @@
       "preco_ontem": 495.46,
       "delta": -27.76,
       "delta_pct": -5.6,
-      "data_checagem": "2026-11-18 15:12"
+      "data_checagem": "2026-11-18 21:22"
     },
     {
-      "marca": "Bettdow",
-      "modelo": "AC1099",
-      "slug": "bettdow-ac1099",
-      "preco_atual": 1528.63,
-      "preco_ontem": 1572.33,
-      "delta": -43.7,
-      "delta_pct": -2.78,
-      "data_checagem": "2026-11-18 15:19"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "HY310",
-      "slug": "magcubic-hy310",
-      "preco_atual": 361.0,
-      "preco_ontem": 367.65,
-      "delta": -6.65,
-      "delta_pct": -1.81,
-      "data_checagem": "2026-11-18 15:19"
+      "marca": "XGODY",
+      "modelo": "Gimbal 7",
+      "slug": "xgody-gimbal-7",
+      "preco_atual": 603.57,
+      "preco_ontem": 636.09,
+      "delta": -32.52,
+      "delta_pct": -5.11,
+      "data_checagem": "2026-11-18 21:29"
     }
   ]
 }
