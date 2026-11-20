@@ -1,59 +1,59 @@
 {
-  "data_coleta": "19/11",
-  "hora_coleta": "15:20",
-  "data_ontem": "18/11",
-  "data_hoje": "19/11",
-  "total_quedas": 10,
+  "data_coleta": "20/11",
+  "hora_coleta": "09:30",
+  "data_ontem": "19/11",
+  "data_hoje": "20/11",
+  "total_quedas": 7,
   "quedas": [
     {
       "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 522.56,
-      "preco_ontem": 678.96,
-      "delta": -156.4,
-      "delta_pct": -23.04,
-      "data_checagem": "2026-11-19 15:20"
-    },
-    {
-      "marca": "Progaga",
-      "modelo": "PG370 MAX",
-      "slug": "progaga-pg370-max",
-      "preco_atual": 449.39,
-      "preco_ontem": 492.82,
-      "delta": -43.43,
-      "delta_pct": -8.81,
-      "data_checagem": "2026-11-19 15:15"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 489.77,
-      "preco_ontem": 531.38,
-      "delta": -41.61,
-      "delta_pct": -7.83,
-      "data_checagem": "2026-11-19 15:11"
+      "modelo": "AC1066",
+      "slug": "bettdow-ac1066",
+      "preco_atual": 521.02,
+      "preco_ontem": 551.08,
+      "delta": -30.06,
+      "delta_pct": -5.45,
+      "data_checagem": "2026-11-20 09:30"
     },
     {
       "marca": "Byintek",
-      "modelo": "Love U4",
-      "slug": "byintek-love-u4",
-      "preco_atual": 452.8,
-      "preco_ontem": 486.95,
-      "delta": -34.15,
-      "delta_pct": -7.01,
-      "data_checagem": "2026-11-19 15:20"
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 1020.83,
+      "preco_ontem": 1055.79,
+      "delta": -34.96,
+      "delta_pct": -3.31,
+      "data_checagem": "2026-11-20 09:30"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD80PRO",
-      "slug": "thundeal-td80pro",
-      "preco_atual": 449.38,
-      "preco_ontem": 467.7,
-      "delta": -18.32,
-      "delta_pct": -3.92,
-      "data_checagem": "2026-11-19 15:13"
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1656.23,
+      "preco_ontem": 1707.8,
+      "delta": -51.57,
+      "delta_pct": -3.02,
+      "data_checagem": "2026-11-20 09:30"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY450GT",
+      "slug": "magcubic-hy450gt",
+      "preco_atual": 1136.2,
+      "preco_ontem": 1161.54,
+      "delta": -25.34,
+      "delta_pct": -2.18,
+      "data_checagem": "2026-11-20 09:30"
+    },
+    {
+      "marca": "Touyinger",
+      "modelo": "L9W Ultra",
+      "slug": "touyinger-l9w-ultra",
+      "preco_atual": 515.45,
+      "preco_ontem": 521.99,
+      "delta": -6.54,
+      "delta_pct": -1.25,
+      "data_checagem": "2026-11-20 09:23"
     }
   ]
 }
