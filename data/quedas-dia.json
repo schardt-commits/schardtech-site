@@ -1,8 +1,29 @@
 {
   "data_coleta": "21/11",
-  "hora_coleta": "",
+  "hora_coleta": "09:26",
   "data_ontem": "20/11",
   "data_hoje": "21/11",
-  "total_quedas": 0,
-  "quedas": []
+  "total_quedas": 2,
+  "quedas": [
+    {
+      "marca": "Byintek",
+      "modelo": "Plato T5 MAX",
+      "slug": "byintek-plato-t5-max",
+      "preco_atual": 1493.77,
+      "preco_ontem": 1823.77,
+      "delta": -330.0,
+      "delta_pct": -18.09,
+      "data_checagem": "2026-11-21 09:20"
+    },
+    {
+      "marca": "Everycom",
+      "modelo": "HQ11W",
+      "slug": "everycom-hq11w",
+      "preco_atual": 1528.02,
+      "preco_ontem": 1672.04,
+      "delta": -144.02,
+      "delta_pct": -8.61,
+      "data_checagem": "2026-11-21 09:26"
+    }
+  ]
 }
