@@ -1,10 +1,20 @@
 {
   "data_coleta": "20/11",
-  "hora_coleta": "15:20",
+  "hora_coleta": "21:30",
   "data_ontem": "19/11",
   "data_hoje": "20/11",
-  "total_quedas": 6,
+  "total_quedas": 7,
   "quedas": [
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 444.6,
+      "preco_ontem": 504.16,
+      "delta": -59.56,
+      "delta_pct": -11.81,
+      "data_checagem": "2026-11-20 21:30"
+    },
     {
       "marca": "Bettdow",
       "modelo": "AC1066",
@@ -13,7 +23,7 @@
       "preco_ontem": 551.08,
       "delta": -30.06,
       "delta_pct": -5.45,
-      "data_checagem": "2026-11-20 15:20"
+      "data_checagem": "2026-11-20 21:30"
     },
     {
       "marca": "Byintek",
@@ -23,7 +33,7 @@
       "preco_ontem": 1055.79,
       "delta": -34.96,
       "delta_pct": -3.31,
-      "data_checagem": "2026-11-20 15:20"
+      "data_checagem": "2026-11-20 21:30"
     },
     {
       "marca": "Byintek",
@@ -33,7 +43,7 @@
       "preco_ontem": 1707.8,
       "delta": -51.57,
       "delta_pct": -3.02,
-      "data_checagem": "2026-11-20 15:20"
+      "data_checagem": "2026-11-20 21:30"
     },
     {
       "marca": "Magcubic",
@@ -43,17 +53,7 @@
       "preco_ontem": 1161.54,
       "delta": -25.34,
       "delta_pct": -2.18,
-      "data_checagem": "2026-11-20 15:20"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "L9W Ultra",
-      "slug": "touyinger-l9w-ultra",
-      "preco_atual": 518.97,
-      "preco_ontem": 521.99,
-      "delta": -3.02,
-      "delta_pct": -0.58,
-      "data_checagem": "2026-11-20 15:13"
+      "data_checagem": "2026-11-20 21:30"
     }
   ]
 }
