@@ -1,8 +1,19 @@
 {
   "data_coleta": "22/11",
-  "hora_coleta": "",
+  "hora_coleta": "15:20",
   "data_ontem": "21/11",
   "data_hoje": "22/11",
-  "total_quedas": 0,
-  "quedas": []
+  "total_quedas": 1,
+  "quedas": [
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 444.6,
+      "preco_ontem": 522.56,
+      "delta": -77.96,
+      "delta_pct": -14.92,
+      "data_checagem": "2026-11-22 15:20"
+    }
+  ]
 }
