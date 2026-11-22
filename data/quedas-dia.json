@@ -1,59 +1,8 @@
 {
-  "data_coleta": "21/11",
-  "hora_coleta": "21:26",
-  "data_ontem": "20/11",
-  "data_hoje": "21/11",
-  "total_quedas": 13,
-  "quedas": [
-    {
-      "marca": "Byintek",
-      "modelo": "Plato T5 MAX",
-      "slug": "byintek-plato-t5-max",
-      "preco_atual": 1493.77,
-      "preco_ontem": 1823.77,
-      "delta": -330.0,
-      "delta_pct": -18.09,
-      "data_checagem": "2026-11-21 21:20"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "HQ11W",
-      "slug": "everycom-hq11w",
-      "preco_atual": 1527.85,
-      "preco_ontem": 1672.04,
-      "delta": -144.19,
-      "delta_pct": -8.62,
-      "data_checagem": "2026-11-21 21:26"
-    },
-    {
-      "marca": "Dangbei",
-      "modelo": "Mars Pro 2",
-      "slug": "dangbei-mars-pro-2",
-      "preco_atual": 8210.55,
-      "preco_ontem": 8211.48,
-      "delta": -0.93,
-      "delta_pct": -0.01,
-      "data_checagem": "2026-11-21 21:21"
-    },
-    {
-      "marca": "Everycom",
-      "modelo": "R16",
-      "slug": "everycom-r16",
-      "preco_atual": 564.08,
-      "preco_ontem": 564.16,
-      "delta": -0.08,
-      "delta_pct": -0.01,
-      "data_checagem": "2026-11-21 21:21"
-    },
-    {
-      "marca": "FlixTone",
-      "modelo": "D10S",
-      "slug": "flixtone-d10s",
-      "preco_atual": 1829.61,
-      "preco_ontem": 1829.84,
-      "delta": -0.23,
-      "delta_pct": -0.01,
-      "data_checagem": "2026-11-21 21:25"
-    }
-  ]
+  "data_coleta": "22/11",
+  "hora_coleta": "",
+  "data_ontem": "21/11",
+  "data_hoje": "22/11",
+  "total_quedas": 0,
+  "quedas": []
 }
