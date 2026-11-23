@@ -1,29 +1,59 @@
 {
-  "data_coleta": "22/11",
-  "hora_coleta": "21:30",
-  "data_ontem": "21/11",
-  "data_hoje": "22/11",
-  "total_quedas": 2,
+  "data_coleta": "23/11",
+  "hora_coleta": "00:29",
+  "data_ontem": "22/11",
+  "data_hoje": "23/11",
+  "total_quedas": 6,
   "quedas": [
     {
-      "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 444.6,
-      "preco_ontem": 522.56,
-      "delta": -77.96,
-      "delta_pct": -14.92,
-      "data_checagem": "2026-11-22 21:30"
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 999.35,
+      "preco_ontem": 1055.79,
+      "delta": -56.44,
+      "delta_pct": -5.35,
+      "data_checagem": "2026-11-23 00:29"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD99W",
-      "slug": "thundeal-td99w",
-      "preco_atual": 1906.12,
-      "preco_ontem": 2034.26,
-      "delta": -128.14,
-      "delta_pct": -6.3,
-      "data_checagem": "2026-11-22 21:26"
+      "marca": "Bettdow",
+      "modelo": "AC1071",
+      "slug": "bettdow-ac1071",
+      "preco_atual": 1418.59,
+      "preco_ontem": 1449.1,
+      "delta": -30.51,
+      "delta_pct": -2.11,
+      "data_checagem": "2026-11-23 00:29"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1082",
+      "slug": "bettdow-ac1082",
+      "preco_atual": 1017.31,
+      "preco_ontem": 1039.19,
+      "delta": -21.88,
+      "delta_pct": -2.11,
+      "data_checagem": "2026-11-23 00:29"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1621.37,
+      "preco_ontem": 1656.23,
+      "delta": -34.86,
+      "delta_pct": -2.1,
+      "data_checagem": "2026-11-23 00:29"
+    },
+    {
+      "marca": "Bettdow",
+      "modelo": "AC1095",
+      "slug": "bettdow-ac1095",
+      "preco_atual": 2532.42,
+      "preco_ontem": 2573.7,
+      "delta": -41.28,
+      "delta_pct": -1.6,
+      "data_checagem": "2026-11-23 00:29"
     }
   ]
 }
