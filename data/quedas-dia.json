@@ -1,9 +1,9 @@
 {
   "data_coleta": "22/11",
-  "hora_coleta": "15:20",
+  "hora_coleta": "21:30",
   "data_ontem": "21/11",
   "data_hoje": "22/11",
-  "total_quedas": 1,
+  "total_quedas": 2,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,7 +13,17 @@
       "preco_ontem": 522.56,
       "delta": -77.96,
       "delta_pct": -14.92,
-      "data_checagem": "2026-11-22 15:20"
+      "data_checagem": "2026-11-22 21:30"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD99W",
+      "slug": "thundeal-td99w",
+      "preco_atual": 1906.12,
+      "preco_ontem": 2034.26,
+      "delta": -128.14,
+      "delta_pct": -6.3,
+      "data_checagem": "2026-11-22 21:26"
     }
   ]
 }
