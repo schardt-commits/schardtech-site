@@ -1,29 +1,8 @@
 {
   "data_coleta": "23/11",
-  "hora_coleta": "09:29",
+  "hora_coleta": "",
   "data_ontem": "22/11",
   "data_hoje": "23/11",
-  "total_quedas": 2,
-  "quedas": [
-    {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 1020.83,
-      "preco_ontem": 1055.79,
-      "delta": -34.96,
-      "delta_pct": -3.31,
-      "data_checagem": "2026-11-23 09:29"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD99W",
-      "slug": "thundeal-td99w",
-      "preco_atual": 1891.39,
-      "preco_ontem": 1906.12,
-      "delta": -14.73,
-      "delta_pct": -0.77,
-      "data_checagem": "2026-11-23 09:25"
-    }
-  ]
+  "total_quedas": 0,
+  "quedas": []
 }
