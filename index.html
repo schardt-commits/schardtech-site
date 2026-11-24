@@ -64,6 +64,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="v2.css">
+  <link rel="stylesheet" href="comemora-30k.css"><!-- 30K: comemorativo temporario, sai junto com o bloco 30K do hero -->
 </head>
 <body>
 
@@ -108,6 +109,31 @@
   <main id="main">
 
   <section class="hero sem-borda">
+    <!-- 30K-INICIO: bloco comemorativo dos 30 mil inscritos (temporario, 24/11/2026). Para remover: apagar daqui ate 30K-FIM, a linha 30K do head e os arquivos comemora-30k.css, comemora-30k.js e comemora-30k-avatar.jpg -->
+    <div class="wrap c30-topo">
+      <div class="c30-card" role="region" aria-label="O canal chegou a 30 mil inscritos">
+        <div class="c30-contador">
+          <span class="c30-conf" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          <img class="c30-avatar" src="comemora-30k-avatar.jpg" alt="" width="64" height="64">
+          <span class="c30-nome">Schardtech</span>
+          <span class="c30-num"><span class="c30-roll" data-de="29.999" data-para="30.000">30.000</span></span>
+          <span class="c30-label">Inscritos</span>
+        </div>
+        <div class="c30-texto">
+          <div class="eyebrow">Canal SchardTech</div>
+          <p class="c30-titulo">30 mil inscritos. <span>Obrigado!</span></p>
+          <p class="c30-txt">O primeiro vídeo foi o unboxing de um HY300, em novembro de 2023. Quem assiste, comenta e compartilha os testes trouxe o canal até aqui.</p>
+          <div class="c30-stats">
+            <div><b>3</b><span>anos de canal</span></div>
+            <div><b>290+</b><span>vídeos</span></div>
+            <div><b>8 mi</b><span>visualizações</span></div>
+          </div>
+          <a class="btn c30-btn" href="https://www.youtube.com/@SchardTech?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="#fff" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8z"/><path fill="#FF0033" d="M9.6 15.6V8.4l6.2 3.6z"/></svg> Inscrever-se no canal</a>
+        </div>
+      </div>
+    </div>
+    <script src="comemora-30k.js" defer></script>
+    <!-- 30K-FIM -->
     <div class="wrap hero-grid">
       <div>
         <h1>Escolha o projetor certo. <span class="grad">Com dados reais.</span></h1>

@@ -1,0 +1,96 @@
+/* ============================================================
+   comemora-30k.css · bloco comemorativo dos 30 mil inscritos (so na home)
+   TEMPORARIO, criado em 24/11/2026.
+   Para remover: apagar no index.html os 2 trechos marcados com 30K
+   (o link do head e o bloco dentro do hero) e os arquivos
+   comemora-30k.css, comemora-30k.js e comemora-30k-avatar.jpg.
+   Nada mais no site depende disto. Usa so as variaveis do v2.css.
+   Vermelho #FF0033 = cor do YouTube, so no botao de inscricao.
+   ============================================================ */
+
+/* fica DENTRO do hero, em cima do titulo: sobe pra perto do menu e abre espaco ate o h1 */
+.c30-topo { margin-top: -36px; margin-bottom: 60px; }
+
+.c30-card {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* lado do contador */
+.c30-contador {
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  padding: 44px 24px 40px; border-right: 1px solid var(--line);
+  background: radial-gradient(ellipse 420px 300px at 50% 0%, rgba(91, 200, 238, 0.16), transparent 70%), var(--bg-2);
+}
+.c30-avatar { width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--brand-borda); box-shadow: 0 0 0 5px rgba(91, 200, 238, 0.08); }
+.c30-nome { margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--txt-2); }
+.c30-num { margin-top: 22px; font-family: var(--mono); font-weight: 700; font-size: clamp(54px, 6.4vw, 84px); line-height: 1; letter-spacing: -0.03em; color: var(--txt); }
+.c30-label { margin-top: 8px; font-family: var(--mono); font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brand); }
+
+/* numero que gira de 29.999 pra 30.000 (o comemora-30k.js monta as colunas) */
+.c30-roll { display: inline-flex; overflow: hidden; height: 1.2em; line-height: 1.2; vertical-align: bottom; font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.c30-col { display: block; height: 1.2em; }
+.c30-tira { display: flex; flex-direction: column; transition: transform 1500ms cubic-bezier(.25, .1, .25, 1); }
+.c30-tira > span { display: block; height: 1.2em; }
+.c30-roll.rodou .c30-tira { transform: translateY(-50%); }
+
+/* lado do texto */
+.c30-texto { padding: 44px 48px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+.c30-titulo { font-family: var(--display); font-size: clamp(26px, 3vw, 38px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; color: var(--txt); margin-bottom: 14px; }
+.c30-titulo span { color: var(--brand); }
+.c30-txt { color: var(--txt-2); max-width: 520px; }
+.c30-stats { display: flex; gap: 12px; flex-wrap: wrap; margin: 24px 0 28px; }
+.c30-stats > div { display: flex; flex-direction: column; min-width: 128px; padding: 12px 16px; background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius); }
+.c30-stats b { font-family: var(--mono); font-size: 24px; font-weight: 700; line-height: 1.15; color: var(--num); }
+.c30-stats span { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--txt-2); }
+.btn.c30-btn { background: #FF0033; color: #fff; white-space: nowrap; }
+.btn.c30-btn:hover { filter: brightness(1.12); }
+.c30-btn svg { flex-shrink: 0; }
+
+/* confete nos cantos do contador (cai uma vez ao carregar) */
+.c30-conf { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.c30-conf i { position: absolute; width: 7px; height: 13px; border-radius: 2px; opacity: 0.85; transform: rotate(var(--r, 0deg)); animation: c30-cai 1400ms cubic-bezier(.2, .7, .3, 1) both; }
+.c30-conf i:nth-child(3n+1) { background: var(--brand); }
+.c30-conf i:nth-child(3n+2) { background: #EEF3FA; width: 6px; height: 6px; border-radius: 50%; }
+.c30-conf i:nth-child(3n) { background: #FF0033; height: 10px; }
+.c30-conf i:nth-child(1)  { left: 7%;  top: 12%; --r: -24deg; }
+.c30-conf i:nth-child(2)  { left: 15%; top: 30%; --r: 0deg; }
+.c30-conf i:nth-child(3)  { left: 10%; top: 54%; --r: 38deg; }
+.c30-conf i:nth-child(4)  { left: 22%; top: 9%;  --r: 62deg; }
+.c30-conf i:nth-child(5)  { left: 6%;  top: 78%; --r: 0deg; }
+.c30-conf i:nth-child(6)  { left: 19%; top: 88%; --r: -40deg; }
+.c30-conf i:nth-child(7)  { left: 28%; top: 22%; --r: 18deg; animation-delay: 80ms; }
+.c30-conf i:nth-child(8)  { left: 91%; top: 14%; --r: 0deg; animation-delay: 60ms; }
+.c30-conf i:nth-child(9)  { left: 84%; top: 28%; --r: -52deg; animation-delay: 120ms; }
+.c30-conf i:nth-child(10) { left: 78%; top: 8%;  --r: 30deg; animation-delay: 40ms; }
+.c30-conf i:nth-child(11) { left: 93%; top: 52%; --r: 0deg; animation-delay: 160ms; }
+.c30-conf i:nth-child(12) { left: 86%; top: 74%; --r: 70deg; animation-delay: 100ms; }
+.c30-conf i:nth-child(13) { left: 72%; top: 20%; --r: -18deg; animation-delay: 140ms; }
+.c30-conf i:nth-child(14) { left: 80%; top: 90%; --r: 0deg; animation-delay: 200ms; }
+@keyframes c30-cai {
+  from { opacity: 0; transform: translateY(-46px) rotate(calc(var(--r, 0deg) - 120deg)); }
+  to { opacity: 0.85; transform: translateY(0) rotate(var(--r, 0deg)); }
+}
+
+/* ---------- responsivo ---------- */
+@media (max-width: 1180px) {
+  .c30-texto { padding: 36px 32px; }
+  .c30-stats > div { min-width: 112px; }
+}
+/* tablet em pe: contador em cima, texto embaixo */
+@media (max-width: 860px) {
+  .c30-card { grid-template-columns: 1fr; }
+  .c30-contador { border-right: 0; border-bottom: 1px solid var(--line); padding: 32px 16px 30px; }
+}
+/* celular: versao enxuta (sem o paragrafo e sem as 3 caixinhas), pro titulo do site caber na primeira tela */
+@media (max-width: 700px) {
+  .c30-topo { margin-top: -24px; margin-bottom: 40px; }
+  .c30-contador { padding: 22px 16px 20px; }
+  .c30-avatar { width: 48px; height: 48px; }
+  .c30-num { margin-top: 12px; font-size: 50px; }
+  .c30-texto { padding: 22px 20px 24px; }
+  .c30-titulo { margin-bottom: 18px; }
+  .c30-txt, .c30-stats { display: none; }
+  .c30-texto .btn { align-self: stretch; justify-content: center; }
+}
