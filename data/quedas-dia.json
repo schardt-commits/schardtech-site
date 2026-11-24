@@ -1,8 +1,29 @@
 {
-  "data_coleta": "23/11",
-  "hora_coleta": "",
-  "data_ontem": "22/11",
-  "data_hoje": "23/11",
-  "total_quedas": 0,
-  "quedas": []
+  "data_coleta": "24/11",
+  "hora_coleta": "09:31",
+  "data_ontem": "23/11",
+  "data_hoje": "24/11",
+  "total_quedas": 2,
+  "quedas": [
+    {
+      "marca": "Magcubic",
+      "modelo": "HY310",
+      "slug": "magcubic-hy310",
+      "preco_atual": 361.0,
+      "preco_ontem": 388.55,
+      "delta": -27.55,
+      "delta_pct": -7.09,
+      "data_checagem": "2026-11-24 09:31"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD99W",
+      "slug": "thundeal-td99w",
+      "preco_atual": 1843.3,
+      "preco_ontem": 1914.91,
+      "delta": -71.61,
+      "delta_pct": -3.74,
+      "data_checagem": "2026-11-24 09:28"
+    }
+  ]
 }
