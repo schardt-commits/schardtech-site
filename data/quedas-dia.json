@@ -1,29 +1,59 @@
 {
-  "data_coleta": "24/11",
-  "hora_coleta": "09:31",
-  "data_ontem": "23/11",
-  "data_hoje": "24/11",
-  "total_quedas": 2,
+  "data_coleta": "25/11",
+  "hora_coleta": "00:29",
+  "data_ontem": "24/11",
+  "data_hoje": "25/11",
+  "total_quedas": 6,
   "quedas": [
     {
-      "marca": "Magcubic",
-      "modelo": "HY310",
-      "slug": "magcubic-hy310",
-      "preco_atual": 361.0,
-      "preco_ontem": 388.55,
-      "delta": -27.55,
-      "delta_pct": -7.09,
-      "data_checagem": "2026-11-24 09:31"
+      "marca": "Bettdow",
+      "modelo": "AC1085",
+      "slug": "bettdow-ac1085",
+      "preco_atual": 522.56,
+      "preco_ontem": 678.96,
+      "delta": -156.4,
+      "delta_pct": -23.04,
+      "data_checagem": "2026-11-25 00:29"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD99W",
-      "slug": "thundeal-td99w",
-      "preco_atual": 1843.3,
-      "preco_ontem": 1914.91,
-      "delta": -71.61,
-      "delta_pct": -3.74,
-      "data_checagem": "2026-11-24 09:28"
+      "marca": "Vevshao",
+      "modelo": "V60",
+      "slug": "vevshao-v60",
+      "preco_atual": 1967.88,
+      "preco_ontem": 2411.17,
+      "delta": -443.29,
+      "delta_pct": -18.38,
+      "data_checagem": "2026-11-25 00:29"
+    },
+    {
+      "marca": "Wanbo",
+      "modelo": "X5 Pro",
+      "slug": "wanbo-x5-pro",
+      "preco_atual": 2309.22,
+      "preco_ontem": 2463.0,
+      "delta": -153.78,
+      "delta_pct": -6.24,
+      "data_checagem": "2026-11-25 00:29"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "U80 MAX",
+      "slug": "byintek-u80-max",
+      "preco_atual": 1656.23,
+      "preco_ontem": 1745.76,
+      "delta": -89.53,
+      "delta_pct": -5.13,
+      "data_checagem": "2026-11-25 00:29"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 1055.79,
+      "preco_ontem": 1098.07,
+      "delta": -42.28,
+      "delta_pct": -3.85,
+      "data_checagem": "2026-11-25 00:29"
     }
   ]
 }
