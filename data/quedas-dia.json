@@ -1,9 +1,9 @@
 {
   "data_coleta": "25/11",
-  "hora_coleta": "09:29",
+  "hora_coleta": "15:19",
   "data_ontem": "24/11",
   "data_hoje": "25/11",
-  "total_quedas": 5,
+  "total_quedas": 21,
   "quedas": [
     {
       "marca": "Bettdow",
@@ -13,7 +13,37 @@
       "preco_ontem": 678.96,
       "delta": -156.4,
       "delta_pct": -23.04,
-      "data_checagem": "2026-11-25 09:29"
+      "data_checagem": "2026-11-25 15:19"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY450",
+      "slug": "magcubic-hy450",
+      "preco_atual": 652.28,
+      "preco_ontem": 744.28,
+      "delta": -92.0,
+      "delta_pct": -12.36,
+      "data_checagem": "2026-11-25 15:19"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "HY450C",
+      "slug": "magcubic-hy450c",
+      "preco_atual": 723.12,
+      "preco_ontem": 815.12,
+      "delta": -92.0,
+      "delta_pct": -11.29,
+      "data_checagem": "2026-11-25 15:19"
+    },
+    {
+      "marca": "Byintek",
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 1019.36,
+      "preco_ontem": 1098.07,
+      "delta": -78.71,
+      "delta_pct": -7.17,
+      "data_checagem": "2026-11-25 15:19"
     },
     {
       "marca": "Wanbo",
@@ -23,37 +53,7 @@
       "preco_ontem": 2463.0,
       "delta": -153.78,
       "delta_pct": -6.24,
-      "data_checagem": "2026-11-25 09:29"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "U80 MAX",
-      "slug": "byintek-u80-max",
-      "preco_atual": 1656.23,
-      "preco_ontem": 1745.76,
-      "delta": -89.53,
-      "delta_pct": -5.13,
-      "data_checagem": "2026-11-25 09:29"
-    },
-    {
-      "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 1055.79,
-      "preco_ontem": 1098.07,
-      "delta": -42.28,
-      "delta_pct": -3.85,
-      "data_checagem": "2026-11-25 09:29"
-    },
-    {
-      "marca": "Wanbo",
-      "modelo": "T2 Ultra",
-      "slug": "wanbo-t2-ultra",
-      "preco_atual": 1347.72,
-      "preco_ontem": 1375.68,
-      "delta": -27.96,
-      "delta_pct": -2.03,
-      "data_checagem": "2026-11-25 09:29"
+      "data_checagem": "2026-11-25 15:19"
     }
   ]
 }
