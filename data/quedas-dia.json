@@ -1,59 +1,59 @@
 {
-  "data_coleta": "26/11",
-  "hora_coleta": "21:29",
-  "data_ontem": "25/11",
-  "data_hoje": "26/11",
-  "total_quedas": 33,
+  "data_coleta": "27/11",
+  "hora_coleta": "09:30",
+  "data_ontem": "26/11",
+  "data_hoje": "27/11",
+  "total_quedas": 10,
   "quedas": [
     {
+      "marca": "Magcubic",
+      "modelo": "HY310X",
+      "slug": "magcubic-hy310x",
+      "preco_atual": 392.35,
+      "preco_ontem": 411.35,
+      "delta": -19.0,
+      "delta_pct": -4.62,
+      "data_checagem": "2026-11-27 09:30"
+    },
+    {
       "marca": "Byintek",
-      "modelo": "Magic 1",
-      "slug": "byintek-magic-1",
-      "preco_atual": 1179.02,
-      "preco_ontem": 1486.33,
-      "delta": -307.31,
-      "delta_pct": -20.68,
-      "data_checagem": "2026-11-26 21:25"
-    },
-    {
-      "marca": "Bettdow",
-      "modelo": "AC1085",
-      "slug": "bettdow-ac1085",
-      "preco_atual": 444.6,
-      "preco_ontem": 522.56,
-      "delta": -77.96,
-      "delta_pct": -14.92,
-      "data_checagem": "2026-11-26 21:29"
-    },
-    {
-      "marca": "Thundeal",
-      "modelo": "TD95W",
-      "slug": "thundeal-td95w",
-      "preco_atual": 654.84,
-      "preco_ontem": 748.35,
-      "delta": -93.51,
-      "delta_pct": -12.5,
-      "data_checagem": "2026-11-26 21:23"
-    },
-    {
-      "marca": "Touyinger",
-      "modelo": "L9W Ultra",
-      "slug": "touyinger-l9w-ultra",
-      "preco_atual": 469.72,
-      "preco_ontem": 517.3,
-      "delta": -47.58,
-      "delta_pct": -9.2,
-      "data_checagem": "2026-11-26 21:23"
+      "modelo": "Love U12",
+      "slug": "byintek-u12",
+      "preco_atual": 943.03,
+      "preco_ontem": 982.56,
+      "delta": -39.53,
+      "delta_pct": -4.02,
+      "data_checagem": "2026-11-27 09:30"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD92 Pro",
       "slug": "thundeal-td92-pro",
-      "preco_atual": 645.53,
-      "preco_ontem": 708.54,
-      "delta": -63.01,
-      "delta_pct": -8.89,
-      "data_checagem": "2026-11-26 21:22"
+      "preco_atual": 622.25,
+      "preco_ontem": 645.53,
+      "delta": -23.28,
+      "delta_pct": -3.61,
+      "data_checagem": "2026-11-27 09:22"
+    },
+    {
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 907.7,
+      "preco_ontem": 941.46,
+      "delta": -33.76,
+      "delta_pct": -3.59,
+      "data_checagem": "2026-11-27 09:25"
+    },
+    {
+      "marca": "Magcubic",
+      "modelo": "L018",
+      "slug": "magcubic-l018",
+      "preco_atual": 578.57,
+      "preco_ontem": 598.0,
+      "delta": -19.43,
+      "delta_pct": -3.25,
+      "data_checagem": "2026-11-27 09:30"
     }
   ]
 }
