@@ -1,59 +1,59 @@
 {
   "data_coleta": "27/11",
-  "hora_coleta": "09:30",
+  "hora_coleta": "21:30",
   "data_ontem": "26/11",
   "data_hoje": "27/11",
-  "total_quedas": 10,
+  "total_quedas": 37,
   "quedas": [
     {
-      "marca": "Magcubic",
-      "modelo": "HY310X",
-      "slug": "magcubic-hy310x",
-      "preco_atual": 392.35,
-      "preco_ontem": 411.35,
-      "delta": -19.0,
-      "delta_pct": -4.62,
-      "data_checagem": "2026-11-27 09:30"
+      "marca": "Thundeal",
+      "modelo": "TD98 MINI",
+      "slug": "thundeal-td98-mini",
+      "preco_atual": 805.54,
+      "preco_ontem": 941.46,
+      "delta": -135.92,
+      "delta_pct": -14.44,
+      "data_checagem": "2026-11-27 21:25"
     },
     {
       "marca": "Byintek",
-      "modelo": "Love U12",
-      "slug": "byintek-u12",
-      "preco_atual": 943.03,
-      "preco_ontem": 982.56,
-      "delta": -39.53,
-      "delta_pct": -4.02,
-      "data_checagem": "2026-11-27 09:30"
+      "modelo": "U14 PRO",
+      "slug": "byintek-u14-pro",
+      "preco_atual": 1203.59,
+      "preco_ontem": 1368.18,
+      "delta": -164.59,
+      "delta_pct": -12.03,
+      "data_checagem": "2026-11-27 21:30"
+    },
+    {
+      "marca": "XGODY",
+      "modelo": "Gimbal 7",
+      "slug": "xgody-gimbal-7",
+      "preco_atual": 524.04,
+      "preco_ontem": 593.82,
+      "delta": -69.78,
+      "delta_pct": -11.75,
+      "data_checagem": "2026-11-27 21:30"
     },
     {
       "marca": "Thundeal",
       "modelo": "TD92 Pro",
       "slug": "thundeal-td92-pro",
-      "preco_atual": 622.25,
+      "preco_atual": 575.62,
       "preco_ontem": 645.53,
-      "delta": -23.28,
-      "delta_pct": -3.61,
-      "data_checagem": "2026-11-27 09:22"
+      "delta": -69.91,
+      "delta_pct": -10.83,
+      "data_checagem": "2026-11-27 21:22"
     },
     {
-      "marca": "Thundeal",
-      "modelo": "TD98 MINI",
-      "slug": "thundeal-td98-mini",
-      "preco_atual": 907.7,
-      "preco_ontem": 941.46,
-      "delta": -33.76,
-      "delta_pct": -3.59,
-      "data_checagem": "2026-11-27 09:25"
-    },
-    {
-      "marca": "Magcubic",
-      "modelo": "L018",
-      "slug": "magcubic-l018",
-      "preco_atual": 578.57,
-      "preco_ontem": 598.0,
-      "delta": -19.43,
-      "delta_pct": -3.25,
-      "data_checagem": "2026-11-27 09:30"
+      "marca": "Everycom",
+      "modelo": "R16",
+      "slug": "everycom-r16",
+      "preco_atual": 496.05,
+      "preco_ontem": 547.99,
+      "delta": -51.94,
+      "delta_pct": -9.48,
+      "data_checagem": "2026-11-27 21:21"
     }
   ]
 }
